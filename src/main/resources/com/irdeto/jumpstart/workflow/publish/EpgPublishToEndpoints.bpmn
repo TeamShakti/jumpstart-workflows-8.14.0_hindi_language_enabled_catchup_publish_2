@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_122-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_errorMap" structureRef="Object" />
+  <itemDefinition id="_103-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_action" structureRef="String" />
+  <itemDefinition id="_103-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_entity" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_124-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_122-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_103-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_124-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_124-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_103-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_relationshipList" structureRef="java.util.List" />
+  <itemDefinition id="_124-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_124-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_122-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_122-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_mapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_103-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_relationshipMap" structureRef="java.util.Map" />
+  <itemDefinition id="_122-exitStatusItem" structureRef="String" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.publish.EpgPublishToEndpoints" name="EPG Publish to Endpoints" tns:packageName="com.irdeto.jumpstart.workflow.publish" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.config.*" />
+     <tns:import name="com.irdeto.domain.operation.MM8Response" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="com.irdeto.domain.constants.TaskHandlerConstants" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="java.util.*" />
+     <tns:import name="java.util.Map.Entry" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.control.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.publish.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="errorMap" itemSubjectRef="_mapItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="publishWrapper" itemSubjectRef="_publishWrapperItem"/>
+    <property id="destinationProcessIdList" itemSubjectRef="_destinationProcessIdListItem"/>
+    <property id="relationshipList" itemSubjectRef="_relationshipList"/>
+    <property id="relationshipMap" itemSubjectRef="_mapItem"/>
+    <property id="entity" itemSubjectRef="_entity"/>
+    <property id="action" itemSubjectRef="_action"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <task id="_103" name="Publish To End Point" tns:taskName="SyncSubprocess" >
+      <ioSpecification>
+        <dataInput id="_103_actionInput" name="action" />
+        <dataInput id="_103_wrapperInput" name="wrapper" />
+        <dataInput id="_103_SingletonInput" name="Singleton" />
+        <dataInput id="_103_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_103_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_103_exitMessageOutput" name="exitMessage" />
+        <dataOutput id="_103_exitStatusOutput" name="exitStatus" />
+        <inputSet>
+          <dataInputRefs>_103_actionInput</dataInputRefs>
+          <dataInputRefs>_103_wrapperInput</dataInputRefs>
+          <dataInputRefs>_103_SingletonInput</dataInputRefs>
+          <dataInputRefs>_103_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_103_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_103_exitMessageOutput</dataOutputRefs>
+          <dataOutputRefs>_103_exitStatusOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>action</sourceRef>
+        <targetRef>_103_actionInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>publishWrapper</sourceRef>
+        <targetRef>_103_wrapperInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_103_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_103_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_103_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_103_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_103_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{destinationProcessIdList.remove(0)}</from>
+          <to xsi:type="tFormalExpression">_103_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_103_exitMessageOutput</sourceRef>
+        <targetRef>exitMessage</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_103_exitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_3" name="End" />
+    <exclusiveGateway id="_106" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_74" name="Setup Destinations" scriptFormat="http://www.java.com/java" >
+      <script>PublishHelper.populateEnabledEndpoints(kcontext, "publishWrapper");
+kcontext.setVariable("action", PublishWrapper.ACTION_PUBLISH);</script>
+    </scriptTask>
+    <exclusiveGateway id="_104" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_105" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_jbpm-unique-19" name="Fetch Relationships" tns:taskName="CompoundRelationshipRead" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("entity", publishWrapper.getApprovedEntity());
+kcontext.setVariable("relationshipList", publishWrapper.getRelationshipList());</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>publishWrapper.setCompoundRelationshipMap((Map) relationshipMap);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-19_RelationshipListInput" name="RelationshipList" />
+        <dataInput id="_jbpm-unique-19_EntityInput" name="Entity" />
+        <dataInput id="_jbpm-unique-19_ApprovedOnlyInput" name="ApprovedOnly" />
+        <dataOutput id="_jbpm-unique-19_RelationshipMapOutput" name="RelationshipMap" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-19_RelationshipListInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-19_EntityInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-19_ApprovedOnlyInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-19_RelationshipMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>relationshipList</sourceRef>
+        <targetRef>_jbpm-unique-19_RelationshipListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entity</sourceRef>
+        <targetRef>_jbpm-unique-19_EntityInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-19_ApprovedOnlyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-19_ApprovedOnlyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-19_RelationshipMapOutput</sourceRef>
+        <targetRef>relationshipMap</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_jbpm-unique-1" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <endEvent id="_jbpm-unique-2" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <exclusiveGateway id="_jbpm-unique-3" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+
+    <!-- connections -->
+    <sequenceFlow id="_105-_103" sourceRef="_105" targetRef="_103" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !destinationProcessIdList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_105-_3" sourceRef="_105" targetRef="_3" name="Done" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_103-_106" sourceRef="_103" targetRef="_106" />
+    <sequenceFlow id="_jbpm-unique-1-_74" sourceRef="_jbpm-unique-1" targetRef="_74" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_106-_104" sourceRef="_106" targetRef="_104" name="Continue Publishing" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_74-_104" sourceRef="_74" targetRef="_104" />
+    <sequenceFlow id="_104-_105" sourceRef="_104" targetRef="_105" />
+    <sequenceFlow id="_1-_jbpm-unique-19" sourceRef="_1" targetRef="_jbpm-unique-19" />
+    <sequenceFlow id="_jbpm-unique-19-_jbpm-unique-1" sourceRef="_jbpm-unique-19" targetRef="_jbpm-unique-1" />
+    <sequenceFlow id="_jbpm-unique-3-_jbpm-unique-2" sourceRef="_jbpm-unique-3" targetRef="_jbpm-unique-2" />
+    <sequenceFlow id="_jbpm-unique-1-_jbpm-unique-3" sourceRef="_jbpm-unique-1" targetRef="_jbpm-unique-3" name="Can't Publish" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !publishWrapper.publishRequired();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_106-_jbpm-unique-3" sourceRef="_106" targetRef="_jbpm-unique-3" name="Failure" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "FAILURE".equals(exitStatus);</conditionExpression>
+    </sequenceFlow>
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.publish.EpgPublishToEndpoints" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="72" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_103" >
+        <dc:Bounds x="216" y="384" width="169" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="72" y="468" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_106" >
+        <dc:Bounds x="276" y="312" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_74" >
+        <dc:Bounds x="24" y="240" width="145" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_104" >
+        <dc:Bounds x="72" y="312" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_105" >
+        <dc:Bounds x="72" y="384" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-19" >
+        <dc:Bounds x="24" y="96" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-1" >
+        <dc:Bounds x="72" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-2" >
+        <dc:Bounds x="276" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-3" >
+        <dc:Bounds x="276" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_105-_103" >
+        <di:waypoint x="96" y="408" />
+        <di:waypoint x="300" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_105-_3" >
+        <di:waypoint x="96" y="408" />
+        <di:waypoint x="96" y="492" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_103-_106" >
+        <di:waypoint x="300" y="408" />
+        <di:waypoint x="300" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_74" >
+        <di:waypoint x="96" y="192" />
+        <di:waypoint x="96" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_106-_104" >
+        <di:waypoint x="300" y="336" />
+        <di:waypoint x="96" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_74-_104" >
+        <di:waypoint x="96" y="264" />
+        <di:waypoint x="96" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_104-_105" >
+        <di:waypoint x="96" y="336" />
+        <di:waypoint x="96" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_jbpm-unique-19" >
+        <di:waypoint x="96" y="48" />
+        <di:waypoint x="96" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-19-_jbpm-unique-1" >
+        <di:waypoint x="96" y="120" />
+        <di:waypoint x="96" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-3-_jbpm-unique-2" >
+        <di:waypoint x="300" y="192" />
+        <di:waypoint x="300" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_jbpm-unique-3" >
+        <di:waypoint x="96" y="192" />
+        <di:waypoint x="300" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_106-_jbpm-unique-3" >
+        <di:waypoint x="300" y="336" />
+        <di:waypoint x="300" y="192" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

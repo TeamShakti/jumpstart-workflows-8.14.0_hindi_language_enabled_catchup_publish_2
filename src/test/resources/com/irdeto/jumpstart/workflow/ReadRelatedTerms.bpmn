@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_relationshipListItem" structureRef="java.util.List" />
+
+  <itemDefinition id="_2-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_2-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_2-relationshipListItem" structureRef="java.util.List" />
+
+  <itemDefinition id="_4-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_4-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_4-relationshipListItem" structureRef="java.util.List" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.ReadRelatedTerms" name="Read Related Terms Test" tns:packageName="com.irdeto.jumpstart.workflow" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.protect.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="program" itemSubjectRef="_programItem"/>
+    <property id="relationshipMap" itemSubjectRef="_relationshipMapItem"/>
+    <property id="relationshipList" itemSubjectRef="_relationshipListItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="Read Related Terms" tns:taskName="CompoundRelationshipRead" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>ProtectHelper.setupTermRelationshipList(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>ProtectHelper.processTermRelationshipMap(kcontext, program);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_2_RelationshipListInput" name="RelationshipList" />
+        <dataInput id="_2_EntityInput" name="Entity" />
+        <dataInput id="_2_ApprovedOnlyInput" name="ApprovedOnly" />
+        <dataOutput id="_2_RelationshipMapOutput" name="RelationshipMap" />
+        <inputSet>
+          <dataInputRefs>_2_RelationshipListInput</dataInputRefs>
+          <dataInputRefs>_2_EntityInput</dataInputRefs>
+          <dataInputRefs>_2_ApprovedOnlyInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_2_RelationshipMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>relationshipList</sourceRef>
+        <targetRef>_2_RelationshipListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>program</sourceRef>
+        <targetRef>_2_EntityInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ApprovedOnlyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_2_ApprovedOnlyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_2_RelationshipMapOutput</sourceRef>
+        <targetRef>relationshipMap</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_3" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_4" name="Read Program" tns:taskName="MediaManager8ReadTask" >
+      <ioSpecification>
+        <dataInput id="_4_EntityTypeInput" name="EntityType" />
+        <dataInput id="_4_EntityIDInput" name="EntityID" />
+        <dataOutput id="_4_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_4_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_4_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_4_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_4_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_4_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">7</from>
+          <to xsi:type="tFormalExpression">_4_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_4_ResponseObjectOutput</sourceRef>
+        <targetRef>program</targetRef>
+      </dataOutputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_4-_2" sourceRef="_4" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+    <sequenceFlow id="_1-_4" sourceRef="_1" targetRef="_4" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.ReadRelatedTerms" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="156" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="84" y="168" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="156" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="84" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_4-_2" >
+        <di:waypoint x="180" y="120" />
+        <di:waypoint x="180" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="180" y="192" />
+        <di:waypoint x="180" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_4" >
+        <di:waypoint x="180" y="48" />
+        <di:waypoint x="180" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

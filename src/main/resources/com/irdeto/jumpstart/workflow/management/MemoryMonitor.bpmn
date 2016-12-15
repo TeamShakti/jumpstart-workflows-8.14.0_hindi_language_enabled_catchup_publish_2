@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.maangement.MemoryMonitor" name="Memory Monitor" tns:packageName="com.irdeto.jumpstart.workflow.management" >
+
+    <extensionElements>
+     <tns:import name="java.lang.management.ManagementFactory" />
+     <tns:import name="java.lang.management.MemoryMXBean" />
+     <tns:import name="java.lang.management.MemoryUsage" />
+     <tns:import name="com.irdeto.manager.task.*" />
+    </extensionElements>
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <intermediateCatchEvent id="_2" name="Timer" >
+      <timerEventDefinition>
+        <timeCycle xsi:type="tFormalExpression">0###30m</timeCycle>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+    <scriptTask id="_3" name="Print Memory Status" scriptFormat="http://www.java.com/java" >
+      <script>MemoryMXBean memoryMxBean = ManagementFactory.getMemoryMXBean();
+MemoryUsage heapMemoryUsage = memoryMxBean.getHeapMemoryUsage();
+MemoryUsage nonHeapMemoryUsage = memoryMxBean.getNonHeapMemoryUsage();
+StringBuffer usageString = new StringBuffer();
+usageString.append("\nHeap:\tCommitted:\t").append(heapMemoryUsage.getCommitted())
+	.append("\tInit:\t").append(heapMemoryUsage.getInit())
+	.append("\tMax:\t").append(heapMemoryUsage.getMax())
+	.append("\tUsed:\t").append(heapMemoryUsage.getUsed());
+usageString.append("\nNonHeap:\tCommitted:\t").append(nonHeapMemoryUsage.getCommitted())
+	.append("\tInit:\t").append(nonHeapMemoryUsage.getInit())
+	.append("\tMax:\t").append(nonHeapMemoryUsage.getMax())
+	.append("\tUsed:\t").append(nonHeapMemoryUsage.getUsed());
+
+BeanUtil.loggerManager.debug(kcontext, "{}",usageString.toString());
+</script>
+    </scriptTask>
+    <endEvent id="_4" name="End" />
+
+    <!-- connections -->
+    <sequenceFlow id="_1-_2" sourceRef="_1" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+    <sequenceFlow id="_3-_4" sourceRef="_3" targetRef="_4" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.maangement.MemoryMonitor" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="156" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="156" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="84" y="168" width="194" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="156" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_1-_2" >
+        <di:waypoint x="180" y="48" />
+        <di:waypoint x="180" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="180" y="120" />
+        <di:waypoint x="181" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_4" >
+        <di:waypoint x="181" y="192" />
+        <di:waypoint x="180" y="264" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

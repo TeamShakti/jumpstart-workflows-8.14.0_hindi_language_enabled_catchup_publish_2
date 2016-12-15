@@ -1,0 +1,71 @@
+<AuthorizationInfo Version="2" Authorized="false"
+	ErrorCode="170" ErrorCodes="170" ErrorMessage="Requires Payment">
+	<Item AccountId="multiscreen" ItemId="1" Type="CONTENT" ChannelId=""
+		MediaId="1" PolicyId="5" Recycle="false" Live="false" SourceId=""
+		Name="irdeto.com/ContentGroup/201300031" Description="" PGRate="-1"
+		PackageId=""></Item>
+	<Media AccountId="multiscreen" MediaId="1" PolicyId="" Recycle="false"
+		SourceId="" Name="irdeto.com/ContentGroup/201300031" Description=""
+		PGRate="-1" Artist="" Category="0" SubCategory="0" Url="" Search=""
+		User1="" User2="">
+		<Content AccountId="multiscreen" ContentId="1" MediaId="1"
+			PolicyId="5" ChannelId="" Recycle="false" Live="false" OnAir="">
+			<Availability Country="01" Affiliate="" DeviceGroupId="0"
+				ReleaseDate="2014-02-01T00:00:00" ReleaseEnd="2014-12-31T11:59:59"
+				Blocked="false" />
+			<SubContent Type="HLS" MediaType="Audio" BitRate="0"
+				FileSize="0" MimeType="" Length="" Modified="" Registered=""
+				Recycle="false" Url="" />
+			<SubContent Type="IISSS" MediaType="Audio" BitRate="0"
+				FileSize="0" MimeType="" Length="" Modified="" Registered=""
+				Recycle="false" Url="" />
+			<SubContent Type="AC_D2G" MediaType="Audio" BitRate="1605632"
+				FileSize="19301664" MimeType="" Length="00:01:38" Modified=""
+				Registered="" Recycle="false" Url="" />
+		</Content>
+	</Media>
+	<Policy PolicyId="5" Name="RentalSKE" Description=""
+		RedirectURL="" Available="1" BlockUnresolvedIP="false" DefaultCountry="01">
+		<CountryList>
+			<Country>01</Country>
+		</CountryList>
+	</Policy>
+	<SubPolicy SyndicatorId="multiscreen" Name="RentalSKE"
+		Description="" OptionId="5" Type="Rental" DRMProfileId="8"
+		WhitelistLicenseProfileGroupId="" BlacklistLicenseProfileGroupId=""
+		DeviceGroupId="0" RW="false" Package="false" Recurring="false"
+		InternalPackage="false" ContentPackage="false" StartMode="1" Tickets="0"
+		FreeMonths="0" NoDevices="0" PermanentRight="false" Payment="true"
+		Price="2.99" PriceDuration="0000-01-00T00:00:00" Currency="EUR"
+		ProductTaxType="general" NoOfInstallments="0" BindingMonths="0"
+		DiscountPackage="" BillingEndDate="" BillImmediately="true"
+		AccessTime="false" Country="01">
+		<CountryList>
+			<Country>01</Country>
+		</CountryList>
+	</SubPolicy>
+	<SubPolicyList>
+		<SubPolicy SyndicatorId="multiscreen" Name="RentalSKE"
+			Description="" OptionId="5" Type="Rental" DRMProfileId="8"
+			WhitelistLicenseProfileGroupId="" BlacklistLicenseProfileGroupId=""
+			DeviceGroupId="0" RW="false" Package="false" Recurring="false"
+			InternalPackage="false" ContentPackage="false" StartMode="1" Tickets="0"
+			FreeMonths="0" NoDevices="0" PermanentRight="false" Payment="true"
+			Price="2.99" PriceDuration="0000-01-00T00:00:00" Currency="EUR"
+			ProductTaxType="general" NoOfInstallments="0" BindingMonths="0"
+			DiscountPackage="" BillingEndDate="" BillImmediately="true"
+			AccessTime="false" Country="01">
+			<CountryList>
+				<Country>01</Country>
+			</CountryList>
+		</SubPolicy>
+	</SubPolicyList>
+	<CategoryList></CategoryList>
+	<Session SessionId="0000000000000000" Ticket="0000000000000000"
+		AgentHost="man" AgentId="man" CrmId="multiscreen" UserId="ANONYMOUS"
+		UserIp="0.0.0.0" PGRate="0" Country="01" IpCountryConfidence="99"
+		NetworkId="" DeviceId="" AffiliateId="" CreateTime="12/10/2014 4:10:34 PM"
+		ExpTime="12/10/2014 5:10:34 PM" NoStreams="0" MaxStreams="6" LeadId="">
+		<RegionInfo />
+	</Session>
+</AuthorizationInfo>

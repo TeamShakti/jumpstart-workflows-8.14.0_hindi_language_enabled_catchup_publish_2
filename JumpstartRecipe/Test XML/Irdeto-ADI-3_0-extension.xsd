@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	xmlns:core="urn:cablelabs:md:xsd:core:3.0" version="1"
+	targetNamespace="http://www.irdeto.com/schemas/metadata/1.0"
+	xmlns="http://www.irdeto.com/schemas/metadata/1.0">
+
+	<xsd:import namespace="urn:cablelabs:md:xsd:core:3.0" schemaLocation="MD-SP-CORE-I02.xsd"/>
+
+	<xsd:complexType name="BrandType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to portray an brand name overarching multiple Series of related content items.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="TitleRef" type="core:AssetRefType"/>
+
+					<xsd:element name="SeriesRef" type="core:AssetRefType"  minOccurs="0" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="SeriesType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to portray a Series of related content items, like episodes in a TV series' season, or sequelled Movies.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="TitleRef" type="core:AssetRefType"/>
+
+					<xsd:element name="ContentGroupRef" type="core:AssetRefType"  minOccurs="0" maxOccurs="unbounded" />
+
+					<xsd:element name="BoxCoverRef" type="core:AssetRefType"  minOccurs="1" maxOccurs="unbounded" />
+					<xsd:element name="PosterRef" type="core:AssetRefType"  minOccurs="1" maxOccurs="unbounded" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+
+
+</xsd:schema>

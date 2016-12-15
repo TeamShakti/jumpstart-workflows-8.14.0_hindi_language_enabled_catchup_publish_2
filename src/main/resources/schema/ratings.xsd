@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="Ratings">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="RatingScheme" type="RatingSchemeType" minOccurs="0" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="RatingSchemeType">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:choice>
+			<xsd:element name="CountryOfSystem" type="xsd:string"/>
+			<xsd:element name="OtherIncludedCountry" type="xsd:string"/>
+			<xsd:element name="Rating" type="RatingType"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="classificationSystem" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="RatingType">
+	<xsd:attribute name="id" type="xsd:string" use="required"/>
+		<xsd:attribute name="minimumAge" type="xsd:string" use="required"/>
+		<xsd:attribute name="rating" type="xsd:string" use="required"/>
+	</xsd:complexType>
+</xsd:schema>

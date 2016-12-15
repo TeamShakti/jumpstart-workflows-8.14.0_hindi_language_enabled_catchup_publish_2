@@ -1,0 +1,355 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		<style type="text/css"> body { font-family: Arial; font-size: 8pt; color: #800000; }</style>
+		<style type="text/css"> table { border-style: solid; border-width: 1px; border-left-color: #ECE9D8; border-top-color: #ECE9D8; border-right-color: #ACA899; border-bottom-color: #ACA899; }</style>
+		<style type="text/css"> th {border-style: solid; font-size: 10pt; border-width: 1px; }</style>
+		<style type="text/css"> td {border-style: solid; font-size: 8pt; border-width: 1px; }</style>
+		<style type="text/css"> a {color: blue; }</style>
+	</head>
+	<body>
+		<h2></h2>
+		<h3><a name="ChapterType"></a>ChapterType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>timeCode</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>pattern=[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]:[0-9]{1,2}</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>heading</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="LocalizableTitleType"></a>LocalizableTitleType</h3>
+		<p>
+				A collection of Title metadata which is specified in multiple lanaguages for localization.
+			</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>xml:lang</td>
+				<td>optional</td>
+				<td><a href="#"></a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TitleSortName</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=22</td>
+				<td>A string to be used when sorting the title.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TitleBrief</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=19</td>
+				<td>A brief version of the movie title (for display).  This field tends to be highly abbreviated.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TitleMedium</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=35</td>
+				<td>A medium length version of the movie title for displays that can accommodate more characters.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TitleLong</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=128</td>
+				<td>Full movie/show title - for display.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SummaryShort</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=256</td>
+				<td>Movie/show summary - usually in one sentence.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SummaryMedium</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=1024</td>
+				<td>Movie/show summary - usually in a paragraph for an EPG-like description.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SummaryLong</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=4096</td>
+				<td>Long movie/show summary.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ActorDisplay</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=1024</td>
+				<td>A human-readable list of actors for display (e.g. "Tom Hanks, Robin Williams")</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Actor</td>
+				<td>optional<br>multiple</td>
+				<td><a href="MD-SP-CORE-I01.html#PersonType">core:PersonType</a></td>
+				<td>Each is an actor in the title (including on-air talent) - used for searching or display.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>WriterDisplay</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=1024</td>
+				<td>A human-readable list of writers for display (e.g. "J.R.R. Tolkien, Peter Jackson, Fran Walsh")</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Writer</td>
+				<td>optional<br>multiple</td>
+				<td><a href="MD-SP-CORE-I01.html#PersonType">core:PersonType</a></td>
+				<td>Each is a writer for this title - used for searching or display.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>DirectorDisplay</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=1024</td>
+				<td>A human-readable list of writers for display (e.g. "James Cameron")</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Director</td>
+				<td>optional<br>multiple</td>
+				<td><a href="MD-SP-CORE-I01.html#PersonType">core:PersonType</a></td>
+				<td>Each is a director for this title - used for searching or display.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ProducerDisplay</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=1024</td>
+				<td>A human-readable list of producers for display (e.g. "Ethan Coen, Joel Coen")</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Producer</td>
+				<td>optional<br>multiple</td>
+				<td><a href="MD-SP-CORE-I01.html#PersonType">core:PersonType</a></td>
+				<td>Each is a producer for this title - used for searching or dispaly.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>StudioDisplay</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=1024</td>
+				<td>A human-readable list of studio names for display (e.g. "Universal Studios")</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>RecordingArtist</td>
+				<td>optional<br>multiple</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=25</td>
+				<td>Listing that provides the recording artist of a song for display (e.g. "REM", "Justin Timberlake", "U2")</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>RecordingArtistDisplay</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=1024</td>
+				<td>A human-readable list of recording artists for display (e.g. Rush, Styx, REO Speedwagon).</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SongTitle</td>
+				<td>optional<br>multiple</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=40</td>
+				<td>Each is a name of a song or concert in the title.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>EpisodeName</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td>The name of the individual episode of a series.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>EpisodeID</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td>A unique identifier given to each individual episode of a series (e.g. "Episode #45")</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Chapter</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#ChapterType">ChapterType</a></td>
+				<td>Chapter location and heading pair.</td>
+			</tr>
+		</table>
+		<h3><a name="TitleBaseType"></a>TitleBaseType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetType">core:AssetType</a></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>LocalizableTitle</td>
+				<td>required<br>multiple</td>
+				<td><a href="#LocalizableTitleType">LocalizableTitleType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Rating</td>
+				<td>required<br>multiple</td>
+				<td><a href="MD-SP-CORE-I01.html#RatingType">core:RatingType</a></td>
+				<td>MPAA, TV or custom rating, whichever is appropriate.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Audience</td>
+				<td>optional<br>multiple</td>
+				<td>xsd:string<br>minLength=1<br>pattern=(Adult|Mature|General|Family|Teen|Children|private:.+)</td>
+				<td>Indicates intended target audience.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Advisory</td>
+				<td>optional<br>multiple<br>maxOccurs=6</td>
+				<td>xsd:string<br>minLength=1<br>pattern=(V|MV|GV|AL|GL|AC|SC|N|BN|RP|private:.+)</td>
+				<td>One advisory per element.</td>
+			</tr>
+		</table>
+		<h3><a name="TitleType"></a>TitleType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="#TitleBaseType">TitleBaseType</a></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>IsClosedCaptioning</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>A flag to indicate closed captioning encoding.  This value MUST be explicitly provided if the title originated as V3.0.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>DisplayRunTime</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>pattern=([0-9]{1,2}):[0-5][0-9](:[0-5][0-9])?</td>
+				<td>Dispalyable run time as hH:MM:ss.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Year</td>
+				<td>optional</td>
+				<td>xsd:gYear</td>
+				<td>Year of release. This element MUST be explicitly provided if the title originated as V3.0.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>CountryOfOrigin</td>
+				<td>optional</td>
+				<td>xsd:string<br>pattern=[a-zA-Z]{2}</td>
+				<td>The country from where the title originates.  Expressed using country code as defined in ISO-3166-1.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Genre</td>
+				<td>optional<br>multiple<br>maxOccurs=5</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=32</td>
+				<td>Subject matter classification of the show.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ShowType</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>pattern=(Series|Sports|Music|Ad|Miniseries|Movie|Kids|Events|Lifestyle|Other|Paid Programming|Barker|private:.+)</td>
+				<td>Indicate usage of the release.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>IsSeasonPremiere</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>Indication if this episode is a season premiere.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>IsSeasonFinale</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>Indication if this episode is a season finale.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>IsEncryptionRequired</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>Encryption on the movie asset is required for this title.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>BoxOffice</td>
+				<td>optional</td>
+				<td>xsd:integer</td>
+				<td>Box office dollars of revenue (in whole numbers).</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ProgrammerCallLetters</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=6</td>
+				<td>A sequence of characters to be displayed with a title, providing a "brand label" for the title.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>LinearBroadcastDate</td>
+				<td>optional</td>
+				<td>xsd:dateTime</td>
+				<td>The date and time when this program was first presented for linear viewing by the particular programmer (or provider). May be used for determining when this program is elligible for VOD presentation.</td>
+			</tr>
+		</table>
+	</body>
+</html>

@@ -1,0 +1,1243 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_66-entityTitleItem" structureRef="String" />
+  <itemDefinition id="_htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_65-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_55-keyItem" structureRef="String" />
+  <itemDefinition id="_65-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_65-keyItem" structureRef="String" />
+  <itemDefinition id="_qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_entityTypeItem" structureRef="String" />
+  <itemDefinition id="_53-publishProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_66-publishProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_75-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_88-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_purgeModeItem" structureRef="String" />
+  <itemDefinition id="_77-publishProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_75-qaProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_66-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_publishProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_67-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_88-purgeModeItem" structureRef="String" />
+  <itemDefinition id="_purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_88-signalMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_75-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_88-purgeActionItem" structureRef="String" />
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_66-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_75-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_53-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_77-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_77-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_67-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_77-signalMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_65-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_88-entityTitleItem" structureRef="String" />
+  <itemDefinition id="_88-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_53-entityTitleItem" structureRef="String" />
+  <itemDefinition id="_signalMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_75-keyItem" structureRef="String" />
+  <itemDefinition id="_77-entityIdItem" structureRef="String" />
+  <itemDefinition id="_75-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_75-signalMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_66-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_65-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_66-purgeModeItem" structureRef="String" />
+  <itemDefinition id="_65-qaProcessInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_65-entityTitleItem" structureRef="String" />
+  <itemDefinition id="_53-qaProcessInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_53-qaProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_55-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_88-qaProcessInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_55-purgeModeItem" structureRef="String" />
+  <itemDefinition id="_keyItem" structureRef="String" />
+  <itemDefinition id="_77-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_55-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_entityTitleItem" structureRef="String" />
+  <itemDefinition id="_67-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_55-uriIdItem" structureRef="String" />
+  <itemDefinition id="_qaProcessInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_88-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_65-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_75-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_66-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_77-qaProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_65-signalMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_88-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_67-purgeActionItem" structureRef="String" />
+  <itemDefinition id="_88-uriIdItem" structureRef="String" />
+  <itemDefinition id="_75-qaProcessInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_55-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_66-purgeActionItem" structureRef="String" />
+  <itemDefinition id="_55-qaProcessInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_88-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_67-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_66-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_65-purgeActionItem" structureRef="String" />
+  <itemDefinition id="_77-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_75-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_66-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_67-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_77-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_77-keyItem" structureRef="String" />
+  <itemDefinition id="_66-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_53-purgeModeItem" structureRef="String" />
+  <itemDefinition id="_53-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_67-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_53-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_67-qaProcessInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_67-keyItem" structureRef="String" />
+  <itemDefinition id="_55-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_55-publishProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_66-keyItem" structureRef="String" />
+  <itemDefinition id="_55-signalMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_66-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_67-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_53-keyItem" structureRef="String" />
+  <itemDefinition id="_66-entityIdItem" structureRef="String" />
+  <itemDefinition id="_53-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_66-uriIdItem" structureRef="String" />
+  <itemDefinition id="_88-publishProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_67-entityIdItem" structureRef="String" />
+  <itemDefinition id="_53-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_88-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_55-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_53-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_67-entityTitleItem" structureRef="String" />
+  <itemDefinition id="_66-qaProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-entityTitleItem" structureRef="String" />
+  <itemDefinition id="_67-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_75-entityTitleItem" structureRef="String" />
+  <itemDefinition id="_65-qaProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_67-signalMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_66-signalMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_75-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_53-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_88-qaProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_75-entityIdItem" structureRef="String" />
+  <itemDefinition id="_uriIdItem" structureRef="String" />
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_88-keyItem" structureRef="String" />
+  <itemDefinition id="_88-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_55-entityTitleItem" structureRef="String" />
+  <itemDefinition id="_67-uriIdItem" structureRef="String" />
+  <itemDefinition id="_75-purgeActionItem" structureRef="String" />
+  <itemDefinition id="_77-uriIdItem" structureRef="String" />
+  <itemDefinition id="_53-entityIdItem" structureRef="String" />
+  <itemDefinition id="_77-qaProcessInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_67-qaProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_55-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_75-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_53-purgeActionItem" structureRef="String" />
+  <itemDefinition id="_55-purgeActionItem" structureRef="String" />
+  <itemDefinition id="_77-purgeActionItem" structureRef="String" />
+  <itemDefinition id="_66-qaProcessInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_88-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_67-publishProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_67-purgeModeItem" structureRef="String" />
+  <itemDefinition id="_65-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_77-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_88-entityIdItem" structureRef="String" />
+  <itemDefinition id="_77-purgeModeItem" structureRef="String" />
+  <itemDefinition id="_77-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_qaProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_65-publishProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_53-uriIdItem" structureRef="String" />
+  <itemDefinition id="_65-entityIdItem" structureRef="String" />
+  <itemDefinition id="_purgeActionItem" structureRef="String" />
+  <itemDefinition id="_65-purgeModeItem" structureRef="String" />
+  <itemDefinition id="_55-qaProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_75-purgeModeItem" structureRef="String" />
+  <itemDefinition id="_55-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_75-publishProcessInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-uriIdItem" structureRef="String" />
+  <itemDefinition id="_55-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_53-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_55-entityIdItem" structureRef="String" />
+  <itemDefinition id="_77-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_75-uriIdItem" structureRef="String" />
+  <itemDefinition id="_53-signalMapItem" structureRef="java.util.Map" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.Program" name="Program" tns:packageName="com.irdeto.jumpstart.workflow" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.jumpstart.domain.purge.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.qa.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="qaProcessInstanceId" itemSubjectRef="_qaProcessInstanceIdItem"/>
+    <property id="qaProcessInstanceIdList" itemSubjectRef="_qaProcessInstanceIdListItem"/>
+    <property id="entityTitle" itemSubjectRef="_entityTitleItem"/>
+    <property id="qaData" itemSubjectRef="_qaDataItem"/>
+    <property id="signalMap" itemSubjectRef="_signalMapItem"/>
+    <property id="publishProcessInstanceIdList" itemSubjectRef="_publishProcessInstanceIdListItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="uriId" itemSubjectRef="_uriIdItem"/>
+    <property id="eternalWorkflowDecorator" itemSubjectRef="_eternalWorkflowDecoratorItem"/>
+    <property id="config" itemSubjectRef="_configItem"/>
+    <property id="entityType" itemSubjectRef="_entityTypeItem"/>
+    <property id="htsDueperiod" itemSubjectRef="_htsDueperiodItem"/>
+    <property id="htsQaUser" itemSubjectRef="_htsQaUserItem"/>
+    <property id="purgeExecuted" itemSubjectRef="_purgeExecutedItem"/>
+    <property id="purgeAction" itemSubjectRef="_purgeActionItem"/>
+    <property id="purgeMode" itemSubjectRef="_purgeModeItem"/>
+    <property id="key" itemSubjectRef="_keyItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <intermediateCatchEvent id="_70" name="Signal" >
+      <dataOutput id="_70_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_70_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_70_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="QAError"/>
+    </intermediateCatchEvent>
+    <endEvent id="_3" name="End" />
+    <scriptTask id="_64" name="Setup" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("entityId", eternalWorkflowDecorator.getEntityId());
+kcontext.setVariable("uriId", eternalWorkflowDecorator.getUriId());
+kcontext.setVariable("entityType", "program");
+</script>
+    </scriptTask>
+    <task id="_65" name="Signal Protect Complete" tns:taskName="SignalWorkflow" >
+      <ioSpecification>
+        <dataInput id="_65_VariableToMatchInput" name="VariableToMatch" />
+        <dataInput id="_65_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_65_ValueToMatchInput" name="ValueToMatch" />
+        <dataInput id="_65_EventTypeInput" name="EventType" />
+        <dataInput id="_65_ProcessIdInput" name="ProcessId" />
+        <inputSet>
+          <dataInputRefs>_65_VariableToMatchInput</dataInputRefs>
+          <dataInputRefs>_65_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_65_ValueToMatchInput</dataInputRefs>
+          <dataInputRefs>_65_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_65_ProcessIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_65_VariableToMatchInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">uriId</from>
+          <to xsi:type="tFormalExpression">_65_VariableToMatchInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">MediaError</from>
+          <to xsi:type="tFormalExpression">_65_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_ValueToMatchInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{uriId}</from>
+          <to xsi:type="tFormalExpression">_65_ValueToMatchInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">PUBLISH_FIRE</from>
+          <to xsi:type="tFormalExpression">_65_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_ProcessIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.publish.Publish</from>
+          <to xsi:type="tFormalExpression">_65_ProcessIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_66" name="Transcode" tns:taskName="SyncSubprocess" >
+      <ioSpecification>
+        <dataInput id="_66_entityIdInput" name="entityId" />
+        <dataInput id="_66_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_66_SingletonInput" name="Singleton" />
+        <dataInput id="_66_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_66_entityIdInput</dataInputRefs>
+          <dataInputRefs>_66_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_66_SingletonInput</dataInputRefs>
+          <dataInputRefs>_66_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>entityId</sourceRef>
+        <targetRef>_66_entityIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_66_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">MediaError</from>
+          <to xsi:type="tFormalExpression">_66_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_66_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_66_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_66_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.transcode.Transcode</from>
+          <to xsi:type="tFormalExpression">_66_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <intermediateCatchEvent id="_6" name="Signal" >
+      <dataOutput id="_6_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_6_Output</sourceRef>
+      <targetRef>signalMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_6_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="DATA_UPDATE"/>
+    </intermediateCatchEvent>
+    <task id="_67" name="Protect" tns:taskName="SyncSubprocess" >
+      <ioSpecification>
+        <dataInput id="_67_entityIdInput" name="entityId" />
+        <dataInput id="_67_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_67_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_67_entityIdInput</dataInputRefs>
+          <dataInputRefs>_67_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_67_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>entityId</sourceRef>
+        <targetRef>_67_entityIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_67_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">MediaError</from>
+          <to xsi:type="tFormalExpression">_67_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_67_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.protect.Protect</from>
+          <to xsi:type="tFormalExpression">_67_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_7" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <task id="_77" name="Purge" tns:taskName="SyncSubprocess" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("purgeAction", PurgeWrapper.ACTION_DELETE);
+kcontext.setVariable("purgeMode", PurgeWrapper.MODE_DEFERRED);
+kcontext.setVariable("key", entityType + ":" + entityId);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_77_actionInput" name="action" />
+        <dataInput id="_77_entityIdInput" name="entityId" />
+        <dataInput id="_77_entityTypeInput" name="entityType" />
+        <dataInput id="_77_keyInput" name="key" />
+        <dataInput id="_77_modeInput" name="mode" />
+        <dataInput id="_77_ValueInput" name="Value" />
+        <dataInput id="_77_VariableInput" name="Variable" />
+        <dataInput id="_77_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_77_EventTypeInput" name="EventType" />
+        <dataInput id="_77_SingletonInput" name="Singleton" />
+        <dataInput id="_77_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_77_purgeExecutedOutput" name="purgeExecuted" />
+        <inputSet>
+          <dataInputRefs>_77_actionInput</dataInputRefs>
+          <dataInputRefs>_77_entityIdInput</dataInputRefs>
+          <dataInputRefs>_77_entityTypeInput</dataInputRefs>
+          <dataInputRefs>_77_keyInput</dataInputRefs>
+          <dataInputRefs>_77_modeInput</dataInputRefs>
+          <dataInputRefs>_77_ValueInput</dataInputRefs>
+          <dataInputRefs>_77_VariableInput</dataInputRefs>
+          <dataInputRefs>_77_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_77_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_77_SingletonInput</dataInputRefs>
+          <dataInputRefs>_77_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_77_purgeExecutedOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>purgeAction</sourceRef>
+        <targetRef>_77_actionInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entityId</sourceRef>
+        <targetRef>_77_entityIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entityType</sourceRef>
+        <targetRef>_77_entityTypeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>key</sourceRef>
+        <targetRef>_77_keyInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>purgeMode</sourceRef>
+        <targetRef>_77_modeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_77_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{key}</from>
+          <to xsi:type="tFormalExpression">_77_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_77_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">key</from>
+          <to xsi:type="tFormalExpression">_77_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_77_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">PurgeError</from>
+          <to xsi:type="tFormalExpression">_77_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_77_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">PURGE_FIRE</from>
+          <to xsi:type="tFormalExpression">_77_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_77_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_77_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_77_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.purge.Purge</from>
+          <to xsi:type="tFormalExpression">_77_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_77_purgeExecutedOutput</sourceRef>
+        <targetRef>purgeExecuted</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_73" name="Log Media Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Program error processing media: {}", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <scriptTask id="_74" name="Log QA Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Program error processing QA: {}", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <task id="_75" name="Commit Point" tns:taskName="CommitPoint" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("purgeExecuted", false);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_75_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_75_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_75_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_75_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_87" name="End" />
+    <exclusiveGateway id="_86" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <endEvent id="_81" name="End" />
+    <endEvent id="_80" name="Terminate" >
+        <terminateEventDefinition />
+    </endEvent>
+    <endEvent id="_82" name="End" />
+    <scriptTask id="_93" name="Log Publish Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Program error processing Publish: {}", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <scriptTask id="_92" name="Log Purge Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Program error processing Purge: {}", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <endEvent id="_95" name="End" />
+    <endEvent id="_94" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <endEvent id="_89" name="End" />
+    <task id="_88" name="Publish" tns:taskName="SyncSubprocess" >
+      <ioSpecification>
+        <dataInput id="_88_entityIdInput" name="entityId" />
+        <dataInput id="_88_entityTypeInput" name="entityType" />
+        <dataInput id="_88_ValueInput" name="Value" />
+        <dataInput id="_88_VariableInput" name="Variable" />
+        <dataInput id="_88_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_88_EventTypeInput" name="EventType" />
+        <dataInput id="_88_SingletonInput" name="Singleton" />
+        <dataInput id="_88_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_88_entityIdInput</dataInputRefs>
+          <dataInputRefs>_88_entityTypeInput</dataInputRefs>
+          <dataInputRefs>_88_ValueInput</dataInputRefs>
+          <dataInputRefs>_88_VariableInput</dataInputRefs>
+          <dataInputRefs>_88_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_88_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_88_SingletonInput</dataInputRefs>
+          <dataInputRefs>_88_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>entityId</sourceRef>
+        <targetRef>_88_entityIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entityType</sourceRef>
+        <targetRef>_88_entityTypeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_88_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{uriId}</from>
+          <to xsi:type="tFormalExpression">_88_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_88_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">uriId</from>
+          <to xsi:type="tFormalExpression">_88_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_88_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">PublishError</from>
+          <to xsi:type="tFormalExpression">_88_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_88_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">PUBLISH_FIRE</from>
+          <to xsi:type="tFormalExpression">_88_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_88_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_88_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_88_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.publish.Publish</from>
+          <to xsi:type="tFormalExpression">_88_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <intermediateCatchEvent id="_91" name="Signal" >
+      <dataOutput id="_91_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_91_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_91_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="PublishError"/>
+    </intermediateCatchEvent>
+    <intermediateCatchEvent id="_90" name="Signal" >
+      <dataOutput id="_90_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_90_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_90_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="PurgeError"/>
+    </intermediateCatchEvent>
+    <parallelGateway id="_102" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <parallelGateway id="_103" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <exclusiveGateway id="_100" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <endEvent id="_101" name="End" />
+    <parallelGateway id="_98" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <intermediateCatchEvent id="_97" name="Signal" >
+      <signalEventDefinition signalRef="Eternal"/>
+    </intermediateCatchEvent>
+    <exclusiveGateway id="_110" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_108" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_109" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <parallelGateway id="_41" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <parallelGateway id="_106" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <exclusiveGateway id="_107" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <scriptTask id="_47" name="Extract Signal Data" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("eternalWorkflowDecorator", signalMap.get("eternalWorkflowDecorator"));</script>
+    </scriptTask>
+    <parallelGateway id="_104" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <parallelGateway id="_105" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <task id="_55" name="Program Metadata QA" tns:taskName="SuppressingSyncSubprocessTaskHandler" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("qaData", eternalWorkflowDecorator.getQADataMap(eternalWorkflowDecorator.getMetadataQADecorator()));</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_55_qaDataInput" name="qaData" />
+        <dataInput id="_55_ValueInput" name="Value" />
+        <dataInput id="_55_VariableInput" name="Variable" />
+        <dataInput id="_55_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_55_EventTypeInput" name="EventType" />
+        <dataInput id="_55_SingletonInput" name="Singleton" />
+        <dataInput id="_55_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_55_qaDataInput</dataInputRefs>
+          <dataInputRefs>_55_ValueInput</dataInputRefs>
+          <dataInputRefs>_55_VariableInput</dataInputRefs>
+          <dataInputRefs>_55_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_55_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_55_SingletonInput</dataInputRefs>
+          <dataInputRefs>_55_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>qaData</sourceRef>
+        <targetRef>_55_qaDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaData.get("qaEntity")}</from>
+          <to xsi:type="tFormalExpression">_55_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">qaEntity</from>
+          <to xsi:type="tFormalExpression">_55_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QAError</from>
+          <to xsi:type="tFormalExpression">_55_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">HT_FIRE</from>
+          <to xsi:type="tFormalExpression">_55_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_55_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.qa.QA</from>
+          <to xsi:type="tFormalExpression">_55_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_53" name="Program Content QA" tns:taskName="SuppressingSyncSubprocessTaskHandler" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("qaData", eternalWorkflowDecorator.getQADataMap(eternalWorkflowDecorator.getContentQADecorator()));</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_53_qaDataInput" name="qaData" />
+        <dataInput id="_53_ValueInput" name="Value" />
+        <dataInput id="_53_VariableInput" name="Variable" />
+        <dataInput id="_53_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_53_EventTypeInput" name="EventType" />
+        <dataInput id="_53_SingletonInput" name="Singleton" />
+        <dataInput id="_53_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_53_qaDataInput</dataInputRefs>
+          <dataInputRefs>_53_ValueInput</dataInputRefs>
+          <dataInputRefs>_53_VariableInput</dataInputRefs>
+          <dataInputRefs>_53_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_53_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_53_SingletonInput</dataInputRefs>
+          <dataInputRefs>_53_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>qaData</sourceRef>
+        <targetRef>_53_qaDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaData.get("qaEntity")}</from>
+          <to xsi:type="tFormalExpression">_53_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">qaEntity</from>
+          <to xsi:type="tFormalExpression">_53_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QAError</from>
+          <to xsi:type="tFormalExpression">_53_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">HT_FIRE</from>
+          <to xsi:type="tFormalExpression">_53_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_53_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.qa.QA</from>
+          <to xsi:type="tFormalExpression">_53_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <intermediateCatchEvent id="_59" name="Signal" >
+      <dataOutput id="_59_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_59_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_59_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="MediaError"/>
+    </intermediateCatchEvent>
+    <task id="_jbpm-unique-2" name="Set Workflow Context" tns:taskName="SetProcessInstanceContext" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-2_EntityTypeInput" name="EntityType" />
+        <dataInput id="_jbpm-unique-2_BusinessKeyInput" name="BusinessKey" />
+        <dataInput id="_jbpm-unique-2_EntityIdInput" name="EntityId" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-2_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-2_BusinessKeyInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-2_EntityIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-2_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{eternalWorkflowDecorator.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-2_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-2_BusinessKeyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{eternalWorkflowDecorator.getUriId()}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-2_BusinessKeyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-2_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{eternalWorkflowDecorator.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-2_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_108-_70" sourceRef="_108" targetRef="_70" />
+    <sequenceFlow id="_88-_3" sourceRef="_88" targetRef="_3" />
+    <sequenceFlow id="_7-_64" sourceRef="_7" targetRef="_64" />
+    <sequenceFlow id="_67-_65" sourceRef="_67" targetRef="_65" />
+    <sequenceFlow id="_41-_66" sourceRef="_41" targetRef="_66" />
+    <sequenceFlow id="_100-_6" sourceRef="_100" targetRef="_6" />
+    <sequenceFlow id="_66-_67" sourceRef="_66" targetRef="_67" />
+    <sequenceFlow id="_47-_7" sourceRef="_47" targetRef="_7" />
+    <sequenceFlow id="_75-_7" sourceRef="_75" targetRef="_7" />
+    <sequenceFlow id="_41-_77" sourceRef="_41" targetRef="_77" />
+    <sequenceFlow id="_106-_73" sourceRef="_106" targetRef="_73" />
+    <sequenceFlow id="_105-_74" sourceRef="_105" targetRef="_74" />
+    <sequenceFlow id="_98-_75" sourceRef="_98" targetRef="_75" />
+    <sequenceFlow id="_86-_87" sourceRef="_86" targetRef="_87" name="Purge Deferred" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_77-_86" sourceRef="_77" targetRef="_86" />
+    <sequenceFlow id="_73-_81" sourceRef="_73" targetRef="_81" />
+    <sequenceFlow id="_86-_80" sourceRef="_86" targetRef="_80" name="Purge Executed" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return purgeExecuted != null &amp;&amp; purgeExecuted;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_65-_82" sourceRef="_65" targetRef="_82" />
+    <sequenceFlow id="_104-_93" sourceRef="_104" targetRef="_93" />
+    <sequenceFlow id="_103-_92" sourceRef="_103" targetRef="_92" />
+    <sequenceFlow id="_93-_95" sourceRef="_93" targetRef="_95" />
+    <sequenceFlow id="_97-_94" sourceRef="_97" targetRef="_94" />
+    <sequenceFlow id="_74-_89" sourceRef="_74" targetRef="_89" />
+    <sequenceFlow id="_55-_88" sourceRef="_55" targetRef="_88" />
+    <sequenceFlow id="_109-_91" sourceRef="_109" targetRef="_91" />
+    <sequenceFlow id="_110-_90" sourceRef="_110" targetRef="_90" />
+    <sequenceFlow id="_6-_102" sourceRef="_6" targetRef="_102" />
+    <sequenceFlow id="_90-_103" sourceRef="_90" targetRef="_103" />
+    <sequenceFlow id="_98-_100" sourceRef="_98" targetRef="_100" />
+    <sequenceFlow id="_102-_100" sourceRef="_102" targetRef="_100" />
+    <sequenceFlow id="_92-_101" sourceRef="_92" targetRef="_101" />
+    <sequenceFlow id="_jbpm-unique-2-_98" sourceRef="_jbpm-unique-2" targetRef="_98" />
+    <sequenceFlow id="_98-_97" sourceRef="_98" targetRef="_97" />
+    <sequenceFlow id="_98-_110" sourceRef="_98" targetRef="_110" />
+    <sequenceFlow id="_103-_110" sourceRef="_103" targetRef="_110" />
+    <sequenceFlow id="_98-_108" sourceRef="_98" targetRef="_108" />
+    <sequenceFlow id="_105-_108" sourceRef="_105" targetRef="_108" />
+    <sequenceFlow id="_98-_109" sourceRef="_98" targetRef="_109" />
+    <sequenceFlow id="_104-_109" sourceRef="_104" targetRef="_109" />
+    <sequenceFlow id="_64-_41" sourceRef="_64" targetRef="_41" />
+    <sequenceFlow id="_59-_106" sourceRef="_59" targetRef="_106" />
+    <sequenceFlow id="_98-_107" sourceRef="_98" targetRef="_107" />
+    <sequenceFlow id="_106-_107" sourceRef="_106" targetRef="_107" />
+    <sequenceFlow id="_102-_47" sourceRef="_102" targetRef="_47" />
+    <sequenceFlow id="_91-_104" sourceRef="_91" targetRef="_104" />
+    <sequenceFlow id="_70-_105" sourceRef="_70" targetRef="_105" />
+    <sequenceFlow id="_53-_55" sourceRef="_53" targetRef="_55" />
+    <sequenceFlow id="_41-_53" sourceRef="_41" targetRef="_53" />
+    <sequenceFlow id="_107-_59" sourceRef="_107" targetRef="_59" />
+    <sequenceFlow id="_1-_jbpm-unique-2" sourceRef="_1" targetRef="_jbpm-unique-2" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.Program" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="396" y="60" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_70" >
+        <dc:Bounds x="720" y="420" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="564" y="924" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_64" >
+        <dc:Bounds x="336" y="492" width="169" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_65" >
+        <dc:Bounds x="156" y="852" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_66" >
+        <dc:Bounds x="156" y="708" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="168" y="204" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_67" >
+        <dc:Bounds x="156" y="780" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="396" y="420" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_77" >
+        <dc:Bounds x="324" y="924" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_73" >
+        <dc:Bounds x="576" y="492" width="121" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_74" >
+        <dc:Bounds x="720" y="492" width="121" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_75" >
+        <dc:Bounds x="336" y="348" width="169" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_87" >
+        <dc:Bounds x="276" y="1056" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_86" >
+        <dc:Bounds x="396" y="996" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_81" >
+        <dc:Bounds x="612" y="564" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_80" >
+        <dc:Bounds x="528" y="1056" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_82" >
+        <dc:Bounds x="228" y="924" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_93" >
+        <dc:Bounds x="864" y="492" width="121" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_92" >
+        <dc:Bounds x="1008" y="492" width="121" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_95" >
+        <dc:Bounds x="900" y="564" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_94" >
+        <dc:Bounds x="1044" y="276" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_89" >
+        <dc:Bounds x="756" y="564" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_88" >
+        <dc:Bounds x="492" y="852" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_91" >
+        <dc:Bounds x="864" y="420" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_90" >
+        <dc:Bounds x="1008" y="420" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_102" >
+        <dc:Bounds x="204" y="276" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_103" >
+        <dc:Bounds x="1044" y="348" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_100" >
+        <dc:Bounds x="228" y="204" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_101" >
+        <dc:Bounds x="1044" y="564" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_98" >
+        <dc:Bounds x="396" y="204" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_97" >
+        <dc:Bounds x="1044" y="204" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_110" >
+        <dc:Bounds x="972" y="348" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_108" >
+        <dc:Bounds x="684" y="348" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_109" >
+        <dc:Bounds x="828" y="348" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_41" >
+        <dc:Bounds x="396" y="636" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_106" >
+        <dc:Bounds x="612" y="348" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_107" >
+        <dc:Bounds x="540" y="348" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_47" >
+        <dc:Bounds x="156" y="348" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_104" >
+        <dc:Bounds x="900" y="348" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_105" >
+        <dc:Bounds x="756" y="348" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_55" >
+        <dc:Bounds x="492" y="780" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_53" >
+        <dc:Bounds x="492" y="708" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_59" >
+        <dc:Bounds x="576" y="420" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-2" >
+        <dc:Bounds x="336" y="132" width="169" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_108-_70" >
+        <di:waypoint x="708" y="372" />
+        <di:waypoint x="744" y="444" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_88-_3" >
+        <di:waypoint x="588" y="876" />
+        <di:waypoint x="588" y="948" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_64" >
+        <di:waypoint x="420" y="444" />
+        <di:waypoint x="420" y="516" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_67-_65" >
+        <di:waypoint x="252" y="804" />
+        <di:waypoint x="252" y="876" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_66" >
+        <di:waypoint x="420" y="660" />
+        <di:waypoint x="252" y="732" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_100-_6" >
+        <di:waypoint x="252" y="228" />
+        <di:waypoint x="192" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_66-_67" >
+        <di:waypoint x="252" y="732" />
+        <di:waypoint x="252" y="804" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_47-_7" >
+        <di:waypoint x="228" y="372" />
+        <di:waypoint x="228" y="444" />
+        <di:waypoint x="420" y="444" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_75-_7" >
+        <di:waypoint x="420" y="372" />
+        <di:waypoint x="420" y="444" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_77" >
+        <di:waypoint x="420" y="660" />
+        <di:waypoint x="420" y="948" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_106-_73" >
+        <di:waypoint x="636" y="372" />
+        <di:waypoint x="636" y="516" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_105-_74" >
+        <di:waypoint x="780" y="372" />
+        <di:waypoint x="780" y="516" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_75" >
+        <di:waypoint x="420" y="228" />
+        <di:waypoint x="420" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_86-_87" >
+        <di:waypoint x="420" y="1020" />
+        <di:waypoint x="300" y="1080" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_77-_86" >
+        <di:waypoint x="420" y="948" />
+        <di:waypoint x="420" y="1020" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_73-_81" >
+        <di:waypoint x="636" y="516" />
+        <di:waypoint x="636" y="588" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_86-_80" >
+        <di:waypoint x="420" y="1020" />
+        <di:waypoint x="552" y="1080" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_65-_82" >
+        <di:waypoint x="252" y="876" />
+        <di:waypoint x="252" y="948" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_104-_93" >
+        <di:waypoint x="924" y="372" />
+        <di:waypoint x="924" y="516" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_103-_92" >
+        <di:waypoint x="1068" y="372" />
+        <di:waypoint x="1068" y="516" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_93-_95" >
+        <di:waypoint x="924" y="516" />
+        <di:waypoint x="924" y="588" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_97-_94" >
+        <di:waypoint x="1068" y="228" />
+        <di:waypoint x="1068" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_74-_89" >
+        <di:waypoint x="780" y="516" />
+        <di:waypoint x="780" y="588" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_55-_88" >
+        <di:waypoint x="588" y="804" />
+        <di:waypoint x="588" y="876" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_109-_91" >
+        <di:waypoint x="852" y="372" />
+        <di:waypoint x="888" y="444" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_110-_90" >
+        <di:waypoint x="996" y="372" />
+        <di:waypoint x="1032" y="444" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_102" >
+        <di:waypoint x="192" y="228" />
+        <di:waypoint x="228" y="300" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_90-_103" >
+        <di:waypoint x="1032" y="444" />
+        <di:waypoint x="1068" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_100" >
+        <di:waypoint x="420" y="228" />
+        <di:waypoint x="252" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_102-_100" >
+        <di:waypoint x="228" y="300" />
+        <di:waypoint x="252" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_92-_101" >
+        <di:waypoint x="1068" y="516" />
+        <di:waypoint x="1068" y="588" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-2-_98" >
+        <di:waypoint x="420" y="156" />
+        <di:waypoint x="420" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_97" >
+        <di:waypoint x="420" y="228" />
+        <di:waypoint x="1068" y="228" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_110" >
+        <di:waypoint x="420" y="228" />
+        <di:waypoint x="997" y="229" />
+        <di:waypoint x="996" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_103-_110" >
+        <di:waypoint x="1068" y="372" />
+        <di:waypoint x="996" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_108" >
+        <di:waypoint x="420" y="228" />
+        <di:waypoint x="708" y="228" />
+        <di:waypoint x="708" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_105-_108" >
+        <di:waypoint x="780" y="372" />
+        <di:waypoint x="708" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_109" >
+        <di:waypoint x="420" y="228" />
+        <di:waypoint x="851" y="229" />
+        <di:waypoint x="852" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_104-_109" >
+        <di:waypoint x="924" y="372" />
+        <di:waypoint x="852" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_64-_41" >
+        <di:waypoint x="420" y="516" />
+        <di:waypoint x="420" y="660" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_59-_106" >
+        <di:waypoint x="600" y="444" />
+        <di:waypoint x="636" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_107" >
+        <di:waypoint x="420" y="228" />
+        <di:waypoint x="564" y="229" />
+        <di:waypoint x="564" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_106-_107" >
+        <di:waypoint x="636" y="372" />
+        <di:waypoint x="564" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_102-_47" >
+        <di:waypoint x="228" y="300" />
+        <di:waypoint x="228" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_91-_104" >
+        <di:waypoint x="888" y="444" />
+        <di:waypoint x="924" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70-_105" >
+        <di:waypoint x="744" y="444" />
+        <di:waypoint x="780" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_53-_55" >
+        <di:waypoint x="588" y="732" />
+        <di:waypoint x="588" y="804" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_53" >
+        <di:waypoint x="420" y="660" />
+        <di:waypoint x="588" y="732" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_107-_59" >
+        <di:waypoint x="564" y="372" />
+        <di:waypoint x="600" y="444" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_jbpm-unique-2" >
+        <di:waypoint x="420" y="84" />
+        <di:waypoint x="420" y="156" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

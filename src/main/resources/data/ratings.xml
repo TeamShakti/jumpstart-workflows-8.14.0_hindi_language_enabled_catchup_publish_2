@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Ratings>
+	<RatingScheme classificationSystem="Argentina">
+		<CountryOfSystem>AR</CountryOfSystem>
+		<OtherIncludedCountry>AR</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="ATP"/>
+		<Rating minimumAge="13" rating="AM13"/>
+		<Rating minimumAge="16" rating="AM16"/>
+		<Rating minimumAge="18" rating="AM18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Australia">
+		<CountryOfSystem>AU</CountryOfSystem>
+		<OtherIncludedCountry>AU</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="13" rating="M"/>
+		<Rating minimumAge="15" rating="MA15+"/>
+		<Rating minimumAge="18" rating="R18"/>
+		<Rating minimumAge="18" rating="X18+"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Brazil">
+		<CountryOfSystem>BR</CountryOfSystem>
+		<OtherIncludedCountry>BR</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="L"/>
+		<Rating minimumAge="10" rating="10"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="14" rating="14"/>
+		<Rating minimumAge="16" rating="16"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Belgium-Display">
+		<CountryOfSystem>BE</CountryOfSystem>
+		<Rating minimumAge="1" rating="KT"/>
+		<Rating minimumAge="16" rating="KNT"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Belgium">
+		<OtherIncludedCountry>BE</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="KT"/>
+		<Rating minimumAge="1" rating="EA"/>
+		<Rating minimumAge="16" rating="KNT"/>
+		<Rating minimumAge="16" rating="ENA"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Bulgaria">
+		<CountryOfSystem>BG</CountryOfSystem>
+		<OtherIncludedCountry>BG</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="A"/>
+		<Rating minimumAge="4" rating="B"/>
+		<Rating minimumAge="12" rating="C"/>
+		<Rating minimumAge="16" rating="D"/>
+		<Rating minimumAge="18" rating="X"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="CHVRS-Display">
+		<CountryOfSystem>CA</CountryOfSystem>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="10" rating="PG"/>
+		<Rating minimumAge="14" rating="14A"/>
+		<Rating minimumAge="18" rating="18A"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="CHVRS">
+		<OtherIncludedCountry>CA</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="10" rating="PG"/>
+		<Rating minimumAge="14" rating="14A"/>
+		<Rating minimumAge="18" rating="18A"/>
+		<Rating minimumAge="18" rating="R"/>
+		<Rating minimumAge="18" rating="A"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="MoC-Display">
+		<CountryOfSystem>CO</CountryOfSystem>
+		<Rating minimumAge="1" rating="T"/>
+		<Rating minimumAge="7" rating="7"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="MoC">
+		<OtherIncludedCountry>CO</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="T"/>
+		<Rating minimumAge="7" rating="7"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+		<Rating minimumAge="18" rating="X"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Czech Republic">
+		<CountryOfSystem>CZ</CountryOfSystem>
+		<OtherIncludedCountry>CZ</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="U"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Medieradet">
+		<CountryOfSystem>CH</CountryOfSystem>
+		<OtherIncludedCountry>CH</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="A"/>
+		<Rating minimumAge="7" rating="7"/>
+		<Rating minimumAge="11" rating="11"/>
+		<Rating minimumAge="15" rating="15"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Egypt">
+		<CountryOfSystem>EG</CountryOfSystem>
+		<OtherIncludedCountry>EG</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="General Audience"/>
+		<Rating minimumAge="18" rating="Adult"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Estonia-Display">
+		<CountryOfSystem>EE</CountryOfSystem>
+		<Rating minimumAge="1" rating="PERE"/>
+		<Rating minimumAge="4" rating="L"/>
+		<Rating minimumAge="6" rating="MS-6"/>
+		<Rating minimumAge="12" rating="K-12"/>
+		<Rating minimumAge="14" rating="K-14"/>
+		<Rating minimumAge="16" rating="K-16"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Estonia">
+		<OtherIncludedCountry>EE</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="PERE"/>
+		<Rating minimumAge="4" rating="L"/>
+		<Rating minimumAge="6" rating="MS-6"/>
+		<Rating minimumAge="12" rating="MS-12"/>
+		<Rating minimumAge="12" rating="K-12"/>
+		<Rating minimumAge="14" rating="K-14"/>
+		<Rating minimumAge="16" rating="K-16"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="KAVI">
+		<CountryOfSystem>FI</CountryOfSystem>
+		<OtherIncludedCountry>FI</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="S"/>
+		<Rating minimumAge="7" rating="K-7"/>
+		<Rating minimumAge="12" rating="K-12"/>
+		<Rating minimumAge="16" rating="K-16"/>
+		<Rating minimumAge="18" rating="K-18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="MOC">
+		<CountryOfSystem>FR</CountryOfSystem>
+		<OtherIncludedCountry>FR</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="U"/>
+		<Rating minimumAge="12" rating="-12"/>
+		<Rating minimumAge="16" rating="-16"/>
+		<Rating minimumAge="18" rating="-18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="FSK">
+		<CountryOfSystem>DE</CountryOfSystem>
+		<OtherIncludedCountry>DE</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="FSK 0"/>
+		<Rating minimumAge="6" rating="FSK 6"/>
+		<Rating minimumAge="12" rating="FSK 12"/>
+		<Rating minimumAge="16" rating="FSK 16"/>
+		<Rating minimumAge="18" rating="FSK 18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Greece">
+		<CountryOfSystem>GR</CountryOfSystem>
+		<OtherIncludedCountry>GR</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="K"/>
+		<Rating minimumAge="13" rating="K-13"/>
+		<Rating minimumAge="17" rating="K-17"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="TELA">
+		<CountryOfSystem>HK</CountryOfSystem>
+		<OtherIncludedCountry>HK</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="I"/>
+		<Rating minimumAge="13" rating="IIA"/>
+		<Rating minimumAge="16" rating="IIB"/>
+		<Rating minimumAge="18" rating="III"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="NMHH">
+		<CountryOfSystem>HU</CountryOfSystem>
+		<OtherIncludedCountry>HU</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="KN"/>
+		<Rating minimumAge="6" rating="6"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="16" rating="16"/>
+		<Rating minimumAge="18" rating="18"/>
+		<Rating minimumAge="21" rating="X"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Smais">
+		<CountryOfSystem>IS</CountryOfSystem>
+		<OtherIncludedCountry>IS</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="L"/>
+		<Rating minimumAge="7" rating="7"/>
+		<Rating minimumAge="10" rating="10"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="14" rating="14"/>
+		<Rating minimumAge="16" rating="16"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="CBFC">
+		<CountryOfSystem>IN</CountryOfSystem>
+		<OtherIncludedCountry>IN</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="U"/>
+		<Rating minimumAge="13" rating="UA"/>
+		<Rating minimumAge="18" rating="A"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="IFCB-Display">
+		<CountryOfSystem>ID</CountryOfSystem>
+		<Rating minimumAge="1" rating="A"/>
+		<Rating minimumAge="4" rating="BO-A"/>
+		<Rating minimumAge="8" rating="BO"/>
+		<Rating minimumAge="13" rating="BO-R"/>
+		<Rating minimumAge="15" rating="R"/>
+		<Rating minimumAge="17" rating="D"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="IFCB">
+		<OtherIncludedCountry>ID</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="A"/>
+		<Rating minimumAge="1" rating="SU"/>
+		<Rating minimumAge="4" rating="BO-A"/>
+		<Rating minimumAge="8" rating="BO"/>
+		<Rating minimumAge="13" rating="BO-R"/>
+		<Rating minimumAge="15" rating="R"/>
+		<Rating minimumAge="17" rating="D"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Iraq">
+		<CountryOfSystem>IQ</CountryOfSystem>
+		<OtherIncludedCountry>IQ</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="A"/>
+		<Rating minimumAge="9" rating="9"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="16" rating="16"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="IFCO-Display">
+		<CountryOfSystem>IE</CountryOfSystem>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="16" rating="16"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="IFCO">
+		<OtherIncludedCountry>IE</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="12" rating="PG"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="12" rating="12A"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="15" rating="15A"/>
+		<Rating minimumAge="16" rating="16"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="MiBAC">
+		<CountryOfSystem>IT</CountryOfSystem>
+		<OtherIncludedCountry>IT</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="T"/>
+		<Rating minimumAge="14" rating="VM14"/>
+		<Rating minimumAge="18" rating="VM18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Eirin">
+		<CountryOfSystem>JP</CountryOfSystem>
+		<OtherIncludedCountry>JP</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="12" rating="PG-12"/>
+		<Rating minimumAge="15" rating="R15+"/>
+		<Rating minimumAge="18" rating="R18+"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Kazakhstan-Display">
+		<CountryOfSystem>KZ</CountryOfSystem>
+		<Rating minimumAge="1" rating="K"/>
+		<Rating minimumAge="12" rating="E14"/>
+		<Rating minimumAge="16" rating="E16"/>
+		<Rating minimumAge="18" rating="E18"/>
+		<Rating minimumAge="21" rating="HA"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Kazakhstan">
+		<OtherIncludedCountry>KZ</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="K"/>
+		<Rating minimumAge="12" rating="EA"/>
+		<Rating minimumAge="12" rating="E14"/>
+		<Rating minimumAge="16" rating="E16"/>
+		<Rating minimumAge="18" rating="E18"/>
+		<Rating minimumAge="21" rating="HA"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="South Korea">
+		<CountryOfSystem>KR</CountryOfSystem>
+		<OtherIncludedCountry>KR</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="ALL"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="NCC">
+		<CountryOfSystem>LV</CountryOfSystem>
+		<OtherIncludedCountry>LV</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="U"/>
+		<Rating minimumAge="7" rating="7+"/>
+		<Rating minimumAge="12" rating="12+"/>
+		<Rating minimumAge="16" rating="16+"/>
+		<Rating minimumAge="18" rating="18+"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Film Censorship Board">
+		<CountryOfSystem>MY</CountryOfSystem>
+		<OtherIncludedCountry>MY</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="U"/>
+		<Rating minimumAge="13" rating="P13"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="NBC">
+		<CountryOfSystem>MV</CountryOfSystem>
+		<OtherIncludedCountry>MV</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="12" rating="12+"/>
+		<Rating minimumAge="15" rating="15+"/>
+		<Rating minimumAge="18" rating="18+"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="RTC">
+		<CountryOfSystem>MX</CountryOfSystem>
+		<OtherIncludedCountry>MX</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="AA"/>
+		<Rating minimumAge="7" rating="A"/>
+		<Rating minimumAge="12" rating="B"/>
+		<Rating minimumAge="15" rating="B-15"/>
+		<Rating minimumAge="18" rating="C"/>
+		<Rating minimumAge="19" rating="D"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Kijkwijzer">
+		<CountryOfSystem>NL</CountryOfSystem>
+		<OtherIncludedCountry>NL</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="AL"/>
+		<Rating minimumAge="6" rating="6"/>
+		<Rating minimumAge="9" rating="9"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="16" rating="16"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="OFLCNZ-Display">
+		<CountryOfSystem>NZ</CountryOfSystem>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="13" rating="R13"/>
+		<Rating minimumAge="15" rating="R15"/>
+		<Rating minimumAge="16" rating="R16"/>
+		<Rating minimumAge="18" rating="R18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="OFLCNZ">
+		<OtherIncludedCountry>NZ</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="13" rating="R13"/>
+		<Rating minimumAge="13" rating="RP13"/>
+		<Rating minimumAge="15" rating="R15"/>
+		<Rating minimumAge="16" rating="R16"/>
+		<Rating minimumAge="16" rating="RP16"/>
+		<Rating minimumAge="16" rating="M"/>
+		<Rating minimumAge="18" rating="R18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="NFaVCB-Display">
+		<CountryOfSystem>NG</CountryOfSystem>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="14" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="NFaVCB">
+		<OtherIncludedCountry>NG</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="12" rating="12A"/>
+		<Rating minimumAge="14" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Norway">
+		<CountryOfSystem>NO</CountryOfSystem>
+		<OtherIncludedCountry>NO</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="A"/>
+		<Rating minimumAge="7" rating="7"/>
+		<Rating minimumAge="11" rating="11"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Peru">
+		<CountryOfSystem>PE</CountryOfSystem>
+		<OtherIncludedCountry>PE</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="Apt"/>
+		<Rating minimumAge="14" rating="14"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="MTRCB-Display">
+		<CountryOfSystem>PH</CountryOfSystem>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="13" rating="R-13"/>
+		<Rating minimumAge="16" rating="R-16"/>
+		<Rating minimumAge="18" rating="R-18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="MTRCB">
+		<OtherIncludedCountry>PH</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="13" rating="PG"/>
+		<Rating minimumAge="13" rating="R-13"/>
+		<Rating minimumAge="16" rating="R-16"/>
+		<Rating minimumAge="18" rating="R-18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="KRRiT-Display">
+		<CountryOfSystem>PL</CountryOfSystem>
+		<Rating minimumAge="1" rating="BO"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+		<Rating minimumAge="21" rating="21"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="KRRiT">
+		<CountryOfSystem>PL</CountryOfSystem>
+		<OtherIncludedCountry>PL</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="BO"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+		<Rating minimumAge="18" rating="18A"/>
+		<Rating minimumAge="21" rating="21"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="CCE">
+		<CountryOfSystem>PT</CountryOfSystem>
+		<OtherIncludedCountry>PT</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="M/4"/>
+		<Rating minimumAge="6" rating="M/6"/>
+		<Rating minimumAge="12" rating="M/12"/>
+		<Rating minimumAge="16" rating="M/16"/>
+		<Rating minimumAge="18" rating="M/18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="MoC RU">
+		<CountryOfSystem>RU</CountryOfSystem>
+		<OtherIncludedCountry>RU</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="0+"/>
+		<Rating minimumAge="6" rating="6+"/>
+		<Rating minimumAge="12" rating="12+"/>
+		<Rating minimumAge="16" rating="16+"/>
+		<Rating minimumAge="18" rating="18+"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="MDA">
+		<CountryOfSystem>SG</CountryOfSystem>
+		<OtherIncludedCountry>SG</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="13" rating="PG-13"/>
+		<Rating minimumAge="16" rating="NC16"/>
+		<Rating minimumAge="18" rating="M18"/>
+		<Rating minimumAge="21" rating="R21"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="FaPB-Display">
+		<CountryOfSystem>ZA</CountryOfSystem>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="10" rating="PG"/>
+		<Rating minimumAge="13" rating="13"/>
+		<Rating minimumAge="16" rating="16"/>
+		<Rating minimumAge="18" rating="R18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="FaPB">
+		<OtherIncludedCountry>ZA</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="10" rating="PG"/>
+		<Rating minimumAge="13" rating="13"/>
+		<Rating minimumAge="16" rating="16"/>
+		<Rating minimumAge="18" rating="R18"/>
+		<Rating minimumAge="18" rating="X18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Statens medierad">
+		<CountryOfSystem>SE</CountryOfSystem>
+		<OtherIncludedCountry>SE</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="Btl"/>
+		<Rating minimumAge="7" rating="7"/>
+		<Rating minimumAge="11" rating="11"/>
+		<Rating minimumAge="15" rating="15"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="GIO">
+		<CountryOfSystem>TW</CountryOfSystem>
+		<OtherIncludedCountry>TW</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="普"/>
+		<Rating minimumAge="6" rating="護"/>
+		<Rating minimumAge="12" rating="輔"/>
+		<Rating minimumAge="18" rating="限"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="Thailand">
+		<CountryOfSystem>TH</CountryOfSystem>
+		<OtherIncludedCountry>TH</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="P/G"/>
+		<Rating minimumAge="13" rating="13+"/>
+		<Rating minimumAge="15" rating="15+"/>
+		<Rating minimumAge="18" rating="18+"/>
+		<Rating minimumAge="20" rating="20+"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="BBFC-Display">
+		<CountryOfSystem>GB</CountryOfSystem>
+		<Rating minimumAge="1" rating="U"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="BBFC">
+		<OtherIncludedCountry>GB</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="U"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="12" rating="12"/>
+		<Rating minimumAge="12" rating="12A"/>
+		<Rating minimumAge="15" rating="15"/>
+		<Rating minimumAge="18" rating="18"/>
+		<Rating minimumAge="18" rating="R18"/>
+	</RatingScheme>
+	<RatingScheme classificationSystem="MPAA">
+		<CountryOfSystem>US</CountryOfSystem>
+		<OtherIncludedCountry>US</OtherIncludedCountry>
+		<Rating minimumAge="1" rating="G"/>
+		<Rating minimumAge="8" rating="PG"/>
+		<Rating minimumAge="13" rating="PG-13"/>
+		<Rating minimumAge="17" rating="R"/>
+		<Rating minimumAge="18" rating="NC-17"/>
+	</RatingScheme>
+</Ratings>

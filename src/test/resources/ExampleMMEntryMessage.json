@@ -1,0 +1,14 @@
+{
+                "action" : "Update",
+                "entityId" : 147,
+                "entityVersion" : 2,
+                "entityType" : "movieSubcontent",
+                "entityUrl" : "\/api\/types\/movieSubcontent\/entities\/147.2",
+                "requestor" : "QA",
+                "operation" : null,
+                "taskGuid" : null,
+                "htCompletionVariables" : {
+                                "Message" : null,
+                                "Result" : null
+                }
+}

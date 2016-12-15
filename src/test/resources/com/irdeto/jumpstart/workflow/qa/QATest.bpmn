@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_programEntityIdItem" structureRef="String" />
+  <itemDefinition id="_qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_metadataApprovedProgramItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_contentApprovedProgramItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_qaSingletonResultItem" structureRef="String" />
+
+  <itemDefinition id="_55-programEntityIdItem" structureRef="String" />
+  <itemDefinition id="_55-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_55-metadataApprovedProgramItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_55-contentApprovedProgramItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_55-qaSingletonResultItem" structureRef="String" />
+
+  <itemDefinition id="_53-programEntityIdItem" structureRef="String" />
+  <itemDefinition id="_53-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_53-metadataApprovedProgramItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_53-contentApprovedProgramItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_53-qaSingletonResultItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.qa.QATest" name="QA Test" tns:packageName="com.irdeto.jumpstart.workflow.qa" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.qa.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="java.util.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="programEntityId" itemSubjectRef="_programEntityIdItem"/>
+    <property id="qaData" itemSubjectRef="_qaDataItem"/>
+    <property id="metadataApprovedProgram" itemSubjectRef="_metadataApprovedProgramItem"/>
+    <property id="contentApprovedProgram" itemSubjectRef="_contentApprovedProgramItem"/>
+    <property id="qaSingletonResult" itemSubjectRef="_qaSingletonResultItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_55" name="Program Metadata QA" tns:taskName="SyncSubprocess" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>Map&lt;String, Object&gt; qaDataMap = new HashMap&lt;String, Object&gt;();
+qaDataMap.put("approvedEntity", metadataApprovedProgram);
+QADecorator qa = new ProgramMetadataQA();
+qa.setEntityId(programEntityId);
+qaDataMap.put("qaEntity", qa);
+kcontext.setVariable("qaData", qaDataMap);
+kcontext.setVariable("qaEntity", qa);
+
+BeanUtil.loggerManager.debug(kcontext, "programEntityId: {}", programEntityId);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_55_qaDataInput" name="qaData" />
+        <dataInput id="_55_ValueInput" name="Value" />
+        <dataInput id="_55_VariableInput" name="Variable" />
+        <dataInput id="_55_EventTypeInput" name="EventType" />
+        <dataInput id="_55_SingletonInput" name="Singleton" />
+        <dataInput id="_55_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_55_approvedEntityOutput" name="approvedEntity" />
+        <dataOutput id="_55_SingletonResultOutput" name="SingletonResult" />
+        <inputSet>
+          <dataInputRefs>_55_qaDataInput</dataInputRefs>
+          <dataInputRefs>_55_ValueInput</dataInputRefs>
+          <dataInputRefs>_55_VariableInput</dataInputRefs>
+          <dataInputRefs>_55_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_55_SingletonInput</dataInputRefs>
+          <dataInputRefs>_55_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_55_approvedEntityOutput</dataOutputRefs>
+          <dataOutputRefs>_55_SingletonResultOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>qaData</sourceRef>
+        <targetRef>_55_qaDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaData.get("qaEntity")}</from>
+          <to xsi:type="tFormalExpression">_55_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">qaEntity</from>
+          <to xsi:type="tFormalExpression">_55_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">HT_FIRE</from>
+          <to xsi:type="tFormalExpression">_55_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_55_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_55_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.qa.QA</from>
+          <to xsi:type="tFormalExpression">_55_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_55_approvedEntityOutput</sourceRef>
+        <targetRef>metadataApprovedProgram</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_55_SingletonResultOutput</sourceRef>
+        <targetRef>qaSingletonResult</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_54" name="Gateway" gatewayDirection="Diverging" />
+    <task id="_53" name="Program Content QA" tns:taskName="SyncSubprocess" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>Map&lt;String, Object&gt; qaDataMap = new HashMap&lt;String, Object&gt;();
+qaDataMap.put("approvedEntity", contentApprovedProgram);
+QADecorator qa = new ProgramContentQA();
+qa.setEntityId(programEntityId);
+qaDataMap.put("qaEntity", qa);
+kcontext.setVariable("qaData", qaDataMap);
+
+BeanUtil.loggerManager.debug(kcontext, "programEntityId: {}", programEntityId);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_53_qaDataInput" name="qaData" />
+        <dataInput id="_53_ValueInput" name="Value" />
+        <dataInput id="_53_VariableInput" name="Variable" />
+        <dataInput id="_53_EventTypeInput" name="EventType" />
+        <dataInput id="_53_SingletonInput" name="Singleton" />
+        <dataInput id="_53_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_53_approvedEntityOutput" name="approvedEntity" />
+        <dataOutput id="_53_SingletonResultOutput" name="SingletonResult" />
+        <inputSet>
+          <dataInputRefs>_53_qaDataInput</dataInputRefs>
+          <dataInputRefs>_53_ValueInput</dataInputRefs>
+          <dataInputRefs>_53_VariableInput</dataInputRefs>
+          <dataInputRefs>_53_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_53_SingletonInput</dataInputRefs>
+          <dataInputRefs>_53_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_53_approvedEntityOutput</dataOutputRefs>
+          <dataOutputRefs>_53_SingletonResultOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>qaData</sourceRef>
+        <targetRef>_53_qaDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaData.get("qaEntity")}</from>
+          <to xsi:type="tFormalExpression">_53_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">qaEntity</from>
+          <to xsi:type="tFormalExpression">_53_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">HT_FIRE</from>
+          <to xsi:type="tFormalExpression">_53_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_53_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.qa.QA</from>
+          <to xsi:type="tFormalExpression">_53_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_53_approvedEntityOutput</sourceRef>
+        <targetRef>contentApprovedProgram</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_53_SingletonResultOutput</sourceRef>
+        <targetRef>qaSingletonResult</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_59" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <endEvent id="_58" name="End" />
+    <exclusiveGateway id="_57" name="Gateway" gatewayDirection="Diverging" />
+    <endEvent id="_56" name="End" />
+    <exclusiveGateway id="_62" name="Gateway" gatewayDirection="Converging" />
+    <parallelGateway id="_61" name="Gateway" gatewayDirection="Diverging" />
+    <intermediateCatchEvent id="_60" name="Timer" >
+      <timerEventDefinition>
+        <timeCycle xsi:type="tFormalExpression">1s###10s</timeCycle>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="_57-_55" sourceRef="_57" targetRef="_55" name="QA Launched" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "LAUNCHED".equals(qaSingletonResult);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_55-_54" sourceRef="_55" targetRef="_54" />
+    <sequenceFlow id="_62-_53" sourceRef="_62" targetRef="_53" />
+    <sequenceFlow id="_54-_59" sourceRef="_54" targetRef="_59" name="QA Launched" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "LAUNCHED".equals(qaSingletonResult);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_57-_58" sourceRef="_57" targetRef="_58" name="QA Signalled" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.jboss.org/drools/rule" >eval(true)</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_53-_57" sourceRef="_53" targetRef="_57" />
+    <sequenceFlow id="_54-_56" sourceRef="_54" targetRef="_56" name="QA Signalled" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.jboss.org/drools/rule" >eval(true)</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_60-_62" sourceRef="_60" targetRef="_62" />
+    <sequenceFlow id="_61-_62" sourceRef="_61" targetRef="_62" />
+    <sequenceFlow id="_1-_61" sourceRef="_1" targetRef="_61" />
+    <sequenceFlow id="_61-_60" sourceRef="_61" targetRef="_60" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.qa.QATest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="108" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_55" >
+        <dc:Bounds x="36" y="312" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_54" >
+        <dc:Bounds x="288" y="312" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_53" >
+        <dc:Bounds x="36" y="240" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_59" >
+        <dc:Bounds x="108" y="384" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_58" >
+        <dc:Bounds x="396" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_57" >
+        <dc:Bounds x="288" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_56" >
+        <dc:Bounds x="396" y="312" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_62" >
+        <dc:Bounds x="108" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_61" >
+        <dc:Bounds x="108" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_60" >
+        <dc:Bounds x="228" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_57-_55" >
+        <di:waypoint x="312" y="264" />
+        <di:waypoint x="132" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_55-_54" >
+        <di:waypoint x="132" y="336" />
+        <di:waypoint x="312" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_62-_53" >
+        <di:waypoint x="132" y="192" />
+        <di:waypoint x="132" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_54-_59" >
+        <di:waypoint x="312" y="336" />
+        <di:waypoint x="132" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_57-_58" >
+        <di:waypoint x="312" y="264" />
+        <di:waypoint x="420" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_53-_57" >
+        <di:waypoint x="132" y="264" />
+        <di:waypoint x="312" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_54-_56" >
+        <di:waypoint x="312" y="336" />
+        <di:waypoint x="420" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_60-_62" >
+        <di:waypoint x="252" y="120" />
+        <di:waypoint x="132" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_61-_62" >
+        <di:waypoint x="132" y="120" />
+        <di:waypoint x="132" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_61" >
+        <di:waypoint x="132" y="48" />
+        <di:waypoint x="132" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_61-_60" >
+        <di:waypoint x="132" y="120" />
+        <di:waypoint x="252" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

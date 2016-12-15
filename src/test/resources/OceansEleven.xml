@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"
+		xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"
+		xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"
+		xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"
+		xmlns:irdetotypes="http://www.irdeto.com/schemas/types/1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd 
+			urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd 
+			urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd 
+			urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd 
+			urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd 
+			http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd
+			http://www.irdeto.com/schemas/types/1.0 Irdeto-ADI-3_0-types-extension.xsd"> 
+			
+	<Asset xsi:type="offer:OfferType" uriId="irdeto.com/Offer/OFFERFurious7MOV" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">
+		<offer:PromotionalContentGroupRef uriId="irdeto.com/ContentGroup/Furious72015" />    
+		<offer:ProviderContentTier>Irdeto1</offer:ProviderContentTier>
+		<offer:BillingId>FAST1</offer:BillingId>
+		<offer:TermsRef uriId="irdeto.com/Terms/TERMFurious7MOV" />
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/Furious72015" />    
+	</Asset>
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/TERMFurious7MOV" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<terms:ContractName>Subscription</terms:ContractName>
+		<terms:SuggestedPrice xml:lang="01">1.00</terms:SuggestedPrice>
+	</Asset>
+	
+
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/Furious72015001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<core:AlternateId identifierSystem="ISAN">1881-66C7-3420-000-7-9F3A-01450-U</core:AlternateId>
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>
+		<core:Provider>HBO</core:Provider>
+		<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Furious7</title:TitleSortName>    
+			<title:TitleBrief>Furious7</title:TitleBrief>    
+			<title:TitleMedium>Furious7</title:TitleMedium>    
+			<title:TitleLong>Furious7</title:TitleLong>    
+			<title:SummaryShort>Ocean's Twelve is a 2006 American comedy.</title:SummaryShort>    
+			<title:SummaryLong>Ocean's Twelve is a 2006 American comedy heist film directed by Steven Soderbergh and starring an ensemble cast.</title:SummaryLong>    
+			<title:ActorDisplay>Julie Roberts,  Héctor Elizondo,  Robert Schwartzman, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgrd" firstName="Alexander" lastName="Skarsgrd" sortableName="Skarsgrd,Alexander" />
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+			<title:Director fullName="Ian Hubert" firstName="Ian" lastName="Hubert" sortableName="Ian Hubert" />    
+			<title:StudioDisplay>HBO</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>	
+			
+		</title:LocalizableTitle>
+		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:12:00</title:DisplayRunTime>
+		<title:Year>2012</title:Year>
+		<title:CountryOfOrigin>Netherlands</title:CountryOfOrigin>
+		<title:Genre>Action</title:Genre>    
+		<title:ShowType>Movie</title:ShowType>    
+		<title:IsEncryptionRequired>false</title:IsEncryptionRequired>
+		
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/Furious72015"
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" 
+			endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<offer:TitleRef uriId="irdeto.com/Title/Furious72015001" />    
+		<offer:MovieRef uriId="irdeto.com/Movie/Furious72015002" />   
+		<offer:PreviewRef uriId="irdeto.com/Preview/Furious72015003" />    		
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/Furious72015004-01" />
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/Furious72015004-02" /> 
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/Furious72015004-03" /> 		
+		<offer:PosterRef uriId="irdeto.com/Poster/Furious72015005-01" />
+		<offer:PosterRef uriId="irdeto.com/Poster/Furious72015005-02" /> 
+		<offer:PosterRef uriId="irdeto.com/Poster/Furious72015005-03" /> 
+		<offer:PosterRef uriId="irdeto.com/Poster/Furious72015005-04" /> 
+		<offer:PosterRef uriId="irdeto.com/Poster/Furious72015005-05" /> 		
+	</Asset>
+
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Movie/Furious72015002" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015002-Movie-en_US.mov</content:SourceUrl>
+		<content:ContentFileSize>64746985</content:ContentFileSize>
+		<content:ContentCheckSum>2BEDFBFE0006D57EFFAB1D4C0072D5EA</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Sound</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H14M00S</content:Duration>    
+		<content:Language>en_US</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:Subtitle uriId="irdeto.com/Subtitles/20500018002">
+			<irdetotypes:SubtitleLanguage>en_US</irdetotypes:SubtitleLanguage>
+			<irdetotypes:SourceUrl>FURIOUS-Movie-en_US.subtitles</irdetotypes:SourceUrl>
+			<irdetotypes:ContentFileSize>64746985</irdetotypes:ContentFileSize>
+			<irdetotypes:ContentCheckSum>2BEDFBFE0006D57EFFAB1D4C0072D5EA</irdetotypes:ContentCheckSum>
+		</content:Subtitle>
+		<content:Subtitle uriId="irdeto.com/Subtitles/20500018003">
+			<irdetotypes:SubtitleLanguage>ta_IN</irdetotypes:SubtitleLanguage>
+			<irdetotypes:SourceUrl>FURIOUS-Movie-ta_IN.subtitles</irdetotypes:SourceUrl>
+			<irdetotypes:ContentFileSize>64746985</irdetotypes:ContentFileSize>
+			<irdetotypes:ContentCheckSum>2BEDFBFE0006D57EFFAB1D4C0072D5EA</irdetotypes:ContentCheckSum>
+		</content:Subtitle>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+		
+	</Asset>
+
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Preview/Furious72015003" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015002-Preview-en_US.mov</content:SourceUrl>
+		<content:ContentFileSize>64746985</content:ContentFileSize>
+		<content:ContentCheckSum>2BEDFBFE0006D57EFFAB1D4C0072D5EA</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Sound</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H14M00S</content:Duration>    
+		<content:Language>en_US</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:Subtitle uriId="irdeto.com/Subtitles/20500018002">
+			<irdetotypes:SubtitleLanguage>en_US</irdetotypes:SubtitleLanguage>
+			<irdetotypes:SourceUrl>FURIOUS-Movie-en_US.subtitles</irdetotypes:SourceUrl>
+			<irdetotypes:ContentFileSize>64746985</irdetotypes:ContentFileSize>
+			<irdetotypes:ContentCheckSum>2BEDFBFE0006D57EFFAB1D4C0072D5EA</irdetotypes:ContentCheckSum>
+		</content:Subtitle>		
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>		
+	</Asset>
+	
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/Furious72015004-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015004-BoxCover-320-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>166886</content:ContentFileSize>
+		<content:ContentCheckSum>6fdb65295abd71ce9912f0c0ee7034b9</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>223</content:X_Resolution>
+		<content:Y_Resolution>320</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/Furious72015004-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015004-BoxCover-480-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>360389</content:ContentFileSize>
+		<content:ContentCheckSum>9a5b9635aa4f1b805081fc27e21a39a1</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>334</content:X_Resolution>
+		<content:Y_Resolution>480</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/Furious72015004-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015004-BoxCover-640-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>194818</content:ContentFileSize>
+		<content:ContentCheckSum>0340aea6061af09fb521dd4dcbc579e9</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>446</content:X_Resolution>
+		<content:Y_Resolution>640</content:Y_Resolution>
+	</Asset>
+	
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/Furious72015005-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015005-Poster-144-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>46670</content:ContentFileSize>
+		<content:ContentCheckSum>3dbb965270561b870d102b59b2d9d5fd</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>256</content:X_Resolution>
+		<content:Y_Resolution>144</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/Furious72015005-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015005-Poster-360-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>225873</content:ContentFileSize>
+		<content:ContentCheckSum>8cc41457a5b7419e34b1fc245b29a254</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>640</content:X_Resolution>
+		<content:Y_Resolution>360</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/Furious72015005-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015005-Poster-648-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>556490</content:ContentFileSize>
+		<content:ContentCheckSum>1ce66983ee7a70f6f9f87a52e89aad51</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1152</content:X_Resolution>
+		<content:Y_Resolution>648</content:Y_Resolution>
+	</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/Furious72015005-04" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015005-Poster-720-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>643183</content:ContentFileSize>
+		<content:ContentCheckSum>e3cadec0e9b179ed2b4a9f25600d88a1</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1280</content:X_Resolution>
+		<content:Y_Resolution>720</content:Y_Resolution>
+	</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/Furious72015005-05" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z" lastModifiedDate="2015-01-01T00:00:00Z">    
+		<content:SourceUrl>Furious72015005-Poster-1080-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>1086156</content:ContentFileSize>
+		<content:ContentCheckSum>99088b8444f264b486c156494685afd8</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1920</content:X_Resolution>
+		<content:Y_Resolution>1080</content:Y_Resolution>
+	</Asset>
+
+	
+</ADI3>

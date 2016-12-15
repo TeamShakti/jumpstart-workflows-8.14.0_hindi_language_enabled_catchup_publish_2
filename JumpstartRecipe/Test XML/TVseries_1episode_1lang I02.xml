@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"
+		xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"
+		xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"
+		xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">
+	<Asset xsi:type="offer:OfferType" uriId="indemand.com/Offer/UNVA2001081701006000" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<offer:Presentation>
+			<offer:CategoryRef uriId="irdeto.com/Category/Irdeto/Movies A-Z" />
+			<offer:DisplayAsNew>P7D</offer:DisplayAsNew>
+			<offer:DisplayAsLastChance>P7D</offer:DisplayAsLastChance>
+		</offer:Presentation>
+		<offer:PromotionalContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2001081701006001" />
+		<offer:ProviderContentTier>Irdeto1</offer:ProviderContentTier>
+		<offer:BillingId>56789</offer:BillingId>
+		<offer:TermsRef uriId="irdeto.com/Terms/UNVA2001081701004001" />
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2001081701006001" />
+	</Asset>
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2001081701004001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<core:AlternateId identifierSystem="ISAN">1881-66C7-3420-000-7-9F3A-02450-U</core:AlternateId>
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>
+		<core:Provider>HBO</core:Provider>
+		<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Yourself, Save </title:TitleSortName>
+			<title:TitleBrief>Save Yourself</title:TitleBrief>
+			<title:TitleMedium>Save Yourself, the episode</title:TitleMedium>
+			<title:TitleLong>Save Yourself, the episode of True Blood this is just padding to create a long title.</title:TitleLong>
+			<title:SummaryShort>In the fifth season finale, Eric arrives just in time and kills Russell Edgington and saves the faeries.</title:SummaryShort>
+			<title:SummaryLong>In the fifth season finale, Eric arrives just in time and kills Russell Edgington and saves the faeries. Eric holds Nora back from draining Sookie, who has saved his life on more than one occasion. Along with Nora and Tara, he convinces Sookie to assist them in overthrowing the Authority, with Jason tagging along. Jason carries his parents' images with him, who aren't fond of vampires. Meanwhile, Luna skinwalks as Steve Newlin to rescue Emma and announces the Authority's crimes to the world while Steve is on air. Sam breaks free and ends up killing Chancellor Rosalyn and escapes with Luna, Emma and the rest of the humans. Back in Bon Temps, Andy is forced by Morella to deliver her quadruplet faerie babies with assistance from Holly; afterwards, she goes off without them. Alcide, with help from some vampire blood from his father, kills J.D. and takes over as leader of the pack. At the climax, Sookie, Eric, Nora, Tara, and Jason infiltrate the Authority complex and kill all of the guards in a huge bloodbath and free Pam and Jessica where the reunited Pam and Tara share an affectionate kiss much to Sookie's suprise and Jessica's amusement. Before Sookie and Eric go after Bill by themselves, Bill tricks Salome into drinking blood laced with silver and kills her. He then drinks Lilith's blood in front of Sookie and Eric, faces the "true death," only to rise a more powerful vampire than before. Eric screams for Sookie to run... </title:SummaryLong>
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgård" firstName="Alexander" lastName="Skarsgård" sortableName="Skarsgård,Alexander" />
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+			<title:Director fullName="Michael Lehmann" firstName="Michael" lastName="Lehmann" sortableName="Lehmann, Michael" />
+			<title:StudioDisplay>HBO</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>
+			<!--      <title:Chapter heading="Opening Scene" timeCode="00:00:02:00" />
+		      <title:Chapter heading="They Meet" timeCode="00:15:12:00" />
+		      <title:Chapter heading="The Collision" timeCode="02:03:06:00" />
+		      <title:Chapter heading="She Goes Under" timeCode="02:55:15:00" />
+		      <title:Chapter heading="Final Scene" timeCode="03:02:09:00" />-->
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+		<!--    <title:Advisory>AL</title:Advisory>
+    <title:Advisory>N</title:Advisory>-->
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>
+		<title:Year>2011</title:Year>
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>
+		<title:Genre>Fantasy</title:Genre>
+		<title:Genre>Horror</title:Genre>
+		<title:Genre>Black comedy</title:Genre>
+		<title:ShowType>Series</title:ShowType>
+		<title:IsEncryptionRequired>false</title:IsEncryptionRequired>
+		<!--    <title:BoxOffice>1835000000</title:BoxOffice>-->
+		<!--    <title:ProgrammerCallLetters>IND</title:ProgrammerCallLetters>-->
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="indemand.com/ContentGroup/UNVA2001081701006001"
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 
+			endDateTime="2002-03-31T11:59:59Z">
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2001081701004001" />
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2001081701004002" />
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2001081701004003" />
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2001081701004004" />
+	</Asset>
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/UNVA2001081701004001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<terms:SubscriberViewLimit startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-02-28T23:59:59Z"
+				maximumViews="5"/>
+		<terms:SubscriberViewLimit startDateTime="2002-03-01T00:00:00Z" endDateTime="2002-03-31T23:59:59Z"
+				maximumViews="6"/>
+		<terms:SuggestedPrice>0.00</terms:SuggestedPrice>
+	</Asset>
+	<Asset xsi:type="offer:CategoryType" uriId="irdeto.com/Category/Irdeto/Movies A-Z" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<offer:CategoryPath>Irdeto/Movies A-Z</offer:CategoryPath>
+	</Asset>
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2001081701004002" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<content:SourceUrl>Save_Yourself.mpg</content:SourceUrl>
+		<content:ContentFileSize>3907840625</content:ContentFileSize>
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT03H14M00S</content:Duration>
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+	</Asset>
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2001081701004003" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<content:SourceUrl>Save_Yourself_Preview.mpg</content:SourceUrl>
+		<content:ContentFileSize>25284375</content:ContentFileSize>
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H00M45S</content:Duration>
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2001081701004004" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<content:SourceUrl>Save_Yourself_Box_Cover.bmp</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>320</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	
+	<!--Here follow Irdeto proprietary extensions to mark up the Brand and Series-->
+<!--	<Ext>-->
+		<Asset xsi:type="irdeto:BrandType"  uriId="irdeto.com/Brand/UNVA2001081701005001">	
+			<!--Link to this Brand's title-->
+			<irdeto:TitleRef uriId="irdeto.com/Title/UNVA2001081701004101" />
+			<!--Link to Series 'Season 5 2012'-->
+			<irdeto:SeriesRef  uriId="irdeto.com/Series/UNVA2001081701005002" />
+		</Asset>
+	
+		<Asset xsi:type="irdeto:SeriesType" uriId="irdeto.com/Series/UNVA2001081701005002">
+			<!--Link to this Series' title-->
+			<irdeto:TitleRef uriId="irdeto.com/Title/UNVA2001081701004102" />
+			<!--Link to the program present in this file. Typically, there would be more episodes.-->
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2001081701006001" />
+		</Asset>
+		
+		<!-- True Blood Brand's title -->
+		<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2001081701004101" providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+			<core:Ext>
+				<App_Data App="MOD" Name="Producer" Value="Alan Ball" />
+			</core:Ext>
+			<title:LocalizableTitle xml:lang="en-US">
+				<title:TitleSortName>TrueBlood</title:TitleSortName>
+				<title:TitleBrief>True Blood</title:TitleBrief>
+				<title:TitleMedium>True Blood by HBO</title:TitleMedium>
+				<title:TitleLong>True Blood, the HBO Horror Saga(which we love!)</title:TitleLong>
+				<title:SummaryShort>True Blood is an American cinematic television series created and produced by Alan Ball. It is based on The Southern Vampire Mysteries series of novels by Charlaine Harris</title:SummaryShort>
+				<title:SummaryLong>The fictional universe depicted in the series is premised on the notion that vampires (and other supernatural creatures) are living among us, unbeknownst to the majority of humans until two years ago, when the creation of synthetic blood (aka 'Tru Blood') by Japanese scientists allowed vampires to come out of the coffin (a term coined as a play on "coming out of the closet") and reveal their existence to the world on the basis that they no longer need to feed on humans to survive.E-1 This so-called 'Great Revelation' has split the vampires of the world into two camps: those who wish to integrate into human society (aka 'mainstream') by campaigning for citizenship and equal rights,E-1 and those who think that human-vampire co-existence is impossible because it is in conflict with the inherently violent nature of vampires. Throughout the series, other supernatural creatures are also introduced, among them shapeshifters, werewolves, fairies, witches and a maenad.</title:SummaryLong>
+				<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+				<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+				<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+				<title:Actor fullName="Alexander Skarsgård" firstName="Alexander" lastName="Skarsgård" sortableName="Skarsgård,Alexander" />
+				<title:StudioDisplay>HBO</title:StudioDisplay>
+				<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+				<title:SongTitle>Bad Things</title:SongTitle>
+			</title:LocalizableTitle>
+			<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+			<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+			<title:DisplayRunTime>16:15:00</title:DisplayRunTime>
+			<title:Year>2005</title:Year>
+			<title:CountryOfOrigin>US</title:CountryOfOrigin>
+			<title:Genre>Fantasy</title:Genre>
+			<title:Genre>Horror</title:Genre>
+			<title:Genre>Black comedy</title:Genre>
+			<title:ShowType>Series</title:ShowType>
+		</Asset>
+		
+		<!-- Season 5's Series title-->
+		<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2001081701004102" providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+			<core:Ext>
+				<App_Data App="MOD" Name="Producer" Value="Alan Ball" />
+			</core:Ext>
+			<title:LocalizableTitle xml:lang="en-US">
+				<title:TitleSortName>2012 Season 5</title:TitleSortName>
+				<title:TitleBrief>Season 5</title:TitleBrief>
+				<title:TitleMedium>Season 5: 2012</title:TitleMedium>
+				<title:TitleLong>Season 5: 2012, the final season!</title:TitleLong>
+				<title:SummaryShort>Fifth season of the award winning series True Blood</title:SummaryShort>
+				<title:SummaryLong>The season follows Bill and Eric being captured by the Vampire Authority after the disappearance of Nan Flanagan. The two are almost sentenced to death by the Guardian, Roman, before revealing that Russell Edgington is alive and free after being released by a mysterious vampire. With the help of Sookie and Alcide, the team discovers his hiding place and brings him in. Season 5 also focuses on Terry, who learns he is cursed after committing a terrible crime during the war in the Middle East. Meanwhile, Sookie learns that her powers are limited and contemplates having a normal life. Jason discovers his parents were murdered by a vampire and vows to find out who is responsible. Lafayette tries to deal with the powers given to him by Jesus. Russell, along with Eric's vampire sister Nora and Salome, redefine the values of the Authority and view humans as nothing more than food: just as Lilith of the Vampire bible wanted. The season ends with Bill drinking the blood of Lilith in front of Sookie and Eric. He begins to fall apart, ultimately meeting the &quot;true death&quot;. Shortly after, a nude Bill &quot;rises from the blood&quot;, as an even more powerful vampire reincarnation of Lilith (&quot;Billith&quot;). Surprised, Eric yells for Sookie to run prior to the end credits playing.</title:SummaryLong>
+				<title:EpisodeName>Episode 1</title:EpisodeName>
+				<title:EpisodeID>1</title:EpisodeID>
+			</title:LocalizableTitle>
+			<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+			<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+			<title:DisplayRunTime>16:15:00</title:DisplayRunTime>
+			<title:Year>2005</title:Year>
+			<title:CountryOfOrigin>US</title:CountryOfOrigin>
+			<title:Genre>Fantasy</title:Genre>
+			<title:Genre>Horror</title:Genre>
+			<title:Genre>Black comedy</title:Genre>
+			<title:ShowType>Series</title:ShowType>
+		</Asset>
+		
+<!--	</Ext>-->
+	<!--End of Irdeto proprietary CableLabs extension-->	
+</ADI3>

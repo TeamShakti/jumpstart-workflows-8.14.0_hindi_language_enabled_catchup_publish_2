@@ -1,0 +1,11 @@
+
+{
+  "name": "irdetobroadband/jumpstart-recipe",
+  "type": "library",
+  "description": "EF Jumpstart Recipe",
+  "homepage": "https://github.com/irdetobroadband/JumpstartRecipe",
+  "minimum-stability": "dev",
+  "require": {
+    "php": ">=5.3.4"
+  }
+}

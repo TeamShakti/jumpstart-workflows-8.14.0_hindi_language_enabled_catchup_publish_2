@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_responseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+
+  <itemDefinition id="_4-responseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.ReadMetaDataTest" name="ReadMetaData" tns:packageName="defaultPackage" >
+
+    <!-- process variables -->
+    <property id="response" itemSubjectRef="_responseItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_2" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_4" name="Media Manager 8 Read Task" tns:taskName="MediaManager8ReadTask" >
+      <ioSpecification>
+        <dataInput id="_4_EntityTypeInput" name="EntityType" />
+        <dataInput id="_4_EntityIDInput" name="EntityID" />
+        <dataOutput id="_4_MediaManager8ReadResponseOutput" name="MediaManager8ReadResponse" />
+        <inputSet>
+          <dataInputRefs>_4_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_4_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_4_MediaManager8ReadResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_4_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_4_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">2</from>
+          <to xsi:type="tFormalExpression">_4_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_4_MediaManager8ReadResponseOutput</sourceRef>
+        <targetRef>response</targetRef>
+      </dataOutputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_4-_2" sourceRef="_4" targetRef="_2" />
+    <sequenceFlow id="_1-_4" sourceRef="_1" targetRef="_4" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.ReadMetaDataTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="120" y="16" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="120" y="176" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="16" y="96" width="257" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_4-_2" >
+        <di:waypoint x="144" y="120" />
+        <di:waypoint x="144" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_4" >
+        <di:waypoint x="144" y="40" />
+        <di:waypoint x="144" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_xmlItem" structureRef="String" />
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+
+  <itemDefinition id="_17-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_17-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_17-xmlItem" structureRef="String" />
+  <itemDefinition id="_17-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+
+  <itemDefinition id="_18-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_18-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_18-xmlItem" structureRef="String" />
+  <itemDefinition id="_18-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+
+  <itemDefinition id="_12-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_12-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_12-xmlItem" structureRef="String" />
+  <itemDefinition id="_12-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+
+  <itemDefinition id="_13-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_13-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_13-xmlItem" structureRef="String" />
+  <itemDefinition id="_13-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.config.ExtractDeviceProfile" name="Extract Device Profiles" tns:packageName="com.irdeto.jumpstart.workflow.config" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.*" />
+     <tns:import name="com.irdeto.domain.mmentityapi.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.config.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="profile" itemSubjectRef="_profileItem"/>
+    <property id="xml" itemSubjectRef="_xmlItem"/>
+    <property id="config" itemSubjectRef="_configItem"/>
+
+    <!-- nodes -->
+    <task id="_17" name="Configuration Task" tns:taskName="Configuration" >
+      <ioSpecification>
+        <dataOutput id="_17_PropertyMapOutput" name="PropertyMap" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_17_PropertyMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_17_PropertyMapOutput</sourceRef>
+        <targetRef>config</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_16" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <parallelGateway id="_19" name="Gateway" gatewayDirection="Diverging" />
+    <task id="_18" name="Profile Read" tns:taskName="ProfileRead" >
+      <ioSpecification>
+        <dataInput id="_18_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_18_DeviceProfileEnabledOnlyInput" name="DeviceProfileEnabledOnly" />
+        <dataOutput id="_18_ProfileOutput" name="Profile" />
+        <inputSet>
+          <dataInputRefs>_18_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_18_DeviceProfileEnabledOnlyInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_18_ProfileOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_18_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_18_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_18_DeviceProfileEnabledOnlyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_18_DeviceProfileEnabledOnlyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_18_ProfileOutput</sourceRef>
+        <targetRef>profile</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_5" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_12" name="Serialize Profile" tns:taskName="XMLSerialization" >
+      <ioSpecification>
+        <dataInput id="_12_ObjectInput" name="Object" />
+        <dataInput id="_12_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_12_XMLOutput" name="XML" />
+        <inputSet>
+          <dataInputRefs>_12_ObjectInput</dataInputRefs>
+          <dataInputRefs>_12_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_12_XMLOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>profile</sourceRef>
+        <targetRef>_12_ObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_12_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_12_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_12_XMLOutput</sourceRef>
+        <targetRef>xml</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_13" name="Save Profile" tns:taskName="FileSaveTask" >
+      <ioSpecification>
+        <dataInput id="_13_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_13_FileNameInput" name="FileName" />
+        <dataInput id="_13_OverwriteInput" name="Overwrite" />
+        <dataInput id="_13_FilePathInput" name="FilePath" />
+        <dataInput id="_13_ContentInput" name="Content" />
+        <inputSet>
+          <dataInputRefs>_13_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_13_FileNameInput</dataInputRefs>
+          <dataInputRefs>_13_OverwriteInput</dataInputRefs>
+          <dataInputRefs>_13_FilePathInput</dataInputRefs>
+          <dataInputRefs>_13_ContentInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_13_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_13_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_13_FileNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">deviceProfiles.xml</from>
+          <to xsi:type="tFormalExpression">_13_FileNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_13_OverwriteInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_13_OverwriteInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_13_FilePathInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("config.data.dir")}</from>
+          <to xsi:type="tFormalExpression">_13_FilePathInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_13_ContentInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{xml}</from>
+          <to xsi:type="tFormalExpression">_13_ContentInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <intermediateCatchEvent id="_14" name="Signal" >
+      <dataOutput id="_14_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_14_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_14_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <scriptTask id="_15" name="Handle Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.debug(kcontext, "Error occurred: {}", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_19-_17" sourceRef="_19" targetRef="_17" />
+    <sequenceFlow id="_15-_16" sourceRef="_15" targetRef="_16" />
+    <sequenceFlow id="_1-_19" sourceRef="_1" targetRef="_19" />
+    <sequenceFlow id="_17-_18" sourceRef="_17" targetRef="_18" />
+    <sequenceFlow id="_13-_5" sourceRef="_13" targetRef="_5" />
+    <sequenceFlow id="_18-_12" sourceRef="_18" targetRef="_12" />
+    <sequenceFlow id="_12-_13" sourceRef="_12" targetRef="_13" />
+    <sequenceFlow id="_19-_14" sourceRef="_19" targetRef="_14" />
+    <sequenceFlow id="_14-_15" sourceRef="_14" targetRef="_15" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.config.ExtractDeviceProfile" >
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="48" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="48" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="348" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="120" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="48" y="168" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="120" y="384" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="48" y="240" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="48" y="312" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="348" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="276" y="96" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_19-_17" >
+        <di:waypoint x="144" y="48" />
+        <di:waypoint x="144" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_16" >
+        <di:waypoint x="372" y="120" />
+        <di:waypoint x="372" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_19" >
+        <di:waypoint x="72" y="48" />
+        <di:waypoint x="144" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_18" >
+        <di:waypoint x="144" y="120" />
+        <di:waypoint x="144" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_5" >
+        <di:waypoint x="144" y="336" />
+        <di:waypoint x="144" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_18-_12" >
+        <di:waypoint x="144" y="192" />
+        <di:waypoint x="144" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12-_13" >
+        <di:waypoint x="144" y="264" />
+        <di:waypoint x="144" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_14" >
+        <di:waypoint x="144" y="48" />
+        <di:waypoint x="372" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_15" >
+        <di:waypoint x="372" y="48" />
+        <di:waypoint x="372" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

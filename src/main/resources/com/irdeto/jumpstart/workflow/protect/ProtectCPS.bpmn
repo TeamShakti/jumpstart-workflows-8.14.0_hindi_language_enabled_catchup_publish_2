@@ -1,0 +1,1077 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_programTitleItem" structureRef="String" />
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_fetchFileItem" structureRef="String" />
+  <itemDefinition id="_cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_cpsPathTargetItem" structureRef="String" />
+  <itemDefinition id="_fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_contentIdItem" structureRef="String" />
+  <itemDefinition id="_mediaIdItem" structureRef="String" />
+  <itemDefinition id="_subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_targetUploadItem" structureRef="String" />
+  <itemDefinition id="_sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_uriIdItem" structureRef="String" />
+  <itemDefinition id="_ekfUrlItem" structureRef="String" />
+  <itemDefinition id="_secureHLSItem" structureRef="String" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+
+  <itemDefinition id="_156-entityIdItem" structureRef="String" />
+  <itemDefinition id="_156-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_156-programTitleItem" structureRef="String" />
+  <itemDefinition id="_156-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_156-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_156-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_156-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_156-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_156-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_156-cpsPathTargetItem" structureRef="String" />
+  <itemDefinition id="_156-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_156-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_156-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_156-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_156-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_156-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_156-contentIdItem" structureRef="String" />
+  <itemDefinition id="_156-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_156-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_156-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_156-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_156-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_156-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_156-uriIdItem" structureRef="String" />
+  <itemDefinition id="_156-ekfUrlItem" structureRef="String" />
+  <itemDefinition id="_156-secureHLSItem" structureRef="String" />
+  <itemDefinition id="_156-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_156-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_156-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+
+  <itemDefinition id="_114-entityIdItem" structureRef="String" />
+  <itemDefinition id="_114-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_114-programTitleItem" structureRef="String" />
+  <itemDefinition id="_114-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_114-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_114-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_114-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_114-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_114-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_114-cpsPathTargetItem" structureRef="String" />
+  <itemDefinition id="_114-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_114-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_114-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_114-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_114-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_114-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_114-contentIdItem" structureRef="String" />
+  <itemDefinition id="_114-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_114-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_114-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_114-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_114-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_114-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_114-uriIdItem" structureRef="String" />
+  <itemDefinition id="_114-ekfUrlItem" structureRef="String" />
+  <itemDefinition id="_114-secureHLSItem" structureRef="String" />
+  <itemDefinition id="_114-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_114-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_114-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+
+  <itemDefinition id="_157-entityIdItem" structureRef="String" />
+  <itemDefinition id="_157-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_157-programTitleItem" structureRef="String" />
+  <itemDefinition id="_157-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_157-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_157-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_157-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_157-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_157-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_157-cpsPathTargetItem" structureRef="String" />
+  <itemDefinition id="_157-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_157-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_157-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_157-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_157-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_157-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_157-contentIdItem" structureRef="String" />
+  <itemDefinition id="_157-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_157-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_157-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_157-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_157-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_157-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_157-uriIdItem" structureRef="String" />
+  <itemDefinition id="_157-ekfUrlItem" structureRef="String" />
+  <itemDefinition id="_157-secureHLSItem" structureRef="String" />
+  <itemDefinition id="_157-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_157-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_157-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+
+  <itemDefinition id="_158-entityIdItem" structureRef="String" />
+  <itemDefinition id="_158-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_158-programTitleItem" structureRef="String" />
+  <itemDefinition id="_158-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_158-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_158-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_158-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_158-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_158-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_158-cpsPathTargetItem" structureRef="String" />
+  <itemDefinition id="_158-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_158-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_158-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_158-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_158-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_158-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_158-contentIdItem" structureRef="String" />
+  <itemDefinition id="_158-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_158-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_158-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_158-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_158-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_158-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_158-uriIdItem" structureRef="String" />
+  <itemDefinition id="_158-ekfUrlItem" structureRef="String" />
+  <itemDefinition id="_158-secureHLSItem" structureRef="String" />
+  <itemDefinition id="_158-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_158-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_158-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+
+  <itemDefinition id="_126-entityIdItem" structureRef="String" />
+  <itemDefinition id="_126-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_126-programTitleItem" structureRef="String" />
+  <itemDefinition id="_126-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_126-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_126-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_126-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_126-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_126-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_126-cpsPathTargetItem" structureRef="String" />
+  <itemDefinition id="_126-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_126-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_126-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_126-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_126-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_126-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_126-contentIdItem" structureRef="String" />
+  <itemDefinition id="_126-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_126-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_126-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_126-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_126-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_126-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_126-uriIdItem" structureRef="String" />
+  <itemDefinition id="_126-ekfUrlItem" structureRef="String" />
+  <itemDefinition id="_126-secureHLSItem" structureRef="String" />
+  <itemDefinition id="_126-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_126-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_126-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+
+  <itemDefinition id="_125-entityIdItem" structureRef="String" />
+  <itemDefinition id="_125-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_125-programTitleItem" structureRef="String" />
+  <itemDefinition id="_125-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_125-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_125-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_125-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_125-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_125-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_125-cpsPathTargetItem" structureRef="String" />
+  <itemDefinition id="_125-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_125-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_125-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_125-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_125-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_125-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_125-contentIdItem" structureRef="String" />
+  <itemDefinition id="_125-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_125-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_125-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_125-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_125-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_125-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_125-uriIdItem" structureRef="String" />
+  <itemDefinition id="_125-ekfUrlItem" structureRef="String" />
+  <itemDefinition id="_125-secureHLSItem" structureRef="String" />
+  <itemDefinition id="_125-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_125-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_125-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+
+  <itemDefinition id="_123-entityIdItem" structureRef="String" />
+  <itemDefinition id="_123-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_123-programTitleItem" structureRef="String" />
+  <itemDefinition id="_123-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_123-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_123-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_123-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_123-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_123-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_123-cpsPathTargetItem" structureRef="String" />
+  <itemDefinition id="_123-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_123-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_123-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_123-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_123-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_123-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_123-contentIdItem" structureRef="String" />
+  <itemDefinition id="_123-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_123-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_123-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_123-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_123-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_123-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_123-uriIdItem" structureRef="String" />
+  <itemDefinition id="_123-ekfUrlItem" structureRef="String" />
+  <itemDefinition id="_123-secureHLSItem" structureRef="String" />
+  <itemDefinition id="_123-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_123-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_123-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.protect.ProtectCPS" name="Protect CPS" tns:packageName="com.irdeto.jumpstart.workflow.protect" tns:version="1.0" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.protect.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="com.irdeto.domain.mmentityapi.*" />
+     <tns:import name="com.irdeto.domain.operation.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.protect.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="config" itemSubjectRef="_configItem"/>
+    <property id="programTitle" itemSubjectRef="_programTitleItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="protectWrapper" itemSubjectRef="_protectWrapperItem"/>
+    <property id="fetchFile" itemSubjectRef="_fetchFileItem"/>
+    <property id="cpsSourceUrl" itemSubjectRef="_cpsSourceUrlItem"/>
+    <property id="m3u8indexString" itemSubjectRef="_m3u8indexStringItem"/>
+    <property id="m3u8Filename" itemSubjectRef="_m3u8FilenameItem"/>
+    <property id="cpsPathTarget" itemSubjectRef="_cpsPathTargetItem"/>
+    <property id="fetchFileList" itemSubjectRef="_fetchFileListItem"/>
+    <property id="sourceEncrypt" itemSubjectRef="_sourceEncryptItem"/>
+    <property id="targetEncrypt" itemSubjectRef="_targetEncryptItem"/>
+    <property id="drmEncryptionType" itemSubjectRef="_drmEncryptionTypeItem"/>
+    <property id="enableActiveCloak2" itemSubjectRef="_enableActiveCloak2Item"/>
+    <property id="licenseUrl" itemSubjectRef="_licenseUrlItem"/>
+    <property id="contentId" itemSubjectRef="_contentIdItem"/>
+    <property id="mediaId" itemSubjectRef="_mediaIdItem"/>
+    <property id="subcontentType" itemSubjectRef="_subcontentTypeItem"/>
+    <property id="fileInfo" itemSubjectRef="_fileInfoItem"/>
+    <property id="sourceUpload" itemSubjectRef="_sourceUploadItem"/>
+    <property id="targetUpload" itemSubjectRef="_targetUploadItem"/>
+    <property id="sourceForDelete" itemSubjectRef="_sourceForDeleteItem"/>
+    <property id="uriId" itemSubjectRef="_uriIdItem"/>
+    <property id="ekfUrl" itemSubjectRef="_ekfUrlItem"/>
+    <property id="secureHLS" itemSubjectRef="_secureHLSItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="sourceSegments" itemSubjectRef="_sourceSegmentsItem"/>
+
+    <!-- nodes -->
+    <intermediateCatchEvent id="_68" name="Signal" >
+      <dataOutput id="_68_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_68_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_68_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <endEvent id="_4" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <scriptTask id="_66" name="Error Handling" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Protect CPS Workflow error: {}", errorMap.get("ExitMessage"));
+kcontext.setVariable("exitStatus", errorMap.get("ExitStatus"));
+kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));
+</script>
+    </scriptTask>
+    <exclusiveGateway id="_119" name="Gateway" gatewayDirection="Diverging" />
+    <scriptTask id="_152" name="Get Protect Metadata" scriptFormat="http://www.java.com/java" >
+      <script>ProtectCPSHelper.prepareVariables(kcontext);</script>
+    </scriptTask>
+    <exclusiveGateway id="_118" name="Gateway" gatewayDirection="Converging" />
+    <exclusiveGateway id="_117" name="Gateway" gatewayDirection="Diverging" />
+    <startEvent id="_154" name="Start" />
+    <exclusiveGateway id="_116" name="Gateway" gatewayDirection="Converging" />
+    <endEvent id="_155" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_156" name="Configuration Task" tns:taskName="Configuration" >
+      <ioSpecification>
+        <dataOutput id="_156_PropertyMapOutput" name="PropertyMap" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_156_PropertyMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_156_PropertyMapOutput</sourceRef>
+        <targetRef>config</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_114" name="Fetch Transcoded Files" tns:taskName="HybridCopy" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>kcontext.setVariable("fetchFile", fetchFileList.remove(0));</script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_114_SourceInput" name="Source" />
+        <dataInput id="_114_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_114_TargetInput" name="Target" />
+        <dataInput id="_114_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_114_EntityTypeInput" name="EntityType" />
+        <dataInput id="_114_EntityIdInput" name="EntityId" />
+        <dataInput id="_114_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_114_SourceInput</dataInputRefs>
+          <dataInputRefs>_114_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_114_TargetInput</dataInputRefs>
+          <dataInputRefs>_114_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_114_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_114_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_114_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_114_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{fetchFile}</from>
+          <to xsi:type="tFormalExpression">_114_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_114_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_114_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_114_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{cpsSourceUrl}</from>
+          <to xsi:type="tFormalExpression">_114_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_114_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_114_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_114_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_114_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_114_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_114_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_114_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_114_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_157" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_157_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_157_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_157_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_157_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_158" name="Generate Manifest" tns:taskName="QTSFileCreate" >
+      <ioSpecification>
+        <dataInput id="_158_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_158_TargetDataInput" name="TargetData" />
+        <dataInput id="_158_TargetInput" name="Target" />
+        <dataInput id="_158_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_158_EntityTypeInput" name="EntityType" />
+        <dataInput id="_158_AllowOverwriteInput" name="AllowOverwrite" />
+        <dataInput id="_158_EncodingTypeInput" name="EncodingType" />
+        <dataInput id="_158_EntityIDInput" name="EntityID" />
+        <dataInput id="_158_TargetFilenameInput" name="TargetFilename" />
+        <dataInput id="_158_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_158_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_158_TargetDataInput</dataInputRefs>
+          <dataInputRefs>_158_TargetInput</dataInputRefs>
+          <dataInputRefs>_158_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_158_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_158_AllowOverwriteInput</dataInputRefs>
+          <dataInputRefs>_158_EncodingTypeInput</dataInputRefs>
+          <dataInputRefs>_158_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_158_TargetFilenameInput</dataInputRefs>
+          <dataInputRefs>_158_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_158_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_158_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_TargetDataInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{m3u8indexString}</from>
+          <to xsi:type="tFormalExpression">_158_TargetDataInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{cpsPathTarget}</from>
+          <to xsi:type="tFormalExpression">_158_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_158_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_158_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_AllowOverwriteInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_158_AllowOverwriteInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_EncodingTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">UTF-8</from>
+          <to xsi:type="tFormalExpression">_158_EncodingTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_158_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_TargetFilenameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{m3u8Filename}</from>
+          <to xsi:type="tFormalExpression">_158_TargetFilenameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_158_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <parallelGateway id="_159" name="Gateway" gatewayDirection="Diverging" />
+    <task id="_126" name="Delete CPS Local Files" tns:taskName="QTSFileDelete" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>ProtectCPSHelper.entryDeleteCPSLocalFiles(kcontext);</script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <script>kcontext.setVariable("exitStatus", "SUCCESS");</script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_126_SourceInput" name="Source" />
+        <dataInput id="_126_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_126_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_126_RecursiveInput" name="Recursive" />
+        <dataInput id="_126_EntityTypeInput" name="EntityType" />
+        <dataInput id="_126_EntityIDInput" name="EntityID" />
+        <dataInput id="_126_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_126_SourceInput</dataInputRefs>
+          <dataInputRefs>_126_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_126_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_126_RecursiveInput</dataInputRefs>
+          <dataInputRefs>_126_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_126_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_126_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_126_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceForDelete}</from>
+          <to xsi:type="tFormalExpression">_126_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_126_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_126_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_126_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_126_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_126_RecursiveInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_126_RecursiveInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_126_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_126_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_126_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_126_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_126_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_126_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_125" name="Upload Protected Files" tns:taskName="HybridCopy" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>ProtectCPSHelper.entryUploadProtectedFile(kcontext);</script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_125_SourceInput" name="Source" />
+        <dataInput id="_125_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_125_TargetInput" name="Target" />
+        <dataInput id="_125_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_125_EntityTypeInput" name="EntityType" />
+        <dataInput id="_125_EntityIdInput" name="EntityId" />
+        <dataInput id="_125_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_125_SourceInput</dataInputRefs>
+          <dataInputRefs>_125_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_125_TargetInput</dataInputRefs>
+          <dataInputRefs>_125_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_125_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_125_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_125_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_125_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceUpload}</from>
+          <to xsi:type="tFormalExpression">_125_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_125_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_125_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_125_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{targetUpload}</from>
+          <to xsi:type="tFormalExpression">_125_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_125_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_125_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_125_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_125_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_125_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_125_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_125_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_125_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_123" name="Encrypt" tns:taskName="QTSProtectMedia" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>ProtectCPSHelper.entryEncrypt(kcontext);</script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_123_V_ContentIdInput" name="V_ContentId" />
+        <dataInput id="_123_V_NameInput" name="V_Name" />
+        <dataInput id="_123_V_MediaIdInput" name="V_MediaId" />
+        <dataInput id="_123_V_SubContent_colon_TypeInput" name="V_SubContent_colon_Type" />
+        <dataInput id="_123_cpsPortInput" name="cpsPort" />
+        <dataInput id="_123_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_123_accountIdInput" name="accountId" />
+        <dataInput id="_123_drmEncryptionTypeInput" name="drmEncryptionType" />
+        <dataInput id="_123_EkfURLInput" name="EkfURL" />
+        <dataInput id="_123_cpsHostInput" name="cpsHost" />
+        <dataInput id="_123_SourceInput" name="Source" />
+        <dataInput id="_123_TargetInput" name="Target" />
+        <dataInput id="_123_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_123_manServiceUrlInput" name="manServiceUrl" />
+        <dataInput id="_123_policyIdInput" name="policyId" />
+        <dataInput id="_123_licenseURLInput" name="licenseURL" />
+        <dataInput id="_123_manUserNameInput" name="manUserName" />
+        <dataInput id="_123_EntityTypeInput" name="EntityType" />
+        <dataInput id="_123_manPasswordInput" name="manPassword" />
+        <dataInput id="_123_EntityIDInput" name="EntityID" />
+        <dataInput id="_123_SecureHLSInput" name="SecureHLS" />
+        <dataInput id="_123_ViewNameInput" name="ViewName" />
+        <dataInput id="_123_EnableActiveCloak2Input" name="EnableActiveCloak2" />
+        <dataOutput id="_123_HandleEventOutput" name="HandleEvent" />
+        <inputSet>
+          <dataInputRefs>_123_V_ContentIdInput</dataInputRefs>
+          <dataInputRefs>_123_V_NameInput</dataInputRefs>
+          <dataInputRefs>_123_V_MediaIdInput</dataInputRefs>
+          <dataInputRefs>_123_V_SubContent_colon_TypeInput</dataInputRefs>
+          <dataInputRefs>_123_cpsPortInput</dataInputRefs>
+          <dataInputRefs>_123_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_123_accountIdInput</dataInputRefs>
+          <dataInputRefs>_123_drmEncryptionTypeInput</dataInputRefs>
+          <dataInputRefs>_123_EkfURLInput</dataInputRefs>
+          <dataInputRefs>_123_cpsHostInput</dataInputRefs>
+          <dataInputRefs>_123_SourceInput</dataInputRefs>
+          <dataInputRefs>_123_TargetInput</dataInputRefs>
+          <dataInputRefs>_123_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_123_manServiceUrlInput</dataInputRefs>
+          <dataInputRefs>_123_policyIdInput</dataInputRefs>
+          <dataInputRefs>_123_licenseURLInput</dataInputRefs>
+          <dataInputRefs>_123_manUserNameInput</dataInputRefs>
+          <dataInputRefs>_123_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_123_manPasswordInput</dataInputRefs>
+          <dataInputRefs>_123_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_123_SecureHLSInput</dataInputRefs>
+          <dataInputRefs>_123_ViewNameInput</dataInputRefs>
+          <dataInputRefs>_123_EnableActiveCloak2Input</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_123_HandleEventOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>contentId</sourceRef>
+        <targetRef>_123_V_ContentIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>uriId</sourceRef>
+        <targetRef>_123_V_NameInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>mediaId</sourceRef>
+        <targetRef>_123_V_MediaIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>subcontentType</sourceRef>
+        <targetRef>_123_V_SubContent_colon_TypeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_cpsPortInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">9001</from>
+          <to xsi:type="tFormalExpression">_123_cpsPortInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_123_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_accountIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("cps.account.id")}</from>
+          <to xsi:type="tFormalExpression">_123_accountIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_drmEncryptionTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{drmEncryptionType}</from>
+          <to xsi:type="tFormalExpression">_123_drmEncryptionTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_EkfURLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{ekfUrl}</from>
+          <to xsi:type="tFormalExpression">_123_EkfURLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_cpsHostInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("cps.host")}</from>
+          <to xsi:type="tFormalExpression">_123_cpsHostInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceEncrypt}</from>
+          <to xsi:type="tFormalExpression">_123_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{targetEncrypt}</from>
+          <to xsi:type="tFormalExpression">_123_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_123_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_manServiceUrlInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("cps.man.service.url")}</from>
+          <to xsi:type="tFormalExpression">_123_manServiceUrlInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_policyIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{protectWrapper.getPolicyGroupId()}</from>
+          <to xsi:type="tFormalExpression">_123_policyIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_licenseURLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{licenseUrl}</from>
+          <to xsi:type="tFormalExpression">_123_licenseURLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_manUserNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("cps.man.user")}</from>
+          <to xsi:type="tFormalExpression">_123_manUserNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_123_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_manPasswordInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("cps.man.password")}</from>
+          <to xsi:type="tFormalExpression">_123_manPasswordInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_123_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_SecureHLSInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{secureHLS}</from>
+          <to xsi:type="tFormalExpression">_123_SecureHLSInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_123_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_123_EnableActiveCloak2Input</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{enableActiveCloak2}</from>
+          <to xsi:type="tFormalExpression">_123_EnableActiveCloak2Input</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_123_HandleEventOutput</sourceRef>
+        <targetRef>fileInfo</targetRef>
+      </dataOutputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_159-_68" sourceRef="_159" targetRef="_68" />
+    <sequenceFlow id="_66-_4" sourceRef="_66" targetRef="_4" />
+    <sequenceFlow id="_68-_66" sourceRef="_68" targetRef="_66" />
+    <sequenceFlow id="_117-_119" sourceRef="_117" targetRef="_119" name="No More" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_156-_152" sourceRef="_156" targetRef="_152" />
+    <sequenceFlow id="_119-_118" sourceRef="_119" targetRef="_118" name="No Manifest" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_158-_118" sourceRef="_158" targetRef="_118" />
+    <sequenceFlow id="_116-_117" sourceRef="_116" targetRef="_117" />
+    <sequenceFlow id="_114-_116" sourceRef="_114" targetRef="_116" />
+    <sequenceFlow id="_152-_116" sourceRef="_152" targetRef="_116" />
+    <sequenceFlow id="_126-_155" sourceRef="_126" targetRef="_155" />
+    <sequenceFlow id="_159-_156" sourceRef="_159" targetRef="_156" />
+    <sequenceFlow id="_117-_114" sourceRef="_117" targetRef="_114" name="More to Fetch" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !fetchFileList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_125-_157" sourceRef="_125" targetRef="_157" />
+    <sequenceFlow id="_119-_158" sourceRef="_119" targetRef="_158" name="Generate Manifest" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return ProtectCPSHelper.isManifestNeeded(protectWrapper);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_154-_159" sourceRef="_154" targetRef="_159" />
+    <sequenceFlow id="_157-_126" sourceRef="_157" targetRef="_126" />
+    <sequenceFlow id="_123-_125" sourceRef="_123" targetRef="_125" />
+    <sequenceFlow id="_118-_123" sourceRef="_118" targetRef="_123" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.protect.ProtectCPS" >
+      <bpmndi:BPMNShape bpmnElement="_68" >
+        <dc:Bounds x="636" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="636" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_66" >
+        <dc:Bounds x="564" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_119" >
+        <dc:Bounds x="180" y="384" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_152" >
+        <dc:Bounds x="108" y="168" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_118" >
+        <dc:Bounds x="180" y="504" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_117" >
+        <dc:Bounds x="180" y="312" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_154" >
+        <dc:Bounds x="108" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_116" >
+        <dc:Bounds x="180" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_155" >
+        <dc:Bounds x="180" y="888" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_156" >
+        <dc:Bounds x="108" y="96" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_114" >
+        <dc:Bounds x="336" y="240" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_157" >
+        <dc:Bounds x="108" y="744" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_158" >
+        <dc:Bounds x="336" y="444" width="191" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_159" >
+        <dc:Bounds x="180" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_126" >
+        <dc:Bounds x="108" y="816" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_125" >
+        <dc:Bounds x="108" y="672" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_123" >
+        <dc:Bounds x="108" y="600" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_159-_68" >
+        <di:waypoint x="204" y="48" />
+        <di:waypoint x="660" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_66-_4" >
+        <di:waypoint x="660" y="120" />
+        <di:waypoint x="660" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_68-_66" >
+        <di:waypoint x="660" y="48" />
+        <di:waypoint x="660" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_117-_119" >
+        <di:waypoint x="204" y="336" />
+        <di:waypoint x="204" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_156-_152" >
+        <di:waypoint x="204" y="120" />
+        <di:waypoint x="204" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_119-_118" >
+        <di:waypoint x="204" y="408" />
+        <di:waypoint x="204" y="528" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_158-_118" >
+        <di:waypoint x="431" y="468" />
+        <di:waypoint x="431" y="528" />
+        <di:waypoint x="204" y="528" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_116-_117" >
+        <di:waypoint x="204" y="264" />
+        <di:waypoint x="204" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_114-_116" >
+        <di:waypoint x="432" y="264" />
+        <di:waypoint x="204" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_152-_116" >
+        <di:waypoint x="204" y="192" />
+        <di:waypoint x="204" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_126-_155" >
+        <di:waypoint x="204" y="840" />
+        <di:waypoint x="204" y="912" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_159-_156" >
+        <di:waypoint x="204" y="48" />
+        <di:waypoint x="204" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_117-_114" >
+        <di:waypoint x="204" y="336" />
+        <di:waypoint x="432" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_125-_157" >
+        <di:waypoint x="204" y="696" />
+        <di:waypoint x="204" y="768" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_119-_158" >
+        <di:waypoint x="204" y="408" />
+        <di:waypoint x="430" y="408" />
+        <di:waypoint x="431" y="468" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_154-_159" >
+        <di:waypoint x="132" y="48" />
+        <di:waypoint x="204" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_157-_126" >
+        <di:waypoint x="204" y="768" />
+        <di:waypoint x="204" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_123-_125" >
+        <di:waypoint x="204" y="624" />
+        <di:waypoint x="204" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_118-_123" >
+        <di:waypoint x="204" y="528" />
+        <di:waypoint x="204" y="624" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

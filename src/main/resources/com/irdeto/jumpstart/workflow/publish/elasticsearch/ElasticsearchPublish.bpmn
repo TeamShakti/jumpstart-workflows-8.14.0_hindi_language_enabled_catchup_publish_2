@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="Definition"
+             targetNamespace="http://org.eclipse.bpmn2/default/process"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_exitStatus" structureRef="String" />
+  <itemDefinition id="_elasticsearchPublishCommand" structureRef="String" />
+  <itemDefinition id="_document" structureRef="com.irdeto.jumpstart.domain.reference.ReferenceDocument" />
+  <itemDefinition id="_errorMap" structureRef="java.util.Map" />
+  <itemDefinition id="_command" structureRef="String" />
+  <itemDefinition id="_action" structureRef="String" />
+  <itemDefinition id="_publishWrapper" structureRef="com.irdeto.jumpstart.factory.WrapperWithDestinations" />
+  <itemDefinition id="null" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.publish.elasticsearch.ElasticsearchPublish" name="Elasticsearch Publish" tns:packageName="com.irdeto.jumpstart.workflow.publish.elasticsearch" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.config.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.reference.*" />
+     <tns:import name="com.irdeto.domain.operation.MM8Response" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="com.irdeto.domain.constants.TaskHandlerConstants" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.elasticsearch.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="java.util.Map.Entry" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.publish.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.elasticsearch.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="wrapper" itemSubjectRef="_publishWrapper"/>
+    <property id="document" itemSubjectRef="_document"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatus"/>
+    <property id="errorMap" itemSubjectRef="_errorMap"/>
+    <property id="action" itemSubjectRef="_action"/>
+    <property id="command" itemSubjectRef="null"/>
+
+    <!-- nodes -->
+    <startEvent id="StartEvent_1" name="Start Event 1"  isInterrupting="false">
+    </startEvent>
+    <parallelGateway id="_jbpm-unique-5" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <intermediateCatchEvent id="_jbpm-unique-6" name="Signal" >
+      <dataOutput id="_jbpm-unique-6_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_jbpm-unique-6_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_jbpm-unique-6_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <scriptTask id="_jbpm-unique-7" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("exitStatus", errorMap.get("ExitStatus"));
+kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <endEvent id="_jbpm-unique-8" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_jbpm-unique-10" name="Publish to Elasticsearch" tns:taskName="Elasticsearch" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>ElasticsearchPublishHelper.prepareDocument(kcontext, wrapper);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-10_EntityInput" name="Entity" />
+        <dataInput id="_jbpm-unique-10_CommandInput" name="Command" />
+        <dataInput id="_jbpm-unique-10_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-10_EntityInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-10_CommandInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-10_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>document</sourceRef>
+        <targetRef>_jbpm-unique-10_EntityInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-10_CommandInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{command}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-10_CommandInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-10_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-10_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_jbpm-unique-13" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="StartEvent_1-_jbpm-unique-5" sourceRef="StartEvent_1" targetRef="_jbpm-unique-5" />
+    <sequenceFlow id="_jbpm-unique-5-_jbpm-unique-6" sourceRef="_jbpm-unique-5" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-6-_jbpm-unique-7" sourceRef="_jbpm-unique-6" targetRef="_jbpm-unique-7" />
+    <sequenceFlow id="_jbpm-unique-7-_jbpm-unique-8" sourceRef="_jbpm-unique-7" targetRef="_jbpm-unique-8" />
+    <sequenceFlow id="_jbpm-unique-5-_jbpm-unique-10" sourceRef="_jbpm-unique-5" targetRef="_jbpm-unique-10" />
+    <sequenceFlow id="_jbpm-unique-10-_jbpm-unique-13" sourceRef="_jbpm-unique-10" targetRef="_jbpm-unique-13" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.publish.elasticsearch.ElasticsearchPublish" >
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" >
+        <dc:Bounds x="120" y="36" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-5" >
+        <dc:Bounds x="120" y="108" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-6" >
+        <dc:Bounds x="204" y="108" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-7" >
+        <dc:Bounds x="288" y="108" width="97" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-8" >
+        <dc:Bounds x="420" y="108" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-10" >
+        <dc:Bounds x="36" y="180" width="217" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-13" >
+        <dc:Bounds x="120" y="252" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="StartEvent_1-_jbpm-unique-5" >
+        <di:waypoint x="144" y="60" />
+        <di:waypoint x="144" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_jbpm-unique-6" >
+        <di:waypoint x="144" y="132" />
+        <di:waypoint x="228" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-6-_jbpm-unique-7" >
+        <di:waypoint x="228" y="132" />
+        <di:waypoint x="336" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-7-_jbpm-unique-8" >
+        <di:waypoint x="336" y="132" />
+        <di:waypoint x="444" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_jbpm-unique-10" >
+        <di:waypoint x="144" y="132" />
+        <di:waypoint x="144" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-10-_jbpm-unique-13" >
+        <di:waypoint x="144" y="204" />
+        <di:waypoint x="144" y="276" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

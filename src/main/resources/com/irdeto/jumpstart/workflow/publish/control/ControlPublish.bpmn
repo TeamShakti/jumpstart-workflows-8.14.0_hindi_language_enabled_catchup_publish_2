@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_controlMapperItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlMapper" />
+  <itemDefinition id="_soapEnvelopeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_contentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_authorizationInfoListItem" structureRef="java.util.List" />
+
+  <itemDefinition id="_103-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_103-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_103-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_103-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_103-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_103-controlMapperItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlMapper" />
+  <itemDefinition id="_103-soapEnvelopeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_103-contentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_103-authorizationInfoListItem" structureRef="java.util.List" />
+
+  <itemDefinition id="_100-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_100-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_100-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_100-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_100-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_100-controlMapperItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlMapper" />
+  <itemDefinition id="_100-soapEnvelopeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_100-contentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_100-authorizationInfoListItem" structureRef="java.util.List" />
+
+  <itemDefinition id="_101-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_101-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_101-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_101-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_101-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_101-controlMapperItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlMapper" />
+  <itemDefinition id="_101-soapEnvelopeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-contentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-authorizationInfoListItem" structureRef="java.util.List" />
+
+  <itemDefinition id="_53-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_53-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_53-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_53-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_53-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_53-controlMapperItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlMapper" />
+  <itemDefinition id="_53-soapEnvelopeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_53-contentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_53-authorizationInfoListItem" structureRef="java.util.List" />
+
+  <itemDefinition id="_91-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_91-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_91-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_91-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_91-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_91-controlMapperItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlMapper" />
+  <itemDefinition id="_91-soapEnvelopeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-contentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-authorizationInfoListItem" structureRef="java.util.List" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" name="Control Publish" tns:packageName="com.irdeto.jumpstart.workflow.publish.control" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.domain.operation.MM8Response" />
+     <tns:import name="com.irdeto.domain.constants.TaskHandlerConstants" />
+     <tns:import name="java.util.*" />
+     <tns:import name="java.util.Map.Entry" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.config.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.publish.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.control.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="wrapper" itemSubjectRef="_publishWrapperItem"/>
+    <property id="controlBatch" itemSubjectRef="_controlBatchItem"/>
+    <property id="controlMapper" itemSubjectRef="_controlMapperItem"/>
+    <property id="soapEnvelopeList" itemSubjectRef="_soapEnvelopeListItem"/>
+    <property id="contentIdList" itemSubjectRef="_contentIdListItem"/>
+    <property id="authorizationInfoList" itemSubjectRef="_authorizationInfoListItem"/>
+
+    <!-- nodes -->
+    <exclusiveGateway id="_102" name="Gateway" gatewayDirection="Converging" />
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_103" name="Query Media Categories" tns:taskName="ControlQuerySessionAuthorization" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>List&lt;String&gt; mediaIdList = controlMapper.getMediaIdList() ;
+if (mediaIdList != null  &amp;&amp;  mediaIdList.size() &gt; 0) {
+	kcontext.setVariable("contentIdList", mediaIdList);
+} else {
+	kcontext.setVariable("contentIdList", null);
+}</script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <script>kcontext.setVariable("soapEnvelopeList", controlMapper.getCategorySoapEnvelopeList(authorizationInfoList));</script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_103_ContentIdListInput" name="ContentIdList" />
+        <dataInput id="_103_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_103_AuthorizationInfoListOutput" name="AuthorizationInfoList" />
+        <inputSet>
+          <dataInputRefs>_103_ContentIdListInput</dataInputRefs>
+          <dataInputRefs>_103_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_103_AuthorizationInfoListOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>contentIdList</sourceRef>
+        <targetRef>_103_ContentIdListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_103_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_103_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_103_AuthorizationInfoListOutput</sourceRef>
+        <targetRef>authorizationInfoList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_100" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_100_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_100_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_100_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_100_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_101" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_101_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_101_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_101_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_101_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_98" name="Gateway" gatewayDirection="Converging" />
+    <scriptTask id="_99" name="Control Batch" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("controlBatch", controlMapper.getControlBatch());</script>
+    </scriptTask>
+    <exclusiveGateway id="_97" name="Gateway" gatewayDirection="Diverging" />
+    <endEvent id="_37" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <exclusiveGateway id="_79" name="Gateway" gatewayDirection="Diverging" />
+    <parallelGateway id="_104" name="Gateway" gatewayDirection="Diverging" />
+    <scriptTask id="_84" name="Get Control Mapper" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("controlMapper", ControlMapperFactory.getInstance(wrapper));
+</script>
+    </scriptTask>
+    <scriptTask id="_19" name="Error Handling" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("exitStatus", errorMap.get("ExitStatus"));
+kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));
+</script>
+    </scriptTask>
+    <intermediateCatchEvent id="_20" name="Signal" >
+      <dataOutput id="_20_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_20_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_20_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <task id="_53" name="Control Register Content" tns:taskName="JumpstartControlRegisterContent" >
+      <ioSpecification>
+        <dataInput id="_53_ControlBatchInput" name="ControlBatch" />
+        <dataInput id="_53_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_53_ControlBatchInput</dataInputRefs>
+          <dataInputRefs>_53_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>controlBatch</sourceRef>
+        <targetRef>_53_ControlBatchInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_53_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_93" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <exclusiveGateway id="_95" name="Gateway" gatewayDirection="Diverging" />
+    <endEvent id="_88" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_91" name="Create Category or Relations" tns:taskName="ControlCws" >
+      <ioSpecification>
+        <dataInput id="_91_SoapEnvelopeListInput" name="SoapEnvelopeList" />
+        <dataInput id="_91_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_91_SoapEnvelopeListInput</dataInputRefs>
+          <dataInputRefs>_91_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>soapEnvelopeList</sourceRef>
+        <targetRef>_91_SoapEnvelopeListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_91_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_91_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_101-_102" sourceRef="_101" targetRef="_102" />
+    <sequenceFlow id="_95-_102" sourceRef="_95" targetRef="_102" name="No Category Processing" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_98-_103" sourceRef="_98" targetRef="_103" />
+    <sequenceFlow id="_53-_100" sourceRef="_53" targetRef="_100" />
+    <sequenceFlow id="_91-_101" sourceRef="_91" targetRef="_101" />
+    <sequenceFlow id="_97-_98" sourceRef="_97" targetRef="_98" name="No Control Batch" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_100-_98" sourceRef="_100" targetRef="_98" />
+    <sequenceFlow id="_79-_99" sourceRef="_79" targetRef="_99" name="Register Content" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return controlMapper != null;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_99-_97" sourceRef="_99" targetRef="_97" />
+    <sequenceFlow id="_19-_37" sourceRef="_19" targetRef="_37" />
+    <sequenceFlow id="_84-_79" sourceRef="_84" targetRef="_79" />
+    <sequenceFlow id="_1-_104" sourceRef="_1" targetRef="_104" />
+    <sequenceFlow id="_104-_84" sourceRef="_104" targetRef="_84" />
+    <sequenceFlow id="_20-_19" sourceRef="_20" targetRef="_19" />
+    <sequenceFlow id="_104-_20" sourceRef="_104" targetRef="_20" />
+    <sequenceFlow id="_97-_53" sourceRef="_97" targetRef="_53" name="Has Control Batch" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return controlBatch != null;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_102-_93" sourceRef="_102" targetRef="_93" />
+    <sequenceFlow id="_103-_95" sourceRef="_103" targetRef="_95" />
+    <sequenceFlow id="_79-_88" sourceRef="_79" targetRef="_88" name="Bypass Control" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_95-_91" sourceRef="_95" targetRef="_91" name="Category Processing" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return soapEnvelopeList != null &amp;&amp; !soapEnvelopeList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" >
+      <bpmndi:BPMNShape bpmnElement="_102" >
+        <dc:Bounds x="120" y="624" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="48" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_103" >
+        <dc:Bounds x="48" y="468" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_100" >
+        <dc:Bounds x="276" y="396" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_101" >
+        <dc:Bounds x="276" y="624" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_98" >
+        <dc:Bounds x="120" y="396" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_99" >
+        <dc:Bounds x="48" y="240" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_97" >
+        <dc:Bounds x="120" y="312" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_37" >
+        <dc:Bounds x="576" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_79" >
+        <dc:Bounds x="120" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_104" >
+        <dc:Bounds x="120" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_84" >
+        <dc:Bounds x="48" y="96" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="504" y="96" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" >
+        <dc:Bounds x="576" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_53" >
+        <dc:Bounds x="276" y="312" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_93" >
+        <dc:Bounds x="120" y="696" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_95" >
+        <dc:Bounds x="120" y="540" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_88" >
+        <dc:Bounds x="348" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_91" >
+        <dc:Bounds x="276" y="540" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_101-_102" >
+        <di:waypoint x="372" y="648" />
+        <di:waypoint x="144" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_95-_102" >
+        <di:waypoint x="144" y="564" />
+        <di:waypoint x="144" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_98-_103" >
+        <di:waypoint x="144" y="420" />
+        <di:waypoint x="144" y="492" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_53-_100" >
+        <di:waypoint x="372" y="336" />
+        <di:waypoint x="372" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_91-_101" >
+        <di:waypoint x="372" y="564" />
+        <di:waypoint x="372" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_97-_98" >
+        <di:waypoint x="144" y="336" />
+        <di:waypoint x="144" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_100-_98" >
+        <di:waypoint x="372" y="420" />
+        <di:waypoint x="144" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_79-_99" >
+        <di:waypoint x="144" y="192" />
+        <di:waypoint x="144" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_99-_97" >
+        <di:waypoint x="144" y="264" />
+        <di:waypoint x="144" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_37" >
+        <di:waypoint x="600" y="120" />
+        <di:waypoint x="600" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_84-_79" >
+        <di:waypoint x="144" y="120" />
+        <di:waypoint x="144" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_104" >
+        <di:waypoint x="72" y="48" />
+        <di:waypoint x="144" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_104-_84" >
+        <di:waypoint x="144" y="48" />
+        <di:waypoint x="144" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_20-_19" >
+        <di:waypoint x="600" y="48" />
+        <di:waypoint x="600" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_104-_20" >
+        <di:waypoint x="144" y="48" />
+        <di:waypoint x="600" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_97-_53" >
+        <di:waypoint x="144" y="336" />
+        <di:waypoint x="372" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_102-_93" >
+        <di:waypoint x="144" y="648" />
+        <di:waypoint x="144" y="720" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_103-_95" >
+        <di:waypoint x="144" y="492" />
+        <di:waypoint x="144" y="564" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_79-_88" >
+        <di:waypoint x="144" y="192" />
+        <di:waypoint x="372" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_95-_91" >
+        <di:waypoint x="144" y="564" />
+        <di:waypoint x="372" y="564" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

@@ -1,0 +1,1013 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"
+		xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"
+		xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"
+		xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd 
+			urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd 
+			urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd 
+			urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd 
+			urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd 
+			http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">
+
+	<Asset xsi:type="offer:OfferType" uriId="irdeto.com/Offer/SUBOFFER001" providerVersionNum="1"		
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z"> 
+		<offer:Presentation>
+			<offer:CategoryRef uriId="irdeto.com/Category/Irdeto/Movies A-Z" />		
+			<offer:DisplayAsNew>P7D</offer:DisplayAsNew>
+			<offer:DisplayAsLastChance>P7D</offer:DisplayAsLastChance>
+		</offer:Presentation>
+		<offer:PromotionalContentGroupRef uriId="irdeto.com/ContentGroup/201300031" />    
+		<offer:ProviderContentTier>Irdeto1</offer:ProviderContentTier>
+		<offer:BillingId>12345</offer:BillingId>
+		<offer:TermsRef uriId="irdeto.com/Terms/SUBTERMS001" />		
+		<offer:ContentGroupRef uriId="irdeto.com/SubscriptionPackage/1" />		
+	</Asset>
+
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/SUBTERMS001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<terms:ContractName>Subscription</terms:ContractName>		<!-- Subscription -->
+		<terms:SubscriberViewLimit startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-02-28T23:59:59Z"
+				maximumViews="5"/>
+		<terms:SubscriberViewLimit startDateTime="2014-12-01T00:00:00Z" endDateTime="2014-12-31T23:59:59Z"
+				maximumViews="6"/>
+		<terms:SuggestedPrice>9.99</terms:SuggestedPrice>
+	</Asset>
+
+	<Asset xsi:type="irdeto:SubscriptionPackageType" uriId="irdeto.com/SubscriptionPackage/1" providerVersionNum="1"			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T00:00:00Z">
+		<irdeto:TitleRef uriId="irdeto.com/Title/SubscriptionPackage/1" />
+		<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/SubscriptionPackage/1" />
+		<irdeto:ChannelRef uriId="irdeto.com/Channel/12702" />	               <!-- Channel -->
+		<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/201300031" />    <!-- stand alone program LowPolyRocks-->
+		<irdeto:BrandRef uriId="irdeto.com/Brand/S201305" />		       		<!-- Added - Brand AsiasMonarchis-->
+	</Asset>
+
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/SubscriptionPackage/1" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T00:00:00Z">		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>Entertainment Pack</title:TitleSortName>		<!-- Changed pack name -->	
+			<title:TitleBrief>Entertainment Pack</title:TitleBrief>		<!-- Changed pack name -->	
+			<title:TitleMedium>Entertainment Pack</title:TitleMedium>		<!-- Changed pack name -->	
+			<title:TitleLong>Entertainment Pack</title:TitleLong>		<!-- Changed pack name -->	
+			<title:SummaryShort>The best Subscription Package for entertainment.</title:SummaryShort>	
+			<title:SummaryLong>The best Subscription Package for entertainment.</title:SummaryLong>
+		</title:LocalizableTitle>		
+	</Asset>			
+<!-- Subscription Package section ends -->
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/SubscriptionPackage/1" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T00:00:00Z">	
+		<content:SourceUrl>entertainmentpack.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>
+	
+<!-- Category section starts-->
+	<Asset xsi:type="offer:CategoryType" uriId="irdeto.com/Category/Irdeto/Movies A-Z" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">
+		<offer:CategoryPath>Irdeto/Movies A-Z</offer:CategoryPath>
+	</Asset>
+<!-- Category section ends-->
+<!-- Standalone Program  section starts -->
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/201300031001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<core:AlternateId identifierSystem="ISAN">1881-66C7-3420-000-7-9F3A-02450-U</core:AlternateId>
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>
+		<core:Provider>HBO</core:Provider>
+		<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Low Poly Rocks</title:TitleSortName>    <!-- need to be modified -->
+			<title:TitleBrief>Low Poly Rocks</title:TitleBrief>    <!-- need to be modified -->
+			<title:TitleMedium>Low Poly Rocks</title:TitleMedium>    <!-- need to be modified -->
+			<title:TitleLong>Low Poly Rocks</title:TitleLong>    <!-- need to be modified -->
+			<title:SummaryShort>This animation is about THE FEELING, THE FLOW.</title:SummaryShort>    <!-- need to be modified -->
+			<title:SummaryLong>This animation is about THE FEELING, THE FLOW. And most of all this animation is an ode to LOW POLY.</title:SummaryLong>    <!-- need to be modified -->
+			<title:ActorDisplay>Diego Ballesteros, Anna Paquin, Stephen Moyer, Alexander Skarsgrd, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Diego Ballesteros" firstName="Diego" lastName="Ballesteros" sortableName="Diego Ballesteros" />
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgrd" firstName="Alexander" lastName="Skarsgrd" sortableName="Skarsgrd,Alexander" />
+			<title:WriterDisplay>William Durant</title:WriterDisplay>
+			<title:Director fullName="Edward Saltau" firstName="Edward" lastName="Saltau" sortableName="Edward Saltau" />    <!-- need to be modified -->
+			<title:Producer fullName="Sampo Rask" firstName="Sampo" lastName="Rask" sortableName="Sampo Rask" />
+			<title:StudioDisplay>HBO</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>	
+			<!-- not used for movies <title:EpisodeName>Episode 1</title:EpisodeName> -->  <!-- need to be modified -->
+			<!-- not used for movies <title:EpisodeID>1</title:EpisodeID>			  -->  <!-- need to be modified -->
+			
+			<!--      <title:Chapter heading="Opening Scene" timeCode="00:00:02:00" />
+		      <title:Chapter heading="They Meet" timeCode="00:15:12:00" />
+		      <title:Chapter heading="The Collision" timeCode="02:03:06:00" />
+		      <title:Chapter heading="She Goes Under" timeCode="02:55:15:00" />
+		      <title:Chapter heading="Final Scene" timeCode="03:02:09:00" />-->
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+		<!--    <title:Advisory>AL</title:Advisory>
+    <title:Advisory>N</title:Advisory>-->
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:01:39</title:DisplayRunTime>
+		<title:Year>2012</title:Year>
+		<title:CountryOfOrigin>Finland</title:CountryOfOrigin>
+		<title:Genre>Educational</title:Genre>    <!-- need to be modified -->
+		<title:ShowType>Movies</title:ShowType>    <!-- need to be modified -->
+		<title:IsEncryptionRequired>false</title:IsEncryptionRequired>
+		<!--    <title:BoxOffice>1835000000</title:BoxOffice>-->
+		<!--    <title:ProgrammerCallLetters>IND</title:ProgrammerCallLetters>-->
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/201300031"
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" 
+			endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<offer:TitleRef uriId="irdeto.com/Title/201300031001" />    <!-- need to be modified -->
+		<offer:MovieRef uriId="irdeto.com/Movie/201300031002" />    <!-- need to be modified -->
+		<!-- <offer:PreviewRef uriId="irdeto.com/Preview/201300031003" /> -->    
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300031004-01" />    
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300031004-02" /> 
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300031004-03" /> 
+		<offer:PosterRef uriId="irdeto.com/Poster/201300031005-01" />    <!-- need to be modified -->
+		<offer:PosterRef uriId="irdeto.com/Poster/201300031005-02" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201300031005-03" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201300031005-04" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201300031005-05" />
+	</Asset>
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Movie/201300031002" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201300031002-Movie-en_US.mov</content:SourceUrl>
+		<content:ContentFileSize>3907840625</content:ContentFileSize>
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H01M39S</content:Duration>    <!-- need to be modified -->
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+	</Asset>
+
+	<!--
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Preview/201300031003" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>irdeto.com%2FPreview%2F201300031003-Preview-en_US.mp4</content:SourceUrl>
+		<content:ContentFileSize>25284375</content:ContentFileSize>
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H00M30S</content:Duration>    
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+	</Asset>  
+	-->
+
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300031004-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300031004-BoxCover-320-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>320</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+    <Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300031004-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300031004-BoxCover-480-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>480</content:X_Resolution>
+		<content:Y_Resolution>334</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300031004-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300031004-BoxCover-640-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>640</content:X_Resolution>
+		<content:Y_Resolution>446</content:Y_Resolution>
+	</Asset>
+	
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300031005-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201300031005-Poster-144-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>144</content:X_Resolution>
+		<content:Y_Resolution>256</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300031005-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201300031005-Poster-360-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>360</content:X_Resolution>
+		<content:Y_Resolution>640</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300031005-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201300031005-Poster-648-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>648</content:X_Resolution>
+		<content:Y_Resolution>1152</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300031005-04" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201300031005-Poster-720-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>720</content:X_Resolution>
+		<content:Y_Resolution>1280</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300031005-05" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201300031005-Poster-1080-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1080</content:X_Resolution>
+		<content:Y_Resolution>1920</content:Y_Resolution>
+	</Asset>
+<!-- Standalone Program  section ends -->
+<!-- Channel asset start-->
+	<Asset xsi:type="irdeto:ChannelType" uriId="irdeto.com/Channel/12702" providerVersionNum="1"			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T00:00:00Z">
+			<!-- The startdatetime and enddatetime are important here.  Also important in an subscription package, offer, term.  Not in related entities such as title, boxcover. -->	
+		<irdeto:TitleRef uriId="irdeto.com/Title/Channel/12702" />
+		<irdeto:ChannelId>12702</irdeto:ChannelId> <!-- This must match xmlTV channel ID from EPGS -->
+		<irdeto:DisplayOrder>1</irdeto:DisplayOrder>
+		<irdeto:LiveWindowDuration>120</irdeto:LiveWindowDuration> <!-- Optional -->
+		<irdeto:EncodeProfile>ActiveCloak Entertainment</irdeto:EncodeProfile>
+		<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/Channel/12702" />		
+	</Asset>
+
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/Channel/12702" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T00:00:00Z">		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>E! Entertainment</title:TitleSortName>	
+			<title:TitleBrief>E! Entertainment</title:TitleBrief>	
+			<title:TitleMedium>E! Entertainment</title:TitleMedium>	
+			<title:TitleLong>E! Entertainment</title:TitleLong>	
+			<title:SummaryShort>Best entertainment channel on TV.</title:SummaryShort>	
+			<title:SummaryLong>Best entertainment channel on TV.</title:SummaryLong>
+		</title:LocalizableTitle>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/Channel/12702" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T00:00:00Z">	
+		<content:SourceUrl>eentertainment.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>
+<!-- Channel asset end-->
+<!-- Brand/Series/Programs section starts -->
+	<!-- Episode 1 -->
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/201300044001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<core:AlternateId identifierSystem="ISAN">1881-66C7-3420-000-7-9F3A-02450-U</core:AlternateId>
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>
+		<core:Provider>HBO</core:Provider>
+		<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Japan</title:TitleSortName>   
+			<title:TitleBrief>Japan</title:TitleBrief>   
+			<title:TitleMedium>Japan</title:TitleMedium>   
+			<title:TitleLong>Japan</title:TitleLong>   
+			<title:SummaryShort>The oldest hereditary monarchy in the world, its post-war role and the issue of gender has caused much soul searching in recent times.</title:SummaryShort>   
+			<title:SummaryLong>The oldest hereditary monarchy in the world, its post-war role and the issue of gender has caused much soul searching in recent times.</title:SummaryLong>   
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgrd, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgrd" firstName="Alexander" lastName="Skarsgrd" sortableName="Skarsgrd,Alexander" />
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+			<title:Director fullName="Corne Van Rooyen" firstName="Corne" lastName="Van Rooyen" sortableName="Corne Van Rooyen" />   
+			<title:Producer fullName="Harald Walker" firstName="Harald" lastName="Walker" sortableName="Harald Walker" />
+			<title:StudioDisplay>Off the Fence</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>	
+			<title:EpisodeName>Japan</title:EpisodeName>  
+			<title:EpisodeID>1</title:EpisodeID>			   
+			
+			<!--      <title:Chapter heading="Opening Scene" timeCode="00:00:02:00" />
+		      <title:Chapter heading="They Meet" timeCode="00:15:12:00" />
+		      <title:Chapter heading="The Collision" timeCode="02:03:06:00" />
+		      <title:Chapter heading="She Goes Under" timeCode="02:55:15:00" />
+		      <title:Chapter heading="Final Scene" timeCode="03:02:09:00" />-->
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+		<!--    <title:Advisory>AL</title:Advisory>
+    <title:Advisory>N</title:Advisory>-->
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:01:00</title:DisplayRunTime>   <!-- MATTHIJS -->
+		<title:Year>2010</title:Year>
+		<title:CountryOfOrigin>Japan</title:CountryOfOrigin>
+		<title:Genre>Reality</title:Genre>   
+		<title:ShowType>Series</title:ShowType>   
+		<title:IsEncryptionRequired>false</title:IsEncryptionRequired>
+		<!--    <title:BoxOffice>1835000000</title:BoxOffice>-->
+		<!--    <title:ProgrammerCallLetters>IND</title:ProgrammerCallLetters>-->
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/201300044"
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" 
+			endDateTime="2014-12-31T11:59:59Z">   
+		<offer:TitleRef uriId="irdeto.com/Title/201300044001" />   
+		<offer:MovieRef uriId="irdeto.com/Movie/201300044002" />   
+		<!-- no preview/trailer <offer:PreviewRef uriId="irdeto.com/Preview/201300044003" /> -->   
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300044004-01" />  
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300044004-02" /> 
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300044004-03" /> 
+		<offer:PosterRef uriId="irdeto.com/Poster/201300044005-01" />   
+		<offer:PosterRef uriId="irdeto.com/Poster/201300044005-02" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201300044005-03" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201300044005-04" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201300044005-05" />
+	</Asset>
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Movie/201300044002" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300044002-Movie-en_US.mov</content:SourceUrl>
+		<content:ContentFileSize>3907840625</content:ContentFileSize>
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H01M00S</content:Duration>    <!-- MATTHIJS -->
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>en</content:SubtitleLanguage>
+		<content:DubbedLanguage>en</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+	</Asset>
+	<!--
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Preview/201300044003" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>irdeto.com%2FPreview%2F201300044003-Preview-en_US.mp4</content:SourceUrl>
+		<content:ContentFileSize>25284375</content:ContentFileSize>
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H00M30S</content:Duration>    
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+	</Asset>  
+	-->
+										<!--  Episode1 Boxcovers -->
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300044004-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300044004-BoxCover-320-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>320</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300044004-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300044004-BoxCover-480-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>480</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300044004-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300044004-BoxCover-640-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>640</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+											<!--  Episode1 Posters -->
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300044005-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300044005-Poster-144-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>144</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300044005-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300044005-Poster-360-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>360</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300044005-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300044005-Poster-648-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>648</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300044005-04" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300044005-Poster-720-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>720</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300044005-05" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300044005-Poster-1080-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1080</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<!-- Episode 2 -->
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/201300045001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<core:AlternateId identifierSystem="ISAN">1881-66C7-3420-000-7-9F3A-02450-U</core:AlternateId>
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>
+		<core:Provider>HBO</core:Provider>
+		<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Cambodia</title:TitleSortName>   
+			<title:TitleBrief>Cambodia</title:TitleBrief>   
+			<title:TitleMedium>Cambodia</title:TitleMedium>   
+			<title:TitleLong>Cambodia</title:TitleLong>   
+			<title:SummaryShort>Chosen by the National Assembly after his father's abdication, what would the future hold for ex-ballet dancer King Sihamoni?</title:SummaryShort>   
+			<title:SummaryLong>Chosen by the National Assembly after his father's abdication, what would the future hold for ex-ballet dancer King Sihamoni?</title:SummaryLong>   
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgrd, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgrd" firstName="Alexander" lastName="Skarsgrd" sortableName="Skarsgrd,Alexander" />
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+			<title:Director fullName="Corne Van Rooyen" firstName="Corne" lastName="Van Rooyen" sortableName="Corne Van Rooyen" />   
+			<title:Producer fullName="Harald Walker" firstName="Harald" lastName="Walker" sortableName="Harald Walker" />
+			<title:StudioDisplay>Off the Fence</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>	
+			<title:EpisodeName>Cambodia</title:EpisodeName>  
+			<title:EpisodeID>2</title:EpisodeID>			   
+			
+			<!--      <title:Chapter heading="Opening Scene" timeCode="00:00:02:00" />
+		      <title:Chapter heading="They Meet" timeCode="00:15:12:00" />
+		      <title:Chapter heading="The Collision" timeCode="02:03:06:00" />
+		      <title:Chapter heading="She Goes Under" timeCode="02:55:15:00" />
+		      <title:Chapter heading="Final Scene" timeCode="03:02:09:00" />-->
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+		<!--    <title:Advisory>AL</title:Advisory>
+    <title:Advisory>N</title:Advisory>-->
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:01:00</title:DisplayRunTime>   <!-- MATTHIJS -->
+		<title:Year>2010</title:Year>
+		<title:CountryOfOrigin>Cambodia</title:CountryOfOrigin>
+		<title:Genre>Reality</title:Genre>   
+		<title:ShowType>Series</title:ShowType>   
+		<title:IsEncryptionRequired>false</title:IsEncryptionRequired>
+		<!--    <title:BoxOffice>1835000000</title:BoxOffice>-->
+		<!--    <title:ProgrammerCallLetters>IND</title:ProgrammerCallLetters>-->
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/201300045"
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" 
+			endDateTime="2014-12-31T11:59:59Z">   
+		<offer:TitleRef uriId="irdeto.com/Title/201300045001" />   
+		<offer:MovieRef uriId="irdeto.com/Movie/201300045002" />   
+		<!-- no preview/trailer <offer:PreviewRef uriId="irdeto.com/Preview/201300045003" /> -->   
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300045004-01" />  
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300045004-02" /> 
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300045004-03" /> 
+		<offer:PosterRef uriId="irdeto.com/Poster/201300045005-01" />   
+		<offer:PosterRef uriId="irdeto.com/Poster/201300045005-02" />  
+		<offer:PosterRef uriId="irdeto.com/Poster/201300045005-03" />  
+		<offer:PosterRef uriId="irdeto.com/Poster/201300045005-04" />  
+		<offer:PosterRef uriId="irdeto.com/Poster/201300045005-05" />  
+	</Asset>
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Movie/201300045002" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300045002-Movie-en_US.mov</content:SourceUrl>
+		<content:ContentFileSize>3907840625</content:ContentFileSize>
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H01M00S</content:Duration>    <!-- MATTHIJS -->
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>en</content:SubtitleLanguage>
+		<content:DubbedLanguage>en</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+	</Asset>
+	<!--
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Preview/201300045003" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>irdeto.com%2FPreview%2F201300045003-Preview-en_US.mp4</content:SourceUrl>
+		<content:ContentFileSize>25284375</content:ContentFileSize>
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H00M30S</content:Duration>    
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+	</Asset>  
+	-->
+													<!--  Episode2 Boxcovers -->
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300045004-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300045004-BoxCover-320-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>320</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300045004-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300045004-BoxCover-480-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>480</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300045004-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300045004-BoxCover-640-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>640</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+											<!--  Episode2 Posters -->
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300045005-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300045005-Poster-144-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>144</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300045005-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300045005-Poster-360-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>360</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300045005-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300045005-Poster-648-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>648</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300045005-04" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300045005-Poster-720-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>720</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300045005-05" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300045005-Poster-1080-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1080</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<!-- Episode 3 -->
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/201300046001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<core:AlternateId identifierSystem="ISAN">1881-66C7-3420-000-7-9F3A-02450-U</core:AlternateId>
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>
+		<core:Provider>HBO</core:Provider>
+		<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Bahrain</title:TitleSortName>   
+			<title:TitleBrief>Bahrain</title:TitleBrief>   
+			<title:TitleMedium>Bahrain</title:TitleMedium>   
+			<title:TitleLong>Bahrain</title:TitleLong>   
+			<title:SummaryShort>Chosen by the National Assembly after his father's abdication, what would the future hold for ex-ballet dancer King Sihamoni?</title:SummaryShort>   
+			<title:SummaryLong>Chosen by the National Assembly after his father's abdication, what would the future hold for ex-ballet dancer King Sihamoni?</title:SummaryLong>   
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgrd, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgrd" firstName="Alexander" lastName="Skarsgrd" sortableName="Skarsgrd,Alexander" />
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+			<title:Director fullName="Corne Van Rooyen" firstName="Corne" lastName="Van Rooyen" sortableName="Corne Van Rooyen" />   
+			<title:Producer fullName="Harald Walker" firstName="Harald" lastName="Walker" sortableName="Harald Walker" />
+			<title:StudioDisplay>Off the Fence</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>	
+			<title:EpisodeName>Bahrain</title:EpisodeName>  
+			<title:EpisodeID>3</title:EpisodeID>			   
+			
+			<!--      <title:Chapter heading="Opening Scene" timeCode="00:00:02:00" />
+		      <title:Chapter heading="They Meet" timeCode="00:15:12:00" />
+		      <title:Chapter heading="The Collision" timeCode="02:03:06:00" />
+		      <title:Chapter heading="She Goes Under" timeCode="02:55:15:00" />
+		      <title:Chapter heading="Final Scene" timeCode="03:02:09:00" />-->
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+		<!--    <title:Advisory>AL</title:Advisory>
+    <title:Advisory>N</title:Advisory>-->
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:01:00</title:DisplayRunTime>   <!-- MATTHIJS -->
+		<title:Year>2010</title:Year>
+		<title:CountryOfOrigin>Bahrain</title:CountryOfOrigin>
+		<title:Genre>Reality</title:Genre>   
+		<title:ShowType>Series</title:ShowType>   
+		<title:IsEncryptionRequired>false</title:IsEncryptionRequired>
+		<!--    <title:BoxOffice>1835000000</title:BoxOffice>-->
+		<!--    <title:ProgrammerCallLetters>IND</title:ProgrammerCallLetters>-->
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/201300046"
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" 
+			endDateTime="2014-12-31T11:59:59Z">   
+		<offer:TitleRef uriId="irdeto.com/Title/201300046001" />   
+		<offer:MovieRef uriId="irdeto.com/Movie/201300046002" />   
+		<!-- no preview/trailer <offer:PreviewRef uriId="irdeto.com/Preview/201300046003" /> -->   
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300046004-01" />
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300046004-02" />  
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300046004-03" />  
+		<offer:PosterRef uriId="irdeto.com/Poster/201300046005-01" />   
+		<offer:PosterRef uriId="irdeto.com/Poster/201300046005-02" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201300046005-03" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201300046005-04" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201300046005-05" />
+	</Asset>
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Movie/201300046002" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300046002-Movie-en_US.mov</content:SourceUrl>
+		<content:ContentFileSize>3907840625</content:ContentFileSize>
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H01M00S</content:Duration>    <!-- MATTHIJS -->
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>en</content:SubtitleLanguage>
+		<content:DubbedLanguage>en</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+	</Asset>
+	<!--
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Preview/201300046003" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>irdeto.com%2FPreview%2F201300046003-Preview-en_US.mp4</content:SourceUrl>
+		<content:ContentFileSize>25284375</content:ContentFileSize>
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H00M30S</content:Duration>    
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+	</Asset>  -->
+												<!--  Episode3 Boxcovers -->
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300046004-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300046004-BoxCover-320-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>320</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300046004-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300046004-BoxCover-480-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>480</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300046004-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    
+		<content:SourceUrl>201300046004-BoxCover-640-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>640</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+										<!--  Episode3 Posters -->
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300046005-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300046005-Poster-144-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>144</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300046005-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300046005-Poster-360-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>360</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300046005-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300046005-Poster-648-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>648</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300046005-04" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300046005-Poster-720-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>720</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300046005-05" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>201300046005-Poster-1080-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1080</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+<!-- Brand Section-->
+<!--Here follow Irdeto proprietary extensions to mark up the Brand and Series-->
+<!--	<Ext>-->
+	<Asset xsi:type="irdeto:BrandType"  uriId="irdeto.com/Brand/S201305">   
+			<!--Link to this Brand's title-->
+			<irdeto:TitleRef uriId="irdeto.com/Title/S201305_01" />   
+			<!--Link to Series 'Season 5 2012'-->
+			<irdeto:SeriesRef  uriId="irdeto.com/Series/S20130501" />   
+			<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/S201305_02-01" />
+			<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/S201305_02-02" />
+			<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/S201305_02-03" />
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S201305_03-01" />
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S201305_03-02" />
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S201305_03-03" />
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S201305_03-04" />
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S201305_03-05" />
+		</Asset>
+							<!--  Brand boxcovers -->
+		<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/S201305_02-01" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+			<content:SourceUrl>S201305_02-BoxCover-320-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>320</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+		<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/S201305_02-02" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+			<content:SourceUrl>S201305_02-BoxCover-480-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>480</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+		<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/S201305_02-03" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+			<content:SourceUrl>S201305_02-BoxCover-640-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>640</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+										<!--  Brand posters -->
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S201305_03-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>S201305_03-Poster-144-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>144</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S201305_03-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>S201305_03-Poster-360-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>360</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S201305_03-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>S201305_03-Poster-648-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>648</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S201305_03-04" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>S201305_03-Poster-720-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>720</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S201305_03-05" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+		<content:SourceUrl>S201305_03-Poster-1080-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1080</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+<!-- Series Section-->
+	<Asset xsi:type="irdeto:SeriesType" uriId="irdeto.com/Series/S20130501">   
+			<!--Link to this Series' title-->
+			<irdeto:TitleRef uriId="irdeto.com/Title/S20130501_01" />   
+			<!--Link to the program present in this file. Typically, there would be more episodes.-->
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/201300044" />   
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/201300045" />   
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/201300046" />   	
+			<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/S20130501_02-01" />   
+			<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/S20130501_02-02" />   
+			<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/S20130501_02-03" />   
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S20130501_03-01" />
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S20130501_03-02" />
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S20130501_03-03" />
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S20130501_03-04" />
+			<irdeto:PosterRef uriId="irdeto.com/Poster/S20130501_03-05" />
+		</Asset>
+									<!--  Series boxcovers -->
+		<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/S20130501_02-01" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+			<content:SourceUrl>S20130501_02-BoxCover-320-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>320</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+		<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/S20130501_02-02" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+			<content:SourceUrl>S20130501_02-BoxCover-480-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>480</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+		<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/S20130501_02-03" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+			<content:SourceUrl>S20130501_02-BoxCover-640-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>640</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+										<!--  Series Posters -->
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S20130501_03-01" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">
+			<content:SourceUrl>S20130501_03-Poster-144-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>144</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S20130501_03-02" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">
+			<content:SourceUrl>S20130501_03-Poster-360-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>360</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S20130501_03-03" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">
+			<content:SourceUrl>S20130501_03-Poster-648-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>648</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S20130501_03-04" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">
+			<content:SourceUrl>S20130501_03-Poster-720-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>720</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>
+		<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/S20130501_03-05" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">
+			<content:SourceUrl>S20130501_03-Poster-1080-en_US.png</content:SourceUrl>		
+			<content:ContentFileSize>15235</content:ContentFileSize>		
+			<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+			<content:PropagationPriority>1</content:PropagationPriority>		
+			<content:X_Resolution>1080</content:X_Resolution>		
+			<content:Y_Resolution>240</content:Y_Resolution>		
+		</Asset>	
+	<!-- Brand Title- Asias's Monarchies -->
+		<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/S201305_01" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">   
+			<core:Ext>
+				<App_Data App="MOD" Name="Producer" Value="Alan Ball" />
+			</core:Ext>
+			<title:LocalizableTitle xml:lang="en-US">
+				<title:TitleSortName>Asia's Monarchies</title:TitleSortName>   
+				<title:TitleBrief>Asia's Monarchies</title:TitleBrief>   
+				<title:TitleMedium>Asia's Monarchies</title:TitleMedium>   
+				<title:TitleLong>Asia's Monarchies</title:TitleLong>   
+				<title:SummaryShort>Asia's Monarchies are all unique, but there is one thing they all share in common - all are at a fascinating point in their various histories.</title:SummaryShort>   
+				<title:SummaryLong>Asia's iconic monarchies, often condemned for stifling personal freedom and hampering social development by outsiders, stand as bastions of the nation's heart and soul for their people. Visiting Japan, Bhutan and Camboia, this series journeys to the heart of these beautiful lands and the monarchies that still remain.</title:SummaryLong>   
+				<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgrd, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+				<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+				<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+				<title:Actor fullName="Alexander Skarsgrd" firstName="Alexander" lastName="Skarsgrd" sortableName="Skarsgrd,Alexander" />
+				<title:Producer fullName="Harald Walker" firstName="Harald" lastName="Walker" sortableName="Harald Walker" />
+				<title:StudioDisplay>Off the Fence</title:StudioDisplay>
+				<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+				<title:SongTitle>Bad Things</title:SongTitle>
+			</title:LocalizableTitle>
+			<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+			<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+			<title:DisplayRunTime>16:15:00</title:DisplayRunTime>
+			<title:Year>2010</title:Year>   
+			<title:CountryOfOrigin>Japan</title:CountryOfOrigin>   
+			<title:Genre>Reality</title:Genre>   
+			<title:ShowType>Series</title:ShowType>   
+		</Asset>
+	<!-- Series Title- Asias's Monarchies Series 01-->
+		<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/S20130501_01" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2014-01-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">
+			<core:Ext>
+				<App_Data App="MOD" Name="Producer" Value="Alan Ball" />
+			</core:Ext>
+			<title:LocalizableTitle xml:lang="en-US">
+				<title:TitleSortName>Asia's Monarchies</title:TitleSortName>   
+				<title:TitleBrief>Asia's Monarchies</title:TitleBrief>   
+				<title:TitleMedium>Asia's Monarchies</title:TitleMedium>   
+				<title:TitleLong>Asia's Monarchies</title:TitleLong>   
+				<title:SummaryShort>Asia's Monarchies are all unique, but there is one thing they all share in common - all are at a fascinating point in their various histories.
+ </title:SummaryShort>   
+				<title:SummaryLong>Asia's iconic monarchies, often condemned for stifling personal freedom and hampering social development by outsiders, stand as bastions of the nation's heart and soul for their people. Visiting Japan, Bhutan and Camboia, this series journeys to the heart of these beautiful lands and the monarchies that still remain.</title:SummaryLong>   
+			</title:LocalizableTitle>
+			<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+			<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+			<title:DisplayRunTime>16:15:00</title:DisplayRunTime>
+			<title:Year>2010</title:Year>   
+			<title:CountryOfOrigin>Japan</title:CountryOfOrigin>   
+			<title:Genre>Reality</title:Genre>   
+			<title:ShowType>Series</title:ShowType>   
+		</Asset>
+<!-- Brand/Series/Programs section ends -->
+</ADI3>

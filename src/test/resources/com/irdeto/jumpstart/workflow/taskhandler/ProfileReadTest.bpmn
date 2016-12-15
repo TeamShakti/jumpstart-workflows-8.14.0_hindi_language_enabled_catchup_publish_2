@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_termWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.TermWrapper" />
+  <itemDefinition id="_profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+
+  <itemDefinition id="_2-termWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.TermWrapper" />
+  <itemDefinition id="_2-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+
+  <itemDefinition id="_3-termWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.TermWrapper" />
+  <itemDefinition id="_3-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.taskhandler.ProfileReadTest" name="Profile Read Test" tns:packageName="com.irdeto.jumpstart.workflow.taskhandler" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.publish.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="termWrapper" itemSubjectRef="_termWrapperItem"/>
+    <property id="profile" itemSubjectRef="_profileItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="Profile Read" tns:taskName="ProfileRead" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>Term term = new Term();
+term.setId("1");
+TermWrapper termWrapperLocal = new TermWrapper();
+termWrapperLocal.setTerm(term);
+kcontext.setVariable("termWrapper", termWrapperLocal);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_2_TermWrapperInput" name="TermWrapper" />
+        <dataInput id="_2_DeviceProfileEnabledOnlyInput" name="DeviceProfileEnabledOnly" />
+        <dataInput id="_2_ContentTypeInput" name="ContentType" />
+        <dataOutput id="_2_ProfileOutput" name="Profile" />
+        <inputSet>
+          <dataInputRefs>_2_TermWrapperInput</dataInputRefs>
+          <dataInputRefs>_2_DeviceProfileEnabledOnlyInput</dataInputRefs>
+          <dataInputRefs>_2_ContentTypeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_2_ProfileOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>termWrapper</sourceRef>
+        <targetRef>_2_TermWrapperInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_DeviceProfileEnabledOnlyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_2_DeviceProfileEnabledOnlyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">movie</from>
+          <to xsi:type="tFormalExpression">_2_ContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_2_ProfileOutput</sourceRef>
+        <targetRef>profile</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_3" name="Profile Read" tns:taskName="ProfileRead" >
+      <ioSpecification>
+        <dataInput id="_3_TermWrapperInput" name="TermWrapper" />
+        <dataInput id="_3_DeviceProfileEnabledOnlyInput" name="DeviceProfileEnabledOnly" />
+        <dataInput id="_3_ContentTypeInput" name="ContentType" />
+        <dataOutput id="_3_ProfileOutput" name="Profile" />
+        <inputSet>
+          <dataInputRefs>_3_TermWrapperInput</dataInputRefs>
+          <dataInputRefs>_3_DeviceProfileEnabledOnlyInput</dataInputRefs>
+          <dataInputRefs>_3_ContentTypeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_3_ProfileOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>termWrapper</sourceRef>
+        <targetRef>_3_TermWrapperInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_DeviceProfileEnabledOnlyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_3_DeviceProfileEnabledOnlyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_ContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">movie</from>
+          <to xsi:type="tFormalExpression">_3_ContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_ProfileOutput</sourceRef>
+        <targetRef>profile</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_4" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="_1-_2" sourceRef="_1" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+    <sequenceFlow id="_3-_4" sourceRef="_3" targetRef="_4" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.taskhandler.ProfileReadTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="108" y="36" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="48" y="108" width="169" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="48" y="180" width="169" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="108" y="252" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_1-_2" >
+        <di:waypoint x="132" y="60" />
+        <di:waypoint x="132" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="132" y="132" />
+        <di:waypoint x="132" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_4" >
+        <di:waypoint x="132" y="204" />
+        <di:waypoint x="132" y="276" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

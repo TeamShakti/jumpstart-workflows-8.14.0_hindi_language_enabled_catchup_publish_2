@@ -1,0 +1,1719 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_9-sourceItem" structureRef="String" />
+  <itemDefinition id="_42-sourceItem" structureRef="String" />
+  <itemDefinition id="_93-entityIdItem" structureRef="String" />
+  <itemDefinition id="_9-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_29-filePathItem" structureRef="String" />
+  <itemDefinition id="_93-targetItem" structureRef="String" />
+  <itemDefinition id="_24-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_40-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_87-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_6-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-filePathItem" structureRef="String" />
+  <itemDefinition id="_24-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_94-fileNameItem" structureRef="String" />
+  <itemDefinition id="_93-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_82-filePathItem" structureRef="String" />
+  <itemDefinition id="_86-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_86-filePathItem" structureRef="String" />
+  <itemDefinition id="_87-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_49-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_40-sourceItem" structureRef="String" />
+  <itemDefinition id="_82-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_24-filePathItem" structureRef="String" />
+  <itemDefinition id="_90-targetItem" structureRef="String" />
+  <itemDefinition id="_53-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_9-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_87-filePathItem" structureRef="String" />
+  <itemDefinition id="_9-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_6-fileNameItem" structureRef="String" />
+  <itemDefinition id="_88-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_9-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_53-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_40-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_9-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_4-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_90-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_24-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_42-entityIdItem" structureRef="String" />
+  <itemDefinition id="_82-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_49-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_88-targetItem" structureRef="String" />
+  <itemDefinition id="_94-podServerItem" structureRef="String" />
+  <itemDefinition id="_93-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_9-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_42-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_86-sourceItem" structureRef="String" />
+  <itemDefinition id="_86-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_42-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_89-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_42-fileNameItem" structureRef="String" />
+  <itemDefinition id="_94-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_6-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_24-targetItem" structureRef="String" />
+  <itemDefinition id="_10-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_42-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_29-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_42-targetItem" structureRef="String" />
+  <itemDefinition id="_40-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_90-filePathItem" structureRef="String" />
+  <itemDefinition id="_mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_40-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_82-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_90-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_10-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_4-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_29-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-podServerItem" structureRef="String" />
+  <itemDefinition id="_90-entityIdItem" structureRef="String" />
+  <itemDefinition id="_89-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_86-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_88-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_29-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_86-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_93-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_10-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_87-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_89-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_29-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_9-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_86-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_82-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_82-fileNameItem" structureRef="String" />
+  <itemDefinition id="_40-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_4-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_88-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_29-targetItem" structureRef="String" />
+  <itemDefinition id="_49-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_49-podServerItem" structureRef="String" />
+  <itemDefinition id="_4-podServerItem" structureRef="String" />
+  <itemDefinition id="_53-fileNameItem" structureRef="String" />
+  <itemDefinition id="_4-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_4-targetItem" structureRef="String" />
+  <itemDefinition id="_29-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_10-podServerItem" structureRef="String" />
+  <itemDefinition id="_53-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_89-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_93-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_53-filePathItem" structureRef="String" />
+  <itemDefinition id="_90-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_fileNameItem" structureRef="String" />
+  <itemDefinition id="_87-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_87-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_87-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_94-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_10-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_49-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_40-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_89-fileNameItem" structureRef="String" />
+  <itemDefinition id="_93-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_82-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_53-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_10-targetItem" structureRef="String" />
+  <itemDefinition id="_53-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_93-fileNameItem" structureRef="String" />
+  <itemDefinition id="_40-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_88-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_sourceItem" structureRef="String" />
+  <itemDefinition id="_89-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_90-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_49-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_88-sourceItem" structureRef="String" />
+  <itemDefinition id="_6-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_87-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_24-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_94-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_90-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_82-targetItem" structureRef="String" />
+  <itemDefinition id="_49-filePathItem" structureRef="String" />
+  <itemDefinition id="_9-filePathItem" structureRef="String" />
+  <itemDefinition id="_24-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_94-entityIdItem" structureRef="String" />
+  <itemDefinition id="_6-entityIdItem" structureRef="String" />
+  <itemDefinition id="_82-entityIdItem" structureRef="String" />
+  <itemDefinition id="_82-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_93-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_89-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_10-filePathItem" structureRef="String" />
+  <itemDefinition id="_10-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_90-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_49-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_90-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_podServerItem" structureRef="String" />
+  <itemDefinition id="_4-fileNameItem" structureRef="String" />
+  <itemDefinition id="_49-entityIdItem" structureRef="String" />
+  <itemDefinition id="_42-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_49-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_53-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_87-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_87-sourceItem" structureRef="String" />
+  <itemDefinition id="_86-podServerItem" structureRef="String" />
+  <itemDefinition id="_53-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_90-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_88-entityIdItem" structureRef="String" />
+  <itemDefinition id="_9-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_94-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_9-podServerItem" structureRef="String" />
+  <itemDefinition id="_29-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_90-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_29-fileNameItem" structureRef="String" />
+  <itemDefinition id="_targetItem" structureRef="String" />
+  <itemDefinition id="_86-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_53-targetItem" structureRef="String" />
+  <itemDefinition id="_29-sourceItem" structureRef="String" />
+  <itemDefinition id="_93-podServerItem" structureRef="String" />
+  <itemDefinition id="_40-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_88-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_88-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_29-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_4-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_86-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-podServerItem" structureRef="String" />
+  <itemDefinition id="_10-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_49-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_88-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_40-podServerItem" structureRef="String" />
+  <itemDefinition id="_53-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_entityTypeItem" structureRef="String" />
+  <itemDefinition id="_94-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_6-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_89-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_42-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_94-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_86-entityIdItem" structureRef="String" />
+  <itemDefinition id="_89-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_6-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_6-sourceItem" structureRef="String" />
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_86-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_88-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_29-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_94-sourceItem" structureRef="String" />
+  <itemDefinition id="_6-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_87-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_29-entityIdItem" structureRef="String" />
+  <itemDefinition id="_94-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_24-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_4-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_89-entityIdItem" structureRef="String" />
+  <itemDefinition id="_4-sourceItem" structureRef="String" />
+  <itemDefinition id="_49-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_29-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_24-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_53-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_42-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_94-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_94-targetItem" structureRef="String" />
+  <itemDefinition id="_90-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_89-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_88-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_10-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_88-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_88-podServerItem" structureRef="String" />
+  <itemDefinition id="_29-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_88-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_40-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_42-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_filePathItem" structureRef="String" />
+  <itemDefinition id="_89-podServerItem" structureRef="String" />
+  <itemDefinition id="_29-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_53-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_86-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_40-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_86-fileNameItem" structureRef="String" />
+  <itemDefinition id="_88-filePathItem" structureRef="String" />
+  <itemDefinition id="_6-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_90-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_87-entityIdItem" structureRef="String" />
+  <itemDefinition id="_53-podServerItem" structureRef="String" />
+  <itemDefinition id="_40-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_89-filePathItem" structureRef="String" />
+  <itemDefinition id="_87-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_40-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_6-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_9-targetItem" structureRef="String" />
+  <itemDefinition id="_10-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_24-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_86-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_82-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_24-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_89-targetItem" structureRef="String" />
+  <itemDefinition id="_4-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_82-sourceItem" structureRef="String" />
+  <itemDefinition id="_24-entityIdItem" structureRef="String" />
+  <itemDefinition id="_94-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_90-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_4-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_53-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_42-filePathItem" structureRef="String" />
+  <itemDefinition id="_9-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_93-filePathItem" structureRef="String" />
+  <itemDefinition id="_90-podServerItem" structureRef="String" />
+  <itemDefinition id="_6-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_9-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_40-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_4-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_40-filePathItem" structureRef="String" />
+  <itemDefinition id="_86-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_9-entityIdItem" structureRef="String" />
+  <itemDefinition id="_87-podServerItem" structureRef="String" />
+  <itemDefinition id="_87-targetItem" structureRef="String" />
+  <itemDefinition id="_42-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_88-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_4-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_9-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_93-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-fileNameItem" structureRef="String" />
+  <itemDefinition id="_49-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_40-entityIdItem" structureRef="String" />
+  <itemDefinition id="_29-podServerItem" structureRef="String" />
+  <itemDefinition id="_10-entityIdItem" structureRef="String" />
+  <itemDefinition id="_6-contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_4-entityIdItem" structureRef="String" />
+  <itemDefinition id="_82-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_49-targetItem" structureRef="String" />
+  <itemDefinition id="_40-fileNameItem" structureRef="String" />
+  <itemDefinition id="_10-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_82-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_94-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_93-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_40-targetItem" structureRef="String" />
+  <itemDefinition id="_24-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_49-fileNameItem" structureRef="String" />
+  <itemDefinition id="_94-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_24-podServerItem" structureRef="String" />
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_53-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_10-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_93-sourceItem" structureRef="String" />
+  <itemDefinition id="_4-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_87-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_24-sourceItem" structureRef="String" />
+  <itemDefinition id="_90-fileNameItem" structureRef="String" />
+  <itemDefinition id="_86-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_93-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_10-sourceItem" structureRef="String" />
+  <itemDefinition id="_53-entityIdItem" structureRef="String" />
+  <itemDefinition id="_82-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_4-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_94-filePathItem" structureRef="String" />
+  <itemDefinition id="_42-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_87-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_6-targetItem" structureRef="String" />
+  <itemDefinition id="_4-filePathItem" structureRef="String" />
+  <itemDefinition id="_86-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_89-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_9-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_24-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_24-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_94-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_82-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_42-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_10-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_90-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_10-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_89-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_89-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_88-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_10-fileNameItem" structureRef="String" />
+  <itemDefinition id="_42-podServerItem" structureRef="String" />
+  <itemDefinition id="_eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_49-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_4-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_93-handleEventItem" structureRef="com.irdeto.domain.qts.response.fileinfo.QTSHandleEventFileInfo" />
+  <itemDefinition id="_49-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_87-fileNameItem" structureRef="String" />
+  <itemDefinition id="_93-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_49-sourceItem" structureRef="String" />
+  <itemDefinition id="_94-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_6-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_42-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_89-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_42-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_86-targetItem" structureRef="String" />
+  <itemDefinition id="_89-sourceItem" structureRef="String" />
+  <itemDefinition id="_6-mmFilterListItem" structureRef="java.util.List" />
+  <itemDefinition id="_88-fileNameItem" structureRef="String" />
+  <itemDefinition id="_9-fileNameItem" structureRef="String" />
+  <itemDefinition id="_9-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_42-ingestMediaDataMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_90-sourceItem" structureRef="String" />
+  <itemDefinition id="_53-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_contentItem" structureRef="cm.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_29-mdIdentifierItem" structureRef="String" />
+  <itemDefinition id="_82-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_53-sourceItem" structureRef="String" />
+  <itemDefinition id="_29-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_10-sourceVersionItem" structureRef="Integer" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.ingest.MediaIngest" name="Media Ingest" tns:packageName="com.irdeto.jumpstart.workflow.ingest" >
+
+    <extensionElements>
+     <tns:import name="java.util.ArrayList" />
+     <tns:import name="com.irdeto.jumpstart.workflow.ingest.*" />
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="org.joda.time.DateTime" />
+     <tns:import name="org.jdom2.Document" />
+     <tns:import name="java.util.Map" />
+     <tns:import name="java.util.List" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.domain.operation.MM8Response" />
+     <tns:import name="com.irdeto.manager.lock.LockManager" />
+     <tns:import name="com.irdeto.helper.xmlmodel.JDOMDocumentHelper" />
+     <tns:import name="java.util.HashMap" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="mmFilterList" itemSubjectRef="_mmFilterListItem"/>
+    <property id="mm8Response" itemSubjectRef="_mm8ResponseItem"/>
+    <property id="content" itemSubjectRef="_contentItem"/>
+    <property id="config" itemSubjectRef="_configItem"/>
+    <property id="entityType" itemSubjectRef="_entityTypeItem"/>
+    <property id="podServer" itemSubjectRef="_podServerItem"/>
+    <property id="fileName" itemSubjectRef="_fileNameItem"/>
+    <property id="filePath" itemSubjectRef="_filePathItem"/>
+    <property id="ingestMediaDataMap" itemSubjectRef="_ingestMediaDataMapItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="handleEvent" itemSubjectRef="_handleEventItem"/>
+    <property id="eternalWorkflowDecorator" itemSubjectRef="_eternalWorkflowDecoratorItem"/>
+    <property id="mdIdentifier" itemSubjectRef="_mdIdentifierItem"/>
+    <property id="source" itemSubjectRef="_sourceItem"/>
+    <property id="target" itemSubjectRef="_targetItem"/>
+    <property id="sourceVersion" itemSubjectRef="_sourceVersionItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="entity" itemSubjectRef="_entityItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <scriptTask id="_2" name="Prepare Filter for Asset" scriptFormat="http://www.java.com/java" >
+      <script>MediaIngestHelper.prepareFilterData(kcontext);</script>
+    </scriptTask>
+    <exclusiveGateway id="_3" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_4" name="Update Content in MM" tns:taskName="MediaManager8UpdateTask" >
+      <ioSpecification>
+        <dataInput id="_4_DomainObjectInput" name="DomainObject" />
+        <dataInput id="_4_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_4_ReleaseLockInput" name="ReleaseLock" />
+        <dataInput id="_4_EntityTypeInput" name="EntityType" />
+        <dataInput id="_4_EntityIdInput" name="EntityId" />
+        <inputSet>
+          <dataInputRefs>_4_DomainObjectInput</dataInputRefs>
+          <dataInputRefs>_4_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_4_ReleaseLockInput</dataInputRefs>
+          <dataInputRefs>_4_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_4_EntityIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>content</sourceRef>
+        <targetRef>_4_DomainObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_4_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_ReleaseLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_4_ReleaseLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_4_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_4_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_6" name="Read Content if Exist" tns:taskName="MediaManager8FilteredReadTask" >
+      <ioSpecification>
+        <dataInput id="_6_QueryFilterParameterInput" name="QueryFilterParameter" />
+        <dataInput id="_6_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_6_AttainLockInput" name="AttainLock" />
+        <dataInput id="_6_EntityTypeInput" name="EntityType" />
+        <dataOutput id="_6_MediaManager8ResponseListOutput" name="MediaManager8ResponseList" />
+        <inputSet>
+          <dataInputRefs>_6_QueryFilterParameterInput</dataInputRefs>
+          <dataInputRefs>_6_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_6_AttainLockInput</dataInputRefs>
+          <dataInputRefs>_6_EntityTypeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_6_MediaManager8ResponseListOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>mmFilterList</sourceRef>
+        <targetRef>_6_QueryFilterParameterInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_6_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_6_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_6_AttainLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_6_AttainLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_6_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_6_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_6_MediaManager8ResponseListOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_9" name="Load Configuration" tns:taskName="Configuration" >
+      <ioSpecification>
+        <dataOutput id="_9_PropertyMapOutput" name="PropertyMap" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_9_PropertyMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_9_PropertyMapOutput</sourceRef>
+        <targetRef>config</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_10" name="Create Content in MM" tns:taskName="MediaManager8CreateTask" >
+      <ioSpecification>
+        <dataInput id="_10_DomainObjectInput" name="DomainObject" />
+        <dataInput id="_10_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_10_EntityTypeInput" name="EntityType" />
+        <dataOutput id="_10_MediaManager8CreateResponseOutput" name="MediaManager8CreateResponse" />
+        <inputSet>
+          <dataInputRefs>_10_DomainObjectInput</dataInputRefs>
+          <dataInputRefs>_10_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_10_EntityTypeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_10_MediaManager8CreateResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>content</sourceRef>
+        <targetRef>_10_DomainObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_10_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_10_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_10_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_10_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_10_MediaManager8CreateResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_14" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <scriptTask id="_85" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Media Ingest workflow error: {}", errorMap.get("ExitMessage"));
+BeanUtil.getBean(LockManager.class).releaseLock("content-ingest-"+entityType+"-"+entityId);</script>
+    </scriptTask>
+    <scriptTask id="_17" name="Setup Content to Create in MM" scriptFormat="http://www.java.com/java" >
+      <script>MediaIngestHelper.createEntity(kcontext);
+</script>
+    </scriptTask>
+    <exclusiveGateway id="_84" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <endEvent id="_16" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <intermediateCatchEvent id="_19" name="Signal" >
+      <dataOutput id="_19_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_19_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_19_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <task id="_87" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_87_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_87_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_87_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_87_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <scriptTask id="_18" name="Setup Entity to Update in MM" scriptFormat="http://www.java.com/java" >
+      <script>MediaIngestHelper.setupAssetUpdateForMM(kcontext);</script>
+    </scriptTask>
+    <endEvent id="_21" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_86" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_86_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_86_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_86_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_86_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <scriptTask id="_23" name="Handle Activation" scriptFormat="http://www.java.com/java" >
+      <script>MediaIngestHelper.handleActivation(kcontext);</script>
+    </scriptTask>
+    <exclusiveGateway id="_83" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_93" name="Hybrid Delete" tns:taskName="HybridDelete" >
+      <ioSpecification>
+        <dataInput id="_93_SourceInput" name="Source" />
+        <dataInput id="_93_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_93_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_93_EntityTypeInput" name="EntityType" />
+        <dataInput id="_93_EntityIdInput" name="EntityId" />
+        <dataInput id="_93_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_93_SourceInput</dataInputRefs>
+          <dataInputRefs>_93_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_93_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_93_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_93_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_93_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_93_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{source}</from>
+          <to xsi:type="tFormalExpression">_93_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_93_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">asset</from>
+          <to xsi:type="tFormalExpression">_93_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_93_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_93_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_93_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_93_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_93_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_93_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_93_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_93_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_82" name="Update Content Approved" tns:taskName="MediaManager8UpdateTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>((BaseMetadataWithContent)entity).setContentApproved(false);
+//MediaIngest - setting LastModifiedDate to 'now'.
+((BaseMetadataWithContent)entity).setLastModifiedDateTime(DateTime.now());</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_82_DomainObjectInput" name="DomainObject" />
+        <dataInput id="_82_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_82_EntityTypeInput" name="EntityType" />
+        <dataInput id="_82_EntityIdInput" name="EntityId" />
+        <inputSet>
+          <dataInputRefs>_82_DomainObjectInput</dataInputRefs>
+          <dataInputRefs>_82_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_82_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_82_EntityIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>entity</sourceRef>
+        <targetRef>_82_DomainObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_82_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_82_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_82_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entity.getType()}</from>
+          <to xsi:type="tFormalExpression">_82_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_82_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entity.getId()}</from>
+          <to xsi:type="tFormalExpression">_82_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_24" name="Retrieve Video Info from File" tns:taskName="QTSFileInfo" >
+      <ioSpecification>
+        <dataInput id="_24_SourceInput" name="Source" />
+        <dataInput id="_24_HashInput" name="Hash" />
+        <dataInput id="_24_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_24_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_24_EntityTypeInput" name="EntityType" />
+        <dataInput id="_24_FileInfoExInput" name="FileInfoEx" />
+        <dataInput id="_24_EntityIDInput" name="EntityID" />
+        <dataInput id="_24_ViewNameInput" name="ViewName" />
+        <dataOutput id="_24_HandleEventOutput" name="HandleEvent" />
+        <inputSet>
+          <dataInputRefs>_24_SourceInput</dataInputRefs>
+          <dataInputRefs>_24_HashInput</dataInputRefs>
+          <dataInputRefs>_24_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_24_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_24_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_24_FileInfoExInput</dataInputRefs>
+          <dataInputRefs>_24_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_24_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_24_HandleEventOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_24_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">\\#{podServer}#{filePath}#{fileName}</from>
+          <to xsi:type="tFormalExpression">_24_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_HashInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_24_HashInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{fileName}</from>
+          <to xsi:type="tFormalExpression">_24_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_24_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_24_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_FileInfoExInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_24_FileInfoExInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">0</from>
+          <to xsi:type="tFormalExpression">_24_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_24_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_24_HandleEventOutput</sourceRef>
+        <targetRef>handleEvent</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_92" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <task id="_94" name="Retrieve Subtitle from File" tns:taskName="QTSFileInfo" >
+      <ioSpecification>
+        <dataInput id="_94_SourceInput" name="Source" />
+        <dataInput id="_94_HashInput" name="Hash" />
+        <dataInput id="_94_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_94_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_94_EntityTypeInput" name="EntityType" />
+        <dataInput id="_94_FileInfoExInput" name="FileInfoEx" />
+        <dataInput id="_94_EntityIDInput" name="EntityID" />
+        <dataInput id="_94_ViewNameInput" name="ViewName" />
+        <dataOutput id="_94_HandleEventOutput" name="HandleEvent" />
+        <inputSet>
+          <dataInputRefs>_94_SourceInput</dataInputRefs>
+          <dataInputRefs>_94_HashInput</dataInputRefs>
+          <dataInputRefs>_94_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_94_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_94_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_94_FileInfoExInput</dataInputRefs>
+          <dataInputRefs>_94_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_94_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_94_HandleEventOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_94_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">\\#{podServer}#{filePath}#{fileName}</from>
+          <to xsi:type="tFormalExpression">_94_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_94_HashInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_94_HashInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_94_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{fileName}</from>
+          <to xsi:type="tFormalExpression">_94_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_94_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_94_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_94_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_94_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_94_FileInfoExInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_94_FileInfoExInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_94_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">0</from>
+          <to xsi:type="tFormalExpression">_94_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_94_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_94_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_94_HandleEventOutput</sourceRef>
+        <targetRef>handleEvent</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <parallelGateway id="_95" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <task id="_29" name="Read Content in MM" tns:taskName="MediaManager8ReadTask" >
+      <ioSpecification>
+        <dataInput id="_29_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_29_AttainLockInput" name="AttainLock" />
+        <dataInput id="_29_EntityTypeInput" name="EntityType" />
+        <dataInput id="_29_EntityIDInput" name="EntityID" />
+        <dataOutput id="_29_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_29_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_29_AttainLockInput</dataInputRefs>
+          <dataInputRefs>_29_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_29_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_29_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_29_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_29_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_29_AttainLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_29_AttainLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_29_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_29_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_29_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_29_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_29_ResponseObjectOutput</sourceRef>
+        <targetRef>content</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_89" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+    </task>
+    <exclusiveGateway id="_91" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_88" name="Commit Point" tns:taskName="CommitPoint" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>BeanUtil.getBean(LockManager.class).releaseLock("content-ingest-" + entityType + "-" + entityId);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_88_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_88_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_88_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_88_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_42" name="Trigger Containing Entity" tns:taskName="ForkProcess" >
+      <ioSpecification>
+        <dataInput id="_42_eternalWorkflowDecoratorInput" name="eternalWorkflowDecorator" />
+        <dataInput id="_42_ValueInput" name="Value" />
+        <dataInput id="_42_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_42_VariableInput" name="Variable" />
+        <dataInput id="_42_EventTypeInput" name="EventType" />
+        <dataInput id="_42_ProcessIDInput" name="ProcessID" />
+        <dataInput id="_42_SingletonInput" name="Singleton" />
+        <inputSet>
+          <dataInputRefs>_42_eternalWorkflowDecoratorInput</dataInputRefs>
+          <dataInputRefs>_42_ValueInput</dataInputRefs>
+          <dataInputRefs>_42_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_42_VariableInput</dataInputRefs>
+          <dataInputRefs>_42_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_42_ProcessIDInput</dataInputRefs>
+          <dataInputRefs>_42_SingletonInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>eternalWorkflowDecorator</sourceRef>
+        <targetRef>_42_eternalWorkflowDecoratorInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_42_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{eternalWorkflowDecorator.getUriId()}</from>
+          <to xsi:type="tFormalExpression">_42_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_42_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_42_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_42_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">uriId</from>
+          <to xsi:type="tFormalExpression">_42_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_42_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">DATA_UPDATE</from>
+          <to xsi:type="tFormalExpression">_42_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_42_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{eternalWorkflowDecorator.getProcessId()}</from>
+          <to xsi:type="tFormalExpression">_42_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_42_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_42_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_90" name="Attain Lock" tns:taskName="AttainLock" >
+      <ioSpecification>
+        <dataInput id="_90_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_90_LockIDInput" name="LockID" />
+        <inputSet>
+          <dataInputRefs>_90_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_90_LockIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_90_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_90_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_90_LockIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">content-ingest-#{entityType}-#{entityId}</from>
+          <to xsi:type="tFormalExpression">_90_LockIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_51" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_49" name="Retrieve Image Info from File" tns:taskName="QTSImageInfo" >
+      <ioSpecification>
+        <dataInput id="_49_SourceInput" name="Source" />
+        <dataInput id="_49_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_49_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_49_EntityTypeInput" name="EntityType" />
+        <dataInput id="_49_EntityIDInput" name="EntityID" />
+        <dataInput id="_49_ViewNameInput" name="ViewName" />
+        <dataOutput id="_49_HandleEventOutput" name="HandleEvent" />
+        <inputSet>
+          <dataInputRefs>_49_SourceInput</dataInputRefs>
+          <dataInputRefs>_49_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_49_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_49_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_49_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_49_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_49_HandleEventOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_49_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">\\#{podServer}#{filePath}#{fileName}</from>
+          <to xsi:type="tFormalExpression">_49_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_49_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{fileName}</from>
+          <to xsi:type="tFormalExpression">_49_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_49_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_49_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_49_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_49_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_49_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">0</from>
+          <to xsi:type="tFormalExpression">_49_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_49_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_49_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_49_HandleEventOutput</sourceRef>
+        <targetRef>handleEvent</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_40" name="Move Content to Mezzanine" tns:taskName="HybridCopy" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>MediaIngestHelper.entryMoveContentToMezzanine(kcontext);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_40_SourceInput" name="Source" />
+        <dataInput id="_40_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_40_TargetInput" name="Target" />
+        <dataInput id="_40_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_40_EntityTypeInput" name="EntityType" />
+        <dataInput id="_40_EntityIdInput" name="EntityId" />
+        <dataInput id="_40_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_40_SourceInput</dataInputRefs>
+          <dataInputRefs>_40_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_40_TargetInput</dataInputRefs>
+          <dataInputRefs>_40_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_40_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_40_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_40_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_40_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{source}</from>
+          <to xsi:type="tFormalExpression">_40_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_40_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">asset</from>
+          <to xsi:type="tFormalExpression">_40_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_40_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{target}</from>
+          <to xsi:type="tFormalExpression">_40_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_40_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_40_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_40_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_40_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_40_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_40_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_40_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_40_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_41" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_52" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <task id="_jbpm-unique-5" name="Set Workflow Context" tns:taskName="SetProcessInstanceContext" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-5_LabelInput" name="Label" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-5_LabelInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-5_LabelInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{filePath}#{fileName}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-5_LabelInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_54" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_53" name="Read Containing Entity" tns:taskName="MediaManager8ReadRelationshipsTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>Base localEntity = MediaIngestHelper.getEntity(Base.class, mm8Response);
+if (localEntity != null) {
+	kcontext.setVariable("eternalWorkflowDecorator", EternalWorkflowDecoratorFactory.getInstance(localEntity));
+	kcontext.setVariable("entity", localEntity);
+}</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_53_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_53_AttainLockInput" name="AttainLock" />
+        <dataInput id="_53_RelationshipInput" name="Relationship" />
+        <dataInput id="_53_EntityTypeInput" name="EntityType" />
+        <dataInput id="_53_EntityIDInput" name="EntityID" />
+        <dataOutput id="_53_ExitStatusOutput" name="ExitStatus" />
+        <dataOutput id="_53_ResponseOutput" name="Response" />
+        <inputSet>
+          <dataInputRefs>_53_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_53_AttainLockInput</dataInputRefs>
+          <dataInputRefs>_53_RelationshipInput</dataInputRefs>
+          <dataInputRefs>_53_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_53_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_53_ExitStatusOutput</dataOutputRefs>
+          <dataOutputRefs>_53_ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_53_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_53_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_AttainLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_53_AttainLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_RelationshipInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_53_RelationshipInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_53_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_53_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_53_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_53_ExitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_53_ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_52-_2" sourceRef="_52" targetRef="_2" />
+    <sequenceFlow id="_6-_3" sourceRef="_6" targetRef="_3" />
+    <sequenceFlow id="_18-_4" sourceRef="_18" targetRef="_4" />
+    <sequenceFlow id="_2-_6" sourceRef="_2" targetRef="_6" />
+    <sequenceFlow id="_23-_9" sourceRef="_23" targetRef="_9" />
+    <sequenceFlow id="_17-_10" sourceRef="_17" targetRef="_10" />
+    <sequenceFlow id="_3-_14" sourceRef="_3" targetRef="_14" name="EntityFound in MM" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return MediaIngestHelper.assetFoundInMM(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_86-_14" sourceRef="_86" targetRef="_14" />
+    <sequenceFlow id="_19-_85" sourceRef="_19" targetRef="_85" />
+    <sequenceFlow id="_3-_17" sourceRef="_3" targetRef="_17" name="Entity Not Found in Media Manager" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_83-_84" sourceRef="_83" targetRef="_84" name="No Content" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_87-_84" sourceRef="_87" targetRef="_84" />
+    <sequenceFlow id="_41-_16" sourceRef="_41" targetRef="_16" name="Orphan Content" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_95-_19" sourceRef="_95" targetRef="_19" />
+    <sequenceFlow id="_82-_87" sourceRef="_82" targetRef="_87" />
+    <sequenceFlow id="_29-_18" sourceRef="_29" targetRef="_18" />
+    <sequenceFlow id="_85-_21" sourceRef="_85" targetRef="_21" />
+    <sequenceFlow id="_10-_86" sourceRef="_10" targetRef="_86" />
+    <sequenceFlow id="_95-_23" sourceRef="_95" targetRef="_23" />
+    <sequenceFlow id="_41-_83" sourceRef="_41" targetRef="_83" name="Notify Containing Entity" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "SUCCESS".equals(exitStatus) &amp;&amp; eternalWorkflowDecorator != null;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_91-_93" sourceRef="_91" targetRef="_93" name="Remove From Processed Folder" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return MediaIngestHelper.removeFromProcessedFolder(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_83-_82" sourceRef="_83" targetRef="_82" name="Has Content" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return (entity instanceof BaseMetadataWithContent);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_51-_24" sourceRef="_51" targetRef="_24" name="Is Video" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return MediaIngestHelper.isVideo(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_91-_92" sourceRef="_91" targetRef="_92" name="Retain In Processed Folder" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_93-_92" sourceRef="_93" targetRef="_92" />
+    <sequenceFlow id="_51-_94" sourceRef="_51" targetRef="_94" name="Is Subtitle" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return MediaIngestHelper.isSubtitle(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-5-_95" sourceRef="_jbpm-unique-5" targetRef="_95" />
+    <sequenceFlow id="_90-_29" sourceRef="_90" targetRef="_29" />
+    <sequenceFlow id="_92-_89" sourceRef="_92" targetRef="_89" />
+    <sequenceFlow id="_40-_91" sourceRef="_40" targetRef="_91" />
+    <sequenceFlow id="_4-_88" sourceRef="_4" targetRef="_88" />
+    <sequenceFlow id="_84-_42" sourceRef="_84" targetRef="_42" />
+    <sequenceFlow id="_89-_90" sourceRef="_89" targetRef="_90" />
+    <sequenceFlow id="_9-_51" sourceRef="_9" targetRef="_51" />
+    <sequenceFlow id="_51-_49" sourceRef="_51" targetRef="_49" name="Is Image" tns:priority="2" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_14-_40" sourceRef="_14" targetRef="_40" />
+    <sequenceFlow id="_53-_41" sourceRef="_53" targetRef="_41" />
+    <sequenceFlow id="_49-_52" sourceRef="_49" targetRef="_52" />
+    <sequenceFlow id="_24-_52" sourceRef="_24" targetRef="_52" />
+    <sequenceFlow id="_94-_52" sourceRef="_94" targetRef="_52" />
+    <sequenceFlow id="_1-_jbpm-unique-5" sourceRef="_1" targetRef="_jbpm-unique-5" />
+    <sequenceFlow id="_42-_54" sourceRef="_42" targetRef="_54" />
+    <sequenceFlow id="_88-_53" sourceRef="_88" targetRef="_53" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.ingest.MediaIngest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="888" y="180" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="816" y="756" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="888" y="900" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="816" y="1620" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="816" y="828" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="816" y="468" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_10" >
+        <dc:Bounds x="516" y="972" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="888" y="1044" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_85" >
+        <dc:Bounds x="564" y="324" width="133" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="516" y="900" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_84" >
+        <dc:Bounds x="1044" y="1920" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="888" y="2100" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="732" y="324" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_87" >
+        <dc:Bounds x="1200" y="1920" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="816" y="1548" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_21" >
+        <dc:Bounds x="480" y="324" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_86" >
+        <dc:Bounds x="516" y="1044" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_23" >
+        <dc:Bounds x="816" y="396" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_83" >
+        <dc:Bounds x="1044" y="1836" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_93" >
+        <dc:Bounds x="516" y="1188" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_82" >
+        <dc:Bounds x="1200" y="1836" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_24" >
+        <dc:Bounds x="552" y="612" width="121" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_92" >
+        <dc:Bounds x="888" y="1260" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_94" >
+        <dc:Bounds x="708" y="612" width="121" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_95" >
+        <dc:Bounds x="888" y="324" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_29" >
+        <dc:Bounds x="816" y="1476" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_89" >
+        <dc:Bounds x="816" y="1332" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_91" >
+        <dc:Bounds x="888" y="1188" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_88" >
+        <dc:Bounds x="816" y="1692" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_42" >
+        <dc:Bounds x="972" y="1992" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_90" >
+        <dc:Bounds x="816" y="1404" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_51" >
+        <dc:Bounds x="888" y="540" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_49" >
+        <dc:Bounds x="1008" y="612" width="121" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_40" >
+        <dc:Bounds x="816" y="1116" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_41" >
+        <dc:Bounds x="888" y="1836" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_52" >
+        <dc:Bounds x="888" y="684" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-5" >
+        <dc:Bounds x="816" y="252" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_54" >
+        <dc:Bounds x="1044" y="2100" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_53" >
+        <dc:Bounds x="816" y="1764" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_52-_2" >
+        <di:waypoint x="912" y="708" />
+        <di:waypoint x="912" y="780" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_3" >
+        <di:waypoint x="912" y="852" />
+        <di:waypoint x="912" y="924" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_18-_4" >
+        <di:waypoint x="912" y="1572" />
+        <di:waypoint x="912" y="1644" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_6" >
+        <di:waypoint x="912" y="780" />
+        <di:waypoint x="912" y="852" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_9" >
+        <di:waypoint x="912" y="420" />
+        <di:waypoint x="912" y="492" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_10" >
+        <di:waypoint x="612" y="924" />
+        <di:waypoint x="612" y="996" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_14" >
+        <di:waypoint x="912" y="924" />
+        <di:waypoint x="912" y="1068" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_86-_14" >
+        <di:waypoint x="612" y="1068" />
+        <di:waypoint x="912" y="1068" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_85" >
+        <di:waypoint x="756" y="348" />
+        <di:waypoint x="630" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_17" >
+        <di:waypoint x="912" y="924" />
+        <di:waypoint x="612" y="924" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_83-_84" >
+        <di:waypoint x="1068" y="1860" />
+        <di:waypoint x="1068" y="1944" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_87-_84" >
+        <di:waypoint x="1296" y="1944" />
+        <di:waypoint x="1068" y="1944" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_16" >
+        <di:waypoint x="912" y="1860" />
+        <di:waypoint x="912" y="2124" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_95-_19" >
+        <di:waypoint x="912" y="348" />
+        <di:waypoint x="756" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_82-_87" >
+        <di:waypoint x="1296" y="1860" />
+        <di:waypoint x="1296" y="1944" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_29-_18" >
+        <di:waypoint x="912" y="1500" />
+        <di:waypoint x="912" y="1572" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_85-_21" >
+        <di:waypoint x="630" y="348" />
+        <di:waypoint x="504" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10-_86" >
+        <di:waypoint x="612" y="996" />
+        <di:waypoint x="612" y="1068" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_95-_23" >
+        <di:waypoint x="912" y="348" />
+        <di:waypoint x="912" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_83" >
+        <di:waypoint x="912" y="1860" />
+        <di:waypoint x="1068" y="1860" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_91-_93" >
+        <di:waypoint x="912" y="1212" />
+        <di:waypoint x="612" y="1212" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_83-_82" >
+        <di:waypoint x="1068" y="1860" />
+        <di:waypoint x="1296" y="1860" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_51-_24" >
+        <di:waypoint x="912" y="564" />
+        <di:waypoint x="613" y="564" />
+        <di:waypoint x="612" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_91-_92" >
+        <di:waypoint x="912" y="1212" />
+        <di:waypoint x="912" y="1284" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_93-_92" >
+        <di:waypoint x="612" y="1212" />
+        <di:waypoint x="610" y="1285" />
+        <di:waypoint x="912" y="1284" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_51-_94" >
+        <di:waypoint x="912" y="564" />
+        <di:waypoint x="768" y="564" />
+        <di:waypoint x="768" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_95" >
+        <di:waypoint x="912" y="276" />
+        <di:waypoint x="912" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_90-_29" >
+        <di:waypoint x="912" y="1428" />
+        <di:waypoint x="912" y="1500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_92-_89" >
+        <di:waypoint x="912" y="1284" />
+        <di:waypoint x="912" y="1356" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_40-_91" >
+        <di:waypoint x="912" y="1140" />
+        <di:waypoint x="912" y="1212" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4-_88" >
+        <di:waypoint x="912" y="1644" />
+        <di:waypoint x="912" y="1716" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_84-_42" >
+        <di:waypoint x="1068" y="1944" />
+        <di:waypoint x="1068" y="2016" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_89-_90" >
+        <di:waypoint x="912" y="1356" />
+        <di:waypoint x="912" y="1428" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_51" >
+        <di:waypoint x="912" y="492" />
+        <di:waypoint x="912" y="564" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_51-_49" >
+        <di:waypoint x="912" y="564" />
+        <di:waypoint x="1068" y="564" />
+        <di:waypoint x="1068" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_40" >
+        <di:waypoint x="912" y="1068" />
+        <di:waypoint x="912" y="1140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_53-_41" >
+        <di:waypoint x="912" y="1788" />
+        <di:waypoint x="912" y="1860" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_49-_52" >
+        <di:waypoint x="1068" y="636" />
+        <di:waypoint x="1068" y="710" />
+        <di:waypoint x="912" y="708" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_24-_52" >
+        <di:waypoint x="612" y="636" />
+        <di:waypoint x="612" y="709" />
+        <di:waypoint x="912" y="708" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_94-_52" >
+        <di:waypoint x="768" y="636" />
+        <di:waypoint x="768" y="708" />
+        <di:waypoint x="912" y="708" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_jbpm-unique-5" >
+        <di:waypoint x="912" y="204" />
+        <di:waypoint x="912" y="276" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_42-_54" >
+        <di:waypoint x="1068" y="2016" />
+        <di:waypoint x="1068" y="2124" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_88-_53" >
+        <di:waypoint x="912" y="1716" />
+        <di:waypoint x="912" y="1788" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

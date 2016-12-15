@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"
+	xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"
+	xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"	
+	xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd 
+		urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd 
+		urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd
+		urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd 
+		urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd
+		http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">
+	<Asset xsi:type="offer:OfferType" uriId="irdeto.com/Offer/IRDE2012000000000001" providerVersionNum="1" 
+			internalVersionNum="0" creationDateTime="2012-12-28T00:00:00Z" startDateTime="2013-02-01T00:00:00Z" endDateTime="2013-03-31T11:59:59Z">
+		<core:Provider>Blender Foundation</core:Provider>
+		<offer:Presentation>
+			<offer:CategoryRef uriId="irdeto.com/Category/Movies/Animation"/>
+			<offer:DisplayAsNew>P7D</offer:DisplayAsNew>
+			<offer:DisplayAsLastChance>P7D</offer:DisplayAsLastChance>
+		</offer:Presentation>
+		<offer:PromotionalContentGroupRef uriId="irdeto.com/ContentGroup/IRDE2012000000000001"/>
+		<offer:BillingId>12345</offer:BillingId>
+		<offer:TermsRef uriId="irdeto.com/Terms/IRDE2012000000000001"/>
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/IRDE2012000000000001"/>
+	</Asset>
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/IRDE2012000000000001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2012-12-28T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<core:ProviderQAContact>John Doe, JDoe@irdeto.com</core:ProviderQAContact>
+		<core:Provider>Blender Foundation</core:Provider>
+		<title:LocalizableTitle>
+			<title:TitleSortName>Bunny, Big Buck</title:TitleSortName>
+			<title:TitleBrief>Big Buck Bunny</title:TitleBrief>
+			<title:TitleMedium>Big Buck Bunny, Project Peach</title:TitleMedium>
+			<title:TitleLong>Big Buck Bunny, the Open Source movie by the Blender Foundation</title:TitleLong>
+			<title:SummaryShort>The movie follows a day of the life of Big Buck Bunny when he meets three bullying rodents, Frank (the leader of the rodents), Rinky and Gamera.</title:SummaryShort>
+			<title:SummaryLong>The plot follows a day of the life of Big Buck Bunny when he meets three bullying rodents, Frank (the leader of the rodents), Rinky and Gamera. The rodents amuse themselves by harassing helpless creatures of the forest by throwing fruits, nuts and rocks at them.
+				After the deaths of two of Bunny's favorite butterflies, and an offensive attack on Bunny himself, Bunny sets aside his gentle nature and orchestrates a complex plan to avenge the two butterflies.
+			</title:SummaryLong>
+			<title:WriterDisplay>Sacha Goedegebure aka "Sago"</title:WriterDisplay>
+			<title:Director fullName="Sacha Goedegebure" firstName="Sacha" lastName="Goedegebure" sortableName="Goedegebure, Sacha"/>
+			<title:Producer fullName="John Snow" firstName="John" lastName="Snow" sortableName="John, Snow" />
+			<title:StudioDisplay>Blender Foundation</title:StudioDisplay>
+			<title:RecordingArtist>Jan Morgenstern</title:RecordingArtist>
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="Portugal">M-4</title:Rating>
+		<title:IsClosedCaptioning>false</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:09:00</title:DisplayRunTime>
+		<title:Year>2008</title:Year>
+		<title:CountryOfOrigin>NL</title:CountryOfOrigin>
+		<title:Genre>Animation</title:Genre>
+		<title:Genre>Kids</title:Genre>
+		<title:Genre>Comedy</title:Genre>
+		<title:ShowType>Kids</title:ShowType>
+		<title:ProgrammerCallLetters>BBB</title:ProgrammerCallLetters>
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/IRDE2012000000000001"
+providerVersionNum="1" internalVersionNum="0" creationDateTime="2012-12-28T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<offer:TitleRef uriId="irdeto.com/Title/IRDE2012000000000001"/>
+		<offer:MovieRef uriId="irdeto.com/Asset/IRDE2012000000000002"/>
+		<offer:PreviewRef uriId="irdeto.com/Asset/IRDE2012000000000003"/>
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/IRDE2012000000000004"/>
+	</Asset>
+	
+	<!--This movie is free-->
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/IRDE2012000000000001" providerVersionNum="1"
+internalVersionNum="0" creationDateTime="2012-12-28T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<terms:ContractName>Irdeto</terms:ContractName>
+		<terms:SuggestedPrice>0.00</terms:SuggestedPrice>
+	</Asset>
+
+	<Asset xsi:type="offer:CategoryType" uriId="irdeto.com/Category/Movies/Animation" providerVersionNum="1"
+		internalVersionNum="0" creationDateTime="2012-12-28T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<offer:CategoryPath>/Movies/Animation</offer:CategoryPath>
+	</Asset>
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/IRDE2012000000000002" providerVersionNum="1"
+internalVersionNum="0" creationDateTime="2012-12-28T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<core:Provider>Blender Foundation</core:Provider>
+		<content:SourceUrl>big_buck_bunny_1080p_surround.avi</content:SourceUrl>
+		<content:ContentFileSize>928670754</content:ContentFileSize>
+		<content:ContentCheckSum>223991C8B33564EB77988A4C13C1C76A</content:ContentCheckSum>
+		<content:PropagationPriority>5</content:PropagationPriority>
+		<content:AudioType>private:AC3 surround sound</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat> 
+		<content:Duration>PT00H09M56S</content:Duration>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+	</Asset>
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/IRDE2012000000000003" providerVersionNum="1"
+		internalVersionNum="0" creationDateTime="2012-12-28T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<core:Provider>Blender Foundation</core:Provider>
+		<content:SourceUrl>trailer_1080p.mov</content:SourceUrl>
+		<content:ContentFileSize>30874052</content:ContentFileSize>
+		<content:ContentCheckSum>90DA81A2D0E62A068AC64370E0D55C2B</content:ContentCheckSum>
+		<content:PropagationPriority>6</content:PropagationPriority>
+		<content:AudioType>private:AC3 surround sound</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H00M32S</content:Duration>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/IRDE2012000000000004" providerVersionNum="1"
+internalVersionNum="0" creationDateTime="2012-12-28T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<core:Provider>Blender Foundation</core:Provider>
+		<core:Ext/>
+		<content:SourceUrl>BigBuckBunnyBoxArt.jpg</content:SourceUrl>
+		<content:ContentFileSize>251561</content:ContentFileSize>
+		<content:ContentCheckSum>1F943BA436D646397A9B0119947FC6DE</content:ContentCheckSum>
+		<content:PropagationPriority>4</content:PropagationPriority>
+		<content:X_Resolution>1000</content:X_Resolution>
+		<content:Y_Resolution>1500</content:Y_Resolution>
+	</Asset>
+
+	<!--Here follow Irdeto proprietary extensions to mark up the Brand and Series-->			
+	<!--	<Ext>-->			
+	<Asset xsi:type="irdeto:SeriesType" uriId="irdeto.com/Series/IRDE2012000000000005"> 		
+		<!--Link to this Series' title-->	
+		<irdeto:TitleRef uriId="irdeto.com/Title/IRDE2012000000000006" />	
+		<!--Links to the programs present in this file. Typically, there would be more episodes.-->	
+		<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/IRDE2012000000000001" /> 	
+	</Asset>		
+	
+	<!-- Blender Foundation Series title-->		
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/IRDE2012000000000006" providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z"> 		
+		<core:Ext>	
+			<App_Data App="MOD" Name="Producer" Value="Alan Ball" />
+		</core:Ext>	
+		<title:LocalizableTitle xml:lang="en-US">	
+			<title:TitleSortName>Open Movies</title:TitleSortName>
+			<title:TitleBrief>Open Movies</title:TitleBrief>
+			<title:TitleMedium>Open Movies: Blender Foundation</title:TitleMedium>
+			<title:TitleLong>Open Movies by the Blender Foundation</title:TitleLong>
+			<title:SummaryShort>A number of movies initiated by the Blender Foundation. The Blender Foundation creates open source software for three-dimensional modeling.</title:SummaryShort>
+			<title:SummaryLong>The Blender Foundation has organized several community-driven "Open Projects" through its affiliated Blender Institute program, including several freely licensed films and a free, open source video game. According to the Foundation, these projects are intended "to validate and improve the 3D open source content creation pipeline with Blender". Each project was created using the Blender software and released under permissive license terms, along with the source material. In addition to demonstrating the capabilities of the software, the Open Projects provided detailed production material (sketches, tutorials, textures and models, etc.) to serve as examples for the Blender user community, as well as finished products that could be widely used for other purposes.
+				On 18 May 2006, the Blender Foundation released its first film, Elephants Dream. In response to the success of Elephants Dream, the Blender Foundation established the Blender Institute to support future software and content development projects. The Blender Institute operates out of a studio within the Entrepotdok building in Amsterdam, where the Blender Foundation is also located, and is headed by Ton Roosendaal.
+				On 10 April 2008, the Blender Institute released its second film, Big Buck Bunny. Based on the movie, the Blender Institute released its first Open Game project Yo Frankie!, in November 2008.
+				On September 30, 2010, the Blender Institute released its third project, Sintel.
+				On October, 2011, Concept/Script Development began for Blender's latest open film project titled Tears of Steel. Contrary to Blender's previous filming projects which were 100% computer graphics, the focus of this project was combining the 3d world with the real world, and shooting real life footage with donated Red Epic cameras. The project was released on September 26th, 2012.
+			</title:SummaryLong>
+			<title:StudioDisplay>Blender Foundation</title:StudioDisplay>
+		</title:LocalizableTitle>	
+		<title:Rating ratingSystem="MPAA">PG</title:Rating>	
+<!--		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>	-->
+		<title:DisplayRunTime>01:48:00</title:DisplayRunTime>	
+<!--		<title:Year>2005</title:Year>	-->
+		<title:CountryOfOrigin>NL</title:CountryOfOrigin>	
+		<title:Genre>Comedy</title:Genre>
+		<title:Genre>Animation</title:Genre>
+		<title:ShowType>Movie</title:ShowType>	
+	</Asset>		
+	
+	
+	<!--	</Ext>-->			
+	<!--End of Irdeto proprietary CableLabs extension-->		
+</ADI3>

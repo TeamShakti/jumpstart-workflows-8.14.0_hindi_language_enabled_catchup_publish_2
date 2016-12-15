@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_oneItem" structureRef="String" />
+
+  <itemDefinition id="_2-oneItem" structureRef="String" />
+
+  <itemDefinition id="_8-oneItem" structureRef="String" />
+
+  <itemDefinition id="_10-oneItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.LockTest" name="Lock Test" tns:packageName="com.irdeto.jumpstart.workflow" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="one" itemSubjectRef="_oneItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="Attain Lock" tns:taskName="AttainLock" >
+      <ioSpecification>
+        <dataInput id="_2_LockIDInput" name="LockID" />
+        <inputSet>
+          <dataInputRefs>_2_LockIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_2_LockIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">1</from>
+          <to xsi:type="tFormalExpression">_2_LockIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_4" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <exclusiveGateway id="_6" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_7" name="Gateway" gatewayDirection="Converging" />
+    <task id="_8" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <inputSet>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+    </task>
+    <task id="_10" name="Media Manager 8 Read Task" tns:taskName="MediaManager8ReadTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("one","1");</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_10_ReleaseLockInput" name="ReleaseLock" />
+        <dataInput id="_10_EntityTypeInput" name="EntityType" />
+        <dataInput id="_10_EntityIDInput" name="EntityID" />
+        <inputSet>
+          <dataInputRefs>_10_ReleaseLockInput</dataInputRefs>
+          <dataInputRefs>_10_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_10_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>one</sourceRef>
+        <targetRef>_10_ReleaseLockInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_10_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_10_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_10_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">4</from>
+          <to xsi:type="tFormalExpression">_10_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_7-_2" sourceRef="_7" targetRef="_2" />
+    <sequenceFlow id="_6-_4" sourceRef="_6" targetRef="_4" name="False" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return false;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_8-_6" sourceRef="_8" targetRef="_6" />
+    <sequenceFlow id="_6-_7" sourceRef="_6" targetRef="_7" name="True" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_1-_7" sourceRef="_1" targetRef="_7" />
+    <sequenceFlow id="_10-_8" sourceRef="_10" targetRef="_8" />
+    <sequenceFlow id="_2-_10" sourceRef="_2" targetRef="_10" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.LockTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="312" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="96" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="295" y="291" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="312" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="312" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="96" y="240" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_10" >
+        <dc:Bounds x="96" y="168" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_7-_2" >
+        <di:waypoint x="336" y="120" />
+        <di:waypoint x="192" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_4" >
+        <di:waypoint x="336" y="264" />
+        <di:waypoint x="318" y="314" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_6" >
+        <di:waypoint x="192" y="264" />
+        <di:waypoint x="336" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_7" >
+        <di:waypoint x="336" y="264" />
+        <di:waypoint x="336" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_7" >
+        <di:waypoint x="336" y="48" />
+        <di:waypoint x="336" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10-_8" >
+        <di:waypoint x="192" y="192" />
+        <di:waypoint x="192" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_10" >
+        <di:waypoint x="192" y="120" />
+        <di:waypoint x="192" y="192" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

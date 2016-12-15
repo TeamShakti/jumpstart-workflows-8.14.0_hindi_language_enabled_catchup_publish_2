@@ -1,0 +1,1623 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_71-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_56-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_30-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_23-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_72-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_49-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_72-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_50-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_50-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_56-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_51-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_61-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_65-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_24-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_61-programTitleItem" structureRef="String" />
+  <itemDefinition id="_65-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_23-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_56-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_24-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_65-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_72-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_51-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_72-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_61-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_23-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_73-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_24-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_23-programTitleItem" structureRef="String" />
+  <itemDefinition id="_65-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_73-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_71-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_50-programTitleItem" structureRef="String" />
+  <itemDefinition id="_50-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_51-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_56-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_74-targetPathItem" structureRef="String" />
+  <itemDefinition id="_61-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_61-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_56-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_24-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_51-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_30-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_61-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-transcodingSourcePathItem" />
+  <itemDefinition id="_35-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_65-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_61-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_73-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_51-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_65-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_51-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_56-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_73-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_56-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_51-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_50-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_61-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_71-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_23-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_61-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_35-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_30-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_50-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_72-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_50-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_49-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_30-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_50-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_65-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_51-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_23-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_74-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_50-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_71-transcodingSourcePathItem" />
+  <itemDefinition id="_49-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_transcodingSourcePathItem" />
+  <itemDefinition id="_49-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_24-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_23-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_71-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_50-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_61-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_51-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_50-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_73-entityIdItem" structureRef="String" />
+  <itemDefinition id="_74-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_61-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_74-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_61-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_72-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_73-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_74-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_71-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_35-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_24-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_65-entityIdItem" structureRef="String" />
+  <itemDefinition id="_23-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_51-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_51-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_51-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_24-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_30-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_71-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_51-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_24-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_74-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_51-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_65-programTitleItem" structureRef="String" />
+  <itemDefinition id="_23-transcodingSourcePathItem" />
+  <itemDefinition id="_71-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_71-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-programTitleItem" structureRef="String" />
+  <itemDefinition id="_73-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_74-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_65-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_71-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_72-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_73-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_49-targetPathItem" structureRef="String" />
+  <itemDefinition id="_51-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_56-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_24-programTitleItem" structureRef="String" />
+  <itemDefinition id="_35-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_61-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-targetPathItem" structureRef="String" />
+  <itemDefinition id="_24-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_51-entityIdItem" structureRef="String" />
+  <itemDefinition id="_74-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_23-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_72-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_51-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_72-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_50-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_74-transcodingSourcePathItem" />
+  <itemDefinition id="_51-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_sourcePathItem" structureRef="String" />
+  <itemDefinition id="_51-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_71-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_65-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_73-transcodingSourcePathItem" />
+  <itemDefinition id="_61-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_23-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_49-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_72-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_24-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-transcodingSourcePathItem" />
+  <itemDefinition id="_73-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_72-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_71-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_61-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_23-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-entityIdItem" structureRef="String" />
+  <itemDefinition id="_74-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_72-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_50-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_51-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-entityIdItem" structureRef="String" />
+  <itemDefinition id="_30-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_50-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_72-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_programTitleItem" structureRef="String" />
+  <itemDefinition id="_56-transcodingSourcePathItem" />
+  <itemDefinition id="_50-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_74-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_56-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_72-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_49-programTitleItem" structureRef="String" />
+  <itemDefinition id="_30-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_61-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_65-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_61-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_56-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_74-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_50-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_24-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_73-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_65-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_35-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_35-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_71-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_65-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_50-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_24-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_56-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-targetPathItem" structureRef="String" />
+  <itemDefinition id="_65-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_23-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_73-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_65-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_74-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_24-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_51-transcodingSourcePathItem" />
+  <itemDefinition id="_73-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_73-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_49-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_65-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_35-transcodingSourcePathItem" />
+  <itemDefinition id="_transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_35-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_50-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_30-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_61-entityIdItem" structureRef="String" />
+  <itemDefinition id="_71-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_sourceFileItem" structureRef="String" />
+  <itemDefinition id="_49-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_73-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_30-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_35-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_61-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_50-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_65-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_71-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_51-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_23-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_61-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_51-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_30-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_49-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_71-targetPathItem" structureRef="String" />
+  <itemDefinition id="_49-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_74-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_61-transcodingSourcePathItem" />
+  <itemDefinition id="_30-programTitleItem" structureRef="String" />
+  <itemDefinition id="_49-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_73-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_51-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_72-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_50-entityIdItem" structureRef="String" />
+  <itemDefinition id="_56-programTitleItem" structureRef="String" />
+  <itemDefinition id="_73-programTitleItem" structureRef="String" />
+  <itemDefinition id="_51-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_73-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_74-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_61-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_35-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_71-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_23-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_61-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_49-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_23-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_73-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_65-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_56-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_72-entityIdItem" structureRef="String" />
+  <itemDefinition id="_74-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_30-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_73-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_30-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_71-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_49-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_50-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_74-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_23-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_51-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_49-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_73-targetPathItem" structureRef="String" />
+  <itemDefinition id="_24-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_72-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_72-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_51-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_74-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_73-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_30-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-targetPathItem" structureRef="String" />
+  <itemDefinition id="_72-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_73-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_49-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_65-transcodingSourcePathItem" />
+  <itemDefinition id="_23-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_24-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_73-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_50-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_35-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_30-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_74-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_23-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-entityIdItem" structureRef="String" />
+  <itemDefinition id="_50-targetPathItem" structureRef="String" />
+  <itemDefinition id="_65-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_74-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_73-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_72-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_73-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_61-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_51-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_56-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_35-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_74-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_35-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_61-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_30-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_35-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_35-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_56-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_24-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_73-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_24-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_72-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_65-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_24-targetPathItem" structureRef="String" />
+  <itemDefinition id="_74-entityIdItem" structureRef="String" />
+  <itemDefinition id="_72-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_35-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_72-sourcePathItem" structureRef="String" />
+  <itemDefinition id="_23-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_50-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_50-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_74-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_56-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_61-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_23-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_61-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_51-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_61-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_56-transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_73-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_50-transcodingSourcePathItem" />
+  <itemDefinition id="_72-transcodingSourcePathItem" />
+  <itemDefinition id="_73-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_71-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_65-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_23-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_50-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_72-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_50-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_50-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_49-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_56-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_49-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_56-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_30-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_24-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_50-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_56-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_74-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_74-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_65-targetPathItem" structureRef="String" />
+  <itemDefinition id="_51-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_49-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_51-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_61-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_23-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_71-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_72-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_56-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_30-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_30-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_49-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_61-targetPathItem" structureRef="String" />
+  <itemDefinition id="_72-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_74-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_74-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_30-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_61-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-programTitleItem" structureRef="String" />
+  <itemDefinition id="_73-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_74-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_50-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_50-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_23-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_24-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_35-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_72-programTitleItem" structureRef="String" />
+  <itemDefinition id="_23-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_23-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_73-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_73-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_23-entityIdItem" structureRef="String" />
+  <itemDefinition id="_61-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_50-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_35-targetPathItem" structureRef="String" />
+  <itemDefinition id="_65-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_74-transcodeInprogressListItem" structureRef="java.util.List" />
+  <itemDefinition id="_51-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_35-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_74-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_49-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_51-targetPathItem" structureRef="String" />
+  <itemDefinition id="_30-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_24-maintainRelationshipsItem" structureRef="com.irdeto.jumpstart.domain.ingest.MaintainRelationships" />
+  <itemDefinition id="_65-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_72-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_49-transcodingSourcePathItem" />
+  <itemDefinition id="_72-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_72-targetPathItem" structureRef="String" />
+  <itemDefinition id="_contentTypeItem" structureRef="String" />
+  <itemDefinition id="_50-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_73-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_73-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_71-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_56-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_24-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_56-entityIdItem" structureRef="String" />
+  <itemDefinition id="_61-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_30-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_24-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_24-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_61-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_30-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_30-transcodeWrapperItem" structureRef="com.irdeto.jumpstart.domain.transcode.TranscodeWrapper" />
+  <itemDefinition id="_74-programTitleItem" structureRef="String" />
+  <itemDefinition id="_35-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_35-entityIdItem" structureRef="String" />
+  <itemDefinition id="_74-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_65-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_74-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_targetPathItem" structureRef="String" />
+  <itemDefinition id="_72-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_74-transcodeProfileItem" structureRef="com.irdeto.jumpstart.domain.TranscodeProfile" />
+  <itemDefinition id="_51-programTitleItem" structureRef="String" />
+  <itemDefinition id="_72-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_transcodeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_72-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_30-entityIdItem" structureRef="String" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.transcode.Transcode" name="Transcode " tns:packageName="com.irdeto.jumpstart.workflow.transcode" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.transcode.*" />
+     <tns:import name="com.irdeto.domain.qts.response.*" />
+     <tns:import name="com.irdeto.manager.task.*" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="com.irdeto.domain.qts.response.elementalencode.*" />
+     <tns:import name="com.irdeto.domain.mmentityapi.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.domain.operation.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.JumpstartPropertyKey" />
+     <tns:import name="com.irdeto.jumpstart.domain.transcode.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="program" itemSubjectRef="_programItem"/>
+    <property id="config" itemSubjectRef="_configItem"/>
+    <property id="sourceFile" itemSubjectRef="_sourceFileItem"/>
+    <property id="targetPath" itemSubjectRef="_targetPathItem"/>
+    <property id="programTitle" itemSubjectRef="_programTitleItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="videoContentId" itemSubjectRef="_videoContentIdItem"/>
+    <property id="sourceSubcontent" itemSubjectRef="_sourceSubcontentItem"/>
+    <property id="processInstanceIdList" itemSubjectRef="_processInstanceIdListItem"/>
+    <property id="transcodeInprogressList" itemSubjectRef="_transcodeInprogressListItem"/>
+    <property id="queryFilterParameter" itemSubjectRef="_queryFilterParameterItem"/>
+    <property id="mm8Response" itemSubjectRef="_mm8ResponseItem"/>
+    <property id="transcodeProfile" itemSubjectRef="_transcodeProfileItem"/>
+    <property id="maintainRelationshipsCommandsList" itemSubjectRef="_maintainRelationshipsListItem"/>
+    <property id="transcodedFileInfoList" itemSubjectRef="_transcodedFileInfoListItem"/>
+    <property id="relationshipList" itemSubjectRef="_relationshipListItem"/>
+    <property id="relationshipMap" itemSubjectRef="_relationshipMapItem"/>
+    <property id="termWrapperList" itemSubjectRef="_termWrapperListItem"/>
+    <property id="transcodedSubcontentList" itemSubjectRef="_transcodedSubcontentListItem"/>
+    <property id="transcodedSubcontent" itemSubjectRef="_transcodedSubcontentItem"/>
+    <property id="maintainRelationshipsCommand" itemSubjectRef="_maintainRelationshipsItem"/>
+    <property id="processedVideoContentIdList" itemSubjectRef="_processedVideoContentIdListItem"/>
+    <property id="profile" itemSubjectRef="_profileItem"/>
+    <property id="transcodeWrapperList" itemSubjectRef="_transcodeWrapperListItem"/>
+    <property id="transcodeWrapper" itemSubjectRef="_transcodeWrapperItem"/>
+    <property id="transcode" itemSubjectRef="_transcodeItem"/>
+    <property id="sourcePath" itemSubjectRef="_sourcePathItem"/>
+    <property id="contentType" itemSubjectRef="_contentTypeItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="htsQaUser" itemSubjectRef="_htsQaUserItem"/>
+    <property id="htsDueperiod" itemSubjectRef="_htsDueperiodItem"/>
+    <property id="transcodingSourcePath" itemSubjectRef="_transcodingSourcePathItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <endEvent id="_69" name="End" />
+    <scriptTask id="_70" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Transcode Workflow error: {}", errorMap.get("ExitMessage"));
+BeanUtil.getBean(LockManager.class).releaseLock("program-transcode-"+entityId);
+</script>
+    </scriptTask>
+    <task id="_71" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_71_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_71_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_71_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_71_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_64" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <endEvent id="_4" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_65" name="Profile Read" tns:taskName="ProfileRead" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>TranscodeHelper.setupTranscodeWrapperList(kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_65_TermWrapperListInput" name="TermWrapperList" />
+        <dataInput id="_65_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_65_DeviceProfileEnabledOnlyInput" name="DeviceProfileEnabledOnly" />
+        <dataInput id="_65_ContentTypeInput" name="ContentType" />
+        <dataOutput id="_65_ProfileOutput" name="Profile" />
+        <inputSet>
+          <dataInputRefs>_65_TermWrapperListInput</dataInputRefs>
+          <dataInputRefs>_65_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_65_DeviceProfileEnabledOnlyInput</dataInputRefs>
+          <dataInputRefs>_65_ContentTypeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_65_ProfileOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>termWrapperList</sourceRef>
+        <targetRef>_65_TermWrapperListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_65_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_DeviceProfileEnabledOnlyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_65_DeviceProfileEnabledOnlyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_ContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{contentType}</from>
+          <to xsi:type="tFormalExpression">_65_ContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_65_ProfileOutput</sourceRef>
+        <targetRef>profile</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_66" name="Set Processed" scriptFormat="http://www.java.com/java" >
+      <script>TranscodeHelper.setProcessed(kcontext);</script>
+    </scriptTask>
+    <exclusiveGateway id="_67" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <parallelGateway id="_76" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <task id="_72" name="Commit Point" tns:taskName="CommitPoint" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>BeanUtil.getBean(LockManager.class).releaseLock("program-transcode-"+entityId);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_72_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_72_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_72_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_72_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_73" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_73_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_73_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_73_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_73_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_74" name="Attain Lock" tns:taskName="AttainLock" >
+      <ioSpecification>
+        <dataInput id="_74_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_74_LockIDInput" name="LockID" />
+        <inputSet>
+          <dataInputRefs>_74_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_74_LockIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_74_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_74_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_74_LockIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program-transcode-#{entityId}</from>
+          <to xsi:type="tFormalExpression">_74_LockIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <scriptTask id="_75" name="Clear Profile" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("profile", null);
+</script>
+    </scriptTask>
+    <task id="_23" name="Update Program" tns:taskName="MediaManager8UpdateTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("program", WorkflowHelper.getEntity(Program.class, mm8Response));</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_23_DomainObjectInput" name="DomainObject" />
+        <dataInput id="_23_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_23_EntityTypeInput" name="EntityType" />
+        <dataInput id="_23_ReleaseLockInput" name="ReleaseLock" />
+        <dataInput id="_23_EntityIdInput" name="EntityId" />
+        <dataOutput id="_23_MediaManager8ResponseOutput" name="MediaManager8Response" />
+        <inputSet>
+          <dataInputRefs>_23_DomainObjectInput</dataInputRefs>
+          <dataInputRefs>_23_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_23_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_23_ReleaseLockInput</dataInputRefs>
+          <dataInputRefs>_23_EntityIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_23_MediaManager8ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>program</sourceRef>
+        <targetRef>_23_DomainObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_23_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_23_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_23_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_23_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_23_ReleaseLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_23_ReleaseLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_23_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_23_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_23_MediaManager8ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_22" name="Update Program Transcoded" scriptFormat="http://www.java.com/java" >
+      <script>TranscodeHelper.updateProgramTranscoded(kcontext);</script>
+    </scriptTask>
+    <task id="_24" name="Read Program" tns:taskName="MediaManager8ReadTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>TranscodeHelper.prepareTranscode(kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_24_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_24_AttainLockInput" name="AttainLock" />
+        <dataInput id="_24_EntityTypeInput" name="EntityType" />
+        <dataInput id="_24_EntityIDInput" name="EntityID" />
+        <dataOutput id="_24_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_24_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_24_AttainLockInput</dataInputRefs>
+          <dataInputRefs>_24_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_24_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_24_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_24_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_24_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_AttainLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_24_AttainLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_24_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_24_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_24_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_24_ResponseObjectOutput</sourceRef>
+        <targetRef>program</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <intermediateCatchEvent id="_29" name="Error" >
+      <dataOutput id="_29_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_29_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_29_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <task id="_30" name="Read Program" tns:taskName="MediaManager8ReadTask" >
+      <ioSpecification>
+        <dataInput id="_30_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_30_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_30_AttainLockInput" name="AttainLock" />
+        <dataInput id="_30_EntityTypeInput" name="EntityType" />
+        <dataInput id="_30_EntityIDInput" name="EntityID" />
+        <dataOutput id="_30_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_30_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_30_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_30_AttainLockInput</dataInputRefs>
+          <dataInputRefs>_30_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_30_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_30_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_30_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_30_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_30_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_30_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_30_AttainLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_30_AttainLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_30_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_30_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_30_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_30_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_30_ResponseObjectOutput</sourceRef>
+        <targetRef>program</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_34" name="Transcode Loop" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <task id="_35" name="Query Active Transcode" tns:taskName="QueryActiveProcessInstance" >
+      <ioSpecification>
+        <dataInput id="_35_VariableToMatchInput" name="VariableToMatch" />
+        <dataInput id="_35_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_35_ValueToMatchInput" name="ValueToMatch" />
+        <dataInput id="_35_ProcessIdInput" name="ProcessId" />
+        <dataOutput id="_35_ReturnListOutput" name="ReturnList" />
+        <inputSet>
+          <dataInputRefs>_35_VariableToMatchInput</dataInputRefs>
+          <dataInputRefs>_35_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_35_ValueToMatchInput</dataInputRefs>
+          <dataInputRefs>_35_ProcessIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_35_ReturnListOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_35_VariableToMatchInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">transcodingSourcePath</from>
+          <to xsi:type="tFormalExpression">_35_VariableToMatchInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_35_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_35_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_35_ValueToMatchInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourcePath}</from>
+          <to xsi:type="tFormalExpression">_35_ValueToMatchInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_35_ProcessIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.transcode.Transcode</from>
+          <to xsi:type="tFormalExpression">_35_ProcessIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_35_ReturnListOutput</sourceRef>
+        <targetRef>processInstanceIdList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_33" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_38" name="Prepare Transcode Variables" scriptFormat="http://www.java.com/java" >
+      <script>TranscodeHelper.prepareTranscodeVariables(kcontext);
+</script>
+    </scriptTask>
+    <exclusiveGateway id="_36" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_37" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_44" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <endEvent id="_45" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <exclusiveGateway id="_58" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <task id="_51" name="Read Related Terms" tns:taskName="CompoundRelationshipRead" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>TranscodeHelper.setupTermRelationshipList(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>TranscodeHelper.processTermRelationshipMap(kcontext, program);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_51_RelationshipListInput" name="RelationshipList" />
+        <dataInput id="_51_EntityInput" name="Entity" />
+        <dataInput id="_51_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_51_ApprovedOnlyInput" name="ApprovedOnly" />
+        <dataOutput id="_51_RelationshipMapOutput" name="RelationshipMap" />
+        <inputSet>
+          <dataInputRefs>_51_RelationshipListInput</dataInputRefs>
+          <dataInputRefs>_51_EntityInput</dataInputRefs>
+          <dataInputRefs>_51_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_51_ApprovedOnlyInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_51_RelationshipMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>relationshipList</sourceRef>
+        <targetRef>_51_RelationshipListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>program</sourceRef>
+        <targetRef>_51_EntityInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_51_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_51_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_51_ApprovedOnlyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_51_ApprovedOnlyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_51_RelationshipMapOutput</sourceRef>
+        <targetRef>relationshipMap</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_63" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_49" name="Transcode" tns:taskName="SyncSubprocess" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>TranscodeWrapper localTranscodeWrapper = (TranscodeWrapper)transcodeWrapperList.remove(0);
+kcontext.setVariable("transcodeWrapper", localTranscodeWrapper);
+kcontext.setVariable("transcode", localTranscodeWrapper.getRepresentativeTranscode());
+kcontext.setVariable("transcodingSourcePath",sourcePath);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_49_targetPathInput" name="targetPath" />
+        <dataInput id="_49_sourceFileInput" name="sourceFile" />
+        <dataInput id="_49_entityIdInput" name="entityId" />
+        <dataInput id="_49_programTitleInput" name="programTitle" />
+        <dataInput id="_49_transcodeInput" name="transcode" />
+        <dataInput id="_49_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_49_SingletonInput" name="Singleton" />
+        <dataInput id="_49_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_49_exitMessageOutput" name="exitMessage" />
+        <dataOutput id="_49_exitStatusOutput" name="exitStatus" />
+        <dataOutput id="_49_transcodedFileInfoListOutput" name="transcodedFileInfoList" />
+        <inputSet>
+          <dataInputRefs>_49_targetPathInput</dataInputRefs>
+          <dataInputRefs>_49_sourceFileInput</dataInputRefs>
+          <dataInputRefs>_49_entityIdInput</dataInputRefs>
+          <dataInputRefs>_49_programTitleInput</dataInputRefs>
+          <dataInputRefs>_49_transcodeInput</dataInputRefs>
+          <dataInputRefs>_49_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_49_SingletonInput</dataInputRefs>
+          <dataInputRefs>_49_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_49_exitMessageOutput</dataOutputRefs>
+          <dataOutputRefs>_49_exitStatusOutput</dataOutputRefs>
+          <dataOutputRefs>_49_transcodedFileInfoListOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>targetPath</sourceRef>
+        <targetRef>_49_targetPathInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>sourceFile</sourceRef>
+        <targetRef>_49_sourceFileInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entityId</sourceRef>
+        <targetRef>_49_entityIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>programTitle</sourceRef>
+        <targetRef>_49_programTitleInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>transcode</sourceRef>
+        <targetRef>_49_transcodeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_49_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_49_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_49_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_49_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_49_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.transcode.#{transcode.getTranscoderWorkflow()}</from>
+          <to xsi:type="tFormalExpression">_49_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_49_exitMessageOutput</sourceRef>
+        <targetRef>exitMessage</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_49_exitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_49_transcodedFileInfoListOutput</sourceRef>
+        <targetRef>transcodedFileInfoList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_56" name="Read Transcode Profiles" tns:taskName="MediaManager8ReadRelationshipsTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("transcodedSubcontent", sourceSubcontent.getTransSubs().get((Integer)transcodedSubcontentList.remove(0)));</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>TranscodeHelper.determineExistingTranscodeProfileList(kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_56_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_56_RelationshipEntityTypeInput" name="RelationshipEntityType" />
+        <dataInput id="_56_RelationshipInput" name="Relationship" />
+        <dataInput id="_56_EntityTypeInput" name="EntityType" />
+        <dataInput id="_56_EntityIDInput" name="EntityID" />
+        <dataOutput id="_56_ResponseOutput" name="Response" />
+        <inputSet>
+          <dataInputRefs>_56_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_56_RelationshipEntityTypeInput</dataInputRefs>
+          <dataInputRefs>_56_RelationshipInput</dataInputRefs>
+          <dataInputRefs>_56_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_56_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_56_ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_56_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_56_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_56_RelationshipEntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">transcodeProfile</from>
+          <to xsi:type="tFormalExpression">_56_RelationshipEntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_56_RelationshipInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">transcodeProfiles</from>
+          <to xsi:type="tFormalExpression">_56_RelationshipInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_56_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">transVideoSub</from>
+          <to xsi:type="tFormalExpression">_56_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_56_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{transcodedSubcontent.getId()}</from>
+          <to xsi:type="tFormalExpression">_56_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_56_ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_60" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_57" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_jbpm-unique-1" name="Maintain Relationships" tns:taskName="MediaManager8MaintainRelationshipsTask" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-1_MaintainRelationshipsCommandInput" name="MaintainRelationshipsCommand" />
+        <dataInput id="_jbpm-unique-1_MaintainRelationshipsCommandsListInput" name="MaintainRelationshipsCommandsList" />
+        <dataInput id="_jbpm-unique-1_AsyncInput" name="Async" />
+        <dataInput id="_jbpm-unique-1_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-1_MaintainRelationshipsCommandInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-1_MaintainRelationshipsCommandsListInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-1_AsyncInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-1_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>maintainRelationshipsCommand</sourceRef>
+        <targetRef>_jbpm-unique-1_MaintainRelationshipsCommandInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>maintainRelationshipsCommandsList</sourceRef>
+        <targetRef>_jbpm-unique-1_MaintainRelationshipsCommandsListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-1_AsyncInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-1_AsyncInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-1_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-1_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_jbpm-unique-0" name="Mark Transcoded" tns:taskName="MediaManager8MaintainRelationshipsTask" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-0_MaintainRelationshipsCommandInput" name="MaintainRelationshipsCommand" />
+        <dataInput id="_jbpm-unique-0_AsyncInput" name="Async" />
+        <dataInput id="_jbpm-unique-0_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-0_MaintainRelationshipsCommandInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-0_AsyncInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-0_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>maintainRelationshipsCommand</sourceRef>
+        <targetRef>_jbpm-unique-0_MaintainRelationshipsCommandInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-0_AsyncInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-0_AsyncInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-0_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-0_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_67-_69" sourceRef="_67" targetRef="_69" name="Failure" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_29-_70" sourceRef="_29" targetRef="_70" />
+    <sequenceFlow id="_23-_71" sourceRef="_23" targetRef="_71" />
+    <sequenceFlow id="_37-_64" sourceRef="_37" targetRef="_64" />
+    <sequenceFlow id="_63-_64" sourceRef="_63" targetRef="_64" name="Nothing to Do" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_33-_4" sourceRef="_33" targetRef="_4" name="Transcode Complete" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_36-_65" sourceRef="_36" targetRef="_65" name="Transcode" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_64-_66" sourceRef="_64" targetRef="_66" />
+    <sequenceFlow id="_49-_67" sourceRef="_49" targetRef="_67" />
+    <sequenceFlow id="_1-_76" sourceRef="_1" targetRef="_76" />
+    <sequenceFlow id="_jbpm-unique-1-_72" sourceRef="_jbpm-unique-1" targetRef="_72" />
+    <sequenceFlow id="_jbpm-unique-0-_73" sourceRef="_jbpm-unique-0" targetRef="_73" />
+    <sequenceFlow id="_67-_74" sourceRef="_67" targetRef="_74" name="Success" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "SUCCESS".equals(exitStatus); </conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_57-_75" sourceRef="_57" targetRef="_75" name="No More" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_22-_23" sourceRef="_22" targetRef="_23" />
+    <sequenceFlow id="_30-_22" sourceRef="_30" targetRef="_22" />
+    <sequenceFlow id="_76-_24" sourceRef="_76" targetRef="_24" />
+    <sequenceFlow id="_76-_29" sourceRef="_76" targetRef="_29" />
+    <sequenceFlow id="_74-_30" sourceRef="_74" targetRef="_30" />
+    <sequenceFlow id="_33-_34" sourceRef="_33" targetRef="_34" name="More to Transcode" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return TranscodeHelper.moreToTranscode(kcontext);
+</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_51-_34" sourceRef="_51" targetRef="_34" />
+    <sequenceFlow id="_63-_35" sourceRef="_63" targetRef="_35" name="Content to Process" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return sourceSubcontent != null &amp;&amp; !termWrapperList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_66-_33" sourceRef="_66" targetRef="_33" />
+    <sequenceFlow id="_34-_38" sourceRef="_34" targetRef="_38" />
+    <sequenceFlow id="_35-_36" sourceRef="_35" targetRef="_36" />
+    <sequenceFlow id="_36-_37" sourceRef="_36" targetRef="_37" name="Being Transcoded" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return TranscodeHelper.isAlreadyTranscoding(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_44-_37" sourceRef="_44" targetRef="_37" name="No More Transcodes" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_60-_44" sourceRef="_60" targetRef="_44" />
+    <sequenceFlow id="_70-_45" sourceRef="_70" targetRef="_45" />
+    <sequenceFlow id="_65-_58" sourceRef="_65" targetRef="_58" />
+    <sequenceFlow id="_73-_58" sourceRef="_73" targetRef="_58" />
+    <sequenceFlow id="_24-_51" sourceRef="_24" targetRef="_51" />
+    <sequenceFlow id="_38-_63" sourceRef="_38" targetRef="_63" />
+    <sequenceFlow id="_44-_49" sourceRef="_44" targetRef="_49" name="More Transcodes" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !transcodeWrapperList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_57-_56" sourceRef="_57" targetRef="_56" name="More Transcoded Profiles" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !transcodedSubcontentList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_72-_60" sourceRef="_72" targetRef="_60" />
+    <sequenceFlow id="_75-_60" sourceRef="_75" targetRef="_60" />
+    <sequenceFlow id="_58-_57" sourceRef="_58" targetRef="_57" />
+    <sequenceFlow id="_71-_jbpm-unique-1" sourceRef="_71" targetRef="_jbpm-unique-1" />
+    <sequenceFlow id="_56-_jbpm-unique-0" sourceRef="_56" targetRef="_jbpm-unique-0" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.transcode.Transcode" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="264" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_69" >
+        <dc:Bounds x="720" y="1476" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_70" >
+        <dc:Bounds x="492" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_71" >
+        <dc:Bounds x="492" y="1116" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_64" >
+        <dc:Bounds x="108" y="384" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="24" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_65" >
+        <dc:Bounds x="264" y="600" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_66" >
+        <dc:Bounds x="36" y="312" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_67" >
+        <dc:Bounds x="564" y="1476" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_76" >
+        <dc:Bounds x="336" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_72" >
+        <dc:Bounds x="492" y="972" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_73" >
+        <dc:Bounds x="492" y="672" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_74" >
+        <dc:Bounds x="492" y="1404" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_75" >
+        <dc:Bounds x="264" y="900" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_23" >
+        <dc:Bounds x="492" y="1188" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_22" >
+        <dc:Bounds x="492" y="1260" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_24" >
+        <dc:Bounds x="264" y="96" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_29" >
+        <dc:Bounds x="564" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_30" >
+        <dc:Bounds x="492" y="1332" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_34" >
+        <dc:Bounds x="336" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_35" >
+        <dc:Bounds x="264" y="456" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_33" >
+        <dc:Bounds x="108" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_38" >
+        <dc:Bounds x="264" y="312" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_36" >
+        <dc:Bounds x="336" y="528" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_37" >
+        <dc:Bounds x="108" y="528" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_44" >
+        <dc:Bounds x="336" y="1548" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_45" >
+        <dc:Bounds x="564" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_58" >
+        <dc:Bounds x="336" y="672" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_51" >
+        <dc:Bounds x="264" y="168" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_63" >
+        <dc:Bounds x="336" y="384" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_49" >
+        <dc:Bounds x="492" y="1548" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_56" >
+        <dc:Bounds x="492" y="816" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_60" >
+        <dc:Bounds x="336" y="972" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_57" >
+        <dc:Bounds x="336" y="816" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-1" >
+        <dc:Bounds x="492" y="1044" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-0" >
+        <dc:Bounds x="492" y="744" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_67-_69" >
+        <di:waypoint x="588" y="1500" />
+        <di:waypoint x="744" y="1500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_29-_70" >
+        <di:waypoint x="588" y="48" />
+        <di:waypoint x="588" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_71" >
+        <di:waypoint x="588" y="1212" />
+        <di:waypoint x="588" y="1140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_37-_64" >
+        <di:waypoint x="132" y="552" />
+        <di:waypoint x="132" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_63-_64" >
+        <di:waypoint x="360" y="408" />
+        <di:waypoint x="132" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_33-_4" >
+        <di:waypoint x="132" y="264" />
+        <di:waypoint x="48" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_36-_65" >
+        <di:waypoint x="360" y="552" />
+        <di:waypoint x="360" y="624" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_64-_66" >
+        <di:waypoint x="132" y="408" />
+        <di:waypoint x="132" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_49-_67" >
+        <di:waypoint x="588" y="1572" />
+        <di:waypoint x="588" y="1500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_76" >
+        <di:waypoint x="288" y="48" />
+        <di:waypoint x="360" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_72" >
+        <di:waypoint x="588" y="1068" />
+        <di:waypoint x="588" y="996" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-0-_73" >
+        <di:waypoint x="588" y="768" />
+        <di:waypoint x="588" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_67-_74" >
+        <di:waypoint x="588" y="1500" />
+        <di:waypoint x="588" y="1428" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_57-_75" >
+        <di:waypoint x="360" y="840" />
+        <di:waypoint x="360" y="924" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_22-_23" >
+        <di:waypoint x="588" y="1284" />
+        <di:waypoint x="588" y="1212" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_30-_22" >
+        <di:waypoint x="588" y="1356" />
+        <di:waypoint x="588" y="1284" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_76-_24" >
+        <di:waypoint x="360" y="48" />
+        <di:waypoint x="360" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_76-_29" >
+        <di:waypoint x="360" y="48" />
+        <di:waypoint x="588" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_74-_30" >
+        <di:waypoint x="588" y="1428" />
+        <di:waypoint x="588" y="1356" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_33-_34" >
+        <di:waypoint x="132" y="264" />
+        <di:waypoint x="360" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_51-_34" >
+        <di:waypoint x="360" y="192" />
+        <di:waypoint x="360" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_63-_35" >
+        <di:waypoint x="360" y="408" />
+        <di:waypoint x="360" y="480" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_66-_33" >
+        <di:waypoint x="132" y="336" />
+        <di:waypoint x="132" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_34-_38" >
+        <di:waypoint x="360" y="264" />
+        <di:waypoint x="360" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_35-_36" >
+        <di:waypoint x="360" y="480" />
+        <di:waypoint x="360" y="552" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_36-_37" >
+        <di:waypoint x="360" y="552" />
+        <di:waypoint x="132" y="552" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_44-_37" >
+        <di:waypoint x="360" y="1572" />
+        <di:waypoint x="132" y="552" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_60-_44" >
+        <di:waypoint x="360" y="996" />
+        <di:waypoint x="360" y="1572" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70-_45" >
+        <di:waypoint x="588" y="120" />
+        <di:waypoint x="588" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_65-_58" >
+        <di:waypoint x="360" y="624" />
+        <di:waypoint x="360" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_73-_58" >
+        <di:waypoint x="588" y="696" />
+        <di:waypoint x="360" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_24-_51" >
+        <di:waypoint x="360" y="120" />
+        <di:waypoint x="360" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_38-_63" >
+        <di:waypoint x="360" y="336" />
+        <di:waypoint x="360" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_44-_49" >
+        <di:waypoint x="360" y="1572" />
+        <di:waypoint x="588" y="1572" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_57-_56" >
+        <di:waypoint x="360" y="840" />
+        <di:waypoint x="588" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_72-_60" >
+        <di:waypoint x="588" y="996" />
+        <di:waypoint x="360" y="996" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_75-_60" >
+        <di:waypoint x="360" y="924" />
+        <di:waypoint x="360" y="996" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_58-_57" >
+        <di:waypoint x="360" y="696" />
+        <di:waypoint x="360" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_71-_jbpm-unique-1" >
+        <di:waypoint x="588" y="1140" />
+        <di:waypoint x="588" y="1068" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_56-_jbpm-unique-0" >
+        <di:waypoint x="588" y="840" />
+        <di:waypoint x="588" y="768" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

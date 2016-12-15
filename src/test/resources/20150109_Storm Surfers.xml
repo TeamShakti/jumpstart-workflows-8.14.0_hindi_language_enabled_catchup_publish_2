@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"
+		xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"
+		xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"
+		xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"
+		xmlns:irdetotypes="http://www.irdeto.com/schemas/types/1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd 
+			urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd 
+			urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd 
+			urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd 
+			urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd 
+			http://www.irdeto.com/schemas/types/1.0 Irdeto-ADI-3_0-types-extension.xsd
+			http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">
+	<Asset xsi:type="offer:OfferType" uriId="irdeto.com/Offer/201500018OFFER001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">
+		<offer:Presentation>
+			<offer:CategoryRef uriId="irdeto.com/Category/Irdeto/Movies A-Z" />
+			<offer:DisplayAsNew>P7D</offer:DisplayAsNew>
+			<offer:DisplayAsLastChance>P7D</offer:DisplayAsLastChance>
+		</offer:Presentation>
+		<offer:PromotionalContentGroupRef uriId="irdeto.com/ContentGroup/201300018" />    
+		<offer:ProviderContentTier>Irdeto1</offer:ProviderContentTier>
+		<offer:BillingId>98765</offer:BillingId>
+		<offer:TermsRef uriId="irdeto.com/Terms/201500018TERMS001" />
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/201500018" />    
+	</Asset>
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/201500018001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<core:AlternateId identifierSystem="ISAN">1881-66C7-3420-000-7-9F3A-02450-U</core:AlternateId>
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>
+		<core:Provider>HBO</core:Provider>
+		<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Storm Surfers</title:TitleSortName>    
+			<title:TitleBrief>Storm Surfers</title:TitleBrief>    
+			<title:TitleMedium>Storm Surfers</title:TitleMedium>    
+			<title:TitleLong>Storm Surfers</title:TitleLong>    
+			<title:SummaryShort>"Storm Surfers" is a thrilling one-hour television documentary following two Aussie legends of big wave surfing , Ross Clarke-Jones and Tom Carroll  as they risk life and limb to hunt the biggest waves of the Australian 2008 winter season.</title:SummaryShort>  
+            <title:SummaryMedium>"Storm Surfers" is a thrilling one-hour television documentary following two Aussie legends of big wave surfing , Ross Clarke-Jones and Tom Carroll  as they risk life and limb to hunt the biggest waves of the Australian 2008 winter season.</title:SummaryMedium>    			
+			<title:SummaryLong>"Storm Surfers" is a thrilling one-hour television documentary following two Aussie legends of big wave surfing , Ross Clarke-Jones and Tom Carroll  as they risk life and limb to hunt the biggest waves of the Australian 2008 winter season.
+ Ross and Tom team with leading surf forecaster and meteorologist Ben Matson to track and chase the largest storms in the Southern Ocean. They have their eye on surfing a never before ridden wave in the treacherous seas of Bass Strait called Dangerous Banks. It’s the ‘climbing-Everest’ of big wave surfing. In a nail-biting adventure that takes the viewer from Tasmania to Western Australia, we see behind the scenes of big wave surfing, witness Ross and Tom come close to death in near freezing waters and in a world first, employ cutting-edge GPS technology to measure the forces on their bodies in a wipeout from a wave the size of a house. In the end they finally get their chance to surf Dangerous Banks, a remote open ocean break 35kms out to sea  and uncover its mystery on camera, to see just how big it really is.
+
+Storm Surfers combines action and science using the latest innovations in High Definition technology and sound to put the viewer right in the drivers seat.</title:SummaryLong>    
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgrd, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgrd" firstName="Alexander" lastName="Skarsgrd" sortableName="Skarsgrd,Alexander" />
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+			<title:Director fullName="Chris Nelius" firstName="Chris" lastName="Nelius" sortableName="Chris Nelius" />    
+			<title:StudioDisplay>HBO</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>	
+			<!-- <title:EpisodeName>Episode 1</title:EpisodeName>  --> 
+			<!-- <title:EpisodeID>1</title:EpisodeID>			   --> 
+			
+	<!--      <title:Chapter heading="Opening Scene" timeCode="00:00:02:00" />
+		      <title:Chapter heading="They Meet" timeCode="00:15:12:00" />
+		      <title:Chapter heading="The Collision" timeCode="02:03:06:00" />
+		      <title:Chapter heading="She Goes Under" timeCode="02:55:15:00" />
+		      <title:Chapter heading="Final Scene" timeCode="03:02:09:00" />	-->
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+<!--    <title:Advisory>AL</title:Advisory>
+		<title:Advisory>N</title:Advisory>-->
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:52:00</title:DisplayRunTime>
+		<title:Year>2015</title:Year>
+		<title:CountryOfOrigin>Australia</title:CountryOfOrigin>
+		<title:Genre>Drama</title:Genre>    
+		<title:ShowType>Movie</title:ShowType>    
+		<title:IsEncryptionRequired>false</title:IsEncryptionRequired>
+		<!--    <title:BoxOffice>1835000000</title:BoxOffice> -->
+		<!--    <title:ProgrammerCallLetters>IND</title:ProgrammerCallLetters> -->
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/201500018"
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" 
+			endDateTime="2015-12-31T11:59:59Z">    
+		<offer:TitleRef uriId="irdeto.com/Title/201500018001" />    
+		<offer:MovieRef uriId="irdeto.com/Movie/201500018002" />    
+		<!-- no preview/trailer <offer:PreviewRef uriId="irdeto.com/Preview/201500018003" /> -->   
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201500018004-01" />
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201500018004-02" />
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201500018004-03" />		
+		<offer:PosterRef uriId="irdeto.com/Poster/201500018005-01" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201500018005-02" />  
+		<offer:PosterRef uriId="irdeto.com/Poster/201500018005-03" />  
+		<offer:PosterRef uriId="irdeto.com/Poster/201500018005-04" />  
+		<offer:PosterRef uriId="irdeto.com/Poster/201500018005-05" />  		
+	</Asset>
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/201500018TERMS001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<terms:ContractName>Subscription</terms:ContractName>
+		<terms:SubscriberViewLimit startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-02-28T23:59:59Z"
+				maximumViews="5"/>
+		<terms:SubscriberViewLimit startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T23:59:59Z"
+				maximumViews="6"/>
+		<terms:SuggestedPrice>1.00</terms:SuggestedPrice>
+	</Asset>
+	<Asset xsi:type="offer:CategoryType" uriId="irdeto.com/Category/Irdeto/Movies A-Z" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">
+		<offer:CategoryPath>Irdeto/Movies A-Z</offer:CategoryPath>
+	</Asset>
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Movie/201500018002" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2014-01-11T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<content:SourceUrl>201500018002-Movie-en_US.mov</content:SourceUrl>
+		<content:ContentFileSize>3918446</content:ContentFileSize>
+		<content:ContentCheckSum>a80158363800ce60de3d957cdb7bea96</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H52M00S</content:Duration>    
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:Subtitle uriId="irdeto.com/Subtitles/201500018002">
+			<irdetotypes:SubtitleLanguage>en_US</irdetotypes:SubtitleLanguage>
+			<irdetotypes:SourceUrl>201500018002-Movie-en_US.subtitles</irdetotypes:SourceUrl>
+			<irdetotypes:ContentFileSize>500</irdetotypes:ContentFileSize>
+			<irdetotypes:ContentCheckSum>a80158363800ce60de3d957cdb7bea96</irdetotypes:ContentCheckSum>
+		</content:Subtitle>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+	</Asset>
+
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201500018004-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<content:SourceUrl>201500018004-BoxCover-320-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>164583</content:ContentFileSize>
+		<content:ContentCheckSum>bd6d349680eb4b1d0b776925092a5f24</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>223</content:X_Resolution>
+		<content:Y_Resolution>320</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201500018004-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<content:SourceUrl>201500018004-BoxCover-480-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>353214</content:ContentFileSize>
+		<content:ContentCheckSum>df83ad834c8ca0cd0b3c235ec18687be</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>334</content:X_Resolution>
+		<content:Y_Resolution>480</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201500018004-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<content:SourceUrl>201500018004-BoxCover-640-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>187200</content:ContentFileSize>
+		<content:ContentCheckSum>87bf6a0a998f36d54df1aa05dcd7d24d</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>446</content:X_Resolution>
+		<content:Y_Resolution>640</content:Y_Resolution>
+	</Asset>
+	
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201500018005-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<content:SourceUrl>201500018005-Poster-144-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>60802</content:ContentFileSize>
+		<content:ContentCheckSum>449ce4a8e435d661aee86aacf747b833</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>256</content:X_Resolution>
+		<content:Y_Resolution>144</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201500018005-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<content:SourceUrl>201500018005-Poster-360-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>327239</content:ContentFileSize>
+		<content:ContentCheckSum>02a81ba4cd1c88ebe52f01c3caa327ef</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>640</content:X_Resolution>
+		<content:Y_Resolution>360</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201500018005-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<content:SourceUrl>201500018005-Poster-648-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>868907</content:ContentFileSize>
+		<content:ContentCheckSum>329546d4531fd2757b43dc0954ff831a</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1152</content:X_Resolution>
+		<content:Y_Resolution>648</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201500018005-04" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<content:SourceUrl>201500018005-Poster-720-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>1020675</content:ContentFileSize>
+		<content:ContentCheckSum>f17bf41faa189a022dee18ad9e7700d2</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1280</content:X_Resolution>
+		<content:Y_Resolution>720</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201500018005-05" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2015-12-31T11:59:59Z">    
+		<content:SourceUrl>201500018005-Poster-1080-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>1794336</content:ContentFileSize>
+		<content:ContentCheckSum>3d8c34c3c945caccaff67306d0d9f467</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1920</content:X_Resolution>
+		<content:Y_Resolution>1080</content:Y_Resolution>
+	</Asset>
+
+	
+</ADI3>

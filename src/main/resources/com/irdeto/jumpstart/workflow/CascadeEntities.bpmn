@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_entityTypeItem" structureRef="String" />
+  <itemDefinition id="_relatedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_uriIdItem" structureRef="String" />
+  <itemDefinition id="_relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_relatedEntityEternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+
+  <itemDefinition id="_81-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_81-entityIdItem" structureRef="String" />
+  <itemDefinition id="_81-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_81-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_81-relatedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_81-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_81-uriIdItem" structureRef="String" />
+  <itemDefinition id="_81-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_81-relatedEntityEternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_81-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_81-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_81-exitMessageItem" structureRef="String" />
+
+  <itemDefinition id="_83-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_83-entityIdItem" structureRef="String" />
+  <itemDefinition id="_83-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_83-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_83-relatedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_83-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_83-uriIdItem" structureRef="String" />
+  <itemDefinition id="_83-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_83-relatedEntityEternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_83-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_83-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_83-exitMessageItem" structureRef="String" />
+
+  <itemDefinition id="_82-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-entityIdItem" structureRef="String" />
+  <itemDefinition id="_82-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_82-relatedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_82-uriIdItem" structureRef="String" />
+  <itemDefinition id="_82-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-relatedEntityEternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_82-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_82-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_82-exitMessageItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.CascadeEntities" name="Cascade Entities" tns:packageName="com.irdeto.jumpstart.workflow" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="java.util.*" />
+     <tns:import name="org.jdom2.Document" />
+     <tns:import name="com.irdeto.helper.xmlmodel.JDOMDocumentHelper" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.cablelabs.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.qa.*" />
+     <tns:import name="com.irdeto.domain.operation.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.JumpstartPropertyKey" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="relationshipList" itemSubjectRef="_relationshipListItem"/>
+    <property id="entityType" itemSubjectRef="_entityTypeItem"/>
+    <property id="relatedEntityList" itemSubjectRef="_relatedEntityListItem"/>
+    <property id="eternalWorkflowDecorator" itemSubjectRef="_eternalWorkflowDecoratorItem"/>
+    <property id="uriId" itemSubjectRef="_uriIdItem"/>
+    <property id="relationshipMap" itemSubjectRef="_relationshipMapItem"/>
+    <property id="relatedEntityEternalWorkflowDecorator" itemSubjectRef="_relatedEntityEternalWorkflowDecoratorItem"/>
+    <property id="entity" itemSubjectRef="_entityItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+
+    <!-- nodes -->
+    <scriptTask id="_84" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>if (entity != null) {
+	BeanUtil.loggerManager.error(kcontext, "Error for entity {} {}: {}", entity.getType(), entity.getId(), errorMap.get("ExitMessage"));
+} else if (entityId != null &amp;&amp; entityType != null) {
+	BeanUtil.loggerManager.error(kcontext, "Error for entity {} {}: {}", entityType, entityId, errorMap.get("ExitMessage"));
+} else {
+	BeanUtil.loggerManager.error(kcontext, "Error: {}", errorMap.get("ExitMessage"));
+}
+kcontext.setVariable("exitStatus","FAILURE");
+kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <parallelGateway id="_87" name="Gateway" gatewayDirection="Diverging" />
+    <endEvent id="_86" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_81" name="Signal Related Entities" tns:taskName="ForkProcess" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>Base base = (Base)relatedEntityList.remove(0);
+kcontext.setVariable("entity",base);
+kcontext.setVariable("relatedEntityEternalWorkflowDecorator", EternalWorkflowDecoratorFactory.getInstance(base));</script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_81_eternalWorkflowDecoratorInput" name="eternalWorkflowDecorator" />
+        <dataInput id="_81_ValueInput" name="Value" />
+        <dataInput id="_81_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_81_VariableInput" name="Variable" />
+        <dataInput id="_81_EventTypeInput" name="EventType" />
+        <dataInput id="_81_ProcessIDInput" name="ProcessID" />
+        <dataInput id="_81_SingletonInput" name="Singleton" />
+        <inputSet>
+          <dataInputRefs>_81_eternalWorkflowDecoratorInput</dataInputRefs>
+          <dataInputRefs>_81_ValueInput</dataInputRefs>
+          <dataInputRefs>_81_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_81_VariableInput</dataInputRefs>
+          <dataInputRefs>_81_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_81_ProcessIDInput</dataInputRefs>
+          <dataInputRefs>_81_SingletonInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>relatedEntityEternalWorkflowDecorator</sourceRef>
+        <targetRef>_81_eternalWorkflowDecoratorInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_81_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{relatedEntityEternalWorkflowDecorator.getUriId()}</from>
+          <to xsi:type="tFormalExpression">_81_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_81_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_81_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_81_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">uriId</from>
+          <to xsi:type="tFormalExpression">_81_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_81_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">DATA_UPDATE</from>
+          <to xsi:type="tFormalExpression">_81_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_81_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{relatedEntityEternalWorkflowDecorator.getProcessId()}</from>
+          <to xsi:type="tFormalExpression">_81_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_81_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_81_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_80" name="Gateway" gatewayDirection="Converging" />
+    <intermediateCatchEvent id="_23" name="Error" >
+      <dataOutput id="_23_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_23_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_23_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <task id="_83" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_83_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_83_BatchSizeInput" name="BatchSize" />
+        <inputSet>
+          <dataInputRefs>_83_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_83_BatchSizeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_83_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_83_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_83_BatchSizeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">20</from>
+          <to xsi:type="tFormalExpression">_83_BatchSizeInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <startEvent id="_7" name="Start" />
+    <task id="_82" name="Read Related Entities" tns:taskName="CompoundRelationshipRead" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>kcontext.setVariable("exitStatus","SUCCESS");</script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <script>WorkflowHelper.getEntityListFromMap(kcontext);</script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_82_RelationshipListInput" name="RelationshipList" />
+        <dataInput id="_82_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_82_EntityTypeInput" name="EntityType" />
+        <dataInput id="_82_EntityIdInput" name="EntityId" />
+        <dataOutput id="_82_RelationshipMapOutput" name="RelationshipMap" />
+        <inputSet>
+          <dataInputRefs>_82_RelationshipListInput</dataInputRefs>
+          <dataInputRefs>_82_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_82_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_82_EntityIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_82_RelationshipMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>relationshipList</sourceRef>
+        <targetRef>_82_RelationshipListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_82_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_82_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_82_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_82_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_82_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_82_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_82_RelationshipMapOutput</sourceRef>
+        <targetRef>relationshipMap</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_25" name="End" />
+    <exclusiveGateway id="_79" name="Gateway" gatewayDirection="Diverging" />
+
+    <!-- connections -->
+    <sequenceFlow id="_23-_84" sourceRef="_23" targetRef="_84" />
+    <sequenceFlow id="_7-_87" sourceRef="_7" targetRef="_87" />
+    <sequenceFlow id="_84-_86" sourceRef="_84" targetRef="_86" />
+    <sequenceFlow id="_79-_81" sourceRef="_79" targetRef="_81" name="More to Start" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !relatedEntityList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_82-_80" sourceRef="_82" targetRef="_80" />
+    <sequenceFlow id="_83-_80" sourceRef="_83" targetRef="_80" />
+    <sequenceFlow id="_87-_23" sourceRef="_87" targetRef="_23" />
+    <sequenceFlow id="_81-_83" sourceRef="_81" targetRef="_83" />
+    <sequenceFlow id="_87-_82" sourceRef="_87" targetRef="_82" />
+    <sequenceFlow id="_79-_25" sourceRef="_79" targetRef="_25" name="All Started" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_80-_79" sourceRef="_80" targetRef="_79" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.CascadeEntities" >
+      <bpmndi:BPMNShape bpmnElement="_84" >
+        <dc:Bounds x="480" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_87" >
+        <dc:Bounds x="96" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_86" >
+        <dc:Bounds x="552" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_81" >
+        <dc:Bounds x="252" y="240" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_80" >
+        <dc:Bounds x="96" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_23" >
+        <dc:Bounds x="552" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_83" >
+        <dc:Bounds x="252" y="168" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="24" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_82" >
+        <dc:Bounds x="24" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_25" >
+        <dc:Bounds x="96" y="324" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_79" >
+        <dc:Bounds x="96" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_23-_84" >
+        <di:waypoint x="576" y="48" />
+        <di:waypoint x="576" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_87" >
+        <di:waypoint x="48" y="48" />
+        <di:waypoint x="120" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_84-_86" >
+        <di:waypoint x="576" y="120" />
+        <di:waypoint x="576" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_79-_81" >
+        <di:waypoint x="120" y="264" />
+        <di:waypoint x="348" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_82-_80" >
+        <di:waypoint x="120" y="120" />
+        <di:waypoint x="120" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_83-_80" >
+        <di:waypoint x="348" y="192" />
+        <di:waypoint x="120" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_87-_23" >
+        <di:waypoint x="120" y="48" />
+        <di:waypoint x="576" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_81-_83" >
+        <di:waypoint x="348" y="264" />
+        <di:waypoint x="348" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_87-_82" >
+        <di:waypoint x="120" y="48" />
+        <di:waypoint x="120" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_79-_25" >
+        <di:waypoint x="120" y="264" />
+        <di:waypoint x="120" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_80-_79" >
+        <di:waypoint x="120" y="192" />
+        <di:waypoint x="120" y="264" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

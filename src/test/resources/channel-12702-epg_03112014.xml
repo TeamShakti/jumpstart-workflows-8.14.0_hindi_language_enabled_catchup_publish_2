@@ -1,0 +1,1687 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<tv generator-info-name="epgs.com">
+	<channel id="12702">
+		<display-name lang="en">E! Entertainment</display-name>
+		<icon src="http://akamai-amg-hls.jumpstart.irdeto.com/HLS/logo/entertainment.png" />
+	</channel>
+	<programme channel="12702" start="20141103050000 +0200" stop="20141103053000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141103</date>
+	</programme>
+	<programme channel="12702" start="20141103053000 +0200" stop="20141103060000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141103</date>
+	</programme>
+	<programme channel="12702" start="20141103060000 +0200" stop="20141103070000 +0200">
+		<title lang="en">Tia and Tamera</title>
+		<sub-title lang="en">Bye-Bye Baby Belly</sub-title>
+		<desc lang="en">Feeling crowded in her condo, Tamera thinks it might be time to move, and Tia struggles with her body-image while carrying those last stubborn pregnancy pounds.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141103070000 +0200" stop="20141103080000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141103080000 +0200" stop="20141103083000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#satsonthebeach</sub-title>
+		<desc lang="en">After a heartbreak, Frankie and Vanessa try to push Mollie to meet a new man. Una worries about Rochelle after she goes on a shopping spree that spirals out of control.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141103083000 +0200" stop="20141103090000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#deepfriedsats</sub-title>
+		<desc lang="en">The Saturdays meet up with their friends, The Wanted at the L.A County fair to take in some extreme American culture.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141103090000 +0200" stop="20141103093000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103093000 +0200" stop="20141103103000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Thailand Vacation Part 2</sub-title>
+		<desc lang="en">The family vacation continues to go south when the family discovers that Kendall and Kylie have run off and disappeared in Thailand. Meanwhile, Khloé begins to crumble under the pressure of feeling that everyone expects her to be Rob&#039;s keeper, and Brody plots revenge when the family teases him about being aroused by Kim&#039;s sexy selfie shoot.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103103000 +0200" stop="20141103113000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Thailand Vacation Part 3</sub-title>
+		<desc lang="en">When the family visits an orphanage in Thailand, Kim builds a connection with a young girl and struggles to find ways to enrich and better her life. Meanwhile, in light of Khloé&#039;s recent personal drama and heartbreak, Brody and Brandon take it upon themselves to cheer her up and embark on a manhunt to find her a vacation fling.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103113000 +0200" stop="20141103123000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 917</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103123000 +0200" stop="20141103130000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">#richkidsreturn</sub-title>
+		<desc lang="en">Dorothy invites her friends to her father&#039;s retail center grand opening in China. Morgan feels that Brendan is not making her a priority.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103130000 +0200" stop="20141103133000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">#chinabound</sub-title>
+		<desc lang="en">When Dorothy&#039;s boyfriend bails on their VIP trip to China, her friends try to convince her that she deserves better. Roxy&#039;s online romance hits a road block.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103133000 +0200" stop="20141103140000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">#ShanghaiShowdown</sub-title>
+		<desc lang="en">In Shanghai, Roxy throws a tantrum which escalates into an argument between her and Dorothy. A visit to a local school forces Morgan to deal with some unresolved family issues.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103140000 +0200" stop="20141103143000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">#InstaDrama</sub-title>
+		<desc lang="en">Morgan gets into a fight with her mom about a photo she posted from China. Meanwhile, Dorothy deals with her own drama when Cooper breaks up with her unexpectedly.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103143000 +0200" stop="20141103150000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">#BaldEagle</sub-title>
+		<desc lang="en">Brendan considers getting hair plugs to combat his insecurities about balding. Roxy attempts to repair her friendship with Dorothy after learning about her breakup with Cooper.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103150000 +0200" stop="20141103160000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141103160000 +0200" stop="20141103170000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 918</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103170000 +0200" stop="20141103173000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Total Divas After Party</sub-title>
+		<desc lang="en">The cast comes together in the mid-season reunion to discuss the highs and lows of Season 1 so far.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103173000 +0200" stop="20141103180000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103180000 +0200" stop="20141103190000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141103190000 +0200" stop="20141103200000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 918</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103200000 +0200" stop="20141103210000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">New. Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103210000 +0200" stop="20141103220000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Summer Slam</sub-title>
+		<desc lang="en">New. Nikki begins to feel threatened when Eva Marie becomes increasingly popular. Ariane has trouble controlling her temper. Nattie is embarrassed after an in-ring incident. John&#039;s attitude becomes suspicious due to his elbow injury.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141103220000 +0200" stop="20141103223000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">Richkids Of Beverly Hills 206</sub-title>
+		<desc lang="en">New. Docu-series following the over-the-top rich kids of Beverly Hills.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103223000 +0200" stop="20141103233000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">New. Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141103233000 +0200" stop="20141104003000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104003000 +0200" stop="20141104010000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141103</date>
+	</programme>
+	<programme channel="12702" start="20141104010000 +0200" stop="20141104013000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141103</date>
+	</programme>
+	<programme channel="12702" start="20141104013000 +0200" stop="20141104023000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104023000 +0200" stop="20141104033000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104033000 +0200" stop="20141104040000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#satscriesandvideotape</sub-title>
+		<desc lang="en">A blow up between Vanessa and her boyfriend leads to a very rocky music video shoot for the band&#039;s first US single.</desc>
+		<date>20141103</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104040000 +0200" stop="20141104043000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141103</date>
+	</programme>
+	<programme channel="12702" start="20141104043000 +0200" stop="20141104050000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141103</date>
+	</programme>
+	<programme channel="12702" start="20141104050000 +0200" stop="20141104053000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141104</date>
+	</programme>
+	<programme channel="12702" start="20141104053000 +0200" stop="20141104060000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141104</date>
+	</programme>
+	<programme channel="12702" start="20141104060000 +0200" stop="20141104063000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Total Divas After Party</sub-title>
+		<desc lang="en">The cast comes together in the mid-season reunion to discuss the highs and lows of Season 1 so far.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104063000 +0200" stop="20141104070000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104070000 +0200" stop="20141104080000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104080000 +0200" stop="20141104090000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104090000 +0200" stop="20141104100000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104100000 +0200" stop="20141104110000 +0200">
+		<title lang="en">Kourtney and Kim Take Miami</title>
+		<sub-title lang="en">Slapped</sub-title>
+		<desc lang="en">Kourtney takes things too far when Jonathan takes Kim&#039;s side during an argument. Khloe&#039;s love for Cuban coffee puts her in a crazy situation.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104110000 +0200" stop="20141104120000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104120000 +0200" stop="20141104130000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Summer Slam</sub-title>
+		<desc lang="en">Nikki begins to feel threatened when Eva Marie becomes increasingly popular. Ariane has trouble controlling her temper. Nattie is embarrassed after an in-ring incident. John&#039;s attitude becomes suspicious due to his elbow injury.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104130000 +0200" stop="20141104133000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">The Former Mrs. Jenner</sub-title>
+		<desc lang="en">Kris decides to change her name back to Kardashian, much to Bruce&#039;s displeasure. Kim is tired of people asking if her butt is real and gets an x-ray to show the world.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104133000 +0200" stop="20141104140000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Out Of Wedlock</sub-title>
+		<desc lang="en">Kris and Kourtney come to blows when Kourtney contemplates having another child out of wedlock. Kris gets ordained to perform a friend&#039;s wedding.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104140000 +0200" stop="20141104150000 +0200">
+		<title lang="en">Big Rich Texas</title>
+		<sub-title lang="en">Crabby Women</sub-title>
+		<desc lang="en">Leslie gets upset with Melissa for meddling in Kalyn&#039;s life. Cindy confronts Dee over her harsh disciplinary methods with Shaye.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104150000 +0200" stop="20141104160000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104160000 +0200" stop="20141104170000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104170000 +0200" stop="20141104180000 +0200">
+		<title lang="en">Kourtney and Kim Take Miami</title>
+		<sub-title lang="en">See Ya Later, Alligator</sub-title>
+		<desc lang="en">Scott hits the swamps to hunt for alligators. Kim&#039;s desire to stay in fashion leads her to spend her savings. Kourtney reveals her post baby body during a photo shoot.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104180000 +0200" stop="20141104190000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104190000 +0200" stop="20141104200000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104200000 +0200" stop="20141104203000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">#BaldEagle</sub-title>
+		<desc lang="en">Brendan considers getting hair plugs to combat his insecurities about balding. Roxy attempts to repair her friendship with Dorothy after learning about her breakup with Cooper.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104203000 +0200" stop="20141104210000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">Richkids Of Beverly Hills 206</sub-title>
+		<desc lang="en">Docu-series following the over-the-top rich kids of Beverly Hills.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104210000 +0200" stop="20141104220000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141104220000 +0200" stop="20141104230000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Summer Slam</sub-title>
+		<desc lang="en">Nikki begins to feel threatened when Eva Marie becomes increasingly popular. Ariane has trouble controlling her temper. Nattie is embarrassed after an in-ring incident. John&#039;s attitude becomes suspicious due to his elbow injury.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141104230000 +0200" stop="20141105000000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105000000 +0200" stop="20141105003000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#satsonthebeach</sub-title>
+		<desc lang="en">After a heartbreak, Frankie and Vanessa try to push Mollie to meet a new man. Una worries about Rochelle after she goes on a shopping spree that spirals out of control.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105003000 +0200" stop="20141105010000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141104</date>
+	</programme>
+	<programme channel="12702" start="20141105010000 +0200" stop="20141105013000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141104</date>
+	</programme>
+	<programme channel="12702" start="20141105013000 +0200" stop="20141105023000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105023000 +0200" stop="20141105033000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105033000 +0200" stop="20141105040000 +0200">
+		<title lang="en">Celebrity Style Story</title>
+		<sub-title lang="en">Cameron Diaz</sub-title>
+		<desc lang="en">Celebrity Style Story tells the story of one celebrity&#039;s style evolution through their unforgettable hair, makeup and fashion choices.</desc>
+		<date>20141104</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105040000 +0200" stop="20141105043000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141104</date>
+	</programme>
+	<programme channel="12702" start="20141105043000 +0200" stop="20141105050000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141104</date>
+	</programme>
+	<programme channel="12702" start="20141105050000 +0200" stop="20141105053000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141105</date>
+	</programme>
+	<programme channel="12702" start="20141105053000 +0200" stop="20141105060000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141105</date>
+	</programme>
+	<programme channel="12702" start="20141105060000 +0200" stop="20141105070000 +0200">
+		<title lang="en">Jonas Brothers</title>
+		<desc lang="en">Through intimate interviews with the brothers as well as those who know them best, we will uncover the phenomenon surrounding these gifted heart throbs.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105070000 +0200" stop="20141105073000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105073000 +0200" stop="20141105080000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Total Divas After Party</sub-title>
+		<desc lang="en">The cast comes together in the mid-season reunion to discuss the highs and lows of Season 1 so far.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105080000 +0200" stop="20141105090000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105090000 +0200" stop="20141105100000 +0200">
+		<title lang="en">Tia and Tamera</title>
+		<sub-title lang="en">Bahamas Mamas</sub-title>
+		<desc lang="en">The twins head to the Bahamas to learn more about their ancestry, but while Tia chases leads, Tamera struggles to keep the trip a true vacation.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105100000 +0200" stop="20141105110000 +0200">
+		<title lang="en">Kourtney and Kim Take Miami</title>
+		<sub-title lang="en">We&#039;ll Always Have Paris</sub-title>
+		<desc lang="en">Kourtney invites Scott to Paris to reignite their relationship, but Scott doesn&#039;t notice the effort she&#039;s making.  Kim&#039;s tries to repair Jonathan and Simon&#039;s friendship.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105110000 +0200" stop="20141105120000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105120000 +0200" stop="20141105123000 +0200">
+		<title lang="en">The Two Faces Of Prince Harry</title>
+		<desc lang="en">His brother, Prince William may be next in line to the throne, (well, after Dad) but it&#039;s Lady Di&#039;s No. 2 son, who provides the spice that keeps the Windsors still juicy.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105123000 +0200" stop="20141105130000 +0200">
+		<title lang="en">Kate and Will: Happily Ever After</title>
+		<desc lang="en">We&#039;ll update this look at how Will and Kate settled into marriage with the news of her pregnancy.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105130000 +0200" stop="20141105133000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Thicker Than Water</sub-title>
+		<desc lang="en">After a big blow-up, Rob admits to Kourtney that he doesn&#039;t hang out with her anymore because he hates Scott. Kris thinks Bruce is losing his hearing.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105133000 +0200" stop="20141105140000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">The Have and The Have Nots</sub-title>
+		<desc lang="en">Bruce teaches Kendall and Kylie a lesson about how fortunate they are. Kris&#039; incontinence issues get worse, Khloe and Kourtney tease her until she does something about it</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105140000 +0200" stop="20141105150000 +0200">
+		<title lang="en">Big Rich Texas</title>
+		<sub-title lang="en">Pierced By Revenge</sub-title>
+		<desc lang="en">Kalyn goes to Whitney&#039;s boyfriend for an intimate area piercing consultation. Leslie hires Dee to redo her closet and becomes a nightmare client.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105150000 +0200" stop="20141105160000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Summer Slam</sub-title>
+		<desc lang="en">Nikki begins to feel threatened when Eva Marie becomes increasingly popular. Ariane has trouble controlling her temper. Nattie is embarrassed after an in-ring incident. John&#039;s attitude becomes suspicious due to his elbow injury.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105160000 +0200" stop="20141105170000 +0200">
+		<title lang="en">Kourtney and Kim Take Miami</title>
+		<sub-title lang="en">Babies, Lies, and Alibis Part One</sub-title>
+		<desc lang="en">Kim suspects that Scott is up to no good and hires a private detective to follow him.  Meanwhile, Kourtney considers being a surrogate for Khloe.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105170000 +0200" stop="20141105180000 +0200">
+		<title lang="en">Kourtney and Kim Take Miami</title>
+		<sub-title lang="en">Babies, Lies, and Alibis Part Two</sub-title>
+		<desc lang="en">All hell breaks loose when the family finds out that Kim hired a private detective to follow Scott.  Meanwhile, Kim reveals some big news to the family.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105180000 +0200" stop="20141105190000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105190000 +0200" stop="20141105200000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Summer Slam</sub-title>
+		<desc lang="en">Nikki begins to feel threatened when Eva Marie becomes increasingly popular. Ariane has trouble controlling her temper. Nattie is embarrassed after an in-ring incident. John&#039;s attitude becomes suspicious due to his elbow injury.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105200000 +0200" stop="20141105210000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Playing Dirty</sub-title>
+		<desc lang="en">Kris encourages Kourtney to shut down Scott&#039;s plans for their new backyard. Things get down and dirty for Kim and Khloe when they find themselves in a mud wrestling match.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105210000 +0200" stop="20141105220000 +0200">
+		<title lang="en">Botched</title>
+		<sub-title lang="en">Human Dolls</sub-title>
+		<desc lang="en">New. In the series premiere, plastic surgeons Terry Dubrow &amp; Paul Nassif treat a woman with a uni-boob, an actress who&#039;s had 6 surgeries in search of the perfect nose, and make a house call for Justin, a self-proclaimed human doll.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141105220000 +0200" stop="20141105230000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141105230000 +0200" stop="20141106000000 +0200">
+		<title lang="en">The Real Fifty Shades of Grey</title>
+		<desc lang="en">In this hour, we’ll explore the full-on firestorm known as Fifty Shades of Grey and give viewers a glimpse of just how many ‘normal’ people are living out a real-life Fifty Shades lifestyle. From hidden clubs to ho-hum suburban bedrooms, we go underground to explore the complicated relationships between Dominants and Submissives and find out why perfectly educated and seemingly well-adjusted people are attracted to this once-hush hush subculture. We’ll talk to psychologists, law enforcement and people who have lived the life – about the thrilling rush that some people experience and the dangerous depths that these relationships can sink to.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106000000 +0200" stop="20141106003000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#deepfriedsats</sub-title>
+		<desc lang="en">The Saturdays meet up with their friends, The Wanted at the L.A County fair to take in some extreme American culture.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106003000 +0200" stop="20141106010000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141105</date>
+	</programme>
+	<programme channel="12702" start="20141106010000 +0200" stop="20141106013000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141105</date>
+	</programme>
+	<programme channel="12702" start="20141106013000 +0200" stop="20141106023000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106023000 +0200" stop="20141106033000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106033000 +0200" stop="20141106040000 +0200">
+		<title lang="en">Celebrity Style Story</title>
+		<sub-title lang="en">Halle Berry</sub-title>
+		<desc lang="en">Celebrity Style Story tells the story of one celebrity&#039;s style evolution through their unforgettable hair, makeup and fashion choices.</desc>
+		<date>20141105</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106040000 +0200" stop="20141106043000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141105</date>
+	</programme>
+	<programme channel="12702" start="20141106043000 +0200" stop="20141106050000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141105</date>
+	</programme>
+	<programme channel="12702" start="20141106050000 +0200" stop="20141106053000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141106</date>
+	</programme>
+	<programme channel="12702" start="20141106053000 +0200" stop="20141106060000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141106</date>
+	</programme>
+	<programme channel="12702" start="20141106060000 +0200" stop="20141106070000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106070000 +0200" stop="20141106080000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106080000 +0200" stop="20141106090000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106090000 +0200" stop="20141106100000 +0200">
+		<title lang="en">Tia and Tamera</title>
+		<sub-title lang="en">Baring It All</sub-title>
+		<desc lang="en">Tamera orchestrates a pop-up shop benefiting a local charity while Tia struggles with posing for a bikini shoot.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106100000 +0200" stop="20141106110000 +0200">
+		<title lang="en">Kourtney and Kim Take Miami</title>
+		<sub-title lang="en">Miami Vices</sub-title>
+		<desc lang="en">Kim takes her love of detective work to another level when she works with a private eye. Kourtney&#039;s post pregnancy weight gain starts to get to her.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106110000 +0200" stop="20141106120000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106120000 +0200" stop="20141106130000 +0200">
+		<title lang="en">Life After Anna Nicole: The Larry and Dannielynn Story</title>
+		<desc lang="en">He was thrust into the spotlight because of his relationship with Anna Nicole Smith. We&#039;ll reveal how Larry Birkhead and his famous daughter Dannielynn have moved on.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106130000 +0200" stop="20141106133000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">What Happens In Vegas, Stays In Vegas</sub-title>
+		<desc lang="en">Scott Goes to Vegas and Kourtney fears he&#039;ll revert back to his old ways. Kylie and Kendall grow annoyed when Kris decides to be more involved in their lives.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106133000 +0200" stop="20141106140000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Talk To My Agent</sub-title>
+		<desc lang="en">After being humiliated on Dancing with the Stars, Kim decides she wants to learn to dance. Scott tries to become Kylie and Kendalls manager, angering Kris.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106140000 +0200" stop="20141106150000 +0200">
+		<title lang="en">Big Rich Texas</title>
+		<sub-title lang="en">Cowboy Crazy</sub-title>
+		<desc lang="en">Dee and Cindy attack each other&#039;s parenting styles. Kalyn&#039;s boy-crazy behavior gets her fired from her new job.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106150000 +0200" stop="20141106160000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106160000 +0200" stop="20141106170000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">We&#039;re Having A Baby</sub-title>
+		<desc lang="en">The family is overjoyed about Kim&#039;s pregnancy, but Kim&#039;s surprising behavior makes them wonder if she feels the same way.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106170000 +0200" stop="20141106180000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Enough Is Enough</sub-title>
+		<desc lang="en">After some nasty tabloid rumors about Kris surface, Kim and Khloe step in to defend their mother. Meanwhile, Brody tries to open up to Bruce about their past problems.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106180000 +0200" stop="20141106190000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106190000 +0200" stop="20141106193000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106193000 +0200" stop="20141106200000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">Richkids Of Beverly Hills 206</sub-title>
+		<desc lang="en">Docu-series following the over-the-top rich kids of Beverly Hills.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106200000 +0200" stop="20141106210000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Move It Or Lose It</sub-title>
+		<desc lang="en">Khloe struggles with moving out of her house and things get complicated when some of Lamar&#039;s jewelry is stolen. Bruce attempts to bond with Brody.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106210000 +0200" stop="20141106220000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141106220000 +0200" stop="20141106230000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141106230000 +0200" stop="20141107000000 +0200">
+		<title lang="en">Botched</title>
+		<sub-title lang="en">Human Dolls</sub-title>
+		<desc lang="en">In the series premiere, plastic surgeons Terry Dubrow &amp; Paul Nassif treat a woman with a uni-boob, an actress who&#039;s had 6 surgeries in search of the perfect nose, and make a house call for Justin, a self-proclaimed human doll.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107000000 +0200" stop="20141107003000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">Richkids Of Beverly Hills 206</sub-title>
+		<desc lang="en">Docu-series following the over-the-top rich kids of Beverly Hills.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107003000 +0200" stop="20141107010000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141106</date>
+	</programme>
+	<programme channel="12702" start="20141107010000 +0200" stop="20141107013000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141106</date>
+	</programme>
+	<programme channel="12702" start="20141107013000 +0200" stop="20141107023000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107023000 +0200" stop="20141107033000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107033000 +0200" stop="20141107040000 +0200">
+		<title lang="en">Celebrity Style Story</title>
+		<sub-title lang="en">Sandra Bullock</sub-title>
+		<desc lang="en">Celebrity Style Story tells the story of one celebrity&#039;s style evolution through their unforgettable hair, makeup and fashion choices.</desc>
+		<date>20141106</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107040000 +0200" stop="20141107043000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141106</date>
+	</programme>
+	<programme channel="12702" start="20141107043000 +0200" stop="20141107050000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141106</date>
+	</programme>
+	<programme channel="12702" start="20141107050000 +0200" stop="20141107053000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141107</date>
+	</programme>
+	<programme channel="12702" start="20141107053000 +0200" stop="20141107060000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141107</date>
+	</programme>
+	<programme channel="12702" start="20141107060000 +0200" stop="20141107070000 +0200">
+		<title lang="en">Will Smith</title>
+		<desc lang="en">Will Smith is a member of an extremely elite club - one of very few artists who have found great success in three media: film, television, and music.</desc>
+		<date>20141107</date>
+		<video><aspect>4:3</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107070000 +0200" stop="20141107080000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107080000 +0200" stop="20141107090000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107090000 +0200" stop="20141107100000 +0200">
+		<title lang="en">Tia and Tamera</title>
+		<sub-title lang="en">Doula Right Thing</sub-title>
+		<desc lang="en">After months of unemployment, Tia decides to fill her time planting a garden.  But when an unexpected offer comes to the table, she must make a career-changing decision.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107100000 +0200" stop="20141107110000 +0200">
+		<title lang="en">Kourtney and Kim Take Miami</title>
+		<sub-title lang="en">Lord Disick In The House</sub-title>
+		<desc lang="en">Khloe lands a hosting job on &quot;The X-Factor&quot; that turns out to be more stressful than she thought. Scott decides to give Lord Disick a royal Miami introduction.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107110000 +0200" stop="20141107120000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107120000 +0200" stop="20141107130000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107130000 +0200" stop="20141107140000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Getting To Know You</sub-title>
+		<desc lang="en">While in Bora Bora, Kourt struggles to get Scott and Rob to make up and learns the truth about Scott&#039;s drinking.  Kris&#039;s body image threaten to ruin her celebration.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107140000 +0200" stop="20141107150000 +0200">
+		<title lang="en">Big Rich Texas</title>
+		<sub-title lang="en">Immaculate Infection</sub-title>
+		<desc lang="en">When Kalyn blames Whitney for her health scare, Leslie demands that Bonnie do something about her behavior. Bonnie tries to learn more about Booger behind Whitney&#039;s back.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107150000 +0200" stop="20141107160000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107160000 +0200" stop="20141107170000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Agree To Disagree</sub-title>
+		<desc lang="en">Kris and Bruce get the family involved in their disagreement over whether or not to have a gun in the house. Kim suffers a health scare while dealing with her divorce.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107170000 +0200" stop="20141107180000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Papa, Can You Hear Me?</sub-title>
+		<desc lang="en">Bruce is forced to deal with his hearing loss. Scott hears about a woman with cancer who wants to meet him and Kris worries she might have a stalker.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107180000 +0200" stop="20141107190000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107190000 +0200" stop="20141107200000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107200000 +0200" stop="20141107210000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Thailand Vacation Part 1</sub-title>
+		<desc lang="en">The family vacation to Thailand gets off to a bumpy start when Kourtney, Scott, and Rob decide not to come, and Kris and Bruce are fighting even before the family takes off. Things get awkward when Brody walks in on Kim taking a selfie for Kanye in a nearly nude outfit.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107210000 +0200" stop="20141107220000 +0200">
+		<title lang="en">Escape Club</title>
+		<sub-title lang="en">And The Winner Is…</sub-title>
+		<desc lang="en">When eliminated club members return to vote for a winner, the reunion is hardly pleasant as the rising pressure leads to one final outburst that will change everything.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141107220000 +0200" stop="20141107230000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141107230000 +0200" stop="20141108000000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108000000 +0200" stop="20141108003000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#homesweetsats</sub-title>
+		<desc lang="en">The Saturdays take a trip home to London for business and pleasure. A sudden injury jeopardizes the girls&#039; return to the US.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108003000 +0200" stop="20141108010000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141107</date>
+	</programme>
+	<programme channel="12702" start="20141108010000 +0200" stop="20141108013000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141107</date>
+	</programme>
+	<programme channel="12702" start="20141108013000 +0200" stop="20141108023000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108023000 +0200" stop="20141108033000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108033000 +0200" stop="20141108040000 +0200">
+		<title lang="en">Celebrity Style Story</title>
+		<sub-title lang="en">Michelle Williams</sub-title>
+		<desc lang="en">Celebrity Style Story tells the story of one celebrity&#039;s style evolution through their unforgettable hair, makeup and fashion choices.</desc>
+		<date>20141107</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108040000 +0200" stop="20141108043000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141107</date>
+	</programme>
+	<programme channel="12702" start="20141108043000 +0200" stop="20141108050000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141107</date>
+	</programme>
+	<programme channel="12702" start="20141108050000 +0200" stop="20141108053000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141108</date>
+	</programme>
+	<programme channel="12702" start="20141108053000 +0200" stop="20141108060000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141108</date>
+	</programme>
+	<programme channel="12702" start="20141108060000 +0200" stop="20141108063000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108063000 +0200" stop="20141108070000 +0200">
+		<title lang="en">Khloe and Lamar</title>
+		<sub-title lang="en">Rock-A-Bye Lam Lam</sub-title>
+		<desc lang="en">Lamars insomnia begins to negatively affect Khloe. Malika breaks her biggest dating rule when she starts dating a guy with young children.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108070000 +0200" stop="20141108080000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108080000 +0200" stop="20141108090000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108090000 +0200" stop="20141108100000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Summer Slam</sub-title>
+		<desc lang="en">Nikki begins to feel threatened when Eva Marie becomes increasingly popular. Ariane has trouble controlling her temper. Nattie is embarrassed after an in-ring incident. John&#039;s attitude becomes suspicious due to his elbow injury.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108100000 +0200" stop="20141108110000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Thailand Vacation Part 1</sub-title>
+		<desc lang="en">The family vacation to Thailand gets off to a bumpy start when Kourtney, Scott, and Rob decide not to come, and Kris and Bruce are fighting even before the family takes off. Things get awkward when Brody walks in on Kim taking a selfie for Kanye in a nearly nude outfit.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108110000 +0200" stop="20141108120000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108120000 +0200" stop="20141108123000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108123000 +0200" stop="20141108130000 +0200">
+		<title lang="en">Khloe and Lamar</title>
+		<sub-title lang="en">Rock-A-Bye Lam Lam</sub-title>
+		<desc lang="en">Lamars insomnia begins to negatively affect Khloe. Malika breaks her biggest dating rule when she starts dating a guy with young children.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108130000 +0200" stop="20141108140000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108140000 +0200" stop="20141108150000 +0200">
+		<title lang="en">Big Rich Texas</title>
+		<sub-title lang="en">Meet The Boogers</sub-title>
+		<desc lang="en">Leslie throws Kalyn an upscale baptism to cure her promiscuous behavior, but things unravel when Kalyn&#039;s mom arrives.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108150000 +0200" stop="20141108160000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108160000 +0200" stop="20141108170000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Summer Slam</sub-title>
+		<desc lang="en">Nikki begins to feel threatened when Eva Marie becomes increasingly popular. Ariane has trouble controlling her temper. Nattie is embarrassed after an in-ring incident. John&#039;s attitude becomes suspicious due to his elbow injury.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108170000 +0200" stop="20141108180000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108180000 +0200" stop="20141108190000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108190000 +0200" stop="20141108193000 +0200">
+		<title lang="en">The Two Faces Of Prince Harry</title>
+		<desc lang="en">His brother, Prince William may be next in line to the throne, (well, after Dad) but it&#039;s Lady Di&#039;s No. 2 son, who provides the spice that keeps the Windsors still juicy.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108193000 +0200" stop="20141108200000 +0200">
+		<title lang="en">Kate and Will: Happily Ever After</title>
+		<desc lang="en">We&#039;ll update this look at how Will and Kate settled into marriage with the news of her pregnancy.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108200000 +0200" stop="20141108210000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Thailand Vacation Part 2</sub-title>
+		<desc lang="en">The family vacation continues to go south when the family discovers that Kendall and Kylie have run off and disappeared in Thailand. Meanwhile, Khloé begins to crumble under the pressure of feeling that everyone expects her to be Rob&#039;s keeper, and Brody plots revenge when the family teases him about being aroused by Kim&#039;s sexy selfie shoot.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108210000 +0200" stop="20141108213000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108213000 +0200" stop="20141108220000 +0200">
+		<title lang="en">The Soup</title>
+		<sub-title lang="en">The Soup 1138</sub-title>
+		<desc lang="en">Host Joel McHale takes a look at the week&#039;s hottest celeb news events and goofiest reality clips.</desc>
+		<date>20141108</date>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141108220000 +0200" stop="20141108230000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141108230000 +0200" stop="20141109000000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Summer Slam</sub-title>
+		<desc lang="en">Nikki begins to feel threatened when Eva Marie becomes increasingly popular. Ariane has trouble controlling her temper. Nattie is embarrassed after an in-ring incident. John&#039;s attitude becomes suspicious due to his elbow injury.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109000000 +0200" stop="20141109003000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#keepcalmandsatson</sub-title>
+		<desc lang="en">Una struggles over whether she should stay in London with her injured husband or return to LA with the rest of the band.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109003000 +0200" stop="20141109010000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141108</date>
+	</programme>
+	<programme channel="12702" start="20141109010000 +0200" stop="20141109013000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141108</date>
+	</programme>
+	<programme channel="12702" start="20141109013000 +0200" stop="20141109023000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109023000 +0200" stop="20141109033000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109033000 +0200" stop="20141109040000 +0200">
+		<title lang="en">Celebrity Style Story</title>
+		<sub-title lang="en">Julia Roberts</sub-title>
+		<desc lang="en">Celebrity Style Story tells the story of one celebrity&#039;s style evolution through their unforgettable hair, makeup and fashion choices.</desc>
+		<date>20141108</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109040000 +0200" stop="20141109043000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141108</date>
+	</programme>
+	<programme channel="12702" start="20141109043000 +0200" stop="20141109050000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141108</date>
+	</programme>
+	<programme channel="12702" start="20141109050000 +0200" stop="20141109053000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141109</date>
+	</programme>
+	<programme channel="12702" start="20141109053000 +0200" stop="20141109060000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141109</date>
+	</programme>
+	<programme channel="12702" start="20141109060000 +0200" stop="20141109070000 +0200">
+		<title lang="en">Tia and Tamera</title>
+		<sub-title lang="en">Too Much Napa Whine</sub-title>
+		<desc lang="en">Tamera is under the gun as she tries to get her Napa house ready for her housewarming party, and Tia leaves Cree behind for the first time when she heads to Napa.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109070000 +0200" stop="20141109080000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109080000 +0200" stop="20141109090000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Summer Slam</sub-title>
+		<desc lang="en">Nikki begins to feel threatened when Eva Marie becomes increasingly popular. Ariane has trouble controlling her temper. Nattie is embarrassed after an in-ring incident. John&#039;s attitude becomes suspicious due to his elbow injury.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109090000 +0200" stop="20141109100000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Loving and Letting Go</sub-title>
+		<desc lang="en">Kris and Bruce have major decisions to make concerning their future together. Meanwhile, Khloe continues to deal with her changing relationship with Lamar.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109100000 +0200" stop="20141109110000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">How To Deal</sub-title>
+		<desc lang="en">Khloe is hurt by an interview which contains negative comments about her and her family. Kris gets Jonathan to sneak away from Kim for a trip to Sonoma.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109110000 +0200" stop="20141109120000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">and All That Jazzzzzzz</sub-title>
+		<desc lang="en">Khloe doesn&#039;t feel comfortable in her house so Rob invites her to move in with him.  Kris gets bitten by the Broadway bug and starts taking singing and dancing lessons.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109120000 +0200" stop="20141109130000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Surprise Engagement Part 1</sub-title>
+		<desc lang="en">The family hears about a surprise Kanye is planning for Kim&#039;s birthday. Kris goes into panic mode when she learns Kim&#039;s house is delayed.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109130000 +0200" stop="20141109140000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Surprise Engagement Part 2</sub-title>
+		<desc lang="en">The family gathers in San Francisco to surprise Kim on her birthday but the real surprise is Kanye proposing to Kim.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109140000 +0200" stop="20141109150000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">2 Birthdays and A Yard Sale</sub-title>
+		<desc lang="en">Kourtney attempts to organize a family yard sale. Kendall prepares for her 18th birthday, while Bruce tries to pretend his upcoming birthday is no big deal.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109150000 +0200" stop="20141109160000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">The Courage To Change</sub-title>
+		<desc lang="en">Khloe must make a choice about her relationship with Lamar. Kourtney takes Scott on a getaway to a spa in Arizona and Rob receives troubling news about his health.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109160000 +0200" stop="20141109170000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Let It Go</sub-title>
+		<desc lang="en">The family tries to get to the bottom of Kourtney&#039;s lack of emotions. Meanwhile, Khloe accepts an offer on her house but doesn&#039;t want to start packing.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109170000 +0200" stop="20141109180000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Color Me Lonely</sub-title>
+		<desc lang="en">Kris goes overboard trying to make sure Bruce isn&#039;t getting lonely now that they are separated. Scott and Kourtney inherit a painting that might be worth millions.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109180000 +0200" stop="20141109190000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141109190000 +0200" stop="20141109193000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">#BaldEagle</sub-title>
+		<desc lang="en">Brendan considers getting hair plugs to combat his insecurities about balding. Roxy attempts to repair her friendship with Dorothy after learning about her breakup with Cooper.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109193000 +0200" stop="20141109200000 +0200">
+		<title lang="en">#Richkids Of Beverly Hills</title>
+		<sub-title lang="en">Richkids Of Beverly Hills 206</sub-title>
+		<desc lang="en">Docu-series following the over-the-top rich kids of Beverly Hills.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109200000 +0200" stop="20141109210000 +0200">
+		<title lang="en">Botched</title>
+		<sub-title lang="en">Human Dolls</sub-title>
+		<desc lang="en">In the series premiere, plastic surgeons Terry Dubrow &amp; Paul Nassif treat a woman with a uni-boob, an actress who&#039;s had 6 surgeries in search of the perfect nose, and make a house call for Justin, a self-proclaimed human doll.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109210000 +0200" stop="20141109220000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109220000 +0200" stop="20141109230000 +0200">
+		<title lang="en">Untold</title>
+		<sub-title lang="en">Untold 104</sub-title>
+		<desc lang="en">Untold takes a fun and fresh approach to celebrity, pop culture and entertainment news, going behind the headlines to get the real scoop.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141109230000 +0200" stop="20141110000000 +0200">
+		<title lang="en">Escape Club</title>
+		<sub-title lang="en">And The Winner Is…</sub-title>
+		<desc lang="en">When eliminated club members return to vote for a winner, the reunion is hardly pleasant as the rising pressure leads to one final outburst that will change everything.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110000000 +0200" stop="20141110003000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110003000 +0200" stop="20141110010000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141109</date>
+	</programme>
+	<programme channel="12702" start="20141110010000 +0200" stop="20141110013000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141109</date>
+	</programme>
+	<programme channel="12702" start="20141110013000 +0200" stop="20141110023000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110023000 +0200" stop="20141110033000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110033000 +0200" stop="20141110040000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#satsonthebeach</sub-title>
+		<desc lang="en">After a heartbreak, Frankie and Vanessa try to push Mollie to meet a new man. Una worries about Rochelle after she goes on a shopping spree that spirals out of control.</desc>
+		<date>20141109</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110040000 +0200" stop="20141110043000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141109</date>
+	</programme>
+	<programme channel="12702" start="20141110043000 +0200" stop="20141110050000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141109</date>
+	</programme>
+	<programme channel="12702" start="20141110050000 +0200" stop="20141110053000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141110</date>
+	</programme>
+	<programme channel="12702" start="20141110053000 +0200" stop="20141110060000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141110</date>
+	</programme>
+	<programme channel="12702" start="20141110060000 +0200" stop="20141110070000 +0200">
+		<title lang="en">Tia and Tamera</title>
+		<sub-title lang="en">Are You Pregnant?</sub-title>
+		<desc lang="en">Tamera makes a thrilling discovery, but then has to keep it a secret from her twin and Tia has to get new eyeglasses while preparing for her first book tour.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110070000 +0200" stop="20141110080000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110080000 +0200" stop="20141110083000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#satsandthecity</sub-title>
+		<desc lang="en">The Saturdays take New York Fashion Week by storm where Vanessa and Una reconnect during a wild night out.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110083000 +0200" stop="20141110090000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#homesweetsats</sub-title>
+		<desc lang="en">The Saturdays take a trip home to London for business and pleasure. A sudden injury jeopardizes the girls&#039; return to the US.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110090000 +0200" stop="20141110100000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Color Me Lonely</sub-title>
+		<desc lang="en">Kris goes overboard trying to make sure Bruce isn&#039;t getting lonely now that they are separated. Scott and Kourtney inherit a painting that might be worth millions.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110100000 +0200" stop="20141110110000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Doggy Blu&#039;s</sub-title>
+		<desc lang="en">Khloe sees her bad behavior rubbing off on her sweet little sister. Meanwhile, Kendall&#039;s lack of responsibility for her dog leaves her and Kris in a messy situation.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110110000 +0200" stop="20141110120000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">The Vienna Incidents</sub-title>
+		<desc lang="en">A trip to Vienna proves to be an eye opening experience for Kim and Kris as they encounter some shocking racist remarks.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110120000 +0200" stop="20141110130000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Playing Dirty</sub-title>
+		<desc lang="en">Kris encourages Kourtney to shut down Scott&#039;s plans for their new backyard. Things get down and dirty for Kim and Khloe when they find themselves in a mud wrestling match.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110130000 +0200" stop="20141110140000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Move It Or Lose It</sub-title>
+		<desc lang="en">Khloe struggles with moving out of her house and things get complicated when some of Lamar&#039;s jewelry is stolen. Bruce attempts to bond with Brody.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110140000 +0200" stop="20141110150000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Thailand Vacation Part 1</sub-title>
+		<desc lang="en">The family vacation to Thailand gets off to a bumpy start when Kourtney, Scott, and Rob decide not to come, and Kris and Bruce are fighting even before the family takes off. Things get awkward when Brody walks in on Kim taking a selfie for Kanye in a nearly nude outfit.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110150000 +0200" stop="20141110160000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Thailand Vacation Part 2</sub-title>
+		<desc lang="en">The family vacation continues to go south when the family discovers that Kendall and Kylie have run off and disappeared in Thailand. Meanwhile, Khloé begins to crumble under the pressure of feeling that everyone expects her to be Rob&#039;s keeper, and Brody plots revenge when the family teases him about being aroused by Kim&#039;s sexy selfie shoot.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110160000 +0200" stop="20141110170000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">A Thailand Vacation Part 3</sub-title>
+		<desc lang="en">When the family visits an orphanage in Thailand, Kim builds a connection with a young girl and struggles to find ways to enrich and better her life. Meanwhile, in light of Khloé&#039;s recent personal drama and heartbreak, Brody and Brandon take it upon themselves to cheer her up and embark on a manhunt to find her a vacation fling.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110170000 +0200" stop="20141110180000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 917</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110180000 +0200" stop="20141110190000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 918</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110190000 +0200" stop="20141110200000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 919</sub-title>
+		<desc lang="en">Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110200000 +0200" stop="20141110213000 +0200">
+		<title lang="en">Keeping Up With The Kardashians</title>
+		<sub-title lang="en">Keeping Up With The Kardashians 920</sub-title>
+		<desc lang="en">New. Follow the one-of-a-kind family of Kim, Kourtney, Khloe, Kendall, Kylie, their mom Kris, as well as their group of celebrity pals.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110213000 +0200" stop="20141110223000 +0200">
+		<title lang="en">Total Divas</title>
+		<sub-title lang="en">Nurse Nikki</sub-title>
+		<desc lang="en">New. Nikki decides to move in with John. Eva considers cheating when she is asked to be an announcer on live television. Trinity convinces Jon to get his toe checked out.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141110223000 +0200" stop="20141110233000 +0200">
+		<title lang="en">Fashion Police</title>
+		<desc lang="en">New. Out-spoken, candid and always hilarious, the inimitable Joan Rivers, Kelly Osbourne and the fashion team deliver their verdict on the week’s celebrity fashion.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141110233000 +0200" stop="20141111003000 +0200">
+		<title lang="en">Botched</title>
+		<sub-title lang="en">Human Dolls</sub-title>
+		<desc lang="en">In the series premiere, plastic surgeons Terry Dubrow &amp; Paul Nassif treat a woman with a uni-boob, an actress who&#039;s had 6 surgeries in search of the perfect nose, and make a house call for Justin, a self-proclaimed human doll.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+		<rating system="age"><value>14</value></rating>
+	</programme>
+	<programme channel="12702" start="20141111003000 +0200" stop="20141111010000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141110</date>
+	</programme>
+	<programme channel="12702" start="20141111010000 +0200" stop="20141111013000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141110</date>
+	</programme>
+	<programme channel="12702" start="20141111013000 +0200" stop="20141111023000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141111023000 +0200" stop="20141111033000 +0200">
+		<title lang="en">E! News</title>
+		<desc lang="en">E! News brings you the most comprehensive, up-to-the-minute reports on the day&#039;s top entertainment stories.</desc>
+		<category lang="en">news</category>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141111033000 +0200" stop="20141111040000 +0200">
+		<title lang="en">Chasing The Saturdays</title>
+		<sub-title lang="en">#deepfriedsats</sub-title>
+		<desc lang="en">The Saturdays meet up with their friends, The Wanted at the L.A County fair to take in some extreme American culture.</desc>
+		<date>20141110</date>
+		<video><aspect>16:9</aspect></video>
+	</programme>
+	<programme channel="12702" start="20141111040000 +0200" stop="20141111043000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141110</date>
+	</programme>
+	<programme channel="12702" start="20141111043000 +0200" stop="20141111050000 +0200">
+		<title lang="en">Teleshopping</title>
+		<desc lang="en">Teleshopping</desc>
+		<date>20141110</date>
+	</programme>
+</tv>

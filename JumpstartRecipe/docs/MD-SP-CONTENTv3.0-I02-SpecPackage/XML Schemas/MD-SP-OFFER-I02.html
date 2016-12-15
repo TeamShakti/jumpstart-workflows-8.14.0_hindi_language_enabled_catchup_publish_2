@@ -1,0 +1,232 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		<style type="text/css"> body { font-family: Arial; font-size: 8pt; color: #800000; }</style>
+		<style type="text/css"> table { border-style: solid; border-width: 1px; border-left-color: #ECE9D8; border-top-color: #ECE9D8; border-right-color: #ACA899; border-bottom-color: #ACA899; }</style>
+		<style type="text/css"> th {border-style: solid; font-size: 10pt; border-width: 1px; }</style>
+		<style type="text/css"> td {border-style: solid; font-size: 8pt; border-width: 1px; }</style>
+		<style type="text/css"> a {color: blue; }</style>
+	</head>
+	<body>
+		<h2></h2>
+		<h3><a name="CategoryPathType"></a>CategoryPathType</h3>
+		<p>Value denoting a path in the target catalog (may be localized to a target language).</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="MD-SP-CORE-I01.html#LocalizableStringType">core:LocalizableStringType</a><br>maxLength=256</td>
+			</tr>
+		</table>
+		<h3><a name="CategoryType"></a>CategoryType</h3>
+		<p>An asset type used to group one or more category paths.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetType">core:AssetType</a></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>CategoryPath</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#CategoryPathType">CategoryPathType</a></td>
+				<td>A localizable path of category values that are used by the end system to put an offer or title into the catalog.</td>
+			</tr>
+		</table>
+		<h3><a name="PresentationType"></a>PresentationType</h3>
+		<p>Provides presentation instructions specific to the VOD offer used to determine menu layout and corresponding UI items.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>CategoryRef</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td>Reference to a categorypath set.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>DisplayAsNew</td>
+				<td>optional</td>
+				<td>xsd:duration</td>
+				<td>The duration of time after the startDateTime that this offer should be presented as "New" or similar.  This element MUST be explicitly provided if the presentation originated as V3.0.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>DisplayAsLastChance</td>
+				<td>optional</td>
+				<td>xsd:duration</td>
+				<td>The duration of time before the endDateTime that this offer should be presented as "Last Chance" or similar.  This element MUST be explicitly provided if the presentation originated as V3.0.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Priority</td>
+				<td>optional</td>
+				<td>xsd:int<br>minInclusive=1<br>maxInclusive=10</td>
+				<td>An integer from 1 (high) to  10 (low) that can be used to determine the presentation priority within a category</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="ContentGroupType"></a>ContentGroupType</h3>
+		<p>An asset type used to group a title with one or more media assets.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetType">core:AssetType</a></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TitleRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>MovieRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>PreviewRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>PosterRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>BoxCoverRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ThumbnailRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>BarkerRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ContentRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefBaseType">core:AssetRefBaseType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="OfferType"></a>OfferType</h3>
+		<p>An asset type combining all of the components needed to display and deliver a VOD product; including presentation, terms and content.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetType">core:AssetType</a></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Presentation</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#PresentationType">PresentationType</a></td>
+				<td>Presentation options for this offer.  Note that an offer is not required to have a presentation; that is it may not be presented in the catalog.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>PromotionalContentGroupRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td>A content group used for promotional purposes only.  This may represent a title for a movie trilogy, TV series or some other promotional package.  It is expected that this group will contain a title, still images and previews, but may not contain the movies themselves.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ProviderContentTier</td>
+				<td>optional<br>multiple</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=256</td>
+				<td>Used by the distribution system to determine the target market and/or systems for this particular offer.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SourceMetadataSpecVersion</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#DeprecatedStringType">core:DeprecatedStringType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>BillingId</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>pattern=[0-9A-Za-z]{5}</td>
+				<td>A billing ID used for this offer (in ADI1.1 this was a 5-character alphanumeric string).</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TermsRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td>A reference to terms for this offer.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ContentGroupRef</td>
+				<td>required<br>multiple</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td>A reference to one or more content groups for this offer.</td>
+			</tr>
+		</table>
+	</body>
+</html>

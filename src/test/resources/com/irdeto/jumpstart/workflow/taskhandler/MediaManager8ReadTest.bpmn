@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_responseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+
+  <itemDefinition id="_6-responseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.taskhandler.MediaManager8ReadTest" name="Media Manager 8 Read Test" tns:packageName="com.irdeto.jumpstart.workflow.taskhandler" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.publish.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="response" itemSubjectRef="_responseItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_4" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_6" name="Media Manager 8 Read Task" tns:taskName="MediaManager8ReadTask" >
+      <ioSpecification>
+        <dataInput id="_6_EntityTypeInput" name="EntityType" />
+        <dataInput id="_6_EntityIDInput" name="EntityID" />
+        <dataOutput id="_6_MM8ResponseOutput" name="MM8Response" />
+        <inputSet>
+          <dataInputRefs>_6_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_6_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_6_MM8ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_6_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_6_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_6_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">1</from>
+          <to xsi:type="tFormalExpression">_6_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_6_MM8ResponseOutput</sourceRef>
+        <targetRef>response</targetRef>
+      </dataOutputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_6-_4" sourceRef="_6" targetRef="_4" />
+    <sequenceFlow id="_1-_6" sourceRef="_1" targetRef="_6" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.taskhandler.MediaManager8ReadTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="108" y="36" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="108" y="180" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="36" y="108" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_6-_4" >
+        <di:waypoint x="132" y="132" />
+        <di:waypoint x="132" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_6" >
+        <di:waypoint x="132" y="60" />
+        <di:waypoint x="132" y="132" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

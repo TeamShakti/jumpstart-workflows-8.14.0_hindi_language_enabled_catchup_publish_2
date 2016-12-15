@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="Definition"
+             targetNamespace="http://org.eclipse.bpmn2/default/process"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_exitStatus" structureRef="String" />
+  <itemDefinition id="null" />
+  <itemDefinition id="_messageProperties" structureRef="java.util.Map" />
+  <itemDefinition id="_document" structureRef="com.irdeto.jumpstart.domain.reference.ReferenceDocument" />
+  <itemDefinition id="_errorMap" structureRef="java.util.Map" />
+  <itemDefinition id="_previousVersion" structureRef="com.irdeto.jumpstart.domain.ScheduleSlot" />
+  <itemDefinition id="_previousVersionNumber" structureRef="Integer" />
+  <itemDefinition id="_config" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_publishWrapper" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.purge.activemq.CatchUpPurge" name="CatchUp Purge" tns:packageName="com.irdeto.jumpstart.workflow.purge.activemq" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.purge.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.config.*" />
+     <tns:import name="com.irdeto.domain.operation.MM8Response" />
+     <tns:import name="com.fasterxml.jackson.databind.ObjectMapper" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="java.util.HashMap" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="com.irdeto.domain.constants.TaskHandlerConstants" />
+     <tns:import name="com.irdeto.jumpstart.workflow.purge.reference.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.jumpstart.domain.purge.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="java.util.Map" />
+     <tns:import name="java.util.Map.Entry" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.fasterxml.jackson.databind.SerializationFeature" />
+     <tns:import name="com.fasterxml.jackson.datatype.joda.JodaModule" />
+     <tns:import name="com.irdeto.jumpstart.factory.WrapperWithDestinations" />
+     <tns:import name="com.irdeto.jumpstart.workflow.purge.activemq.CatchUpPurgeHelper" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="wrapper" itemSubjectRef="_publishWrapper"/>
+    <property id="document" itemSubjectRef="_document"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatus"/>
+    <property id="errorMap" itemSubjectRef="_errorMap"/>
+    <property id="config" itemSubjectRef="_config"/>
+    <property id="messageProperties" itemSubjectRef="_messageProperties"/>
+
+    <!-- nodes -->
+    <startEvent id="StartEvent_1" name="Start Event 1"  isInterrupting="false">
+    </startEvent>
+    <parallelGateway id="_jbpm-unique-5" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <intermediateCatchEvent id="_jbpm-unique-6" name="Signal" >
+      <dataOutput id="_jbpm-unique-6_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_jbpm-unique-6_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_jbpm-unique-6_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <scriptTask id="_jbpm-unique-7" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("exitStatus", errorMap.get("ExitStatus"));
+kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <endEvent id="_jbpm-unique-8" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_jbpm-unique-0" name="Deschedule" tns:taskName="ActiveMQPost" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>CatchUpPurgeHelper.prepareDocument(kcontext);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-0_MessagePropertiesInput" name="MessageProperties" />
+        <dataInput id="_jbpm-unique-0_MessageInput" name="Message" />
+        <dataInput id="_jbpm-unique-0_ActiveMqUrlInput" name="ActiveMqUrl" />
+        <dataInput id="_jbpm-unique-0_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_jbpm-unique-0_QueueInput" name="Queue" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-0_MessagePropertiesInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-0_MessageInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-0_ActiveMqUrlInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-0_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-0_QueueInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>messageProperties</sourceRef>
+        <targetRef>_jbpm-unique-0_MessagePropertiesInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-0_MessageInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{document}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-0_MessageInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-0_ActiveMqUrlInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("activemq.publish.url")}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-0_ActiveMqUrlInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-0_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-0_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-0_QueueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("activemq.publish.catchup.queue")}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-0_QueueInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_jbpm-unique-11" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <endEvent id="_jbpm-unique-14" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <endEvent id="_jbpm-unique-15" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_jbpm-unique-16" name="Read Configuration" tns:taskName="Configuration" >
+      <ioSpecification>
+        <dataOutput id="_jbpm-unique-16_PropertyMapOutput" name="PropertyMap" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-16_PropertyMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-16_PropertyMapOutput</sourceRef>
+        <targetRef>config</targetRef>
+      </dataOutputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="StartEvent_1-_jbpm-unique-5" sourceRef="StartEvent_1" targetRef="_jbpm-unique-5" />
+    <sequenceFlow id="_jbpm-unique-5-_jbpm-unique-6" sourceRef="_jbpm-unique-5" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-6-_jbpm-unique-7" sourceRef="_jbpm-unique-6" targetRef="_jbpm-unique-7" />
+    <sequenceFlow id="_jbpm-unique-7-_jbpm-unique-8" sourceRef="_jbpm-unique-7" targetRef="_jbpm-unique-8" />
+    <sequenceFlow id="_jbpm-unique-16-_jbpm-unique-0" sourceRef="_jbpm-unique-16" targetRef="_jbpm-unique-0" />
+    <sequenceFlow id="_jbpm-unique-5-_jbpm-unique-11" sourceRef="_jbpm-unique-5" targetRef="_jbpm-unique-11" />
+    <sequenceFlow id="_jbpm-unique-11-_jbpm-unique-14" sourceRef="_jbpm-unique-11" targetRef="_jbpm-unique-14" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-0-_jbpm-unique-15" sourceRef="_jbpm-unique-0" targetRef="_jbpm-unique-15" />
+    <sequenceFlow id="_jbpm-unique-11-_jbpm-unique-16" sourceRef="_jbpm-unique-11" targetRef="_jbpm-unique-16" name="Needs Unscheduling" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return CatchUpPurgeHelper.needCatchUpPurge(wrapper);</conditionExpression>
+    </sequenceFlow>
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.purge.activemq.CatchUpPurge" >
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" >
+        <dc:Bounds x="108" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-5" >
+        <dc:Bounds x="108" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-6" >
+        <dc:Bounds x="168" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-7" >
+        <dc:Bounds x="252" y="96" width="121" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-8" >
+        <dc:Bounds x="408" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-0" >
+        <dc:Bounds x="36" y="324" width="194" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-11" >
+        <dc:Bounds x="108" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-14" >
+        <dc:Bounds x="408" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-15" >
+        <dc:Bounds x="108" y="396" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-16" >
+        <dc:Bounds x="36" y="252" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="StartEvent_1-_jbpm-unique-5" >
+        <di:waypoint x="132" y="48" />
+        <di:waypoint x="132" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_jbpm-unique-6" >
+        <di:waypoint x="132" y="120" />
+        <di:waypoint x="192" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-6-_jbpm-unique-7" >
+        <di:waypoint x="192" y="120" />
+        <di:waypoint x="312" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-7-_jbpm-unique-8" >
+        <di:waypoint x="312" y="120" />
+        <di:waypoint x="432" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-16-_jbpm-unique-0" >
+        <di:waypoint x="132" y="276" />
+        <di:waypoint x="133" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_jbpm-unique-11" >
+        <di:waypoint x="132" y="120" />
+        <di:waypoint x="132" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-11-_jbpm-unique-14" >
+        <di:waypoint x="132" y="192" />
+        <di:waypoint x="432" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-0-_jbpm-unique-15" >
+        <di:waypoint x="133" y="348" />
+        <di:waypoint x="132" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-11-_jbpm-unique-16" >
+        <di:waypoint x="132" y="192" />
+        <di:waypoint x="132" y="276" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

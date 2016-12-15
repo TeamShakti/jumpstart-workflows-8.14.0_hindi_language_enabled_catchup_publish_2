@@ -1,0 +1,1047 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>				
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"				
+		xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"		
+		xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"		
+		xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"		
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd 
+			urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd 
+			urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd 
+			urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd 
+			urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd 
+			http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">		
+	<Asset xsi:type="offer:OfferType" uriId="irdeto.com/Offer/UNVA2001081701006000" providerVersionNum="1"			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<offer:Presentation>		
+			<offer:CategoryRef uriId="irdeto.com/Category/Irdeto/Movies A-Z" />	
+			<offer:DisplayAsNew>P7D</offer:DisplayAsNew>	
+			<offer:DisplayAsLastChance>P7D</offer:DisplayAsLastChance>	
+		</offer:Presentation>		
+		<offer:PromotionalContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2001081701004001" />		
+		<offer:ProviderContentTier>Irdeto1</offer:ProviderContentTier>		
+		<offer:BillingId>56789</offer:BillingId>		
+		<offer:TermsRef uriId="irdeto.com/Terms/UNVA2001081701004001" />		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000001001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000002001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000003001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000004002" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000005001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000006001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000007001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000008001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000009001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000010001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000011001" /> 		
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000012001" /> 		
+	</Asset>			
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/UNVA2001081701006001" providerVersionNum="1"			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<terms:SubscriberViewLimit startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-02-28T23:59:59Z"		
+				maximumViews="5"/>
+		<terms:SubscriberViewLimit startDateTime="2002-03-01T00:00:00Z" endDateTime="2002-03-31T23:59:59Z"		
+				maximumViews="6"/>
+		<terms:SuggestedPrice>0.00</terms:SuggestedPrice>		
+	</Asset>			
+	<Asset xsi:type="offer:CategoryType" uriId="irdeto.com/Category/Irdeto/Movies A-Z" providerVersionNum="1"			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<offer:CategoryPath>Irdeto/Movies A-Z</offer:CategoryPath>		
+	</Asset>			
+	<!--Here starts XML specific to episode 1 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000001001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-0001-0-0000-0000-3</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>1. Turn! Turn! Turn! </title:TitleSortName>	
+			<title:TitleBrief>Turn! Turn! Turn!</title:TitleBrief>	
+			<title:TitleMedium>Turn! Turn! Turn!, the episode</title:TitleMedium>	
+			<title:TitleLong>Turn! Turn! Turn!, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Lafayette and Sookie are in the kitchen with the bodies of Tara and Debbie, when Pam appears. Sookie and Pam make a deal: if Pam resurrects Tara by turning her into a vampire with Pam's blood, Sookie will help repair Pam's relationship with Eric. </title:SummaryShort>	
+			<title:SummaryLong>Picking up immediately where Season Four left off, Lafayette and Sookie are in the kitchen with the bodies of Tara and Debbie, when Pam appears. Sookie and Pam make a deal: if Pam resurrects Tara by turning her into a vampire with Pam's blood, Sookie will help repair Pam's relationship with Eric. Meanwhile, Bill and Eric are arrested by the Vampire Authority for Nan Flanigan's murder, when Nora, Eric's 'sister' rescues them and has sex with Eric. The former Rev. Steve Newlin confronts Jason and declares he's a "Proud Gay American Vampire" and has been in love with Jason ever since he met him. Outside Merlotte's, Sam is confronted by Marcus' wolfpack, who take and torture Sam, until Alcide reveals he killed Marcus, not Sam. Meanwhile, Jessica attends a party with the local college students, when Jason arrives and becomes jealous of Jessica when he sees her with another guy. As a result of his hookup with Jessica, Jason realizes his friendship with Hoyt will never be the same again. Andy hooks up with Holly. Terry's old Marine friend, Patrick, visits a hysterical and rude Terry much to Arlene's chagrin when Terry starts yelling at her for no reason. Alcide asks Sookie to live with him due to Russell Edgington's return, but she declines the offer. Sookie and Lafayette wait for the arrival of vampire Tara to awaken when Pam digs out of the ground. An upset Sookie and Lafayette assume that it did not work and Tara is dead for good as the fanged Tara pops up and lunges for a frightened Sookie. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Brian Buckner</title:WriterDisplay>	
+		 	<title:Director fullName="Daniel Minahan" firstName="Daniel" lastName="Minahan" sortableName="Minahan, Daniel" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>true</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-06-10T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000001001" 			
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+			endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000001001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000001002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000001003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000001004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000001002" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Turn_Turn_Turn.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2001081701006003" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Save_Yourself_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>		
+		<content:DubbedLanguage>es</content:DubbedLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000001004" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Turn_Turn_Turn_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 1 -->			
+
+	<!--Here starts XML specific to episode 2 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000002001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-0002-Y-0000-0000-9</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>2. Authority Always W </title:TitleSortName>	
+			<title:TitleBrief>Authority Always…</title:TitleBrief>	
+			<title:TitleMedium>Authority Always Wins, the episode</title:TitleMedium>	
+			<title:TitleLong>Authority Always Wins, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Eric and Bill proposition that the Authority spare their lives in exchange for their assistance in stopping the former king-now-fugitive Russell Edgington. Meanwhile, Pam recalls her first meeting with Eric in early 20th-century San Francisco.</title:SummaryShort>	
+			<title:SummaryLong>Eric and Bill try to keep their wits about them when they're put through the interrogation wringer at the Vampire Authority headquarters in New Orleans. Eric and Bill proposition that the Authority spare their lives in exchange for their assistance in stopping the former king-now-fugitive Russell Edgington. Meanwhile, Pam recalls her first meeting with Eric in early 20th-century San Francisco, where she first met Eric saving her from a rapist. Alcide turns his back on Marcus' wolf pack. Emma's grandmother puts a strain on Sam and Luna's relationship because Emma's grandmother suspects Emma will become a werewolf, which turns out to be the case when Luna finds Emma as a baby werewolf. Steve Newlin wants Jessica to give Jason to him, but Jessica remands him for thinking she would give up her friends. Jason's womanizing comes back to haunt him when he tries to apologize to Hoyt about seducing Jessica, but Hoyt refuses to accept it. Hoyt's overbearing, vampire-phobic mother, Maxine, however, is secretly grateful for breaking Hoyt up with the vampire Jessica. Sookie and Lafayette have considerable difficulty keeping the newly turned Tara under control. They manage to get her in Eric's day chamber with silver before the sun rises. However, when the sun falls, Tara wakes up and runs off into the woods. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Mark Hudis</title:WriterDisplay>	
+			<title:Director fullName="Michael Lehmann" firstName="Michael" lastName="Lehmann" sortableName="Lehmann, Michael" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-06-17T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000002001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000002001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000002002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000002003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000002004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000002002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Authority_Always_Wins.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000002003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Authority_Always_Wins_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000002004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Authority_Always_Wins_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 2 -->			
+	
+	<!--Here starts XML specific to episode 3 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000003001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-0003-W-0000-0000-F</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>3. Whatever I Am, You </title:TitleSortName>	
+			<title:TitleBrief>Whatever I Am, Y…</title:TitleBrief>	
+			<title:TitleMedium>WHATEVER I AM, YOU MADE ME</title:TitleMedium>
+			<title:TitleLong>Whatever I Am, You Made Me, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Salome and Roman enlist a new ally in the face of Russell’s return. Searching for Tara, Sookie goes to Fangtasia to ask Pam for help, who is still caught up in her memories of Eric and the strange murders at the Comstock Brothel.</title:SummaryShort>	
+			<title:SummaryLong>In New Orleans, Bill and Eric barter for their lives with the Authority Chancellors and their leader, Roman. Salome and Roman enlist a new ally in the face of Russell’s return. Searching for Tara, Sookie goes to Fangtasia to ask Pam for help, who is still caught up in her memories of Eric and the strange murders at the Comstock Brothel. Tara turns to Sam for help after feeling betrayed by Sookie and Lafayette for making her a vampire. Meanwhile, Andy’s alliance with Holly comes back to bite him in the butt; later, he’s visited by Gordon and Barbara Pelt, who are searching for Debbie. Jason bumps into an old high school teacher, but their reunion brings up conflicting feelings. Sookie finally decides to tell Alcide the truth about what happened to Debbie. After storming out of Merlotte's, Tara attempts to commit suicide in a tanning salon, which is immediately felt by Pam. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Raelle Tucker</title:WriterDisplay>	
+			<title:Director fullName="David Petrarca" firstName="David" lastName="Petrarca" sortableName="Petrarca, David" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-06-24T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000003001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000003001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000003002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000003003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000003004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000003002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Whatever_I_Am_You_Made_Me</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000003003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Whatever_I_Am_You_Made_Me</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000003004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Whatever_I_Am_You_Made_Me</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 3 -->			
+	
+	<!--Here starts XML specific to episode 4 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000004002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-0004-U-0000-0000-L</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>4. We'll Meet Again </title:TitleSortName>	
+			<title:TitleBrief>We'll Meet Again…</title:TitleBrief>	
+			<title:TitleMedium>WE'LL MEET AGAIN</title:TitleMedium>	
+			<title:TitleLong>We'll Meet Again, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Eric believes her when she says that didn't tell anyone of Russell's whereabouts, but he releases her for her own protection. Bill and Eric decide to force Sookie to help them. Lafayette unwittingly puts Sookie’s life in danger using his brujo blood.</title:SummaryShort>	
+			<title:SummaryLong>Eric questions Pam regarding Russell's escape to find out what she really knows. He believes her when she says that didn't tell anyone of Russell's whereabouts, but he releases her for her own protection. Out of options, Bill and Eric decide to force Sookie to help them. An irate Lafayette unwittingly puts Sookie’s life in danger using his brujo blood. At Authority headquarters, Roman and Salome continue interrogating Nora about the Sanguinistas – and they find and execute a traitor within the Council. Meanwhile, Pam forces a reluctant Tara to embrace her nature and live as a vampire. Andy and Jason go to a burlesque party only to discover it to be a fairy brothel before getting kicked out. Sam’s shifter friends invite him for a run, only for Sam to find them mysteriously murdered. Terry flashes back to a deadly night in Iraq, before he and Patrick find the arsonist. Alcide tells Gordon and Barbara Pelt that Marcus Bozeman murdered Debbie. Afterward he finds Sookie drowning her sorrows with drinks and joins her, as they then hook up. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Alexander Woo</title:WriterDisplay>	
+			<title:Director fullName="Romeo Tirone" firstName="Romeo" lastName="Tirone" sortableName="Tirone, Romeo" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-07-01T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000004002" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000004002" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000004002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000004003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000004004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000004002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Well_Meet_Again.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000004003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Well_Meet_Again_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000004004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Well_Meet_Again_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 4 -->			
+	
+	<!--Here starts XML specific to episode 5 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000005001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-0005-S-0000-0000-R</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>5. Let's Boot and Ral </title:TitleSortName>	
+			<title:TitleBrief>Let's Boot and R…</title:TitleBrief>	
+			<title:TitleMedium>LET'S BOOT AND RALLY</title:TitleMedium>	
+			<title:TitleLong>Let's Boot and Rally, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Bill and Eric ask Sookie for her help on the search for Russell. She agrees, accepting that her life will never be normal. Unable to deal with the demon magic inside him, Lafayette calls out to Jesus’ spirit for help and wakes up to find Jesus' head. </title:SummaryShort>	
+			<title:SummaryLong>Sookie and Alcide are getting intimate as they enter her bedroom, Alcide whispers to her that he has been waiting for this for a long time, only for Sookie to then react by puking on his shoes, and is caught off guard by Bill and Eric, watching from the doorway behind them with Eric replying "Alcide, you really know how to treat a lady." Bill and Eric ask Sookie for her help on the search for Russell. She reluctantly agrees, accepting that her life will never be normal. Unable to deal with the demon magic inside him, Lafayette calls out to Jesus’ spirit for help and later wakes up to find Jesus' head with its lips sewn shut. Meanwhile, Patrick and Terry are held hostage in a bunker by their Iraq War squadmate Brian Eller, who claims that his is protecting them because an Iraqi woman they killed during the war cursed them by calling upon an Ifrit to kill them and their loved ones. Jason wakes up from a disturbing dream where his parents are having breakfast with a young Sookie and vampire marks on their necks start leaking blood. Jason and Andy are sent to investigate the murder of Sam's shifter friends. Sam warns Luna about the attacks but before he leaves, a truck with masked gunmen appear and shoot them, incapacitating both of them and Emma escapes. Terry realizes Eller is right and convinces him to free them, however, Patrick ties Eller down believing he's the threat. They leave Eller tied up; the Ifrit appears and kills him. Jessica gives Tara advice on being a vampire, saying they can be "girlfriends" but when Jessica later discovers Tara feeding on Hoyt she attacks Tara. In the parking lot where Russell was buried, Sookie uses her fairy powers to discover that a woman from the Vampire Council glamoured Alcide's employee and rescued Russell. This leads Alcide, Eric, Bill, and Sookie to a charnel house where they find humans used as food. They find Russell recuperating; as Eric says that they've "come to finish" what he and Bill started a year ago, Russell states "give it your best shot" when it cuts to another werewolf surprise attacking Alcide from behind. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Angela Robinson</title:WriterDisplay>	
+			<title:Director fullName="Michael Lehmann" firstName="Michael" lastName="Lehmann" sortableName="Lehmann, Michael" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-07-08T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000005001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000005001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000005002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000005003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000005004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000005002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Lets_Boot_and_Rally.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000005003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Lets_Boot_and_Rally_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000005004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Lets_Boot_and_Rally_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 5 -->			
+
+	<!--Here starts XML specific to episode 6 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000006001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-0006-Q-0000-0000-X</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>6. Hopeless </title:TitleSortName>	
+			<title:TitleBrief>Hopeless…</title:TitleBrief>	
+			<title:TitleMedium>HOPELESS</title:TitleMedium>	
+			<title:TitleLong>Hopeless, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Tara's fight with Jessica ends quickly afterward while Pam stops it, proud of Tara. </title:SummaryShort>	
+			<title:SummaryLong>Wolves attack Eric, Bill and Alcide while Russell attempts to feed on Sookie, the Vampire Authority appear and take Russell, Bill and Eric to the Authority--after glamouring Sookie and Alcide--where they are praised as heroes. Tara's fight with Jessica ends quickly afterward while Pam stops it, proud of Tara. Meanwhile, Lafayette visits Ruby Jean in the hospital after realizing they both found an alarming message from Jesus. Sam and Luna are taken to the hospital where Sam tells Luna that Emma is safe, whereas Emma and her grandmother (Marcus' mother) come and Emma is decided to stay with her grandmother until the shifter murders are stopped. Sookie learns from Jason about their parents' true death (they were killed by vampires) and they go to the fairy night club where they discover their parents died because of Sookie's scent, the vampire having smelled Sookie and killed her parents. Sam chooses to help Andy with the case regarding the murders, and go to a weapons store that specializes in arming humans against "Supes", the owner is about to kill Andy but Sam saves him. Terry rushes home and tells Arlene she is no longer safe with him because of the Ifrit. Alcide challenges J.D. as pack leader. Eric visits Nora and realizes Nora might have dug up Russell-or seemingly Salome. As the Authority gather to witness Russell's Execution via iStake, the iStake doesn't respond when Roman repeatedly attempts to activate it, Roman stares at the iStake technician in puzzlement, in that split second of distraction, Russell races across the floor, throws Roman on the table and yells "Peace is for pussies!" immediately after Roman is given the True Death by Russell with a stake he had hidden prior to his execution. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>	
+			<title:Director fullName="Daniel Attias" firstName="Daniel" lastName="Attias" sortableName="Attias, Daniel" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-07-15T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000006001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000006001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000006002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000006003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000006004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000006002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Hopeless.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000006003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Hopeless_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000006004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Hopeless_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 6 -->			
+	
+	<!--Here starts XML specific to episode 7 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000007001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-0007-O-0000-0000-2</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>7. In the Beginning </title:TitleSortName>	
+			<title:TitleBrief>In the Beginning…</title:TitleBrief>	
+			<title:TitleMedium>IN THE BEGINNING</title:TitleMedium>	
+			<title:TitleLong>In the Beginning, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>After a fight with Jessica, Jason runs towards the light in the sky emitted by Sookie. Meanwhile, Sam locates one of the shooters at the hospital after catching his scent. Hoyt finds a new group of friends. Alcide prepares for a fight.</title:SummaryShort>	
+			<title:SummaryLong>Salome reveals where her true allegiances lie, admitting she was the one who dug up Russell's grave after following Eric and Bill the night Russell was buried. Sookie considers life without fairy powers; after discovering that her fairy powers are finite, she decides to use them up on the night sky. After a fight with Jessica, Jason runs towards the light in the sky emitted by Sookie. Meanwhile, Sam locates one of the shooters at the hospital after catching his scent. Hoyt finds a new group of friends. Alcide prepares for a fight. Tara finally confronts and breaks all ties with her mother after revealing herself as a vampire. Lafayette searches for Jesus' body in Mexico and is held hostage by Jesus' uncle. The Chancellors, Nora, Bill and Eric, under Russell's lead, drink the blood of Lilith and become high. They raid a private party and feast on the humans present. A vision of Lilith (portrayed by actress Jessica Clark) appears, commanding them to continue draining the humans, while looking at Nora. Godric appears in a vision to Eric, stating Eric knows what he is doing is wrong but his sister does not, and Eric must save her. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Brian Buckner</title:WriterDisplay>	
+			<title:Director fullName="Michael Ruscio" firstName="Michael" lastName="Ruscio" sortableName="Ruscio, Michael" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-07-22T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000007001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000007001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000007002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000007003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000007004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000007002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>In_the_Beginning.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000007003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>In_the_Beginning_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000007004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>In_the_Beginning_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 7 -->			
+
+	<!--Here starts XML specific to episode 8 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000008001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-0008-M-0000-0000-8</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>8. Somebody That I Us </title:TitleSortName>	
+			<title:TitleBrief>Somebody That I …</title:TitleBrief>	
+			<title:TitleMedium>SOMEBODY THAT I USED TO KNOW</title:TitleMedium>	
+			<title:TitleLong>Somebody That I Used to Know, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Eric gets a message from Godric; Bill is shaken by a distant memory. </title:SummaryShort>	
+			<title:SummaryLong>At Authority headquarters, the Chancellors revel in the afterglow of recent events; Eric gets a message from Godric; Bill is shaken by a distant memory. Helped by Claude and his sisters, Sookie and Jason visit the site of their parents’ deaths, with shocking results. An emotional Luna tries to walk in Sam’s shoes. Hoyt’s new pals bring him a present; Lafayette leads a séance to purge a curse; J.D. ups the stakes of his fight with Alcide. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Mark Hudis</title:WriterDisplay>	
+			<title:Director fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer, Stephen" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-07-29T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000008001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000008001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000008002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000008003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000008004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000008002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Somebody_That_I_Used_to_Know.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000008003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Somebody_That_I_Used_to_Know_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000008004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Somebody_That_I_Used_to_Know_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 8 -->			
+
+	<!--Here starts XML specific to episode 9 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000009001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-0009-K-0000-0000-E</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>9. Everybody Wants to </title:TitleSortName>	
+			<title:TitleBrief>Everybody Wants …</title:TitleBrief>	
+			<title:TitleMedium>EVERYBODY WANTS TO RULE THE WORLD</title:TitleMedium>	
+			<title:TitleLong>Everybody Wants to Rule the World, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Sookie asks Lafayette to help her try to see who the Ghost Monster was in her bathroom, he fails but then he speaks to the spirits of her parents and Gran - who directs Sookie to a clue to her parents’ murderer by looking under her bed and finding a box.</title:SummaryShort>	
+			<title:SummaryLong>As the Authority proceeds with Lilith’s plan, Eric plots his escape with Bill. Sookie asks Lafayette to help her try to see who the Ghost Monster was in her bathroom, he fails but then he speaks to the spirits of her parents and Gran - who directs Sookie to a clue to her parents’ murderer by looking under her bed and finding an old box with her parents belongings. Andy and Jason search for leads to the identities of the gang members behind the shifter killings; they discover former Bon Temps Sheriff Bud Dearborne was behind the killings, and together with Sam Merlotte, save Hoyt and Sookie from being devoured by swine. Alcide recalls his pack induction; Arlene gets caught in Terry and Patrick’s crossfire, in the end Terry shoots Patrick and the Ifrit consumed Patrick's body and leaves forever in peace. Salome has sex with Bill who bites her but hallucinates that he's having sex with Sookie, he bites aggressively throughout sex; but afterwards we see Salome pleased with the rough sex and Bill holding some of her blood on the tip of his finger. Russell goes to J.D's pack gathering and gives them his blood; Steve gets a new pet when Russell kidnaps Emma (in Wolf form) despite J.D pleading with him; angering Russell to choke him and toss him aside after stating "Did you think my blood was free? Silly dog!" Eric tricks Nora into following him to the escape route (after fooling Nora into believing he wants her to help him believe in Lilith's philosophy). Once the cameras are turned off he disables her with a syringe, then prepares to escape after using her finger to access the elevator, but the authority guards and Salome are waiting inside the elevator, Bill betrayed Eric and warned them of the escape route, the guards take Eric away, while Eric angrily stares at Bill. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Raelle Tucker</title:WriterDisplay>	
+			<title:Director fullName="Daniel Attias" firstName="Daniel" lastName="Attias" sortableName="Attias, Daniel" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-08-05T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000009001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000009001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000009002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000009003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000009004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000009002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Everybody_Wants_to_Rule_the_World.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000009003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Everybody_Wants_to_Rule_the_World_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000009004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Everybody_Wants_to_Rule_the_World_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 9 -->			
+
+	<!--Here starts XML specific to episode 10 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000010001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-000A-I-0000-0000-K</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>10. Gone, Gone, Gone </title:TitleSortName>	
+			<title:TitleBrief>Gone, Gone, Gone…</title:TitleBrief>	
+			<title:TitleMedium>GONE, GONE, GONE</title:TitleMedium>	
+			<title:TitleLong>Gone, Gone, Gone, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Hoyt asks Jessica to glamour him so he can forget her and Jason and move to Alaska. Meanwhile, Nora and Bill convince (force) Eric to believe in Lillith and Bill summons Jessica to the AVL. </title:SummaryShort>	
+			<title:SummaryLong>Sookie and Jason find a mysterious scroll under the floorboard and go to the fae to figure out what it has written on it. Hoyt asks Jessica to glamour him so he can forget her and Jason and move to Alaska. Meanwhile, Nora and Bill convince (force) Eric to believe in Lillith and Bill summons Jessica to the AVL. Sam and Luna sneak into the AVL to try and find Emma while Russell has other plans on his mind, plans that concern walking in the sun by drinking fae blood. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Alexander Woo</title:WriterDisplay>	
+			<title:Director fullName="Scott Winant" firstName="Scott" lastName="Winant" sortableName="Winant, Scott" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-08-12T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000010001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000010001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000010002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000010003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000010004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000010002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Gone_Gone_Gone.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000010003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Gone_Gone_Gone_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000010004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Gone_Gone_Gone_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 10 -->			
+
+	<!--Here starts XML specific to episode 11 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000011001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-000B-G-0000-0000-Q</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>11. Sunset </title:TitleSortName>	
+			<title:TitleBrief>Sunset…</title:TitleBrief>	
+			<title:TitleMedium>SUNSET</title:TitleMedium>	
+			<title:TitleLong>Sunset, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort>Eric and Nora escape on the pretext of needing to glamor parts of the Military to get back the video of Russell and Steve killing from the previous night.Pam takes the fall for Tara's murder of the new vampire sheriff and is taken to the Authority.</title:SummaryShort>	
+			<title:SummaryLong>Slipping further into religious fervor, Bill orders Jessica to turn Jason into a vampire, which she is loathed to carry out. Armed with a damning video of Russell and Steve killing the college students, the military delivers an ultimatum to the Authority, which backfires as Eric recklessly kills the Commander. Eric and Nora re-connect and escape on the pretext of needing to glamor parts of the Military to get back the video of Russell and Steve killing from the previous night. Meanwhile, Pam takes the fall for Tara's murder of the new vampire sheriff and is taken to the Authority. At the fairie santuary, Claude and Maurella take Sookie to meet the fairie elder, who may know something about an ancient family secret. Elsewhere, Alcide reconnects with his father and they defend themselves against baby Vamps. Also, Sam and Luna hitch a ride into the Authority and get taken hostage. Sam is transported off to be breakfast for Bill. Also, Bill believes he was chosen to lead vampires after seeing a vision of Lilith, but so does the rest of the authority. At the end, Russell and Steve force Jason to take them to the faerie sanctuary where they find the fairies and kill the elder, leaving the faerie haven exposed. </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Angela Robinson</title:WriterDisplay>	
+			<title:Director fullName="Lesli Linka Glatter" firstName="Lesli Linka" lastName="Glatter" sortableName="Glatter, Lesli Linka" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>false</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-08-19T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000011001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000011001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000011002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000011003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000011004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000011002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Sunset.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000011003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Sunset_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000011004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Sunset_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 11 -->			
+	
+	<!--Here starts XML specific to episode 12 -->			
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2012000000012001" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">		
+		<core:AlternateId identifierSystem="ISAN">ISAN 0000-0002-0C3F-000C-E-0000-0000-W</core:AlternateId>		
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>		
+		<core:Provider>HBO</core:Provider>		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>12. Save Yourself </title:TitleSortName>	
+			<title:TitleBrief>Save Yourself…</title:TitleBrief>	
+			<title:TitleMedium>SAVE YOURSELF</title:TitleMedium>	
+			<title:TitleLong>Save Yourself, the episode of True Blood this is just padding to create a long title.</title:TitleLong>	
+			<title:SummaryShort> Jason carries his parents' images with him, who aren't fond of vampires. Meanwhile, Luna skinwalks as Steve Newlin to rescue Emma and announces the Authority's crimes to the world while Steve is on air. </title:SummaryShort>	
+			<title:SummaryLong>In the fifth season finale, Eric arrives just in time and kills Russell Edgington and saves the faeries. Eric holds Nora back from draining Sookie, who has saved his life on more than one occasion. Along with Nora and Tara, he convinces Sookie to assist them in overthrowing the Authority, with Jason tagging along. Jason carries his parents' images with him, who aren't fond of vampires. Meanwhile, Luna skinwalks as Steve Newlin to rescue Emma and announces the Authority's crimes to the world while Steve is on air. Sam breaks free and ends up killing Chancellor Rosalyn and escapes with Luna, Emma and the rest of the humans. Back in Bon Temps, Andy is forced by Morella to deliver her quadruplet faerie babies with assistance from Holly; afterwards, she goes off without them. Alcide, with help from some vampire blood from his father, kills J.D. and takes over as leader of the pack. At the climax, Sookie, Eric, Nora, Tara, and Jason infiltrate the Authority complex and kill all of the guards in a huge bloodbath and free Pam and Jessica where the reunited Pam and Tara share an affectionate kiss much to Sookie's suprise and Jessica's amusement. Before Sookie and Eric go after Bill by themselves, Bill tricks Salome into drinking blood laced with silver and kills her. He then drinks Lilith's blood in front of Sookie and Eric, faces the "true death," only to rise a more powerful vampire than before. Eric screams for Sookie to run... </title:SummaryLong>	
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>	
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>	
+			<title:Director fullName="Michael Lehmann" firstName="Michael" lastName="Lehmann" sortableName="Lehmann, Michael" />	
+			<title:StudioDisplay>HBO</title:StudioDisplay>	
+		</title:LocalizableTitle>		
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>		
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>		
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>		
+		<title:Year>2012</title:Year>		
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>		
+		<title:Genre>Fantasy</title:Genre>		
+		<title:Genre>Horror</title:Genre>		
+		<title:Genre>Black comedy</title:Genre>		
+		<title:ShowType>Series</title:ShowType>		
+		<title:IsSeasonPremiere>false</title:IsSeasonPremiere>
+		<title:IsSeasonFinale>true</title:IsSeasonFinale>
+		<title:LinearBroadcastDate>2012-08-26T00:00:00</title:LinearBroadcastDate>		
+	</Asset>			
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/UNVA2012000000012001" 			
+		providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 	
+		endDateTime="2002-03-31T11:59:59Z">	
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2012000000012001" />		
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2012000000012002" />		
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2012000000012003" />		
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2012000000012004" />		
+	</Asset>			
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Asset/UNVA2012000000012002" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Save_Yourself.mpg</content:SourceUrl>		
+		<content:ContentFileSize>3907840625</content:ContentFileSize>		
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT03H14M00S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">R</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Asset/UNVA2012000000012003" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Save_Yourself_Preview.mpg</content:SourceUrl>		
+		<content:ContentFileSize>25284375</content:ContentFileSize>		
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:AudioType>Dolby Digital</content:AudioType>		
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>		
+		<content:Duration>PT00H00M45S</content:Duration>		
+		<content:Language>en</content:Language>		
+		<content:SubtitleLanguage>nl</content:SubtitleLanguage>		
+		<content:Rating ratingSystem="MPAA">G</content:Rating>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/Asset/UNVA2012000000012004" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">	
+		<content:SourceUrl>Save_Yourself_Box_Cover.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+	<!--Here ends XML specific to episode 12 -->			
+
+	<!--Here follow Irdeto proprietary extensions to mark up the Brand and Series-->			
+<!--	<Ext>-->			
+		<Asset xsi:type="irdeto:BrandType"  uriId="irdeto.com/Brand/UNVA20060817010100000"> 		
+			<!--Link to this Brand's title-->	
+			<irdeto:TitleRef uriId="irdeto.com/Title/UNVA20060817010100000" /> 	
+			<!--Link to Series 'Season 5 2012'-->	
+			<irdeto:SeriesRef  uriId="irdeto.com/Series/UNVA20060817010100005" /> 	
+		</Asset>		
+				
+		<Asset xsi:type="irdeto:SeriesType" uriId="irdeto.com/Series/UNVA20060817010100005"> 		
+			<!--Link to this Series' title-->	
+			<irdeto:TitleRef uriId="irdeto.com/Title/UNVA20060817010100005" />	
+			<!--Links to the programs present in this file. Typically, there would be more episodes.-->	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000001001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000002001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000003001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000004002" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000005001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000006001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000007001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000008001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000009001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000010001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000011001" /> 	
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2012000000012001" /> 	
+		</Asset>		
+				
+		<!-- True Blood Brand's title -->		
+		<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA20060817010100000" providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z"> 		
+			<core:Ext>	
+				<App_Data App="MOD" Name="Producer" Value="Alan Ball" />
+			</core:Ext>	
+			<title:LocalizableTitle xml:lang="en-US">	
+				<title:TitleSortName>TrueBlood</title:TitleSortName>
+				<title:TitleBrief>True Blood</title:TitleBrief>
+				<title:TitleMedium>True Blood by HBO</title:TitleMedium>
+				<title:TitleLong>True Blood, the HBO Horror Saga(which we love!)</title:TitleLong>
+				<title:SummaryShort>True Blood is an American cinematic television series created and produced by Alan Ball. It is based on The Southern Vampire Mysteries series of novels by Charlaine Harris</title:SummaryShort>
+				<title:SummaryLong>The fictional universe depicted in the series is premised on the notion that vampires (and other supernatural creatures) are living among us, unbeknownst to the majority of humans until two years ago, when the creation of synthetic blood (aka 'Tru Blood') by Japanese scientists allowed vampires to come out of the coffin (a term coined as a play on "coming out of the closet") and reveal their existence to the world on the basis that they no longer need to feed on humans to survive.E-1 This so-called 'Great Revelation' has split the vampires of the world into two camps: those who wish to integrate into human society (aka 'mainstream') by campaigning for citizenship and equal rights,E-1 and those who think that human-vampire co-existence is impossible because it is in conflict with the inherently violent nature of vampires. Throughout the series, other supernatural creatures are also introduced, among them shapeshifters, werewolves, fairies, witches and a maenad.</title:SummaryLong>
+				<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+				<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+				<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+				<title:Actor fullName="Alexander Skarsgård" firstName="Alexander" lastName="Skarsgård" sortableName="Skarsgård,Alexander" />
+				<title:StudioDisplay>HBO</title:StudioDisplay>
+				<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+				<title:SongTitle>Bad Things</title:SongTitle>
+			</title:LocalizableTitle>	
+			<title:Rating ratingSystem="MPAA">NC-17</title:Rating>	
+			<title:IsClosedCaptioning>true</title:IsClosedCaptioning>	
+			<title:DisplayRunTime>16:15:00</title:DisplayRunTime>	
+			<title:Year>2005</title:Year>	
+			<title:CountryOfOrigin>US</title:CountryOfOrigin>	
+			<title:Genre>Fantasy</title:Genre>	
+			<title:Genre>Horror</title:Genre>	
+			<title:Genre>Black comedy</title:Genre>	
+			<title:ShowType>Series</title:ShowType>	
+		</Asset>		
+				
+		<!-- Season 5's Series title-->		
+		<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA20060817010100005" providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z"> 		
+			<core:Ext>	
+				<App_Data App="MOD" Name="Producer" Value="Alan Ball" />
+			</core:Ext>	
+			<title:LocalizableTitle xml:lang="en-US">	
+				<title:TitleSortName>2012 Season 5</title:TitleSortName>
+				<title:TitleBrief>Season 5</title:TitleBrief>
+				<title:TitleMedium>Season 5: 2012</title:TitleMedium>
+				<title:TitleLong>Season 5: 2012, the final season!</title:TitleLong>
+				<title:SummaryShort>Fifth season of the award winning series True Blood</title:SummaryShort>
+				<title:SummaryLong>The season follows Bill and Eric being captured by the Vampire Authority after the disappearance of Nan Flanagan. The two are almost sentenced to death by the Guardian, Roman, before revealing that Russell Edgington is alive and free after being released by a mysterious vampire. With the help of Sookie and Alcide, the team discovers his hiding place and brings him in. Season 5 also focuses on Terry, who learns he is cursed after committing a terrible crime during the war in the Middle East. Meanwhile, Sookie learns that her powers are limited and contemplates having a normal life. Jason discovers his parents were murdered by a vampire and vows to find out who is responsible. Lafayette tries to deal with the powers given to him by Jesus. Russell, along with Eric's vampire sister Nora and Salome, redefine the values of the Authority and view humans as nothing more than food: just as Lilith of the Vampire bible wanted. The season ends with Bill drinking the blood of Lilith in front of Sookie and Eric. He begins to fall apart, ultimately meeting the &quot;true death&quot;. Shortly after, a nude Bill &quot;rises from the blood&quot;, as an even more powerful vampire reincarnation of Lilith (&quot;Billith&quot;). Surprised, Eric yells for Sookie to run prior to the end credits playing.</title:SummaryLong>
+				<title:StudioDisplay>HBO</title:StudioDisplay>
+			</title:LocalizableTitle>	
+			<title:Rating ratingSystem="MPAA">NC-17</title:Rating>	
+			<title:IsClosedCaptioning>true</title:IsClosedCaptioning>	
+			<title:DisplayRunTime>16:15:00</title:DisplayRunTime>	
+			<title:Year>2005</title:Year>	
+			<title:CountryOfOrigin>US</title:CountryOfOrigin>	
+			<title:Genre>Fantasy</title:Genre>	
+			<title:Genre>Horror</title:Genre>	
+			<title:Genre>Black comedy</title:Genre>	
+			<title:ShowType>Series</title:ShowType>	
+		</Asset>		
+				
+<!--	</Ext>-->			
+	<!--End of Irdeto proprietary CableLabs extension-->			
+</ADI3>				

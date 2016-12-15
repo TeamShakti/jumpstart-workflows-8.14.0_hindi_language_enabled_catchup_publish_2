@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_batchItem" structureRef="com.irdeto.domain.control.ControlBatch" />
+
+  <itemDefinition id="_2-batchItem" structureRef="com.irdeto.domain.control.ControlBatch" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.taskhandler.ControlRegisterContentTest" name="Control Register Content Test" tns:packageName="com.irdeto.jumpstart.workflow.taskhandler" >
+
+    <!-- process variables -->
+    <property id="batch" itemSubjectRef="_batchItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="Control Register Content" tns:taskName="ControlRegisterContent" >
+      <ioSpecification>
+        <dataInput id="_2_ControlBatchInput" name="ControlBatch" />
+        <inputSet>
+          <dataInputRefs>_2_ControlBatchInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>batch</sourceRef>
+        <targetRef>_2_ControlBatchInput</targetRef>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_3" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="_1-_2" sourceRef="_1" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.taskhandler.ControlRegisterContentTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="96" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="24" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="96" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_1-_2" >
+        <di:waypoint x="120" y="48" />
+        <di:waypoint x="120" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="120" y="120" />
+        <di:waypoint x="120" y="192" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

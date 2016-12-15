@@ -1,0 +1,1804 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_65-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_61-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_60-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_61-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_47-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_62-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_67-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_44-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_68-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_65-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_30-qaResultItem" structureRef="String" />
+  <itemDefinition id="_67-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_60-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_68-entityItem" />
+  <itemDefinition id="_25-entityItem" />
+  <itemDefinition id="_60-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_62-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_30-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_52-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_64-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_8-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_60-qaResultItem" structureRef="String" />
+  <itemDefinition id="_62-entityItem" />
+  <itemDefinition id="_61-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_messageItem" structureRef="String" />
+  <itemDefinition id="_8-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_27-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_30-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_52-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_65-qaResultItem" structureRef="String" />
+  <itemDefinition id="_25-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_68-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_65-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_27-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_64-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_52-entityItem" />
+  <itemDefinition id="_validationMessageItem" structureRef="String" />
+  <itemDefinition id="_27-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_65-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_64-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_8-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_62-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_64-qaResultItem" structureRef="String" />
+  <itemDefinition id="_8-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_27-qaResultItem" structureRef="String" />
+  <itemDefinition id="_47-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_44-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_62-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_44-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_60-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_65-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_61-qaResultItem" structureRef="String" />
+  <itemDefinition id="_30-messageItem" structureRef="String" />
+  <itemDefinition id="_52-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_entityItem" />
+  <itemDefinition id="_52-qaResultItem" structureRef="String" />
+  <itemDefinition id="_47-messageItem" structureRef="String" />
+  <itemDefinition id="_60-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_65-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_47-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_62-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_68-messageItem" structureRef="String" />
+  <itemDefinition id="_67-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_25-messageItem" structureRef="String" />
+  <itemDefinition id="_47-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_67-messageItem" structureRef="String" />
+  <itemDefinition id="_44-messageItem" structureRef="String" />
+  <itemDefinition id="_66-messageItem" structureRef="String" />
+  <itemDefinition id="_8-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_68-qaResultItem" structureRef="String" />
+  <itemDefinition id="_61-entityItem" />
+  <itemDefinition id="_htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_66-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_8-qaResultItem" structureRef="String" />
+  <itemDefinition id="_62-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_67-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_8-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_60-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_8-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_65-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_44-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_27-messageItem" structureRef="String" />
+  <itemDefinition id="_65-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_66-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_47-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_30-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_60-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_52-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_25-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_44-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_8-entityItem" />
+  <itemDefinition id="_65-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_64-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_64-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_61-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_30-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_52-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_61-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_44-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_44-qaResultItem" structureRef="String" />
+  <itemDefinition id="_27-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_67-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_27-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_47-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_52-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_60-entityItem" />
+  <itemDefinition id="_30-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_8-messageItem" structureRef="String" />
+  <itemDefinition id="_30-entityItem" />
+  <itemDefinition id="_66-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_44-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_8-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_30-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_61-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_60-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_61-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_68-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_25-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_66-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_67-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_8-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_66-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_67-qaResultItem" structureRef="String" />
+  <itemDefinition id="_66-qaResultItem" structureRef="String" />
+  <itemDefinition id="_52-messageItem" structureRef="String" />
+  <itemDefinition id="_65-messageItem" structureRef="String" />
+  <itemDefinition id="_61-messageItem" structureRef="String" />
+  <itemDefinition id="_64-messageItem" structureRef="String" />
+  <itemDefinition id="_60-messageItem" structureRef="String" />
+  <itemDefinition id="_qaResultItem" structureRef="String" />
+  <itemDefinition id="_47-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_25-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_67-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_68-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_25-qaResultItem" structureRef="String" />
+  <itemDefinition id="_62-qaResultItem" structureRef="String" />
+  <itemDefinition id="_62-messageItem" structureRef="String" />
+  <itemDefinition id="_66-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_25-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_30-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_30-qaDataItem" structureRef="java.util.Map" />
+  <itemDefinition id="_62-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_67-entityItem" />
+  <itemDefinition id="_27-entityItem" />
+  <itemDefinition id="_67-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_68-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_64-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_25-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_44-entityItem" />
+  <itemDefinition id="_52-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_30-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_68-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_47-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_47-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_66-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_64-entityItem" />
+  <itemDefinition id="_66-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_52-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_52-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_64-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_67-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_25-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_68-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_25-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_27-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_47-qaResultItem" structureRef="String" />
+  <itemDefinition id="_44-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_25-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_65-entityItem" />
+  <itemDefinition id="_61-htsDueperiodItem" structureRef="String" />
+  <itemDefinition id="_68-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_27-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_62-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_64-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_68-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_64-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_62-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_66-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_60-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_27-processInstanceIdItem" structureRef="Integer" />
+  <itemDefinition id="_44-qaEntityItem" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_66-entityItem" />
+  <itemDefinition id="_27-htsQaUserItem" structureRef="String" />
+  <itemDefinition id="_61-parametersItem" structureRef="java.util.Map" />
+  <itemDefinition id="_47-entityItem" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.qa.QA" name="QA" tns:packageName="com.irdeto.jumpstart.workflow.qa" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.jumpstart.domain.qa.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.qa.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="org.apache.commons.lang3.BooleanUtils" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="qaData" itemSubjectRef="_qaDataItem"/>
+    <property id="qaResult" itemSubjectRef="_qaResultItem"/>
+    <property id="message" itemSubjectRef="_messageItem"/>
+    <property id="config" itemSubjectRef="_configItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="entity" itemSubjectRef="_entityItem"/>
+    <property id="parameters" itemSubjectRef="_parametersItem"/>
+    <property id="qaEntity" itemSubjectRef="_qaEntityItem"/>
+    <property id="validationMessage" itemSubjectRef="_validationMessageItem"/>
+    <property id="htsQaUser" itemSubjectRef="_htsQaUserItem"/>
+    <property id="htsDueperiod" itemSubjectRef="_htsDueperiodItem"/>
+    <property id="processInstanceId" itemSubjectRef="_processInstanceIdItem"/>
+
+    <!-- nodes -->
+    <task id="_68" name="AbortProcessInstances" tns:taskName="AbortProcessInstances" >
+      <ioSpecification>
+        <dataInput id="_68_VariableToMatchInput" name="VariableToMatch" />
+        <dataInput id="_68_ValueToMatchInput" name="ValueToMatch" />
+        <dataInput id="_68_ProcessIdInput" name="ProcessId" />
+        <inputSet>
+          <dataInputRefs>_68_VariableToMatchInput</dataInputRefs>
+          <dataInputRefs>_68_ValueToMatchInput</dataInputRefs>
+          <dataInputRefs>_68_ProcessIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_68_VariableToMatchInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">qaEntity</from>
+          <to xsi:type="tFormalExpression">_68_VariableToMatchInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_68_ValueToMatchInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaData.get("qaEntity")}</from>
+          <to xsi:type="tFormalExpression">_68_ValueToMatchInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_68_ProcessIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.qa.QA</from>
+          <to xsi:type="tFormalExpression">_68_ProcessIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <endEvent id="_69" name="End" />
+    <parallelGateway id="_70" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <task id="_64" name="Asynchronous Signal" tns:taskName="AsyncSignal" >
+      <ioSpecification>
+        <dataInput id="_64_qaDataInput" name="qaData" />
+        <dataInput id="_64_EventTypeInput" name="EventType" />
+        <dataInput id="_64_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_64_ProcessInstanceIDInput" name="ProcessInstanceID" />
+        <inputSet>
+          <dataInputRefs>_64_qaDataInput</dataInputRefs>
+          <dataInputRefs>_64_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_64_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_64_ProcessInstanceIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>qaData</sourceRef>
+        <targetRef>_64_qaDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_64_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">HT_FIRE</from>
+          <to xsi:type="tFormalExpression">_64_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_64_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_64_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_64_ProcessInstanceIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{processInstanceId}</from>
+          <to xsi:type="tFormalExpression">_64_ProcessInstanceIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_65" name="Asynchronous Signal" tns:taskName="AsyncSignal" >
+      <ioSpecification>
+        <dataInput id="_65_qaDataInput" name="qaData" />
+        <dataInput id="_65_EventTypeInput" name="EventType" />
+        <dataInput id="_65_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_65_ProcessInstanceIDInput" name="ProcessInstanceID" />
+        <inputSet>
+          <dataInputRefs>_65_qaDataInput</dataInputRefs>
+          <dataInputRefs>_65_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_65_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_65_ProcessInstanceIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>qaData</sourceRef>
+        <targetRef>_65_qaDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">HT_FIRE</from>
+          <to xsi:type="tFormalExpression">_65_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_65_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_65_ProcessInstanceIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{processInstanceId}</from>
+          <to xsi:type="tFormalExpression">_65_ProcessInstanceIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_66" name="Asynchronous Signal" tns:taskName="AsyncSignal" >
+      <ioSpecification>
+        <dataInput id="_66_qaDataInput" name="qaData" />
+        <dataInput id="_66_EventTypeInput" name="EventType" />
+        <dataInput id="_66_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_66_ProcessInstanceIDInput" name="ProcessInstanceID" />
+        <inputSet>
+          <dataInputRefs>_66_qaDataInput</dataInputRefs>
+          <dataInputRefs>_66_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_66_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_66_ProcessInstanceIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>qaData</sourceRef>
+        <targetRef>_66_qaDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_66_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">HT_FIRE</from>
+          <to xsi:type="tFormalExpression">_66_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_66_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_66_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_66_ProcessInstanceIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{processInstanceId}</from>
+          <to xsi:type="tFormalExpression">_66_ProcessInstanceIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_67" name="Cancel Human QA" tns:taskName="CancelTask" >
+      <ioSpecification>
+        <dataInput id="_67_ContextInput" name="Context" />
+        <dataInput id="_67_EntityTypeInput" name="EntityType" />
+        <dataInput id="_67_EntityIdInput" name="EntityId" />
+        <dataInput id="_67_UserIdInput" name="UserId" />
+        <dataInput id="_67_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_67_SpecificProcessInstanceInput" name="SpecificProcessInstance" />
+        <inputSet>
+          <dataInputRefs>_67_ContextInput</dataInputRefs>
+          <dataInputRefs>_67_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_67_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_67_UserIdInput</dataInputRefs>
+          <dataInputRefs>_67_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_67_SpecificProcessInstanceInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_67_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Correct Human QA</from>
+          <to xsi:type="tFormalExpression">_67_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_67_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_67_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_67_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_67_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_67_UserIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA</from>
+          <to xsi:type="tFormalExpression">_67_UserIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_67_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_67_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_67_SpecificProcessInstanceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_67_SpecificProcessInstanceInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_8" name="QA" tns:taskName="MannedHumanTask" >
+      <ioSpecification>
+        <dataInput id="_8_ContextInput" name="Context" />
+        <dataInput id="_8_EntityTypeInput" name="EntityType" />
+        <dataInput id="_8_EntityIDInput" name="EntityID" />
+        <dataInput id="_8_DuePeriodInput" name="DuePeriod" />
+        <dataInput id="_8_GroupInput" name="Group" />
+        <dataInput id="_8_SupersedeInput" name="Supersede" />
+        <dataInput id="_8_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_8_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_8_OperationInput" name="Operation" />
+        <dataInput id="_8_EmailEnabledInput" name="EmailEnabled" />
+        <dataInput id="_8_AdminInput" name="Admin" />
+        <dataInput id="_8_ViewNameInput" name="ViewName" />
+        <dataOutput id="_8_MessageOutput" name="Message" />
+        <dataOutput id="_8_ResultOutput" name="Result" />
+        <inputSet>
+          <dataInputRefs>_8_ContextInput</dataInputRefs>
+          <dataInputRefs>_8_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_8_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_8_DuePeriodInput</dataInputRefs>
+          <dataInputRefs>_8_GroupInput</dataInputRefs>
+          <dataInputRefs>_8_SupersedeInput</dataInputRefs>
+          <dataInputRefs>_8_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_8_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_8_OperationInput</dataInputRefs>
+          <dataInputRefs>_8_EmailEnabledInput</dataInputRefs>
+          <dataInputRefs>_8_AdminInput</dataInputRefs>
+          <dataInputRefs>_8_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_8_MessageOutput</dataOutputRefs>
+          <dataOutputRefs>_8_ResultOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_8_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA</from>
+          <to xsi:type="tFormalExpression">_8_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_8_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_8_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_DuePeriodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{htsDueperiod}</from>
+          <to xsi:type="tFormalExpression">_8_DuePeriodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_GroupInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA Group</from>
+          <to xsi:type="tFormalExpression">_8_GroupInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_SupersedeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_8_SupersedeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_8_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityTitle()}</from>
+          <to xsi:type="tFormalExpression">_8_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_OperationInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getQAOperation()}</from>
+          <to xsi:type="tFormalExpression">_8_OperationInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_EmailEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_8_EmailEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_AdminInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{htsQaUser}</from>
+          <to xsi:type="tFormalExpression">_8_AdminInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_8_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getQAView()}</from>
+          <to xsi:type="tFormalExpression">_8_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_8_MessageOutput</sourceRef>
+        <targetRef>validationMessage</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_8_ResultOutput</sourceRef>
+        <targetRef>qaResult</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_76" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_72" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <parallelGateway id="_73" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <exclusiveGateway id="_74" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <parallelGateway id="_75" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <exclusiveGateway id="_17" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <endEvent id="_18" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <intermediateCatchEvent id="_20" name="Signal" >
+      <dataOutput id="_20_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_20_Output</sourceRef>
+      <targetRef>parameters</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_20_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="HT_FIRE"/>
+    </intermediateCatchEvent>
+    <task id="_25" name="Correct Human QA" tns:taskName="MannedHumanTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("message", validationMessage);
+kcontext.setVariable("validationMessage", null);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_25_ContextInput" name="Context" />
+        <dataInput id="_25_DuePeriodInput" name="DuePeriod" />
+        <dataInput id="_25_GroupInput" name="Group" />
+        <dataInput id="_25_MessageInput" name="Message" />
+        <dataInput id="_25_SupersedeInput" name="Supersede" />
+        <dataInput id="_25_OperationInput" name="Operation" />
+        <dataInput id="_25_EmailEnabledInput" name="EmailEnabled" />
+        <dataInput id="_25_AdminInput" name="Admin" />
+        <dataInput id="_25_ViewNameInput" name="ViewName" />
+        <dataInput id="_25_EntityTypeInput" name="EntityType" />
+        <dataInput id="_25_EntityIDInput" name="EntityID" />
+        <dataInput id="_25_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_25_EntityTitleInput" name="EntityTitle" />
+        <inputSet>
+          <dataInputRefs>_25_ContextInput</dataInputRefs>
+          <dataInputRefs>_25_DuePeriodInput</dataInputRefs>
+          <dataInputRefs>_25_GroupInput</dataInputRefs>
+          <dataInputRefs>_25_MessageInput</dataInputRefs>
+          <dataInputRefs>_25_SupersedeInput</dataInputRefs>
+          <dataInputRefs>_25_OperationInput</dataInputRefs>
+          <dataInputRefs>_25_EmailEnabledInput</dataInputRefs>
+          <dataInputRefs>_25_AdminInput</dataInputRefs>
+          <dataInputRefs>_25_ViewNameInput</dataInputRefs>
+          <dataInputRefs>_25_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_25_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_25_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_25_EntityTitleInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_25_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Correct Human QA</from>
+          <to xsi:type="tFormalExpression">_25_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_DuePeriodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{htsDueperiod}</from>
+          <to xsi:type="tFormalExpression">_25_DuePeriodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_GroupInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA Group</from>
+          <to xsi:type="tFormalExpression">_25_GroupInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_MessageInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{message}</from>
+          <to xsi:type="tFormalExpression">_25_MessageInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_SupersedeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_25_SupersedeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_OperationInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getCorrectOperation()}</from>
+          <to xsi:type="tFormalExpression">_25_OperationInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_EmailEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_25_EmailEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_AdminInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{htsQaUser}</from>
+          <to xsi:type="tFormalExpression">_25_AdminInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getCorrectionView()}</from>
+          <to xsi:type="tFormalExpression">_25_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_25_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_25_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_25_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_25_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityTitle()}</from>
+          <to xsi:type="tFormalExpression">_25_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_27" name="Read Latest Version" tns:taskName="MediaManager8ReadTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>qaEntity.setEntity(entity);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_27_EntityTypeInput" name="EntityType" />
+        <dataInput id="_27_EntityIDInput" name="EntityID" />
+        <dataInput id="_27_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_27_EntityTitleInput" name="EntityTitle" />
+        <dataOutput id="_27_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_27_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_27_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_27_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_27_EntityTitleInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_27_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_27_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_27_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_27_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_27_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_27_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_27_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_27_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_27_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_27_ResponseObjectOutput</sourceRef>
+        <targetRef>entity</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <intermediateCatchEvent id="_26" name="Signal" >
+      <dataOutput id="_26_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_26_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_26_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <scriptTask id="_28" name="Handle Activation" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("qaEntity", qaData.get("qaEntity"));
+kcontext.setVariable("htsQaUser", BeanUtil.propertiesManager.getProperty(JumpstartPropertyKey.HTS_QA_USER_KEY));
+kcontext.setVariable("htsDueperiod", BeanUtil.propertiesManager.getProperty(JumpstartPropertyKey.HTS_DUE_PERIOD_KEY));
+kcontext.setVariable("processInstanceId",kcontext.getProcessInstance().getId());</script>
+    </scriptTask>
+    <task id="_30" name="Read Latest Version" tns:taskName="MediaManager8ReadTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>qaEntity.setEntity(entity);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_30_EntityTypeInput" name="EntityType" />
+        <dataInput id="_30_EntityIDInput" name="EntityID" />
+        <dataInput id="_30_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_30_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_30_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_30_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_30_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_30_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_30_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_30_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_30_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_30_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_30_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_30_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_30_ResponseObjectOutput</sourceRef>
+        <targetRef>entity</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_35" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_32" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_38" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_39" name="Automatic Pre-Validation" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("validationMessage", qaEntity.getAutomatedPreValidationMessages());</script>
+    </scriptTask>
+    <scriptTask id="_36" name="Extract QA Data" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("qaData", parameters.get("qaData"));
+</script>
+    </scriptTask>
+    <exclusiveGateway id="_42" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_41" name="Automatic Post-Validation" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("validationMessage", qaEntity.getAutomatedPostValidationMessages());</script>
+    </scriptTask>
+    <exclusiveGateway id="_46" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <task id="_47" name="Correct Automated Pre-QA" tns:taskName="MannedHumanTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("message", validationMessage);
+kcontext.setVariable("validationMessage", null);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_47_ContextInput" name="Context" />
+        <dataInput id="_47_EntityTypeInput" name="EntityType" />
+        <dataInput id="_47_EntityIDInput" name="EntityID" />
+        <dataInput id="_47_DuePeriodInput" name="DuePeriod" />
+        <dataInput id="_47_GroupInput" name="Group" />
+        <dataInput id="_47_MessageInput" name="Message" />
+        <dataInput id="_47_SupersedeInput" name="Supersede" />
+        <dataInput id="_47_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_47_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_47_OperationInput" name="Operation" />
+        <dataInput id="_47_AdminInput" name="Admin" />
+        <dataInput id="_47_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_47_ContextInput</dataInputRefs>
+          <dataInputRefs>_47_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_47_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_47_DuePeriodInput</dataInputRefs>
+          <dataInputRefs>_47_GroupInput</dataInputRefs>
+          <dataInputRefs>_47_MessageInput</dataInputRefs>
+          <dataInputRefs>_47_SupersedeInput</dataInputRefs>
+          <dataInputRefs>_47_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_47_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_47_OperationInput</dataInputRefs>
+          <dataInputRefs>_47_AdminInput</dataInputRefs>
+          <dataInputRefs>_47_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_47_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Correct Automated Pre-QA</from>
+          <to xsi:type="tFormalExpression">_47_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_47_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_47_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_DuePeriodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{htsDueperiod}</from>
+          <to xsi:type="tFormalExpression">_47_DuePeriodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_GroupInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA Group</from>
+          <to xsi:type="tFormalExpression">_47_GroupInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_MessageInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{message}</from>
+          <to xsi:type="tFormalExpression">_47_MessageInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_SupersedeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_47_SupersedeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_47_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityTitle()}</from>
+          <to xsi:type="tFormalExpression">_47_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_OperationInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getCorrectOperation()}</from>
+          <to xsi:type="tFormalExpression">_47_OperationInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_AdminInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{htsQaUser}</from>
+          <to xsi:type="tFormalExpression">_47_AdminInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_47_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getCorrectionView()}</from>
+          <to xsi:type="tFormalExpression">_47_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_44" name="Set Status to Approved" tns:taskName="MediaManager8UpdateTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>qaEntity.setApproved(true);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_44_DomainObjectInput" name="DomainObject" />
+        <dataInput id="_44_EntityTypeInput" name="EntityType" />
+        <dataInput id="_44_EntityIdInput" name="EntityId" />
+        <dataInput id="_44_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_44_DomainObjectInput</dataInputRefs>
+          <dataInputRefs>_44_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_44_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_44_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>entity</sourceRef>
+        <targetRef>_44_DomainObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_44_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_44_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_44_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_44_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_44_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_44_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_45" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_51" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.warn(kcontext, "QA Workflow error: {}", errorMap.get("ExitMessage"));
+</script>
+    </scriptTask>
+    <endEvent id="_50" name="End" />
+    <task id="_52" name="Correct Automated Post-QA" tns:taskName="MannedHumanTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("message", validationMessage);
+kcontext.setVariable("validationMessage", null);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_52_ContextInput" name="Context" />
+        <dataInput id="_52_EntityTypeInput" name="EntityType" />
+        <dataInput id="_52_EntityIDInput" name="EntityID" />
+        <dataInput id="_52_DuePeriodInput" name="DuePeriod" />
+        <dataInput id="_52_GroupInput" name="Group" />
+        <dataInput id="_52_SupersedeInput" name="Supersede" />
+        <dataInput id="_52_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_52_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_52_OperationInput" name="Operation" />
+        <dataInput id="_52_EmailEnabledInput" name="EmailEnabled" />
+        <dataInput id="_52_AdminInput" name="Admin" />
+        <dataInput id="_52_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_52_ContextInput</dataInputRefs>
+          <dataInputRefs>_52_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_52_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_52_DuePeriodInput</dataInputRefs>
+          <dataInputRefs>_52_GroupInput</dataInputRefs>
+          <dataInputRefs>_52_SupersedeInput</dataInputRefs>
+          <dataInputRefs>_52_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_52_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_52_OperationInput</dataInputRefs>
+          <dataInputRefs>_52_EmailEnabledInput</dataInputRefs>
+          <dataInputRefs>_52_AdminInput</dataInputRefs>
+          <dataInputRefs>_52_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_52_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Correct Automated Post-QA</from>
+          <to xsi:type="tFormalExpression">_52_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_52_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_52_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_DuePeriodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{htsDueperiod}</from>
+          <to xsi:type="tFormalExpression">_52_DuePeriodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_GroupInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA Group</from>
+          <to xsi:type="tFormalExpression">_52_GroupInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_SupersedeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_52_SupersedeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_52_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityTitle()}</from>
+          <to xsi:type="tFormalExpression">_52_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_OperationInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getCorrectOperation()}</from>
+          <to xsi:type="tFormalExpression">_52_OperationInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_EmailEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_52_EmailEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_AdminInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{htsQaUser}</from>
+          <to xsi:type="tFormalExpression">_52_AdminInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_52_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getCorrectionView()}</from>
+          <to xsi:type="tFormalExpression">_52_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_59" name="End" />
+    <endEvent id="_58" name="End" />
+    <task id="_62" name="Cancel Automated Post-QA" tns:taskName="CancelTask" >
+      <ioSpecification>
+        <dataInput id="_62_ContextInput" name="Context" />
+        <dataInput id="_62_EntityTypeInput" name="EntityType" />
+        <dataInput id="_62_EntityIdInput" name="EntityId" />
+        <dataInput id="_62_UserIdInput" name="UserId" />
+        <dataInput id="_62_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_62_SpecificProcessInstanceInput" name="SpecificProcessInstance" />
+        <inputSet>
+          <dataInputRefs>_62_ContextInput</dataInputRefs>
+          <dataInputRefs>_62_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_62_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_62_UserIdInput</dataInputRefs>
+          <dataInputRefs>_62_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_62_SpecificProcessInstanceInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_62_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Correct Automated Post-QA</from>
+          <to xsi:type="tFormalExpression">_62_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_62_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_62_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_62_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_62_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_62_UserIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA</from>
+          <to xsi:type="tFormalExpression">_62_UserIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_62_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_62_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_62_SpecificProcessInstanceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_62_SpecificProcessInstanceInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_61" name="Cancel Automated Pre-QA" tns:taskName="CancelTask" >
+      <ioSpecification>
+        <dataInput id="_61_ContextInput" name="Context" />
+        <dataInput id="_61_EntityTypeInput" name="EntityType" />
+        <dataInput id="_61_EntityIdInput" name="EntityId" />
+        <dataInput id="_61_UserIdInput" name="UserId" />
+        <dataInput id="_61_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_61_SpecificProcessInstanceInput" name="SpecificProcessInstance" />
+        <inputSet>
+          <dataInputRefs>_61_ContextInput</dataInputRefs>
+          <dataInputRefs>_61_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_61_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_61_UserIdInput</dataInputRefs>
+          <dataInputRefs>_61_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_61_SpecificProcessInstanceInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_61_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Correct Automated Pre-QA</from>
+          <to xsi:type="tFormalExpression">_61_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_61_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_61_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_61_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_61_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_61_UserIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA</from>
+          <to xsi:type="tFormalExpression">_61_UserIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_61_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_61_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_61_SpecificProcessInstanceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_61_SpecificProcessInstanceInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_60" name="Cancel Automated Pre-QA" tns:taskName="CancelTask" >
+      <ioSpecification>
+        <dataInput id="_60_ContextInput" name="Context" />
+        <dataInput id="_60_EntityTypeInput" name="EntityType" />
+        <dataInput id="_60_EntityIdInput" name="EntityId" />
+        <dataInput id="_60_UserIdInput" name="UserId" />
+        <dataInput id="_60_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_60_ContextInput</dataInputRefs>
+          <dataInputRefs>_60_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_60_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_60_UserIdInput</dataInputRefs>
+          <dataInputRefs>_60_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_60_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Correct Automated Pre-QA</from>
+          <to xsi:type="tFormalExpression">_60_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_60_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityType()}</from>
+          <to xsi:type="tFormalExpression">_60_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_60_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{qaEntity.getEntityId()}</from>
+          <to xsi:type="tFormalExpression">_60_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_60_UserIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA</from>
+          <to xsi:type="tFormalExpression">_60_UserIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_60_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_60_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_jbpm-unique-5" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_jbpm-unique-6" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_jbpm-unique-7" name="Configuration Task" tns:taskName="Configuration" >
+      <ioSpecification>
+        <dataOutput id="_jbpm-unique-7_PropertyMapOutput" name="PropertyMap" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-7_PropertyMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-7_PropertyMapOutput</sourceRef>
+        <targetRef>config</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <intermediateCatchEvent id="_jbpm-unique-13" name="Signal" >
+      <signalEventDefinition signalRef="CANCEL_QA"/>
+    </intermediateCatchEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="_51-_68" sourceRef="_51" targetRef="_68" />
+    <sequenceFlow id="_68-_69" sourceRef="_68" targetRef="_69" />
+    <sequenceFlow id="_1-_70" sourceRef="_1" targetRef="_70" />
+    <sequenceFlow id="_25-_64" sourceRef="_25" targetRef="_64" />
+    <sequenceFlow id="_52-_65" sourceRef="_52" targetRef="_65" />
+    <sequenceFlow id="_47-_66" sourceRef="_47" targetRef="_66" />
+    <sequenceFlow id="_61-_67" sourceRef="_61" targetRef="_67" />
+    <sequenceFlow id="_32-_8" sourceRef="_32" targetRef="_8" name="QA Required" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return qaEntity.isQARequired();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_70-_76" sourceRef="_70" targetRef="_76" />
+    <sequenceFlow id="_75-_76" sourceRef="_75" targetRef="_76" />
+    <sequenceFlow id="_70-_72" sourceRef="_70" targetRef="_72" />
+    <sequenceFlow id="_73-_72" sourceRef="_73" targetRef="_72" />
+    <sequenceFlow id="_20-_73" sourceRef="_20" targetRef="_73" />
+    <sequenceFlow id="_70-_74" sourceRef="_70" targetRef="_74" />
+    <sequenceFlow id="_36-_74" sourceRef="_36" targetRef="_74" />
+    <sequenceFlow id="_26-_75" sourceRef="_26" targetRef="_75" />
+    <sequenceFlow id="_30-_17" sourceRef="_30" targetRef="_17" />
+    <sequenceFlow id="_62-_18" sourceRef="_62" targetRef="_18" />
+    <sequenceFlow id="_72-_20" sourceRef="_72" targetRef="_20" />
+    <sequenceFlow id="_17-_25" sourceRef="_17" targetRef="_25" name="Reject" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_28-_27" sourceRef="_28" targetRef="_27" />
+    <sequenceFlow id="_76-_26" sourceRef="_76" targetRef="_26" />
+    <sequenceFlow id="_74-_28" sourceRef="_74" targetRef="_28" />
+    <sequenceFlow id="_8-_30" sourceRef="_8" targetRef="_30" />
+    <sequenceFlow id="_32-_35" sourceRef="_32" targetRef="_35" name="QA Not Required" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_17-_35" sourceRef="_17" targetRef="_35" name="Accept" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "Accept".equals(qaResult);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_60-_32" sourceRef="_60" targetRef="_32" />
+    <sequenceFlow id="_39-_38" sourceRef="_39" targetRef="_38" />
+    <sequenceFlow id="_jbpm-unique-6-_39" sourceRef="_jbpm-unique-6" targetRef="_39" name="Proceed to QA" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_73-_36" sourceRef="_73" targetRef="_36" />
+    <sequenceFlow id="_41-_42" sourceRef="_41" targetRef="_42" />
+    <sequenceFlow id="_35-_41" sourceRef="_35" targetRef="_41" />
+    <sequenceFlow id="_44-_46" sourceRef="_44" targetRef="_46" />
+    <sequenceFlow id="_45-_46" sourceRef="_45" targetRef="_46" name="Status is Approved" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-13-_46" sourceRef="_jbpm-unique-13" targetRef="_46" />
+    <sequenceFlow id="_38-_47" sourceRef="_38" targetRef="_47" name="Pre-Validation Errors" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return validationMessage != null &amp;&amp; !"".equals(validationMessage);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_45-_44" sourceRef="_45" targetRef="_44" name="Status Is Pending" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return BooleanUtils.isNotTrue(qaEntity.getApproved());</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-5-_45" sourceRef="_jbpm-unique-5" targetRef="_45" />
+    <sequenceFlow id="_75-_51" sourceRef="_75" targetRef="_51" />
+    <sequenceFlow id="_64-_50" sourceRef="_64" targetRef="_50" />
+    <sequenceFlow id="_42-_52" sourceRef="_42" targetRef="_52" name="Post-Validation Errors" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return validationMessage != null &amp;&amp; !"".equals(validationMessage);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_66-_59" sourceRef="_66" targetRef="_59" />
+    <sequenceFlow id="_65-_58" sourceRef="_65" targetRef="_58" />
+    <sequenceFlow id="_67-_62" sourceRef="_67" targetRef="_62" />
+    <sequenceFlow id="_46-_61" sourceRef="_46" targetRef="_61" />
+    <sequenceFlow id="_38-_60" sourceRef="_38" targetRef="_60" name="No Errors" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_42-_jbpm-unique-5" sourceRef="_42" targetRef="_jbpm-unique-5" name="No Errors" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-6-_jbpm-unique-5" sourceRef="_jbpm-unique-6" targetRef="_jbpm-unique-5" name="Skip All Human Tasks" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return BooleanUtils.toBoolean(config.get("jumpstart.humantask.bypass"));</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-7-_jbpm-unique-6" sourceRef="_jbpm-unique-7" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_27-_jbpm-unique-7" sourceRef="_27" targetRef="_jbpm-unique-7" />
+    <sequenceFlow id="_70-_jbpm-unique-13" sourceRef="_70" targetRef="_jbpm-unique-13" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.qa.QA" >
+      <bpmndi:BPMNShape bpmnElement="_68" >
+        <dc:Bounds x="24" y="324" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="456" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_69" >
+        <dc:Bounds x="96" y="396" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_70" >
+        <dc:Bounds x="456" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_64" >
+        <dc:Bounds x="1068" y="1008" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_65" >
+        <dc:Bounds x="1068" y="1080" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_66" >
+        <dc:Bounds x="1068" y="612" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_67" >
+        <dc:Bounds x="384" y="1440" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="840" y="792" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_76" >
+        <dc:Bounds x="132" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_72" >
+        <dc:Bounds x="756" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_73" >
+        <dc:Bounds x="792" y="180" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_74" >
+        <dc:Bounds x="456" y="252" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_75" >
+        <dc:Bounds x="96" y="180" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="912" y="936" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="456" y="1584" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" >
+        <dc:Bounds x="828" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_25" >
+        <dc:Bounds x="1068" y="936" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_27" >
+        <dc:Bounds x="384" y="396" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_26" >
+        <dc:Bounds x="60" y="96" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_28" >
+        <dc:Bounds x="384" y="324" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_30" >
+        <dc:Bounds x="840" y="864" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_35" >
+        <dc:Bounds x="672" y="936" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_32" >
+        <dc:Bounds x="672" y="792" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_38" >
+        <dc:Bounds x="672" y="612" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_39" >
+        <dc:Bounds x="600" y="540" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_36" >
+        <dc:Bounds x="720" y="252" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_42" >
+        <dc:Bounds x="672" y="1080" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_41" >
+        <dc:Bounds x="600" y="1008" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_46" >
+        <dc:Bounds x="456" y="1296" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_47" >
+        <dc:Bounds x="840" y="612" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_44" >
+        <dc:Bounds x="600" y="1164" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_45" >
+        <dc:Bounds x="456" y="1164" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_51" >
+        <dc:Bounds x="24" y="252" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_50" >
+        <dc:Bounds x="1296" y="1008" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_52" >
+        <dc:Bounds x="840" y="1080" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_59" >
+        <dc:Bounds x="1296" y="612" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_58" >
+        <dc:Bounds x="1296" y="1080" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_62" >
+        <dc:Bounds x="384" y="1512" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_61" >
+        <dc:Bounds x="384" y="1368" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_60" >
+        <dc:Bounds x="588" y="708" width="217" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-5" >
+        <dc:Bounds x="456" y="1080" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-6" >
+        <dc:Bounds x="456" y="540" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-7" >
+        <dc:Bounds x="384" y="468" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-13" >
+        <dc:Bounds x="96" y="1296" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_51-_68" >
+        <di:waypoint x="120" y="276" />
+        <di:waypoint x="120" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_68-_69" >
+        <di:waypoint x="120" y="348" />
+        <di:waypoint x="120" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_70" >
+        <di:waypoint x="480" y="48" />
+        <di:waypoint x="480" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_25-_64" >
+        <di:waypoint x="1164" y="960" />
+        <di:waypoint x="1164" y="1032" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_52-_65" >
+        <di:waypoint x="936" y="1104" />
+        <di:waypoint x="1164" y="1104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_47-_66" >
+        <di:waypoint x="936" y="636" />
+        <di:waypoint x="1164" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_61-_67" >
+        <di:waypoint x="480" y="1392" />
+        <di:waypoint x="480" y="1464" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_32-_8" >
+        <di:waypoint x="696" y="816" />
+        <di:waypoint x="936" y="816" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70-_76" >
+        <di:waypoint x="480" y="120" />
+        <di:waypoint x="156" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_75-_76" >
+        <di:waypoint x="120" y="204" />
+        <di:waypoint x="156" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70-_72" >
+        <di:waypoint x="480" y="120" />
+        <di:waypoint x="780" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_73-_72" >
+        <di:waypoint x="816" y="204" />
+        <di:waypoint x="780" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_20-_73" >
+        <di:waypoint x="852" y="120" />
+        <di:waypoint x="816" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70-_74" >
+        <di:waypoint x="480" y="120" />
+        <di:waypoint x="480" y="276" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_36-_74" >
+        <di:waypoint x="816" y="276" />
+        <di:waypoint x="480" y="276" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_26-_75" >
+        <di:waypoint x="84" y="120" />
+        <di:waypoint x="120" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_30-_17" >
+        <di:waypoint x="936" y="888" />
+        <di:waypoint x="936" y="960" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_62-_18" >
+        <di:waypoint x="480" y="1536" />
+        <di:waypoint x="480" y="1608" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_72-_20" >
+        <di:waypoint x="780" y="120" />
+        <di:waypoint x="852" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_25" >
+        <di:waypoint x="936" y="960" />
+        <di:waypoint x="1164" y="960" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_28-_27" >
+        <di:waypoint x="480" y="348" />
+        <di:waypoint x="480" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_76-_26" >
+        <di:waypoint x="156" y="120" />
+        <di:waypoint x="84" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_74-_28" >
+        <di:waypoint x="480" y="276" />
+        <di:waypoint x="480" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_30" >
+        <di:waypoint x="936" y="816" />
+        <di:waypoint x="936" y="888" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_32-_35" >
+        <di:waypoint x="696" y="816" />
+        <di:waypoint x="696" y="960" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_35" >
+        <di:waypoint x="936" y="960" />
+        <di:waypoint x="696" y="960" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_60-_32" >
+        <di:waypoint x="696" y="732" />
+        <di:waypoint x="696" y="816" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_39-_38" >
+        <di:waypoint x="696" y="564" />
+        <di:waypoint x="696" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-6-_39" >
+        <di:waypoint x="480" y="564" />
+        <di:waypoint x="696" y="564" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_73-_36" >
+        <di:waypoint x="816" y="204" />
+        <di:waypoint x="816" y="276" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_42" >
+        <di:waypoint x="696" y="1032" />
+        <di:waypoint x="696" y="1104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_35-_41" >
+        <di:waypoint x="696" y="960" />
+        <di:waypoint x="696" y="1032" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_44-_46" >
+        <di:waypoint x="696" y="1188" />
+        <di:waypoint x="696" y="1319" />
+        <di:waypoint x="480" y="1320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_45-_46" >
+        <di:waypoint x="480" y="1188" />
+        <di:waypoint x="480" y="1320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-13-_46" >
+        <di:waypoint x="120" y="1320" />
+        <di:waypoint x="480" y="1320" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_38-_47" >
+        <di:waypoint x="696" y="636" />
+        <di:waypoint x="936" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_45-_44" >
+        <di:waypoint x="480" y="1188" />
+        <di:waypoint x="696" y="1188" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_45" >
+        <di:waypoint x="480" y="1104" />
+        <di:waypoint x="480" y="1188" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_75-_51" >
+        <di:waypoint x="120" y="204" />
+        <di:waypoint x="120" y="276" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_64-_50" >
+        <di:waypoint x="1164" y="1032" />
+        <di:waypoint x="1320" y="1032" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_42-_52" >
+        <di:waypoint x="696" y="1104" />
+        <di:waypoint x="936" y="1104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_66-_59" >
+        <di:waypoint x="1164" y="636" />
+        <di:waypoint x="1320" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_65-_58" >
+        <di:waypoint x="1164" y="1104" />
+        <di:waypoint x="1320" y="1104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_67-_62" >
+        <di:waypoint x="480" y="1464" />
+        <di:waypoint x="480" y="1536" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_46-_61" >
+        <di:waypoint x="480" y="1320" />
+        <di:waypoint x="480" y="1392" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_38-_60" >
+        <di:waypoint x="696" y="636" />
+        <di:waypoint x="696" y="732" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_42-_jbpm-unique-5" >
+        <di:waypoint x="696" y="1104" />
+        <di:waypoint x="480" y="1104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-6-_jbpm-unique-5" >
+        <di:waypoint x="480" y="564" />
+        <di:waypoint x="480" y="1104" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-7-_jbpm-unique-6" >
+        <di:waypoint x="480" y="492" />
+        <di:waypoint x="480" y="564" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_27-_jbpm-unique-7" >
+        <di:waypoint x="480" y="420" />
+        <di:waypoint x="480" y="492" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70-_jbpm-unique-13" >
+        <di:waypoint x="480" y="120" />
+        <di:waypoint x="120" y="564" />
+        <di:waypoint x="120" y="1320" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_27-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_94-videoContentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-imageContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_27-termMapListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_27-videoContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-ratingItem" structureRef="com.irdeto.jumpstart.domain.Rating" />
+  <itemDefinition id="_termListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_36-termListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-encodeProfileItem" structureRef="com.irdeto.jumpstart.domain.EncodeProfile" />
+  <itemDefinition id="_13-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_13-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_96-uriIdItem" structureRef="String" />
+  <itemDefinition id="_36-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_13-encodeProfileItem" structureRef="com.irdeto.jumpstart.domain.EncodeProfile" />
+  <itemDefinition id="_94-encodeProfileItem" structureRef="com.irdeto.jumpstart.domain.EncodeProfile" />
+  <itemDefinition id="_39-encodeProfileItem" structureRef="com.irdeto.jumpstart.domain.EncodeProfile" />
+  <itemDefinition id="_94-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_36-uriIdItem" structureRef="String" />
+  <itemDefinition id="_13-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_93-videoContentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-termListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-currentContentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_36-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_13-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_36-subtitleContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-videoContentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-termMapListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_39-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_27-videoContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_93-contentIdItem" structureRef="String" />
+  <itemDefinition id="_27-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_27-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_36-termMapListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_93-protectedVideoSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_95-defaultViewnameItem" structureRef="String" />
+  <itemDefinition id="_targetItem" structureRef="String" />
+  <itemDefinition id="_39-termMapListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_27-uriIdItem" structureRef="String" />
+  <itemDefinition id="_13-sourceListFoldersItem" structureRef="java.util.List" />
+  <itemDefinition id="_subtitleContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_96-videoContentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-ratingItem" structureRef="com.irdeto.jumpstart.domain.Rating" />
+  <itemDefinition id="_13-imageContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_96-relationshipItem" structureRef="com.irdeto.jumpstart.domain.relationship.Relationship" />
+  <itemDefinition id="_96-subtitleContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_94-contentIdItem" structureRef="String" />
+  <itemDefinition id="_95-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_36-imageContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_95-protectedVideoSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_95-approvedEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_13-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_relatedProfilesItem" structureRef="com.irdeto.jumpstart.domain.config.RelatedProfiles" />
+  <itemDefinition id="_36-relatedProfilesItem" structureRef="com.irdeto.jumpstart.domain.config.RelatedProfiles" />
+  <itemDefinition id="_13-subtitleContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_94-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-protectedVideoSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-videoContentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_94-protectedVideoSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_controlPublishItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" />
+  <itemDefinition id="_95-uriIdItem" structureRef="String" />
+  <itemDefinition id="_96-subtitleContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-relatedProfilesItem" structureRef="com.irdeto.jumpstart.domain.config.RelatedProfiles" />
+  <itemDefinition id="_94-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_94-subtitleContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_39-sourceItem" structureRef="String" />
+  <itemDefinition id="_27-subcontentItem" structureRef="com.irdeto.jumpstart.domain.Subcontent" />
+  <itemDefinition id="_96-relatedProfilesItem" structureRef="com.irdeto.jumpstart.domain.config.RelatedProfiles" />
+  <itemDefinition id="_94-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_94-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_95-encodeProfileItem" structureRef="com.irdeto.jumpstart.domain.EncodeProfile" />
+  <itemDefinition id="_videoContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-termMapListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-subcontentItem" structureRef="com.irdeto.jumpstart.domain.Subcontent" />
+  <itemDefinition id="_13-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_27-subtitleContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_36-subcontentItem" structureRef="com.irdeto.jumpstart.domain.Subcontent" />
+  <itemDefinition id="_36-videoContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-videoContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_27-approvedEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_93-currentContentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_96-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_ratingItem" structureRef="com.irdeto.jumpstart.domain.Rating" />
+  <itemDefinition id="_protectedVideoSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_36-protectedVideoSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-currentEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_36-currentEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_13-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-termMapListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-approvedEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_termMapListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-contentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_94-videoContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_96-termListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-contentIdItem" structureRef="String" />
+  <itemDefinition id="_95-videoContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-sourceListFoldersItem" structureRef="java.util.List" />
+  <itemDefinition id="_uriIdItem" structureRef="String" />
+  <itemDefinition id="_96-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_93-sourceItem" structureRef="String" />
+  <itemDefinition id="_relationshipItem" structureRef="com.irdeto.jumpstart.domain.relationship.Relationship" />
+  <itemDefinition id="_subcontentItem" structureRef="com.irdeto.jumpstart.domain.Subcontent" />
+  <itemDefinition id="_93-imageContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_95-ratingItem" structureRef="com.irdeto.jumpstart.domain.Rating" />
+  <itemDefinition id="_36-protectedVideoSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_39-subtitleContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-subtitleContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_13-videoContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_27-currentEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_39-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_94-protectedVideoSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_36-videoContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_96-encodeProfileItem" structureRef="com.irdeto.jumpstart.domain.EncodeProfile" />
+  <itemDefinition id="_27-relationshipItem" structureRef="com.irdeto.jumpstart.domain.relationship.Relationship" />
+  <itemDefinition id="_95-subtitleContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_96-imageContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_13-currentEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_39-imageContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_93-targetItem" structureRef="String" />
+  <itemDefinition id="_36-encodeProfileItem" structureRef="com.irdeto.jumpstart.domain.EncodeProfile" />
+  <itemDefinition id="_contentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_36-videoContentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_93-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_94-sourceListFoldersItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-ratingItem" structureRef="com.irdeto.jumpstart.domain.Rating" />
+  <itemDefinition id="_13-contentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_94-imageContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_93-imageContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_94-defaultViewnameItem" structureRef="String" />
+  <itemDefinition id="_39-subcontentItem" structureRef="com.irdeto.jumpstart.domain.Subcontent" />
+  <itemDefinition id="_96-controlPublishItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" />
+  <itemDefinition id="_95-controlPublishItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" />
+  <itemDefinition id="_currentContentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_39-approvedEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_93-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_96-protectedVideoSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-defaultViewnameItem" structureRef="String" />
+  <itemDefinition id="_95-targetItem" structureRef="String" />
+  <itemDefinition id="_39-protectedVideoSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-imageContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-approvedEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_93-controlPublishItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" />
+  <itemDefinition id="_95-contentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_94-controlPublishItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" />
+  <itemDefinition id="_13-subcontentItem" structureRef="com.irdeto.jumpstart.domain.Subcontent" />
+  <itemDefinition id="_13-sourceItem" structureRef="String" />
+  <itemDefinition id="_27-sourceListFoldersItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-contentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_94-relationshipItem" structureRef="com.irdeto.jumpstart.domain.relationship.Relationship" />
+  <itemDefinition id="_13-relatedProfilesItem" structureRef="com.irdeto.jumpstart.domain.config.RelatedProfiles" />
+  <itemDefinition id="_39-termListItem" structureRef="java.util.List" />
+  <itemDefinition id="_videoContentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-contentIdItem" structureRef="String" />
+  <itemDefinition id="_93-videoContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_encodeProfileItem" structureRef="com.irdeto.jumpstart.domain.EncodeProfile" />
+  <itemDefinition id="_93-videoContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-relationshipItem" structureRef="com.irdeto.jumpstart.domain.relationship.Relationship" />
+  <itemDefinition id="_39-videoContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_27-controlPublishItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" />
+  <itemDefinition id="_96-contentIdItem" structureRef="String" />
+  <itemDefinition id="_13-uriIdItem" structureRef="String" />
+  <itemDefinition id="_94-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-imageContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-subtitleContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_36-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_94-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_95-sourceItem" structureRef="String" />
+  <itemDefinition id="_27-currentContentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_96-defaultViewnameItem" structureRef="String" />
+  <itemDefinition id="_13-imageContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-subtitleContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_13-termMapListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-approvedEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_93-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_94-ratingItem" structureRef="com.irdeto.jumpstart.domain.Rating" />
+  <itemDefinition id="_93-approvedEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_93-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_94-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_95-protectedVideoSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-contentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_13-targetItem" structureRef="String" />
+  <itemDefinition id="_videoContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_93-protectedVideoSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_94-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_39-targetItem" structureRef="String" />
+  <itemDefinition id="_13-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_94-subcontentItem" structureRef="com.irdeto.jumpstart.domain.Subcontent" />
+  <itemDefinition id="_27-encodeProfileItem" structureRef="com.irdeto.jumpstart.domain.EncodeProfile" />
+  <itemDefinition id="_27-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_39-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_94-imageContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-currentContentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_39-defaultViewnameItem" structureRef="String" />
+  <itemDefinition id="_95-subcontentItem" structureRef="com.irdeto.jumpstart.domain.Subcontent" />
+  <itemDefinition id="_36-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_95-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_13-controlPublishItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" />
+  <itemDefinition id="_94-termListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-termListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_95-relationshipItem" structureRef="com.irdeto.jumpstart.domain.relationship.Relationship" />
+  <itemDefinition id="_96-videoContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-ratingItem" structureRef="com.irdeto.jumpstart.domain.Rating" />
+  <itemDefinition id="_93-ratingItem" structureRef="com.irdeto.jumpstart.domain.Rating" />
+  <itemDefinition id="_27-defaultViewnameItem" structureRef="String" />
+  <itemDefinition id="_96-videoContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_27-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-sourceListFoldersItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_defaultViewnameItem" structureRef="String" />
+  <itemDefinition id="_95-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-contentIdItem" structureRef="String" />
+  <itemDefinition id="_94-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_94-currentContentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_95-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_93-sourceListFoldersItem" structureRef="java.util.List" />
+  <itemDefinition id="_relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_39-videoContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_96-currentEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-publishWrapperItem" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_93-subtitleContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-currentEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_96-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_95-relatedProfilesItem" structureRef="com.irdeto.jumpstart.domain.config.RelatedProfiles" />
+  <itemDefinition id="_96-currentContentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_95-contentIdItem" structureRef="String" />
+  <itemDefinition id="_94-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-imageContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_39-imageContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-subcontentItem" structureRef="com.irdeto.jumpstart.domain.Subcontent" />
+  <itemDefinition id="_94-subtitleContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-subtitleContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_39-controlPublishItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" />
+  <itemDefinition id="_94-currentEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_27-videoContentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_protectedVideoSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_13-subtitleContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_13-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_36-controlPublishItem" structureRef="com.irdeto.jumpstart.workflow.publish.control.ControlPublish" />
+  <itemDefinition id="_13-videoContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_94-termMapListItem" structureRef="java.util.List" />
+  <itemDefinition id="_sourceListFoldersItem" structureRef="java.util.List" />
+  <itemDefinition id="_currentEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_13-videoContentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_contentIdItem" structureRef="String" />
+  <itemDefinition id="_36-sourceListFoldersItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-protectedVideoSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_93-relatedProfilesItem" structureRef="com.irdeto.jumpstart.domain.config.RelatedProfiles" />
+  <itemDefinition id="_contentTypeItem" structureRef="String" />
+  <itemDefinition id="_36-defaultViewnameItem" structureRef="String" />
+  <itemDefinition id="_94-targetItem" structureRef="String" />
+  <itemDefinition id="_95-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_93-uriIdItem" structureRef="String" />
+  <itemDefinition id="_94-videoContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_93-subtitleContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_39-protectedVideoSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_96-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_39-uriIdItem" structureRef="String" />
+  <itemDefinition id="_39-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-sourceItem" structureRef="String" />
+  <itemDefinition id="_imageContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-defaultViewnameItem" structureRef="String" />
+  <itemDefinition id="_93-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_96-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_94-approvedEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_93-relationshipItem" structureRef="com.irdeto.jumpstart.domain.relationship.Relationship" />
+  <itemDefinition id="_27-imageContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-termListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-sourceItem" structureRef="String" />
+  <itemDefinition id="_27-sourceItem" structureRef="String" />
+  <itemDefinition id="_96-protectedVideoSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_39-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_39-contentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_95-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_13-contentIdItem" structureRef="String" />
+  <itemDefinition id="_96-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_94-relatedProfilesItem" structureRef="com.irdeto.jumpstart.domain.config.RelatedProfiles" />
+  <itemDefinition id="_94-uriIdItem" structureRef="String" />
+  <itemDefinition id="_96-sourceListFoldersItem" structureRef="java.util.List" />
+  <itemDefinition id="_94-sourceItem" structureRef="String" />
+  <itemDefinition id="_36-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_96-ratingItem" structureRef="com.irdeto.jumpstart.domain.Rating" />
+  <itemDefinition id="_96-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-relationshipItem" structureRef="com.irdeto.jumpstart.domain.relationship.Relationship" />
+  <itemDefinition id="_95-currentEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_93-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_subtitleContentWrapperPositionListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-protectedVideoSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_96-targetItem" structureRef="String" />
+  <itemDefinition id="_27-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_39-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_27-destinationProcessIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_27-termListItem" structureRef="java.util.List" />
+  <itemDefinition id="_27-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_27-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_27-imageContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_96-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_93-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_39-relatedProfilesItem" structureRef="com.irdeto.jumpstart.domain.config.RelatedProfiles" />
+  <itemDefinition id="_imageContentWrapperPositionItem" structureRef="Integer" />
+  <itemDefinition id="_96-contentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_39-currentContentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_27-targetItem" structureRef="String" />
+  <itemDefinition id="_sourceItem" structureRef="String" />
+  <itemDefinition id="_approvedEntityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_94-contentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_39-relationshipItem" structureRef="com.irdeto.jumpstart.domain.relationship.Relationship" />
+  <itemDefinition id="_36-currentContentItem" structureRef="com.irdeto.jumpstart.domain.Content" />
+  <itemDefinition id="_36-targetItem" structureRef="String" />
+  <itemDefinition id="_27-protectedVideoSubcontentListItem" structureRef="java.util.List" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.publish.cdn.CdnPublish" name="CDN Publish" tns:packageName="com.irdeto.jumpstart.workflow.publish.cdn" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.config.*" />
+     <tns:import name="com.irdeto.domain.operation.MM8Response" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.cdn.*" />
+     <tns:import name="com.irdeto.domain.constants.TaskHandlerConstants" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="java.util.*" />
+     <tns:import name="java.util.Map.Entry" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.control.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.publish.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="config" itemSubjectRef="_configItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="subcontent" itemSubjectRef="_subcontentItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="target" itemSubjectRef="_targetItem"/>
+    <property id="source" itemSubjectRef="_sourceItem"/>
+    <property id="sourceListFolders" itemSubjectRef="_sourceListFoldersItem"/>
+    <property id="content" itemSubjectRef="_contentItem"/>
+    <property id="wrapper" itemSubjectRef="_publishWrapperItem"/>
+    <property id="relationshipList" itemSubjectRef="_relationshipListItem"/>
+    <property id="relationship" itemSubjectRef="_relationshipItem"/>
+    <property id="mm8Response" itemSubjectRef="_mm8ResponseItem"/>
+    <property id="rating" itemSubjectRef="_ratingItem"/>
+    <property id="relatedProfiles" itemSubjectRef="_relatedProfilesItem"/>
+    <property id="encodeProfile" itemSubjectRef="_encodeProfileItem"/>
+    <property id="approvedEntity" itemSubjectRef="_approvedEntityItem"/>
+    <property id="currentEntity" itemSubjectRef="_currentEntityItem"/>
+    <property id="relationshipMap" itemSubjectRef="_relationshipMapItem"/>
+    <property id="controlPublish" itemSubjectRef="_controlPublishItem"/>
+    <property id="uriId" itemSubjectRef="_uriIdItem"/>
+    <property id="termList" itemSubjectRef="_termListItem"/>
+    <property id="videoContentList" itemSubjectRef="_videoContentListItem"/>
+    <property id="protectedVideoSubcontentList" itemSubjectRef="_protectedVideoSubcontentListItem"/>
+    <property id="protectedVideoSubcontent" itemSubjectRef="_protectedVideoSubcontentItem"/>
+    <property id="transcodeProfileList" itemSubjectRef="_transcodeProfileListItem"/>
+    <property id="termMapList" itemSubjectRef="_termMapListItem"/>
+    <property id="destinationProcessIdList" itemSubjectRef="_destinationProcessIdListItem"/>
+    <property id="videoContentWrapperPosition" itemSubjectRef="_videoContentWrapperPositionItem"/>
+    <property id="imageContentWrapperPosition" itemSubjectRef="_imageContentWrapperPositionItem"/>
+    <property id="imageContentWrapperPositionList" itemSubjectRef="_imageContentWrapperPositionListItem"/>
+    <property id="videoContentWrapperPositionList" itemSubjectRef="_videoContentWrapperPositionListItem"/>
+    <property id="contentId" itemSubjectRef="_contentIdItem"/>
+    <property id="contentType" itemSubjectRef="_contentTypeItem"/>
+    <property id="currentContent" itemSubjectRef="_currentContentItem"/>
+    <property id="defaultViewname" itemSubjectRef="_defaultViewnameItem"/>
+    <property id="subtitleContentWrapperPositionList" itemSubjectRef="_subtitleContentWrapperPositionListItem"/>
+    <property id="subtitleContentWrapperPosition" itemSubjectRef="_subtitleContentWrapperPositionItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <task id="_39" name="Update Content" tns:taskName="MediaManager8UpdateTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>CdnPublishHelper.setContent(kcontext);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_39_DomainObjectInput" name="DomainObject" />
+        <dataInput id="_39_EntityTypeInput" name="EntityType" />
+        <dataInput id="_39_EntityIdInput" name="EntityId" />
+        <dataInput id="_39_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_39_DomainObjectInput</dataInputRefs>
+          <dataInputRefs>_39_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_39_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_39_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>currentContent</sourceRef>
+        <targetRef>_39_DomainObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_39_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{currentContent.getType()}</from>
+          <to xsi:type="tFormalExpression">_39_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_39_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{currentContent.getId()}</from>
+          <to xsi:type="tFormalExpression">_39_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_39_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_39_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_96" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_96_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_96_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_96_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_96_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_36" name="Copy To CDN" tns:taskName="HybridCopy" >
+      <ioSpecification>
+        <dataInput id="_36_SourceListFoldersInput" name="SourceListFolders" />
+        <dataInput id="_36_EntityTypeInput" name="EntityType" />
+        <dataInput id="_36_EntityIdInput" name="EntityId" />
+        <dataInput id="_36_TargetInput" name="Target" />
+        <dataInput id="_36_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_36_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_36_SourceInput" name="Source" />
+        <dataInput id="_36_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_36_SourceListFoldersInput</dataInputRefs>
+          <dataInputRefs>_36_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_36_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_36_TargetInput</dataInputRefs>
+          <dataInputRefs>_36_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_36_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_36_SourceInput</dataInputRefs>
+          <dataInputRefs>_36_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>sourceListFolders</sourceRef>
+        <targetRef>_36_SourceListFoldersInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_36_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{subcontent.getType()}</from>
+          <to xsi:type="tFormalExpression">_36_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_36_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{subcontent.getId()}</from>
+          <to xsi:type="tFormalExpression">_36_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_36_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{target}</from>
+          <to xsi:type="tFormalExpression">_36_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_36_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_36_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_36_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{subcontent.getSourcePath()}</from>
+          <to xsi:type="tFormalExpression">_36_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_36_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{source}</from>
+          <to xsi:type="tFormalExpression">_36_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_36_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{defaultViewname}</from>
+          <to xsi:type="tFormalExpression">_36_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <parallelGateway id="_97" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <endEvent id="_37" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <exclusiveGateway id="_42" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <scriptTask id="_43" name="Setup Content Publish" scriptFormat="http://www.java.com/java" >
+      <script>CdnPublishHelper.prepareContentPublish(kcontext);</script>
+    </scriptTask>
+    <exclusiveGateway id="_41" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_13" name="Configuration Task" tns:taskName="Configuration" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("uriId", wrapper.getEntity().getUriId());</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataOutput id="_13_PropertyMapOutput" name="PropertyMap" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_13_PropertyMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_13_PropertyMapOutput</sourceRef>
+        <targetRef>config</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_19" name="Error Handling" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("exitStatus", errorMap.get("ExitStatus"));
+        kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));
+      </script>
+    </scriptTask>
+    <intermediateCatchEvent id="_20" name="Signal" >
+      <dataOutput id="_20_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_20_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_20_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <exclusiveGateway id="_23" name="2nd Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_22" name="1st gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <task id="_93" name="Read Current Content Version" tns:taskName="MediaManager8ReadTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>CdnPublishHelper.setupCurrentContentRead(kcontext);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_93_EntityTypeInput" name="EntityType" />
+        <dataInput id="_93_EntityIDInput" name="EntityID" />
+        <dataInput id="_93_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_93_AttainLockInput" name="AttainLock" />
+        <dataOutput id="_93_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_93_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_93_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_93_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_93_AttainLockInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_93_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_93_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{contentType}</from>
+          <to xsi:type="tFormalExpression">_93_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_93_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{contentId}</from>
+          <to xsi:type="tFormalExpression">_93_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_93_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_93_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_93_AttainLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_93_AttainLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_93_ResponseObjectOutput</sourceRef>
+        <targetRef>currentContent</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_92" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_95" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_95_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_95_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_95_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_95_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_27" name="Update Subcontent" tns:taskName="MediaManager8UpdateTask" >
+      <ioSpecification>
+        <dataInput id="_27_DomainObjectInput" name="DomainObject" />
+        <dataInput id="_27_EntityTypeInput" name="EntityType" />
+        <dataInput id="_27_EntityIdInput" name="EntityId" />
+        <dataInput id="_27_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_27_DomainObjectInput</dataInputRefs>
+          <dataInputRefs>_27_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_27_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_27_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>subcontent</sourceRef>
+        <targetRef>_27_DomainObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_27_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{subcontent.getType()}</from>
+          <to xsi:type="tFormalExpression">_27_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_27_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{subcontent.getId()}</from>
+          <to xsi:type="tFormalExpression">_27_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_27_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_27_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_94" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_94_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_94_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_94_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_94_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <scriptTask id="_89" name="Setup Publish" scriptFormat="http://www.java.com/java" >
+      <script>CdnPublishHelper.setupPublish(kcontext);</script>
+    </scriptTask>
+    <endEvent id="_88" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <scriptTask id="_91" name="Setup Subcontent Publish" scriptFormat="http://www.java.com/java" >
+      <script>CdnPublishHelper.setupSubcontentCopy(kcontext);</script>
+    </scriptTask>
+    <exclusiveGateway id="_90" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+
+    <!-- connections -->
+    <sequenceFlow id="_93-_39" sourceRef="_93" targetRef="_39" />
+    <sequenceFlow id="_39-_96" sourceRef="_39" targetRef="_96" />
+    <sequenceFlow id="_92-_36" sourceRef="_92" targetRef="_36" name="Need Copy" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return CdnPublishHelper.needCopy(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_1-_97" sourceRef="_1" targetRef="_97" />
+    <sequenceFlow id="_19-_37" sourceRef="_19" targetRef="_37" />
+    <sequenceFlow id="_89-_42" sourceRef="_89" targetRef="_42" />
+    <sequenceFlow id="_96-_42" sourceRef="_96" targetRef="_42" />
+    <sequenceFlow id="_41-_43" sourceRef="_41" targetRef="_43" name="More Content" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return CdnPublishHelper.moreContent(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_42-_41" sourceRef="_42" targetRef="_41" />
+    <sequenceFlow id="_97-_13" sourceRef="_97" targetRef="_13" />
+    <sequenceFlow id="_20-_19" sourceRef="_20" targetRef="_19" />
+    <sequenceFlow id="_97-_20" sourceRef="_97" targetRef="_20" />
+    <sequenceFlow id="_22-_23" sourceRef="_22" targetRef="_23" />
+    <sequenceFlow id="_43-_22" sourceRef="_43" targetRef="_22" />
+    <sequenceFlow id="_90-_22" sourceRef="_90" targetRef="_22" />
+    <sequenceFlow id="_23-_93" sourceRef="_23" targetRef="_93" name="No More Subcontent" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_91-_92" sourceRef="_91" targetRef="_92" />
+    <sequenceFlow id="_36-_95" sourceRef="_36" targetRef="_95" />
+    <sequenceFlow id="_95-_27" sourceRef="_95" targetRef="_27" />
+    <sequenceFlow id="_27-_94" sourceRef="_27" targetRef="_94" />
+    <sequenceFlow id="_13-_89" sourceRef="_13" targetRef="_89" />
+    <sequenceFlow id="_41-_88" sourceRef="_41" targetRef="_88" name="No More" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_23-_91" sourceRef="_23" targetRef="_91" name="More Subcontent" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return CdnPublishHelper.moreSubcontent(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_92-_90" sourceRef="_92" targetRef="_90" name="Not Need Copy" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_94-_90" sourceRef="_94" targetRef="_90" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.publish.cdn.CdnPublish" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="48" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_39" >
+        <dc:Bounds x="276" y="312" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_96" >
+        <dc:Bounds x="276" y="240" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_36" >
+        <dc:Bounds x="732" y="540" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_97" >
+        <dc:Bounds x="120" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_37" >
+        <dc:Bounds x="576" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_42" >
+        <dc:Bounds x="120" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_43" >
+        <dc:Bounds x="276" y="828" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_41" >
+        <dc:Bounds x="120" y="828" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="48" y="96" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="504" y="96" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" >
+        <dc:Bounds x="576" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_23" >
+        <dc:Bounds x="348" y="468" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_22" >
+        <dc:Bounds x="348" y="756" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_93" >
+        <dc:Bounds x="276" y="384" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_92" >
+        <dc:Bounds x="576" y="540" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_95" >
+        <dc:Bounds x="732" y="612" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_27" >
+        <dc:Bounds x="732" y="684" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_94" >
+        <dc:Bounds x="732" y="756" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_89" >
+        <dc:Bounds x="48" y="168" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_88" >
+        <dc:Bounds x="120" y="912" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_91" >
+        <dc:Bounds x="504" y="468" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_90" >
+        <dc:Bounds x="576" y="756" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_93-_39" >
+        <di:waypoint x="372" y="408" />
+        <di:waypoint x="372" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_39-_96" >
+        <di:waypoint x="372" y="336" />
+        <di:waypoint x="372" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_92-_36" >
+        <di:waypoint x="600" y="564" />
+        <di:waypoint x="828" y="564" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_97" >
+        <di:waypoint x="72" y="48" />
+        <di:waypoint x="144" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_37" >
+        <di:waypoint x="600" y="120" />
+        <di:waypoint x="600" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_89-_42" >
+        <di:waypoint x="144" y="192" />
+        <di:waypoint x="144" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_96-_42" >
+        <di:waypoint x="372" y="264" />
+        <di:waypoint x="144" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_43" >
+        <di:waypoint x="144" y="852" />
+        <di:waypoint x="372" y="852" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_42-_41" >
+        <di:waypoint x="144" y="264" />
+        <di:waypoint x="144" y="852" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_97-_13" >
+        <di:waypoint x="144" y="48" />
+        <di:waypoint x="144" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_20-_19" >
+        <di:waypoint x="600" y="48" />
+        <di:waypoint x="600" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_97-_20" >
+        <di:waypoint x="144" y="48" />
+        <di:waypoint x="600" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_22-_23" >
+        <di:waypoint x="372" y="780" />
+        <di:waypoint x="372" y="492" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_43-_22" >
+        <di:waypoint x="372" y="852" />
+        <di:waypoint x="372" y="780" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_90-_22" >
+        <di:waypoint x="600" y="780" />
+        <di:waypoint x="372" y="780" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_93" >
+        <di:waypoint x="372" y="492" />
+        <di:waypoint x="372" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_91-_92" >
+        <di:waypoint x="600" y="492" />
+        <di:waypoint x="600" y="564" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_36-_95" >
+        <di:waypoint x="828" y="564" />
+        <di:waypoint x="828" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_95-_27" >
+        <di:waypoint x="828" y="636" />
+        <di:waypoint x="828" y="708" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_27-_94" >
+        <di:waypoint x="828" y="708" />
+        <di:waypoint x="828" y="780" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_89" >
+        <di:waypoint x="144" y="120" />
+        <di:waypoint x="144" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_88" >
+        <di:waypoint x="144" y="852" />
+        <di:waypoint x="144" y="936" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_91" >
+        <di:waypoint x="372" y="492" />
+        <di:waypoint x="600" y="492" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_92-_90" >
+        <di:waypoint x="600" y="564" />
+        <di:waypoint x="600" y="780" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_94-_90" >
+        <di:waypoint x="828" y="780" />
+        <di:waypoint x="600" y="780" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

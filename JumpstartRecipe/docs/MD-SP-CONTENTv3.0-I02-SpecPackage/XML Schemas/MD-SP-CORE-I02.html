@@ -1,0 +1,875 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		<style type="text/css"> body { font-family: Arial; font-size: 8pt; color: #800000; }</style>
+		<style type="text/css"> table { border-style: solid; border-width: 1px; border-left-color: #ECE9D8; border-top-color: #ECE9D8; border-right-color: #ACA899; border-bottom-color: #ACA899; }</style>
+		<style type="text/css"> th {border-style: solid; font-size: 10pt; border-width: 1px; }</style>
+		<style type="text/css"> td {border-style: solid; font-size: 8pt; border-width: 1px; }</style>
+		<style type="text/css"> a {color: blue; }</style>
+	</head>
+	<body>
+		<h2></h2>
+		<h3><a name="AlternateIdType"></a>AlternateIdType</h3>
+		<p>An alternate identifier for an asset</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td>xsd:string<br>minLength=1</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>identifierSystem</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="ProductType"></a>ProductType</h3>
+		<p>The types of product that is delivered through these terms.		</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="#DeprecatedStringType">DeprecatedStringType</a></td>
+			</tr>
+		</table>
+		<h3><a name="DescriptionType"></a>DescriptionType</h3>
+		<p>Description of an asset.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="#DeprecatedStringType">DeprecatedStringType</a><br>maxLength=100</td>
+			</tr>
+		</table>
+		<h3><a name="AssetNameType"></a>AssetNameType</h3>
+		<p>Name of an asset as supplied by the provider; typically a descriptive, preferably unique name that identifies and describes the asset.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="#DeprecatedStringType">DeprecatedStringType</a><br>maxLength=50</td>
+			</tr>
+		</table>
+		<h3><a name="TrickModeRestrictionType"></a>TrickModeRestrictionType</h3>
+		<p>Trick Mode Restriction Type defines type and viewing rate scale restrictions. Note that, for each Trick Mode Restriction,
+		    all trick modes are initially permitted, less those explicitly excluded below. Restrictions on placements are applied to all
+		    AssetRefs. If restrictions are specified on both the placement and AssetRef, they are combined.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TrickModeExclusion</td>
+				<td>required<br>multiple</td>
+				<td><a href="#TrickModeExclusionType">TrickModeExclusionType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TrickModeRestrictionRule</td>
+				<td>optional</td>
+				<td><a href="#ProcessRuleSelectorType">ProcessRuleSelectorType</a></td>
+				<td>Optional trick mode restriction rule. If we are within the effective period as defined by
+				    EffectiveDatesDayTimeAttributeGroup, any rule that is present is evaluated: if it returns TRUE in a well defined value,
+				    the trick mode restriction is applied.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="#ExtType">ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="TrickModeExclusionType"></a>TrickModeExclusionType</h3>
+		<p>Defines one particular trick mode exclusion composed of a type and, for type="trick", a speed scaling factor
+		    or range of factors. The scale factor is the ratio of the play speed to normal play speed; forward speeds are
+		    positive, and backward speeds are negative.Normal is forward at an implied scale of 1.0, and that combination is always explicit (i.e., normal play is
+		    never an implied part of a trick range).Trick is a multiple of normal play speed, signed for forward or reverse. Trick 0.0 describes no play (i.e., pause).Jump is a navigational notation used for transitions such as "digital rewind" or "go to chapter". It does not have a speed.All is all trick modes, but excludes normal play.If present, lowertest and uppertest are applied when evaluating the scale value. The default tests are "ge" for lowertest and "le" for uppertest.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>type</td>
+				<td>required</td>
+				<td>xsd:string<br>pattern=trick|jump|all|pause|private:.+</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>scale</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>pattern=[+-]?(100|([0-9]{1,2})(\.[0-9]{1,2}))(,[+-]?(100|([0-9]{1,2})(\.[0-9]{1,2})))?</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>lowertest</td>
+				<td>optional</td>
+				<td>xsd:string<br>pattern=gt|gteq|private:.+</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>uppertest</td>
+				<td>optional</td>
+				<td>xsd:string<br>pattern=lt|lteq|private:.+</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="ProcessRuleSelectorType"></a>ProcessRuleSelectorType</h3>
+		<p>ProcessRuleSelector defines one set of parameters for the rules engine that generate one data
+		    process associated with an element. The attributes are optional, primarily to permit them to be supplanted 
+		    by new attributes, but a minimal operational set will be defined by profile.Arg is an argument to be supplied to the rule along with the process rule. Args have an actual name in
+		    the 'name' attribute and a value in the mixed content body. If the actual name can be matched to a formal name in the
+		    rule definition, the value of the arg MUST be substituted for that formal name in the rule invocation.
+		    The affiliate destination URL might be a typical argument.RuleId is the repository-specific ID for the rule to be invoked.  It is appended to the ruleRepository URL to form a
+			composite URL that is the complete and unique rule identifier. An HTTP GET at that composite URL MUST return a rule
+			manifest providing complete definition and usage data for the rule.RuleRepository is the URL of the repository that contains the rule to be invoked. Also, an HTTP GET at the
+		    repository URL MUST return a list of all the rules available at that repository.Ext is supplied to allow attributes to be added in the same form as those currently defined.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ruleId</td>
+				<td>required</td>
+				<td>xsd:string</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ruleRepository</td>
+				<td>required</td>
+				<td>xsd:anyURI</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Arg</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#ArgRefType">ArgRefType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#ExtType">ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="ArgRefType"></a>ArgRefType</h3>
+		<p>Container for rule argument variable/value pair, with the variable name in the attribute and the value in the element body.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td>xsd:anyType</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>variable</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="LocalizableStringType"></a>LocalizableStringType</h3>
+		<p>
+				A string which can be specified in multiple lanaguages for localization.
+			</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td>xsd:string<br>minLength=1</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>xml:lang</td>
+				<td>optional</td>
+				<td><a href="#"></a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="PersonType"></a>PersonType</h3>
+		<p>Base type describing a person, useful for actors, singers, producers, directors, etc.		</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>firstName</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=16</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>lastName</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=16</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>sortableName</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=32</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>fullName</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=32</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="AssetType"></a>AssetType</h3>
+		<p>An abstract base type from which all other MD3.0 assets are derived.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>uriId</td>
+				<td>required</td>
+				<td>xsd:anyURI<br>maxLength=1024</td>
+				<td>The primary unique identifier for this asset.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>providerVersionNum</td>
+				<td>optional</td>
+				<td>xsd:integer</td>
+				<td>The provider-supplied version number of the asset. Should be incremented each time the asset is changed by the provider.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>internalVersionNum</td>
+				<td>optional</td>
+				<td>xsd:integer</td>
+				<td>The internal version number of the asset. This version number should be set to 0 by the provider whenever providerVersionNum is changed. Likewise, this version number should be increased when internal variants of the asset are generated within the on-demand system.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>creationDateTime</td>
+				<td>optional</td>
+				<td>xsd:dateTime</td>
+				<td>The date and time the asset was created. This date and time field can, at the provider's discretion, be updated to a more recent time by the provider whenever the asset is changed, but that behavior is not required.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>startDateTime</td>
+				<td>optional</td>
+				<td>xsd:dateTime</td>
+				<td>The optional start of the asset lifetime.  If not included the asset is live since the beginning of time.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>endDateTime</td>
+				<td>optional</td>
+				<td>xsd:dateTime</td>
+				<td>The optional end of the asset lifetime. If not included the asset is live until the end of time or updated by the provider.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>notifyURI</td>
+				<td>optional</td>
+				<td>xsd:anyURI</td>
+				<td>URL of the callback URI for notifications, such as transfer state</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>lastModifiedDateTime</td>
+				<td>optional</td>
+				<td>xsd:dateTime</td>
+				<td>Timestamp of the last modification to the asset</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>eTag</td>
+				<td>optional</td>
+				<td>xsd:string</td>
+				<td>Entity tag, an opaque identifier associated with the current version of an asset</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>state</td>
+				<td>optional</td>
+				<td>xsd:string<br>pattern=(Provisioned|Processing|Failed|Verified|Available|Deleting|Deleted|private:.+)</td>
+				<td>The state of the asset</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>stateDetail</td>
+				<td>optional</td>
+				<td>xsd:string</td>
+				<td>Detailed state information (human-readable description) for the state.  Typically used if state indicates an error condition.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, an asset may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>AlternateId</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#AlternateIdType">AlternateIdType</a></td>
+				<td>Any number of alternate identifiers (e.g. VOD1.1, ISAN, Ad-ID) that may be used to identify this asset.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ProviderQAContact</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=1024</td>
+				<td>A contact identifier in case there are quality issues with this asset.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>AssetName</td>
+				<td>optional</td>
+				<td><a href="#AssetNameType">AssetNameType</a></td>
+				<td>DEPRECATED. The name of the asset as designated by the provider (e.g. "Die Hard Movie").</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Product</td>
+				<td>optional</td>
+				<td><a href="#ProductType">ProductType</a></td>
+				<td>DEPRECATED. A unique (within the provider's namespace) identifier for the product associated with this asset.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Provider</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td>A unique identifier for the asset's provider.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Description</td>
+				<td>optional</td>
+				<td><a href="#DescriptionType">DescriptionType</a></td>
+				<td>DEPRECATED. A description of the asset.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="#ExtType">ExtType</a></td>
+				<td>In addition to the elements and attributes defined, an asset may include additional, custom content within this element as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>MasterSourceRef</td>
+				<td>optional</td>
+				<td><a href="#AssetRefType">AssetRefType</a></td>
+				<td>Source content from which this content was derived</td>
+			</tr>
+		</table>
+		<h3><a name="AssetRefBaseType"></a>AssetRefBaseType</h3>
+		<p>An abstract base type that defines a reference to an asset.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>uriId</td>
+				<td>required</td>
+				<td>xsd:anyURI<br>maxLength=1024</td>
+				<td>The uriId of the asset being referenced.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="#ExtType">ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="AssetRefType"></a>AssetRefType</h3>
+		<p>A type that defines a reference to an asset.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="#AssetRefBaseType">AssetRefBaseType</a></td>
+			</tr>
+		</table>
+		<h3><a name="RatingType"></a>RatingType</h3>
+		<p>Content rating combined with the corresponding rating system attribute.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=50</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ratingSystem</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1<br>maxLength=50</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="DateTimeRangeType"></a>DateTimeRangeType</h3>
+		<p>A pair of dateTime values that together represent a start and an end.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>startDateTime</td>
+				<td>required</td>
+				<td>xsd:dateTime</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>endDateTime</td>
+				<td>required</td>
+				<td>xsd:dateTime</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="EffectiveAssetRefType"></a>EffectiveAssetRefType</h3>
+		<p>Identifies an Asset based on a asset reference which includes optional start/end range limits on being active, use to set the days of the week and hours within the day</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="#AssetRefType">AssetRefType</a></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>order</td>
+				<td>optional</td>
+				<td>xsd:unsignedInt</td>
+				<td>The order, lowest to highest, in which to process Assets. In some cases, 2 or more active Assets with the same value for order may result in indeterminate processing.</td>
+			</tr>
+		</table>
+		<h3><a name="ExtType"></a>ExtType</h3>
+		<p>This type may contain elements or attributes from any namespace and is provided for future extensibility.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>ANY</td>
+				<td>optional<br>multiple</td>
+				<td>##any</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="PriceType"></a>PriceType</h3>
+		<p>A decimal value for price combined with the corresponding currency attribute.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td>xsd:decimal</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>currency</td>
+				<td>optional</td>
+				<td>xsd:string<br>pattern=[a-zA-Z]{3}</td>
+				<td>A 3-letter code conforming to ISO-4217.  May be assumed to be "USD" (United States Dollar) if not provided.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>retail</td>
+				<td>optional</td>
+				<td>xsd:decimal</td>
+				<td>The retail price (same currency)</td>
+			</tr>
+		</table>
+		<h3><a name="DeprecatedStringType"></a>DeprecatedStringType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td>xsd:string<br>minLength=1</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>deprecated</td>
+				<td>required</td>
+				<td>xsd:boolean</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="DeprecatedBooleanType"></a>DeprecatedBooleanType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td>xsd:boolean</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>deprecated</td>
+				<td>required</td>
+				<td>xsd:boolean</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="ErrorType"></a>ErrorType</h3>
+		<p>An error code and error message.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="#LocalizableStringType">LocalizableStringType</a></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>code</td>
+				<td>optional</td>
+				<td>xsd:unsignedLong</td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="ErrorListType"></a>ErrorListType</h3>
+		<p>A list of errors that occured.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Error</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#ErrorType">ErrorType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="ADIContainerType"></a>ADIContainerType</h3>
+		<p>
+			An ADI container element for holding anything.
+		</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Asset</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#AssetType">AssetType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="#ExtType">ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="BucketType"></a>BucketType</h3>
+		<p>Bucket are logical Asset containers associated with the {ProviderId} portion of the asset uriId.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>providerId</td>
+				<td>required</td>
+				<td>xsd:anyURI<br>maxLength=1024</td>
+				<td>The primary unique identifier for this bucket.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TotalStorage</td>
+				<td>optional</td>
+				<td>xsd:unsignedLong</td>
+				<td>Total storage capacity in bytes.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>AvailableStorage</td>
+				<td>optional</td>
+				<td>xsd:unsignedLong</td>
+				<td>Current unused capacity in bytes.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>InputProtocols</td>
+				<td>optional</td>
+				<td>xsd:string</td>
+				<td>Input protocols the Bucket supports .</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TotalInputBandwidth</td>
+				<td>optional</td>
+				<td>xsd:unsignedLong</td>
+				<td>Total input capacity in bits per second.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>AvailableInputBandwidth</td>
+				<td>optional</td>
+				<td>xsd:unsignedLong</td>
+				<td>Current unused input capacity in bits per second.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>OutputProtocols</td>
+				<td>optional</td>
+				<td>xsd:string</td>
+				<td>Output protocols the bucket supports.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TotalOutputBandwidth</td>
+				<td>optional</td>
+				<td>xsd:unsignedLong</td>
+				<td>total output capacity in bits per second.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>AvailableOutputBandwidth</td>
+				<td>optional</td>
+				<td>xsd:unsignedLong</td>
+				<td>Current unused output capacity in bits per second.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>NumAssets</td>
+				<td>optional</td>
+				<td>xsd:unsignedLong</td>
+				<td>The number of assets currently associated with the Bucket.</td>
+			</tr>
+		</table>
+		<h3><a name="BucketListType"></a>BucketListType</h3>
+		<p>A sequence of Bucket elements</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Bucket</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#BucketType">BucketType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="StatusCodeType"></a>StatusCodeType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>classCode</td>
+				<td>required</td>
+				<td>xsd:nonNegativeInteger</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>detailCode</td>
+				<td>optional</td>
+				<td>xsd:nonNegativeInteger</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Note</td>
+				<td>optional<br>multiple</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>

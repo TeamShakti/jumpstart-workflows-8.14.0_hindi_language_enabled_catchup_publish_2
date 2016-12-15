@@ -1,0 +1,1424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 rel. 3 sp1 (x64) (http://www.altova.com) by Randy Moore (Consultant) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="AssetDelete">
+		<xs:annotation>
+			<xs:documentation>Delete asset data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlAssetCountryAvailabilitySave">
+		<xs:annotation>
+			<xs:documentation>Asset country availability data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CountryId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="IsBlocked" type="xs:boolean"/>
+				<xs:element name="AvailabilityStartDateTime" type="xs:dateTime" minOccurs="0" nillable="true"/>
+				<xs:element name="AvailabilityEndDateTime" type="xs:dateTime" minOccurs="0" nillable="true"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlAssetCountryAvailabilityDelete">
+		<xs:annotation>
+			<xs:documentation>Delete asset country availablity data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CountryId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlAssetPolicyOptionPriceOverrideDelete">
+		<xs:annotation>
+			<xs:documentation>Remove a price override for an asset.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="PolicyOptionId" type="xs:long" minOccurs="0" nillable="true"/>
+				<xs:element name="CountryId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlAssetPolicyOptionPriceOverride">
+		<xs:annotation>
+			<xs:documentation>Override price for an asset.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="PolicyOptionId" type="xs:long" minOccurs="0" nillable="true"/>
+				<xs:element name="CountryId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="TmpPrice" type="xs:decimal" minOccurs="0" nillable="true"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlAssetSave">
+		<xs:annotation>
+			<xs:documentation>Asset data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ContentId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="PolicyGroupId" type="xs:long"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlCategoryDelete">
+		<xs:annotation>
+			<xs:documentation>Category delete.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="CategoryId" type="xs:int"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlCategorySave">
+		<xs:annotation>
+			<xs:documentation>Policy group data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="CategoryId" type="xs:int"/>
+				<xs:element name="PolicyGroupId" type="xs:long"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlContentDelete">
+		<xs:annotation>
+			<xs:documentation>Content delete.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ContentId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlPolicyGroupCountryBlockDelete">
+		<xs:annotation>
+			<xs:documentation>Policy group delete block country.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="PolicyGroupId" type="xs:long"/>
+				<xs:element name="CountryId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlPolicyGroupCountryBlockSave">
+		<xs:annotation>
+			<xs:documentation>Policy group block countries.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="PolicyGroupId" type="xs:long"/>
+				<xs:element name="CountryId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlPolicyOptionDelete">
+		<xs:annotation>
+			<xs:documentation>Policy option delete.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="PolicyGroupId" type="xs:long"/>
+				<xs:element name="PolicyOptionId" type="xs:long" minOccurs="0" nillable="true"/>
+				<xs:element name="CountryId" minOccurs="0" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ControlPolicyOptionSave">
+		<xs:annotation>
+			<xs:documentation>Policy group data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="PolicyOptionId" type="xs:long"/>
+        <xs:element name="PolicyOptionName" >
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="PolicyGroupId" type="xs:long"/>
+				<xs:element name="CountryId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+        <xs:element name="PolicyGroupName" >
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="PricingType">
+					<xs:annotation>
+						<xs:documentation>Free, FreeReqAuthentication, Rental, DTO, Subscription</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+        <xs:element name="EntitlementDuration" >
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="RequiresSubscription" type="xs:boolean" minOccurs="0" nillable="true" />
+        <xs:element name="SubscriptionId" type="xs:long" minOccurs="0"  nillable="true" />
+        <xs:element name="OriginalPrice" type="xs:decimal" minOccurs="0" nillable="true"/>
+				<xs:element name="CurrentPrice" type="xs:decimal" minOccurs="0" nillable="true"/>
+				<xs:element name="CurrencyCode" minOccurs="0" nillable="true">
+					<xs:annotation>
+						<xs:documentation>ISO 4217 currency code.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishApiKeySave">
+		<xs:annotation>
+			<xs:documentation>API Key insert, update and delete</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ApiKeyId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="EncryptionKey">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishAssetDelete">
+		<xs:annotation>
+			<xs:documentation>Asset delete.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishAssetLanguageSave">
+		<xs:annotation>
+			<xs:documentation>Asset language data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Language">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="HasAudio" type="xs:boolean"/>
+				<xs:element name="HasSubtitles" type="xs:boolean"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishAssetSave">
+		<xs:annotation>
+			<xs:documentation>Asset data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ContentId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="DurationSeconds" type="xs:int"/>
+				<xs:element name="AssetType">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Format">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ParentalControl" type="ParentalControlContainer" minOccurs="0" nillable="true"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishCategoryLanguageSave">
+		<xs:annotation>
+			<xs:documentation>Publish language data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="CategoryId" type="xs:int"/>
+				<xs:element name="Language">
+					<xs:annotation>
+						<xs:documentation>ISO 639-2 language code.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Name">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Description" minOccurs="0" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Genres" minOccurs="0" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Genre" maxOccurs="unbounded">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Images" minOccurs="0" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Image" type="ImageContainer" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ExtraAttributes" minOccurs="0" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ExtraAttribute" type="ExtraAttributeContainer" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishCategorySave">
+		<xs:annotation>
+			<xs:documentation>Category data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="CategoryId" type="xs:int"/>
+				<xs:element name="CategoryType" minOccurs="0" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="IsPromotional" type="xs:boolean"/>
+				<xs:element name="HasCatchup" type="xs:boolean"/>
+				<xs:element name="IsProtected" type="xs:boolean"/>
+				<xs:element name="ParentCategoryId" type="xs:int" minOccurs="0" nillable="true"/>
+        <xs:element name="DisplayOrder" type="xs:unsignedShort" minOccurs="0" nillable="true"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishContentImageLanguageSave">
+		<xs:annotation>
+			<xs:documentation>Publish language data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ContentId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Language">
+					<xs:annotation>
+						<xs:documentation>ISO 639-2 language code.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Images">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Image" type="ImageContainer" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishContentLanguageSave">
+		<xs:annotation>
+			<xs:documentation>Publish language data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ContentId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Language">
+					<xs:annotation>
+						<xs:documentation>ISO 639-2 language code.</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Title">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Description" minOccurs="0" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Genres" minOccurs="0" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Genre" maxOccurs="unbounded">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:minLength value="1"/>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="Images" minOccurs="0" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Image" type="ImageContainer" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ExtraAttributes" minOccurs="0" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="ExtraAttribute" type="ExtraAttributeContainer" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishContentSave">
+		<xs:annotation>
+			<xs:documentation>Publish data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ContentId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="CategoryIds" minOccurs="0" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="CategoryId" type="xs:int" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="ContentType" minOccurs="0" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="LinearStartDateTime" type="xs:dateTime" minOccurs="0" nillable="true"/>
+				<xs:element name="ReleaseDate" type="xs:dateTime" minOccurs="0" nillable="true"/>
+				<xs:element name="TrackGroupId" minOccurs="0" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="TrackSubGroupId" minOccurs="0" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="TrackId" minOccurs="0" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Persons" minOccurs="0" nillable="true">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Person" type="PersonContainer" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+        <xs:element name="DisplayOrder" type="xs:unsignedShort" minOccurs="0" nillable="true"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PublishRenditionSave">
+		<xs:annotation>
+			<xs:documentation>Rendition data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="AssetId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="DeviceClass">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="AspectRatio" minOccurs="0" nillable="true">
+					<xs:simpleType>
+						<xs:restriction base="xs:string"/>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="HasDigitalAudioSupport" type="xs:boolean"/>
+				<xs:element name="Url">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ReportingContentSave">
+		<xs:annotation>
+			<xs:documentation>Reporting usage data.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="ContentId">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ContentProvider">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:minLength value="1"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="ProviderRanking" type="xs:double" minOccurs="0" nillable="true"/>
+				<xs:element name="ViewingsLast7Days" type="xs:int" minOccurs="0" nillable="true"/>
+				<xs:element name="ViewingsLast24Hours" type="xs:int" minOccurs="0" nillable="true"/>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ProcessMessageBatch">
+		<xs:annotation>
+			<xs:documentation>Processes multiple messages</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="1" maxOccurs="unbounded">
+				<xs:choice>
+					<xs:element name="AssetDelete" type="AssetDeleteContainer"/>
+					<xs:element name="ControlAssetCountryAvailabilityDelete" type="ControlAssetCountryAvailabilityDeleteContainer"/>
+					<xs:element name="ControlAssetCountryAvailabilitySave" type="ControlAssetCountryAvailabilitySaveContainer"/>
+					<xs:element name="ControlAssetPolicyOptionPriceOverrideDelete" type="ControlAssetPolicyOptionPriceOverrideDeleteContainer"/>
+					<xs:element name="ControlAssetPolicyOptionPriceOverride" type="ControlAssetPolicyOptionPriceOverrideContainer"/>
+					<xs:element name="ControlAssetSave" type="ControlAssetSaveContainer"/>
+					<xs:element name="ControlCategoryDelete" type="ControlCategoryDeleteContainer"/>
+					<xs:element name="ControlCategorySave" type="ControlCategorySaveContainer"/>
+					<xs:element name="ControlContentDelete" type="ControlContentDeleteContainer"/>
+					<xs:element name="ControlPolicyGroupCountryBlockDelete" type="ControlPolicyGroupCountryBlockDeleteContainer"/>
+					<xs:element name="ControlPolicyGroupCountryBlockSave" type="ControlPolicyGroupCountryBlockSaveContainer"/>
+					<xs:element name="ControlPolicyOptionDelete" type="ControlPolicyOptionDeleteContainer"/>
+					<xs:element name="ControlPolicyOptionSave" type="ControlPolicyOptionSaveContainer"/>
+					<xs:element name="PublishApiKeySave" type="PublishApiKeyContainer"/>
+					<xs:element name="PublishAssetDelete" type="PublishAssetDeleteContainer"/>
+					<xs:element name="PublishAssetLanguageSave" type="PublishAssetLanguageSaveContainer"/>
+					<xs:element name="PublishAssetSave" type="PublishAssetSaveContainer"/>
+					<xs:element name="PublishCategoryLanguageSave" type="PublishCategoryLanguageSaveContainer"/>
+					<xs:element name="PublishCategorySave" type="PublishCategorySaveContainer"/>
+					<xs:element name="PublishContentImageLanguageSave" type="PublishContentImageLanguageSaveContainer"/>
+					<xs:element name="PublishContentLanguageSave" type="PublishContentLanguageSaveContainer"/>
+					<xs:element name="PublishContentSave" type="PublishContentSaveContainer"/>
+					<xs:element name="PublishRenditionSave" type="PublishRenditionSaveContainer"/>
+					<xs:element name="ReportingContentSave" type="ReportingContentSaveContainer"/>
+				</xs:choice>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="ImageContainer">
+		<xs:annotation>
+			<xs:documentation>Image container.</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ImageType">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Url">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ParentalControlContainer">
+		<xs:annotation>
+			<xs:documentation>Parental control container.</xs:documentation>
+		</xs:annotation>
+		<xs:choice>
+			<xs:element name="Name">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Age" type="xs:int"/>
+		</xs:choice>
+	</xs:complexType>
+	<xs:complexType name="PersonContainer">
+		<xs:annotation>
+			<xs:documentation>Person container.</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="Name">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Role">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ExtraAttributeContainer">
+		<xs:annotation>
+			<xs:documentation>Extra attribute container.</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="Name">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Value">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="AssetDeleteContainer">
+		<xs:annotation>
+			<xs:documentation>Delete asset container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlAssetCountryAvailabilityDeleteContainer">
+		<xs:annotation>
+			<xs:documentation>Delete asset country availability data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CountryId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlAssetCountryAvailabilitySaveContainer">
+		<xs:annotation>
+			<xs:documentation>Asset country availability data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CountryId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="IsBlocked" type="xs:boolean"/>
+			<xs:element name="AvailabilityStartDateTime" type="xs:dateTime" minOccurs="0" nillable="true"/>
+			<xs:element name="AvailabilityEndDateTime" type="xs:dateTime" minOccurs="0" nillable="true"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlAssetPolicyOptionPriceOverrideDeleteContainer">
+		<xs:annotation>
+			<xs:documentation>Remove a price override for an asset container.</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PolicyOptionId" type="xs:long" minOccurs="0" nillable="true"/>
+			<xs:element name="CountryId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlAssetPolicyOptionPriceOverrideContainer">
+		<xs:annotation>
+			<xs:documentation>Override price for an asset container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PolicyOptionId" type="xs:long" minOccurs="0" nillable="true"/>
+			<xs:element name="CountryId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TmpPrice" type="xs:decimal" minOccurs="0" nillable="true"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlAssetSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Save asset data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ContentId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PolicyGroupId" type="xs:long"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlCategoryDeleteContainer">
+		<xs:annotation>
+			<xs:documentation>Category delete container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="CategoryId" type="xs:int"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlCategorySaveContainer">
+		<xs:annotation>
+			<xs:documentation>Policy group data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="CategoryId" type="xs:int"/>
+			<xs:element name="PolicyGroupId" type="xs:long"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlContentDeleteContainer">
+		<xs:annotation>
+			<xs:documentation>Content delete container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ContentId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlPolicyGroupCountryBlockDeleteContainer">
+		<xs:annotation>
+			<xs:documentation>Policy group delete block country.</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="PolicyGroupId" type="xs:long"/>
+			<xs:element name="CountryId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlPolicyGroupCountryBlockSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Policy group block countries container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="PolicyGroupId" type="xs:long"/>
+			<xs:element name="CountryId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlPolicyOptionDeleteContainer">
+		<xs:annotation>
+			<xs:documentation>Policy option delete container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="PolicyGroupId" type="xs:long"/>
+			<xs:element name="PolicyOptionId" type="xs:long" minOccurs="0" nillable="true"/>
+			<xs:element name="CountryId" minOccurs="0" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ControlPolicyOptionSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Policy group data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="PolicyOptionId" type="xs:long"/>
+      <xs:element name="PolicyOptionName" >
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="PolicyGroupId" type="xs:long"/>
+      <xs:element name="PolicyGroupName" >
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="CountryId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="PricingType">
+				<xs:annotation>
+					<xs:documentation>Free, FreeReqAuthentication, Rental, DTO, Subscription</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+      <xs:element name="EntitlementDuration" >
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="RequiresSubscription" type="xs:boolean" minOccurs="0" nillable="true"/>
+      <xs:element name="SubscriptionId" type="xs:long" minOccurs="0" nillable="true"/>
+      <xs:element name="OriginalPrice" type="xs:decimal" minOccurs="0" nillable="true"/>
+			<xs:element name="CurrentPrice" type="xs:decimal" minOccurs="0" nillable="true"/>
+			<xs:element name="CurrencyCode" minOccurs="0" nillable="true">
+				<xs:annotation>
+					<xs:documentation>ISO 4217 currency code.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishApiKeyContainer">
+		<xs:annotation>
+			<xs:documentation>API Key container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ApiKeyId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="EncryptionKey">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>			
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishAssetDeleteContainer">
+		<xs:annotation>
+			<xs:documentation>Asset delete container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishAssetLanguageSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Asset language data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Language">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="HasAudio" type="xs:boolean"/>
+			<xs:element name="HasSubtitles" type="xs:boolean"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishAssetSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Save asset data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ContentId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="DurationSeconds" type="xs:int"/>
+			<xs:element name="AssetType">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Format">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ParentalControl" type="ParentalControlContainer" minOccurs="0" nillable="true"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishCategoryLanguageSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Publish language data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="CategoryId" type="xs:int"/>
+			<xs:element name="Language">
+				<xs:annotation>
+					<xs:documentation>ISO 639-2 language code.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Name">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Description" minOccurs="0" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Genres" minOccurs="0" nillable="true">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Genre" maxOccurs="unbounded">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Images" minOccurs="0" nillable="true">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Image" type="ImageContainer" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ExtraAttributes" minOccurs="0" nillable="true">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ExtraAttribute" type="ExtraAttributeContainer" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishCategorySaveContainer">
+		<xs:annotation>
+			<xs:documentation>Category data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="CategoryId" type="xs:int"/>
+			<xs:element name="CategoryType" minOccurs="0" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="IsPromotional" type="xs:boolean"/>
+			<xs:element name="HasCatchup" type="xs:boolean"/>
+			<xs:element name="IsProtected" type="xs:boolean"/>
+			<xs:element name="ParentCategoryId" type="xs:int" minOccurs="0" nillable="true"/>
+      <xs:element name="DisplayOrder" type="xs:unsignedShort" minOccurs="0" nillable="true"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishContentImageLanguageSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Publish language data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ContentId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Language">
+				<xs:annotation>
+					<xs:documentation>ISO 639-2 language code.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Images">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Image" type="ImageContainer" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishContentLanguageSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Publish language data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ContentId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Language">
+				<xs:annotation>
+					<xs:documentation>ISO 639-2 language code.</xs:documentation>
+				</xs:annotation>
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Title">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Description" minOccurs="0" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Genres" minOccurs="0" nillable="true">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Genre" maxOccurs="unbounded">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:minLength value="1"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="Images" minOccurs="0" nillable="true">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Image" type="ImageContainer" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ExtraAttributes" minOccurs="0" nillable="true">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ExtraAttribute" type="ExtraAttributeContainer" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishContentSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Publish data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ContentId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="CategoryIds" minOccurs="0" nillable="true">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CategoryId" type="xs:int" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="ContentType" minOccurs="0" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="LinearStartDateTime" type="xs:dateTime" minOccurs="0" nillable="true"/>
+			<xs:element name="ReleaseDate" type="xs:dateTime" minOccurs="0" nillable="true"/>
+			<xs:element name="TrackGroupId" minOccurs="0" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TrackSubGroupId" minOccurs="0" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="TrackId" minOccurs="0" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="Persons" minOccurs="0" nillable="true">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="Person" type="PersonContainer" maxOccurs="unbounded"/>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+      <xs:element name="DisplayOrder" type="xs:unsignedShort" minOccurs="0" nillable="true"/>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="PublishRenditionSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Rendition data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="AssetId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="DeviceClass">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="AspectRatio" minOccurs="0" nillable="true">
+				<xs:simpleType>
+					<xs:restriction base="xs:string"/>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="HasDigitalAudioSupport" type="xs:boolean"/>
+			<xs:element name="Url">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+		</xs:all>
+	</xs:complexType>
+	<xs:complexType name="ReportingContentSaveContainer">
+		<xs:annotation>
+			<xs:documentation>Reporting usage data container</xs:documentation>
+		</xs:annotation>
+		<xs:all>
+			<xs:element name="ContentId">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ContentProvider">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:minLength value="1"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:element>
+			<xs:element name="ProviderRanking"  type="xs:double" minOccurs="0" nillable="true"/>
+			<xs:element name="ViewingsLast7Days" type="xs:int" minOccurs="0" nillable="true"/>
+			<xs:element name="ViewingsLast24Hours" type="xs:int" minOccurs="0" nillable="true"/>
+		</xs:all>
+	</xs:complexType>
+</xs:schema>

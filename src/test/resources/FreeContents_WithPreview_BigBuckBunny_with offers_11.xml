@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"
+		xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"
+		xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"
+		xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd 
+			urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd 
+			urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd 
+			urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd 
+			urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd 
+			http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">
+							<!-- Offer section starts-->
+	<Asset xsi:type="offer:OfferType" uriId="irdeto.com/Offer/FREEOFFER001" 
+	     startDateTime="2014-02-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">
+	    <offer:PromotionalContentGroupRef uriId="someUriId"/>
+		<offer:BillingId>34567</offer:BillingId>
+		<offer:TermsRef uriId="irdeto.com/Terms/FREETERMS001" />
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/201300022" />    <!-- Standalone Program 1- Big Buck Bunny with Preview -->
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/201300024" />    <!-- Standalone Program 2- Tears of Steel with Preview defined in another XML-->
+	</Asset>
+							<!-- Offer section ends-->
+							<!-- Term section starts -->
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/FREETERMS001" startDateTime="2014-02-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<terms:ContractName>Free</terms:ContractName>		<!-- Free [with contentType : movies&preview}-->
+		<terms:SuggestedPrice>0.00</terms:SuggestedPrice>
+	</Asset>
+							<!-- Term section ends-->				
+							<!-- Standalone Program section starts - Big Buck Bunny with movie and preview-->
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/201300022001">    <!-- need to be modified -->
+			<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Big Buck Bunny</title:TitleSortName>    <!-- need to be modified -->
+			<title:TitleBrief>Big Buck Bunny</title:TitleBrief>    <!-- need to be modified -->
+			<title:TitleMedium>Big Buck Bunny</title:TitleMedium>    <!-- need to be modified -->
+			<title:TitleLong>Big Buck Bunny</title:TitleLong>    <!-- need to be modified -->
+			<title:SummaryShort>Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself.</title:SummaryShort>    <!-- need to be modified -->
+			<title:SummaryLong>Big Buck Bunny tells the story of a giant rabbit with a heart bigger than himself. When one sunny day three rodents rudely harass him, something snaps  and the rabbit ain't no bunny anymore! In the typical cartoon tradition he prepares the nasty rodents a comical revenge.</title:SummaryLong>    <!-- need to be modified -->
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgrd" firstName="Alexander" lastName="Skarsgrd" sortableName="Skarsgrd,Alexander" />
+			<title:Director fullName="Sascha Goedegebure" firstName="Sascha" lastName="Goedegebure" sortableName="Sascha Goedegebure" />    <!-- need to be modified -->
+			<!-- not used for movies <title:EpisodeName>Episode 1</title:EpisodeName> -->  <!-- need to be modified -->
+			<!-- not used for movies <title:EpisodeID>1</title:EpisodeID>			  -->  <!-- need to be modified -->
+			
+			<!--      <title:Chapter heading="Opening Scene" timeCode="00:00:02:00" />
+		      <title:Chapter heading="They Meet" timeCode="00:15:12:00" />
+		      <title:Chapter heading="The Collision" timeCode="02:03:06:00" />
+		      <title:Chapter heading="She Goes Under" timeCode="02:55:15:00" />
+		      <title:Chapter heading="Final Scene" timeCode="03:02:09:00" />-->
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+		<!--    <title:Advisory>AL</title:Advisory>
+    <title:Advisory>N</title:Advisory>-->
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:10:00</title:DisplayRunTime>
+		<title:Year>2008</title:Year>
+		<title:CountryOfOrigin>Netherlands</title:CountryOfOrigin>
+		<title:Genre>Variety</title:Genre>    <!-- need to be modified -->
+		<title:ShowType>Movies</title:ShowType>    <!-- need to be modified -->
+		<!--    <title:BoxOffice>1835000000</title:BoxOffice>-->
+		<!--    <title:ProgrammerCallLetters>IND</title:ProgrammerCallLetters>-->
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/201300022"
+			startDateTime="2014-02-01T00:00:00Z" endDateTime="2014-12-31T11:59:59Z">    <!-- need to be modified -->
+		<offer:TitleRef uriId="irdeto.com/Title/201300022001" />    <!-- need to be modified -->
+		<offer:MovieRef uriId="irdeto.com/Movie/201300022002" />    <!-- need to be modified -->
+		<offer:PreviewRef uriId="irdeto.com/Preview/201300022003" />    
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300022004-01" />
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300022004-02" /> 
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201300022004-03" /> 		
+		<offer:PosterRef uriId="irdeto.com/Poster/201300022005-01" />    <!-- need to be modified -->
+		<offer:PosterRef uriId="irdeto.com/Poster/201300022005-02" /> 
+		<offer:PosterRef uriId="irdeto.com/Poster/201300022005-03" /> 
+		<offer:PosterRef uriId="irdeto.com/Poster/201300022005-04" /> 
+		<offer:PosterRef uriId="irdeto.com/Poster/201300022005-05" /> 
+	</Asset>
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Movie/201300022002">    <!-- need to be modified -->
+		<content:SourceUrl>201300022002-Movie-en_US.mov</content:SourceUrl>
+		<content:ContentFileSize>3907840625</content:ContentFileSize>
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H10M00S</content:Duration>    <!-- need to be modified -->
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+	</Asset>
+
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Preview/201300022003">    
+		<content:SourceUrl>201300022003-Preview-en_US.mp4</content:SourceUrl>
+		<content:ContentFileSize>25284375</content:ContentFileSize>
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H00M30S</content:Duration>    
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+	</Asset>  
+	
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300022004-01">    
+		<content:SourceUrl>201300022004-BoxCover-320-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:X_Resolution>320</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300022004-02">    
+		<content:SourceUrl>201300022004-BoxCover-480-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:X_Resolution>480</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201300022004-03">    
+		<content:SourceUrl>201300022004-BoxCover-640-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:X_Resolution>640</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300022005-01">    <!-- need to be modified -->
+		<content:SourceUrl>201300022005-Poster-144-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:X_Resolution>144</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300022005-02">    <!-- need to be modified -->
+		<content:SourceUrl>201300022005-Poster-360-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:X_Resolution>360</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300022005-03">    <!-- need to be modified -->
+		<content:SourceUrl>201300022005-Poster-648-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:X_Resolution>648</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300022005-04">    <!-- need to be modified -->
+		<content:SourceUrl>201300022005-Poster-720-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:X_Resolution>720</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201300022005-05">    <!-- need to be modified -->
+		<content:SourceUrl>201300022005-Poster-1080-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:X_Resolution>1080</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+						<!-- Standalone Program section ends -->
+	
+</ADI3>

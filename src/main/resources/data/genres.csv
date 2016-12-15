@@ -1,0 +1,99 @@
+Sr.No.,GENRE,CATEGORY_ID
+1,Action,8000001
+2,Adult,8000002
+3,Adventure,8000003
+4,Animals,8000004
+5,Animation,8000005
+6,Anime,8000006
+7,Art,8000007
+8,Auto,8000008
+9,Auto Racing,8000009
+10,Awards,8000010
+11,Baseball,8000011
+12,Basketball,8000012
+13,Bicycle Racing,8000013
+14,Bicycling,8000014
+15,Biography,8000015
+16,Blackjack,8000016
+17,Boat Racing,8000017
+18,Boating,8000018
+19,Bowling,8000019
+20,Boxing,8000020
+21,Business,8000021
+22,Cheerleading,8000022
+23,Comedy,8000023
+24,Concert,8000024
+25,Courtroom,8000025
+26,Crafts,8000026
+27,Crime,8000027
+28,Dance,8000028
+29,Drama,8000029
+30,Educational,8000030
+31,Election,8000031
+32,Extras (behind the scenes),8000032
+33,Family,8000033
+34,Fantasy,8000034
+35,Fashion,8000035
+36,Figure Skating,8000036
+37,Finance,8000037
+38,Fishing,8000038
+39,Fitness,8000039
+40,Food,8000040
+41,Game Show,8000041
+42,Gardening,8000042
+43,Health,8000043
+44,Home,8000044
+45,Horror,8000045
+46,Horse Racing,8000046
+47,Hunting,8000047
+48,Magic,8000048
+49,Marathon,8000049
+50,Martial Arts,8000050
+51,Mixed Martial Arts,8000051
+52,Motorcycle,8000052
+53,Motorcycle Racing,8000053
+54,Music Videos,8000054
+55,Musical,8000055
+56,Mystery,8000056
+57,Nature,8000057
+58,News,8000058
+59,Paranormal,8000059
+60,Pets,8000060
+61,Poker,8000061
+62,Pro Wrestling,8000062
+63,Public Affairs,8000063
+64,Reality,8000064
+65,Religious,8000065
+66,Reviews,8000066
+67,Rodeo,8000067
+68,Roller Sports,8000068
+69,Rugby,8000069
+70,Sailing,8000070
+71,Science,8000071
+72,Sci-fi,8000072
+73,Shopping,8000073
+74,Skateboarding,8000074
+75,Skiing,8000075
+76,Snowboarding,8000076
+77,Soap Opera,8000077
+78,Softball,8000078
+79,Stand-up,8000079
+80,Sumo Wrestling,8000080
+81,Surfing,8000081
+82,Suspense,8000082
+83,Swimming,8000083
+84,Talk,8000084
+85,Tennis,8000085
+86,Thriller,8000086
+87,Travel,8000087
+88,Triathlon,8000088
+89,Variety,8000089
+90,Video Games,8000090
+91,Volleyball,8000091
+92,War,8000092
+93,Water Sports,8000093
+94,Weather,8000094
+95,Western,8000095
+96,Winter Sports,8000096
+97,Wrestling,8000097
+98,Default,8999999

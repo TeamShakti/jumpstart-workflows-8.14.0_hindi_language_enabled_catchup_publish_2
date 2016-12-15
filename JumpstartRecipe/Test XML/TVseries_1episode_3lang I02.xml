@@ -1,0 +1,281 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"
+		xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"
+		xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"
+		xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">
+	<Asset xsi:type="offer:OfferType" uriId="indemand.com/Offer/UNVA2001081701006000" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<core:AlternateId identifierSystem="VOD1.1">vod://irdeto.com/UNVA2001081701004000</core:AlternateId>
+		<offer:Presentation>
+			<offer:CategoryRef uriId="irdeto.com/Category/Irdeto/Movies A-Z" />
+			<offer:DisplayAsNew>P7D</offer:DisplayAsNew>
+			<offer:DisplayAsLastChance>P7D</offer:DisplayAsLastChance>
+		</offer:Presentation>
+		<offer:PromotionalContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2001081701004001" />
+		<offer:ProviderContentTier>Irdeto1</offer:ProviderContentTier>
+		<offer:BillingId>56789</offer:BillingId>
+		<offer:TermsRef uriId="irdeto.com/Terms/UNVA2001081701004001" />
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2001081701004001" />
+	</Asset>
+	<Asset xsi:type="title:TitleType" uriId="indemand.com/Title/UNVA2001081701006001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<core:AlternateId identifierSystem="ISAN">1881-66C7-3420-000-7-9F3A-02450-U</core:AlternateId>
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>
+		<core:Provider>HBO</core:Provider>
+		<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Yourself, Save </title:TitleSortName>
+			<title:TitleBrief>Save Yourself</title:TitleBrief>
+			<title:TitleMedium>Save Yourself, the episode</title:TitleMedium>
+			<title:TitleLong>Save Yourself, the episode of True Blood this is just padding to create a long title.</title:TitleLong>
+			<title:SummaryShort>In the fifth season finale, Eric arrives just in time and kills Russell Edgington and saves the faeries.</title:SummaryShort>
+			<title:SummaryLong>In the fifth season finale, Eric arrives just in time and kills Russell Edgington and saves the faeries. Eric holds Nora back from draining Sookie, who has saved his life on more than one occasion. Along with Nora and Tara, he convinces Sookie to assist them in overthrowing the Authority, with Jason tagging along. Jason carries his parents' images with him, who aren't fond of vampires. Meanwhile, Luna skinwalks as Steve Newlin to rescue Emma and announces the Authority's crimes to the world while Steve is on air. Sam breaks free and ends up killing Chancellor Rosalyn and escapes with Luna, Emma and the rest of the humans. Back in Bon Temps, Andy is forced by Morella to deliver her quadruplet faerie babies with assistance from Holly; afterwards, she goes off without them. Alcide, with help from some vampire blood from his father, kills J.D. and takes over as leader of the pack. At the climax, Sookie, Eric, Nora, Tara, and Jason infiltrate the Authority complex and kill all of the guards in a huge bloodbath and free Pam and Jessica where the reunited Pam and Tara share an affectionate kiss much to Sookie's suprise and Jessica's amusement. Before Sookie and Eric go after Bill by themselves, Bill tricks Salome into drinking blood laced with silver and kills her. He then drinks Lilith's blood in front of Sookie and Eric, faces the "true death," only to rise a more powerful vampire than before. Eric screams for Sookie to run... </title:SummaryLong>
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgård" firstName="Alexander" lastName="Skarsgård" sortableName="Skarsgård,Alexander" />
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+			<title:Director fullName="Michael Lehmann" firstName="Michael" lastName="Lehmann" sortableName="Lehmann, Michael" />
+			<title:StudioDisplay>HBO</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>
+		</title:LocalizableTitle>
+		<title:LocalizableTitle xml:lang="se-SE">
+			<title:TitleSortName> Själv, Spara</title:TitleSortName>
+			<title:TitleBrief> rädda dig själv</title:TitleBrief>
+			<title:TitleMedium> Rädda dig själv, episoden</title:TitleMedium>
+			<title:TitleLong> Rädda dig själv, episoden av True Blood detta är bara utfyllnad för att skapa en lång titel.</title:TitleLong>
+			<title:SummaryShort> den femte säsongen finalen, kommer Eric precis i tid och dödar Russell Edgington och sparar faeries. </title:SummaryShort>
+			<title:SummaryLong> I den femte säsongen finalen, kommer Eric precis i tid och dödar Russell Edgington och sparar faeries. Eric har Nora tillbaka från tömmer Sookie, som räddade hans liv på mer än ett tillfälle. Tillsammans med Nora och Tara, övertygar han Sookie att hjälpa dem att störta myndigheten, med Jason Taggning. Jason bär hans föräldrars bilder med honom, som inte är förtjust i vampyrer. Under tiden Luna skinwalks som Steve Newlin rädda Emma och meddelar myndighetens brott till världen medan Steve är på luft. Sam bryter gratis och slutar döda förbundskansler Rosalyn och flyr med Luna, Emma och resten av människorna. Tillbaka i Bon Temps, är Andy tvingas av Morella att leverera sina barn kvadruplett faerie med stöd från Holly, efteråt går hon ut utan dem. Alcide, med hjälp av någon vampyr blod från sin far, dödar JD och tar över som ledare för flocken. På klimax, Sookie, Eric, Nora, Tara och Jason infiltrera myndigheten komplexa och döda alla av vakterna i en stor blodbad och gratis Pam och Jessica där återförenat Pam och Tara dela en tillgiven kyss mycket Sookies suprise och Jessicas nöjen . Innan Sookie och Eric gå efter Bill själva, Bill lurar Salome i dricksvatten blod spetsad med silver och dödar henne. Han dricker sedan Lilith blod framför Sookie och Eric, står det "sanna döden," bara att stiga en mer kraftfull vampyr än tidigare. Eric skriker till Sookie att köra ...</title:SummaryLong>
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgård" firstName="Alexander" lastName="Skarsgård" sortableName="Skarsgård,Alexander" />
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+			<title:Director fullName="Michael Lehmann" firstName="Michael" lastName="Lehmann" sortableName="Lehmann, Michael" />
+			<title:StudioDisplay>HBO</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>
+		</title:LocalizableTitle>
+		<title:LocalizableTitle xml:lang="zh-CN">
+			<title:TitleSortName>自我， 拯救 </title:TitleSortName>
+			<title:TitleBrief>自我拯救</title:TitleBrief>
+			<title:TitleMedium>自我拯救， 单集</title:TitleMedium>
+			<title:TitleLong>自我拯救， 真爱如血中的一集</title:TitleLong>
+			<title:SummaryShort>在第五季终结篇中，Eric及时赶到刺死了Russell并且救下了精灵们。</title:SummaryShort>
+			<title:SummaryLong>在第五季终结篇中，Eric及时赶到刺死了Russell并且救下精灵们。Eric阻止了Nora没有让她喝干Sookie的血，Sookie不止一次的救过Eric的性命。Eric同Nora还有Tara一起说服了Sookie帮助他们推翻权利当局，Jason也加入了他们当中。Jason带着他父母的照片，他并不是很喜欢吸血鬼。同时，Luna和Steve赶去营救Emma并且向世界揭露了权利当局的罪行。Sam得以挣脱并最终杀死了Chancellor Rosalyn然后同Luna、Emma还有其余的人类一起逃了出来。Maurella在Sam的酒吧里破光生产了四个孩子，然后她带着孩子们离开了。在父亲吸血鬼血统的帮助下，Alcide 杀死了J.D. 并且取代他获得了狼群的首领地位。高潮部分，Sookie、Eric、Nora、Tara和Jason潜入权利当局展开了一场大屠杀，干掉了所有的守卫然后救出了Pam和Jessica，Bill诱骗Salome喝下了加入银的血，于是杀死了她。然后Bill就在Sookie和Eric的面前喝下了Lilith的血，面对“真正的死亡”，变成了空前强大的吸血鬼。Eirc呼喊着Sookie，快跑啊。。。 </title:SummaryLong>
+			<title:ActorDisplay>安娜·帕奎因 Anna Paquin， 史蒂芬·莫耶 Stephen Moyer，亚历山大·斯卡斯加德 Alexander Skarsgard，鲁迪娜·卫斯理 Rutina Wesley，山姆·特拉梅尔 Sam Trammell，瑞恩·科万顿 Ryan Kwanten，尼尔森·埃利斯 Nelsan Ellis，嘉莉·崔普雷斯顿 Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgard" firstName="Alexander" lastName="Skarsgard" sortableName="Skarsgard,Alexander" />
+			<title:WriterDisplay>艾伦·鲍尔 Alan Ball</title:WriterDisplay>
+			<title:Director fullName="麦克·勒曼 Michael Lehmann" firstName="Michael" lastName="Lehmann" sortableName="Lehmann, Michael" />
+			<title:StudioDisplay>HBO</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:45:00</title:DisplayRunTime>
+		<title:Year>2011</title:Year>
+		<title:CountryOfOrigin>US</title:CountryOfOrigin>
+		<title:Genre>Fantasy</title:Genre>
+		<title:Genre>Horror</title:Genre>
+		<title:Genre>Black comedy</title:Genre>
+		<title:ShowType>Series</title:ShowType>
+		<title:IsEncryptionRequired>false</title:IsEncryptionRequired>
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="indemand.com/ContentGroup/UNVA2001081701006001"
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" 
+			endDateTime="2002-03-31T11:59:59Z">
+		<core:AlternateId identifierSystem="VOD1.1">vod://irdeto.com/UNVA2001081701004001</core:AlternateId>
+		<offer:TitleRef uriId="irdeto.com/Title/UNVA2001081701004001" />
+		<offer:MovieRef uriId="irdeto.com/Asset/UNVA2001081701004002" />
+		<offer:PreviewRef uriId="irdeto.com/Asset/UNVA2001081701004003" />
+		<offer:BoxCoverRef uriId="irdeto.com/Asset/UNVA2001081701004004" />
+	</Asset>
+	<Asset xsi:type="terms:TermsType" uriId="indemand.com/Terms/UNVA2001081701006001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<terms:SubscriberViewLimit startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-02-28T23:59:59Z"
+				maximumViews="5"/>
+		<terms:SubscriberViewLimit startDateTime="2002-03-01T00:00:00Z" endDateTime="2002-03-31T23:59:59Z"
+				maximumViews="6"/>
+		<terms:SuggestedPrice>0.00</terms:SuggestedPrice>
+	</Asset>
+	<Asset xsi:type="offer:CategoryType" uriId="irdeto.com/Category/Irdeto/Movies A-Z" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<core:AlternateId identifierSystem="VOD1.1">vod://irdeto.com/UNVA2001081701004001</core:AlternateId>
+		<offer:CategoryPath xml:lang="en-US">Irdeto/Movies A-Z</offer:CategoryPath>
+		<offer:CategoryPath xml:lang="se-SE">Irdeto/Filmer A-Z</offer:CategoryPath>
+		<offer:CategoryPath xml:lang="zh-CN">Irdeto/电影 A-Z</offer:CategoryPath>
+	</Asset>
+	<Asset xsi:type="content:MovieType" uriId="indemand.com/Asset/UNVA2001081701006002" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<content:SourceUrl>Save_Yourself.mpg</content:SourceUrl>
+		<content:ContentFileSize>3907840625</content:ContentFileSize>
+		<content:ContentCheckSum>12558D3269D25852BD26548DC2654CAA</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT03H14M00S</content:Duration>
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+	</Asset>
+	<Asset xsi:type="content:PreviewType" uriId="indemand.com/Asset/UNVA2001081701006003" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<content:SourceUrl>Save_Yourself_Preview.mpg</content:SourceUrl>
+		<content:ContentFileSize>25284375</content:ContentFileSize>
+		<content:ContentCheckSum>A1258D3269D25852BD26548DC2654C11</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H00M45S</content:Duration>
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="indemand.com/Asset/UNVA2001081701006004" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+		<content:SourceUrl>Save_Yourself_Box_Cover.bmp</content:SourceUrl>
+		<content:ContentFileSize>15235</content:ContentFileSize>
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>320</content:X_Resolution>
+		<content:Y_Resolution>240</content:Y_Resolution>
+	</Asset>
+	
+	<!--Here follow Irdeto proprietary extensions to mark up the Brand and Series-->
+<!--	<Ext>-->
+		<Asset xsi:type="irdeto:BrandType"  uriId="irdeto.com/Brand/UNVA2001081701005001">	
+			<!--Link to this Brand's title-->
+			<irdeto:TitleRef uriId="irdeto.com/Title/UNVA2001081701004101" />
+			<!--Link to Series 'Season 5 2012'-->
+			<irdeto:SeriesRef  uriId="irdeto.com/Series/UNVA2001081701005002" />
+		</Asset>
+	
+		<Asset xsi:type="irdeto:SeriesType" uriId="irdeto.com/Series/UNVA2001081701005002">
+			<!--Link to this Series' title-->
+			<irdeto:TitleRef uriId="irdeto.com/Title/UNVA2001081701004102" />
+			<!--Link to the program present in this file. Typically, there would be more episodes.-->
+			<irdeto:ContentGroupRef uriId="irdeto.com/ContentGroup/UNVA2001081701004001" />
+		</Asset>
+		
+		<!-- True Blood Brand's title -->
+		<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2001081701004101" providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+			<core:AlternateId identifierSystem="VOD1.1">vod://irdeto.com/UNVA2001081701004101</core:AlternateId>
+			<core:Ext>
+				<App_Data App="MOD" Name="Producer" Value="Alan Ball" />
+			</core:Ext>
+			<title:LocalizableTitle xml:lang="en-US">
+				<title:TitleSortName>TrueBlood</title:TitleSortName>
+				<title:TitleBrief>True Blood</title:TitleBrief>
+				<title:TitleMedium>True Blood by HBO</title:TitleMedium>
+				<title:TitleLong>True Blood, the HBO Horror Saga(which we love!)</title:TitleLong>
+				<title:SummaryShort>True Blood is an American cinematic television series created and produced by Alan Ball. It is based on The Southern Vampire Mysteries series of novels by Charlaine Harris</title:SummaryShort>
+				<title:SummaryLong>The fictional universe depicted in the series is premised on the notion that vampires (and other supernatural creatures) are living among us, unbeknownst to the majority of humans until two years ago, when the creation of synthetic blood (aka 'Tru Blood') by Japanese scientists allowed vampires to come out of the coffin (a term coined as a play on "coming out of the closet") and reveal their existence to the world on the basis that they no longer need to feed on humans to survive.E-1 This so-called 'Great Revelation' has split the vampires of the world into two camps: those who wish to integrate into human society (aka 'mainstream') by campaigning for citizenship and equal rights,E-1 and those who think that human-vampire co-existence is impossible because it is in conflict with the inherently violent nature of vampires. Throughout the series, other supernatural creatures are also introduced, among them shapeshifters, werewolves, fairies, witches and a maenad.</title:SummaryLong>
+				<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+				<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+				<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+				<title:Actor fullName="Alexander Skarsgård" firstName="Alexander" lastName="Skarsgård" sortableName="Skarsgård,Alexander" />
+				<title:StudioDisplay>HBO</title:StudioDisplay>
+				<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+				<title:SongTitle>Bad Things</title:SongTitle>
+			</title:LocalizableTitle>
+			<title:LocalizableTitle xml:lang="se-SE">
+				<title:TitleSortName> Själv, Spara</title:TitleSortName>
+				<title:TitleBrief> rädda dig själv</title:TitleBrief>
+				<title:TitleMedium> Rädda dig själv, HBO Horror Saga </title:TitleMedium>
+				<title:TitleLong> Rädda dig själv, episoden av True Blood detta är bara utfyllnad för att skapa en lång titel.</title:TitleLong>
+				<title:SummaryShort> True Blood är en amerikansk filmisk TV-serie skapad och producerad av Alan Ball. Den är baserad på The Southern Vampire Mysteries serie romaner av Charlaine Harris </title:SummaryShort>
+				<title:SummaryLong>Den fiktiva universum som skildras i serien bygger på uppfattningen att vampyrer (och andra övernaturliga varelser) lever bland oss​​, okänt för de flesta människor till för två år sedan, då skapandet av syntetiskt blod (aka 'Tru Blood ") genom Japanska forskare får vampyrer att komma ut ur kistan (en term som myntades som en pjäs på "komma ut ur garderoben") och avslöjar deras existens för världen på grund av att de inte längre behöver livnära sig på människor för att survive.E-1 Denna så kallade "stora uppenbarelse" har delat vampyrer i världen i två läger: de som vill integreras i det mänskliga samhället (aka "mainstream") genom en kampanj för medborgarskap och lika rättigheter, E-1 och de som tror att mänskliga vampyr samexistens är omöjlig eftersom det är i konflikt med sig våldsamma natur vampyrer. Alltigenom serien, är andra övernaturliga varelser också införts, bland dem Shapeshifters, varulvar, älvor, häxor och MENAD.</title:SummaryLong>
+				<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgård, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+				<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+				<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+				<title:Actor fullName="Alexander Skarsgård" firstName="Alexander" lastName="Skarsgård" sortableName="Skarsgård,Alexander" />
+				<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+				<title:Director fullName="Michael Lehmann" firstName="Michael" lastName="Lehmann" sortableName="Lehmann, Michael" />
+				<title:StudioDisplay>HBO</title:StudioDisplay>
+				<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+				<title:SongTitle>Bad Things</title:SongTitle>
+			</title:LocalizableTitle>
+			<title:LocalizableTitle xml:lang="zh-CN">
+				<title:TitleSortName>真爱如血</title:TitleSortName>
+				<title:TitleBrief>真爱如血</title:TitleBrief>
+				<title:TitleMedium>真爱如血 HBO</title:TitleMedium>
+				<title:TitleLong>真爱如血，HBO 恐怖长篇电视剧</title:TitleLong>
+				<title:SummaryShort>真爱如血(True Blood)是一部根据查琳·哈里斯(Charlaine Harris)的畅销系列小说南方吸血鬼谜案(The Southern Vampire Mysteries)改编的美国电视剧，2008年9月由HBO播出。</title:SummaryShort>
+				<title:SummaryLong>这部改编自畅销书《南方吸血鬼》(SouthernVampire)的故事，发生在美国路易斯安那州的一个小镇上。随着科技的发展，吸血鬼们已可不以吸食人类的鲜血为生，而用日本产的人造血代替。吸血鬼们终于可以爬出赖以藏身的棺材，走进人类的圈子，首次迎来和平共处的时代。小镇里，一位具有读心术的年轻女招待，爱上了一位英俊神秘的吸血鬼，从此卷入一系列凶杀案——在诸多的吸血鬼故事中，美剧《真爱如血》(Trueblood)开创了某些新局面，不得不承认还是具有一定的吸引力。其实，《真爱如血》的故事早已为美国人所熟知，多年前当女作家莎莲·哈里斯的《南方吸血鬼》系列出版时，就荣登纽约时报畅销书榜，更是拿走了推理、惊悚、奇幻、浪漫等各类大奖。由《六尺之下》的编剧AlanBall打造的此剧，则标榜是“为聪明人准备的大餐”。在这部剧中，虽然吸血鬼们已获得了人造血，可以不以吸食人血为生，但是人类对他们惯有的恐惧，却依然存在，无法轻易消除。在一个新的时代，人类将如何战胜延续了千百年的恐惧，与吸血鬼共处？或许这就是AlanBall所说的“聪明人”在此部剧集中的思考吧。</title:SummaryLong>
+				<title:ActorDisplay>安娜·帕奎因 Anna Paquin， 史蒂芬·莫耶 Stephen Moyer，亚历山大·斯卡斯加德 Alexander Skarsgard，鲁迪娜·卫斯理 Rutina Wesley，山姆·特拉梅尔 Sam Trammell，瑞恩·科万顿 Ryan Kwanten，尼尔森·埃利斯 Nelsan Ellis，嘉莉·崔普雷斯顿 Carrie Preston</title:ActorDisplay>
+				<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+				<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+				<title:Actor fullName="Alexander Skarsgård" firstName="Alexander" lastName="Skarsgård" sortableName="Skarsgård,Alexander" />
+				<title:StudioDisplay>HBO</title:StudioDisplay>
+				<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+				<title:SongTitle>Bad Things</title:SongTitle>
+			</title:LocalizableTitle>
+			<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+			<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+			<title:DisplayRunTime>16:15:00</title:DisplayRunTime>
+			<title:Year>2005</title:Year>
+			<title:CountryOfOrigin>US</title:CountryOfOrigin>
+			<title:Genre>Fantasy</title:Genre>
+			<title:Genre>Horror</title:Genre>
+			<title:Genre>Black comedy</title:Genre>
+			<title:ShowType>Series</title:ShowType>
+		</Asset>
+		
+		<!-- Season 5's Series title-->
+		<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/UNVA2001081701004102" providerVersionNum="1" internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2002-02-01T00:00:00Z" endDateTime="2002-03-31T11:59:59Z">
+			<core:AlternateId identifierSystem="VOD1.1">vod://irdeto.com/UNVA2001081701004102</core:AlternateId>
+			<core:Ext>
+				<App_Data App="MOD" Name="Producer" Value="Alan Ball" />
+			</core:Ext>
+			<title:LocalizableTitle xml:lang="en-US">
+				<title:TitleSortName>2012 Season 5</title:TitleSortName>
+				<title:TitleBrief>Season 5</title:TitleBrief>
+				<title:TitleMedium>Season 5: 2012</title:TitleMedium>
+				<title:TitleLong>Season 5: 2012, the final season!</title:TitleLong>
+				<title:SummaryShort>Fifth season of the award winning series True Blood</title:SummaryShort>
+				<title:SummaryLong>The season follows Bill and Eric being captured by the Vampire Authority after the disappearance of Nan Flanagan. The two are almost sentenced to death by the Guardian, Roman, before revealing that Russell Edgington is alive and free after being released by a mysterious vampire. With the help of Sookie and Alcide, the team discovers his hiding place and brings him in. Season 5 also focuses on Terry, who learns he is cursed after committing a terrible crime during the war in the Middle East. Meanwhile, Sookie learns that her powers are limited and contemplates having a normal life. Jason discovers his parents were murdered by a vampire and vows to find out who is responsible. Lafayette tries to deal with the powers given to him by Jesus. Russell, along with Eric's vampire sister Nora and Salome, redefine the values of the Authority and view humans as nothing more than food: just as Lilith of the Vampire bible wanted. The season ends with Bill drinking the blood of Lilith in front of Sookie and Eric. He begins to fall apart, ultimately meeting the &quot;true death&quot;. Shortly after, a nude Bill &quot;rises from the blood&quot;, as an even more powerful vampire reincarnation of Lilith (&quot;Billith&quot;). Surprised, Eric yells for Sookie to run prior to the end credits playing.</title:SummaryLong>
+				<title:StudioDisplay>HBO</title:StudioDisplay>
+			</title:LocalizableTitle>
+			<title:LocalizableTitle xml:lang="se-SE">
+				<title:TitleSortName>2012 säsong 5</title:TitleSortName>
+				<title:TitleBrief>säsong 5</title:TitleBrief>
+				<title:TitleMedium>säsong 5: 2012</title:TitleMedium>
+				<title:TitleLong>säsong 5: 2012, den sista säsongen!</title:TitleLong>
+				<title:SummaryShort>Femte säsongen av den prisbelönta serien True Blood</title:SummaryShort>
+				<title:SummaryLong>Säsongen följer Bill och Eric fångas av Vampire myndigheten efter försvinnande Nan Flanagan. De två är nästan dömd till döden av väktarrådet, romerska, innan avslöjar att Russell Edgington är levande och fri efter att ha släppts av en mystisk vampyr. Med hjälp av Sookie och Alcide, upptäcker laget sitt gömställe och tar honom in säsong 5 också fokuserar på Terry, som lär han förbannad efter att begå ett fruktansvärt brott under kriget i Mellanöstern. Samtidigt lär Sookie att hennes krafter är begränsade och avser att ha ett normalt liv. Jason upptäcker hans föräldrar mördades av en vampyr och lovar att ta reda på vem som är ansvarig. Lafayette försöker ta itu med de befogenheter som han av Jesus. Russell, tillsammans med Eriks vampyr syster Nora och Salome, omdefiniera värdet av den myndighet och visa människor som något annat än mat: precis som Lilith i Vampire bibeln ville. Säsongen avslutas med Bill dricka blod Lilith framför Sookie och Eric. Han börjar falla sönder i slutändan möta den "sanna döden". Strax efter, en naken Bill "stiger från blodet", som en ännu kraftfullare vampyr reinkarnation av Lilith ("Billith"). Förvånad, skriker Eric för Sookie att köra innan slutet krediter spelar.</title:SummaryLong>
+				<title:StudioDisplay>HBO</title:StudioDisplay>
+				<title:EpisodeName>Episode 3</title:EpisodeName>
+			    <title:EpisodeID>3</title:EpisodeID>
+			</title:LocalizableTitle>
+			<title:LocalizableTitle xml:lang="zh-CN">
+				<title:TitleSortName>2012 第五季</title:TitleSortName>
+				<title:TitleBrief>第五季</title:TitleBrief>
+				<title:TitleMedium>第五季：2012</title:TitleMedium>
+				<title:TitleLong>第五季：2012, 已完结</title:TitleLong>
+				<title:SummaryShort>备受好评的真爱如血第五季</title:SummaryShort>
+				<title:SummaryLong>这一季从Bill和Eric在Flanagan消失后被吸血鬼权利当局抓获开始。在说出Russell还活着之前他们俩几乎被宣判死刑，后来被一个神秘的吸血鬼解救了出来。在Sookie和Alcide的帮助下，小队防线了Russell并且抓获了Russell。在第五季中，Terry也是一个重要人物，他了得知了在他参加中东战争时犯下了严重罪行后，他就已经被诅咒了。同时，Sookie了解到她的能力是有限制的，并且在考虑过一个正常人的生活。Jason发现了他的父母是被吸血鬼杀害的，他发誓要找到杀害父母的吸血鬼。Lafayette试图要应对Jesus给他的力量。Russell和Eric的吸血鬼妹妹Nora还有Salome改变了吸血鬼的价值观，开始把人类只看做食物，如同在吸血鬼圣经中Lilith所要的那样。在本季结尾，Bill在Sookie和Eric面前喝下了Lilith的血。他开始碎裂，最终达到了“真正死亡”。转眼间，裸体的Bill从血泊中站了起来，成为了Lilith转世后的更强大的吸血鬼。Eirc呼喊着Sookie，快跑啊。。。</title:SummaryLong>
+				<title:StudioDisplay>HBO</title:StudioDisplay>
+			</title:LocalizableTitle>
+			<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+			<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+			<title:DisplayRunTime>16:15:00</title:DisplayRunTime>
+			<title:Year>2005</title:Year>
+			<title:CountryOfOrigin>US</title:CountryOfOrigin>
+			<title:Genre>Fantasy</title:Genre>
+			<title:Genre>Horror</title:Genre>
+			<title:Genre>Black comedy</title:Genre>
+			<title:ShowType>Series</title:ShowType>
+		</Asset>
+		
+<!--	</Ext>-->
+	<!--End of Irdeto proprietary CableLabs extension-->	
+</ADI3>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:signaling="urn:cablelabs:md:xsd:signaling:3.0" xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns="urn:cablelabs:md:xsd:placementopportunity:3.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="urn:cablelabs:md:xsd:placementopportunity:3.0" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1">
+	<xsd:import namespace="urn:cablelabs:md:xsd:core:3.0" schemaLocation="MD-SP-CORE-I02.xsd"/>
+	<xsd:import namespace="urn:cablelabs:md:xsd:signaling:3.0" schemaLocation="MD-SP-SIGNALING-I02.xsd"/>
+	<xsd:complexType name="PlacementOpportunityGroupType">
+		<xsd:annotation>
+			<xsd:documentation>PlacementOpportunityGroupType is an extension of the CableLabs 3 AssetType.  Implementers which do not deal with CableLabs Assets may safely ignore this type.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="PlacementOpportunityTemporalContraints" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Optional placement opportunity temporal contraints to evaluate to determine if this PO Group should be applied. The startDateTime and endDateTime attributes of the Placement Opportunity Group Asset and any temporal contraints on the POGroupRef (see CONTENT schema) must be passed prior to evaluating these temporal constraints.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="Ext" type="core:ExtType" minOccurs="0"/>
+							</xsd:sequence>
+							<xsd:attributeGroup ref="core:EffectiveDatesDayTimeAttributeGroup"/>
+							<xsd:anyAttribute namespace="##any" processContents="lax">
+								<xsd:annotation>
+									<xsd:documentation>In addition to the attributes defined, a constrint may include additional, custom attributes as needed by the application.</xsd:documentation>
+								</xsd:annotation>
+							</xsd:anyAttribute>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="PlacementOpportunityAssociationRule" type="core:ProcessRuleSelectorType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>Optional placement opportunity association rules to determine if this PO Group shuold be applied in combination with other constraints (see PlacementOpportunityTemporalContraints). A rule should evalute to TRUE or FALSE. If more than one rule is specified the first rule returning a TRUE means the PO Group should be applied (logical OR operation applies).</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="PlacementOpportunityPoint" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>One or more PO Point elements.</xsd:documentation>
+						</xsd:annotation>
+						<xsd:complexType>
+							<xsd:complexContent>
+								<xsd:extension base="PlacementOpportunityPointType"/>
+							</xsd:complexContent>
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="PlacementOpportunityRegion" type="PlacementOpportunityRegionType" minOccurs="0" maxOccurs="unbounded">
+						<xsd:annotation>
+							<xsd:documentation>One or more PO Region elements.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--                              -->
+	<!-- Element definitions -->
+	<!--                              -->
+	<xsd:element name="PlacementOpportunityGroup" type="PlacementOpportunityGroupType">
+		<xsd:annotation>
+			<xsd:documentation>Container for a collection of placement opportunities. PlacementOpportunityGroup  can contain one
+				or more placement opportunities associated to signal points and/or regiions.</xsd:documentation>
+		</xsd:annotation>
+	</xsd:element>
+	<!--                           -->
+	<!-- PlacementOpportunity Point Type -->
+	<!--                           -->
+	<xsd:complexType name="PlacementOpportunityPointType">
+		<xsd:complexContent>
+			<xsd:extension base="PlacementOpportunityBaseType">
+				<xsd:choice>
+					<xsd:element name="SignalPointRef" type="core:AssetRefType">
+						<xsd:annotation>
+							<xsd:documentation>A pointer to the signal point identified by signalPointId or an AlternateId for a point. 
+
+NOTE: Two or more PlacementOpportunityPoints can reference the same SignalPointRef. If so, the order attribute specifies the order of interpretation/processing.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+					<xsd:element name="SignalPoint" type="signaling:SignalPointType">
+						<xsd:annotation>
+							<xsd:documentation>Fully expressed signal point.</xsd:documentation>
+						</xsd:annotation>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--                              -->
+	<!-- PlacementOpportunity Region Type -->
+	<!--                              -->
+	<xsd:complexType name="PlacementOpportunityRegionType">
+		<xsd:complexContent>
+			<xsd:extension base="PlacementOpportunityBaseType">
+				<xsd:sequence>
+					<xsd:choice>
+						<xsd:element name="SignalRegionRef" type="core:AssetRefType">
+							<xsd:annotation>
+								<xsd:documentation>A pointer to the signal region identified by signalRegiond or AlternateId for a region. 
+
+NOTE: Two or more PlacementOpportunityRegions can reference the same SignalRegionRef. If so, the order attribute specifies the order of interpretation/processing.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+						<xsd:element name="SignalRegion" type="signaling:SignalRegionType">
+							<xsd:annotation>
+								<xsd:documentation>Fully expressed signal region.</xsd:documentation>
+							</xsd:annotation>
+						</xsd:element>
+					</xsd:choice>
+					<xsd:element name="LinearVideoAd" type="LinearVideoAdType"/>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<!--                           -->
+	<!-- PlacementOpportunity Base Type -->
+	<!--                           -->
+	<xsd:complexType name="PlacementOpportunityBaseType">
+		<xsd:sequence>
+			<xsd:element name="PlacementOpportunityOwnerRule" type="core:ProcessRuleSelectorType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Optional rule to direct how PlacementOpportunity ownership is derived.</xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="PlacementOpportunitySetRule" type="core:ProcessRuleSelectorType" minOccurs="0">
+				<xsd:annotation>
+					<xsd:documentation>Optional rule to direct how two or more PlacementOpportunities are dealt with as a set. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+			<xsd:element name="Ext" type="core:ExtType" minOccurs="0"/>
+		</xsd:sequence>
+		<xsd:attribute name="placementOpportunityID" type="core:URIIdType" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Identifier for this entity. Use core:AssetRefType when referencing a PlacementOpportunityID.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="typeOfPlacementOpportunity" use="required">
+			<xsd:annotation>
+				<xsd:documentation>Type of PlacementOpportunity
+Linear Video Ad Types - pre-roll, mid-roll, post-roll, interstitial or slate - use mid-roll for an advertisement in a live program - private: should be used for private extensions </xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="core:NonEmptyStringType">
+					<xsd:pattern value="pre-roll|mid-roll|post-roll|interstitial|slate|private:.+"/>
+					<!-- slate - typically the very first pre-roll opportunity (ex. would hold a 3-5 second "bought to you by") -->
+					<!-- private - supplied for private extensions -->
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="poGroupIndex">
+			<xsd:annotation>
+				<xsd:documentation>Placement Opportunity group index allows one or more Placement Opportunity Points or Regions to be associated via a common identifier. Typically this applies to a group of opportunities that point at the same point or region of interest. Numbers should start at 1 and increment for each successive group. (poGroupIndex is NOT associated with the PlacementOpportunityGroup. The order in which PlacementOpportunityGroups are addressed is in the core:EffectiveAssetRefType.	
+				</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:unsignedInt">
+					<xsd:minInclusive value="1"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="order" type="xsd:unsignedInt">
+			<xsd:annotation>
+				<xsd:documentation>The order, lowest to highest, in which to process PlacementOpportunities. In some cases, 2 or more PlacementOpportunities can be applied to the same point or region. If poGroupIndex is specified this applies to the order within the group.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attributeGroup ref="core:EffectiveDatesDayTimeAttributeGroup"/>
+		<xsd:anyAttribute namespace="##any" processContents="lax"/>
+	</xsd:complexType>
+	<!---->
+	<!--Linear Video Ad Type - additional attributes/elements specific to linear ads-->
+	<!---->
+	<xsd:complexType name="LinearVideoAdType">
+		<xsd:sequence>
+			<xsd:element name="TrickModeRestriction" type="core:TrickModeRestrictionType" minOccurs="0" maxOccurs="unbounded">
+				<xsd:annotation>
+					<xsd:documentation>Zero, one or more trick mode restrictions. </xsd:documentation>
+				</xsd:annotation>
+			</xsd:element>
+		</xsd:sequence>
+		<xsd:attribute name="fixedDuration" type="xsd:boolean">
+			<xsd:annotation>
+				<xsd:documentation>The advertisements, one or more, must match the duration of the placement opportunity. The number of advertisements is constrained by fillStrategy. The valid values for fixedDuration are:
+- TRUE – Must match the duration as defined by:
+maxDuration, if present, OR by the duration defined by the underlying signal region. minDuration, if present, MUST be ignored.
+- FALSE – Sum of the duration of placed advertisements must fall within the defined duration range.   
+
+The duration range is constrained by:
+- minDuration only – Sum of duration MUST be equal to or greater than minDuration
+- maxDuration only – Sum of duration MUST be equal to or less than maxDuration
+- minDuration and maxDuration – Sum of duration MUST be equal to or greater than minDuration and less then or equal to maxDuration </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="minDuration" type="xsd:duration">
+			<xsd:annotation>
+				<xsd:documentation>minDuration – defines minimum sum of duration of advertisements placed. Any test would be greater than or equal to the minDuration value. minDuration MUST be less than maxDuration, if present.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maxDuration" type="xsd:duration">
+			<xsd:annotation>
+				<xsd:documentation>maxDuration – defines the duration if fixedDuration is TRUE OR the maximum sum of duration of advertisements placed. Any test would be less than or equal to the value. maxDuration MUST be greater than minDuration, if present.</xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="maxPlacementCount">
+			<xsd:annotation>
+				<xsd:documentation> For a fillStrategy of "multiple", an optional contraint on the maximum number of placements to make. If omitted there is no constraint on the number of placements that can fit within the specified within the duration constraints. For example, for a count of 2, zero, 1 or 2 placements are allowed. </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="fillStrategy">
+			<xsd:annotation>
+				<xsd:documentation>fillStrategy – defines the fill strategy. Valid values:
+- single – only one advertisement MUST be placed
+- multiple – one or more advertisements can be placed
+- delete - in the absence of any other placement opportunities defined and filled for a given region of interest, directs the placement system to delete the underlying content (ex. advertisement) within the region of interest. That is, if no placements are made skip over the underlying content.
+- private:* - a private fill strategy is applied in selecting advertisements to place 
+</xsd:documentation>
+			</xsd:annotation>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:string">
+					<xsd:pattern value="single|multiple|delete|private:.+"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:attribute>
+		<xsd:attribute name="isFirst" type="xsd:boolean">
+			<xsd:annotation>
+				<xsd:documentation>This is a derived value that is set to TRUE if this is the first Placement Opportunity within a region. </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:attribute name="isLast" type="xsd:boolean">
+			<xsd:annotation>
+				<xsd:documentation>This is a derived value that is set to TRUE if this is the last Placement Opportunity within a region. </xsd:documentation>
+			</xsd:annotation>
+		</xsd:attribute>
+		<xsd:anyAttribute namespace="##any" processContents="lax"/>
+	</xsd:complexType>
+</xsd:schema>

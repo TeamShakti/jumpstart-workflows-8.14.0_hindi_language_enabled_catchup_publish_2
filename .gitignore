@@ -1,0 +1,46 @@
+/target
+/bin
+/.settings
+/activemq-data/**
+.DS_Store
+#################
+# IntelliJ Idea
+#################
+/.idea
+*.iml
+#################
+## Eclipse
+#################
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+.guvnorinfo/
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# CDT-specific
+.cproject
+
+# PDT-specific
+.buildpath
+
+desktop.ini
+btm*.tlog
+**/logs/*
+test-output
+
+src/test/resources/xmltv_Channel4_24112014.xml

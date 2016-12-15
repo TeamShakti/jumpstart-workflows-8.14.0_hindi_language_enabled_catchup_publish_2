@@ -1,0 +1,2544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- origin at X=0.0 Y=0.0 -->
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:g="http://www.jboss.org/drools/flow/gpd" xmlns:java="http://www.java.com/javaTypes" xmlns:tns="http://www.jboss.org/drools" xmlns="http://www.jboss.org/drools" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd" id="Definition" exporter="org.eclipse.bpmn2.modeler.core" exporterVersion="1.2.4.CR1-v20160318-1302-B107" expressionLanguage="http://www.mvel.org/2.0" targetNamespace="http://www.jboss.org/drools" typeLanguage="http://www.java.com/javaTypes">
+  <bpmn2:itemDefinition id="_79-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_97-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_97-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_97-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_45-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_101-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_82-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_91-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_101-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_17-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_77-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_92-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_77-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_79-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_77-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_87-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_87-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_95-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_77-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_95-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_82-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_87-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_102-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_96-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_102-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_68-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_87-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_68-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_77-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_77-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_68-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_97-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_92-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_79-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_17-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_78-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_101-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_44-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_82-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_96-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_102-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_44-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_17-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_17-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_101-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_95-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_45-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_17-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_45-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_95-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_6-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_92-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_68-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_95-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_71-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_97-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_82-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_68-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_6-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_102-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_44-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_97-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_96-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_71-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_91-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_96-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_68-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_17-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_96-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_97-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_44-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_82-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_78-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_95-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_6-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_71-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_96-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_68-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_71-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_82-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_77-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_87-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_102-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_45-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_95-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_101-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_77-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_102-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_44-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_68-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_45-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_102-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_97-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_77-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_102-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_71-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_92-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_45-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_79-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_97-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_82-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_77-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_101-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_6-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_5-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_17-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_6-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_78-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_79-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_44-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_82-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_17-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_78-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_45-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_17-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_68-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_79-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_92-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_17-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_78-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_5-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_71-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_5-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_96-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_44-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_77-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_45-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_101-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_71-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_96-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_68-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_91-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_102-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_92-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_6-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_17-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_17-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_82-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_87-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_45-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_63-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_101-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_101-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_79-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_101-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_68-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_82-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_45-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_45-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_102-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_77-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_17-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_92-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_71-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_101-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_77-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_6-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_77-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_95-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_6-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_71-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_17-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_96-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_45-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_78-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_96-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_44-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_5-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_92-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_45-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_97-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_96-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_79-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_97-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_92-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_68-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_68-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_71-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_79-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_101-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_5-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_79-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_87-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_44-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_78-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_17-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_78-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_5-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_77-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_79-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_82-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_17-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_45-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_91-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_68-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_63-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_101-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_6-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_71-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_87-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_96-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_82-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_71-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_102-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_101-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_102-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_5-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_6-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_79-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_101-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_45-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_91-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_44-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_101-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_95-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_17-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_97-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_102-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_78-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_101-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_63-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_17-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_45-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_6-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_92-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_71-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_5-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_92-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_17-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_92-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_71-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_5-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_68-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_102-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_97-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_5-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_63-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_96-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_92-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_92-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_17-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_77-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_82-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_82-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_101-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_95-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_45-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_6-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_92-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_5-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_92-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_5-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_101-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_95-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_79-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_102-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_45-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_44-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_45-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_82-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_63-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_6-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_17-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_63-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_6-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_95-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_68-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_17-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_79-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_17-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_6-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_97-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_44-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_102-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_91-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_17-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_17-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_97-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_91-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_95-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_79-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_77-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_101-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_maintainRelationshipsResultObject" isCollection="false" structureRef="com.irdeto.domain.mediamanager.command.MaintainRelationshipsResult"/>
+  <bpmn2:itemDefinition id="_77-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_71-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_44-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_5-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_17-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_6-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_68-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_95-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_44-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_102-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_79-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_87-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_91-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_71-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_6-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_5-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_97-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_97-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_68-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_63-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_63-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_68-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_63-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_92-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_82-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_95-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_96-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_5-relationshipMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_92-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_79-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_63-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_97-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_45-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_17-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_82-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_91-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_5-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_95-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_45-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_101-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_5-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_45-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_102-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_68-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_96-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_63-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_5-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_44-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_71-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_79-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_44-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_95-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_68-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_44-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_82-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_79-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_92-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_6-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_102-exitMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_82-schemaStringListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_95-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_78-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_44-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_5-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_79-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_82-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_17-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_79-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_101-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_101-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_68-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_82-ingestWrapperKeyListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_77-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_45-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_91-contentListItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_102-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_45-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_96-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_68-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_97-modifiedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_77-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_17-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_96-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_95-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_101-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_92-inputContentItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-entityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_5-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-mm8ResponseItem" isCollection="false" structureRef="com.irdeto.domain.operation.MM8Response"/>
+  <bpmn2:itemDefinition id="_77-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_17-validationMessageItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_79-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_5-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_79-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_82-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_97-lockListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_91-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_97-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_92-errorMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_97-processIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_95-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-ratingMaintainedEntityListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_17-validationItem" isCollection="false" structureRef="Boolean"/>
+  <bpmn2:itemDefinition id="_44-eternalWorkflowDecoratorItem" isCollection="false" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator"/>
+  <bpmn2:itemDefinition id="_masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_78-configItem" isCollection="false" structureRef="com.irdeto.domain.CheckedMap"/>
+  <bpmn2:itemDefinition id="_97-entityIdItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_87-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_5-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_17-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_44-modifiedEntityItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.BaseEntity"/>
+  <bpmn2:itemDefinition id="_82-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_71-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_96-fileNameItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_97-filePathItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_6-exitStatusItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_92-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_77-entityIdTypeWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_87-wrapperItem" isCollection="false" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper"/>
+  <bpmn2:itemDefinition id="_17-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-queryFilterWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_79-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_87-approvedEntityMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_87-queryFilterParameterItem" isCollection="false" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter"/>
+  <bpmn2:itemDefinition id="_82-maintainRelationshipsListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="_78-bulkReadResultMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_77-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_44-ratingMapMapItem" isCollection="false" structureRef="java.util.Map"/>
+  <bpmn2:itemDefinition id="_102-masterItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_63-contentTypeItem" isCollection="false" structureRef="String"/>
+  <bpmn2:itemDefinition id="_92-ingestWrapperListItem" isCollection="false" structureRef="java.util.List"/>
+  <bpmn2:itemDefinition id="ItemDefinition_1" isCollection="false" structureRef="java.lang.String"/>
+  <bpmn2:itemDefinition id="ItemDefinition_347" isCollection="false" structureRef="com.irdeto.domain.mediamanager.message.response.bulk.Response"/>
+  <bpmn2:signal id="Error" name="Error"/>
+  <bpmn2:process id="com.irdeto.jumpstart.workflow.ingest.DataIngest" tns:packageName="com.irdeto.jumpstart.workflow.ingest" name="Data Ingest" isExecutable="true" processType="Private">
+    <bpmn2:extensionElements>
+      <tns:import name="com.irdeto.manager.task.BeanUtil"/>
+      <tns:import name="com.irdeto.jumpstart.workflow.ingest.*"/>
+      <tns:import name="java.lang.*"/>
+      <tns:import name="com.irdeto.jumpstart.workflow.*"/>
+      <tns:import name="java.util.*"/>
+      <tns:import name="com.irdeto.manager.xml.*"/>
+      <tns:import name="com.irdeto.jumpstart.domain.*"/>
+      <tns:import name="com.irdeto.jumpstart.domain.ingest.*"/>
+      <tns:import name="com.irdeto.domain.operation.MM8Response"/>
+      <tns:import name="com.irdeto.manager.lock.LockManager"/>
+      <tns:import name="java.util.Map.*"/>
+      <tns:import name="com.irdeto.helper.xmlmodel.JDOMDocumentHelper"/>
+      <tns:import name="org.apache.commons.lang3.*"/>
+      <tns:import name="com.irdeto.domain.mediamanager.message.response.bulk.*"/>
+      <tns:import name="com.irdeto.domain.mediamanager.*"/>
+    </bpmn2:extensionElements>
+    <bpmn2:property id="errorMap" itemSubjectRef="_44-ratingMapMapItem" name="errorMap"/>
+    <bpmn2:property id="mm8Response" itemSubjectRef="_mm8ResponseItem" name="mm8Response"/>
+    <bpmn2:property id="queryFilterParameter" itemSubjectRef="_87-queryFilterParameterItem" name="queryFilterParameter"/>
+    <bpmn2:property id="contentList" itemSubjectRef="_contentListItem" name="contentList"/>
+    <bpmn2:property id="contentType" itemSubjectRef="_63-contentTypeItem" name="contentType"/>
+    <bpmn2:property id="maintainRelationshipsCommandsList" itemSubjectRef="_maintainRelationshipsListItem" name="maintainRelationshipsCommandsList"/>
+    <bpmn2:property id="wrapper" itemSubjectRef="_wrapperItem" name="wrapper"/>
+    <bpmn2:property id="entity" itemSubjectRef="_entityItem" name="entity"/>
+    <bpmn2:property id="entityId" itemSubjectRef="_entityIdItem" name="entityId"/>
+    <bpmn2:property id="ratingMapMap" itemSubjectRef="_ratingMapMapItem" name="ratingMapMap"/>
+    <bpmn2:property id="ingestWrapperList" itemSubjectRef="_ingestWrapperListItem" name="ingestWrapperList"/>
+    <bpmn2:property id="config" itemSubjectRef="_configItem" name="config"/>
+    <bpmn2:property id="validation" itemSubjectRef="_validationItem" name="validation"/>
+    <bpmn2:property id="schemaStringList" itemSubjectRef="_schemaStringListItem" name="schemaStringList"/>
+    <bpmn2:property id="eternalWorkflowDecorator" itemSubjectRef="_eternalWorkflowDecoratorItem" name="eternalWorkflowDecorator"/>
+    <bpmn2:property id="processId" itemSubjectRef="_processIdItem" name="processId"/>
+    <bpmn2:property id="exitStatus" itemSubjectRef="_exitStatusItem" name="exitStatus"/>
+    <bpmn2:property id="exitMessage" itemSubjectRef="_exitMessageItem" name="exitMessage"/>
+    <bpmn2:property id="inputContent" itemSubjectRef="_inputContentItem" name="inputContent"/>
+    <bpmn2:property id="lockList" itemSubjectRef="_lockListItem" name="lockList"/>
+    <bpmn2:property id="ingestWrapperKeyList" itemSubjectRef="_ingestWrapperKeyListItem" name="ingestWrapperKeyList"/>
+    <bpmn2:property id="filePath" itemSubjectRef="_filePathItem" name="filePath"/>
+    <bpmn2:property id="fileName" itemSubjectRef="_fileNameItem" name="fileName"/>
+    <bpmn2:property id="validationMessage" itemSubjectRef="_validationMessageItem" name="validationMessage"/>
+    <bpmn2:property id="approvedEntityMap" itemSubjectRef="_approvedEntityMapItem" name="approvedEntityMap"/>
+    <bpmn2:property id="master" itemSubjectRef="_masterItem" name="master"/>
+    <bpmn2:property id="queryFilterWrapperList" itemSubjectRef="_queryFilterWrapperListItem" name="queryFilterWrapperList"/>
+    <bpmn2:property id="bulkReadResultMap" itemSubjectRef="_bulkReadResultMapItem" name="bulkReadResultMap"/>
+    <bpmn2:property id="entityIdTypeWrapperList" itemSubjectRef="_entityIdTypeWrapperListItem" name="entityIdTypeWrapperList"/>
+    <bpmn2:property id="relationshipMaintainedEntityList" itemSubjectRef="_relationshipMaintainedEntityListItem" name="relationshipMaintainedEntityList"/>
+    <bpmn2:property id="ratingMaintainedEntityList" itemSubjectRef="_ratingMaintainedEntityListItem" name="ratingMaintainedEntityList"/>
+    <bpmn2:property id="modifiedEntityList" itemSubjectRef="_modifiedEntityListItem" name="modifiedEntityList"/>
+    <bpmn2:property id="modifiedEntity" itemSubjectRef="_modifiedEntityItem" name="modifiedEntity"/>
+    <bpmn2:property id="maintainRelationshipsResultObject" itemSubjectRef="_maintainRelationshipsResultObject" name="maintainRelationshipsResultObject"/>
+    <bpmn2:property id="bulkCreateRequest" itemSubjectRef="_44-ratingMapMapItem" name="bulkCreateRequest"/>
+    <bpmn2:property id="bulkUpdateRequest" itemSubjectRef="_44-ratingMapMapItem" name="bulkUpdateRequest"/>
+    <bpmn2:property id="bulkCreateResponse" itemSubjectRef="ItemDefinition_347" name="bulkCreateResponse"/>
+    <bpmn2:property id="bulkUpdateResponse" itemSubjectRef="ItemDefinition_347" name="bulkUpdateResponse"/>
+    <bpmn2:startEvent id="_1" name="StartProcess">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[StartProcess]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:outgoing>_1-_jbpm-unique-3</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:intermediateCatchEvent id="_11" name="Signal">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Signal]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_100-_11</bpmn2:incoming>
+      <bpmn2:outgoing>_11-_86</bpmn2:outgoing>
+      <bpmn2:dataOutput id="_11_Output" name="event"/>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_2">
+        <bpmn2:sourceRef>_11_Output</bpmn2:sourceRef>
+        <bpmn2:targetRef>errorMap</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:outputSet id="OutputSet_3">
+        <bpmn2:dataOutputRefs>_11_Output</bpmn2:dataOutputRefs>
+      </bpmn2:outputSet>
+      <bpmn2:signalEventDefinition id="SignalEventDefinition_1" signalRef="Error"/>
+    </bpmn2:intermediateCatchEvent>
+    <bpmn2:scriptTask id="_14" name="Prepare Search Loop" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Prepare Search Loop]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_87-_14</bpmn2:incoming>
+      <bpmn2:outgoing>_14-_15</bpmn2:outgoing>
+      <bpmn2:script>DataIngestHelper.setupForIteration(kcontext);</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:exclusiveGateway id="_15" name="Gateway" gatewayDirection="Converging">
+      <bpmn2:incoming>_18-_15</bpmn2:incoming>
+      <bpmn2:incoming>_14-_15</bpmn2:incoming>
+      <bpmn2:outgoing>_15-_16</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:task id="_17" tns:taskName="MediaManager8FilteredReadTask" name="Find Content">
+      <bpmn2:extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>DataIngestHelper.entryContentLoop(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Find Content]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_16-_17</bpmn2:incoming>
+      <bpmn2:outgoing>_17-_18</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_3">
+        <bpmn2:dataInput id="_17_QueryFilterParameterInput" name="QueryFilterParameter"/>
+        <bpmn2:dataInput id="_17_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_17_EntityTypeInput" name="EntityType"/>
+        <bpmn2:dataOutput id="_17_MediaManager8ResponseListOutput" name="MediaManager8ResponseList"/>
+        <bpmn2:inputSet id="InputSet_3">
+          <bpmn2:dataInputRefs>_17_QueryFilterParameterInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_17_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_17_EntityTypeInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_4">
+          <bpmn2:dataOutputRefs>_17_MediaManager8ResponseListOutput</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_10">
+        <bpmn2:sourceRef>queryFilterParameter</bpmn2:sourceRef>
+        <bpmn2:targetRef>_17_QueryFilterParameterInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_11">
+        <bpmn2:targetRef>_17_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_8">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_15">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_16">_17_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_12">
+        <bpmn2:targetRef>_17_EntityTypeInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_9">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_17">#{contentType}</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_18">_17_EntityTypeInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_3">
+        <bpmn2:sourceRef>_17_MediaManager8ResponseListOutput</bpmn2:sourceRef>
+        <bpmn2:targetRef>mm8Response</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+    <bpmn2:exclusiveGateway id="_16" name="Gateway" gatewayDirection="Diverging">
+      <bpmn2:incoming>_15-_16</bpmn2:incoming>
+      <bpmn2:outgoing>_16-_17</bpmn2:outgoing>
+      <bpmn2:outgoing>_16-_102</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:scriptTask id="_18" name="Merge Content" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Merge Content]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_17-_18</bpmn2:incoming>
+      <bpmn2:outgoing>_18-_15</bpmn2:outgoing>
+      <bpmn2:script>DataIngestHelper.mergeContentToEntity(kcontext);</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:endEvent id="_34" name="End">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[End]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_70-_34</bpmn2:incoming>
+      <bpmn2:terminateEventDefinition id="TerminateEventDefinition_1"/>
+    </bpmn2:endEvent>
+    <bpmn2:endEvent id="_33" name="End">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[End]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_86-_33</bpmn2:incoming>
+      <bpmn2:terminateEventDefinition id="TerminateEventDefinition_2"/>
+    </bpmn2:endEvent>
+    <bpmn2:exclusiveGateway id="_47" name="Gateway" gatewayDirection="Converging">
+      <bpmn2:incoming>_49-_47</bpmn2:incoming>
+      <bpmn2:incoming>_102-_47</bpmn2:incoming>
+      <bpmn2:outgoing>_47-_48</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:task id="_45" tns:taskName="MaintainRatingRelationships" name="Maintain Rating Relations">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Maintain Rating Relations]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_jbpm-unique-0-_45</bpmn2:incoming>
+      <bpmn2:outgoing>_45-_94</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_4">
+        <bpmn2:dataInput id="_45_RatingMapMapInput" name="RatingMapMap"/>
+        <bpmn2:dataInput id="_45_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_45_EntityTypeInput" name="EntityType"/>
+        <bpmn2:dataInput id="_45_EntityIdInput" name="EntityId"/>
+        <bpmn2:dataOutput id="_45_MaintainedEntityListOutput" name="MaintainedEntityList"/>
+        <bpmn2:inputSet id="InputSet_4">
+          <bpmn2:dataInputRefs>_45_RatingMapMapInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_45_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_45_EntityTypeInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_45_EntityIdInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_5">
+          <bpmn2:dataOutputRefs>_45_MaintainedEntityListOutput</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_13">
+        <bpmn2:sourceRef>ratingMapMap</bpmn2:sourceRef>
+        <bpmn2:targetRef>_45_RatingMapMapInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_14">
+        <bpmn2:targetRef>_45_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_10">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_19">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_20">_45_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_15">
+        <bpmn2:targetRef>_45_EntityTypeInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_16">
+        <bpmn2:targetRef>_45_EntityIdInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_4">
+        <bpmn2:sourceRef>_45_MaintainedEntityListOutput</bpmn2:sourceRef>
+        <bpmn2:targetRef>ratingMaintainedEntityList</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+    <bpmn2:scriptTask id="_50" name="Setup Bulk Create/Update" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Setup Bulk Create/Update]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_48-_50</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_1</bpmn2:outgoing>
+      <bpmn2:script>DataIngestHelper.prepareBulkRequest(kcontext);</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:scriptTask id="_49" name="Prepare Content Loop" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Prepare Content Loop]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_jbpm-unique-1-_49</bpmn2:incoming>
+      <bpmn2:outgoing>_49-_47</bpmn2:outgoing>
+      <bpmn2:script>DataIngestHelper.setupIngestWrapperKeyList(kcontext);</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:exclusiveGateway id="_48" name="Gateway" gatewayDirection="Diverging">
+      <bpmn2:incoming>_47-_48</bpmn2:incoming>
+      <bpmn2:outgoing>_48-_50</bpmn2:outgoing>
+      <bpmn2:outgoing>_48-_87</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:scriptTask id="_54" name="Prepare Relationship Loop" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Prepare Relationship Loop]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_11</bpmn2:incoming>
+      <bpmn2:outgoing>_54-_jbpm-unique-0</bpmn2:outgoing>
+      <bpmn2:script>DataIngestHelper.setupIngestWrapperKeyList(kcontext);</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:task id="_63" tns:taskName="XMLValidation" name="XML Validation Task">
+      <bpmn2:extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>DataIngestHelper.entryXmlValidation(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>DataIngestHelper.processValidationMessage(kcontext);</tns:script>
+        </tns:onExit-script>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[XML Validation Task]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_61-_63</bpmn2:incoming>
+      <bpmn2:outgoing>_63-_64</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_5">
+        <bpmn2:dataInput id="_63_SchemaListInput" name="SchemaList"/>
+        <bpmn2:dataInput id="_63_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_63_XMLInput" name="XML"/>
+        <bpmn2:dataOutput id="_63_ValidationMessageOutput" name="ValidationMessage"/>
+        <bpmn2:dataOutput id="_63_IsValidOutput" name="IsValid"/>
+        <bpmn2:inputSet id="InputSet_5">
+          <bpmn2:dataInputRefs>_63_SchemaListInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_63_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_63_XMLInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_6">
+          <bpmn2:dataOutputRefs>_63_ValidationMessageOutput</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_63_IsValidOutput</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_17">
+        <bpmn2:sourceRef>schemaStringList</bpmn2:sourceRef>
+        <bpmn2:targetRef>_63_SchemaListInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_18">
+        <bpmn2:targetRef>_63_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_13">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_25">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_26">_63_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_19">
+        <bpmn2:targetRef>_63_XMLInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_14">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_27">#{inputContent}</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_28">_63_XMLInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_5">
+        <bpmn2:sourceRef>_63_ValidationMessageOutput</bpmn2:sourceRef>
+        <bpmn2:targetRef>validationMessage</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_6">
+        <bpmn2:sourceRef>_63_IsValidOutput</bpmn2:sourceRef>
+        <bpmn2:targetRef>validation</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+    <bpmn2:exclusiveGateway id="_62" name="Gateway" gatewayDirection="Converging">
+      <bpmn2:incoming>_64-_62</bpmn2:incoming>
+      <bpmn2:incoming>_61-_62</bpmn2:incoming>
+      <bpmn2:outgoing>_62-_67</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="_61" name="Gateway" gatewayDirection="Diverging">
+      <bpmn2:incoming>_74-_61</bpmn2:incoming>
+      <bpmn2:outgoing>_61-_63</bpmn2:outgoing>
+      <bpmn2:outgoing>_61-_62</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:task id="_68" tns:taskName="Configuration" name="Configuration Task">
+      <bpmn2:extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable(&quot;inputContent&quot;, ((XmlManagerImpl)BeanUtil.xmlManager).stripUTF8ByteOrderMark(inputContent));
+kcontext.setVariable(&quot;lockList&quot;, new ArrayList&lt;String>());</tns:script>
+        </tns:onExit-script>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Configuration Task]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_100-_68</bpmn2:incoming>
+      <bpmn2:outgoing>_68-_74</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_6">
+        <bpmn2:dataOutput id="_68_PropertyMapOutput" itemSubjectRef="_78-configItem" name="PropertyMap"/>
+        <bpmn2:inputSet id="InputSet_6"/>
+        <bpmn2:outputSet id="OutputSet_7">
+          <bpmn2:dataOutputRefs>_68_PropertyMapOutput</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_7">
+        <bpmn2:sourceRef>_68_PropertyMapOutput</bpmn2:sourceRef>
+        <bpmn2:targetRef>config</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+    <bpmn2:exclusiveGateway id="_69" name="Gateway" gatewayDirection="Converging">
+      <bpmn2:incoming>_72-_69</bpmn2:incoming>
+      <bpmn2:incoming>_77-_69</bpmn2:incoming>
+      <bpmn2:outgoing>_69-_70</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="_70" name="Gateway" gatewayDirection="Diverging">
+      <bpmn2:incoming>_69-_70</bpmn2:incoming>
+      <bpmn2:outgoing>_70-_34</bpmn2:outgoing>
+      <bpmn2:outgoing>_70-_71</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:task id="_71" tns:taskName="ForkProcess" name="Eternal Workflow">
+      <bpmn2:extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>Integer key = (Integer)ingestWrapperKeyList.remove(0);
+EntityIngestWrapper ingestWrapperLocal = (EntityIngestWrapper)ingestWrapperList.get(key);
+kcontext.setVariable(&quot;eternalWorkflowDecorator&quot;, EternalWorkflowDecoratorFactory.getInstance((Base)ingestWrapperLocal.getEntity()));</tns:script>
+        </tns:onEntry-script>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Eternal Workflow]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_70-_71</bpmn2:incoming>
+      <bpmn2:outgoing>_71-_77</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_7">
+        <bpmn2:dataInput id="_71_eternalWorkflowDecoratorInput" name="eternalWorkflowDecorator"/>
+        <bpmn2:dataInput id="_71_ValueInput" name="Value"/>
+        <bpmn2:dataInput id="_71_VariableInput" name="Variable"/>
+        <bpmn2:dataInput id="_71_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_71_EventTypeInput" name="EventType"/>
+        <bpmn2:dataInput id="_71_SingletonInput" name="Singleton"/>
+        <bpmn2:dataInput id="_71_ProcessIDInput" name="ProcessID"/>
+        <bpmn2:inputSet id="InputSet_7">
+          <bpmn2:dataInputRefs>_71_eternalWorkflowDecoratorInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_71_ValueInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_71_VariableInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_71_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_71_EventTypeInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_71_SingletonInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_71_ProcessIDInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_8"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_20">
+        <bpmn2:sourceRef>eternalWorkflowDecorator</bpmn2:sourceRef>
+        <bpmn2:targetRef>_71_eternalWorkflowDecoratorInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_21">
+        <bpmn2:targetRef>_71_ValueInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_15">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_29">#{eternalWorkflowDecorator.getUriId()}</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_30">_71_ValueInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_22">
+        <bpmn2:targetRef>_71_VariableInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_16">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_31">uriId</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_32">_71_VariableInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_23">
+        <bpmn2:targetRef>_71_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_17">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_33">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_34">_71_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_24">
+        <bpmn2:targetRef>_71_EventTypeInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_18">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_35">DATA_UPDATE</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_36">_71_EventTypeInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_25">
+        <bpmn2:targetRef>_71_SingletonInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_19">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_37">true</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_38">_71_SingletonInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_26">
+        <bpmn2:targetRef>_71_ProcessIDInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_20">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_39">#{eternalWorkflowDecorator.getProcessId()}</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_40">_71_ProcessIDInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:exclusiveGateway id="_64" name="Gateway" gatewayDirection="Diverging">
+      <bpmn2:incoming>_63-_64</bpmn2:incoming>
+      <bpmn2:outgoing>_64-_62</bpmn2:outgoing>
+      <bpmn2:outgoing>_64-_98</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:endEvent id="_66" name="End">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[End]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_98-_66</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:scriptTask id="_67" name="Map Metadata" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Map Metadata]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_62-_67</bpmn2:incoming>
+      <bpmn2:outgoing>_67-_91</bpmn2:outgoing>
+      <bpmn2:script>DataIngestHelper.mapMetadata(kcontext);</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:task id="_77" tns:taskName="CommitPoint" name="Commit Point">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Commit Point]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_71-_77</bpmn2:incoming>
+      <bpmn2:outgoing>_77-_69</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_8">
+        <bpmn2:dataInput id="_77_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_77_BatchSizeInput" name="BatchSize"/>
+        <bpmn2:inputSet id="InputSet_8">
+          <bpmn2:dataInputRefs>_77_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_77_BatchSizeInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_9"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_27">
+        <bpmn2:targetRef>_77_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_21">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_41">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_42">_77_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_28">
+        <bpmn2:targetRef>_77_BatchSizeInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_22">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_43">50</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_44">_77_BatchSizeInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:scriptTask id="_72" name="Prepare Eternal Workflow Loop" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Prepare Eternal Workflow Loop]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_97-_72</bpmn2:incoming>
+      <bpmn2:outgoing>_72-_69</bpmn2:outgoing>
+      <bpmn2:script>//DataIngestHelper.setupIngestWrapperKeyList(kcontext);
+DataIngestHelper.setupIngestWrapperEternalWFKeyList(kcontext);</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:exclusiveGateway id="_74" name="Gateway" gatewayDirection="Diverging">
+      <bpmn2:incoming>_68-_74</bpmn2:incoming>
+      <bpmn2:outgoing>_74-_61</bpmn2:outgoing>
+      <bpmn2:outgoing>_74-_99</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:endEvent id="_75" name="End">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[End]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_99-_75</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:task id="_87" tns:taskName="AttainLock" name="Attain Lock">
+      <bpmn2:extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>Integer key = (Integer)ingestWrapperKeyList.remove(0);
+EntityIngestWrapper wrapperLocal = (EntityIngestWrapper)ingestWrapperList.get(key);
+kcontext.setVariable(&quot;wrapper&quot;, wrapperLocal);
+lockList.add(wrapperLocal.getUriId());</tns:script>
+        </tns:onEntry-script>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Attain Lock]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_48-_87</bpmn2:incoming>
+      <bpmn2:outgoing>_87-_14</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_10">
+        <bpmn2:dataInput id="_87_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_87_LockIDInput" name="LockID"/>
+        <bpmn2:inputSet id="InputSet_10">
+          <bpmn2:dataInputRefs>_87_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_87_LockIDInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_11"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_31">
+        <bpmn2:targetRef>_87_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_25">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_49">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_50">_87_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_32">
+        <bpmn2:targetRef>_87_LockIDInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_26">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_51">#{wrapper.getUriId()}</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_52">_87_LockIDInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:scriptTask id="_86" name="Log Error" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Log Error]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_11-_86</bpmn2:incoming>
+      <bpmn2:outgoing>_86-_33</bpmn2:outgoing>
+      <bpmn2:script>BeanUtil.loggerManager.error(kcontext, &quot;Ingest workflow error: {}&quot;, errorMap.get(&quot;ExitMessage&quot;));
+for (Object lock: lockList) {
+	BeanUtil.getBean(LockManager.class).releaseLock((String)lock);
+}</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:task id="_82" tns:taskName="ReadLatestApproved" name="Read Latest Approved">
+      <bpmn2:extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>DataIngestHelper.setupReadLatestApproved(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>DataIngestHelper.processReadLatestApproved(kcontext);</tns:script>
+        </tns:onExit-script>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Read Latest Approved]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_91-_82</bpmn2:incoming>
+      <bpmn2:outgoing>_82-_jbpm-unique-1</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_11">
+        <bpmn2:dataInput id="_82_EntityIdTypeWrapperListInput" name="EntityIdTypeWrapperList"/>
+        <bpmn2:dataInput id="_82_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_82_ConsiderLatestVersionInput" name="ConsiderLatestVersion"/>
+        <bpmn2:dataInput id="_82_EntityTypeInput" name="EntityType"/>
+        <bpmn2:dataInput id="_82_EntityIdInput" name="EntityId"/>
+        <bpmn2:dataOutput id="_82_EntityMapOutput" name="EntityMap"/>
+        <bpmn2:inputSet id="InputSet_11">
+          <bpmn2:dataInputRefs>_82_EntityIdTypeWrapperListInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_82_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_82_ConsiderLatestVersionInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_82_EntityTypeInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_82_EntityIdInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_12">
+          <bpmn2:dataOutputRefs>_82_EntityMapOutput</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_33">
+        <bpmn2:sourceRef>entityIdTypeWrapperList</bpmn2:sourceRef>
+        <bpmn2:targetRef>_82_EntityIdTypeWrapperListInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_34">
+        <bpmn2:targetRef>_82_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_27">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_53">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_54">_82_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_35">
+        <bpmn2:targetRef>_82_ConsiderLatestVersionInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_28">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_55">false</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_56">_82_ConsiderLatestVersionInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_36">
+        <bpmn2:targetRef>_82_EntityTypeInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_37">
+        <bpmn2:targetRef>_82_EntityIdInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_8">
+        <bpmn2:sourceRef>_82_EntityMapOutput</bpmn2:sourceRef>
+        <bpmn2:targetRef>approvedEntityMap</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+    <bpmn2:exclusiveGateway id="_93" name="Gateway" gatewayDirection="Diverging">
+      <bpmn2:incoming>_94-_93</bpmn2:incoming>
+      <bpmn2:outgoing>_93-_95</bpmn2:outgoing>
+      <bpmn2:outgoing>_93-_97</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:task id="_95" tns:taskName="MediaManager8UpdateTask" name="Update For Relationships">
+      <bpmn2:extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable(&quot;modifiedEntity&quot;, modifiedEntityList.remove(0));</tns:script>
+        </tns:onEntry-script>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Update For Relationships]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_93-_95</bpmn2:incoming>
+      <bpmn2:outgoing>_95-_96</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_12">
+        <bpmn2:dataInput id="_95_DomainObjectInput" name="DomainObject"/>
+        <bpmn2:dataInput id="_95_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_95_EntityTypeInput" name="EntityType"/>
+        <bpmn2:dataInput id="_95_EntityIdInput" name="EntityId"/>
+        <bpmn2:inputSet id="InputSet_12">
+          <bpmn2:dataInputRefs>_95_DomainObjectInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_95_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_95_EntityTypeInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_95_EntityIdInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_13"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_38">
+        <bpmn2:sourceRef>modifiedEntity</bpmn2:sourceRef>
+        <bpmn2:targetRef>_95_DomainObjectInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_39">
+        <bpmn2:targetRef>_95_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_31">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_61">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_62">_95_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_40">
+        <bpmn2:targetRef>_95_EntityTypeInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_32">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_63">#{modifiedEntity.getType()}</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_64">_95_EntityTypeInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_41">
+        <bpmn2:targetRef>_95_EntityIdInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_33">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_65">#{modifiedEntity.getId()}</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_66">_95_EntityIdInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:exclusiveGateway id="_94" name="Gateway" gatewayDirection="Converging">
+      <bpmn2:incoming>_96-_94</bpmn2:incoming>
+      <bpmn2:incoming>_45-_94</bpmn2:incoming>
+      <bpmn2:outgoing>_94-_93</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:task id="_91" tns:taskName="BulkFilteredReadTask" name="Read Entities">
+      <bpmn2:extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>DataIngestHelper.setupBulkReadEntities(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>DataIngestHelper.processBulkReadEntities(kcontext);</tns:script>
+        </tns:onExit-script>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Read Entities]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_67-_91</bpmn2:incoming>
+      <bpmn2:outgoing>_91-_82</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_13">
+        <bpmn2:dataInput id="_91_QueryFilterWrapperListInput" name="QueryFilterWrapperList"/>
+        <bpmn2:dataInput id="_91_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataOutput id="_91_ResultMapOutput" name="ResultMap"/>
+        <bpmn2:inputSet id="InputSet_13">
+          <bpmn2:dataInputRefs>_91_QueryFilterWrapperListInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_91_ErrorEventInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_14">
+          <bpmn2:dataOutputRefs>_91_ResultMapOutput</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_42">
+        <bpmn2:sourceRef>queryFilterWrapperList</bpmn2:sourceRef>
+        <bpmn2:targetRef>_91_QueryFilterWrapperListInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_43">
+        <bpmn2:targetRef>_91_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_34">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_67">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_68">_91_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_9">
+        <bpmn2:sourceRef>_91_ResultMapOutput</bpmn2:sourceRef>
+        <bpmn2:targetRef>bulkReadResultMap</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+    <bpmn2:task id="_102" tns:taskName="CommitPoint" name="Commit Point">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Commit Point]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_16-_102</bpmn2:incoming>
+      <bpmn2:outgoing>_102-_47</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_14">
+        <bpmn2:dataInput id="_102_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_102_BatchSizeInput" name="BatchSize"/>
+        <bpmn2:inputSet id="InputSet_14">
+          <bpmn2:dataInputRefs>_102_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_102_BatchSizeInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_15"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_44">
+        <bpmn2:targetRef>_102_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_35">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_69">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_70">_102_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_45">
+        <bpmn2:targetRef>_102_BatchSizeInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_36">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_71">20</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_72">_102_BatchSizeInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:parallelGateway id="_100" name="Gateway" gatewayDirection="Diverging">
+      <bpmn2:incoming>_jbpm-unique-3-_100</bpmn2:incoming>
+      <bpmn2:outgoing>_100-_11</bpmn2:outgoing>
+      <bpmn2:outgoing>_100-_68</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:scriptTask id="_98" name="Signal Invalid" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Signal Invalid]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_64-_98</bpmn2:incoming>
+      <bpmn2:outgoing>_98-_66</bpmn2:outgoing>
+      <bpmn2:script>String message = &quot;XML validation error for input file &quot; + fileName + &quot;: &quot; + validationMessage;
+String sampleXml = StringUtils.substring(inputContent, 0, 100);
+if (StringUtils.isNotBlank(sampleXml)) {
+	sampleXml = &quot;  File sample: &quot; + sampleXml + &quot;...&quot;;
+}
+Map&lt;String, String> signalMap = new HashMap&lt;String, String>();
+signalMap.put(&quot;ExitMessage&quot;, message + sampleXml);
+kcontext.getKnowledgeRuntime().signalEvent(&quot;Error&quot;, signalMap, kcontext.getProcessInstance().getId());
+</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:scriptTask id="_99" name="No Mapper Signal" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[No Mapper Signal]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_74-_99</bpmn2:incoming>
+      <bpmn2:outgoing>_99-_75</bpmn2:outgoing>
+      <bpmn2:script>String message = &quot;No mapper found for input file &quot; + fileName + &quot;.&quot;;
+String sampleXml = StringUtils.substring(inputContent, 0, 100);
+if (StringUtils.isNotBlank(sampleXml)) {
+	sampleXml = &quot;  File sample: &quot; + sampleXml + &quot;...&quot;;
+}
+Map&lt;String, String> signalMap = new HashMap&lt;String, String>();
+signalMap.put(&quot;ExitMessage&quot;, message + sampleXml);
+kcontext.getKnowledgeRuntime().signalEvent(&quot;Error&quot;, signalMap, kcontext.getProcessInstance().getId());
+</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:task id="_96" tns:taskName="CommitPoint" name="Commit Point">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Commit Point]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_95-_96</bpmn2:incoming>
+      <bpmn2:outgoing>_96-_94</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_16">
+        <bpmn2:dataInput id="_96_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_96_BatchSizeInput" name="BatchSize"/>
+        <bpmn2:inputSet id="InputSet_16">
+          <bpmn2:dataInputRefs>_96_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_96_BatchSizeInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_17"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_48">
+        <bpmn2:targetRef>_96_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_39">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_77">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_78">_96_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_49">
+        <bpmn2:targetRef>_96_BatchSizeInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_40">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_79">50</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_80">_96_BatchSizeInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:task id="_97" tns:taskName="CommitPoint" name="Commit Point">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Commit Point]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_93-_97</bpmn2:incoming>
+      <bpmn2:outgoing>_97-_72</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_17">
+        <bpmn2:dataInput id="_97_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataInput id="_97_BatchSizeInput" name="BatchSize"/>
+        <bpmn2:inputSet id="InputSet_17">
+          <bpmn2:dataInputRefs>_97_ErrorEventInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_97_BatchSizeInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_18"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_50">
+        <bpmn2:targetRef>_97_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_41">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_81">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_82">_97_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_51">
+        <bpmn2:targetRef>_97_BatchSizeInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_42">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_83">1</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_84">_97_BatchSizeInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:task id="_jbpm-unique-3" tns:taskName="SetProcessInstanceContext" name="Set Workflow Context">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Set Workflow Context]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_1-_jbpm-unique-3</bpmn2:incoming>
+      <bpmn2:outgoing>_jbpm-unique-3-_100</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_18">
+        <bpmn2:dataInput id="_jbpm-unique-3_LabelInput" name="Label"/>
+        <bpmn2:inputSet id="InputSet_18">
+          <bpmn2:dataInputRefs>_jbpm-unique-3_LabelInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_19"/>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_52">
+        <bpmn2:targetRef>_jbpm-unique-3_LabelInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_43">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_85">#{filePath}#{fileName}</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_86">_jbpm-unique-3_LabelInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+    </bpmn2:task>
+    <bpmn2:task id="_jbpm-unique-0" tns:taskName="MediaManager8MaintainRelationshipsTask" name="MediaManager Maintain Relationships">
+      <bpmn2:extensionElements>
+        <tns:onEntry-script>
+          <tns:script>DataIngestHelper.setupMaintainRelationship(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[MediaManager Maintain Relationships]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_54-_jbpm-unique-0</bpmn2:incoming>
+      <bpmn2:outgoing>_jbpm-unique-0-_45</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_19">
+        <bpmn2:dataInput id="_jbpm-unique-0_MaintainRelationshipsCommandsListInput" name="MaintainRelationshipsCommandsList"/>
+        <bpmn2:dataInput id="_jbpm-unique-0_AsyncInput" name="Async"/>
+        <bpmn2:dataInput id="_jbpm-unique-0_ErrorEventInput" name="ErrorEvent"/>
+        <bpmn2:dataOutput id="_jbpm-unique-0_MediaManager8ResponseObjectOutput" name="MediaManager8ResponseObject"/>
+        <bpmn2:inputSet id="InputSet_19">
+          <bpmn2:dataInputRefs>_jbpm-unique-0_MaintainRelationshipsCommandsListInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_jbpm-unique-0_AsyncInput</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_jbpm-unique-0_ErrorEventInput</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_20">
+          <bpmn2:dataOutputRefs>_jbpm-unique-0_MediaManager8ResponseObjectOutput</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_53">
+        <bpmn2:sourceRef>maintainRelationshipsCommandsList</bpmn2:sourceRef>
+        <bpmn2:targetRef>_jbpm-unique-0_MaintainRelationshipsCommandsListInput</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_54">
+        <bpmn2:targetRef>_jbpm-unique-0_AsyncInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_44">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_87">true</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_88">_jbpm-unique-0_AsyncInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_55">
+        <bpmn2:targetRef>_jbpm-unique-0_ErrorEventInput</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_45">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_89">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_90">_jbpm-unique-0_ErrorEventInput</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_10">
+        <bpmn2:sourceRef>_jbpm-unique-0_MediaManager8ResponseObjectOutput</bpmn2:sourceRef>
+        <bpmn2:targetRef>maintainRelationshipsResultObject</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+    <bpmn2:scriptTask id="_jbpm-unique-1" name="Merge All Entities" scriptFormat="http://www.java.com/java">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Merge All Entities]]></tns:metaValue>
+        </tns:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_82-_jbpm-unique-1</bpmn2:incoming>
+      <bpmn2:outgoing>_jbpm-unique-1-_49</bpmn2:outgoing>
+      <bpmn2:script>for (Object entityWrapper : ingestWrapperList) {
+	((EntityIngestWrapper) entityWrapper).mergeEntity();
+	((EntityIngestWrapper) entityWrapper).setApprovedEntity(null);
+}</bpmn2:script>
+    </bpmn2:scriptTask>
+    <bpmn2:sequenceFlow id="_100-_11" sourceRef="_100" targetRef="_11"/>
+    <bpmn2:sequenceFlow id="_87-_14" sourceRef="_87" targetRef="_14"/>
+    <bpmn2:sequenceFlow id="_18-_15" sourceRef="_18" targetRef="_15"/>
+    <bpmn2:sequenceFlow id="_14-_15" sourceRef="_14" targetRef="_15"/>
+    <bpmn2:sequenceFlow id="_16-_17" name="More Content" sourceRef="_16" targetRef="_17">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_93" language="http://www.java.com/java">return !contentList.isEmpty();</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_15-_16" sourceRef="_15" targetRef="_16"/>
+    <bpmn2:sequenceFlow id="_17-_18" sourceRef="_17" targetRef="_18"/>
+    <bpmn2:sequenceFlow id="_70-_34" tns:priority="1" name="No More" sourceRef="_70" targetRef="_34">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_94" language="http://www.java.com/java">return true;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_86-_33" sourceRef="_86" targetRef="_33"/>
+    <bpmn2:sequenceFlow id="_49-_47" sourceRef="_49" targetRef="_47"/>
+    <bpmn2:sequenceFlow id="_102-_47" sourceRef="_102" targetRef="_47"/>
+    <bpmn2:sequenceFlow id="_jbpm-unique-0-_45" sourceRef="_jbpm-unique-0" targetRef="_45"/>
+    <bpmn2:sequenceFlow id="_48-_50" tns:priority="1" name="No More" sourceRef="_48" targetRef="_50">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_95" language="http://www.java.com/java">return true;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_jbpm-unique-1-_49" sourceRef="_jbpm-unique-1" targetRef="_49"/>
+    <bpmn2:sequenceFlow id="_47-_48" sourceRef="_47" targetRef="_48"/>
+    <bpmn2:sequenceFlow id="_61-_63" name="Validation Enabled" sourceRef="_61" targetRef="_63">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_97" language="http://www.java.com/java">return DataIngestHelper.schemaValidationRequired(kcontext);</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_64-_62" name="Is Valid" sourceRef="_64" targetRef="_62">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_98" language="http://www.java.com/java">return validation;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_61-_62" tns:priority="1" name="Validation Disabled" sourceRef="_61" targetRef="_62">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_99" language="http://www.java.com/java">return true;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_74-_61" name="Mappable" sourceRef="_74" targetRef="_61">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_100" language="http://www.java.com/java">return DataIngestHelper.hasMapper(kcontext);</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_100-_68" sourceRef="_100" targetRef="_68"/>
+    <bpmn2:sequenceFlow id="_72-_69" sourceRef="_72" targetRef="_69"/>
+    <bpmn2:sequenceFlow id="_77-_69" sourceRef="_77" targetRef="_69"/>
+    <bpmn2:sequenceFlow id="_69-_70" sourceRef="_69" targetRef="_70"/>
+    <bpmn2:sequenceFlow id="_70-_71" name="More Ingest Wrappers" sourceRef="_70" targetRef="_71">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_101" language="http://www.java.com/java">return !ingestWrapperKeyList.isEmpty();</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_63-_64" sourceRef="_63" targetRef="_64"/>
+    <bpmn2:sequenceFlow id="_98-_66" sourceRef="_98" targetRef="_66"/>
+    <bpmn2:sequenceFlow id="_62-_67" sourceRef="_62" targetRef="_67"/>
+    <bpmn2:sequenceFlow id="_71-_77" sourceRef="_71" targetRef="_77"/>
+    <bpmn2:sequenceFlow id="_97-_72" sourceRef="_97" targetRef="_72"/>
+    <bpmn2:sequenceFlow id="_68-_74" sourceRef="_68" targetRef="_74"/>
+    <bpmn2:sequenceFlow id="_99-_75" sourceRef="_99" targetRef="_75"/>
+    <bpmn2:sequenceFlow id="_48-_87" name="More Ingest Wrappers" sourceRef="_48" targetRef="_87">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_103" language="http://www.java.com/java">return !ingestWrapperKeyList.isEmpty();</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_11-_86" sourceRef="_11" targetRef="_86"/>
+    <bpmn2:sequenceFlow id="_91-_82" sourceRef="_91" targetRef="_82"/>
+    <bpmn2:sequenceFlow id="_94-_93" sourceRef="_94" targetRef="_93"/>
+    <bpmn2:sequenceFlow id="_93-_95" name="Update For Relationships" sourceRef="_93" targetRef="_95">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_104" language="http://www.java.com/java">return modifiedEntityList != null &amp;&amp; !modifiedEntityList.isEmpty();</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_96-_94" sourceRef="_96" targetRef="_94"/>
+    <bpmn2:sequenceFlow id="_45-_94" sourceRef="_45" targetRef="_94"/>
+    <bpmn2:sequenceFlow id="_67-_91" sourceRef="_67" targetRef="_91"/>
+    <bpmn2:sequenceFlow id="_16-_102" tns:priority="1" name="No More" sourceRef="_16" targetRef="_102">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_105" language="http://www.java.com/java">return true;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_jbpm-unique-3-_100" sourceRef="_jbpm-unique-3" targetRef="_100"/>
+    <bpmn2:sequenceFlow id="_64-_98" tns:priority="1" name="Is Not Valid" sourceRef="_64" targetRef="_98">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_106" language="http://www.java.com/java">return true;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_74-_99" tns:priority="1" name="No Mapper" sourceRef="_74" targetRef="_99">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_107" language="http://www.java.com/java">return true;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_95-_96" sourceRef="_95" targetRef="_96"/>
+    <bpmn2:sequenceFlow id="_93-_97" tns:priority="1" name="No Relationship Changes" sourceRef="_93" targetRef="_97">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_108" language="http://www.java.com/java">return true;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_1-_jbpm-unique-3" sourceRef="_1" targetRef="_jbpm-unique-3"/>
+    <bpmn2:sequenceFlow id="_54-_jbpm-unique-0" sourceRef="_54" targetRef="_jbpm-unique-0"/>
+    <bpmn2:sequenceFlow id="_82-_jbpm-unique-1" sourceRef="_82" targetRef="_jbpm-unique-1"/>
+    <bpmn2:parallelGateway id="ParallelGateway_1" name="Bulk Create/Update Gateway" gatewayDirection="Diverging">
+      <bpmn2:incoming>SequenceFlow_1</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_4</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_5</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:sequenceFlow id="SequenceFlow_1" tns:priority="1" sourceRef="_50" targetRef="ParallelGateway_1"/>
+    <bpmn2:task id="Task_1" tns:taskName="MediaManager8BulkCreateTask" tns:displayName="MediaManager Bulk Create Entities" tns:icon="icons/bulkmm8create.png" name="Create Entities">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Create Entities]]></tns:metaValue>
+        </tns:metaData>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>DataIngestHelper.processBulkResponse(
+	bulkCreateResponse,
+	com.irdeto.manager.mediamanager.MediaManagerBulkEntityInterface.Operation.CREATE,
+	kcontext
+);</tns:script>
+        </tns:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_2</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_6</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_1">
+        <bpmn2:dataInput id="DataInput_1" itemSubjectRef="ItemDefinition_1" name="ErrorEvent"/>
+        <bpmn2:dataInput id="DataInput_3" itemSubjectRef="_44-ratingMapMapItem" name="EntitiesData"/>
+        <bpmn2:dataOutput id="DataOutput_1" itemSubjectRef="ItemDefinition_347" name="MediaManager8Response"/>
+        <bpmn2:inputSet id="_InputSet_2">
+          <bpmn2:dataInputRefs>DataInput_1</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>DataInput_3</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_1" name="Output Set 1">
+          <bpmn2:dataOutputRefs>DataOutput_1</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_DataInputAssociation_2">
+        <bpmn2:targetRef>DataInput_1</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_2">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_4">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_3">DataInput_1</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_1">
+        <bpmn2:sourceRef>bulkCreateRequest</bpmn2:sourceRef>
+        <bpmn2:targetRef>DataInput_3</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_1">
+        <bpmn2:sourceRef>DataOutput_1</bpmn2:sourceRef>
+        <bpmn2:targetRef>bulkCreateResponse</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+    <bpmn2:sequenceFlow id="SequenceFlow_2" tns:priority="0" name="Send Create Request" sourceRef="ExclusiveGateway_2" targetRef="Task_1">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_7" language="http://www.java.com/java">Map createEntitiesMap = (Map) kcontext.getVariable(&quot;bulkCreateRequest&quot;);
+
+return createEntitiesMap != null &amp;&amp; !createEntitiesMap.isEmpty();</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:task id="Task_2" tns:taskName="MediaManager8BulkUpdateTask" tns:displayName="MediaManager Bulk Update Entities" tns:icon="icons/bulkmm8update.png" name="Update Entities">
+      <bpmn2:extensionElements>
+        <tns:metaData name="elementname">
+          <tns:metaValue><![CDATA[Update Entities]]></tns:metaValue>
+        </tns:metaData>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>DataIngestHelper.processBulkResponse(
+	bulkUpdateResponse,
+	com.irdeto.manager.mediamanager.MediaManagerBulkEntityInterface.Operation.UPDATE,
+	kcontext
+);</tns:script>
+        </tns:onExit-script>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>SequenceFlow_3</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_9</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="InputOutputSpecification_2">
+        <bpmn2:dataInput id="DataInput_2" itemSubjectRef="ItemDefinition_1" name="ErrorEvent"/>
+        <bpmn2:dataInput id="DataInput_4" itemSubjectRef="_44-ratingMapMapItem" name="EntitiesData"/>
+        <bpmn2:dataOutput id="DataOutput_2" itemSubjectRef="ItemDefinition_347" name="MediaManager8Response"/>
+        <bpmn2:inputSet id="_InputSet_3">
+          <bpmn2:dataInputRefs>DataInput_2</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>DataInput_4</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="OutputSet_2" name="Output Set 2">
+          <bpmn2:dataOutputRefs>DataOutput_2</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_DataInputAssociation_3">
+        <bpmn2:targetRef>DataInput_2</bpmn2:targetRef>
+        <bpmn2:assignment id="Assignment_3">
+          <bpmn2:from xsi:type="bpmn2:tFormalExpression" id="FormalExpression_10">Error</bpmn2:from>
+          <bpmn2:to xsi:type="bpmn2:tFormalExpression" id="FormalExpression_5">DataInput_2</bpmn2:to>
+        </bpmn2:assignment>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="DataInputAssociation_2">
+        <bpmn2:sourceRef>bulkUpdateRequest</bpmn2:sourceRef>
+        <bpmn2:targetRef>DataInput_4</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="DataOutputAssociation_11">
+        <bpmn2:sourceRef>DataOutput_2</bpmn2:sourceRef>
+        <bpmn2:targetRef>bulkUpdateResponse</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:task>
+    <bpmn2:sequenceFlow id="SequenceFlow_3" tns:priority="0" name="Send Update Request" sourceRef="ExclusiveGateway_1" targetRef="Task_2">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_8" language="http://www.java.com/java">Map updateEntitiesMap = (Map) kcontext.getVariable(&quot;bulkUpdateRequest&quot;);
+
+return updateEntitiesMap != null &amp;&amp; !updateEntitiesMap.isEmpty();</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_1" name="Need Bulk Update?" gatewayDirection="Diverging">
+      <bpmn2:incoming>SequenceFlow_4</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_3</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_15</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:sequenceFlow id="SequenceFlow_4" tns:priority="1" sourceRef="ParallelGateway_1" targetRef="ExclusiveGateway_1"/>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_2" name="Need Bulk Create?" gatewayDirection="Diverging">
+      <bpmn2:incoming>SequenceFlow_5</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_2</bpmn2:outgoing>
+      <bpmn2:outgoing>SequenceFlow_7</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:sequenceFlow id="SequenceFlow_5" tns:priority="1" sourceRef="ParallelGateway_1" targetRef="ExclusiveGateway_2"/>
+    <bpmn2:parallelGateway id="ParallelGateway_2" name="Bulk Create/Update Done" gatewayDirection="Converging">
+      <bpmn2:incoming>SequenceFlow_8</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_16</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_11</bpmn2:outgoing>
+    </bpmn2:parallelGateway>
+    <bpmn2:sequenceFlow id="SequenceFlow_11" tns:priority="1" sourceRef="ParallelGateway_2" targetRef="_54"/>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_3" name="Update Done" gatewayDirection="Converging">
+      <bpmn2:incoming>SequenceFlow_9</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_15</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_16</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:exclusiveGateway id="ExclusiveGateway_4" name="Create Done" gatewayDirection="Converging">
+      <bpmn2:incoming>SequenceFlow_6</bpmn2:incoming>
+      <bpmn2:incoming>SequenceFlow_7</bpmn2:incoming>
+      <bpmn2:outgoing>SequenceFlow_8</bpmn2:outgoing>
+    </bpmn2:exclusiveGateway>
+    <bpmn2:sequenceFlow id="SequenceFlow_6" tns:priority="1" sourceRef="Task_1" targetRef="ExclusiveGateway_4"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_7" tns:priority="1" sourceRef="ExclusiveGateway_2" targetRef="ExclusiveGateway_4">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_1" language="http://www.java.com/java">return true;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_8" tns:priority="1" sourceRef="ExclusiveGateway_4" targetRef="ParallelGateway_2"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_9" tns:priority="1" sourceRef="Task_2" targetRef="ExclusiveGateway_3"/>
+    <bpmn2:sequenceFlow id="SequenceFlow_15" tns:priority="1" sourceRef="ExclusiveGateway_1" targetRef="ExclusiveGateway_3">
+      <bpmn2:conditionExpression xsi:type="bpmn2:tFormalExpression" id="FormalExpression_2" language="http://www.java.com/java">return true;</bpmn2:conditionExpression>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="SequenceFlow_16" tns:priority="1" sourceRef="ExclusiveGateway_3" targetRef="ParallelGateway_2"/>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="BPMNDiagram_1">
+    <bpmndi:BPMNPlane id="BPMNPlane_Process_1" bpmnElement="com.irdeto.jumpstart.workflow.ingest.DataIngest">
+      <bpmndi:BPMNShape id="BPMNShape_StartEvent_1" bpmnElement="_1">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="24.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_1">
+          <dc:Bounds height="11.0" width="54.0" x="441.0" y="72.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_IntermediateCatchEvent_1" bpmnElement="_11">
+        <dc:Bounds height="48.0" width="48.0" x="288.0" y="168.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_5">
+          <dc:Bounds height="11.0" width="25.0" x="299.0" y="216.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_1" bpmnElement="_14">
+        <dc:Bounds height="48.0" width="193.0" x="600.0" y="1128.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_6">
+          <dc:Bounds height="11.0" width="87.0" x="653.0" y="1146.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_2" bpmnElement="_15" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="672.0" y="1056.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_7">
+          <dc:Bounds height="11.0" width="36.0" x="678.0" y="1104.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_3" bpmnElement="_17">
+        <dc:Bounds height="48.0" width="193.0" x="828.0" y="984.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_8">
+          <dc:Bounds height="11.0" width="52.0" x="898.0" y="1002.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_3" bpmnElement="_16" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="672.0" y="984.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_9">
+          <dc:Bounds height="11.0" width="36.0" x="678.0" y="1032.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_2" bpmnElement="_18">
+        <dc:Bounds height="48.0" width="193.0" x="828.0" y="1056.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_10">
+          <dc:Bounds height="11.0" width="60.0" x="894.0" y="1074.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_1" bpmnElement="_34">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="2388.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_11">
+          <dc:Bounds height="11.0" width="16.0" x="460.0" y="2436.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_2" bpmnElement="_33">
+        <dc:Bounds height="48.0" width="48.0" x="60.0" y="168.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_12">
+          <dc:Bounds height="11.0" width="16.0" x="76.0" y="216.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_4" bpmnElement="_47" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="912.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_13">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="960.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_4" bpmnElement="_45">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="1860.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_14">
+          <dc:Bounds height="11.0" width="104.0" x="416.0" y="1878.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_3" bpmnElement="_50">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="1361.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_16">
+          <dc:Bounds height="11.0" width="107.0" x="415.0" y="1379.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_4" bpmnElement="_49">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="840.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_17">
+          <dc:Bounds height="11.0" width="90.0" x="423.0" y="858.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_6" bpmnElement="_48" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="1200.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_18">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="1248.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_5" bpmnElement="_54">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="1716.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_19">
+          <dc:Bounds height="11.0" width="108.0" x="414.0" y="1734.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_5" bpmnElement="_63">
+        <dc:Bounds height="48.0" width="193.0" x="600.0" y="396.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_23">
+          <dc:Bounds height="11.0" width="84.0" x="654.0" y="414.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_9" bpmnElement="_62" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="480.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_24">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="528.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_10" bpmnElement="_61" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="396.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_25">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="444.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_6" bpmnElement="_68">
+        <dc:Bounds height="48.0" width="192.0" x="372.0" y="240.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_26">
+          <dc:Bounds height="11.0" width="77.0" x="429.0" y="258.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_11" bpmnElement="_69" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="2232.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_27">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="2280.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_12" bpmnElement="_70" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="2304.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_28">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="2352.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_7" bpmnElement="_71">
+        <dc:Bounds height="48.0" width="192.0" x="144.0" y="2304.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_29">
+          <dc:Bounds height="11.0" width="69.0" x="205.0" y="2322.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_13" bpmnElement="_64" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="672.0" y="480.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_30">
+          <dc:Bounds height="11.0" width="36.0" x="678.0" y="528.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_3" bpmnElement="_66">
+        <dc:Bounds height="48.0" width="48.0" x="828.0" y="552.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_31">
+          <dc:Bounds height="11.0" width="16.0" x="844.0" y="600.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_7" bpmnElement="_67">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="552.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_32">
+          <dc:Bounds height="11.0" width="58.0" x="439.0" y="570.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_8" bpmnElement="_77">
+        <dc:Bounds height="48.0" width="193.0" x="144.0" y="2232.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_33">
+          <dc:Bounds height="11.0" width="54.0" x="213.0" y="2250.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_8" bpmnElement="_72">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="2160.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_35">
+          <dc:Bounds height="11.0" width="127.0" x="405.0" y="2178.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_14" bpmnElement="_74" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="312.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_36">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="360.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_EndEvent_4" bpmnElement="_75">
+        <dc:Bounds height="48.0" width="48.0" x="828.0" y="312.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_37">
+          <dc:Bounds height="11.0" width="16.0" x="844.0" y="360.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_10" bpmnElement="_87">
+        <dc:Bounds height="48.0" width="193.0" x="600.0" y="1200.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_38">
+          <dc:Bounds height="11.0" width="47.0" x="673.0" y="1218.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_9" bpmnElement="_86">
+        <dc:Bounds height="48.0" width="109.0" x="144.0" y="168.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_39">
+          <dc:Bounds height="11.0" width="38.0" x="179.0" y="186.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_11" bpmnElement="_82">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="696.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_40">
+          <dc:Bounds height="11.0" width="92.0" x="422.0" y="714.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_15" bpmnElement="_93" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="2004.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_41">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="2052.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_12" bpmnElement="_95">
+        <dc:Bounds height="48.0" width="193.0" x="600.0" y="2004.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_42">
+          <dc:Bounds height="11.0" width="103.0" x="645.0" y="2022.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_16" bpmnElement="_94" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="1932.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_43">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="1980.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_13" bpmnElement="_91">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="624.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_44">
+          <dc:Bounds height="11.0" width="55.0" x="441.0" y="642.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_14" bpmnElement="_102">
+        <dc:Bounds height="48.0" width="193.0" x="600.0" y="912.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_45">
+          <dc:Bounds height="11.0" width="54.0" x="669.0" y="930.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ParallelGateway_1" bpmnElement="_100" isMarkerVisible="true">
+        <dc:Bounds height="48.0" width="48.0" x="444.0" y="168.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_46">
+          <dc:Bounds height="11.0" width="36.0" x="450.0" y="216.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_10" bpmnElement="_98">
+        <dc:Bounds height="48.0" width="193.0" x="600.0" y="552.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_48">
+          <dc:Bounds height="11.0" width="55.0" x="669.0" y="570.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_11" bpmnElement="_99">
+        <dc:Bounds height="48.0" width="193.0" x="600.0" y="312.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_49">
+          <dc:Bounds height="11.0" width="72.0" x="660.0" y="330.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_16" bpmnElement="_96">
+        <dc:Bounds height="48.0" width="193.0" x="600.0" y="1932.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_50">
+          <dc:Bounds height="11.0" width="54.0" x="669.0" y="1950.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_17" bpmnElement="_97">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="2088.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_51">
+          <dc:Bounds height="11.0" width="54.0" x="441.0" y="2106.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_18" bpmnElement="_jbpm-unique-3">
+        <dc:Bounds height="48.0" width="192.0" x="372.0" y="96.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_52">
+          <dc:Bounds height="11.0" width="89.0" x="423.0" y="114.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_19" bpmnElement="_jbpm-unique-0">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="1788.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_53">
+          <dc:Bounds height="11.0" width="154.0" x="391.0" y="1806.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ScriptTask_12" bpmnElement="_jbpm-unique-1">
+        <dc:Bounds height="48.0" width="193.0" x="372.0" y="768.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_54">
+          <dc:Bounds height="11.0" width="72.0" x="432.0" y="786.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ParallelGateway_2" bpmnElement="ParallelGateway_1" isMarkerVisible="true">
+        <dc:Bounds height="50.0" width="50.0" x="444.0" y="1430.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_2">
+          <dc:Bounds height="22.0" width="71.0" x="434.0" y="1480.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_1" bpmnElement="Task_1">
+        <dc:Bounds height="50.0" width="110.0" x="143.0" y="1429.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_3">
+          <dc:Bounds height="11.0" width="61.0" x="167.0" y="1448.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_Task_2" bpmnElement="Task_2">
+        <dc:Bounds height="50.0" width="110.0" x="713.0" y="1430.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_4">
+          <dc:Bounds height="11.0" width="63.0" x="736.0" y="1449.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_1" bpmnElement="ExclusiveGateway_1" isMarkerVisible="true">
+        <dc:Bounds height="50.0" width="50.0" x="569.0" y="1429.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_15">
+          <dc:Bounds height="11.0" width="79.0" x="555.0" y="1479.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_5" bpmnElement="ExclusiveGateway_2" isMarkerVisible="true">
+        <dc:Bounds height="50.0" width="50.0" x="310.0" y="1429.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_20">
+          <dc:Bounds height="11.0" width="77.0" x="297.0" y="1479.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ParallelGateway_3" bpmnElement="ParallelGateway_2" isMarkerVisible="true">
+        <dc:Bounds height="50.0" width="50.0" x="443.0" y="1550.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_21">
+          <dc:Bounds height="22.0" width="57.0" x="440.0" y="1600.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_7" bpmnElement="ExclusiveGateway_3" isMarkerVisible="true">
+        <dc:Bounds height="50.0" width="50.0" x="569.0" y="1550.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_22">
+          <dc:Bounds height="11.0" width="53.0" x="568.0" y="1600.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BPMNShape_ExclusiveGateway_8" bpmnElement="ExclusiveGateway_4" isMarkerVisible="true">
+        <dc:Bounds height="50.0" width="50.0" x="310.0" y="1550.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_34">
+          <dc:Bounds height="11.0" width="51.0" x="310.0" y="1600.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_4" bpmnElement="_100-_11" sourceElement="BPMNShape_ParallelGateway_1" targetElement="BPMNShape_IntermediateCatchEvent_1">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="192.0"/>
+        <di:waypoint xsi:type="dc:Point" x="312.0" y="192.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_58"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_5" bpmnElement="_87-_14" sourceElement="BPMNShape_Task_10" targetElement="BPMNShape_ScriptTask_1">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1224.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1152.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_59"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_6" bpmnElement="_18-_15" sourceElement="BPMNShape_ScriptTask_2" targetElement="BPMNShape_ExclusiveGateway_2">
+        <di:waypoint xsi:type="dc:Point" x="924.0" y="1080.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1080.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_60"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_7" bpmnElement="_14-_15" sourceElement="BPMNShape_ScriptTask_1" targetElement="BPMNShape_ExclusiveGateway_2">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1152.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1080.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_61"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_8" bpmnElement="_16-_17" sourceElement="BPMNShape_ExclusiveGateway_3" targetElement="BPMNShape_Task_3">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1008.0"/>
+        <di:waypoint xsi:type="dc:Point" x="924.0" y="1008.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_62">
+          <dc:Bounds height="11.0" width="55.0" x="747.0" y="1009.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_9" bpmnElement="_15-_16" sourceElement="BPMNShape_ExclusiveGateway_2" targetElement="BPMNShape_ExclusiveGateway_3">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1080.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1008.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_63"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_10" bpmnElement="_17-_18" sourceElement="BPMNShape_Task_3" targetElement="BPMNShape_ScriptTask_2">
+        <di:waypoint xsi:type="dc:Point" x="924.0" y="1008.0"/>
+        <di:waypoint xsi:type="dc:Point" x="924.0" y="1080.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_64"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_11" bpmnElement="_70-_34" sourceElement="BPMNShape_ExclusiveGateway_12" targetElement="BPMNShape_EndEvent_1">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2328.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2412.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_65">
+          <dc:Bounds height="11.0" width="34.0" x="452.0" y="2371.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_12" bpmnElement="_86-_33" sourceElement="BPMNShape_ScriptTask_9" targetElement="BPMNShape_EndEvent_2">
+        <di:waypoint xsi:type="dc:Point" x="198.0" y="192.0"/>
+        <di:waypoint xsi:type="dc:Point" x="84.0" y="192.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_66"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_13" bpmnElement="_49-_47" sourceElement="BPMNShape_ScriptTask_4" targetElement="BPMNShape_ExclusiveGateway_4">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="864.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="936.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_67"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_14" bpmnElement="_102-_47" sourceElement="BPMNShape_Task_14" targetElement="BPMNShape_ExclusiveGateway_4">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="936.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="936.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_68"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_15" bpmnElement="_jbpm-unique-0-_45" sourceElement="BPMNShape_Task_19" targetElement="BPMNShape_Task_4">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1812.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1884.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_69"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_18" bpmnElement="_48-_50" sourceElement="BPMNShape_ExclusiveGateway_6" targetElement="BPMNShape_ScriptTask_3">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1248.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1351.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1361.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_72">
+          <dc:Bounds height="11.0" width="34.0" x="452.0" y="1355.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_19" bpmnElement="_jbpm-unique-1-_49" sourceElement="BPMNShape_ScriptTask_12" targetElement="BPMNShape_ScriptTask_4">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="792.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="864.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_73"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_20" bpmnElement="_47-_48" sourceElement="BPMNShape_ExclusiveGateway_4" targetElement="BPMNShape_ExclusiveGateway_6">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="936.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1224.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_74"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_26" bpmnElement="_61-_63" sourceElement="BPMNShape_ExclusiveGateway_10" targetElement="BPMNShape_Task_5">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="420.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="420.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_80">
+          <dc:Bounds height="11.0" width="76.0" x="509.0" y="421.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_27" bpmnElement="_64-_62" sourceElement="BPMNShape_ExclusiveGateway_13" targetElement="BPMNShape_ExclusiveGateway_9">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="504.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="504.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_81">
+          <dc:Bounds height="11.0" width="31.0" x="567.0" y="505.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_28" bpmnElement="_61-_62" sourceElement="BPMNShape_ExclusiveGateway_10" targetElement="BPMNShape_ExclusiveGateway_9">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="420.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="504.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_82">
+          <dc:Bounds height="11.0" width="78.0" x="430.0" y="463.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_29" bpmnElement="_74-_61" sourceElement="BPMNShape_ExclusiveGateway_14" targetElement="BPMNShape_ExclusiveGateway_10">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="336.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="420.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_83">
+          <dc:Bounds height="11.0" width="39.0" x="449.0" y="379.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_30" bpmnElement="_100-_68" sourceElement="BPMNShape_ParallelGateway_1" targetElement="BPMNShape_Task_6">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="192.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="264.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_84"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_31" bpmnElement="_72-_69" sourceElement="BPMNShape_ScriptTask_8" targetElement="BPMNShape_ExclusiveGateway_11">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2184.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2256.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_85"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_32" bpmnElement="_77-_69" sourceElement="BPMNShape_Task_8" targetElement="BPMNShape_ExclusiveGateway_11">
+        <di:waypoint xsi:type="dc:Point" x="240.0" y="2256.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2256.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_86"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_33" bpmnElement="_69-_70" sourceElement="BPMNShape_ExclusiveGateway_11" targetElement="BPMNShape_ExclusiveGateway_12">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2256.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2328.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_87"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_34" bpmnElement="_70-_71" sourceElement="BPMNShape_ExclusiveGateway_12" targetElement="BPMNShape_Task_7">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2328.0"/>
+        <di:waypoint xsi:type="dc:Point" x="240.0" y="2328.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_88">
+          <dc:Bounds height="22.0" width="58.0" x="362.0" y="2329.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_35" bpmnElement="_63-_64" sourceElement="BPMNShape_Task_5" targetElement="BPMNShape_ExclusiveGateway_13">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="420.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="504.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_89"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_36" bpmnElement="_98-_66" sourceElement="BPMNShape_ScriptTask_10" targetElement="BPMNShape_EndEvent_3">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="576.0"/>
+        <di:waypoint xsi:type="dc:Point" x="852.0" y="576.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_90"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_37" bpmnElement="_62-_67" sourceElement="BPMNShape_ExclusiveGateway_9" targetElement="BPMNShape_ScriptTask_7">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="504.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="576.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_91"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_38" bpmnElement="_71-_77" sourceElement="BPMNShape_Task_7" targetElement="BPMNShape_Task_8">
+        <di:waypoint xsi:type="dc:Point" x="240.0" y="2328.0"/>
+        <di:waypoint xsi:type="dc:Point" x="240.0" y="2256.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_92"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_40" bpmnElement="_97-_72" sourceElement="BPMNShape_Task_17" targetElement="BPMNShape_ScriptTask_8">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2112.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2184.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_94"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_41" bpmnElement="_68-_74" sourceElement="BPMNShape_Task_6" targetElement="BPMNShape_ExclusiveGateway_14">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="264.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="336.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_95"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_42" bpmnElement="_99-_75" sourceElement="BPMNShape_ScriptTask_11" targetElement="BPMNShape_EndEvent_4">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="336.0"/>
+        <di:waypoint xsi:type="dc:Point" x="852.0" y="336.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_96"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_43" bpmnElement="_48-_87" sourceElement="BPMNShape_ExclusiveGateway_6" targetElement="BPMNShape_Task_10">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1224.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1224.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_97">
+          <dc:Bounds height="22.0" width="58.0" x="518.0" y="1225.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_44" bpmnElement="_11-_86" sourceElement="BPMNShape_IntermediateCatchEvent_1" targetElement="BPMNShape_ScriptTask_9">
+        <di:waypoint xsi:type="dc:Point" x="312.0" y="192.0"/>
+        <di:waypoint xsi:type="dc:Point" x="198.0" y="192.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_98"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_45" bpmnElement="_91-_82" sourceElement="BPMNShape_Task_13" targetElement="BPMNShape_Task_11">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="648.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="720.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_99"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_46" bpmnElement="_94-_93" sourceElement="BPMNShape_ExclusiveGateway_16" targetElement="BPMNShape_ExclusiveGateway_15">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1956.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2028.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_100"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_47" bpmnElement="_93-_95" sourceElement="BPMNShape_ExclusiveGateway_15" targetElement="BPMNShape_Task_12">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2028.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="2028.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_101">
+          <dc:Bounds height="22.0" width="55.0" x="519.0" y="2029.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_48" bpmnElement="_96-_94" sourceElement="BPMNShape_Task_16" targetElement="BPMNShape_ExclusiveGateway_16">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1956.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1956.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_102"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_49" bpmnElement="_45-_94" sourceElement="BPMNShape_Task_4" targetElement="BPMNShape_ExclusiveGateway_16">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1884.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1956.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_103"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_50" bpmnElement="_67-_91" sourceElement="BPMNShape_ScriptTask_7" targetElement="BPMNShape_Task_13">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="576.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="648.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_104"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_51" bpmnElement="_16-_102" sourceElement="BPMNShape_ExclusiveGateway_3" targetElement="BPMNShape_Task_14">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1008.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="936.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_105">
+          <dc:Bounds height="11.0" width="34.0" x="680.0" y="973.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_52" bpmnElement="_jbpm-unique-3-_100" sourceElement="BPMNShape_Task_18" targetElement="BPMNShape_ParallelGateway_1">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="120.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="192.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_106"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_54" bpmnElement="_64-_98" sourceElement="BPMNShape_ExclusiveGateway_13" targetElement="BPMNShape_ScriptTask_10">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="504.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="576.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_108">
+          <dc:Bounds height="11.0" width="48.0" x="673.0" y="541.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_55" bpmnElement="_74-_99" sourceElement="BPMNShape_ExclusiveGateway_14" targetElement="BPMNShape_ScriptTask_11">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="336.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="336.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_109">
+          <dc:Bounds height="11.0" width="44.0" x="525.0" y="337.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_56" bpmnElement="_95-_96" sourceElement="BPMNShape_Task_12" targetElement="BPMNShape_Task_16">
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="2028.0"/>
+        <di:waypoint xsi:type="dc:Point" x="696.0" y="1956.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_110"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_57" bpmnElement="_93-_97" sourceElement="BPMNShape_ExclusiveGateway_15" targetElement="BPMNShape_Task_17">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2028.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="2112.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_111">
+          <dc:Bounds height="22.0" width="73.0" x="432.0" y="2071.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_58" bpmnElement="_1-_jbpm-unique-3" sourceElement="BPMNShape_StartEvent_1" targetElement="BPMNShape_Task_18">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="48.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="120.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_112"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_59" bpmnElement="_54-_jbpm-unique-0" sourceElement="BPMNShape_ScriptTask_5" targetElement="BPMNShape_Task_19">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1740.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1812.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_113"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_60" bpmnElement="_82-_jbpm-unique-1" sourceElement="BPMNShape_Task_11" targetElement="BPMNShape_ScriptTask_12">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="720.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="792.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_114"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_1" bpmnElement="SequenceFlow_1" sourceElement="BPMNShape_ScriptTask_3" targetElement="BPMNShape_ParallelGateway_2">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1409.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1419.0"/>
+        <di:waypoint xsi:type="dc:Point" x="469.0" y="1430.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_22"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_2" bpmnElement="SequenceFlow_2" sourceElement="BPMNShape_ExclusiveGateway_5" targetElement="BPMNShape_Task_1">
+        <di:waypoint xsi:type="dc:Point" x="310.0" y="1454.0"/>
+        <di:waypoint xsi:type="dc:Point" x="299.0" y="1454.0"/>
+        <di:waypoint xsi:type="dc:Point" x="253.0" y="1454.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_47">
+          <dc:Bounds height="22.0" width="60.0" x="270.0" y="1456.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_3" bpmnElement="SequenceFlow_3" sourceElement="BPMNShape_ExclusiveGateway_1" targetElement="BPMNShape_Task_2">
+        <di:waypoint xsi:type="dc:Point" x="619.0" y="1454.0"/>
+        <di:waypoint xsi:type="dc:Point" x="666.0" y="1455.0"/>
+        <di:waypoint xsi:type="dc:Point" x="713.0" y="1455.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_55">
+          <dc:Bounds height="22.0" width="62.0" x="636.0" y="1456.0"/>
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_16" bpmnElement="SequenceFlow_4" sourceElement="BPMNShape_ParallelGateway_2" targetElement="BPMNShape_ExclusiveGateway_1">
+        <di:waypoint xsi:type="dc:Point" x="494.0" y="1455.0"/>
+        <di:waypoint xsi:type="dc:Point" x="531.0" y="1454.0"/>
+        <di:waypoint xsi:type="dc:Point" x="569.0" y="1454.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_56"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_17" bpmnElement="SequenceFlow_5" sourceElement="BPMNShape_ParallelGateway_2" targetElement="BPMNShape_ExclusiveGateway_5">
+        <di:waypoint xsi:type="dc:Point" x="444.0" y="1455.0"/>
+        <di:waypoint xsi:type="dc:Point" x="424.0" y="1454.0"/>
+        <di:waypoint xsi:type="dc:Point" x="360.0" y="1454.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_57"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_53" bpmnElement="SequenceFlow_11" sourceElement="BPMNShape_ParallelGateway_3" targetElement="BPMNShape_ScriptTask_5">
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1600.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1658.0"/>
+        <di:waypoint xsi:type="dc:Point" x="468.0" y="1716.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_34"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_22" bpmnElement="SequenceFlow_6" sourceElement="BPMNShape_Task_1" targetElement="BPMNShape_ExclusiveGateway_8">
+        <di:waypoint xsi:type="dc:Point" x="198.0" y="1479.0"/>
+        <di:waypoint xsi:type="dc:Point" x="198.0" y="1575.0"/>
+        <di:waypoint xsi:type="dc:Point" x="310.0" y="1575.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_70"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_23" bpmnElement="SequenceFlow_7" sourceElement="BPMNShape_ExclusiveGateway_5" targetElement="BPMNShape_ExclusiveGateway_8">
+        <di:waypoint xsi:type="dc:Point" x="335.0" y="1479.0"/>
+        <di:waypoint xsi:type="dc:Point" x="335.0" y="1514.0"/>
+        <di:waypoint xsi:type="dc:Point" x="335.0" y="1514.0"/>
+        <di:waypoint xsi:type="dc:Point" x="335.0" y="1550.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_71"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_24" bpmnElement="SequenceFlow_8" sourceElement="BPMNShape_ExclusiveGateway_8" targetElement="BPMNShape_ParallelGateway_3">
+        <di:waypoint xsi:type="dc:Point" x="360.0" y="1575.0"/>
+        <di:waypoint xsi:type="dc:Point" x="407.0" y="1575.0"/>
+        <di:waypoint xsi:type="dc:Point" x="443.0" y="1575.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_75"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_25" bpmnElement="SequenceFlow_9" sourceElement="BPMNShape_Task_2" targetElement="BPMNShape_ExclusiveGateway_7">
+        <di:waypoint xsi:type="dc:Point" x="768.0" y="1480.0"/>
+        <di:waypoint xsi:type="dc:Point" x="768.0" y="1575.0"/>
+        <di:waypoint xsi:type="dc:Point" x="619.0" y="1575.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_76"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_63" bpmnElement="SequenceFlow_15" sourceElement="BPMNShape_ExclusiveGateway_1" targetElement="BPMNShape_ExclusiveGateway_7">
+        <di:waypoint xsi:type="dc:Point" x="594.0" y="1479.0"/>
+        <di:waypoint xsi:type="dc:Point" x="594.0" y="1514.0"/>
+        <di:waypoint xsi:type="dc:Point" x="594.0" y="1550.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_77"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="BPMNEdge_SequenceFlow_64" bpmnElement="SequenceFlow_16" sourceElement="BPMNShape_ExclusiveGateway_7" targetElement="BPMNShape_ParallelGateway_3">
+        <di:waypoint xsi:type="dc:Point" x="569.0" y="1575.0"/>
+        <di:waypoint xsi:type="dc:Point" x="531.0" y="1575.0"/>
+        <di:waypoint xsi:type="dc:Point" x="493.0" y="1575.0"/>
+        <bpmndi:BPMNLabel id="BPMNLabel_78"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn2:definitions>

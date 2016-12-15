@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="Genres">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="Genre" type="GenreType" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="GenreType">
+		<xsd:sequence>
+			<xsd:element name="Name" type="LocalizedNameType" maxOccurs="unbounded" />
+			<xsd:element name="Genre" type="GenreType" minOccurs="0" maxOccurs="unbounded" />
+			<xsd:element name="IngestGenre" type="xsd:string" minOccurs="0" maxOccurs="unbounded" />
+		</xsd:sequence>
+		<xsd:attribute name="id" type="xsd:string" />
+		<xsd:attribute name="isDisplay" type="xsd:boolean" />
+		<xsd:attribute name="isEnabled" type="xsd:boolean" />
+	</xsd:complexType>
+	<xsd:complexType name="LocalizedNameType">
+		<xsd:simpleContent>
+			<xsd:extension base="xsd:string">
+				<xsd:attribute name="lang" type="xsd:string" />
+			</xsd:extension>
+		</xsd:simpleContent>
+	</xsd:complexType>
+</xsd:schema>

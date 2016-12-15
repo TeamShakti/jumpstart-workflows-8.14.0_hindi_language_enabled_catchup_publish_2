@@ -1,0 +1,1490 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_82-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_5-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_97-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_63-entityIdItem" structureRef="String" />
+  <itemDefinition id="_77-processIdItem" structureRef="String" />
+  <itemDefinition id="_71-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_63-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_17-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_101-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_95-inputContentItem" structureRef="String" />
+  <itemDefinition id="_68-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_68-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_5-processIdItem" structureRef="String" />
+  <itemDefinition id="_5-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_6-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_68-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_44-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_68-processIdItem" structureRef="String" />
+  <itemDefinition id="_97-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_97-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_44-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-fileNameItem" structureRef="String" />
+  <itemDefinition id="_17-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_44-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_63-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_5-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_79-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-processIdItem" structureRef="String" />
+  <itemDefinition id="_92-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_87-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_97-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_101-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_71-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_5-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_78-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-processIdItem" structureRef="String" />
+  <itemDefinition id="_96-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-fileNameItem" structureRef="String" />
+  <itemDefinition id="_63-masterItem" structureRef="String" />
+  <itemDefinition id="_78-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-fileNameItem" structureRef="String" />
+  <itemDefinition id="_91-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_6-fileNameItem" structureRef="String" />
+  <itemDefinition id="_92-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-fileNameItem" structureRef="String" />
+  <itemDefinition id="_97-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_63-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_79-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_71-masterItem" structureRef="String" />
+  <itemDefinition id="_78-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_91-masterItem" structureRef="String" />
+  <itemDefinition id="_95-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-inputContentItem" structureRef="String" />
+  <itemDefinition id="_6-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_97-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_45-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-inputContentItem" structureRef="String" />
+  <itemDefinition id="_68-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_17-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_6-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_68-inputContentItem" structureRef="String" />
+  <itemDefinition id="_79-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_87-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_92-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_82-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_inputContentItem" structureRef="String" />
+  <itemDefinition id="_87-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-fileNameItem" structureRef="String" />
+  <itemDefinition id="_77-entityIdItem" structureRef="String" />
+  <itemDefinition id="_68-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_45-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-processIdItem" structureRef="String" />
+  <itemDefinition id="_71-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_91-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_readEntitiesResponse" structureRef="com.irdeto.domain.mediamanager.command.ReadEntitiesSetResult" />
+  <itemDefinition id="_5-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_77-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_78-processIdItem" structureRef="String" />
+  <itemDefinition id="_78-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_5-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_45-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_71-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_102-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_44-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_68-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_filePathItem" structureRef="String" />
+  <itemDefinition id="_5-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_97-entityIdItem" structureRef="String" />
+  <itemDefinition id="_6-masterItem" structureRef="String" />
+  <itemDefinition id="_5-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_44-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_5-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_95-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_102-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_45-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_77-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_96-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_63-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_77-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_97-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_82-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_97-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_96-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_17-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_5-fileNameItem" structureRef="String" />
+  <itemDefinition id="_maintainRelationshipsResultObject" structureRef="com.irdeto.domain.mediamanager.command.MaintainRelationshipsResult" />
+  <itemDefinition id="_101-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_68-masterItem" structureRef="String" />
+  <itemDefinition id="_87-entityIdItem" structureRef="String" />
+  <itemDefinition id="_102-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_78-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_97-inputContentItem" structureRef="String" />
+  <itemDefinition id="_6-filePathItem" structureRef="String" />
+  <itemDefinition id="_5-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_95-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_6-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_102-masterItem" structureRef="String" />
+  <itemDefinition id="_63-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_92-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_77-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_44-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_97-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_68-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_5-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_45-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_17-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_101-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="ItemDefinition_15" />
+  <itemDefinition id="_77-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="ItemDefinition_14" />
+  <itemDefinition id="_101-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_102-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="ItemDefinition_11" />
+  <itemDefinition id="ItemDefinition_10" />
+  <itemDefinition id="ItemDefinition_13" structureRef="Object" />
+  <itemDefinition id="_92-filePathItem" structureRef="String" />
+  <itemDefinition id="ItemDefinition_12" />
+  <itemDefinition id="_68-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_96-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_63-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_97-fileNameItem" structureRef="String" />
+  <itemDefinition id="_97-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_5-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_5-inputContentItem" structureRef="String" />
+  <itemDefinition id="_6-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_82-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_87-fileNameItem" structureRef="String" />
+  <itemDefinition id="_95-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_79-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_97-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_101-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_92-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_97-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_101-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_63-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_82-filePathItem" structureRef="String" />
+  <itemDefinition id="_97-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_44-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_91-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_78-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_71-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_63-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_17-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_102-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-inputContentItem" structureRef="String" />
+  <itemDefinition id="ItemDefinition_347" structureRef="com.irdeto.domain.mediamanager.message.response.bulk.Response" />
+  <itemDefinition id="_82-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-filePathItem" structureRef="String" />
+  <itemDefinition id="_77-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_68-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-filePathItem" structureRef="String" />
+  <itemDefinition id="_91-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_77-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_95-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_45-entityIdItem" structureRef="String" />
+  <itemDefinition id="_101-masterItem" structureRef="String" />
+  <itemDefinition id="_96-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_masterItem" structureRef="String" />
+  <itemDefinition id="_96-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_101-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_102-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_87-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_68-filePathItem" structureRef="String" />
+  <itemDefinition id="_44-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_96-entityIdItem" structureRef="String" />
+  <itemDefinition id="_6-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_63-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_102-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_71-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_91-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_77-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_96-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_5-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_17-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_68-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_82-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_91-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_63-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-fileNameItem" structureRef="String" />
+  <itemDefinition id="_82-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_92-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_91-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_68-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_101-entityIdItem" structureRef="String" />
+  <itemDefinition id="_68-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="null" />
+  <itemDefinition id="_17-filePathItem" structureRef="String" />
+  <itemDefinition id="_87-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_63-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_96-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_102-inputContentItem" structureRef="String" />
+  <itemDefinition id="_91-filePathItem" structureRef="String" />
+  <itemDefinition id="_102-entityIdItem" structureRef="String" />
+  <itemDefinition id="_68-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_91-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_78-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_68-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_96-masterItem" structureRef="String" />
+  <itemDefinition id="_95-entityIdItem" structureRef="String" />
+  <itemDefinition id="_82-inputContentItem" structureRef="String" />
+  <itemDefinition id="_17-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_68-fileNameItem" structureRef="String" />
+  <itemDefinition id="_87-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_63-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_45-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_44-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_78-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-masterItem" structureRef="String" />
+  <itemDefinition id="_87-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_44-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_92-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-filePathItem" structureRef="String" />
+  <itemDefinition id="_79-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_97-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_78-fileNameItem" structureRef="String" />
+  <itemDefinition id="_44-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_78-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_45-processIdItem" structureRef="String" />
+  <itemDefinition id="_45-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_44-processIdItem" structureRef="String" />
+  <itemDefinition id="_78-masterItem" structureRef="String" />
+  <itemDefinition id="_63-inputContentItem" structureRef="String" />
+  <itemDefinition id="_68-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_71-filePathItem" structureRef="String" />
+  <itemDefinition id="_44-entityIdItem" structureRef="String" />
+  <itemDefinition id="_77-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_95-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_17-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_95-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_92-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_101-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-masterItem" structureRef="String" />
+  <itemDefinition id="_87-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_5-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-masterItem" structureRef="String" />
+  <itemDefinition id="_95-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_processIdItem" structureRef="String" />
+  <itemDefinition id="_17-fileNameItem" structureRef="String" />
+  <itemDefinition id="_71-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_102-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_97-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_92-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_44-inputContentItem" structureRef="String" />
+  <itemDefinition id="_97-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_17-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_97-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_97-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_92-masterItem" structureRef="String" />
+  <itemDefinition id="_78-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-fileNameItem" structureRef="String" />
+  <itemDefinition id="_102-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_45-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_92-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_97-filePathItem" structureRef="String" />
+  <itemDefinition id="_101-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-filePathItem" structureRef="String" />
+  <itemDefinition id="_63-processIdItem" structureRef="String" />
+  <itemDefinition id="_91-inputContentItem" structureRef="String" />
+  <itemDefinition id="_87-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_96-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_101-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_97-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_79-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_95-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_validationMessageItem" structureRef="String" />
+  <itemDefinition id="_82-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_5-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_92-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_91-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_5-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_readEntitiesSetCommandsList" structureRef="java.util.List" />
+  <itemDefinition id="_6-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_82-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_102-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_101-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_63-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_45-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_45-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_92-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_97-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_91-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_71-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_101-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_71-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_68-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_71-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_82-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-fileNameItem" structureRef="String" />
+  <itemDefinition id="_6-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_91-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_87-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_79-inputContentItem" structureRef="String" />
+  <itemDefinition id="_68-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_82-processIdItem" structureRef="String" />
+  <itemDefinition id="_77-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_71-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_45-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_79-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-filePathItem" structureRef="String" />
+  <itemDefinition id="_77-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_6-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_79-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_77-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_87-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_101-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_71-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_79-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-masterItem" structureRef="String" />
+  <itemDefinition id="_82-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_96-fileNameItem" structureRef="String" />
+  <itemDefinition id="_6-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_17-masterItem" structureRef="String" />
+  <itemDefinition id="_63-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_63-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_92-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_63-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_68-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_77-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_87-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_6-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_45-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-fileNameItem" structureRef="String" />
+  <itemDefinition id="_91-processIdItem" structureRef="String" />
+  <itemDefinition id="_101-processIdItem" structureRef="String" />
+  <itemDefinition id="_102-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-masterItem" structureRef="String" />
+  <itemDefinition id="_77-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_97-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_17-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_6-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_101-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_78-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_77-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_102-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_82-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_6-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_68-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_87-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_96-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_63-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_96-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_102-processIdItem" structureRef="String" />
+  <itemDefinition id="_77-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_63-filePathItem" structureRef="String" />
+  <itemDefinition id="_publishWrapper" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <itemDefinition id="_78-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-masterItem" structureRef="String" />
+  <itemDefinition id="_101-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_68-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_96-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-entityIdItem" structureRef="String" />
+  <itemDefinition id="_95-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_68-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_92-processIdItem" structureRef="String" />
+  <itemDefinition id="_97-masterItem" structureRef="String" />
+  <itemDefinition id="_77-filePathItem" structureRef="String" />
+  <itemDefinition id="_validationItem" structureRef="Boolean" />
+  <itemDefinition id="_91-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_97-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-filePathItem" structureRef="String" />
+  <itemDefinition id="_95-masterItem" structureRef="String" />
+  <itemDefinition id="_fileNameItem" structureRef="String" />
+  <itemDefinition id="_79-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_79-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-inputContentItem" structureRef="String" />
+  <itemDefinition id="_17-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_17-entityIdItem" structureRef="String" />
+  <itemDefinition id="ItemDefinition_9" />
+  <itemDefinition id="_91-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_97-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_17-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_77-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_63-fileNameItem" structureRef="String" />
+  <itemDefinition id="_63-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_45-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_87-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_68-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_92-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_95-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_78-entityIdItem" structureRef="String" />
+  <itemDefinition id="_6-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_101-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-processIdItem" structureRef="String" />
+  <itemDefinition id="_79-entityIdItem" structureRef="String" />
+  <itemDefinition id="_63-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_44-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="ItemDefinition_4" />
+  <itemDefinition id="ItemDefinition_3" structureRef="Object" />
+  <itemDefinition id="_45-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="ItemDefinition_2" structureRef="Object" />
+  <itemDefinition id="ItemDefinition_1" structureRef="java.lang.String" />
+  <itemDefinition id="_96-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="ItemDefinition_8" />
+  <itemDefinition id="ItemDefinition_7" structureRef="Object" />
+  <itemDefinition id="_modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="ItemDefinition_6" />
+  <itemDefinition id="_45-masterItem" structureRef="String" />
+  <itemDefinition id="ItemDefinition_5" />
+  <itemDefinition id="_95-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_101-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_45-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_82-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_5-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_101-filePathItem" structureRef="String" />
+  <itemDefinition id="_95-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_45-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_77-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_71-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_97-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_101-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_102-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_68-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_68-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_102-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_78-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_77-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_97-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_101-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_96-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_45-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_97-processIdItem" structureRef="String" />
+  <itemDefinition id="_63-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_96-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-entityIdItem" structureRef="String" />
+  <itemDefinition id="_63-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-inputContentItem" structureRef="String" />
+  <itemDefinition id="_82-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_82-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_95-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_95-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_44-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-inputContentItem" structureRef="String" />
+  <itemDefinition id="_92-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_102-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_44-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_102-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_92-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_82-entityIdItem" structureRef="String" />
+  <itemDefinition id="_91-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_79-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_63-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_79-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_45-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_contentTypeItem" structureRef="String" />
+  <itemDefinition id="_92-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_17-ratingMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_44-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_87-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_5-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_78-wrapperItem" structureRef="com.irdeto.jumpstart.domain.ingest.EntityIngestWrapper" />
+  <itemDefinition id="_63-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_63-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_102-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_79-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_96-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-fileNameItem" structureRef="String" />
+  <itemDefinition id="_17-inputContentItem" structureRef="String" />
+  <itemDefinition id="_77-entityIdTypeWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-filePathItem" structureRef="String" />
+  <itemDefinition id="_87-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_92-entityIdItem" structureRef="String" />
+  <itemDefinition id="_44-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_82-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_44-filePathItem" structureRef="String" />
+  <itemDefinition id="_96-inputContentItem" structureRef="String" />
+  <itemDefinition id="_95-fileNameItem" structureRef="String" />
+  <itemDefinition id="_97-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_92-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_6-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_102-contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_71-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_77-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_95-filePathItem" structureRef="String" />
+  <itemDefinition id="_87-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_95-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_102-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_68-validationMessageItem" structureRef="String" />
+  <itemDefinition id="_17-ingestWrapperKeyListItem" structureRef="java.util.List" />
+  <itemDefinition id="_97-schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_79-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_68-modifiedEntityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_87-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_91-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_45-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_96-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_68-entityIdItem" structureRef="String" />
+  <itemDefinition id="_17-processIdItem" structureRef="String" />
+  <itemDefinition id="_5-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_78-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-inputContentItem" structureRef="String" />
+  <itemDefinition id="_5-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_45-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_87-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_schemaStringListItem" structureRef="java.util.List" />
+  <itemDefinition id="_63-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_17-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_5-ratingMapMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_68-validationItem" structureRef="Boolean" />
+  <itemDefinition id="_87-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_91-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_91-entityIdItem" structureRef="String" />
+  <itemDefinition id="_63-modifiedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_44-bulkReadResultMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_71-entityIdItem" structureRef="String" />
+  <itemDefinition id="_79-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_95-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-relationshipMaintainedEntityListItem" structureRef="java.util.List" />
+  <itemDefinition id="_71-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_96-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_87-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_91-lockListItem" structureRef="java.util.List" />
+  <itemDefinition id="_contentListItem" structureRef="java.util.Map" />
+  <itemDefinition id="_71-processIdItem" structureRef="String" />
+  <itemDefinition id="_63-approvedEntityMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_102-queryFilterWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_87-processIdItem" structureRef="String" />
+  <itemDefinition id="_45-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_96-eternalWorkflowDecoratorItem" structureRef="com.irdeto.jumpstart.workflow.EternalWorkflowDecorator" />
+  <itemDefinition id="_95-ingestWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_101-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_96-entityItem" structureRef="com.irdeto.jumpstart.domain.BaseEntity" />
+  <itemDefinition id="_71-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_95-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_71-inputContentItem" structureRef="String" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.ingest.EpgIngest" name="EPG Ingest" tns:packageName="com.irdeto.jumpstart.workflow.ingest" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.*" />
+     <tns:import name="java.lang.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.ingest.*" />
+     <tns:import name="com.irdeto.domain.operation.MM8Response" />
+     <tns:import name="com.irdeto.helper.xmlmodel.JDOMDocumentHelper" />
+     <tns:import name="com.irdeto.manager.lock.LockManager" />
+     <tns:import name="com.irdeto.jumpstart.workflow.ingest.*" />
+     <tns:import name="com.irdeto.domain.mediamanager.message.response.bulk.*" />
+     <tns:import name="org.apache.commons.lang3.*" />
+     <tns:import name="java.util.Map.*" />
+     <tns:import name="com.irdeto.manager.xml.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="java.util.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="com.irdeto.domain.mediamanager.command.ReadEntitiesSetResult" />
+     <tns:import name="com.irdeto.domain.mediamanager.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.publish.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="errorMap" itemSubjectRef="_44-ratingMapMapItem"/>
+    <property id="maintainRelationshipsCommandsList" itemSubjectRef="_maintainRelationshipsListItem"/>
+    <property id="ingestWrapperList" itemSubjectRef="_ingestWrapperListItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="inputContent" itemSubjectRef="_inputContentItem"/>
+    <property id="ingestWrapperKeyList" itemSubjectRef="_ingestWrapperKeyListItem"/>
+    <property id="filePath" itemSubjectRef="_filePathItem"/>
+    <property id="fileName" itemSubjectRef="_fileNameItem"/>
+    <property id="maintainRelationshipsResultObject" itemSubjectRef="_maintainRelationshipsResultObject"/>
+    <property id="bulkCreateRequest" itemSubjectRef="_44-ratingMapMapItem"/>
+    <property id="bulkUpdateRequest" itemSubjectRef="_44-ratingMapMapItem"/>
+    <property id="bulkCreateResponse" itemSubjectRef="ItemDefinition_347"/>
+    <property id="bulkUpdateResponse" itemSubjectRef="ItemDefinition_347"/>
+    <property id="publishWrapper" itemSubjectRef="null"/>
+    <property id="readEntitiesSetCommandsList" itemSubjectRef="null"/>
+    <property id="readEntitiesResponse" itemSubjectRef="null"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <endEvent id="_34" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <scriptTask id="_50" name="Prepare Create/Update" scriptFormat="http://www.java.com/java" >
+      <script>EpgIngestHelper.prepareBulkIngest(kcontext);</script>
+    </scriptTask>
+    <exclusiveGateway id="_69" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_70" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_67" name="Parse Slots and Group in Channel-Days" scriptFormat="http://www.java.com/java" >
+      <script>EpgIngestHelper.mapMetadata(kcontext);
+
+kcontext.setVariable("inputContent", null);</script>
+    </scriptTask>
+    <task id="_77" name="Commit" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_77_BatchSizeInput" name="BatchSize" />
+        <dataInput id="_77_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_77_BatchSizeInput</dataInputRefs>
+          <dataInputRefs>_77_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_77_BatchSizeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">50</from>
+          <to xsi:type="tFormalExpression">_77_BatchSizeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_77_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_77_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <scriptTask id="_72" name="Prepare Publish" scriptFormat="http://www.java.com/java" >
+      <script>EpgIngestHelper.setupPublishLoop(kcontext);</script>
+    </scriptTask>
+    <task id="_jbpm-unique-10000" name="Link to Channels, etc." tns:taskName="MediaManager8MaintainRelationshipsTask" >
+      <extensionElements>
+        <tns:onEntry-script>
+          <tns:script>EpgIngestHelper.setupMaintainRelationship(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("maintainRelationshipsCommandsList", null);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-10000_MaintainRelationshipsCommandsListInput" name="MaintainRelationshipsCommandsList" />
+        <dataInput id="_jbpm-unique-10000_AsyncInput" name="Async" />
+        <dataInput id="_jbpm-unique-10000_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-10000_MaintainRelationshipsCommandsListInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-10000_AsyncInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-10000_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>maintainRelationshipsCommandsList</sourceRef>
+        <targetRef>_jbpm-unique-10000_MaintainRelationshipsCommandsListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-10000_AsyncInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-10000_AsyncInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-10000_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-10000_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_jbpm-unique-10007" name="Publish" tns:taskName="SyncSubprocess" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable(
+	"publishWrapper",
+	PublishWrapperFactory.getInstance((Base)
+		((EntityIngestWrapper) ingestWrapperList.get(
+			(Integer) ingestWrapperKeyList.remove(0)
+		)).getEntity()
+	)
+);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-10007_publishWrapperInput" name="publishWrapper" />
+        <dataInput id="_jbpm-unique-10007_SingletonInput" name="Singleton" />
+        <dataInput id="_jbpm-unique-10007_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_jbpm-unique-10007_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-10007_publishWrapperInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-10007_SingletonInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-10007_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-10007_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>publishWrapper</sourceRef>
+        <targetRef>_jbpm-unique-10007_publishWrapperInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-10007_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-10007_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-10007_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-10007_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-10007_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.publish.EpgPublishToEndpoints</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-10007_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <parallelGateway id="_jbpm-unique-100010" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <task id="_jbpm-unique-10002" name="Create" tns:taskName="MediaManager8BulkCreateTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("bulkCreateRequest", null);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-10002_EntitiesDataInput" name="EntitiesData" />
+        <dataInput id="_jbpm-unique-10002_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_jbpm-unique-10002_MediaManager8ResponseOutput" name="MediaManager8Response" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-10002_EntitiesDataInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-10002_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-10002_MediaManager8ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>bulkCreateRequest</sourceRef>
+        <targetRef>_jbpm-unique-10002_EntitiesDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-10002_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-10002_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-10002_MediaManager8ResponseOutput</sourceRef>
+        <targetRef>bulkCreateResponse</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <parallelGateway id="_jbpm-unique-10001" name="Gateway" gatewayDirection="Converging" >
+    </parallelGateway>
+    <task id="_jbpm-unique-100013" name="Update" tns:taskName="MediaManager8BulkUpdateTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("bulkUpdateRequest", null);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-100013_EntitiesDataInput" name="EntitiesData" />
+        <dataInput id="_jbpm-unique-100013_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-100013_EntitiesDataInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-100013_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>bulkUpdateRequest</sourceRef>
+        <targetRef>_jbpm-unique-100013_EntitiesDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-100013_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-100013_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_jbpm-unique-7" name="Mark as Published" tns:taskName="MediaManager8BulkUpdateTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>EpgIngestHelper.prepareBulkUpdatePublishedDateRequest(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("bulkUpdateRequest", null);
+kcontext.setVariable("bulkUpdateResponse", null);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-7_EntitiesDataInput" name="EntitiesData" />
+        <dataInput id="_jbpm-unique-7_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-7_EntitiesDataInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-7_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>bulkUpdateRequest</sourceRef>
+        <targetRef>_jbpm-unique-7_EntitiesDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-7_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-7_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_jbpm-unique-9" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_jbpm-unique-6" name="Read Existing Slots" tns:taskName="MediaManager8ReadEntitiesSetTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>EpgIngestHelper.prepareReadSlots(kcontext);
+EpgIngestHelper.prepareReadGenres(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>EpgIngestHelper.mergeEntities(kcontext);
+
+kcontext.setVariable("readEntitiesSetCommandsList", null);
+kcontext.setVariable("readEntitiesResponse", null);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-6_ReadEntitiesSetCommandsListInput" name="ReadEntitiesSetCommandsList" />
+        <dataInput id="_jbpm-unique-6_AsyncInput" name="Async" />
+        <dataInput id="_jbpm-unique-6_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_jbpm-unique-6_MediaManager8ResponseObjectOutput" name="MediaManager8ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-6_ReadEntitiesSetCommandsListInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-6_AsyncInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-6_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-6_MediaManager8ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>readEntitiesSetCommandsList</sourceRef>
+        <targetRef>_jbpm-unique-6_ReadEntitiesSetCommandsListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-6_AsyncInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-6_AsyncInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-6_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-6_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-6_MediaManager8ResponseObjectOutput</sourceRef>
+        <targetRef>readEntitiesResponse</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_jbpm-unique-11" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_jbpm-unique-8" name="Get New Slots' IDs" tns:taskName="MediaManager8ReadEntitiesSetTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>EpgIngestHelper.prepareReadSlots(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>EpgIngestHelper.processUpdatedEntities(kcontext);
+
+kcontext.setVariable("readEntitiesSetCommandsList", null);
+kcontext.setVariable("readEntitiesResponse", null);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-8_ReadEntitiesSetCommandsListInput" name="ReadEntitiesSetCommandsList" />
+        <dataInput id="_jbpm-unique-8_AsyncInput" name="Async" />
+        <dataInput id="_jbpm-unique-8_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_jbpm-unique-8_MediaManager8ResponseObjectOutput" name="MediaManager8ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-8_ReadEntitiesSetCommandsListInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-8_AsyncInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-8_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-8_MediaManager8ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>readEntitiesSetCommandsList</sourceRef>
+        <targetRef>_jbpm-unique-8_ReadEntitiesSetCommandsListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-8_AsyncInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-8_AsyncInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-8_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-8_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-8_MediaManager8ResponseObjectOutput</sourceRef>
+        <targetRef>readEntitiesResponse</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_jbpm-unique-12" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_jbpm-unique-10" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <parallelGateway id="_jbpm-unique-15" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <task id="_jbpm-unique-14" name="Set Workflow Context" tns:taskName="SetProcessInstanceContext" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-14_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_jbpm-unique-14_LabelInput" name="Label" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-14_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-14_LabelInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-14_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-14_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-14_LabelInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{filePath}#{fileName}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-14_LabelInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <scriptTask id="_jbpm-unique-17" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "EPG Ingest workflow error: {}", errorMap.get("ExitMessage"));
+</script>
+    </scriptTask>
+    <intermediateCatchEvent id="_jbpm-unique-16" name="Catch Error Signal" >
+      <dataOutput id="_jbpm-unique-16_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_jbpm-unique-16_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_jbpm-unique-16_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <endEvent id="_jbpm-unique-18" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <exclusiveGateway id="_jbpm-unique-4" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_jbpm-unique-5" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <scriptTask id="_jbpm-unique-006" name="Log Warning" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.warn(kcontext, "Ingest file {} contains EPG data in the past", filePath + fileName);</script>
+    </scriptTask>
+    <task id="_jbpm-unique-008" name="Change Status" tns:taskName="SetProcessInstanceStatus" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-008_StatusInput" name="Status" />
+        <dataInput id="_jbpm-unique-008_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_jbpm-unique-008_StageInput" name="Stage" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-008_StatusInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-008_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-008_StageInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-008_StatusInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Warning</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-008_StatusInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-008_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-008_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-008_StageInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-008_StageInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_jbpm-unique-7-_34" sourceRef="_jbpm-unique-7" targetRef="_34" />
+    <sequenceFlow id="_jbpm-unique-6-_50" sourceRef="_jbpm-unique-6" targetRef="_50" />
+    <sequenceFlow id="_72-_69" sourceRef="_72" targetRef="_69" />
+    <sequenceFlow id="_77-_69" sourceRef="_77" targetRef="_69" />
+    <sequenceFlow id="_69-_70" sourceRef="_69" targetRef="_70" />
+    <sequenceFlow id="_jbpm-unique-14-_67" sourceRef="_jbpm-unique-14" targetRef="_67" />
+    <sequenceFlow id="_jbpm-unique-10007-_77" sourceRef="_jbpm-unique-10007" targetRef="_77" />
+    <sequenceFlow id="_jbpm-unique-10000-_72" sourceRef="_jbpm-unique-10000" targetRef="_72" />
+    <sequenceFlow id="_jbpm-unique-8-_jbpm-unique-10000" sourceRef="_jbpm-unique-8" targetRef="_jbpm-unique-10000" />
+    <sequenceFlow id="_70-_jbpm-unique-10007" sourceRef="_70" targetRef="_jbpm-unique-10007" name="More to Publish" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !ingestWrapperKeyList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_50-_jbpm-unique-100010" sourceRef="_50" targetRef="_jbpm-unique-100010" />
+    <sequenceFlow id="_jbpm-unique-9-_jbpm-unique-10002" sourceRef="_jbpm-unique-9" targetRef="_jbpm-unique-10002" name="New" >
+      <conditionExpression xsi:type="tFormalExpression" >return bulkCreateRequest != null &amp;&amp; !bulkCreateRequest.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-10-_jbpm-unique-10001" sourceRef="_jbpm-unique-10" targetRef="_jbpm-unique-10001" />
+    <sequenceFlow id="_jbpm-unique-12-_jbpm-unique-10001" sourceRef="_jbpm-unique-12" targetRef="_jbpm-unique-10001" />
+    <sequenceFlow id="_jbpm-unique-11-_jbpm-unique-100013" sourceRef="_jbpm-unique-11" targetRef="_jbpm-unique-100013" name="Existing" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return bulkUpdateRequest != null &amp;&amp; !bulkUpdateRequest.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_70-_jbpm-unique-7" sourceRef="_70" targetRef="_jbpm-unique-7" name="All Published" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-100010-_jbpm-unique-9" sourceRef="_jbpm-unique-100010" targetRef="_jbpm-unique-9" />
+    <sequenceFlow id="_jbpm-unique-5-_jbpm-unique-6" sourceRef="_jbpm-unique-5" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-100010-_jbpm-unique-11" sourceRef="_jbpm-unique-100010" targetRef="_jbpm-unique-11" />
+    <sequenceFlow id="_jbpm-unique-10001-_jbpm-unique-8" sourceRef="_jbpm-unique-10001" targetRef="_jbpm-unique-8" />
+    <sequenceFlow id="_jbpm-unique-100013-_jbpm-unique-12" sourceRef="_jbpm-unique-100013" targetRef="_jbpm-unique-12" />
+    <sequenceFlow id="_jbpm-unique-11-_jbpm-unique-12" sourceRef="_jbpm-unique-11" targetRef="_jbpm-unique-12" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-10002-_jbpm-unique-10" sourceRef="_jbpm-unique-10002" targetRef="_jbpm-unique-10" />
+    <sequenceFlow id="_jbpm-unique-9-_jbpm-unique-10" sourceRef="_jbpm-unique-9" targetRef="_jbpm-unique-10" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_1-_jbpm-unique-15" sourceRef="_1" targetRef="_jbpm-unique-15" />
+    <sequenceFlow id="_jbpm-unique-15-_jbpm-unique-14" sourceRef="_jbpm-unique-15" targetRef="_jbpm-unique-14" />
+    <sequenceFlow id="_jbpm-unique-16-_jbpm-unique-17" sourceRef="_jbpm-unique-16" targetRef="_jbpm-unique-17" />
+    <sequenceFlow id="_jbpm-unique-15-_jbpm-unique-16" sourceRef="_jbpm-unique-15" targetRef="_jbpm-unique-16" />
+    <sequenceFlow id="_jbpm-unique-17-_jbpm-unique-18" sourceRef="_jbpm-unique-17" targetRef="_jbpm-unique-18" />
+    <sequenceFlow id="_67-_jbpm-unique-4" sourceRef="_67" targetRef="_jbpm-unique-4" />
+    <sequenceFlow id="_jbpm-unique-4-_jbpm-unique-5" sourceRef="_jbpm-unique-4" targetRef="_jbpm-unique-5" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-008-_jbpm-unique-5" sourceRef="_jbpm-unique-008" targetRef="_jbpm-unique-5" />
+    <sequenceFlow id="_jbpm-unique-4-_jbpm-unique-006" sourceRef="_jbpm-unique-4" targetRef="_jbpm-unique-006" name="EPG in The Past" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return EpgIngestHelper.areSlotsInThePast(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-006-_jbpm-unique-008" sourceRef="_jbpm-unique-006" targetRef="_jbpm-unique-008" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.ingest.EpgIngest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="300" y="12" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_34" >
+        <dc:Bounds x="300" y="1188" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_50" >
+        <dc:Bounds x="204" y="516" width="241" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_69" >
+        <dc:Bounds x="300" y="960" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_70" >
+        <dc:Bounds x="300" y="1032" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_67" >
+        <dc:Bounds x="204" y="228" width="241" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_77" >
+        <dc:Bounds x="480" y="960" width="133" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_72" >
+        <dc:Bounds x="204" y="888" width="241" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-10000" >
+        <dc:Bounds x="204" y="816" width="241" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-10007" >
+        <dc:Bounds x="480" y="1032" width="133" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-100010" >
+        <dc:Bounds x="300" y="588" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-10002" >
+        <dc:Bounds x="36" y="624" width="133" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-10001" >
+        <dc:Bounds x="300" y="672" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-100013" >
+        <dc:Bounds x="480" y="624" width="133" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-7" >
+        <dc:Bounds x="204" y="1116" width="241" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-9" >
+        <dc:Bounds x="228" y="588" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-6" >
+        <dc:Bounds x="204" y="444" width="241" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-11" >
+        <dc:Bounds x="372" y="588" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-8" >
+        <dc:Bounds x="204" y="744" width="241" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-12" >
+        <dc:Bounds x="372" y="672" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-10" >
+        <dc:Bounds x="228" y="672" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-15" >
+        <dc:Bounds x="300" y="84" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-14" >
+        <dc:Bounds x="204" y="156" width="240" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-17" >
+        <dc:Bounds x="480" y="84" width="132" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-16" >
+        <dc:Bounds x="396" y="84" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-18" >
+        <dc:Bounds x="648" y="84" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-4" >
+        <dc:Bounds x="300" y="300" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-5" >
+        <dc:Bounds x="300" y="372" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-006" >
+        <dc:Bounds x="480" y="300" width="132" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-008" >
+        <dc:Bounds x="480" y="372" width="132" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-7-_34" >
+        <di:waypoint x="324" y="1140" />
+        <di:waypoint x="324" y="1212" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-6-_50" >
+        <di:waypoint x="324" y="468" />
+        <di:waypoint x="324" y="540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_72-_69" >
+        <di:waypoint x="324" y="912" />
+        <di:waypoint x="324" y="984" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_77-_69" >
+        <di:waypoint x="546" y="984" />
+        <di:waypoint x="324" y="984" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_69-_70" >
+        <di:waypoint x="324" y="984" />
+        <di:waypoint x="324" y="1056" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-14-_67" >
+        <di:waypoint x="324" y="180" />
+        <di:waypoint x="324" y="252" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-10007-_77" >
+        <di:waypoint x="546" y="1056" />
+        <di:waypoint x="546" y="984" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-10000-_72" >
+        <di:waypoint x="324" y="840" />
+        <di:waypoint x="324" y="912" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-8-_jbpm-unique-10000" >
+        <di:waypoint x="324" y="768" />
+        <di:waypoint x="324" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70-_jbpm-unique-10007" >
+        <di:waypoint x="324" y="1056" />
+        <di:waypoint x="546" y="1056" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_50-_jbpm-unique-100010" >
+        <di:waypoint x="324" y="540" />
+        <di:waypoint x="324" y="612" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-9-_jbpm-unique-10002" >
+        <di:waypoint x="252" y="612" />
+        <di:waypoint x="102" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-10-_jbpm-unique-10001" >
+        <di:waypoint x="252" y="696" />
+        <di:waypoint x="324" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-12-_jbpm-unique-10001" >
+        <di:waypoint x="396" y="696" />
+        <di:waypoint x="324" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-11-_jbpm-unique-100013" >
+        <di:waypoint x="396" y="612" />
+        <di:waypoint x="546" y="648" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_70-_jbpm-unique-7" >
+        <di:waypoint x="324" y="1056" />
+        <di:waypoint x="324" y="1140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-100010-_jbpm-unique-9" >
+        <di:waypoint x="324" y="612" />
+        <di:waypoint x="252" y="612" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_jbpm-unique-6" >
+        <di:waypoint x="324" y="396" />
+        <di:waypoint x="324" y="468" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-100010-_jbpm-unique-11" >
+        <di:waypoint x="324" y="612" />
+        <di:waypoint x="396" y="612" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-10001-_jbpm-unique-8" >
+        <di:waypoint x="324" y="696" />
+        <di:waypoint x="324" y="768" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-100013-_jbpm-unique-12" >
+        <di:waypoint x="546" y="648" />
+        <di:waypoint x="396" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-11-_jbpm-unique-12" >
+        <di:waypoint x="396" y="612" />
+        <di:waypoint x="396" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-10002-_jbpm-unique-10" >
+        <di:waypoint x="102" y="648" />
+        <di:waypoint x="252" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-9-_jbpm-unique-10" >
+        <di:waypoint x="252" y="612" />
+        <di:waypoint x="252" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_jbpm-unique-15" >
+        <di:waypoint x="324" y="36" />
+        <di:waypoint x="324" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-15-_jbpm-unique-14" >
+        <di:waypoint x="324" y="108" />
+        <di:waypoint x="324" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-16-_jbpm-unique-17" >
+        <di:waypoint x="420" y="108" />
+        <di:waypoint x="546" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-15-_jbpm-unique-16" >
+        <di:waypoint x="324" y="108" />
+        <di:waypoint x="420" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-17-_jbpm-unique-18" >
+        <di:waypoint x="546" y="108" />
+        <di:waypoint x="672" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_67-_jbpm-unique-4" >
+        <di:waypoint x="324" y="252" />
+        <di:waypoint x="324" y="324" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-4-_jbpm-unique-5" >
+        <di:waypoint x="324" y="324" />
+        <di:waypoint x="324" y="396" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-8-_jbpm-unique-5" >
+        <di:waypoint x="546" y="396" />
+        <di:waypoint x="324" y="396" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-4-_jbpm-unique-6" >
+        <di:waypoint x="324" y="324" />
+        <di:waypoint x="546" y="324" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-6-_jbpm-unique-8" >
+        <di:waypoint x="546" y="324" />
+        <di:waypoint x="546" y="396" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

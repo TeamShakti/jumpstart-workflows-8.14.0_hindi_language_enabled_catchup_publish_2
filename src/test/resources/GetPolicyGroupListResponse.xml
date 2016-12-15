@@ -1,0 +1,58 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Body>
+		<GetPolicyGroupListResponse xmlns="http://ws.entriq.net/services/console">
+			<GetPolicyGroupListResult
+				xmlns:a="http://schemas.datacontract.org/2004/07/ConsoleService"
+				xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<a:ErrorCode>0</a:ErrorCode>
+				<a:ErrorMessage />
+				<a:Success>true</a:Success>
+				<a:Count>8</a:Count>
+				<a:PolicyGroups>
+					<a:PolicyGroupLite>
+						<a:Id>1</a:Id>
+						<a:Name>Free</a:Name>
+						<a:Description>Content for everyone.</a:Description>
+					</a:PolicyGroupLite>
+					<a:PolicyGroupLite>
+						<a:Id>4</a:Id>
+						<a:Name>FreeSke</a:Name>
+						<a:Description />
+					</a:PolicyGroupLite>
+					<a:PolicyGroupLite>
+						<a:Id>8</a:Id>
+						<a:Name>FreeWidevine</a:Name>
+						<a:Description />
+					</a:PolicyGroupLite>
+					<a:PolicyGroupLite>
+						<a:Id>7</a:Id>
+						<a:Name>General</a:Name>
+						<a:Description />
+					</a:PolicyGroupLite>
+					<a:PolicyGroupLite>
+						<a:Id>3</a:Id>
+						<a:Name>Rental</a:Name>
+						<a:Description>Pay As You Go</a:Description>
+					</a:PolicyGroupLite>
+					<a:PolicyGroupLite>
+						<a:Id>5</a:Id>
+						<a:Name>RentalSKE</a:Name>
+						<a:Description>New Rental policy group to work with SKE
+						</a:Description>
+					</a:PolicyGroupLite>
+					<a:PolicyGroupLite>
+						<a:Id>2</a:Id>
+						<a:Name>Subscription</a:Name>
+						<a:Description>I want money every month.</a:Description>
+					</a:PolicyGroupLite>
+					<a:PolicyGroupLite>
+						<a:Id>6</a:Id>
+						<a:Name>SubscriptionSKE</a:Name>
+						<a:Description>NEw subscription policy group to work with SKE
+						</a:Description>
+					</a:PolicyGroupLite>
+				</a:PolicyGroups>
+			</GetPolicyGroupListResult>
+		</GetPolicyGroupListResponse>
+	</s:Body>
+</s:Envelope>

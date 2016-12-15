@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://org.eclipse.bpmn2/default/process"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_exitStatus" structureRef="String" />
+  <itemDefinition id="_errorMap" structureRef="java.util.Map" />
+  <itemDefinition id="_dash_pack_body" structureRef="String" />
+  <itemDefinition id="_config" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_widevine_enc_body" structureRef="String" />
+  <itemDefinition id="_l2v_body" structureRef="String" />
+  <itemDefinition id="_widevine_pack_body" structureRef="String" />
+  <itemDefinition id="_widevine_pack_response" structureRef="String" />
+  <itemDefinition id="_hls_enc_body" structureRef="String" />
+  <itemDefinition id="null" />
+  <itemDefinition id="_dash_pack_response" structureRef="String" />
+  <itemDefinition id="_messageProperties" structureRef="java.util.Map" />
+  <itemDefinition id="_dash_enc_body" structureRef="String" />
+  <itemDefinition id="_hls_pack_response" structureRef="String" />
+  <itemDefinition id="_document" structureRef="com.irdeto.jumpstart.domain.reference.ReferenceDocument" />
+  <itemDefinition id="_previousVersion" structureRef="com.irdeto.jumpstart.domain.ScheduleSlot" />
+  <itemDefinition id="_hls_pack_body" structureRef="String" />
+  <itemDefinition id="_previousVersionNumber" structureRef="Integer" />
+  <itemDefinition id="_url" structureRef="String" />
+  <itemDefinition id="_l2v_response" structureRef="String" />
+  <itemDefinition id="_publishWrapper" structureRef="com.irdeto.jumpstart.domain.publish.PublishWrapper" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.publish.activemq.CatchUpPublishElementalDelta" name="CatchUp Publish Elemental Delta" tns:packageName="com.irdeto.jumpstart.workflow.publish.activemq" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.config.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.reference.*" />
+     <tns:import name="com.irdeto.domain.operation.MM8Response" />
+     <tns:import name="com.fasterxml.jackson.databind.ObjectMapper" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="java.util.HashMap" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="com.irdeto.domain.constants.TaskHandlerConstants" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="java.util.*" />
+     <tns:import name="java.util.Map" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.activemq.CatchUpPublishHelper" />
+     <tns:import name="java.util.Map.Entry" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.fasterxml.jackson.databind.SerializationFeature" />
+     <tns:import name="com.irdeto.jumpstart.workflow.publish.activemq.CatchUpPublishElementalDeltaHelper" />
+     <tns:import name="com.fasterxml.jackson.datatype.joda.JodaModule" />
+     <tns:import name="com.irdeto.jumpstart.factory.WrapperWithDestinations" />
+     <tns:import name="com.irdeto.jumpstart.domain.publish.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="wrapper" itemSubjectRef="_publishWrapper"/>
+    <property id="document" itemSubjectRef="_document"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatus"/>
+    <property id="errorMap" itemSubjectRef="_errorMap"/>
+    <property id="config" itemSubjectRef="_config"/>
+    <property id="messageProperties" itemSubjectRef="_messageProperties"/>
+    <property id="previousVersion" itemSubjectRef="null"/>
+    <property id="previousVersionNumber" itemSubjectRef="null"/>
+    <property id="url" itemSubjectRef="null"/>
+    <property id="l2v_body" itemSubjectRef="null"/>
+    <property id="l2v_response" itemSubjectRef="null"/>
+    <property id="dash_pack_body" itemSubjectRef="null"/>
+    <property id="dash_pack_response" itemSubjectRef="null"/>
+    <property id="hls_pack_body" itemSubjectRef="null"/>
+    <property id="hls_pack_response" itemSubjectRef="null"/>
+    <property id="widevine_pack_body" itemSubjectRef="null"/>
+    <property id="widevine_pack_response" itemSubjectRef="null"/>
+    <property id="dash_enc_body" itemSubjectRef="null"/>
+    <property id="hls_enc_body" itemSubjectRef="null"/>
+    <property id="widevine_enc_body" itemSubjectRef="null"/>
+
+    <!-- nodes -->
+    <startEvent id="StartEvent_1" name="Start Event 1"  isInterrupting="false">
+    </startEvent>
+    <parallelGateway id="_jbpm-unique-5" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <intermediateCatchEvent id="_jbpm-unique-6" name="Signal" >
+      <dataOutput id="_jbpm-unique-6_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_jbpm-unique-6_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_jbpm-unique-6_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <scriptTask id="_jbpm-unique-7" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("exitStatus", errorMap.get("ExitStatus"));
+kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <endEvent id="_jbpm-unique-8" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <exclusiveGateway id="_jbpm-unique-2" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_jbpm-unique-10" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_jbpm-unique-11" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_jbpm-unique-13" name="Read Previous Version" tns:taskName="MediaManager8ReadTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("previousVersionNumber", CatchUpPublishHelper.getPreviousVersion(wrapper));</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-13_EntityVersionInput" name="EntityVersion" />
+        <dataInput id="_jbpm-unique-13_EntityTypeInput" name="EntityType" />
+        <dataInput id="_jbpm-unique-13_EntityIDInput" name="EntityID" />
+        <dataInput id="_jbpm-unique-13_EntityVersionInput" name="EntityVersion" />
+        <dataInput id="_jbpm-unique-13_AsyncInput" name="Async" />
+        <dataInput id="_jbpm-unique-13_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_jbpm-unique-13_EntityTitleInput" name="EntityTitle" />
+        <dataOutput id="_jbpm-unique-13_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-13_EntityVersionInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-13_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-13_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-13_EntityVersionInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-13_AsyncInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-13_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-13_EntityTitleInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-13_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>previousVersionNumber</sourceRef>
+        <targetRef>_jbpm-unique-13_EntityVersionInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-13_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{wrapper.getEntity().getType()}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-13_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-13_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{wrapper.getEntity().getId()}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-13_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-13_EntityVersionInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-13_EntityVersionInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-13_AsyncInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-13_AsyncInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-13_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-13_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-13_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-13_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-13_ResponseObjectOutput</sourceRef>
+        <targetRef>previousVersion</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_jbpm-unique-14" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <endEvent id="_jbpm-unique-15" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_jbpm-unique-16" name="Read Configuration" tns:taskName="Configuration" >
+      <ioSpecification>
+        <dataOutput id="_jbpm-unique-16_PropertyMapOutput" name="PropertyMap" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-16_PropertyMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-16_PropertyMapOutput</sourceRef>
+        <targetRef>config</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_jbpm-unique-19" name="Setup Live to VOD filter" tns:taskName="WebService" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>CatchUpPublishElementalDeltaHelper.setUpLivetoVODFilter(wrapper,kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>CatchUpPublishElementalDeltaHelper.setUpPackagingFilters(kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-19_RequestPayloadContentTypeInput" name="RequestPayloadContentType" />
+        <dataInput id="_jbpm-unique-19_RequestHeadersInput" name="RequestHeaders" />
+        <dataInput id="_jbpm-unique-19_URLInput" name="URL" />
+        <dataInput id="_jbpm-unique-19_RequestPayloadInput" name="RequestPayload" />
+        <dataOutput id="_jbpm-unique-19_WebServiceResponseOutput" name="WebServiceResponse" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-19_RequestPayloadContentTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-19_RequestHeadersInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-19_URLInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-19_RequestPayloadInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-19_WebServiceResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-19_RequestPayloadContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">text/xml; charset=utf-8</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-19_RequestPayloadContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-19_RequestHeadersInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">{"Content-Type":"application/xml","Accept":"application/xml"}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-19_RequestHeadersInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-19_URLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{url}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-19_URLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-19_RequestPayloadInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{l2v_body}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-19_RequestPayloadInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-19_WebServiceResponseOutput</sourceRef>
+        <targetRef>l2v_response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <parallelGateway id="_jbpm-unique-20" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <task id="_jbpm-unique-21" name="Setup HLS package filter" tns:taskName="WebService" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>CatchUpPublishElementalDeltaHelper.setHLSencryption(wrapper,kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-21_RequestPayloadContentTypeInput" name="RequestPayloadContentType" />
+        <dataInput id="_jbpm-unique-21_RequestHeadersInput" name="RequestHeaders" />
+        <dataInput id="_jbpm-unique-21_URLInput" name="URL" />
+        <dataInput id="_jbpm-unique-21_RequestPayloadInput" name="RequestPayload" />
+        <dataOutput id="_jbpm-unique-21_WebServiceResponseOutput" name="WebServiceResponse" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-21_RequestPayloadContentTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-21_RequestHeadersInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-21_URLInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-21_RequestPayloadInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-21_WebServiceResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-21_RequestPayloadContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">text/xml; charset=utf-8</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-21_RequestPayloadContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-21_RequestHeadersInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">{"Content-Type":"application/xml","Accept":"application/xml"}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-21_RequestHeadersInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-21_URLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{url}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-21_URLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-21_RequestPayloadInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{hls_pack_body}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-21_RequestPayloadInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-21_WebServiceResponseOutput</sourceRef>
+        <targetRef>hls_pack_response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_jbpm-unique-22" name="Setup DASH packagte filter" tns:taskName="WebService" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>CatchUpPublishElementalDeltaHelper.setDASHencryption(wrapper,kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-22_RequestPayloadContentTypeInput" name="RequestPayloadContentType" />
+        <dataInput id="_jbpm-unique-22_RequestHeadersInput" name="RequestHeaders" />
+        <dataInput id="_jbpm-unique-22_URLInput" name="URL" />
+        <dataInput id="_jbpm-unique-22_RequestPayloadInput" name="RequestPayload" />
+        <dataOutput id="_jbpm-unique-22_WebServiceResponseOutput" name="WebServiceResponse" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-22_RequestPayloadContentTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-22_RequestHeadersInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-22_URLInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-22_RequestPayloadInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-22_WebServiceResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-22_RequestPayloadContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">text/xml; charset=utf-8</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-22_RequestPayloadContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-22_RequestHeadersInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">{"Content-Type":"application/xml","Accept":"application/xml"}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-22_RequestHeadersInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-22_URLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{url}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-22_URLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-22_RequestPayloadInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{dash_pack_body}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-22_RequestPayloadInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-22_WebServiceResponseOutput</sourceRef>
+        <targetRef>dash_pack_response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_jbpm-unique-23" name="Setup Widevine package filter" tns:taskName="WebService" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>CatchUpPublishElementalDeltaHelper.setWidevineencryption(wrapper,kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-23_RequestPayloadContentTypeInput" name="RequestPayloadContentType" />
+        <dataInput id="_jbpm-unique-23_RequestHeadersInput" name="RequestHeaders" />
+        <dataInput id="_jbpm-unique-23_URLInput" name="URL" />
+        <dataInput id="_jbpm-unique-23_RequestPayloadInput" name="RequestPayload" />
+        <dataOutput id="_jbpm-unique-23_WebServiceResponseOutput" name="WebServiceResponse" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-23_RequestPayloadContentTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-23_RequestHeadersInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-23_URLInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-23_RequestPayloadInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_jbpm-unique-23_WebServiceResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-23_RequestPayloadContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">text/xml; charset=utf-8</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-23_RequestPayloadContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-23_RequestHeadersInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">{"Content-Type":"application/xml","Accept":"application/xml"}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-23_RequestHeadersInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-23_URLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{url}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-23_URLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-23_RequestPayloadInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{widevine_pack_body}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-23_RequestPayloadInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_jbpm-unique-23_WebServiceResponseOutput</sourceRef>
+        <targetRef>widevine_pack_response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_jbpm-unique-24" name="Setup HLS Encryption filter" tns:taskName="WebService" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-24_RequestPayloadContentTypeInput" name="RequestPayloadContentType" />
+        <dataInput id="_jbpm-unique-24_RequestHeadersInput" name="RequestHeaders" />
+        <dataInput id="_jbpm-unique-24_URLInput" name="URL" />
+        <dataInput id="_jbpm-unique-24_RequestPayloadInput" name="RequestPayload" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-24_RequestPayloadContentTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-24_RequestHeadersInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-24_URLInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-24_RequestPayloadInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-24_RequestPayloadContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">text/xml; charset=utf-8</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-24_RequestPayloadContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-24_RequestHeadersInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">{"Content-Type":"application/xml","Accept":"application/xml"}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-24_RequestHeadersInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-24_URLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{url}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-24_URLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-24_RequestPayloadInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{hls_enc_body}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-24_RequestPayloadInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_jbpm-unique-25" name="Setup DASH Encryption filter" tns:taskName="WebService" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-25_RequestPayloadContentTypeInput" name="RequestPayloadContentType" />
+        <dataInput id="_jbpm-unique-25_RequestHeadersInput" name="RequestHeaders" />
+        <dataInput id="_jbpm-unique-25_URLInput" name="URL" />
+        <dataInput id="_jbpm-unique-25_RequestPayloadInput" name="RequestPayload" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-25_RequestPayloadContentTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-25_RequestHeadersInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-25_URLInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-25_RequestPayloadInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-25_RequestPayloadContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">text/xml; charset=utf-8</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-25_RequestPayloadContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-25_RequestHeadersInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">{"Content-Type":"application/xml","Accept":"application/xml"}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-25_RequestHeadersInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-25_URLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{url}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-25_URLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-25_RequestPayloadInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{dash_enc_body}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-25_RequestPayloadInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_jbpm-unique-26" name="Setup Widevine Encryption filter" tns:taskName="WebService" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-26_RequestPayloadContentTypeInput" name="RequestPayloadContentType" />
+        <dataInput id="_jbpm-unique-26_RequestHeadersInput" name="RequestHeaders" />
+        <dataInput id="_jbpm-unique-26_URLInput" name="URL" />
+        <dataInput id="_jbpm-unique-26_RequestPayloadInput" name="RequestPayload" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-26_RequestPayloadContentTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-26_RequestHeadersInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-26_URLInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-26_RequestPayloadInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-26_RequestPayloadContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">text/xml; charset=utf-8</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-26_RequestPayloadContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-26_RequestHeadersInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">{"Content-Type":"application/xml","Accept":"application/xml"}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-26_RequestHeadersInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-26_URLInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{url}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-26_URLInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-26_RequestPayloadInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{widevine_enc_body}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-26_RequestPayloadInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <parallelGateway id="_jbpm-unique-27" name="Gateway" gatewayDirection="Converging" >
+    </parallelGateway>
+
+    <!-- connections -->
+    <sequenceFlow id="StartEvent_1-_jbpm-unique-5" sourceRef="StartEvent_1" targetRef="_jbpm-unique-5" />
+    <sequenceFlow id="_jbpm-unique-5-_jbpm-unique-6" sourceRef="_jbpm-unique-5" targetRef="_jbpm-unique-6" />
+    <sequenceFlow id="_jbpm-unique-6-_jbpm-unique-7" sourceRef="_jbpm-unique-6" targetRef="_jbpm-unique-7" />
+    <sequenceFlow id="_jbpm-unique-7-_jbpm-unique-8" sourceRef="_jbpm-unique-7" targetRef="_jbpm-unique-8" />
+    <sequenceFlow id="_jbpm-unique-5-_jbpm-unique-2" sourceRef="_jbpm-unique-5" targetRef="_jbpm-unique-2" />
+    <sequenceFlow id="_jbpm-unique-2-_jbpm-unique-10" sourceRef="_jbpm-unique-2" targetRef="_jbpm-unique-10" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-13-_jbpm-unique-10" sourceRef="_jbpm-unique-13" targetRef="_jbpm-unique-10" />
+    <sequenceFlow id="_jbpm-unique-10-_jbpm-unique-11" sourceRef="_jbpm-unique-10" targetRef="_jbpm-unique-11" />
+    <sequenceFlow id="_jbpm-unique-2-_jbpm-unique-13" sourceRef="_jbpm-unique-2" targetRef="_jbpm-unique-13" name="Check Prev Version" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return CatchUpPublishHelper.needVersionRead(wrapper);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-11-_jbpm-unique-14" sourceRef="_jbpm-unique-11" targetRef="_jbpm-unique-14" name="No Update" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-27-_jbpm-unique-15" sourceRef="_jbpm-unique-27" targetRef="_jbpm-unique-15" />
+    <sequenceFlow id="_jbpm-unique-11-_jbpm-unique-16" sourceRef="_jbpm-unique-11" targetRef="_jbpm-unique-16" name="Needs (Re-)Scheduling" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return CatchUpPublishHelper.needsCatchUpPublish(
+	(ScheduleSlot) wrapper.getEntity(),
+	(ScheduleSlot) previousVersion
+);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-16-_jbpm-unique-19" sourceRef="_jbpm-unique-16" targetRef="_jbpm-unique-19" />
+    <sequenceFlow id="_jbpm-unique-19-_jbpm-unique-20" sourceRef="_jbpm-unique-19" targetRef="_jbpm-unique-20" />
+    <sequenceFlow id="_jbpm-unique-20-_jbpm-unique-21" sourceRef="_jbpm-unique-20" targetRef="_jbpm-unique-21" />
+    <sequenceFlow id="_jbpm-unique-20-_jbpm-unique-22" sourceRef="_jbpm-unique-20" targetRef="_jbpm-unique-22" />
+    <sequenceFlow id="_jbpm-unique-20-_jbpm-unique-23" sourceRef="_jbpm-unique-20" targetRef="_jbpm-unique-23" />
+    <sequenceFlow id="_jbpm-unique-21-_jbpm-unique-24" sourceRef="_jbpm-unique-21" targetRef="_jbpm-unique-24" />
+    <sequenceFlow id="_jbpm-unique-22-_jbpm-unique-25" sourceRef="_jbpm-unique-22" targetRef="_jbpm-unique-25" />
+    <sequenceFlow id="_jbpm-unique-23-_jbpm-unique-26" sourceRef="_jbpm-unique-23" targetRef="_jbpm-unique-26" />
+    <sequenceFlow id="_jbpm-unique-24-_jbpm-unique-27" sourceRef="_jbpm-unique-24" targetRef="_jbpm-unique-27" />
+    <sequenceFlow id="_jbpm-unique-25-_jbpm-unique-27" sourceRef="_jbpm-unique-25" targetRef="_jbpm-unique-27" />
+    <sequenceFlow id="_jbpm-unique-26-_jbpm-unique-27" sourceRef="_jbpm-unique-26" targetRef="_jbpm-unique-27" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.publish.activemq.CatchUpPublishElementalDelta" >
+      <bpmndi:BPMNShape bpmnElement="StartEvent_1" >
+        <dc:Bounds x="288" y="12" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-5" >
+        <dc:Bounds x="288" y="84" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-6" >
+        <dc:Bounds x="348" y="84" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-7" >
+        <dc:Bounds x="432" y="84" width="109" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-8" >
+        <dc:Bounds x="576" y="84" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-2" >
+        <dc:Bounds x="288" y="156" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-10" >
+        <dc:Bounds x="288" y="228" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-11" >
+        <dc:Bounds x="288" y="300" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-13" >
+        <dc:Bounds x="348" y="192" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-14" >
+        <dc:Bounds x="576" y="300" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-15" >
+        <dc:Bounds x="300" y="924" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-16" >
+        <dc:Bounds x="216" y="384" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-19" >
+        <dc:Bounds x="216" y="468" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-20" >
+        <dc:Bounds x="288" y="540" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-21" >
+        <dc:Bounds x="0" y="612" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-22" >
+        <dc:Bounds x="216" y="612" width="205" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-23" >
+        <dc:Bounds x="444" y="612" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-24" >
+        <dc:Bounds x="0" y="720" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-25" >
+        <dc:Bounds x="228" y="720" width="181" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-26" >
+        <dc:Bounds x="444" y="720" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-27" >
+        <dc:Bounds x="336" y="816" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="StartEvent_1-_jbpm-unique-5" >
+        <di:waypoint x="312" y="36" />
+        <di:waypoint x="312" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_jbpm-unique-6" >
+        <di:waypoint x="312" y="108" />
+        <di:waypoint x="372" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-6-_jbpm-unique-7" >
+        <di:waypoint x="372" y="108" />
+        <di:waypoint x="486" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-7-_jbpm-unique-8" >
+        <di:waypoint x="486" y="108" />
+        <di:waypoint x="600" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_jbpm-unique-2" >
+        <di:waypoint x="312" y="108" />
+        <di:waypoint x="312" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-2-_jbpm-unique-10" >
+        <di:waypoint x="312" y="180" />
+        <di:waypoint x="312" y="252" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-13-_jbpm-unique-10" >
+        <di:waypoint x="444" y="216" />
+        <di:waypoint x="312" y="252" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-10-_jbpm-unique-11" >
+        <di:waypoint x="312" y="252" />
+        <di:waypoint x="312" y="324" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-2-_jbpm-unique-13" >
+        <di:waypoint x="312" y="180" />
+        <di:waypoint x="444" y="216" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-11-_jbpm-unique-14" >
+        <di:waypoint x="312" y="324" />
+        <di:waypoint x="600" y="324" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-27-_jbpm-unique-15" >
+        <di:waypoint x="360" y="840" />
+        <di:waypoint x="324" y="948" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-11-_jbpm-unique-16" >
+        <di:waypoint x="312" y="324" />
+        <di:waypoint x="312" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-16-_jbpm-unique-19" >
+        <di:waypoint x="312" y="408" />
+        <di:waypoint x="312" y="492" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-19-_jbpm-unique-20" >
+        <di:waypoint x="312" y="492" />
+        <di:waypoint x="312" y="564" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-20-_jbpm-unique-21" >
+        <di:waypoint x="312" y="564" />
+        <di:waypoint x="96" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-20-_jbpm-unique-22" >
+        <di:waypoint x="312" y="564" />
+        <di:waypoint x="318" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-20-_jbpm-unique-23" >
+        <di:waypoint x="312" y="564" />
+        <di:waypoint x="540" y="636" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-21-_jbpm-unique-24" >
+        <di:waypoint x="96" y="636" />
+        <di:waypoint x="96" y="744" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-22-_jbpm-unique-25" >
+        <di:waypoint x="318" y="636" />
+        <di:waypoint x="318" y="744" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-23-_jbpm-unique-26" >
+        <di:waypoint x="540" y="636" />
+        <di:waypoint x="540" y="744" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-24-_jbpm-unique-27" >
+        <di:waypoint x="96" y="744" />
+        <di:waypoint x="360" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-25-_jbpm-unique-27" >
+        <di:waypoint x="318" y="744" />
+        <di:waypoint x="360" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-26-_jbpm-unique-27" >
+        <di:waypoint x="540" y="744" />
+        <di:waypoint x="360" y="840" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

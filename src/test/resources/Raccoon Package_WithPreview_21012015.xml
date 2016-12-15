@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"
+		xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"
+		xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"
+		xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd 
+			urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd 
+			urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd 
+			urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd 
+			urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd 
+			http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">
+			
+	<Asset xsi:type="offer:OfferType" uriId="irdeto.com/Offer/PackOffer002" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z"> <!-- offerName SUBOFFER001 -->
+		<offer:BillingId>Pack05012016</offer:BillingId>
+		<offer:TermsRef uriId="irdeto.com/Terms/PackTerm002" />		<!-- TermName PackTerm002 -->
+		<offer:ContentGroupRef uriId="irdeto.com/SubscriptionPackage/Racoon1201" />		<!-- Subscription package mapped to offer -->
+	</Asset>
+												<!-- Offer section ends-->
+												<!-- Term section starts-->
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/PackTerm002" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<terms:ContractName>Subscription</terms:ContractName>		<!-- Subscription [with contentType : movies] -->
+		<terms:SuggestedPrice>6.99</terms:SuggestedPrice>
+	</Asset>
+	
+	<Asset xsi:type="offer:OfferType" uriId="irdeto.com/Offer/OFFERPreview002" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z"> <!-- offerName SUBOFFER001 -->
+		<offer:BillingId>PackFree</offer:BillingId>
+		<offer:TermsRef uriId="irdeto.com/Terms/PackTermPreview002" />		<!-- TermName PackTerm002 -->
+		<offer:ContentGroupRef uriId="irdeto.com/SubscriptionPackage/Racoon1201" />		<!-- Subscription package mapped to offer -->
+	</Asset>
+												<!-- Offer section ends-->
+												<!-- Term section starts-->
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/PackTermPreview002" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<terms:ContractName>FreePreview</terms:ContractName>		<!-- Subscription [with contentType : movies] -->
+		<terms:SuggestedPrice>0.00</terms:SuggestedPrice>
+	</Asset>
+												<!-- Term section ends-->
+										<!-- Subscription Package section starts -->
+	<Asset xsi:type="irdeto:SubscriptionPackageType" uriId="irdeto.com/SubscriptionPackage/Racoon1201" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T00:00:00Z">
+		<irdeto:TitleRef uriId="irdeto.com/Title/SubscriptionPackage/Racoon1201" />
+		<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/SubscriptionPackage/Racoon1201" />
+		<offer:ContentGroupRef uriId="irdeto.com/ContentGroup/201700991" />    <!-- standalone program1 Raccoon Nation with only movies-->
+
+	</Asset>
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/SubscriptionPackage/Racoon1201" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T00:00:00Z">		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>Entertainment1201</title:TitleSortName>		<!-- Changed pack name -->	
+			<title:TitleBrief>Entertainment1201</title:TitleBrief>		<!-- Changed pack name -->	
+			<title:TitleMedium>Entertainment1201</title:TitleMedium>		<!-- Changed pack name -->	
+			<title:TitleLong>Entertainment1201</title:TitleLong>		<!-- Changed pack name -->	
+			<title:SummaryShort>The best Subscription Package for entertainment which contains only VOD programs.</title:SummaryShort>	
+			<title:SummaryLong>The best Subscription Package for entertainment which contains only VOD programs.</title:SummaryLong>
+		</title:LocalizableTitle>		
+	</Asset>			
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/SubscriptionPackage/Racoon1201" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T00:00:00Z">	
+		<content:SourceUrl>Entertainment1201.png</content:SourceUrl>		
+		<content:ContentFileSize>16938</content:ContentFileSize>		
+		<content:ContentCheckSum>f6e89ed1e89c0f681e4f79ce1d6c8228</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>240</content:X_Resolution>		
+		<content:Y_Resolution>320</content:Y_Resolution>		
+	</Asset>
+									<!-- Subscription Package section ends -->
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/201700991001" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<core:AlternateId identifierSystem="ISAN">1881-66C7-3420-000-7-9F3A-02450-U</core:AlternateId>
+		<core:ProviderQAContact>Sunitha Ramakrishna, sunitha.ramakrishna@irdeto.com</core:ProviderQAContact>
+		<core:Provider>HBO</core:Provider>
+		<title:LocalizableTitle xml:lang="en-US">
+			<title:TitleSortName>Raccoon NationSub</title:TitleSortName>    <!-- need to be modified -->
+			<title:TitleBrief>Raccoon NationSub</title:TitleBrief>    <!-- need to be modified -->
+			<title:TitleMedium>Raccoon NationSub</title:TitleMedium>    <!-- need to be modified -->
+			<title:TitleLong>Raccoon NationSub</title:TitleLong>    <!-- need to be modified -->
+			<title:SummaryShort>In the last 70 years , urban raccoon populations have grown twenty-fold in North America and city life is changing raccoons in remarkable ways.</title:SummaryShort>    <!-- need to be modified -->
+			<title:SummaryLong>In the last 70 years , urban raccoon populations have grown twenty-fold in North America and city life is changing raccoons in remarkable ways. In our efforts to outwit racoons, are we pushing their brain development and perhaps even sending them down a new evolutionary path? This unique documentary intimately follows a family of urban raccoons as their young learn to find their way in the bright lights of the big city.</title:SummaryLong>    <!-- need to be modified -->
+			<title:ActorDisplay>Anna Paquin, Stephen Moyer, Alexander Skarsgrd, Rutina Wesley, Sam Trammell, Ryan Kwanten, Nelsan Ellis, Carrie Preston</title:ActorDisplay>
+			<title:Actor fullName="Anna Paquin" firstName="Anna" lastName="Paquin" sortableName="Paquin,Anna" />
+			<title:Actor fullName="Stephen Moyer" firstName="Stephen" lastName="Moyer" sortableName="Moyer,Stephen" />
+			<title:Actor fullName="Alexander Skarsgrd" firstName="Alexander" lastName="Skarsgrd" sortableName="Skarsgrd,Alexander" />
+			<title:WriterDisplay>Alan Ball</title:WriterDisplay>
+			<title:Director fullName="Susan Fleming" firstName="Susan" lastName="Fleming" sortableName="Susan Fleming" />    <!-- need to be modified -->
+			<title:StudioDisplay>HBO</title:StudioDisplay>
+			<title:RecordingArtist>Jace Everett</title:RecordingArtist>
+			<title:SongTitle>Bad Things</title:SongTitle>	
+			<!-- <title:EpisodeName>Episode 1</title:EpisodeName>  --> <!-- need to be modified -->
+			<!-- <title:EpisodeID>1</title:EpisodeID>			   --> <!-- need to be modified -->
+			
+			<!--      <title:Chapter heading="Opening Scene" timeCode="00:00:02:00" />
+		      <title:Chapter heading="They Meet" timeCode="00:15:12:00" />
+		      <title:Chapter heading="The Collision" timeCode="02:03:06:00" />
+		      <title:Chapter heading="She Goes Under" timeCode="02:55:15:00" />
+		      <title:Chapter heading="Final Scene" timeCode="03:02:09:00" />-->
+		</title:LocalizableTitle>
+		<title:Rating ratingSystem="MPAA">NC-17</title:Rating>
+		<!--    <title:Advisory>AL</title:Advisory>
+    <title:Advisory>N</title:Advisory>-->
+		<title:IsClosedCaptioning>true</title:IsClosedCaptioning>
+		<title:DisplayRunTime>00:52:00</title:DisplayRunTime>
+		<title:Year>2011</title:Year>
+		<title:CountryOfOrigin>Canada</title:CountryOfOrigin>
+		<title:Genre>Nature</title:Genre>    <!-- need to be modified -->
+		<title:ShowType>Movies</title:ShowType>    <!-- need to be modified -->
+		<title:IsEncryptionRequired>false</title:IsEncryptionRequired>
+		<!--    <title:BoxOffice>1835000000</title:BoxOffice>-->
+		<!--    <title:ProgrammerCallLetters>IND</title:ProgrammerCallLetters>-->
+	</Asset>
+	<Asset xsi:type="offer:ContentGroupType" uriId="irdeto.com/ContentGroup/201700991"
+			providerVersionNum="1" internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2016-12-31T11:59:59Z" 
+			endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<offer:TitleRef uriId="irdeto.com/Title/201700991001" />    <!-- need to be modified -->
+		<offer:MovieRef uriId="irdeto.com/Movie/201700991002" />    <!-- need to be modified -->
+		<offer:PreviewRef uriId="irdeto.com/Preview/201700991003" />    
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201700991004-01" />    
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201700991004-02" />
+		<offer:BoxCoverRef uriId="irdeto.com/BoxCover/201700991004-03" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201700991005-01" />    <!-- need to be modified -->
+		<offer:PosterRef uriId="irdeto.com/Poster/201700991005-02" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201700991005-03" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201700991005-04" />
+		<offer:PosterRef uriId="irdeto.com/Poster/201700991005-05" />
+	</Asset>
+	
+	<Asset xsi:type="content:MovieType" uriId="irdeto.com/Movie/201700991002" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201700991002-Movie-en_US.mov</content:SourceUrl>
+		<content:ContentFileSize>3918446</content:ContentFileSize>
+		<content:ContentCheckSum>a80158363800ce60de3d957cdb7bea96</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H52M00S</content:Duration>    <!-- need to be modified -->
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">R</content:Rating>
+		<content:CopyControlInfo>
+			<content:IsCopyProtection>false</content:IsCopyProtection>
+		</content:CopyControlInfo>
+	</Asset>
+
+	
+	<Asset xsi:type="content:PreviewType" uriId="irdeto.com/Preview/201700991003" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    
+		<content:SourceUrl>201700991003-Preview-en_US.mp4</content:SourceUrl>
+		<content:ContentFileSize>3918446</content:ContentFileSize>
+		<content:ContentCheckSum>a80158363800ce60de3d957cdb7bea96</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:AudioType>Dolby Digital</content:AudioType>
+		<content:ScreenFormat>Widescreen</content:ScreenFormat>
+		<content:Duration>PT00H00M30S</content:Duration>    
+		<content:Language>en</content:Language>
+		<content:SubtitleLanguage>es</content:SubtitleLanguage>
+		<content:DubbedLanguage>es</content:DubbedLanguage>
+		<content:Rating ratingSystem="MPAA">G</content:Rating>
+	</Asset>
+	
+
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201700991004-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    
+		<content:SourceUrl>201700991004-BoxCover-320-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>167459</content:ContentFileSize>
+		<content:ContentCheckSum>7474099273682b27a19b8f6aa5ed83a9</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>223</content:X_Resolution>
+		<content:Y_Resolution>320</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201700991004-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    
+		<content:SourceUrl>201700991004-BoxCover-480-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>331025</content:ContentFileSize>
+		<content:ContentCheckSum>b7365149de9eea85b0ed0cf92f6590f1</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>334</content:X_Resolution>
+		<content:Y_Resolution>480</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/201700991004-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    
+		<content:SourceUrl>201700991004-BoxCover-640-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>422677</content:ContentFileSize>
+		<content:ContentCheckSum>8368389ec50aaaac4f9b46e5dc8161f2</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>502</content:X_Resolution>
+		<content:Y_Resolution>720</content:Y_Resolution>
+	</Asset>
+	
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201700991005-01" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201700991005-Poster-144-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>83666</content:ContentFileSize>
+		<content:ContentCheckSum>1171351bd091ef2cc72925e6724375b9</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>256</content:X_Resolution>
+		<content:Y_Resolution>144</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201700991005-02" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201700991005-Poster-360-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>423390</content:ContentFileSize>
+		<content:ContentCheckSum>7f55ac16d774e52c61c3566e42967381</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>640</content:X_Resolution>
+		<content:Y_Resolution>360</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201700991005-03" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201700991005-Poster-648-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>1047756</content:ContentFileSize>
+		<content:ContentCheckSum>34483ca7c4692637b3a70bba7c00fbb1</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1152</content:X_Resolution>
+		<content:Y_Resolution>648</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201700991005-04" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201700991005-Poster-720-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>1223813</content:ContentFileSize>
+		<content:ContentCheckSum>e22d5d9911aeb53adf1efd18c52e72dc</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1280</content:X_Resolution>
+		<content:Y_Resolution>720</content:Y_Resolution>
+	</Asset>
+	<Asset xsi:type="content:PosterType" uriId="irdeto.com/Poster/201700991005-05" providerVersionNum="1"
+			internalVersionNum="0" creationDateTime="2015-01-01T00:00:00Z" startDateTime="2015-01-01T00:00:00Z" endDateTime="2016-12-31T11:59:59Z">    <!-- need to be modified -->
+		<content:SourceUrl>201700991005-Poster-1080-en_US.png</content:SourceUrl>
+		<content:ContentFileSize>2195375</content:ContentFileSize>
+		<content:ContentCheckSum>9117f9bc132fca692807831ea9742763</content:ContentCheckSum>
+		<content:PropagationPriority>1</content:PropagationPriority>
+		<content:X_Resolution>1920</content:X_Resolution>
+		<content:Y_Resolution>1080</content:Y_Resolution>
+	</Asset>
+
+	
+</ADI3>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_programTitleItem" structureRef="String" />
+  <itemDefinition id="_transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_sourceFileItem" structureRef="String" />
+  <itemDefinition id="_targetPathItem" structureRef="String" />
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+
+  <itemDefinition id="_2-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_2-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_2-entityIdItem" structureRef="String" />
+  <itemDefinition id="_2-programTitleItem" structureRef="String" />
+  <itemDefinition id="_2-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_2-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_2-targetPathItem" structureRef="String" />
+  <itemDefinition id="_2-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_2-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_2-exitStatusItem" structureRef="String" />
+
+  <itemDefinition id="_4-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_4-transcodeItem" structureRef="com.irdeto.jumpstart.domain.config.Transcode" />
+  <itemDefinition id="_4-entityIdItem" structureRef="String" />
+  <itemDefinition id="_4-programTitleItem" structureRef="String" />
+  <itemDefinition id="_4-transcodedFileInfoListItem" structureRef="java.util.List" />
+  <itemDefinition id="_4-sourceFileItem" structureRef="String" />
+  <itemDefinition id="_4-targetPathItem" structureRef="String" />
+  <itemDefinition id="_4-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_4-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_4-exitStatusItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.transcode.TranscodeElementalCloud" name="Transcode Elemental Cloud" tns:packageName="com.irdeto.jumpstart.workflow.transcode" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.transcode.*" />
+     <tns:import name="com.irdeto.manager.task.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="config" itemSubjectRef="_configItem"/>
+    <property id="transcode" itemSubjectRef="_transcodeItem"/>
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="programTitle" itemSubjectRef="_programTitleItem"/>
+    <property id="transcodedFileInfoList" itemSubjectRef="_transcodedFileInfoListItem"/>
+    <property id="sourceFile" itemSubjectRef="_sourceFileItem"/>
+    <property id="targetPath" itemSubjectRef="_targetPathItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="QTS Elemental Cloud Task" tns:taskName="QTSElementalCloud" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <script>kcontext.setVariable("exitStatus", "SUCCESS");</script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_2_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_2_TargetUIDInput" name="TargetUID" />
+        <dataInput id="_2_UserIdInput" name="UserId" />
+        <dataInput id="_2_SourceInput" name="Source" />
+        <dataInput id="_2_TargetPWDInput" name="TargetPWD" />
+        <dataInput id="_2_ApiKeyInput" name="ApiKey" />
+        <dataInput id="_2_TargetInput" name="Target" />
+        <dataInput id="_2_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_2_ElementalURIInput" name="ElementalURI" />
+        <dataInput id="_2_ElementalProfileNameInput" name="ElementalProfileName" />
+        <dataInput id="_2_SourcePWDInput" name="SourcePWD" />
+        <dataInput id="_2_EntityTypeInput" name="EntityType" />
+        <dataInput id="_2_EntityIDInput" name="EntityID" />
+        <dataInput id="_2_ViewNameInput" name="ViewName" />
+        <dataInput id="_2_SourceUIDInput" name="SourceUID" />
+        <dataOutput id="_2_TranscodedFileInfoListOutput" name="TranscodedFileInfoList" />
+        <inputSet>
+          <dataInputRefs>_2_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_2_TargetUIDInput</dataInputRefs>
+          <dataInputRefs>_2_UserIdInput</dataInputRefs>
+          <dataInputRefs>_2_SourceInput</dataInputRefs>
+          <dataInputRefs>_2_TargetPWDInput</dataInputRefs>
+          <dataInputRefs>_2_ApiKeyInput</dataInputRefs>
+          <dataInputRefs>_2_TargetInput</dataInputRefs>
+          <dataInputRefs>_2_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_2_ElementalURIInput</dataInputRefs>
+          <dataInputRefs>_2_ElementalProfileNameInput</dataInputRefs>
+          <dataInputRefs>_2_SourcePWDInput</dataInputRefs>
+          <dataInputRefs>_2_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_2_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_2_ViewNameInput</dataInputRefs>
+          <dataInputRefs>_2_SourceUIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_2_TranscodedFileInfoListOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_2_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_2_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_TargetUIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("ec2.target.uid")}</from>
+          <to xsi:type="tFormalExpression">_2_TargetUIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_UserIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("elemental.userid")}</from>
+          <to xsi:type="tFormalExpression">_2_UserIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceFile}</from>
+          <to xsi:type="tFormalExpression">_2_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_TargetPWDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("ec2.target.pwd")}</from>
+          <to xsi:type="tFormalExpression">_2_TargetPWDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ApiKeyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("elemental.api.key")}</from>
+          <to xsi:type="tFormalExpression">_2_ApiKeyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{targetPath}</from>
+          <to xsi:type="tFormalExpression">_2_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_2_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ElementalURIInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{transcode.getTranscoderUri()}</from>
+          <to xsi:type="tFormalExpression">_2_ElementalURIInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ElementalProfileNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{transcode.getTranscoderProfile()}</from>
+          <to xsi:type="tFormalExpression">_2_ElementalProfileNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SourcePWDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("ec2.source.pwd")}</from>
+          <to xsi:type="tFormalExpression">_2_SourcePWDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_2_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_2_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_2_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SourceUIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("ec2.source.uid")}</from>
+          <to xsi:type="tFormalExpression">_2_SourceUIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_2_TranscodedFileInfoListOutput</sourceRef>
+        <targetRef>transcodedFileInfoList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_3" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_4" name="Configuration Task" tns:taskName="Configuration" >
+      <ioSpecification>
+        <dataOutput id="_4_PropertyMapOutput" name="PropertyMap" />
+        <inputSet>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_4_PropertyMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataOutputAssociation>
+        <sourceRef>_4_PropertyMapOutput</sourceRef>
+        <targetRef>config</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <intermediateCatchEvent id="_5" name="Signal" >
+      <dataOutput id="_5_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_5_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_5_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <scriptTask id="_6" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Transcode Elemental Workflow error: {}", errorMap.get("ExitMessage"));
+kcontext.setVariable("exitStatus", errorMap.get("ExitStatus"));
+kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));
+</script>
+    </scriptTask>
+    <endEvent id="_7" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <parallelGateway id="_8" name="Gateway" gatewayDirection="Diverging" />
+
+    <!-- connections -->
+    <sequenceFlow id="_4-_2" sourceRef="_4" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+    <sequenceFlow id="_8-_4" sourceRef="_8" targetRef="_4" />
+    <sequenceFlow id="_8-_5" sourceRef="_8" targetRef="_5" />
+    <sequenceFlow id="_5-_6" sourceRef="_5" targetRef="_6" />
+    <sequenceFlow id="_6-_7" sourceRef="_6" targetRef="_7" />
+    <sequenceFlow id="_1-_8" sourceRef="_1" targetRef="_8" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.transcode.TranscodeElementalCloud" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="72" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="72" y="168" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="144" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="72" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="372" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="300" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="372" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="144" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_4-_2" >
+        <di:waypoint x="168" y="120" />
+        <di:waypoint x="168" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="168" y="192" />
+        <di:waypoint x="168" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_4" >
+        <di:waypoint x="168" y="48" />
+        <di:waypoint x="168" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_5" >
+        <di:waypoint x="168" y="48" />
+        <di:waypoint x="396" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_6" >
+        <di:waypoint x="396" y="48" />
+        <di:waypoint x="396" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_7" >
+        <di:waypoint x="396" y="120" />
+        <di:waypoint x="396" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_8" >
+        <di:waypoint x="96" y="48" />
+        <di:waypoint x="168" y="48" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

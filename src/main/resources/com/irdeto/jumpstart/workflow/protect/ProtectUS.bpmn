@@ -1,0 +1,2432 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_programTitleItem" structureRef="String" />
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_commandItem" structureRef="String" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_manifestDataItem" structureRef="String" />
+  <itemDefinition id="_filePathItem" structureRef="String" />
+  <itemDefinition id="_fileNameItem" structureRef="String" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_targetLocationItem" structureRef="String" />
+  <itemDefinition id="_sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_ismtDataItem" structureRef="String" />
+  <itemDefinition id="_ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_157-entityIdItem" structureRef="String" />
+  <itemDefinition id="_157-programTitleItem" structureRef="String" />
+  <itemDefinition id="_157-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_157-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_157-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_157-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_157-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_157-commandItem" structureRef="String" />
+  <itemDefinition id="_157-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_157-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_157-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_157-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_157-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_157-filePathItem" structureRef="String" />
+  <itemDefinition id="_157-fileNameItem" structureRef="String" />
+  <itemDefinition id="_157-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_157-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_157-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_157-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_157-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_157-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_157-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_157-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_157-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_157-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_157-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_157-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_157-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_157-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_157-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_157-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_157-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_157-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_157-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_157-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_157-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_158-entityIdItem" structureRef="String" />
+  <itemDefinition id="_158-programTitleItem" structureRef="String" />
+  <itemDefinition id="_158-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_158-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_158-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_158-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_158-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_158-commandItem" structureRef="String" />
+  <itemDefinition id="_158-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_158-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_158-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_158-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_158-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_158-filePathItem" structureRef="String" />
+  <itemDefinition id="_158-fileNameItem" structureRef="String" />
+  <itemDefinition id="_158-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_158-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_158-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_158-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_158-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_158-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_158-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_158-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_158-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_158-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_158-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_158-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_158-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_158-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_158-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_158-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_158-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_158-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_158-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_158-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_158-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_159-entityIdItem" structureRef="String" />
+  <itemDefinition id="_159-programTitleItem" structureRef="String" />
+  <itemDefinition id="_159-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_159-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_159-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_159-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_159-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_159-commandItem" structureRef="String" />
+  <itemDefinition id="_159-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_159-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_159-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_159-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_159-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_159-filePathItem" structureRef="String" />
+  <itemDefinition id="_159-fileNameItem" structureRef="String" />
+  <itemDefinition id="_159-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_159-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_159-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_159-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_159-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_159-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_159-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_159-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_159-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_159-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_159-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_159-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_159-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_159-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_159-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_159-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_159-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_159-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_159-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_159-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_159-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_169-entityIdItem" structureRef="String" />
+  <itemDefinition id="_169-programTitleItem" structureRef="String" />
+  <itemDefinition id="_169-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_169-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_169-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_169-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_169-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_169-commandItem" structureRef="String" />
+  <itemDefinition id="_169-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_169-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_169-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_169-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_169-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_169-filePathItem" structureRef="String" />
+  <itemDefinition id="_169-fileNameItem" structureRef="String" />
+  <itemDefinition id="_169-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_169-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_169-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_169-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_169-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_169-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_169-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_169-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_169-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_169-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_169-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_169-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_169-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_169-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_169-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_169-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_169-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_169-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_169-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_169-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_169-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_174-entityIdItem" structureRef="String" />
+  <itemDefinition id="_174-programTitleItem" structureRef="String" />
+  <itemDefinition id="_174-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_174-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_174-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_174-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_174-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_174-commandItem" structureRef="String" />
+  <itemDefinition id="_174-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_174-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_174-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_174-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_174-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_174-filePathItem" structureRef="String" />
+  <itemDefinition id="_174-fileNameItem" structureRef="String" />
+  <itemDefinition id="_174-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_174-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_174-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_174-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_174-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_174-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_174-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_174-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_174-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_174-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_174-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_174-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_174-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_174-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_174-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_174-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_174-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_174-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_174-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_174-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_174-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_163-entityIdItem" structureRef="String" />
+  <itemDefinition id="_163-programTitleItem" structureRef="String" />
+  <itemDefinition id="_163-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_163-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_163-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_163-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_163-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_163-commandItem" structureRef="String" />
+  <itemDefinition id="_163-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_163-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_163-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_163-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_163-filePathItem" structureRef="String" />
+  <itemDefinition id="_163-fileNameItem" structureRef="String" />
+  <itemDefinition id="_163-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_163-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_163-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_163-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_163-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_163-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_163-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_163-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_163-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_163-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_163-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_163-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_163-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_163-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_163-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_163-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_163-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_163-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_163-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_163-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_162-entityIdItem" structureRef="String" />
+  <itemDefinition id="_162-programTitleItem" structureRef="String" />
+  <itemDefinition id="_162-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_162-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_162-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_162-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_162-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_162-commandItem" structureRef="String" />
+  <itemDefinition id="_162-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_162-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_162-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_162-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_162-filePathItem" structureRef="String" />
+  <itemDefinition id="_162-fileNameItem" structureRef="String" />
+  <itemDefinition id="_162-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_162-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_162-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_162-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_162-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_162-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_162-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_162-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_162-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_162-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_162-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_162-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_162-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_162-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_162-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_162-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_162-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_162-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_162-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_162-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_161-entityIdItem" structureRef="String" />
+  <itemDefinition id="_161-programTitleItem" structureRef="String" />
+  <itemDefinition id="_161-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_161-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_161-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_161-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_161-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_161-commandItem" structureRef="String" />
+  <itemDefinition id="_161-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_161-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_161-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_161-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_161-filePathItem" structureRef="String" />
+  <itemDefinition id="_161-fileNameItem" structureRef="String" />
+  <itemDefinition id="_161-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_161-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_161-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_161-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_161-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_161-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_161-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_161-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_161-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_161-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_161-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_161-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_161-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_161-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_161-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_161-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_161-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_161-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_161-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_161-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_160-entityIdItem" structureRef="String" />
+  <itemDefinition id="_160-programTitleItem" structureRef="String" />
+  <itemDefinition id="_160-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_160-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_160-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_160-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_160-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_160-commandItem" structureRef="String" />
+  <itemDefinition id="_160-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_160-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_160-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_160-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_160-filePathItem" structureRef="String" />
+  <itemDefinition id="_160-fileNameItem" structureRef="String" />
+  <itemDefinition id="_160-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_160-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_160-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_160-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_160-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_160-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_160-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_160-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_160-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_160-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_160-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_160-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_160-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_160-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_160-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_160-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_160-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_160-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_160-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_160-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_165-entityIdItem" structureRef="String" />
+  <itemDefinition id="_165-programTitleItem" structureRef="String" />
+  <itemDefinition id="_165-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_165-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_165-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_165-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_165-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_165-commandItem" structureRef="String" />
+  <itemDefinition id="_165-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_165-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_165-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_165-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_165-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_165-filePathItem" structureRef="String" />
+  <itemDefinition id="_165-fileNameItem" structureRef="String" />
+  <itemDefinition id="_165-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_165-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_165-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_165-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_165-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_165-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_165-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_165-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_165-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_165-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_165-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_165-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_165-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_165-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_165-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_165-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_165-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_165-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_165-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_165-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_165-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_164-entityIdItem" structureRef="String" />
+  <itemDefinition id="_164-programTitleItem" structureRef="String" />
+  <itemDefinition id="_164-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_164-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_164-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_164-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_164-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_164-commandItem" structureRef="String" />
+  <itemDefinition id="_164-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_164-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_164-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_164-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_164-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_164-filePathItem" structureRef="String" />
+  <itemDefinition id="_164-fileNameItem" structureRef="String" />
+  <itemDefinition id="_164-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_164-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_164-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_164-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_164-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_164-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_164-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_164-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_164-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_164-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_164-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_164-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_164-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_164-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_164-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_164-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_164-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_164-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_164-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_164-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_164-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_186-entityIdItem" structureRef="String" />
+  <itemDefinition id="_186-programTitleItem" structureRef="String" />
+  <itemDefinition id="_186-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_186-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_186-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_186-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_186-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_186-commandItem" structureRef="String" />
+  <itemDefinition id="_186-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_186-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_186-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_186-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_186-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_186-filePathItem" structureRef="String" />
+  <itemDefinition id="_186-fileNameItem" structureRef="String" />
+  <itemDefinition id="_186-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_186-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_186-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_186-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_186-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_186-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_186-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_186-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_186-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_186-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_186-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_186-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_186-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_186-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_186-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_186-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_186-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_186-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_186-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_186-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_186-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_187-entityIdItem" structureRef="String" />
+  <itemDefinition id="_187-programTitleItem" structureRef="String" />
+  <itemDefinition id="_187-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_187-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_187-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_187-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_187-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_187-commandItem" structureRef="String" />
+  <itemDefinition id="_187-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_187-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_187-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_187-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_187-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_187-filePathItem" structureRef="String" />
+  <itemDefinition id="_187-fileNameItem" structureRef="String" />
+  <itemDefinition id="_187-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_187-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_187-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_187-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_187-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_187-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_187-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_187-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_187-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_187-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_187-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_187-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_187-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_187-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_187-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_187-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_187-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_187-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_187-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_187-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_187-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_184-entityIdItem" structureRef="String" />
+  <itemDefinition id="_184-programTitleItem" structureRef="String" />
+  <itemDefinition id="_184-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_184-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_184-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_184-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_184-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_184-commandItem" structureRef="String" />
+  <itemDefinition id="_184-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_184-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_184-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_184-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_184-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_184-filePathItem" structureRef="String" />
+  <itemDefinition id="_184-fileNameItem" structureRef="String" />
+  <itemDefinition id="_184-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_184-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_184-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_184-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_184-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_184-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_184-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_184-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_184-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_184-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_184-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_184-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_184-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_184-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_184-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_184-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_184-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_184-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_184-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_184-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_184-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_185-entityIdItem" structureRef="String" />
+  <itemDefinition id="_185-programTitleItem" structureRef="String" />
+  <itemDefinition id="_185-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_185-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_185-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_185-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_185-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_185-commandItem" structureRef="String" />
+  <itemDefinition id="_185-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_185-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_185-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_185-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_185-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_185-filePathItem" structureRef="String" />
+  <itemDefinition id="_185-fileNameItem" structureRef="String" />
+  <itemDefinition id="_185-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_185-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_185-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_185-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_185-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_185-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_185-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_185-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_185-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_185-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_185-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_185-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_185-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_185-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_185-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_185-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_185-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_185-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_185-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_185-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_185-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_178-entityIdItem" structureRef="String" />
+  <itemDefinition id="_178-programTitleItem" structureRef="String" />
+  <itemDefinition id="_178-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_178-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_178-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_178-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_178-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_178-commandItem" structureRef="String" />
+  <itemDefinition id="_178-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_178-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_178-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_178-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_178-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_178-filePathItem" structureRef="String" />
+  <itemDefinition id="_178-fileNameItem" structureRef="String" />
+  <itemDefinition id="_178-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_178-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_178-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_178-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_178-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_178-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_178-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_178-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_178-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_178-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_178-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_178-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_178-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_178-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_178-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_178-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_178-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_178-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_178-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_178-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_178-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_179-entityIdItem" structureRef="String" />
+  <itemDefinition id="_179-programTitleItem" structureRef="String" />
+  <itemDefinition id="_179-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_179-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_179-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_179-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_179-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_179-commandItem" structureRef="String" />
+  <itemDefinition id="_179-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_179-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_179-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_179-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_179-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_179-filePathItem" structureRef="String" />
+  <itemDefinition id="_179-fileNameItem" structureRef="String" />
+  <itemDefinition id="_179-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_179-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_179-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_179-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_179-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_179-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_179-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_179-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_179-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_179-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_179-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_179-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_179-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_179-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_179-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_179-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_179-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_179-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_179-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_179-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_179-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_176-entityIdItem" structureRef="String" />
+  <itemDefinition id="_176-programTitleItem" structureRef="String" />
+  <itemDefinition id="_176-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_176-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_176-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_176-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_176-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_176-commandItem" structureRef="String" />
+  <itemDefinition id="_176-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_176-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_176-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_176-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_176-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_176-filePathItem" structureRef="String" />
+  <itemDefinition id="_176-fileNameItem" structureRef="String" />
+  <itemDefinition id="_176-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_176-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_176-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_176-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_176-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_176-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_176-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_176-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_176-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_176-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_176-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_176-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_176-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_176-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_176-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_176-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_176-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_176-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_176-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_176-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_176-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_183-entityIdItem" structureRef="String" />
+  <itemDefinition id="_183-programTitleItem" structureRef="String" />
+  <itemDefinition id="_183-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_183-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_183-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_183-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_183-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_183-commandItem" structureRef="String" />
+  <itemDefinition id="_183-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_183-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_183-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_183-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_183-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_183-filePathItem" structureRef="String" />
+  <itemDefinition id="_183-fileNameItem" structureRef="String" />
+  <itemDefinition id="_183-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_183-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_183-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_183-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_183-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_183-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_183-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_183-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_183-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_183-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_183-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_183-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_183-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_183-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_183-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_183-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_183-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_183-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_183-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_183-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_183-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_180-entityIdItem" structureRef="String" />
+  <itemDefinition id="_180-programTitleItem" structureRef="String" />
+  <itemDefinition id="_180-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_180-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_180-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_180-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_180-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_180-commandItem" structureRef="String" />
+  <itemDefinition id="_180-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_180-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_180-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_180-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_180-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_180-filePathItem" structureRef="String" />
+  <itemDefinition id="_180-fileNameItem" structureRef="String" />
+  <itemDefinition id="_180-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_180-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_180-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_180-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_180-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_180-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_180-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_180-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_180-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_180-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_180-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_180-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_180-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_180-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_180-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_180-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_180-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_180-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_180-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_180-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_180-sourceSubtileLocationItem" structureRef="String" />
+
+  <itemDefinition id="_181-entityIdItem" structureRef="String" />
+  <itemDefinition id="_181-programTitleItem" structureRef="String" />
+  <itemDefinition id="_181-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_181-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_181-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_181-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_181-liveDrmSoapEnvelopeItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmSoapEnvelope" />
+  <itemDefinition id="_181-commandItem" structureRef="String" />
+  <itemDefinition id="_181-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_181-controlBatchItem" structureRef="com.irdeto.jumpstart.domain.control.ControlBatch" />
+  <itemDefinition id="_181-workingDirectoryItem" structureRef="String" />
+  <itemDefinition id="_181-environmentItem" structureRef="java.util.List" />
+  <itemDefinition id="_181-manifestDataItem" structureRef="String" />
+  <itemDefinition id="_181-filePathItem" structureRef="String" />
+  <itemDefinition id="_181-fileNameItem" structureRef="String" />
+  <itemDefinition id="_181-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_181-liveDrmResponseProcessorItem" structureRef="com.irdeto.jumpstart.domain.livedrm.LiveDrmResponseProcessor" />
+  <itemDefinition id="_181-manifestFilenameItem" structureRef="String" />
+  <itemDefinition id="_181-targetLocationItem" structureRef="String" />
+  <itemDefinition id="_181-sourceLocationItem" structureRef="String" />
+  <itemDefinition id="_181-drmValuesItem" structureRef="java.util.List" />
+  <itemDefinition id="_181-generateKeysItem" structureRef="Boolean" />
+  <itemDefinition id="_181-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_181-videoEntityIdItem" structureRef="String" />
+  <itemDefinition id="_181-subtitleEntityIdItem" structureRef="String" />
+  <itemDefinition id="_181-subtitleSubcontentEntityIdItem" structureRef="Object" />
+  <itemDefinition id="_181-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_181-ismtDataItem" structureRef="String" />
+  <itemDefinition id="_181-ismtFileNameItem" structureRef="String" />
+  <itemDefinition id="_181-targetSubtitleLocationItem" structureRef="String" />
+  <itemDefinition id="_181-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_181-ftpUsernameItem" structureRef="String" />
+  <itemDefinition id="_181-ftpPasswordItem" structureRef="String" />
+  <itemDefinition id="_181-ftpUrlItem" structureRef="String" />
+  <itemDefinition id="_181-ftpTargetItem" structureRef="String" />
+  <itemDefinition id="_181-sourceSubtileLocationItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.protect.ProtectUS" name="Protect US" tns:packageName="com.irdeto.jumpstart.workflow.protect" tns:version="1.0" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.protect.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="com.irdeto.domain.mmentityapi.*" />
+     <tns:import name="com.irdeto.domain.operation.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.protect.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="programTitle" itemSubjectRef="_programTitleItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="protectWrapper" itemSubjectRef="_protectWrapperItem"/>
+    <property id="subcontentType" itemSubjectRef="_subcontentTypeItem"/>
+    <property id="fileInfo" itemSubjectRef="_fileInfoItem"/>
+    <property id="liveDrmSoapEnvelope" itemSubjectRef="_liveDrmSoapEnvelopeItem"/>
+    <property id="command" itemSubjectRef="_commandItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="controlBatch" itemSubjectRef="_controlBatchItem"/>
+    <property id="workingDirectory" itemSubjectRef="_workingDirectoryItem"/>
+    <property id="environment" itemSubjectRef="_environmentItem"/>
+    <property id="manifestData" itemSubjectRef="_manifestDataItem"/>
+    <property id="filePath" itemSubjectRef="_filePathItem"/>
+    <property id="fileName" itemSubjectRef="_fileNameItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="liveDrmResponseProcessor" itemSubjectRef="_liveDrmResponseProcessorItem"/>
+    <property id="manifestFilename" itemSubjectRef="_manifestFilenameItem"/>
+    <property id="targetLocation" itemSubjectRef="_targetLocationItem"/>
+    <property id="sourceLocation" itemSubjectRef="_sourceLocationItem"/>
+    <property id="drmValues" itemSubjectRef="_drmValuesItem"/>
+    <property id="generateKeys" itemSubjectRef="_generateKeysItem"/>
+    <property id="sourceSegments" itemSubjectRef="_sourceSegmentsItem"/>
+    <property id="videoEntityId" itemSubjectRef="_videoEntityIdItem"/>
+    <property id="subtitleEntityId" itemSubjectRef="_subtitleEntityIdItem"/>
+    <property id="subtitleSubcontentEntityId" itemSubjectRef="_subtitleSubcontentEntityIdItem"/>
+    <property id="program" itemSubjectRef="_programItem"/>
+    <property id="ismtData" itemSubjectRef="_ismtDataItem"/>
+    <property id="ismtFileName" itemSubjectRef="_ismtFileNameItem"/>
+    <property id="targetSubtitleLocation" itemSubjectRef="_targetSubtitleLocationItem"/>
+    <property id="mm8Response" itemSubjectRef="_mm8ResponseItem"/>
+    <property id="ftpUsername" itemSubjectRef="_ftpUsernameItem"/>
+    <property id="ftpPassword" itemSubjectRef="_ftpPasswordItem"/>
+    <property id="ftpUrl" itemSubjectRef="_ftpUrlItem"/>
+    <property id="ftpTarget" itemSubjectRef="_ftpTargetItem"/>
+    <property id="sourceSubtileLocation" itemSubjectRef="_sourceSubtileLocationItem"/>
+
+    <!-- nodes -->
+    <intermediateCatchEvent id="_68" name="Signal" >
+      <dataOutput id="_68_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_68_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_68_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <endEvent id="_4" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <scriptTask id="_66" name="Error Handling" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Protect Unified Streaming Workflow error: {}", errorMap.get("ExitMessage"));
+kcontext.setVariable("exitStatus", errorMap.get("ExitStatus"));
+kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));
+</script>
+    </scriptTask>
+    <startEvent id="_154" name="Start" />
+    <endEvent id="_155" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_157" name="Generate Protect Keys" tns:taskName="ControlLiveDrm" >
+      <ioSpecification>
+        <dataInput id="_157_LiveDrmResponseProcessorInput" name="LiveDrmResponseProcessor" />
+        <dataInput id="_157_LiveDrmSoapEnvelopeInput" name="LiveDrmSoapEnvelope" />
+        <dataInput id="_157_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_157_DrmValuesOutput" name="DrmValues" />
+        <inputSet>
+          <dataInputRefs>_157_LiveDrmResponseProcessorInput</dataInputRefs>
+          <dataInputRefs>_157_LiveDrmSoapEnvelopeInput</dataInputRefs>
+          <dataInputRefs>_157_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_157_DrmValuesOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>liveDrmResponseProcessor</sourceRef>
+        <targetRef>_157_LiveDrmResponseProcessorInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>liveDrmSoapEnvelope</sourceRef>
+        <targetRef>_157_LiveDrmSoapEnvelopeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_157_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_157_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_157_DrmValuesOutput</sourceRef>
+        <targetRef>drmValues</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_158" name="Run mp4split Command" tns:taskName="CommandLine" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>ProtectUSHelper.setupRunMp4SplitCommand(kcontext);</script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_158_EnvironmentInput" name="Environment" />
+        <dataInput id="_158_CommandInput" name="Command" />
+        <dataInput id="_158_TimeoutEnabledInput" name="TimeoutEnabled" />
+        <dataInput id="_158_TimeoutPeriodInput" name="TimeoutPeriod" />
+        <dataInput id="_158_UseAMQInput" name="UseAMQ" />
+        <dataInput id="_158_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_158_PollingEnabledInput" name="PollingEnabled" />
+        <dataInput id="_158_DirectoryInput" name="Directory" />
+        <dataOutput id="_158_OutputOutput" name="Output" />
+        <inputSet>
+          <dataInputRefs>_158_EnvironmentInput</dataInputRefs>
+          <dataInputRefs>_158_CommandInput</dataInputRefs>
+          <dataInputRefs>_158_TimeoutEnabledInput</dataInputRefs>
+          <dataInputRefs>_158_TimeoutPeriodInput</dataInputRefs>
+          <dataInputRefs>_158_UseAMQInput</dataInputRefs>
+          <dataInputRefs>_158_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_158_PollingEnabledInput</dataInputRefs>
+          <dataInputRefs>_158_DirectoryInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_158_OutputOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>environment</sourceRef>
+        <targetRef>_158_EnvironmentInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_CommandInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{command}</from>
+          <to xsi:type="tFormalExpression">_158_CommandInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_TimeoutEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_158_TimeoutEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_TimeoutPeriodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">600</from>
+          <to xsi:type="tFormalExpression">_158_TimeoutPeriodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_UseAMQInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_158_UseAMQInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_158_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_PollingEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_158_PollingEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_158_DirectoryInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{workingDirectory}</from>
+          <to xsi:type="tFormalExpression">_158_DirectoryInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_158_OutputOutput</sourceRef>
+        <targetRef>manifestData</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_159" name="Control Register Content" tns:taskName="JumpstartControlRegisterContent" >
+      <ioSpecification>
+        <dataInput id="_159_ControlBatchInput" name="ControlBatch" />
+        <dataInput id="_159_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_159_ControlBatchInput</dataInputRefs>
+          <dataInputRefs>_159_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>controlBatch</sourceRef>
+        <targetRef>_159_ControlBatchInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_159_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_159_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_170" name="Gateway" gatewayDirection="Converging" />
+    <task id="_169" name="Read Entity" tns:taskName="MediaManager8ReadTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <script>ProtectUSHelper.getNextSubtitleSubcontent(kcontext);</script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_169_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_169_EntityTypeInput" name="EntityType" />
+        <dataInput id="_169_EntityIDInput" name="EntityID" />
+        <dataOutput id="_169_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_169_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_169_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_169_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_169_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_169_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_169_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_169_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_169_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_169_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_169_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_169_ResponseObjectOutput</sourceRef>
+        <targetRef>program</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_168" name="Gateway" gatewayDirection="Converging" />
+    <task id="_174" name="Run mp4split for subtitles " tns:taskName="CommandLine" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>ProtectUSHelper.setupRunMp4SplitCommandForSubtitles(kcontext);</script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_174_EnvironmentInput" name="Environment" />
+        <dataInput id="_174_CommandInput" name="Command" />
+        <dataInput id="_174_TimeoutEnabledInput" name="TimeoutEnabled" />
+        <dataInput id="_174_TimeoutPeriodInput" name="TimeoutPeriod" />
+        <dataInput id="_174_UseAMQInput" name="UseAMQ" />
+        <dataInput id="_174_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_174_PollingEnabledInput" name="PollingEnabled" />
+        <dataInput id="_174_DirectoryInput" name="Directory" />
+        <dataOutput id="_174_OutputOutput" name="Output" />
+        <inputSet>
+          <dataInputRefs>_174_EnvironmentInput</dataInputRefs>
+          <dataInputRefs>_174_CommandInput</dataInputRefs>
+          <dataInputRefs>_174_TimeoutEnabledInput</dataInputRefs>
+          <dataInputRefs>_174_TimeoutPeriodInput</dataInputRefs>
+          <dataInputRefs>_174_UseAMQInput</dataInputRefs>
+          <dataInputRefs>_174_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_174_PollingEnabledInput</dataInputRefs>
+          <dataInputRefs>_174_DirectoryInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_174_OutputOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>environment</sourceRef>
+        <targetRef>_174_EnvironmentInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_174_CommandInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{command}</from>
+          <to xsi:type="tFormalExpression">_174_CommandInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_174_TimeoutEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_174_TimeoutEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_174_TimeoutPeriodInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">600</from>
+          <to xsi:type="tFormalExpression">_174_TimeoutPeriodInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_174_UseAMQInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_174_UseAMQInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_174_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_174_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_174_PollingEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_174_PollingEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_174_DirectoryInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{workingDirectory}</from>
+          <to xsi:type="tFormalExpression">_174_DirectoryInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_174_OutputOutput</sourceRef>
+        <targetRef>ismtData</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_173" name="Gateway" gatewayDirection="Diverging" />
+    <scriptTask id="_172" name="Get SubtitleSubcontent" scriptFormat="http://www.java.com/java" >
+      <script>ProtectUSHelper.logEntityIDs(kcontext);
+
+</script>
+    </scriptTask>
+    <task id="_163" name=" Create File" tns:taskName="QTSFileCreate" >
+      <ioSpecification>
+        <dataInput id="_163_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_163_TargetDataInput" name="TargetData" />
+        <dataInput id="_163_TargetInput" name="Target" />
+        <dataInput id="_163_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_163_EntityTypeInput" name="EntityType" />
+        <dataInput id="_163_AllowOverwriteInput" name="AllowOverwrite" />
+        <dataInput id="_163_EncodingTypeInput" name="EncodingType" />
+        <dataInput id="_163_EntityIDInput" name="EntityID" />
+        <dataInput id="_163_TargetFilenameInput" name="TargetFilename" />
+        <dataInput id="_163_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_163_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_163_TargetDataInput</dataInputRefs>
+          <dataInputRefs>_163_TargetInput</dataInputRefs>
+          <dataInputRefs>_163_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_163_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_163_AllowOverwriteInput</dataInputRefs>
+          <dataInputRefs>_163_EncodingTypeInput</dataInputRefs>
+          <dataInputRefs>_163_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_163_TargetFilenameInput</dataInputRefs>
+          <dataInputRefs>_163_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_163_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_163_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_163_TargetDataInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{manifestData}</from>
+          <to xsi:type="tFormalExpression">_163_TargetDataInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_163_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceLocation}</from>
+          <to xsi:type="tFormalExpression">_163_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_163_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_163_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_163_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_163_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_163_AllowOverwriteInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_163_AllowOverwriteInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_163_EncodingTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">UTF-8</from>
+          <to xsi:type="tFormalExpression">_163_EncodingTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_163_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_163_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_163_TargetFilenameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{manifestFilename}</from>
+          <to xsi:type="tFormalExpression">_163_TargetFilenameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_163_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_163_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_162" name="Delete File" tns:taskName="QTSFileDelete" >
+      <ioSpecification>
+        <dataInput id="_162_SourceInput" name="Source" />
+        <dataInput id="_162_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_162_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_162_RecursiveInput" name="Recursive" />
+        <dataInput id="_162_EntityTypeInput" name="EntityType" />
+        <dataInput id="_162_EntityIDInput" name="EntityID" />
+        <dataInput id="_162_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_162_SourceInput</dataInputRefs>
+          <dataInputRefs>_162_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_162_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_162_RecursiveInput</dataInputRefs>
+          <dataInputRefs>_162_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_162_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_162_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_162_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceLocation}</from>
+          <to xsi:type="tFormalExpression">_162_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_162_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_162_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_162_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_162_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_162_RecursiveInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_162_RecursiveInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_162_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_162_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_162_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_162_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_162_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_162_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_161" name="Copy to Protect Storage" tns:taskName="HybridCopy" >
+      <ioSpecification>
+        <dataInput id="_161_SourceInput" name="Source" />
+        <dataInput id="_161_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_161_TargetInput" name="Target" />
+        <dataInput id="_161_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_161_EntityTypeInput" name="EntityType" />
+        <dataInput id="_161_EntityIdInput" name="EntityId" />
+        <dataInput id="_161_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_161_SourceInput</dataInputRefs>
+          <dataInputRefs>_161_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_161_TargetInput</dataInputRefs>
+          <dataInputRefs>_161_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_161_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_161_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_161_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_161_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceLocation}</from>
+          <to xsi:type="tFormalExpression">_161_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_161_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_161_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_161_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{targetLocation}</from>
+          <to xsi:type="tFormalExpression">_161_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_161_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_161_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_161_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_161_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_161_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_161_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_161_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_161_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_160" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_160_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_160_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_160_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_160_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_167" name="Gateway" gatewayDirection="Diverging" />
+    <scriptTask id="_166" name="Setup Variables" scriptFormat="http://www.java.com/java" >
+      <script>ProtectUSHelper.setupVariables(kcontext);</script>
+    </scriptTask>
+    <task id="_165" name="QTS File Info Task" tns:taskName="QTSFileInfo" >
+      <ioSpecification>
+        <dataInput id="_165_SourceInput" name="Source" />
+        <dataInput id="_165_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_165_HashInput" name="Hash" />
+        <dataInput id="_165_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_165_EntityTypeInput" name="EntityType" />
+        <dataInput id="_165_EntityIDInput" name="EntityID" />
+        <dataInput id="_165_FileInfoExInput" name="FileInfoEx" />
+        <dataInput id="_165_ViewNameInput" name="ViewName" />
+        <dataOutput id="_165_HandleEventOutput" name="HandleEvent" />
+        <inputSet>
+          <dataInputRefs>_165_SourceInput</dataInputRefs>
+          <dataInputRefs>_165_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_165_HashInput</dataInputRefs>
+          <dataInputRefs>_165_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_165_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_165_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_165_FileInfoExInput</dataInputRefs>
+          <dataInputRefs>_165_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_165_HandleEventOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_165_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceLocation}#{manifestFilename}</from>
+          <to xsi:type="tFormalExpression">_165_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_165_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_165_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_165_HashInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_165_HashInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_165_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_165_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_165_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_165_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_165_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_165_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_165_FileInfoExInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_165_FileInfoExInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_165_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_165_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_165_HandleEventOutput</sourceRef>
+        <targetRef>fileInfo</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_164" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_164_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_164_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_164_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_164_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_186" name="FTP Put Task" tns:taskName="FTPPutTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>ProtectUSHelper.setUpFTPSubtitles(kcontext);</script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_186_TargetPathInput" name="TargetPath" />
+        <dataInput id="_186_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_186_PasswordInput" name="Password" />
+        <dataInput id="_186_UsernameInput" name="Username" />
+        <dataInput id="_186_SourceFileInput" name="SourceFile" />
+        <dataInput id="_186_TargetFileInput" name="TargetFile" />
+        <dataInput id="_186_ServerInput" name="Server" />
+        <dataInput id="_186_SourcePathInput" name="SourcePath" />
+        <inputSet>
+          <dataInputRefs>_186_TargetPathInput</dataInputRefs>
+          <dataInputRefs>_186_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_186_PasswordInput</dataInputRefs>
+          <dataInputRefs>_186_UsernameInput</dataInputRefs>
+          <dataInputRefs>_186_SourceFileInput</dataInputRefs>
+          <dataInputRefs>_186_TargetFileInput</dataInputRefs>
+          <dataInputRefs>_186_ServerInput</dataInputRefs>
+          <dataInputRefs>_186_SourcePathInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_186_TargetPathInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{ftpTarget}</from>
+          <to xsi:type="tFormalExpression">_186_TargetPathInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_186_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_186_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_186_PasswordInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{ftpPassword}</from>
+          <to xsi:type="tFormalExpression">_186_PasswordInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_186_UsernameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{ftpUsername}</from>
+          <to xsi:type="tFormalExpression">_186_UsernameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_186_SourceFileInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{ismtFileName}</from>
+          <to xsi:type="tFormalExpression">_186_SourceFileInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_186_TargetFileInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{ismtFileName}</from>
+          <to xsi:type="tFormalExpression">_186_TargetFileInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_186_ServerInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{ftpUrl}</from>
+          <to xsi:type="tFormalExpression">_186_ServerInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_186_SourcePathInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{workingDirectory}/</from>
+          <to xsi:type="tFormalExpression">_186_SourcePathInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_187" name="File Delete Task" tns:taskName="FileDeleteTask" >
+      <ioSpecification>
+        <dataInput id="_187_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_187_FileNameInput" name="FileName" />
+        <dataInput id="_187_IgnoreNotExistsInput" name="IgnoreNotExists" />
+        <dataInput id="_187_FilePathInput" name="FilePath" />
+        <inputSet>
+          <dataInputRefs>_187_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_187_FileNameInput</dataInputRefs>
+          <dataInputRefs>_187_IgnoreNotExistsInput</dataInputRefs>
+          <dataInputRefs>_187_FilePathInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_187_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_187_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_187_FileNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{ismtFileName}</from>
+          <to xsi:type="tFormalExpression">_187_FileNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_187_IgnoreNotExistsInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_187_IgnoreNotExistsInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_187_FilePathInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{workingDirectory}</from>
+          <to xsi:type="tFormalExpression">_187_FilePathInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_184" name="Copy Subtitles from Origin" tns:taskName="CommandLine" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>ProtectUSHelper.setUpCopyFromOrigin(kcontext);</script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_184_CommandInput" name="Command" />
+        <dataInput id="_184_TimeoutEnabledInput" name="TimeoutEnabled" />
+        <dataInput id="_184_UseAMQInput" name="UseAMQ" />
+        <dataInput id="_184_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_184_PollingEnabledInput" name="PollingEnabled" />
+        <dataInput id="_184_DirectoryInput" name="Directory" />
+        <inputSet>
+          <dataInputRefs>_184_CommandInput</dataInputRefs>
+          <dataInputRefs>_184_TimeoutEnabledInput</dataInputRefs>
+          <dataInputRefs>_184_UseAMQInput</dataInputRefs>
+          <dataInputRefs>_184_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_184_PollingEnabledInput</dataInputRefs>
+          <dataInputRefs>_184_DirectoryInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_184_CommandInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{command}</from>
+          <to xsi:type="tFormalExpression">_184_CommandInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_184_TimeoutEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_184_TimeoutEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_184_UseAMQInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_184_UseAMQInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_184_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_184_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_184_PollingEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_184_PollingEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_184_DirectoryInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{workingDirectory}</from>
+          <to xsi:type="tFormalExpression">_184_DirectoryInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_185" name="Delete from Origin" tns:taskName="CommandLine" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>ProtectUSHelper.setUpDeleteFromOrigin(kcontext);</script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_185_CommandInput" name="Command" />
+        <dataInput id="_185_TimeoutEnabledInput" name="TimeoutEnabled" />
+        <dataInput id="_185_UseAMQInput" name="UseAMQ" />
+        <dataInput id="_185_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_185_PollingEnabledInput" name="PollingEnabled" />
+        <dataInput id="_185_DirectoryInput" name="Directory" />
+        <inputSet>
+          <dataInputRefs>_185_CommandInput</dataInputRefs>
+          <dataInputRefs>_185_TimeoutEnabledInput</dataInputRefs>
+          <dataInputRefs>_185_UseAMQInput</dataInputRefs>
+          <dataInputRefs>_185_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_185_PollingEnabledInput</dataInputRefs>
+          <dataInputRefs>_185_DirectoryInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_185_CommandInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{command}</from>
+          <to xsi:type="tFormalExpression">_185_CommandInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_185_TimeoutEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_185_TimeoutEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_185_UseAMQInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_185_UseAMQInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_185_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_185_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_185_PollingEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_185_PollingEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_185_DirectoryInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{workingDirectory}</from>
+          <to xsi:type="tFormalExpression">_185_DirectoryInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <parallelGateway id="_188" name="Gateway" gatewayDirection="Diverging" />
+    <task id="_178" name="Copy the Subtitles" tns:taskName="HybridCopy" >
+      <ioSpecification>
+        <dataInput id="_178_SourceInput" name="Source" />
+        <dataInput id="_178_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_178_TargetInput" name="Target" />
+        <dataInput id="_178_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_178_EntityTypeInput" name="EntityType" />
+        <dataInput id="_178_EntityIdInput" name="EntityId" />
+        <dataInput id="_178_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_178_SourceInput</dataInputRefs>
+          <dataInputRefs>_178_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_178_TargetInput</dataInputRefs>
+          <dataInputRefs>_178_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_178_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_178_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_178_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_178_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceSubtileLocation}#{ismtFileName}</from>
+          <to xsi:type="tFormalExpression">_178_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_178_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_178_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_178_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{targetSubtitleLocation}</from>
+          <to xsi:type="tFormalExpression">_178_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_178_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_178_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_178_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_178_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_178_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_178_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_178_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_178_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_179" name="Update Subtitles" tns:taskName="MediaManager8UpdateTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>ProtectUSHelper.createSubtitleSubcontent(kcontext);</script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <script>kcontext.setVariable("program", WorkflowHelper.getEntity(Program.class, mm8Response));</script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_179_DomainObjectInput" name="DomainObject" />
+        <dataInput id="_179_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_179_EntityTypeInput" name="EntityType" />
+        <dataInput id="_179_EntityIdInput" name="EntityId" />
+        <dataOutput id="_179_MediaManager8ResponseOutput" name="MediaManager8Response" />
+        <inputSet>
+          <dataInputRefs>_179_DomainObjectInput</dataInputRefs>
+          <dataInputRefs>_179_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_179_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_179_EntityIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_179_MediaManager8ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>program</sourceRef>
+        <targetRef>_179_DomainObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_179_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_179_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_179_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_179_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_179_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_179_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_179_MediaManager8ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_176" name="QTS File Info Task" tns:taskName="QTSFileInfo" >
+      <ioSpecification>
+        <dataInput id="_176_SourceInput" name="Source" />
+        <dataInput id="_176_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_176_HashInput" name="Hash" />
+        <dataInput id="_176_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_176_EntityTypeInput" name="EntityType" />
+        <dataInput id="_176_EntityIDInput" name="EntityID" />
+        <dataInput id="_176_FileInfoExInput" name="FileInfoEx" />
+        <dataInput id="_176_ViewNameInput" name="ViewName" />
+        <dataOutput id="_176_HandleEventOutput" name="HandleEvent" />
+        <inputSet>
+          <dataInputRefs>_176_SourceInput</dataInputRefs>
+          <dataInputRefs>_176_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_176_HashInput</dataInputRefs>
+          <dataInputRefs>_176_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_176_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_176_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_176_FileInfoExInput</dataInputRefs>
+          <dataInputRefs>_176_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_176_HandleEventOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_176_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceSubtileLocation}#{ismtFileName}</from>
+          <to xsi:type="tFormalExpression">_176_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_176_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_176_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_176_HashInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_176_HashInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_176_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_176_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_176_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_176_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_176_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_176_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_176_FileInfoExInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_176_FileInfoExInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_176_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_176_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_176_HandleEventOutput</sourceRef>
+        <targetRef>fileInfo</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_183" name="QTS File Delete Task" tns:taskName="QTSFileDelete" >
+      <ioSpecification>
+        <dataInput id="_183_SourceInput" name="Source" />
+        <dataInput id="_183_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_183_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_183_RecursiveInput" name="Recursive" />
+        <dataInput id="_183_EntityTypeInput" name="EntityType" />
+        <dataInput id="_183_EntityIDInput" name="EntityID" />
+        <dataInput id="_183_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_183_SourceInput</dataInputRefs>
+          <dataInputRefs>_183_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_183_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_183_RecursiveInput</dataInputRefs>
+          <dataInputRefs>_183_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_183_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_183_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_183_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceSubtileLocation}#{ismtFileName}</from>
+          <to xsi:type="tFormalExpression">_183_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_183_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{programTitle}</from>
+          <to xsi:type="tFormalExpression">_183_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_183_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_183_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_183_RecursiveInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_183_RecursiveInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_183_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_183_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_183_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_183_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_183_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{config.get("default.viewname")}</from>
+          <to xsi:type="tFormalExpression">_183_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_180" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_180_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_180_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_180_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_180_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_181" name="Commit Point" tns:taskName="CommitPoint" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <script>ProtectUSHelper.getNextSubtitleSubcontent(kcontext);</script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_181_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_181_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_181_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_181_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_188-_68" sourceRef="_188" targetRef="_68" />
+    <sequenceFlow id="_66-_4" sourceRef="_66" targetRef="_4" />
+    <sequenceFlow id="_68-_66" sourceRef="_68" targetRef="_66" />
+    <sequenceFlow id="_162-_155" sourceRef="_162" targetRef="_155" />
+    <sequenceFlow id="_167-_157" sourceRef="_167" targetRef="_157" name="Generate Keys" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return generateKeys;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_168-_158" sourceRef="_168" targetRef="_158" />
+    <sequenceFlow id="_173-_159" sourceRef="_173" targetRef="_159" name="No Subtitles" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_169-_170" sourceRef="_169" targetRef="_170" />
+    <sequenceFlow id="_181-_170" sourceRef="_181" targetRef="_170" />
+    <sequenceFlow id="_166-_169" sourceRef="_166" targetRef="_169" />
+    <sequenceFlow id="_167-_168" sourceRef="_167" targetRef="_168" name="No Protection" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_157-_168" sourceRef="_157" targetRef="_168" />
+    <sequenceFlow id="_172-_174" sourceRef="_172" targetRef="_174" />
+    <sequenceFlow id="_170-_173" sourceRef="_170" targetRef="_173" />
+    <sequenceFlow id="_173-_172" sourceRef="_173" targetRef="_172" name="Has Subtitles" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return (subtitleEntityId != null);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_158-_163" sourceRef="_158" targetRef="_163" />
+    <sequenceFlow id="_164-_162" sourceRef="_164" targetRef="_162" />
+    <sequenceFlow id="_165-_161" sourceRef="_165" targetRef="_161" />
+    <sequenceFlow id="_159-_160" sourceRef="_159" targetRef="_160" />
+    <sequenceFlow id="_160-_167" sourceRef="_160" targetRef="_167" />
+    <sequenceFlow id="_188-_166" sourceRef="_188" targetRef="_166" />
+    <sequenceFlow id="_163-_165" sourceRef="_163" targetRef="_165" />
+    <sequenceFlow id="_161-_164" sourceRef="_161" targetRef="_164" />
+    <sequenceFlow id="_185-_186" sourceRef="_185" targetRef="_186" />
+    <sequenceFlow id="_186-_187" sourceRef="_186" targetRef="_187" />
+    <sequenceFlow id="_174-_184" sourceRef="_174" targetRef="_184" />
+    <sequenceFlow id="_184-_185" sourceRef="_184" targetRef="_185" />
+    <sequenceFlow id="_154-_188" sourceRef="_154" targetRef="_188" />
+    <sequenceFlow id="_176-_178" sourceRef="_176" targetRef="_178" />
+    <sequenceFlow id="_183-_179" sourceRef="_183" targetRef="_179" />
+    <sequenceFlow id="_187-_176" sourceRef="_187" targetRef="_176" />
+    <sequenceFlow id="_180-_183" sourceRef="_180" targetRef="_183" />
+    <sequenceFlow id="_178-_180" sourceRef="_178" targetRef="_180" />
+    <sequenceFlow id="_179-_181" sourceRef="_179" targetRef="_181" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.protect.ProtectUS" >
+      <bpmndi:BPMNShape bpmnElement="_68" >
+        <dc:Bounds x="408" y="36" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="408" y="180" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_66" >
+        <dc:Bounds x="336" y="108" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_154" >
+        <dc:Bounds x="108" y="36" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_155" >
+        <dc:Bounds x="180" y="2004" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_157" >
+        <dc:Bounds x="336" y="1416" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_158" >
+        <dc:Bounds x="108" y="1572" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_159" >
+        <dc:Bounds x="108" y="1272" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_170" >
+        <dc:Bounds x="180" y="264" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_169" >
+        <dc:Bounds x="108" y="180" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_168" >
+        <dc:Bounds x="180" y="1500" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_174" >
+        <dc:Bounds x="480" y="1068" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_173" >
+        <dc:Bounds x="180" y="1152" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_172" >
+        <dc:Bounds x="480" y="1152" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_163" >
+        <dc:Bounds x="108" y="1644" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_162" >
+        <dc:Bounds x="108" y="1932" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_161" >
+        <dc:Bounds x="108" y="1788" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_160" >
+        <dc:Bounds x="108" y="1344" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_167" >
+        <dc:Bounds x="180" y="1416" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_166" >
+        <dc:Bounds x="108" y="108" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_165" >
+        <dc:Bounds x="108" y="1716" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_164" >
+        <dc:Bounds x="108" y="1860" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_186" >
+        <dc:Bounds x="480" y="816" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_187" >
+        <dc:Bounds x="480" y="744" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_184" >
+        <dc:Bounds x="480" y="984" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_185" >
+        <dc:Bounds x="480" y="900" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_188" >
+        <dc:Bounds x="180" y="36" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_178" >
+        <dc:Bounds x="480" y="588" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_179" >
+        <dc:Bounds x="480" y="348" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_176" >
+        <dc:Bounds x="480" y="660" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_183" >
+        <dc:Bounds x="480" y="432" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_180" >
+        <dc:Bounds x="480" y="516" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_181" >
+        <dc:Bounds x="480" y="264" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_188-_68" >
+        <di:waypoint x="204" y="60" />
+        <di:waypoint x="432" y="60" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_66-_4" >
+        <di:waypoint x="432" y="132" />
+        <di:waypoint x="432" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_68-_66" >
+        <di:waypoint x="432" y="60" />
+        <di:waypoint x="432" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_162-_155" >
+        <di:waypoint x="204" y="1956" />
+        <di:waypoint x="204" y="2028" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_167-_157" >
+        <di:waypoint x="204" y="1440" />
+        <di:waypoint x="432" y="1440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_168-_158" >
+        <di:waypoint x="204" y="1524" />
+        <di:waypoint x="204" y="1596" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_173-_159" >
+        <di:waypoint x="204" y="1176" />
+        <di:waypoint x="204" y="1296" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_169-_170" >
+        <di:waypoint x="204" y="204" />
+        <di:waypoint x="204" y="288" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_181-_170" >
+        <di:waypoint x="576" y="288" />
+        <di:waypoint x="204" y="288" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_166-_169" >
+        <di:waypoint x="204" y="132" />
+        <di:waypoint x="204" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_167-_168" >
+        <di:waypoint x="204" y="1440" />
+        <di:waypoint x="204" y="1524" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_157-_168" >
+        <di:waypoint x="432" y="1440" />
+        <di:waypoint x="204" y="1524" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_172-_174" >
+        <di:waypoint x="576" y="1176" />
+        <di:waypoint x="576" y="1092" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_170-_173" >
+        <di:waypoint x="204" y="288" />
+        <di:waypoint x="204" y="1176" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_173-_172" >
+        <di:waypoint x="204" y="1176" />
+        <di:waypoint x="576" y="1176" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_158-_163" >
+        <di:waypoint x="204" y="1596" />
+        <di:waypoint x="204" y="1668" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_164-_162" >
+        <di:waypoint x="204" y="1884" />
+        <di:waypoint x="204" y="1956" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_165-_161" >
+        <di:waypoint x="204" y="1740" />
+        <di:waypoint x="204" y="1812" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_159-_160" >
+        <di:waypoint x="204" y="1296" />
+        <di:waypoint x="204" y="1368" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_160-_167" >
+        <di:waypoint x="204" y="1368" />
+        <di:waypoint x="204" y="1440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_188-_166" >
+        <di:waypoint x="204" y="60" />
+        <di:waypoint x="204" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_163-_165" >
+        <di:waypoint x="204" y="1668" />
+        <di:waypoint x="204" y="1740" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_161-_164" >
+        <di:waypoint x="204" y="1812" />
+        <di:waypoint x="204" y="1884" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_185-_186" >
+        <di:waypoint x="576" y="924" />
+        <di:waypoint x="576" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_186-_187" >
+        <di:waypoint x="576" y="840" />
+        <di:waypoint x="576" y="768" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_174-_184" >
+        <di:waypoint x="576" y="1092" />
+        <di:waypoint x="576" y="1008" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_184-_185" >
+        <di:waypoint x="576" y="1008" />
+        <di:waypoint x="576" y="924" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_154-_188" >
+        <di:waypoint x="132" y="60" />
+        <di:waypoint x="204" y="60" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_176-_178" >
+        <di:waypoint x="576" y="684" />
+        <di:waypoint x="576" y="612" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_183-_179" >
+        <di:waypoint x="576" y="456" />
+        <di:waypoint x="576" y="372" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_187-_176" >
+        <di:waypoint x="576" y="768" />
+        <di:waypoint x="576" y="684" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_180-_183" >
+        <di:waypoint x="576" y="540" />
+        <di:waypoint x="576" y="456" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_178-_180" >
+        <di:waypoint x="576" y="612" />
+        <di:waypoint x="576" y="540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_179-_181" >
+        <di:waypoint x="576" y="372" />
+        <di:waypoint x="576" y="288" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

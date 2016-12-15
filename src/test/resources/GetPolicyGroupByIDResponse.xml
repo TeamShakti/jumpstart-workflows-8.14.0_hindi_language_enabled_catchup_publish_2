@@ -1,0 +1,57 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Body>
+		<GetPolicyGroupByIdResponse xmlns="http://ws.entriq.net/services/console">
+			<GetPolicyGroupByIdResult xmlns:a="http://schemas.datacontract.org/2004/07/ConsoleService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<a:ErrorCode>0</a:ErrorCode>
+				<a:ErrorMessage />
+				<a:Success>true</a:Success>
+				<a:PolicyGroup>
+					<a:Id>1039</a:Id>
+					<a:Name>ITV Test flv</a:Name>
+					<a:Description />
+					<a:Policies xmlns:b="http://schemas.datacontract.org/2004/07/Entriq.Security.BusinessObject">
+						<b:PolicyLink>
+							<b:PolicyOrder>1</b:PolicyOrder>
+							<b:Policy>
+								<b:Id>2617</b:Id>
+								<b:Name>itv 1 day flv test</b:Name>
+								<b:Description />
+								<b:Type>Rental</b:Type>
+								<b:EntStartMode>OnFirstUse</b:EntStartMode>
+								<b:EntDuration>0000-00-01T00:00:00</b:EntDuration>
+								<b:ReqSubscription>false</b:ReqSubscription>
+								<b:SubscriptionRef>2612</b:SubscriptionRef>
+								<b:LicenseProfileRef>255</b:LicenseProfileRef>
+								<b:ReqAuthentication i:nil="true" />
+								<b:PriceTable>
+									<b:Price>
+										<b:Id>4343</b:Id>
+										<b:Country>01</b:Country>
+										<b:Affiliate i:nil="true" />
+										<b:Currency>USD</b:Currency>
+										<b:Amount>1000</b:Amount>
+										<b:SaleAmount>999</b:SaleAmount>
+									</b:Price>
+								</b:PriceTable>
+								<b:SubscriptionDetails>
+                                          <b:BillingInterval>1</b:BillingInterval>
+                                          <b:SubscriptionGroupId i:nil="true" />
+                                          <b:Id>3</b:Id>
+                                          <b:ReleaseDate i:nil="true" />
+                                          <b:ReleaseEnd i:nil="true" />
+                                          <b:MinBillingInterval>0</b:MinBillingInterval>
+                                          <b:BillingEndDate i:nil="true" />
+                                </b:SubscriptionDetails>
+								<b:NoDevices>0</b:NoDevices>
+								<b:ProductTaxType>video</b:ProductTaxType>
+								<b:BillImmediately>false</b:BillImmediately>
+								<b:SyndicateAccountId>itv</b:SyndicateAccountId>
+							</b:Policy>
+						</b:PolicyLink>
+					</a:Policies>
+					<a:BlockedCountryList />
+				</a:PolicyGroup>
+			</GetPolicyGroupByIdResult>
+		</GetPolicyGroupByIdResponse>
+	</s:Body>
+</s:Envelope>

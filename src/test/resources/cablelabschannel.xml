@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>				
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0"				
+		xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0"		
+		xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0"		
+		xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0"		
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+		xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd 
+			urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd 
+			urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd 
+			urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd 
+			urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd 
+			http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">		
+
+	<Asset xsi:type="offer:OfferType" uriId="irdeto.com/Offer/SubscriptionPackage/1" providerVersionNum="1"			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2000-01-01T00:00:00Z" endDateTime="2100-01-01T00:00:00Z">	
+		<offer:Presentation>		
+			<offer:CategoryRef uriId="irdeto.com/Category/Offer/SubscriptionPackage/1" />	
+			<offer:DisplayAsNew>P7D</offer:DisplayAsNew>	
+			<offer:DisplayAsLastChance>P7D</offer:DisplayAsLastChance>	
+		</offer:Presentation>		
+		<offer:PromotionalContentGroupRef uriId="irdeto.com/ContentGroup/Offer/1" />		
+		<offer:ProviderContentTier>Irdeto1</offer:ProviderContentTier>
+		<offer:BillingId>56789</offer:BillingId>		
+		<offer:TermsRef uriId="irdeto.com/Terms/SubscriptionPackage/1" />		
+		<offer:ContentGroupRef uriId="irdeto.com/SubscriptionPackage/1" /> 		
+	</Asset>
+	
+	<Asset xsi:type="terms:TermsType" uriId="irdeto.com/Terms/SubscriptionPackage/1" providerVersionNum="1"			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2000-01-01T00:00:00Z" endDateTime="2100-01-01T00:00:00Z">	
+		<terms:ContractName>Sub Contract 1</terms:ContractName>
+		<terms:SuggestedPrice>5.99</terms:SuggestedPrice>		
+	</Asset>			
+
+	<Asset xsi:type="irdeto:SubscriptionPackageType" uriId="irdeto.com/SubscriptionPackage/1" providerVersionNum="1"			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2000-01-01T00:00:00Z" endDateTime="2100-01-01T00:00:00Z">
+		<irdeto:TitleRef uriId="irdeto.com/Title/SubscriptionPackage/1" />
+		<irdeto:ChannelRef uriId="irdeto.com/Channel/1" />
+	</Asset>
+
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/SubscriptionPackage/1" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2000-01-01T00:00:00Z" endDateTime="2100-01-01T00:00:00Z">		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>Comedy Channels</title:TitleSortName>	
+			<title:TitleBrief>Comedy Channels</title:TitleBrief>	
+			<title:TitleMedium>Comedy Channels</title:TitleMedium>	
+			<title:TitleLong>Comedy Channels</title:TitleLong>	
+			<title:SummaryShort>The best comedy on TV.</title:SummaryShort>	
+			<title:SummaryLong>The best comedy on TV.</title:SummaryLong>
+		</title:LocalizableTitle>		
+	</Asset>			
+
+	<Asset xsi:type="irdeto:ChannelType" uriId="irdeto.com/Channel/1" providerVersionNum="1"			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2000-01-01T00:00:00Z" endDateTime="2100-01-01T00:00:00Z">
+			<!-- The startdatetime and enddatetime are important here.  Also important in an subscription package, offer, term.  Not in related entities such as title, boxcover. -->	
+		<irdeto:TitleRef uriId="irdeto.com/Title/Channel/1" />
+		<irdeto:ChannelId>1</irdeto:ChannelId> <!-- This must match xmlTV channel ID from EPGS -->
+		<irdeto:DisplayOrder>1</irdeto:DisplayOrder>
+		<irdeto:LiveWindowDuration>120</irdeto:LiveWindowDuration> <!-- Optional -->
+		<irdeto:EncodeProfile>ActiveCloak Entertainment</irdeto:EncodeProfile>
+		<irdeto:BoxCoverRef uriId="irdeto.com/BoxCover/Channel/1" />		
+	</Asset>
+
+	<Asset xsi:type="title:TitleType" uriId="irdeto.com/Title/Channel/1" providerVersionNum="1" 			
+		internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2000-01-01T00:00:00Z" endDateTime="2100-01-01T00:00:00Z">		
+		<title:LocalizableTitle xml:lang="en-US">		
+			<title:TitleSortName>Dave</title:TitleSortName>	
+			<title:TitleBrief>Dave</title:TitleBrief>	
+			<title:TitleMedium>Dave</title:TitleMedium>	
+			<title:TitleLong>Dave</title:TitleLong>	
+			<title:SummaryShort>The home of witty banter.</title:SummaryShort>	
+			<title:SummaryLong>The home of witty banter.</title:SummaryLong>
+		</title:LocalizableTitle>		
+	</Asset>			
+
+	<Asset xsi:type="content:BoxCoverType" uriId="irdeto.com/BoxCover/Channel/1" providerVersionNum="1" 			
+			internalVersionNum="0" creationDateTime="2002-01-11T00:00:00Z" startDateTime="2000-01-01T00:00:00Z" endDateTime="2100-01-01T00:00:00Z">	
+		<content:SourceUrl>Dave.png</content:SourceUrl>		
+		<content:ContentFileSize>15235</content:ContentFileSize>		
+		<content:ContentCheckSum>B3258D3269D25852BD26548DC2654CDD</content:ContentCheckSum>		
+		<content:PropagationPriority>1</content:PropagationPriority>		
+		<content:X_Resolution>320</content:X_Resolution>		
+		<content:Y_Resolution>240</content:Y_Resolution>		
+	</Asset>			
+</ADI3>				

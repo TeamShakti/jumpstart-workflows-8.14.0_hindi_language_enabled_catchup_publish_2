@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Profile>
+	<DeviceProfile deviceClass="IOS" enabled="true" name="iOS" packagingType="NA">
+		<EncodeProfileName>ActiveCloak IOS</EncodeProfileName>
+		<ProtectProfileName>ActiveCloak</ProtectProfileName>
+		<TranscodeProfileName>MP4 Multi-Bitrate</TranscodeProfileName>
+	</DeviceProfile>
+	<DeviceProfile deviceClass="ANDROID" enabled="true" name="Android" packagingType="NA">
+		<EncodeProfileName>ActiveCloak Android</EncodeProfileName>
+		<ProtectProfileName>ActiveCloak</ProtectProfileName>
+		<TranscodeProfileName>MP4 Multi-Bitrate</TranscodeProfileName>
+	</DeviceProfile>
+	<DeviceProfile deviceClass="STB" enabled="false" name="Set-top Box" packagingType="NA">
+		<ProtectProfileName>HLS AES</ProtectProfileName>
+		<TranscodeProfileName>MP4 Multi-Bitrate</TranscodeProfileName>
+	</DeviceProfile>
+	<DeviceProfile deviceClass="PC" enabled="true" name="Web" packagingType="NA">
+		<EncodeProfileName>PlayReady PC</EncodeProfileName>
+		<ProtectProfileName>PlayReadyDRM</ProtectProfileName>
+		<TranscodeProfileName>SmoothStream Multi-Bitrate</TranscodeProfileName>
+	</DeviceProfile>
+	<DeviceProfile deviceClass="ANDROID_DTG" enabled="true" name="Android Download-To-Go" packagingType="NA">
+		<EncodeProfileName>ActiveCloakD2G Android</EncodeProfileName>
+		<ProtectProfileName>ActiveCloak2GoDRM</ProtectProfileName>
+		<TranscodeProfileName>1500kbps MP4</TranscodeProfileName>
+	</DeviceProfile>
+	<DeviceProfile deviceClass="IOS_DTG" enabled="true" name="iOS Download-To-Go" packagingType="NA">
+		<EncodeProfileName>ActiveCloakD2G IOS</EncodeProfileName>
+		<ProtectProfileName>ActiveCloak2GoDRM</ProtectProfileName>
+		<TranscodeProfileName>1500kbps MP4</TranscodeProfileName>
+	</DeviceProfile>
+	<DeviceProfile deviceClass="PC_US" enabled="true" name="Web Dash" packagingType="DASH">
+		<EncodeProfileName>PlayReady US</EncodeProfileName>
+		<ProtectProfileName>PlayReadyUS</ProtectProfileName>
+		<TranscodeProfileName>SmoothStream Multi-Bitrate</TranscodeProfileName>
+	</DeviceProfile>
+	<!-- This Encode Profile is added for Sage environment. -->
+	<EncodeProfile liveUri="http://stream1.mivuu.com/US/itv1/itv1.isml/itv1.m3u8" name="ActiveCloak IOS" protectionType="ActiveCloak"/>
+	<EncodeProfile liveUri="http://stream1.mivuu.com/US/itv1/itv1.isml/itv1.m3u8" name="ActiveCloak Android" protectionType="ActiveCloak"/>
+	<EncodeProfile liveUri="http://stream1.mivuu.com/US/itv1/itv1.isml/Manifest" name="PlayReady PC" protectionType="PlayReadyDRM"/>
+	<EncodeProfile liveUri="http://stream1.mivuu.com/US/bbc1/bbc1.isml/bbc1.mpd" name="PlayReady US" protectionType="PlayReadyUS"/>
+	<EncodeProfile liveUri="http://stream1.mivuu.com/US/itv1/itv1.isml/itv1.m3u8" name="ActiveCloakD2G IOS" protectionType="ActiveCloak2GoDRM"/>
+	<EncodeProfile liveUri="http://stream1.mivuu.com/US/itv1/itv1.isml/itv1.m3u8" name="ActiveCloakD2G Android" protectionType="ActiveCloak2GoDRM"/>
+	<ProtectProfile protectionType="ActiveCloak" name="ActiveCloak" required="true"/>
+	<ProtectProfile protectionType="HttpLiveStreamingDRM" name="HLS AES" required="true"/>
+	<ProtectProfile protectionType="PlayReadyDRM" name="PlayReadyDRM" required="true"/>
+	<ProtectProfile protectionType="PlayReadyUS" name="PlayReadyUS" required="true"/>
+	<ProtectProfile protectionType="ActiveCloak2GoDRM" name="ActiveCloak2GoDRM" required="true"/>
+	<TermMapping contractName="Free" policyGroupId="1" policyId="1" policyType="tvod" duration="2">
+		<ContentType>movie</ContentType>
+		<ContentType>preview</ContentType>
+		<ContentType>channel</ContentType>
+		<DeviceProfile>iOS</DeviceProfile>
+		<DeviceProfile>Android</DeviceProfile>
+		<DeviceProfile>Set-top Box</DeviceProfile>
+		<DeviceProfile>Web</DeviceProfile>
+		<DeviceProfile>Android Download-To-Go</DeviceProfile>
+		<DeviceProfile>iOS Download-To-Go</DeviceProfile>
+		<DeviceProfile>Web Dash</DeviceProfile>
+		<PolicyGroup>ITV Test flv</PolicyGroup>
+		<Policy>itv 1 day flv test</Policy>
+	</TermMapping>
+	<TermMapping contractName="FreeMovie" policyGroupId="1" policyId="1" policyType="tvod">
+		<ContentType>movie</ContentType>
+		<DeviceProfile>iOS</DeviceProfile>
+		<DeviceProfile>Android</DeviceProfile>
+		<DeviceProfile>Set-top Box</DeviceProfile>
+		<DeviceProfile>Web</DeviceProfile>
+		<DeviceProfile>Android Download-To-Go</DeviceProfile>
+		<DeviceProfile>iOS Download-To-Go</DeviceProfile>
+		<DeviceProfile>Web Dash</DeviceProfile>
+		<PolicyGroup>ITV Test flv</PolicyGroup>
+		<Policy>itv 1 day flv test</Policy>
+	</TermMapping>
+	<TermMapping contractName="FreePreview" policyGroupId="1" policyId="1" policyType="tvod">
+		<ContentType>preview</ContentType>
+		<DeviceProfile>iOS</DeviceProfile>
+		<DeviceProfile>Android</DeviceProfile>
+		<DeviceProfile>Set-top Box</DeviceProfile>
+		<DeviceProfile>Web</DeviceProfile>
+		<DeviceProfile>Android Download-To-Go</DeviceProfile>
+		<DeviceProfile>iOS Download-To-Go</DeviceProfile>
+		<DeviceProfile>Web Dash</DeviceProfile>
+		<PolicyGroup>ITV Test flv</PolicyGroup>
+		<Policy>itv 1 day flv test</Policy>
+	</TermMapping>
+	<TermMapping contractName="Rental" policyGroupId="3" policyId="2" policyType="tvod">
+		<ContentType>movie</ContentType>
+		<ContentType>channel</ContentType>
+		<DeviceProfile>iOS</DeviceProfile>
+		<DeviceProfile>Android</DeviceProfile>
+		<DeviceProfile>Set-top Box</DeviceProfile>
+		<DeviceProfile>Web</DeviceProfile>
+		<DeviceProfile>Android Download-To-Go</DeviceProfile>
+		<DeviceProfile>iOS Download-To-Go</DeviceProfile>
+		<DeviceProfile>Web Dash</DeviceProfile>
+		<PolicyGroup>ITV Test flv</PolicyGroup>
+		<Policy>itv 1 day flv test</Policy>
+	</TermMapping>
+	<TermMapping contractName="Subscription" policyGroupId="2" policyId="3" policyType="svod">
+		<ContentType>movie</ContentType>
+		<ContentType>channel</ContentType>
+		<DeviceProfile>iOS</DeviceProfile>
+		<DeviceProfile>Android</DeviceProfile>
+		<DeviceProfile>Set-top Box</DeviceProfile>
+		<DeviceProfile>Web</DeviceProfile>
+		<DeviceProfile>Android Download-To-Go</DeviceProfile>
+		<DeviceProfile>iOS Download-To-Go</DeviceProfile>
+		<DeviceProfile>Web Dash</DeviceProfile>
+		<PolicyGroup>ITV Test flv</PolicyGroup>
+		<Policy>itv 1 day flv test</Policy>
+	</TermMapping>
+	<TermMapping contractName="OneSubscription" policyGroupId="2" policyId="3" policyType="svod">
+		<ContentType>movie</ContentType>
+		<ContentType>channel</ContentType>
+		<DeviceProfile>iOS</DeviceProfile>
+		<DeviceProfile>Android</DeviceProfile>
+		<DeviceProfile>Set-top Box</DeviceProfile>
+		<DeviceProfile>Web</DeviceProfile>
+		<DeviceProfile>Android Download-To-Go</DeviceProfile>
+		<DeviceProfile>iOS Download-To-Go</DeviceProfile>
+		<DeviceProfile>Web Dash</DeviceProfile>
+		<PolicyGroup>ITV Test flv</PolicyGroup>
+		<Policy>itv 1 day flv test</Policy>
+	</TermMapping>
+	<TermMapping contractName="Collection" policyGroupId="2" policyId="3" policyType="tvod">
+		<ContentType>movie</ContentType>
+		<ContentType>channel</ContentType>
+		<DeviceProfile>iOS</DeviceProfile>
+		<DeviceProfile>Android</DeviceProfile>
+		<DeviceProfile>Set-top Box</DeviceProfile>
+		<DeviceProfile>Web</DeviceProfile>
+		<DeviceProfile>Android Download-To-Go</DeviceProfile>
+		<DeviceProfile>iOS Download-To-Go</DeviceProfile>
+		<DeviceProfile>Web Dash</DeviceProfile>
+		<PolicyGroup>ITV Test flv</PolicyGroup>
+		<Policy>itv 1 day flv test</Policy>
+	</TermMapping>
+	<TermMapping contractName="OneCollection" policyGroupId="2" policyId="3" policyType="tvod">
+		<ContentType>movie</ContentType>
+		<ContentType>channel</ContentType>
+		<DeviceProfile>iOS</DeviceProfile>
+		<DeviceProfile>Android</DeviceProfile>
+		<DeviceProfile>Set-top Box</DeviceProfile>
+		<DeviceProfile>Web</DeviceProfile>
+		<DeviceProfile>Android Download-To-Go</DeviceProfile>
+		<DeviceProfile>iOS Download-To-Go</DeviceProfile>
+		<DeviceProfile>Web Dash</DeviceProfile>
+		<PolicyGroup>ITV Test flv</PolicyGroup>
+		<Policy>itv 1 day flv test</Policy>
+	</TermMapping>
+	<TranscodeProfile name="MP4 Multi-Bitrate" transcodedFilePattern="(.)*\.mp4$" transcoderProfile="Multiscreen-HLS_SS-1" transcoderUri="https://a3a335ed924f.cloud.elementaltechnologies.com/" transcoderWorkflow="TranscodeElementalCloud" transcodedFileCount="5">
+		<ProtectProfileName>ActiveCloak</ProtectProfileName>
+		<ProtectProfileName>HLS AES</ProtectProfileName>
+	</TranscodeProfile>
+	<TranscodeProfile name="SmoothStream Multi-Bitrate" transcodedFilePattern="(.)*\.ism[cva]{0,1}$" transcoderProfile="Multiscreen-HLS_SS-1" transcoderUri="https://a3a335ed924f.cloud.elementaltechnologies.com/" transcoderWorkflow="TranscodeElementalCloud" transcodedFileCount="5">
+		<ProtectProfileName>PlayReadyDRM</ProtectProfileName>
+		<ProtectProfileName>PlayReadyUS</ProtectProfileName>
+	</TranscodeProfile>
+	<TranscodeProfile name="1500kbps MP4" transcodedFilePattern="(.)*-1500\.mp4$" transcoderProfile="Multiscreen-HLS_SS-1" transcoderUri="https://a3a335ed924f.cloud.elementaltechnologies.com/" transcoderWorkflow="TranscodeElementalCloud" transcodedFileCount="1">
+		<ProtectProfileName>ActiveCloak2GoDRM</ProtectProfileName>
+	</TranscodeProfile>
+	<!-- Adding PolicyGroup and Policy -->
+	<PolicyGroup policyGroupName="ITV Test flv" policyGroupDescription="ITV Test flv" licenseProfileReference="1">
+	<Policy>itv 1 day flv test</Policy>
+	</PolicyGroup>
+	 <Policy policyName="itv 1 day flv test" policyDescription="ITV 1 day Test flv" policyType="Free" entitlementStartMode="OnFirstUse" entitlementDuration="0000-00-01" requireSubscription="false" subscriptionReference="2612" licenseProfileReference="255" requireAuthentication="false" subscriptionBillingInterval="1" subscriptionGroupId="1"  subscriptionId="3" subscriptionReleaseDate="2015-01-01T00:00:00Z" subscriptionReleaseEnd="2015-12-31T00:00:00Z" subscriptionMinimumBillingInterval="0" subscriptionBillingEndDate="2015-12-31T00:00:00Z" numberOfDevices="1" productTaxType="video" billImmediately="false" syndicateAccountId="itv">
+	<CurrencyMap currency="USD" country="01" amount="1000"></CurrencyMap>
+	</Policy>
+</Profile>
+

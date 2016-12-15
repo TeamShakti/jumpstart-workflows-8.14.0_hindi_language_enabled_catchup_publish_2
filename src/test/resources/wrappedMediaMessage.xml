@@ -1,0 +1,18 @@
+<dataWrapper processId="workflow">
+<parameters>
+	<param>
+		<name>mdIdentifier</name><value>image</value>
+	</param>
+	<param>
+		<name>fileName</name><value>irdeto%2Ecom%2FAsset%2FIRDE2013ETVE02-BoxCover-640-1-en_US.png</value>
+	</param>
+	<param>
+		<name>filePath</name><value>\Jumpstart\Media\Processed\</value>
+	</param>
+	<param>
+		<name>podServer</name><value>10.0.0.111</value>
+	</param>
+</parameters>
+<content>
+</content>
+</dataWrapper>

@@ -1,0 +1,18 @@
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+	<s:Body>
+		<CreatePolicyGroupResponse xmlns="http://ws.entriq.net/services/console">
+			<CreatePolicyGroupResult xmlns:a="http://schemas.datacontract.org/2004/07/ConsoleService" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+				<a:ErrorCode>0</a:ErrorCode>
+				<a:ErrorMessage />
+				<a:Success>true</a:Success>
+				<a:PolicyGroup>
+					<a:Id>1</a:Id>
+					<a:Name>Unavailable</a:Name>
+					<a:Description>testDesc</a:Description>
+					<a:Policies xmlns:b="http://schemas.datacontract.org/2004/07/Entriq.Security.BusinessObject" />
+					<a:BlockedCountryList />
+				</a:PolicyGroup>
+			</CreatePolicyGroupResult>
+		</CreatePolicyGroupResponse>
+	</s:Body>
+</s:Envelope>

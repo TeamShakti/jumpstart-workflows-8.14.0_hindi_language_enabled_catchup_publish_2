@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.ElementalCloudTest" name="Elemental Cloud Test" tns:packageName="com.irdeto.jumpstart.workflow" >
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="QTS Elemental Cloud Task" tns:taskName="QTSElementalCloud" >
+      <ioSpecification>
+        <dataInput id="_2_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_2_ContentTitleInput" name="ContentTitle" />
+        <dataInput id="_2_UserIdInput" name="UserId" />
+        <dataInput id="_2_TargetUIDInput" name="TargetUID" />
+        <dataInput id="_2_ContentIDInput" name="ContentID" />
+        <dataInput id="_2_SourceInput" name="Source" />
+        <dataInput id="_2_TargetPWDInput" name="TargetPWD" />
+        <dataInput id="_2_ApiKeyInput" name="ApiKey" />
+        <dataInput id="_2_TargetInput" name="Target" />
+        <dataInput id="_2_ElementalProfileNameInput" name="ElementalProfileName" />
+        <dataInput id="_2_ElementalURIInput" name="ElementalURI" />
+        <dataInput id="_2_SourcePWDInput" name="SourcePWD" />
+        <dataInput id="_2_EntityTypeInput" name="EntityType" />
+        <dataInput id="_2_EntityIDInput" name="EntityID" />
+        <dataInput id="_2_ViewNameInput" name="ViewName" />
+        <dataInput id="_2_SourceUIDInput" name="SourceUID" />
+        <inputSet>
+          <dataInputRefs>_2_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_2_ContentTitleInput</dataInputRefs>
+          <dataInputRefs>_2_UserIdInput</dataInputRefs>
+          <dataInputRefs>_2_TargetUIDInput</dataInputRefs>
+          <dataInputRefs>_2_ContentIDInput</dataInputRefs>
+          <dataInputRefs>_2_SourceInput</dataInputRefs>
+          <dataInputRefs>_2_TargetPWDInput</dataInputRefs>
+          <dataInputRefs>_2_ApiKeyInput</dataInputRefs>
+          <dataInputRefs>_2_TargetInput</dataInputRefs>
+          <dataInputRefs>_2_ElementalProfileNameInput</dataInputRefs>
+          <dataInputRefs>_2_ElementalURIInput</dataInputRefs>
+          <dataInputRefs>_2_SourcePWDInput</dataInputRefs>
+          <dataInputRefs>_2_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_2_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_2_ViewNameInput</dataInputRefs>
+          <dataInputRefs>_2_SourceUIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_2_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">test</from>
+          <to xsi:type="tFormalExpression">_2_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ContentTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">test</from>
+          <to xsi:type="tFormalExpression">_2_ContentTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_UserIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">irdeto.services</from>
+          <to xsi:type="tFormalExpression">_2_UserIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_TargetUIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">AKIAJFZ33VIQIWZGLV4Q</from>
+          <to xsi:type="tFormalExpression">_2_TargetUIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ContentIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">1</from>
+          <to xsi:type="tFormalExpression">_2_ContentIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SourceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">s3://jumpstart-mezzanine/movie-1-m1.mp4</from>
+          <to xsi:type="tFormalExpression">_2_SourceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_TargetPWDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">VB/e3yzD2KkuA2XY960Af7vLc/n8JDhxLqpuaxnV</from>
+          <to xsi:type="tFormalExpression">_2_TargetPWDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ApiKeyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Ou7ofYCL4x8u6Yuhgw</from>
+          <to xsi:type="tFormalExpression">_2_ApiKeyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_TargetInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">s3://jumpstart-transcoded/</from>
+          <to xsi:type="tFormalExpression">_2_TargetInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ElementalProfileNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Multiscreen-HLS_SS-1</from>
+          <to xsi:type="tFormalExpression">_2_ElementalProfileNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ElementalURIInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">https://a3a335ed924f.cloud.elementaltechnologies.com/</from>
+          <to xsi:type="tFormalExpression">_2_ElementalURIInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SourcePWDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">VB/e3yzD2KkuA2XY960Af7vLc/n8JDhxLqpuaxnV</from>
+          <to xsi:type="tFormalExpression">_2_SourcePWDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">movie</from>
+          <to xsi:type="tFormalExpression">_2_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">1</from>
+          <to xsi:type="tFormalExpression">_2_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">view</from>
+          <to xsi:type="tFormalExpression">_2_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SourceUIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">AKIAJFZ33VIQIWZGLV4Q</from>
+          <to xsi:type="tFormalExpression">_2_SourceUIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_3" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="_1-_2" sourceRef="_1" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.ElementalCloudTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="120" y="48" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="48" y="132" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="120" y="228" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_1-_2" >
+        <di:waypoint x="144" y="72" />
+        <di:waypoint x="144" y="156" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="144" y="156" />
+        <di:waypoint x="144" y="252" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

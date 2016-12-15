@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Genres>
+	<Genre isDisplay="true">
+		<Name lang="en">Action</Name>
+		<IngestGenre>Action</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Adult</Name>
+		<IngestGenre>Adult</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Adventure</Name>
+		<IngestGenre>Adventure</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Animals</Name>
+		<IngestGenre>Animals</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Animation</Name>
+		<IngestGenre>Animation</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Anime</Name>
+		<IngestGenre>Anime</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Art</Name>
+		<IngestGenre>Art</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Auto</Name>
+		<IngestGenre>Auto</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Auto Racing</Name>
+		<IngestGenre>Auto Racing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Awards</Name>
+		<IngestGenre>Awards</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Baseball</Name>
+		<IngestGenre>Baseball</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Basketball</Name>
+		<IngestGenre>Basketball</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Bicycle Racing</Name>
+		<IngestGenre>Bicycle Racing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Bicycling</Name>
+		<IngestGenre>Bicycling</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Biography</Name>
+		<IngestGenre>Biography</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Blackjack</Name>
+		<IngestGenre>Blackjack</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Boat Racing</Name>
+		<IngestGenre>Boat Racing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Boating</Name>
+		<IngestGenre>Boating</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Bowling</Name>
+		<IngestGenre>Bowling</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Boxing</Name>
+		<IngestGenre>Boxing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Business</Name>
+		<IngestGenre>Business</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Cheerleading</Name>
+		<IngestGenre>Cheerleading</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Comedy</Name>
+		<IngestGenre>Comedy</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Concert</Name>
+		<IngestGenre>Concert</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Courtroom</Name>
+		<IngestGenre>Courtroom</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Crafts</Name>
+		<IngestGenre>Crafts</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Crime</Name>
+		<IngestGenre>Crime</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Dance</Name>
+		<IngestGenre>Dance</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Drama</Name>
+		<IngestGenre>Drama</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Educational</Name>
+		<IngestGenre>Educational</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Election</Name>
+		<IngestGenre>Election</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Extras (behind the scenes)</Name>
+		<IngestGenre>Extras (behind the scenes)</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Family</Name>
+		<IngestGenre>Family</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Fantasy</Name>
+		<IngestGenre>Fantasy</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Fashion</Name>
+		<IngestGenre>Fashion</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Figure Skating</Name>
+		<IngestGenre>Figure Skating</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Finance</Name>
+		<IngestGenre>Finance</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Fishing</Name>
+		<IngestGenre>Fishing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Fitness</Name>
+		<IngestGenre>Fitness</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Food</Name>
+		<IngestGenre>Food</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Game Show</Name>
+		<IngestGenre>Game Show</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Gardening</Name>
+		<IngestGenre>Gardening</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Health</Name>
+		<IngestGenre>Health</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Home</Name>
+		<IngestGenre>Home</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Horror</Name>
+		<IngestGenre>Horror</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Horse Racing</Name>
+		<IngestGenre>Horse Racing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Hunting</Name>
+		<IngestGenre>Hunting</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Magic</Name>
+		<IngestGenre>Magic</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Marathon</Name>
+		<IngestGenre>Marathon</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Martial Arts</Name>
+		<IngestGenre>Martial Arts</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Mixed Martial Arts</Name>
+		<IngestGenre>Mixed Martial Arts</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Motorcycle</Name>
+		<IngestGenre>Motorcycle</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Motorcycle Racing</Name>
+		<IngestGenre>Motorcycle Racing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Music Videos</Name>
+		<IngestGenre>Music Videos</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Musical</Name>
+		<IngestGenre>Musical</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Mystery</Name>
+		<IngestGenre>Mystery</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Nature</Name>
+		<IngestGenre>Nature</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">News</Name>
+		<IngestGenre>News</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Paranormal</Name>
+		<IngestGenre>Paranormal</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Pets</Name>
+		<IngestGenre>Pets</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Poker</Name>
+		<IngestGenre>Poker</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Pro Wrestling</Name>
+		<IngestGenre>Pro Wrestling</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Public Affairs</Name>
+		<IngestGenre>Public Affairs</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Reality</Name>
+		<IngestGenre>Reality</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Religious</Name>
+		<IngestGenre>Religious</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Reviews</Name>
+		<IngestGenre>Reviews</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Rodeo</Name>
+		<IngestGenre>Rodeo</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Roller Sports</Name>
+		<IngestGenre>Roller Sports</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Rugby</Name>
+		<IngestGenre>Rugby</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Sailing</Name>
+		<IngestGenre>Sailing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Science</Name>
+		<IngestGenre>Science</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Sci-fi</Name>
+		<IngestGenre>Sci-fi</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Shopping</Name>
+		<IngestGenre>Shopping</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Skateboarding</Name>
+		<IngestGenre>Skateboarding</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Skiing</Name>
+		<IngestGenre>Skiing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Snowboarding</Name>
+		<IngestGenre>Snowboarding</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Soap Opera</Name>
+		<IngestGenre>Soap Opera</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Softball</Name>
+		<IngestGenre>Softball</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Stand-up</Name>
+		<IngestGenre>Stand-up</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Sumo Wrestling</Name>
+		<IngestGenre>Sumo Wrestling</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Surfing</Name>
+		<IngestGenre>Surfing</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Suspense</Name>
+		<IngestGenre>Suspense</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Swimming</Name>
+		<IngestGenre>Swimming</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Talk</Name>
+		<IngestGenre>Talk</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Tennis</Name>
+		<IngestGenre>Tennis</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Thriller</Name>
+		<IngestGenre>Thriller</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Travel</Name>
+		<IngestGenre>Travel</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Triathlon</Name>
+		<IngestGenre>Triathlon</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Variety</Name>
+		<IngestGenre>Variety</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Video Games</Name>
+		<IngestGenre>Video Games</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Volleyball</Name>
+		<IngestGenre>Volleyball</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">War</Name>
+		<IngestGenre>War</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Water Sports</Name>
+		<IngestGenre>Water Sports</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Weather</Name>
+		<IngestGenre>Weather</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Western</Name>
+		<IngestGenre>Western</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Winter Sports</Name>
+		<IngestGenre>Winter Sports</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Wrestling</Name>
+		<IngestGenre>Wrestling</IngestGenre>
+	</Genre>
+	<Genre isDisplay="true">
+		<Name lang="en">Default</Name>
+		<IngestGenre>Default</IngestGenre>
+	</Genre>
+</Genres>

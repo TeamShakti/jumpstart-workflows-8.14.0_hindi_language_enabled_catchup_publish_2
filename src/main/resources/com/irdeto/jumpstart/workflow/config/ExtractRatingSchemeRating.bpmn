@@ -1,0 +1,413 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_responseListItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_ratingSchemeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_ratingsItem" structureRef="com.irdeto.jumpstart.domain.config.Ratings" />
+  <itemDefinition id="_ratingSchemeItem" structureRef="com.irdeto.jumpstart.domain.RatingScheme" />
+  <itemDefinition id="_xmlItem" structureRef="String" />
+  <itemDefinition id="_XMLItem" structureRef="String" />
+
+  <itemDefinition id="_2-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_2-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_2-responseListItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_2-ratingSchemeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_2-ratingsItem" structureRef="com.irdeto.jumpstart.domain.config.Ratings" />
+  <itemDefinition id="_2-ratingSchemeItem" structureRef="com.irdeto.jumpstart.domain.RatingScheme" />
+  <itemDefinition id="_2-xmlItem" structureRef="String" />
+  <itemDefinition id="_2-XMLItem" structureRef="String" />
+
+  <itemDefinition id="_6-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_6-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_6-responseListItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_6-ratingSchemeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_6-ratingsItem" structureRef="com.irdeto.jumpstart.domain.config.Ratings" />
+  <itemDefinition id="_6-ratingSchemeItem" structureRef="com.irdeto.jumpstart.domain.RatingScheme" />
+  <itemDefinition id="_6-xmlItem" structureRef="String" />
+  <itemDefinition id="_6-XMLItem" structureRef="String" />
+
+  <itemDefinition id="_12-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_12-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_12-responseListItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_12-ratingSchemeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_12-ratingsItem" structureRef="com.irdeto.jumpstart.domain.config.Ratings" />
+  <itemDefinition id="_12-ratingSchemeItem" structureRef="com.irdeto.jumpstart.domain.RatingScheme" />
+  <itemDefinition id="_12-xmlItem" structureRef="String" />
+  <itemDefinition id="_12-XMLItem" structureRef="String" />
+
+  <itemDefinition id="_13-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_13-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_13-responseListItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_13-ratingSchemeListItem" structureRef="java.util.List" />
+  <itemDefinition id="_13-ratingsItem" structureRef="com.irdeto.jumpstart.domain.config.Ratings" />
+  <itemDefinition id="_13-ratingSchemeItem" structureRef="com.irdeto.jumpstart.domain.RatingScheme" />
+  <itemDefinition id="_13-xmlItem" structureRef="String" />
+  <itemDefinition id="_13-XMLItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.config.ExtractRatingSchemeRating" name="Extract Rating Schemes and Ratings" tns:packageName="com.irdeto.jumpstart.workflow.config" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.*" />
+     <tns:import name="com.irdeto.domain.mediamanager.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.config.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.irdeto.domain.mmentityapi.HttpQueryFilterParameter" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="queryFilterParameter" itemSubjectRef="_queryFilterParameterItem"/>
+    <property id="responseList" itemSubjectRef="_responseListItem"/>
+    <property id="ratingSchemeList" itemSubjectRef="_ratingSchemeListItem"/>
+    <property id="ratings" itemSubjectRef="_ratingsItem"/>
+    <property id="ratingScheme" itemSubjectRef="_ratingSchemeItem"/>
+    <property id="xml" itemSubjectRef="_xmlItem"/>
+    <property id="XML" itemSubjectRef="_XMLItem"/>
+
+    <!-- nodes -->
+    <parallelGateway id="_17" name="Gateway" gatewayDirection="Diverging" />
+    <endEvent id="_16" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="Read Rating Schemes" tns:taskName="MediaManager8FilteredReadTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>kcontext.setVariable("queryFilterParameter",  new HttpQueryFilterParameter());</script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <script>kcontext.setVariable("ratingSchemeList", WorkflowHelper.getEntityList(RatingScheme.class, responseList));
+kcontext.setVariable("ratings", new Ratings( ));</script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_2_QueryFilterParameterInput" name="QueryFilterParameter" />
+        <dataInput id="_2_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_2_EntityTypeInput" name="EntityType" />
+        <dataOutput id="_2_MediaManager8ResponseListOutput" name="MediaManager8ResponseList" />
+        <inputSet>
+          <dataInputRefs>_2_QueryFilterParameterInput</dataInputRefs>
+          <dataInputRefs>_2_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_2_EntityTypeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_2_MediaManager8ResponseListOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>queryFilterParameter</sourceRef>
+        <targetRef>_2_QueryFilterParameterInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_2_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">ratingScheme</from>
+          <to xsi:type="tFormalExpression">_2_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_2_MediaManager8ResponseListOutput</sourceRef>
+        <targetRef>responseList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_5" name="End" >
+        <terminateEventDefinition/>
+    </endEvent>
+    <task id="_6" name="Read Relations for each Scheme" tns:taskName="MediaManager8ReadRelationshipsTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <script>kcontext.setVariable("ratingScheme", (RatingScheme) ratingSchemeList.remove(0));</script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <script>RatingHelper.unloadRatingData(kcontext);</script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_6_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_6_RelationshipEntityTypeInput" name="RelationshipEntityType" />
+        <dataInput id="_6_RelationshipInput" name="Relationship" />
+        <dataInput id="_6_EntityTypeInput" name="EntityType" />
+        <dataInput id="_6_EntityIDInput" name="EntityID" />
+        <dataOutput id="_6_ResponseOutput" name="Response" />
+        <inputSet>
+          <dataInputRefs>_6_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_6_RelationshipEntityTypeInput</dataInputRefs>
+          <dataInputRefs>_6_RelationshipInput</dataInputRefs>
+          <dataInputRefs>_6_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_6_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_6_ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_6_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_6_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_6_RelationshipEntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">rating</from>
+          <to xsi:type="tFormalExpression">_6_RelationshipEntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_6_RelationshipInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">ratings</from>
+          <to xsi:type="tFormalExpression">_6_RelationshipInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_6_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">ratingScheme</from>
+          <to xsi:type="tFormalExpression">_6_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_6_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{ratingScheme.getId()}</from>
+          <to xsi:type="tFormalExpression">_6_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_6_ResponseOutput</sourceRef>
+        <targetRef>responseList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_7" name="Gateway" gatewayDirection="Diverging" />
+    <exclusiveGateway id="_8" name="Gateway" gatewayDirection="Converging" />
+    <task id="_12" name="Serialize Ratings" tns:taskName="XMLSerialization" >
+      <ioSpecification>
+        <dataInput id="_12_ObjectInput" name="Object" />
+        <dataInput id="_12_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_12_XMLOutput" name="XML" />
+        <inputSet>
+          <dataInputRefs>_12_ObjectInput</dataInputRefs>
+          <dataInputRefs>_12_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_12_XMLOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>ratings</sourceRef>
+        <targetRef>_12_ObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_12_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_12_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_12_XMLOutput</sourceRef>
+        <targetRef>xml</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_13" name="Save Ratings" tns:taskName="FileSaveTask" >
+      <ioSpecification>
+        <dataInput id="_13_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_13_FileNameInput" name="FileName" />
+        <dataInput id="_13_OverwriteInput" name="Overwrite" />
+        <dataInput id="_13_FilePathInput" name="FilePath" />
+        <dataInput id="_13_ContentInput" name="Content" />
+        <inputSet>
+          <dataInputRefs>_13_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_13_FileNameInput</dataInputRefs>
+          <dataInputRefs>_13_OverwriteInput</dataInputRefs>
+          <dataInputRefs>_13_FilePathInput</dataInputRefs>
+          <dataInputRefs>_13_ContentInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_13_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_13_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_13_FileNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">ratings.xml</from>
+          <to xsi:type="tFormalExpression">_13_FileNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_13_OverwriteInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_13_OverwriteInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_13_FilePathInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">/opt/data</from>
+          <to xsi:type="tFormalExpression">_13_FilePathInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_13_ContentInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{xml}</from>
+          <to xsi:type="tFormalExpression">_13_ContentInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <intermediateCatchEvent id="_14" name="Signal" >
+      <dataOutput id="_14_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_14_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_14_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <scriptTask id="_15" name="Handle Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Error occurred: {}", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_1-_17" sourceRef="_1" targetRef="_17" />
+    <sequenceFlow id="_15-_16" sourceRef="_15" targetRef="_16" />
+    <sequenceFlow id="_17-_2" sourceRef="_17" targetRef="_2" />
+    <sequenceFlow id="_13-_5" sourceRef="_13" targetRef="_5" />
+    <sequenceFlow id="_7-_6" sourceRef="_7" targetRef="_6" name="More Relationships to Read" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_8-_7" sourceRef="_8" targetRef="_7" />
+    <sequenceFlow id="_6-_8" sourceRef="_6" targetRef="_8" />
+    <sequenceFlow id="_2-_8" sourceRef="_2" targetRef="_8" />
+    <sequenceFlow id="_7-_12" sourceRef="_7" targetRef="_12" name="All Relationships Read" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return ratingSchemeList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_12-_13" sourceRef="_12" targetRef="_13" />
+    <sequenceFlow id="_17-_14" sourceRef="_17" targetRef="_14" />
+    <sequenceFlow id="_14-_15" sourceRef="_14" targetRef="_15" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.config.ExtractRatingSchemeRating" >
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="120" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="576" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="48" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="48" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="120" y="456" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="276" y="168" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="120" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="120" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="48" y="312" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="48" y="384" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="576" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="504" y="96" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_1-_17" >
+        <di:waypoint x="72" y="48" />
+        <di:waypoint x="144" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_16" >
+        <di:waypoint x="600" y="120" />
+        <di:waypoint x="600" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_2" >
+        <di:waypoint x="144" y="48" />
+        <di:waypoint x="144" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_5" >
+        <di:waypoint x="144" y="408" />
+        <di:waypoint x="144" y="480" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_6" >
+        <di:waypoint x="144" y="264" />
+        <di:waypoint x="372" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_7" >
+        <di:waypoint x="144" y="192" />
+        <di:waypoint x="144" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_8" >
+        <di:waypoint x="372" y="192" />
+        <di:waypoint x="144" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_8" >
+        <di:waypoint x="144" y="120" />
+        <di:waypoint x="144" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_12" >
+        <di:waypoint x="144" y="264" />
+        <di:waypoint x="144" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12-_13" >
+        <di:waypoint x="144" y="336" />
+        <di:waypoint x="144" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_14" >
+        <di:waypoint x="144" y="48" />
+        <di:waypoint x="600" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_15" >
+        <di:waypoint x="600" y="48" />
+        <di:waypoint x="600" y="120" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+	xmlns:core="urn:cablelabs:md:xsd:core:3.0"
+	xmlns:content="urn:cablelabs:md:xsd:content:3.0"
+	targetNamespace="http://www.irdeto.com/schemas/metadata/1.0" version="1"
+	xmlns="http://www.irdeto.com/schemas/metadata/1.0">
+	<xsd:import namespace="urn:cablelabs:md:xsd:core:3.0" schemaLocation="MD-SP-CORE-I02.xsd"/>
+	<xsd:import namespace="urn:cablelabs:md:xsd:content:3.0" schemaLocation="MD-SP-CONTENT-I02.xsd"/>
+	<xsd:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
+
+	<xsd:complexType name="ChannelType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to portray a channel.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="TitleRef" type="core:AssetRefType"/>
+					<xsd:element name="ChannelId" type="xsd:string"/>
+					<xsd:element name="DisplayOrder" type="xsd:integer"/>
+					<xsd:element name="LiveWindowDuration" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="EncodeProfile" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+	        			<xsd:choice>
+							<xsd:element name="PosterRef" type="core:AssetRefType"/>
+							<xsd:element name="BoxCoverRef" type="core:AssetRefType"/>
+							<xsd:element name="ThumbnailRef" type="core:AssetRefType"/>
+						</xsd:choice>
+					</xsd:sequence>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="EventType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to portray a live event.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="TitleRef" type="core:AssetRefType"/>
+					<xsd:element name="EventBroadcastDate" type="xsd:dateTime"/>
+					<xsd:element name="EventBroadcastEndDate" type="xsd:dateTime"/>
+					<xsd:element name="ScreenFormat" type="content:ScreenFormatType"/>
+					<xsd:element name="EncodeProfile" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+					<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+	        			<xsd:choice>
+							<xsd:element name="ContentGroupRef" type="core:AssetRefType"/>
+							<xsd:element name="ScheduleSlotId" type="xsd:string"/>
+							<xsd:element name="PosterRef" type="core:AssetRefType"/>
+							<xsd:element name="BoxCoverRef" type="core:AssetRefType"/>
+						</xsd:choice>
+					</xsd:sequence>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="BrandType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to portray an brand name over-arching multiple series of related content items.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="TitleRef" type="core:AssetRefType"/>
+					<xsd:element name="SeriesCount" type="xsd:integer" minOccurs="0"/>
+					<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+	        			<xsd:choice>
+							<xsd:element name="SeriesRef" type="core:AssetRefType"/>
+							<xsd:element name="PosterRef" type="core:AssetRefType"/>
+							<xsd:element name="BoxCoverRef" type="core:AssetRefType"/>
+						</xsd:choice>
+					</xsd:sequence>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+	<xsd:complexType name="SeriesType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to portray a series of related content items, such as episodes in a TV series' season, or movie sequels.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="TitleRef" type="core:AssetRefType"/>
+					<xsd:element name="Season" type="xsd:integer" minOccurs="0"/>
+					<xsd:element name="ProgramCount" type="xsd:integer" minOccurs="0"/>
+					<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+	        			<xsd:choice>
+							<xsd:element name="ContentGroupRef" type="core:AssetRefType"/>
+							<xsd:element name="PosterRef" type="core:AssetRefType"/>
+							<xsd:element name="BoxCoverRef" type="core:AssetRefType"/>
+						</xsd:choice>
+					</xsd:sequence>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="SubscriptionPackageType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to portray a SubscriptionPackage containing content items, such as episodes, movies, series, brands, and channels.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="TitleRef" type="core:AssetRefType"/>
+					<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+						<xsd:choice>
+							<xsd:element name="BrandRef" type="core:AssetRefType"/>
+							<xsd:element name="SeriesRef" type="core:AssetRefType"/>
+							<xsd:element name="ContentGroupRef" type="core:AssetRefType"/>
+							<xsd:element name="PosterRef" type="core:AssetRefType"/>
+							<xsd:element name="BoxCoverRef" type="core:AssetRefType"/>
+							<xsd:element name="ChannelRef" type="core:AssetRefType"/>
+							<xsd:element name="EventRef" type="core:AssetRefType"/>
+						</xsd:choice>
+					</xsd:sequence>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+	<xsd:complexType name="TVODCollectionType">
+		<xsd:annotation>
+			<xsd:documentation>An asset type used to portray a TVOD Collection containing content items, such as episodes, movies, series, and brands.</xsd:documentation>
+		</xsd:annotation>
+		<xsd:complexContent>
+			<xsd:extension base="core:AssetType">
+				<xsd:sequence>
+					<xsd:element name="TitleRef" type="core:AssetRefType"/>
+					<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+						<xsd:choice>
+							<xsd:element name="BrandRef" type="core:AssetRefType"/>
+							<xsd:element name="SeriesRef" type="core:AssetRefType"/>
+							<xsd:element name="ContentGroupRef" type="core:AssetRefType"/>
+							<xsd:element name="PosterRef" type="core:AssetRefType"/>
+							<xsd:element name="BoxCoverRef" type="core:AssetRefType"/>
+							<xsd:element name="EventRef" type="core:AssetRefType"/>
+						</xsd:choice>
+					</xsd:sequence>
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+</xsd:schema>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://cxf.apache.org/jaxws
+		http://cxf.apache.org/schemas/jaxws.xsd
+		http://activemq.apache.org/schema/core
+		http://activemq.apache.org/schema/core/activemq-core.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd
+		"
+	default-lazy-init="true" >
+
+	<context:component-scan base-package="com.irdeto"/>
+
+	<import resource="classpath:/beans-business-managers.xml"/>
+	
+	<bean id="mediaManagerConsumerManager" class="com.irdeto.manager.endpoint.activemq.MessageConsumerManager">
+		<property name="handler" ref="mediaManagerMessageHandler"/>
+		<property name="queue" value="#{propertiesManager.getProperty(T(com.irdeto.domain.constants.PropertyKey).ACTIVEMQ_QUEUE_MM_KEY)}"/>
+	</bean>
+	
+	<bean id="podsConsumerManager" class="com.irdeto.manager.endpoint.activemq.MessageConsumerManager">
+		<property name="handler" ref="podsMessageHandler"/>
+		<property name="queue" value="#{propertiesManager.getProperty(T(com.irdeto.domain.constants.PropertyKey).ACTIVEMQ_QUEUE_PODS_KEY)}"/>
+	</bean>
+	
+	<bean id="qtsConsumerManager" class="com.irdeto.manager.endpoint.activemq.MessageConsumerManager">
+		<property name="handler" ref="qtsMessageHandler"/>
+		<property name="queue" value="#{propertiesManager.getProperty(T(com.irdeto.domain.constants.PropertyKey).ACTIVEMQ_QUEUE_QTS_KEY)}"/>
+	</bean>
+
+	<bean id="redeliveryPolicy" class="org.apache.activemq.RedeliveryPolicy">
+		<property name="maximumRedeliveries" value="#{T(Integer).valueOf(propertiesManager.getProperty(T(com.irdeto.domain.constants.PropertyKey).ACTIVEMQ_MAX_REDELIVERIES))}"/>
+		<property name="initialRedeliveryDelay" value="#{T(Long).valueOf(propertiesManager.getProperty(T(com.irdeto.domain.constants.PropertyKey).ACTIVEMQ_REDELIVERY_DELAY))}"/>
+		<property name="redeliveryDelay" value="#{T(Long).valueOf(propertiesManager.getProperty(T(com.irdeto.domain.constants.PropertyKey).ACTIVEMQ_REDELIVERY_DELAY))}"/>
+		<property name="backOffMultiplier" value="1"/>
+		<property name="useExponentialBackOff" value="false" />
+		<property name="useCollisionAvoidance" value="false" />
+	</bean>
+</beans>

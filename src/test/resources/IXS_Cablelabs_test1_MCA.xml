@@ -1,0 +1,192 @@
+<ADI3 xmlns="urn:cablelabs:md:xsd:core:3.0" xmlns:content="urn:cablelabs:md:xsd:content:3.0" xmlns:core="urn:cablelabs:md:xsd:core:3.0" xmlns:offer="urn:cablelabs:md:xsd:offer:3.0" xmlns:terms="urn:cablelabs:md:xsd:terms:3.0" xmlns:title="urn:cablelabs:md:xsd:title:3.0" xmlns:irdeto="http://www.irdeto.com/schemas/metadata/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:cablelabs:md:xsd:core:3.0 MD-SP-CORE-I02.xsd urn:cablelabs:md:xsd:offer:3.0 MD-SP-OFFER-I02.xsd urn:cablelabs:md:xsd:title:3.0 MD-SP-TITLE-I02.xsd urn:cablelabs:md:xsd:content:3.0 MD-SP-CONTENT-I02.xsd urn:cablelabs:md:xsd:terms:3.0 MD-SP-TERMS-I02.xsd http://www.irdeto.com/schemas/metadata/1.0 Irdeto-ADI-3_0-extension.xsd">
+
+  <ContentGroup uriId="irdeto.com/ContentGroup/201300027" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <offer:TitleRef uriId="irdeto.com/Title/201300027001" />
+    <offer:MovieRef uriId="irdeto.com/Asset/201300027002" />
+    <offer:PreviewRef uriId="irdeto.com/Asset/201300027003" />
+  </ContentGroup>
+  
+  <ContentGroup uriId="irdeto.com/ContentGroup/201300028" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <offer:TitleRef uriId="irdeto.com/Title/201300027001" />
+    <offer:MovieRef uriId="irdeto.com/Asset/201300028002" />
+    <offer:PreviewRef uriId="irdeto.com/Asset/201300028003" />
+    <offer:BoxCoverRef uriId="irdeto.com/Asset/201300028004" />
+  </ContentGroup>
+
+  <ContentGroup uriId="irdeto.com/ContentGroup/201300029" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <offer:TitleRef uriId="irdeto.com/Title/201300027001" />
+    <offer:MovieRef uriId="irdeto.com/Asset/201300029002" />
+    <offer:PreviewRef uriId="irdeto.com/Asset/201300029003" />
+    <offer:BoxCoverRef uriId="irdeto.com/Asset/201300029004" />
+  </ContentGroup>
+
+  <Offer uriId="irdeto.com/Offer/FREEOFFER001" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <offer:Presentation>
+      <offer:CategoryRef uriId="irdeto.com/Category/Irdeto/Movies A-Z" />
+      <offer:DisplayAsNew>P3D</offer:DisplayAsNew>
+      <offer:DisplayAsLastChance>P3D</offer:DisplayAsLastChance>
+    </offer:Presentation>
+
+    <offer:ProviderContentTier>Irdeto1</offer:ProviderContentTier>
+    <offer:BillingId>34567</offer:BillingId>
+    <offer:TermsRef uriId="irdeto.com/Terms/FREETERMS001" />
+    <offer:ContentGroupRef uriId="irdeto.com/ContentGroup/201300027" />
+    <offer:ContentGroupRef uriId="irdeto.com/ContentGroup/201300028" />
+  </Offer>
+
+  <Offer uriId="irdeto.com/Offer/FREEOFFER001" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-08-31T23:59:59Z">
+    <offer:Presentation>
+      <offer:CategoryRef uriId="irdeto.com/Category/Irdeto/Movies A-Z" />
+      <offer:DisplayAsNew>P3D</offer:DisplayAsNew>
+      <offer:DisplayAsLastChance>P3D</offer:DisplayAsLastChance>
+    </offer:Presentation>
+
+    <offer:ProviderContentTier>Irdeto1</offer:ProviderContentTier>
+    <offer:BillingId>34567</offer:BillingId>
+    <offer:TermsRef uriId="irdeto.com/Terms/FREETERMS001" />
+    <offer:ContentGroupRef uriId="irdeto.com/ContentGroup/201300029" />
+  </Offer>
+
+  <Terms uriId="irdeto.com/Terms/FREETERMS001" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <terms:ContractName>Free</terms:ContractName>
+    <terms:SubscriberViewLimit startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z" maximumViews="5" />
+    <terms:SubscriberViewLimit startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z" maximumViews="5" />
+    <terms:SuggestedPrice>0.00</terms:SuggestedPrice>
+  </Terms>
+
+  <Category uriId="irdeto.com/Category/Irdeto/Movies A-Z" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <offer:CategoryPath>Irdeto/Movies A-Z</offer:CategoryPath>
+  </Category>
+  
+  <!-- (c) copyright 2006, Blender Foundation / Netherlands Media Art Institute / www.elephantsdream.org -->
+  <Title uriId="irdeto.com/Title/201300027001" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <core:ProviderQAContact>John Doe</core:ProviderQAContact>
+	  
+    <title:LocalizableTitle>
+      <title:TitleSortName>Elephants Dream</title:TitleSortName>
+      <title:TitleBrief>Elephants Dream</title:TitleBrief>
+      <title:TitleMedium>Elephants Dream</title:TitleMedium>
+      <title:TitleLong>Elephants Dream</title:TitleLong>
+      <title:SummaryShort>Emo and Proog are on a journey in the folds of a giant Machine.</title:SummaryShort>
+      <title:SummaryMedium>Emo and Proog are on a journey in the folds of a giant Machine, exploring the twisted and dark complex of wires, gears and cogs.</title:SummaryMedium>
+      <title:SummaryLong>Emo and Proog are on a journey in the folds of a giant Machine, exploring the twisted and dark complex of wires, gears and cogs. Until one moment a conflict arises that throws out all their assumptions.</title:SummaryLong>
+      <title:ActorDisplay>Tygo Gernandt,Cas Jansen</title:ActorDisplay>
+      <title:Actor fullName="Tygo Gernandt" firstName="Tygo" lastName="Gernandt" sortableName="Gernandt,Tygo" />
+      <title:Actor fullName="Cas Jansen" firstName="Cas" lastName="Jansen" sortableName="Jansen,Cas" />
+      <title:WriterDisplay>Andreas Goralczyk, Bassam Kurdali, Pepijn Zwanenberg</title:WriterDisplay>
+      <title:Director fullName="Bassam Kurdali" firstName="Bassam" lastName="Kurdali" sortableName="Kurdali,Bassam" />
+      <title:StudioDisplay>Blender Foundation</title:StudioDisplay>
+    </title:LocalizableTitle>
+	  
+    <title:Rating ratingSystem="MPAA">G</title:Rating>
+    <title:Advisory>AL</title:Advisory>
+    <title:IsClosedCaptioning>false</title:IsClosedCaptioning>
+    <title:DisplayRunTime>11:00</title:DisplayRunTime>
+    <title:Year>2006</title:Year>
+    <title:CountryOfOrigin>US</title:CountryOfOrigin>
+    <title:Genre>Animated</title:Genre>
+    <title:Genre>Adventure</title:Genre>
+    <title:ShowType>Movie</title:ShowType>
+    <title:IsEncryptionRequired>true</title:IsEncryptionRequired>
+    <title:BoxOffice>0</title:BoxOffice>
+  </Title>
+
+  <Movie uriId="irdeto.com/Asset/201300027002" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <content:SourceUrl>elephants_dream_sd.mpg</content:SourceUrl>
+    <content:ContentFileSize>238908923</content:ContentFileSize>
+    <content:ContentCheckSum>244812A9D2234242BD265654CA</content:ContentCheckSum>
+    <content:PropagationPriority>1</content:PropagationPriority>
+    <content:AudioType>Dolby Digital</content:AudioType>
+    <content:ScreenFormat>Widescreen</content:ScreenFormat>
+    <content:Duration>PT11H00M00S</content:Duration>
+    <content:Language>en</content:Language>
+    <content:Rating ratingSystem="MPAA">G</content:Rating>
+    <content:CopyControlInfo>
+      <content:IsCopyProtection>false</content:IsCopyProtection>
+    </content:CopyControlInfo>
+  </Movie>
+
+  <Movie uriId="irdeto.com/Asset/201300028002" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <content:SourceUrl>elephants_dream_hd.mpg</content:SourceUrl>
+    <content:ContentFileSize>238908923</content:ContentFileSize>
+    <content:ContentCheckSum>244812A9D2234242BD265654CA</content:ContentCheckSum>
+    <content:PropagationPriority>1</content:PropagationPriority>
+    <content:AudioType>Dolby Digital</content:AudioType>
+    <content:ScreenFormat>Widescreen</content:ScreenFormat>
+    <content:Duration>PT11H00M00S</content:Duration>
+    <content:Language>en</content:Language>
+    <content:Rating ratingSystem="MPAA">G</content:Rating>
+    <content:CopyControlInfo>
+      <content:IsCopyProtection>false</content:IsCopyProtection>
+    </content:CopyControlInfo>
+  </Movie>
+
+  <Movie uriId="irdeto.com/Asset/201300029002" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <content:SourceUrl>elephants_dream_ng.mpg</content:SourceUrl>
+    <content:ContentFileSize>238908923</content:ContentFileSize>
+    <content:ContentCheckSum>244812A9D2234242BD265654CA</content:ContentCheckSum>
+    <content:PropagationPriority>1</content:PropagationPriority>
+    <content:AudioType>Dolby Digital</content:AudioType>
+    <content:ScreenFormat>Widescreen</content:ScreenFormat>
+    <content:Duration>PT11H00M00S</content:Duration>
+    <content:Language>en</content:Language>
+    <content:Rating ratingSystem="MPAA">G</content:Rating>
+    <content:CopyControlInfo>
+      <content:IsCopyProtection>false</content:IsCopyProtection>
+    </content:CopyControlInfo>
+  </Movie>
+  
+  <Preview uriId="irdeto.com/Asset/201300027003" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <content:SourceUrl>elephants_dream_preview_sd.mpg</content:SourceUrl>
+    <content:ContentFileSize>23478925</content:ContentFileSize>
+    <content:ContentCheckSum>A22312BD265A348254E0</content:ContentCheckSum>
+    <content:PropagationPriority>1</content:PropagationPriority>
+    <content:AudioType>Dolby Digital</content:AudioType>
+    <content:ScreenFormat>Widescreen</content:ScreenFormat>
+    <content:Duration>PT00H00M34S</content:Duration>
+    <content:Language>en</content:Language>
+    <content:Rating ratingSystem="MPAA">G</content:Rating>
+  </Preview>
+  
+  <Preview uriId="irdeto.com/Asset/201300028003" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <content:SourceUrl>elephants_dream_preview_hd.mpg</content:SourceUrl>
+    <content:ContentFileSize>23478925</content:ContentFileSize>
+    <content:ContentCheckSum>A22312BD265A348254E0</content:ContentCheckSum>
+    <content:PropagationPriority>1</content:PropagationPriority>
+    <content:AudioType>Dolby Digital</content:AudioType>
+    <content:ScreenFormat>Widescreen</content:ScreenFormat>
+    <content:Duration>PT00H00M34S</content:Duration>
+    <content:Language>en</content:Language>
+    <content:Rating ratingSystem="MPAA">G</content:Rating>
+  </Preview>
+  
+  <Preview uriId="irdeto.com/Asset/201300029003" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <content:SourceUrl>elephants_dream_preview_ng.mpg</content:SourceUrl>
+    <content:ContentFileSize>23478925</content:ContentFileSize>
+    <content:ContentCheckSum>A22312BD265A348254E0</content:ContentCheckSum>
+    <content:PropagationPriority>1</content:PropagationPriority>
+    <content:AudioType>Dolby Digital</content:AudioType>
+    <content:ScreenFormat>Widescreen</content:ScreenFormat>
+    <content:Duration>PT00H00M34S</content:Duration>
+    <content:Language>en</content:Language>
+    <content:Rating ratingSystem="MPAA">G</content:Rating>
+  </Preview>
+
+  <BoxCover uriId="irdeto.com/Asset/201300028004" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <content:SourceUrl>elephants_dream_box_cover_hd.bmp</content:SourceUrl>
+    <content:ContentFileSize>12323</content:ContentFileSize>
+    <content:ContentCheckSum>A23948D23949BC23049321</content:ContentCheckSum>
+    <content:PropagationPriority>1</content:PropagationPriority>
+    <content:X_Resolution>320</content:X_Resolution>
+    <content:Y_Resolution>240</content:Y_Resolution>
+  </BoxCover>
+  
+  <BoxCover uriId="irdeto.com/Asset/201300029004" providerVersionNum="1" internalVersionNum="0" creationDateTime="2014-06-01T00:00:00Z" startDateTime="2014-06-01T00:00:00Z" endDateTime="2014-07-31T23:59:59Z">
+    <content:SourceUrl>elephants_dream_box_cover_ng.bmp</content:SourceUrl>
+    <content:ContentFileSize>12323</content:ContentFileSize>
+    <content:ContentCheckSum>A23948D23949BC23049321</content:ContentCheckSum>
+    <content:PropagationPriority>1</content:PropagationPriority>
+    <content:X_Resolution>320</content:X_Resolution>
+    <content:Y_Resolution>240</content:Y_Resolution>
+  </BoxCover>
+</ADI3>

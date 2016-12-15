@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="Profile">
+		<xsd:complexType>
+			<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+				<xsd:choice>
+					<xsd:element name="TermMapping" type="TermMappingType" />
+					<xsd:element name="DeviceProfile" type="DeviceProfileType" />
+					<xsd:element name="EncodeProfile" type="EncodeProfileType" />
+					<xsd:element name="TranscodeProfile" type="TranscodeProfileType" />
+					<xsd:element name="ProtectProfile" type="ProtectProfileType" />
+					<xsd:element name="PolicyGroup" type="PolicyGroupType" />
+					<xsd:element name="Policy" type="PolicyType" />
+				</xsd:choice>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="TermMappingType">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+		<xsd:choice>
+			<xsd:element name="ContentType"/>
+			<xsd:element name="DeviceProfile"/>
+			<xsd:element name="PolicyGroup"/>
+			<xsd:element name="Policy"/>
+		</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="contractName" type="xsd:string" use="required"/>
+		<xsd:attribute name="policyGroupId" type="xsd:string" use="required"/>
+		<xsd:attribute name="policyId" type="xsd:string" use="required"/>
+		<xsd:attribute name="policyType" type="xsd:string" use="required"/>
+		<xsd:attribute name="duration" type="xsd:string" />
+	</xsd:complexType>
+	<xsd:complexType name="DeviceProfileType">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:choice>
+				<xsd:element name="EncodeProfileName"/>
+				<xsd:element name="ProtectProfileName"/>
+				<xsd:element name="TranscodeProfileName"/>
+			</xsd:choice>
+		</xsd:sequence>
+		<xsd:attribute name="deviceClass" type="xsd:string" use="required"/>
+		<xsd:attribute name="enabled" type="xsd:boolean" default="true"/>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="packagingType" type="xsd:string" default="NA"/>
+	</xsd:complexType>
+	<xsd:complexType name="EncodeProfileType">
+		<xsd:attribute name="liveUri" type="xsd:string" use="required"/>
+		<xsd:attribute name="protectionType" type="xsd:string" use="required"/>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>		
+	</xsd:complexType>
+	<xsd:complexType name="TranscodeProfileType">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="ProtectProfileName" />
+		</xsd:sequence>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>
+		<xsd:attribute name="transcodedFilePattern" type="xsd:string" use="required"/>
+		<xsd:attribute name="transcoderProfile" type="xsd:string" use="required"/>
+		<xsd:attribute name="transcoderUri" type="xsd:string" use="required"/>
+		<xsd:attribute name="transcoderWorkflow" type="xsd:string" use="required"/>
+		<xsd:attribute name="transcodedFileCount" type="xsd:integer" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="ProtectProfileType">
+		<xsd:attribute name="protectionType" type="xsd:string" use="required"/>
+		<xsd:attribute name="name" type="xsd:string" use="required"/>		
+		<xsd:attribute name="required" type="xsd:boolean" use="required"/>
+	</xsd:complexType>
+	<xsd:complexType name="PolicyGroupType">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="Policy" />
+		</xsd:sequence>
+		<xsd:attribute name="policyGroupName" type="xsd:string" use="required"/>
+		<xsd:attribute name="policyGroupDescription" type="xsd:string"/>		
+		<xsd:attribute name="licenseProfileReference" type="xsd:integer" use="required"/>
+	</xsd:complexType>
+	
+	<xsd:complexType name="PolicyType">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+		<xsd:element name="CurrencyMap"/> 
+		</xsd:sequence>
+		<xsd:attribute name="policyName" type="xsd:string" use="required"/>
+		<xsd:attribute name="policyDescription" type="xsd:string"/>		
+		<xsd:attribute name="policyType" type="xsd:string"/>
+		<xsd:attribute name="entitlementStartMode" type="xsd:string"/>
+		<xsd:attribute name="entitlementDuration" type="xsd:string"/>
+		<xsd:attribute name="requireSubscription" type="xsd:boolean"/>
+		<xsd:attribute name="subscriptionReference" type="xsd:integer"/>
+		<xsd:attribute name="licenseProfileReference" type="xsd:integer" use="required"/>
+		<xsd:attribute name="requireAuthentication" type="xsd:boolean"/>
+		<xsd:attribute name="subscriptionBillingInterval" type="xsd:integer"/>
+		<xsd:attribute name="subscriptionGroupId" type="xsd:integer"/>
+		<xsd:attribute name="subscriptionId" type="xsd:integer"/>
+		<xsd:attribute name="subscriptionReleaseDate" type="xsd:dateTime"/>
+		<xsd:attribute name="subscriptionReleaseEnd" type="xsd:dateTime"/>
+		<xsd:attribute name="subscriptionMinimumBillingInterval" type="xsd:integer"/>
+		<xsd:attribute name="subscriptionBillingEndDate" type="xsd:dateTime"/>
+		<xsd:attribute name="numberOfDevices" type="xsd:integer" use="required"/>
+		<xsd:attribute name="productTaxType" type="xsd:string"/>
+		<xsd:attribute name="billImmediately" type="xsd:boolean"/>
+		<xsd:attribute name="syndicateAccountId" type="xsd:string"/>
+	</xsd:complexType>
+	<xsd:complexType name="CurrencyMapType">
+		<xsd:attribute name="currency" type="xsd:string" use="required"/>
+		<xsd:attribute name="country" type="xsd:string" use="required"/>		
+		<xsd:attribute name="amount" type="xsd:string" use="required"/>
+	</xsd:complexType>
+	
+</xsd:schema>

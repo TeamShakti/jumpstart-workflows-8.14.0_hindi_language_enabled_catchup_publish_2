@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.qa.HumanTaskTest" name="Human Task Test" tns:packageName="com.irdeto.jumpstart.workflow.qa" >
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="Manned HT" tns:taskName="MannedHumanTask" >
+      <ioSpecification>
+        <dataInput id="_2_EntityTitleInput" name="EntityTitle" />
+        <dataInput id="_2_OperationInput" name="Operation" />
+        <dataInput id="_2_EmailEnabledInput" name="EmailEnabled" />
+        <dataInput id="_2_ContextInput" name="Context" />
+        <dataInput id="_2_MessageInput" name="Message" />
+        <dataInput id="_2_SupersedeInput" name="Supersede" />
+        <dataInput id="_2_EntityTypeInput" name="EntityType" />
+        <dataInput id="_2_EntityIDInput" name="EntityID" />
+        <dataInput id="_2_GroupInput" name="Group" />
+        <dataInput id="_2_AdminInput" name="Admin" />
+        <dataInput id="_2_ViewNameInput" name="ViewName" />
+        <inputSet>
+          <dataInputRefs>_2_EntityTitleInput</dataInputRefs>
+          <dataInputRefs>_2_OperationInput</dataInputRefs>
+          <dataInputRefs>_2_EmailEnabledInput</dataInputRefs>
+          <dataInputRefs>_2_ContextInput</dataInputRefs>
+          <dataInputRefs>_2_MessageInput</dataInputRefs>
+          <dataInputRefs>_2_SupersedeInput</dataInputRefs>
+          <dataInputRefs>_2_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_2_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_2_GroupInput</dataInputRefs>
+          <dataInputRefs>_2_AdminInput</dataInputRefs>
+          <dataInputRefs>_2_ViewNameInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_2_EntityTitleInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Test Manned Human Task</from>
+          <to xsi:type="tFormalExpression">_2_EntityTitleInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_OperationInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">This is an operation.</from>
+          <to xsi:type="tFormalExpression">_2_OperationInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EmailEnabledInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_2_EmailEnabledInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Test Manned Human Task</from>
+          <to xsi:type="tFormalExpression">_2_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_MessageInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">This is a message.</from>
+          <to xsi:type="tFormalExpression">_2_MessageInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SupersedeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_2_SupersedeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_2_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">1</from>
+          <to xsi:type="tFormalExpression">_2_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_GroupInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA Group</from>
+          <to xsi:type="tFormalExpression">_2_GroupInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_AdminInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA</from>
+          <to xsi:type="tFormalExpression">_2_AdminInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ViewNameInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">View</from>
+          <to xsi:type="tFormalExpression">_2_ViewNameInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_3" name="End" />
+    <task id="_4" name="Cancel Task" tns:taskName="CancelTask" >
+      <ioSpecification>
+        <dataInput id="_4_ContextInput" name="Context" />
+        <dataInput id="_4_SpecificProcessInstanceInput" name="SpecificProcessInstance" />
+        <dataInput id="_4_EntityTypeInput" name="EntityType" />
+        <dataInput id="_4_UserIdInput" name="UserId" />
+        <dataInput id="_4_EntityIdInput" name="EntityId" />
+        <inputSet>
+          <dataInputRefs>_4_ContextInput</dataInputRefs>
+          <dataInputRefs>_4_SpecificProcessInstanceInput</dataInputRefs>
+          <dataInputRefs>_4_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_4_UserIdInput</dataInputRefs>
+          <dataInputRefs>_4_EntityIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_4_ContextInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Test Manned Human Task</from>
+          <to xsi:type="tFormalExpression">_4_ContextInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_SpecificProcessInstanceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_4_SpecificProcessInstanceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_4_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_UserIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA</from>
+          <to xsi:type="tFormalExpression">_4_UserIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_4_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">1</from>
+          <to xsi:type="tFormalExpression">_4_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <intermediateCatchEvent id="_5" name="Timer" >
+      <timerEventDefinition>
+        <timeDuration xsi:type="tFormalExpression">10s</timeDuration>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+    <endEvent id="_6" name="End" />
+    <parallelGateway id="_7" name="Gateway" gatewayDirection="Diverging" />
+
+    <!-- connections -->
+    <sequenceFlow id="_7-_2" sourceRef="_7" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+    <sequenceFlow id="_5-_4" sourceRef="_5" targetRef="_4" />
+    <sequenceFlow id="_7-_5" sourceRef="_7" targetRef="_5" />
+    <sequenceFlow id="_4-_6" sourceRef="_4" targetRef="_6" />
+    <sequenceFlow id="_1-_7" sourceRef="_1" targetRef="_7" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.qa.HumanTaskTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="120" y="48" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="48" y="192" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="120" y="264" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="264" y="192" width="193" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="336" y="120" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="336" y="264" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="120" y="120" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_7-_2" >
+        <di:waypoint x="144" y="144" />
+        <di:waypoint x="144" y="216" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="144" y="216" />
+        <di:waypoint x="144" y="288" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_4" >
+        <di:waypoint x="360" y="144" />
+        <di:waypoint x="360" y="216" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_5" >
+        <di:waypoint x="144" y="144" />
+        <di:waypoint x="360" y="144" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4-_6" >
+        <di:waypoint x="360" y="216" />
+        <di:waypoint x="360" y="288" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_7" >
+        <di:waypoint x="144" y="72" />
+        <di:waypoint x="144" y="144" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

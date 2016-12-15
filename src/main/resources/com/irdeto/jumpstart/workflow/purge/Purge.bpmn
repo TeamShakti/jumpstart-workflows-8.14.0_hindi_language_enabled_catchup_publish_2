@@ -1,0 +1,1167 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_38-actionItem" structureRef="String" />
+  <itemDefinition id="_36-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_19-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_33-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_36-entityIdItem" structureRef="String" />
+  <itemDefinition id="_36-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_36-isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_19-keyItem" structureRef="String" />
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_36-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_20-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_19-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_20-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_20-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_21-entityIdItem" structureRef="String" />
+  <itemDefinition id="_36-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_34-keyItem" structureRef="String" />
+  <itemDefinition id="_3-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_3-keyItem" structureRef="String" />
+  <itemDefinition id="_3-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_19-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_20-keyItem" structureRef="String" />
+  <itemDefinition id="_entityTypeItem" structureRef="String" />
+  <itemDefinition id="_22-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_33-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_38-keyItem" structureRef="String" />
+  <itemDefinition id="_20-modeItem" structureRef="String" />
+  <itemDefinition id="_33-purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_signalMap" structureRef="java.util.Map" />
+  <itemDefinition id="_22-actionItem" structureRef="String" />
+  <itemDefinition id="_actionItem" structureRef="String" />
+  <itemDefinition id="_21-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_21-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_keyItem" structureRef="String" />
+  <itemDefinition id="_3-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_36-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_21-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_34-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_33-modeItem" structureRef="String" />
+  <itemDefinition id="_33-entityIdItem" structureRef="String" />
+  <itemDefinition id="_38-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_38-purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_19-actionItem" structureRef="String" />
+  <itemDefinition id="_33-keyItem" structureRef="String" />
+  <itemDefinition id="_33-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_34-actionItem" structureRef="String" />
+  <itemDefinition id="_relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_21-isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_38-modeItem" structureRef="String" />
+  <itemDefinition id="_34-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_36-actionItem" structureRef="String" />
+  <itemDefinition id="_22-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_21-keyItem" structureRef="String" />
+  <itemDefinition id="_38-isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_22-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_36-purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_3-entityIdItem" structureRef="String" />
+  <itemDefinition id="_22-isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_36-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_38-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_20-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_34-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_22-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_21-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_22-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_34-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_22-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_19-modeItem" structureRef="String" />
+  <itemDefinition id="_3-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_22-modeItem" structureRef="String" />
+  <itemDefinition id="_34-purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_21-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_34-entityIdItem" structureRef="String" />
+  <itemDefinition id="_purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_38-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_20-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_19-entityIdItem" structureRef="String" />
+  <itemDefinition id="_20-actionItem" structureRef="String" />
+  <itemDefinition id="_38-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_38-entityIdItem" structureRef="String" />
+  <itemDefinition id="_19-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_34-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_21-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_36-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_20-isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_36-keyItem" structureRef="String" />
+  <itemDefinition id="_22-entityIdItem" structureRef="String" />
+  <itemDefinition id="_19-isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_3-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_33-actionItem" structureRef="String" />
+  <itemDefinition id="_22-keyItem" structureRef="String" />
+  <itemDefinition id="_3-actionItem" structureRef="String" />
+  <itemDefinition id="_33-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="null" />
+  <itemDefinition id="_3-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_22-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_34-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_3-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_19-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_3-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_33-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_19-purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_38-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_33-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_34-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_34-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_34-isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_38-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_19-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_20-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_33-purgeExecutedItem" structureRef="Boolean" />
+  <itemDefinition id="_36-modeItem" structureRef="String" />
+  <itemDefinition id="_3-purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_21-actionItem" structureRef="String" />
+  <itemDefinition id="_20-purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_22-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_20-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_21-purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_modeItem" structureRef="String" />
+  <itemDefinition id="_3-modeItem" structureRef="String" />
+  <itemDefinition id="_21-modeItem" structureRef="String" />
+  <itemDefinition id="_20-entityIdItem" structureRef="String" />
+  <itemDefinition id="_33-isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_19-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_33-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_19-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_21-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_21-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_20-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_38-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_22-purgeRelationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_36-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_38-entityItem" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <itemDefinition id="_3-isDeletedItem" structureRef="Boolean" />
+  <itemDefinition id="_purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_34-modeItem" structureRef="String" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.purge.Purge" name="Purge" tns:packageName="com.irdeto.jumpstart.workflow.purge" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.domain.purge.*" />
+     <tns:import name="java.util.Map" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="com.irdeto.manager.task.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="entityType" itemSubjectRef="_entityTypeItem"/>
+    <property id="purgeExecuted" itemSubjectRef="_purgeExecutedItem"/>
+    <property id="entity" itemSubjectRef="_entityItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="purgeWrapper" itemSubjectRef="_purgeWrapperItem"/>
+    <property id="action" itemSubjectRef="_actionItem"/>
+    <property id="mode" itemSubjectRef="_modeItem"/>
+    <property id="relationshipList" itemSubjectRef="_relationshipListItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="purgeRelationshipList" itemSubjectRef="_purgeRelationshipListItem"/>
+    <property id="key" itemSubjectRef="_keyItem"/>
+    <property id="isDeleted" itemSubjectRef="_isDeletedItem"/>
+    <property id="signalMap" itemSubjectRef="null"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <endEvent id="_2" name="End" />
+    <task id="_3" name="Read Entity" tns:taskName="MediaManager8ReadTask" >
+      <ioSpecification>
+        <dataInput id="_3_EntityTypeInput" name="EntityType" />
+        <dataInput id="_3_EntityIDInput" name="EntityID" />
+        <dataInput id="_3_QueryInput" name="Query" />
+        <dataInput id="_3_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_3_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_3_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_3_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_3_QueryInput</dataInputRefs>
+          <dataInputRefs>_3_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_3_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_3_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_3_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_3_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_QueryInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_3_QueryInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_3_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_ResponseObjectOutput</sourceRef>
+        <targetRef>entity</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_5" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_6" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <intermediateCatchEvent id="_7" name="Signal" >
+      <dataOutput id="_7_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_7_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_7_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <scriptTask id="_8" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Purge workflow error: {}", errorMap.get("ExitMessage"));
+BeanUtil.getBean(LockManager.class).releaseLock("purge-"+entityId);
+</script>
+    </scriptTask>
+    <endEvent id="_9" name="End" />
+    <scriptTask id="_10" name="Get Purge Wrapper" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("purgeWrapper", PurgeWrapperFactory.getInstance(entity, action, mode));
+kcontext.setVariable("entityId", entity.getId());
+kcontext.setVariable("entityType", entity.getType());
+
+kcontext.setVariable("purgeExecuted", false);</script>
+    </scriptTask>
+    <exclusiveGateway id="_11" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <endEvent id="_12" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <scriptTask id="_13" name="Purge Executed" >
+      <script>kcontext.setVariable("purgeExecuted", true);
+BeanUtil.getBean(LockManager.class).releaseLock("purge-"+entityId);
+</script>
+    </scriptTask>
+    <intermediateCatchEvent id="_14" name="Timer" >
+      <timerEventDefinition>
+        <timeDuration xsi:type="tFormalExpression">#{purgeWrapper.getPurgeDelay()}</timeDuration>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+    <exclusiveGateway id="_15" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_17" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_16" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_19" name="Cascade Entities" tns:taskName="SyncSubprocess" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("relationshipList", purgeWrapper.getRelationshipList());</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_19_relationshipListInput" name="relationshipList" />
+        <dataInput id="_19_entityTypeInput" name="entityType" />
+        <dataInput id="_19_entityIdInput" name="entityId" />
+        <dataInput id="_19_SingletonInput" name="Singleton" />
+        <dataInput id="_19_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_19_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_19_exitMessageOutput" name="exitMessage" />
+        <dataOutput id="_19_exitStatusOutput" name="exitStatus" />
+        <inputSet>
+          <dataInputRefs>_19_relationshipListInput</dataInputRefs>
+          <dataInputRefs>_19_entityTypeInput</dataInputRefs>
+          <dataInputRefs>_19_entityIdInput</dataInputRefs>
+          <dataInputRefs>_19_SingletonInput</dataInputRefs>
+          <dataInputRefs>_19_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_19_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_19_exitMessageOutput</dataOutputRefs>
+          <dataOutputRefs>_19_exitStatusOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>relationshipList</sourceRef>
+        <targetRef>_19_relationshipListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entityType</sourceRef>
+        <targetRef>_19_entityTypeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entityId</sourceRef>
+        <targetRef>_19_entityIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_19_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_19_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_19_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_19_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_19_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.CascadeEntities</from>
+          <to xsi:type="tFormalExpression">_19_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_19_exitMessageOutput</sourceRef>
+        <targetRef>exitMessage</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_19_exitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_18" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_21" name="Cascade Purge" tns:taskName="SyncSubprocess" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("purgeRelationshipList", purgeWrapper.getPurgeRelationshipList());</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_21_relationshipListInput" name="relationshipList" />
+        <dataInput id="_21_entityTypeInput" name="entityType" />
+        <dataInput id="_21_entityIdInput" name="entityId" />
+        <dataInput id="_21_SingletonInput" name="Singleton" />
+        <dataInput id="_21_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_21_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_21_exitMessageOutput" name="exitMessage" />
+        <dataOutput id="_21_exitStatusOutput" name="exitStatus" />
+        <inputSet>
+          <dataInputRefs>_21_relationshipListInput</dataInputRefs>
+          <dataInputRefs>_21_entityTypeInput</dataInputRefs>
+          <dataInputRefs>_21_entityIdInput</dataInputRefs>
+          <dataInputRefs>_21_SingletonInput</dataInputRefs>
+          <dataInputRefs>_21_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_21_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_21_exitMessageOutput</dataOutputRefs>
+          <dataOutputRefs>_21_exitStatusOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>purgeRelationshipList</sourceRef>
+        <targetRef>_21_relationshipListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entityType</sourceRef>
+        <targetRef>_21_entityTypeInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entityId</sourceRef>
+        <targetRef>_21_entityIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_21_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_21_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_21_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_21_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_21_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.purge.CascadePurge</from>
+          <to xsi:type="tFormalExpression">_21_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_21_exitMessageOutput</sourceRef>
+        <targetRef>exitMessage</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_21_exitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_20" name="Purge From Endpoints" tns:taskName="SyncSubprocess" >
+      <ioSpecification>
+        <dataInput id="_20_purgeWrapperInput" name="purgeWrapper" />
+        <dataInput id="_20_SingletonInput" name="Singleton" />
+        <dataInput id="_20_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_20_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_20_exitMessageOutput" name="exitMessage" />
+        <dataOutput id="_20_exitStatusOutput" name="exitStatus" />
+        <inputSet>
+          <dataInputRefs>_20_purgeWrapperInput</dataInputRefs>
+          <dataInputRefs>_20_SingletonInput</dataInputRefs>
+          <dataInputRefs>_20_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_20_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_20_exitMessageOutput</dataOutputRefs>
+          <dataOutputRefs>_20_exitStatusOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>purgeWrapper</sourceRef>
+        <targetRef>_20_purgeWrapperInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_20_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_20_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_20_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_20_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_20_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.purge.PurgeFromEndpoints</from>
+          <to xsi:type="tFormalExpression">_20_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_20_exitMessageOutput</sourceRef>
+        <targetRef>exitMessage</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_20_exitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_23" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_22" name="Superseding Attain Lock" tns:taskName="SupersedingAttainLock" >
+      <ioSpecification>
+        <dataInput id="_22_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_22_LockIDInput" name="LockID" />
+        <inputSet>
+          <dataInputRefs>_22_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_22_LockIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_22_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_22_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_22_LockIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">purge-#{entityId}</from>
+          <to xsi:type="tFormalExpression">_22_LockIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_25" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <endEvent id="_24" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <exclusiveGateway id="_27" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_26" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <endEvent id="_29" name="End" />
+    <endEvent id="_28" name="End" />
+    <exclusiveGateway id="_31" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <endEvent id="_30" name="End" />
+    <task id="_34" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_34_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_34_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_34_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_34_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_35" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <intermediateCatchEvent id="_32" name="Signal" >
+      <dataOutput id="_32_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_32_Output</sourceRef>
+      <targetRef>signalMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_32_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="PURGE_FIRE"/>
+    </intermediateCatchEvent>
+    <task id="_33" name="Read Entity" tns:taskName="MediaManager8ReadTask" >
+      <ioSpecification>
+        <dataInput id="_33_EntityTypeInput" name="EntityType" />
+        <dataInput id="_33_EntityIDInput" name="EntityID" />
+        <dataInput id="_33_QueryInput" name="Query" />
+        <dataInput id="_33_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_33_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_33_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_33_EntityIDInput</dataInputRefs>
+          <dataInputRefs>_33_QueryInput</dataInputRefs>
+          <dataInputRefs>_33_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_33_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_33_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_33_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_33_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_33_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_33_QueryInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_33_QueryInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_33_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_33_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_33_ResponseObjectOutput</sourceRef>
+        <targetRef>entity</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_38" name="Cancel Tasks" tns:taskName="SyncSubprocess" >
+      <ioSpecification>
+        <dataInput id="_38_purgeWrapperInput" name="purgeWrapper" />
+        <dataInput id="_38_SingletonInput" name="Singleton" />
+        <dataInput id="_38_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_38_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_38_exitMessageOutput" name="exitMessage" />
+        <dataOutput id="_38_exitStatusOutput" name="exitStatus" />
+        <inputSet>
+          <dataInputRefs>_38_purgeWrapperInput</dataInputRefs>
+          <dataInputRefs>_38_SingletonInput</dataInputRefs>
+          <dataInputRefs>_38_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_38_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_38_exitMessageOutput</dataOutputRefs>
+          <dataOutputRefs>_38_exitStatusOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>purgeWrapper</sourceRef>
+        <targetRef>_38_purgeWrapperInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_38_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_38_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_38_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_38_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_38_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.purge.CancelTasks</from>
+          <to xsi:type="tFormalExpression">_38_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_38_exitMessageOutput</sourceRef>
+        <targetRef>exitMessage</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_38_exitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_39" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_36" name="Delete Entity" tns:taskName="MediaManager8DeleteTask" >
+      <ioSpecification>
+        <dataInput id="_36_EntityTypeInput" name="EntityType" />
+        <dataInput id="_36_EntityIdInput" name="EntityId" />
+        <dataInput id="_36_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_36_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_36_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_36_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_36_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_36_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_36_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_36_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_36_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_36_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_37" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_43" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <endEvent id="_40" name="End" />
+    <parallelGateway id="_41" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <exclusiveGateway id="_46" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <parallelGateway id="_44" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <parallelGateway id="_45" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <scriptTask id="_jbpm-unique-2" name="Map Purge Signal" scriptFormat="http://www.java.com/java" >
+      <script>Map&lt;String, Object&gt; signalData = (Map&lt;String, Object&gt;) kcontext.getVariable("signalMap");
+
+if (signalData != null) {
+	for(Map.Entry&lt;String, Object&gt; signalDataEntry : signalData.entrySet()){
+		kcontext.setVariable(signalDataEntry.getKey(), signalDataEntry.getValue());
+	}
+}</script>
+    </scriptTask>
+    <exclusiveGateway id="_jbpm-unique-1" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+
+    <!-- connections -->
+    <sequenceFlow id="_11-_2" sourceRef="_11" targetRef="_2" name="Deferred" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_5-_3" sourceRef="_5" targetRef="_3" name="Read Entity" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return entity == null || isDeleted == null || isDeleted == false;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_31-_5" sourceRef="_31" targetRef="_5" />
+    <sequenceFlow id="_3-_6" sourceRef="_3" targetRef="_6" />
+    <sequenceFlow id="_5-_6" sourceRef="_5" targetRef="_6" name="Known Entity" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_46-_7" sourceRef="_46" targetRef="_7" />
+    <sequenceFlow id="_45-_8" sourceRef="_45" targetRef="_8" />
+    <sequenceFlow id="_8-_9" sourceRef="_8" targetRef="_9" />
+    <sequenceFlow id="_6-_10" sourceRef="_6" targetRef="_10" />
+    <sequenceFlow id="_15-_11" sourceRef="_15" targetRef="_11" />
+    <sequenceFlow id="_13-_12" sourceRef="_13" targetRef="_12" />
+    <sequenceFlow id="_37-_13" sourceRef="_37" targetRef="_13" />
+    <sequenceFlow id="_16-_14" sourceRef="_16" targetRef="_14" name="Deferred" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return PurgeWrapper.MODE_DEFERRED.equals(mode);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_16-_15" sourceRef="_16" targetRef="_15" name="Now" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_33-_15" sourceRef="_33" targetRef="_15" />
+    <sequenceFlow id="_10-_17" sourceRef="_10" targetRef="_17" />
+    <sequenceFlow id="_17-_16" sourceRef="_17" targetRef="_16" name="Purgable" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return purgeWrapper != null;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_26-_19" sourceRef="_26" targetRef="_19" name="Success" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_17-_18" sourceRef="_17" targetRef="_18" name="Not Purgable" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_25-_21" sourceRef="_25" targetRef="_21" name="Success" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_23-_20" sourceRef="_23" targetRef="_20" name="Purge" tns:priority="2" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_22-_23" sourceRef="_22" targetRef="_23" />
+    <sequenceFlow id="_11-_22" sourceRef="_11" targetRef="_22" name="Purge" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return purgeWrapper.purgeDue();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-1-_25" sourceRef="_jbpm-unique-1" targetRef="_25" />
+    <sequenceFlow id="_23-_24" sourceRef="_23" targetRef="_24" name="Purge Executed" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return purgeExecuted;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_19-_27" sourceRef="_19" targetRef="_27" />
+    <sequenceFlow id="_21-_26" sourceRef="_21" targetRef="_26" />
+    <sequenceFlow id="_25-_29" sourceRef="_25" targetRef="_29" name="Failure" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "FAILURE".equals(exitStatus);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_27-_28" sourceRef="_27" targetRef="_28" name="Failure" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "FAILURE".equals(exitStatus);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_34-_31" sourceRef="_34" targetRef="_31" />
+    <sequenceFlow id="_jbpm-unique-2-_31" sourceRef="_jbpm-unique-2" targetRef="_31" />
+    <sequenceFlow id="_26-_30" sourceRef="_26" targetRef="_30" name="Failure" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "FAILURE".equals(exitStatus);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_41-_34" sourceRef="_41" targetRef="_34" />
+    <sequenceFlow id="_39-_35" sourceRef="_39" targetRef="_35" name="Success" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_43-_32" sourceRef="_43" targetRef="_32" />
+    <sequenceFlow id="_14-_33" sourceRef="_14" targetRef="_33" />
+    <sequenceFlow id="_27-_38" sourceRef="_27" targetRef="_38" name="Success" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_38-_39" sourceRef="_38" targetRef="_39" />
+    <sequenceFlow id="_35-_36" sourceRef="_35" targetRef="_36" name="Delete" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return isDeleted == null || isDeleted == false;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_36-_37" sourceRef="_36" targetRef="_37" />
+    <sequenceFlow id="_35-_37" sourceRef="_35" targetRef="_37" name="Already Deleted" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_41-_43" sourceRef="_41" targetRef="_43" />
+    <sequenceFlow id="_44-_43" sourceRef="_44" targetRef="_43" />
+    <sequenceFlow id="_39-_40" sourceRef="_39" targetRef="_40" name="Failure" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "FAILURE".equals(exitStatus);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_1-_41" sourceRef="_1" targetRef="_41" />
+    <sequenceFlow id="_41-_46" sourceRef="_41" targetRef="_46" />
+    <sequenceFlow id="_45-_46" sourceRef="_45" targetRef="_46" />
+    <sequenceFlow id="_32-_44" sourceRef="_32" targetRef="_44" />
+    <sequenceFlow id="_7-_45" sourceRef="_7" targetRef="_45" />
+    <sequenceFlow id="_44-_jbpm-unique-2" sourceRef="_44" targetRef="_jbpm-unique-2" />
+    <sequenceFlow id="_23-_jbpm-unique-1" sourceRef="_23" targetRef="_jbpm-unique-1" name="Nothing To Purge" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return entity.getLastPublishDateTime() == null;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_20-_jbpm-unique-1" sourceRef="_20" targetRef="_jbpm-unique-1" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.purge.Purge" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="36" y="72" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="312" y="732" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="252" y="288" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="108" y="288" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="108" y="372" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="732" y="144" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="600" y="216" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="648" y="288" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_10" >
+        <dc:Bounds x="36" y="444" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_11" >
+        <dc:Bounds x="108" y="732" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="108" y="1800" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="36" y="1728" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_14" >
+        <dc:Bounds x="312" y="588" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_15" >
+        <dc:Bounds x="108" y="660" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_17" >
+        <dc:Bounds x="108" y="516" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_16" >
+        <dc:Bounds x="108" y="588" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_19" >
+        <dc:Bounds x="36" y="1272" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_18" >
+        <dc:Bounds x="312" y="516" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_21" >
+        <dc:Bounds x="36" y="1128" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_20" >
+        <dc:Bounds x="240" y="984" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_23" >
+        <dc:Bounds x="108" y="876" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_22" >
+        <dc:Bounds x="36" y="804" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_25" >
+        <dc:Bounds x="108" y="1056" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_24" >
+        <dc:Bounds x="312" y="876" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_27" >
+        <dc:Bounds x="108" y="1344" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_26" >
+        <dc:Bounds x="108" y="1200" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_29" >
+        <dc:Bounds x="312" y="1056" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_28" >
+        <dc:Bounds x="312" y="1344" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_31" >
+        <dc:Bounds x="108" y="216" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_30" >
+        <dc:Bounds x="312" y="1200" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_34" >
+        <dc:Bounds x="48" y="144" width="169" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_35" >
+        <dc:Bounds x="108" y="1572" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_32" >
+        <dc:Bounds x="516" y="216" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_33" >
+        <dc:Bounds x="264" y="660" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_38" >
+        <dc:Bounds x="36" y="1416" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_39" >
+        <dc:Bounds x="108" y="1488" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_36" >
+        <dc:Bounds x="264" y="1572" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_37" >
+        <dc:Bounds x="108" y="1656" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_43" >
+        <dc:Bounds x="516" y="144" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_40" >
+        <dc:Bounds x="312" y="1488" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_41" >
+        <dc:Bounds x="108" y="72" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_46" >
+        <dc:Bounds x="732" y="72" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_44" >
+        <dc:Bounds x="432" y="216" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_45" >
+        <dc:Bounds x="648" y="144" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-2" >
+        <dc:Bounds x="252" y="216" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-1" >
+        <dc:Bounds x="108" y="984" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_11-_2" >
+        <di:waypoint x="132" y="756" />
+        <di:waypoint x="336" y="756" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_3" >
+        <di:waypoint x="132" y="312" />
+        <di:waypoint x="324" y="312" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_31-_5" >
+        <di:waypoint x="132" y="240" />
+        <di:waypoint x="132" y="312" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_6" >
+        <di:waypoint x="324" y="312" />
+        <di:waypoint x="132" y="396" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_6" >
+        <di:waypoint x="132" y="312" />
+        <di:waypoint x="132" y="396" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_46-_7" >
+        <di:waypoint x="756" y="96" />
+        <di:waypoint x="756" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_45-_8" >
+        <di:waypoint x="672" y="168" />
+        <di:waypoint x="672" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_9" >
+        <di:waypoint x="672" y="240" />
+        <di:waypoint x="672" y="312" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_6-_10" >
+        <di:waypoint x="132" y="396" />
+        <di:waypoint x="132" y="468" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_15-_11" >
+        <di:waypoint x="132" y="684" />
+        <di:waypoint x="132" y="756" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_12" >
+        <di:waypoint x="132" y="1752" />
+        <di:waypoint x="132" y="1824" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_37-_13" >
+        <di:waypoint x="132" y="1680" />
+        <di:waypoint x="132" y="1752" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_16-_14" >
+        <di:waypoint x="132" y="612" />
+        <di:waypoint x="336" y="612" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_16-_15" >
+        <di:waypoint x="132" y="612" />
+        <di:waypoint x="132" y="684" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_33-_15" >
+        <di:waypoint x="336" y="684" />
+        <di:waypoint x="132" y="684" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10-_17" >
+        <di:waypoint x="132" y="468" />
+        <di:waypoint x="132" y="540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_16" >
+        <di:waypoint x="132" y="540" />
+        <di:waypoint x="132" y="612" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_26-_19" >
+        <di:waypoint x="132" y="1224" />
+        <di:waypoint x="132" y="1296" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_17-_18" >
+        <di:waypoint x="132" y="540" />
+        <di:waypoint x="336" y="540" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_25-_21" >
+        <di:waypoint x="132" y="1080" />
+        <di:waypoint x="132" y="1152" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_20" >
+        <di:waypoint x="132" y="900" />
+        <di:waypoint x="336" y="1008" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_22-_23" >
+        <di:waypoint x="132" y="828" />
+        <di:waypoint x="132" y="900" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_11-_22" >
+        <di:waypoint x="132" y="756" />
+        <di:waypoint x="132" y="828" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_25" >
+        <di:waypoint x="132" y="1008" />
+        <di:waypoint x="132" y="1080" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_24" >
+        <di:waypoint x="132" y="900" />
+        <di:waypoint x="336" y="900" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_19-_27" >
+        <di:waypoint x="132" y="1296" />
+        <di:waypoint x="132" y="1368" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_21-_26" >
+        <di:waypoint x="132" y="1152" />
+        <di:waypoint x="132" y="1224" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_25-_29" >
+        <di:waypoint x="132" y="1080" />
+        <di:waypoint x="336" y="1080" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_27-_28" >
+        <di:waypoint x="132" y="1368" />
+        <di:waypoint x="336" y="1368" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_34-_31" >
+        <di:waypoint x="132" y="168" />
+        <di:waypoint x="132" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-2-_31" >
+        <di:waypoint x="324" y="240" />
+        <di:waypoint x="132" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_26-_30" >
+        <di:waypoint x="132" y="1224" />
+        <di:waypoint x="336" y="1224" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_34" >
+        <di:waypoint x="132" y="96" />
+        <di:waypoint x="132" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_39-_35" >
+        <di:waypoint x="132" y="1512" />
+        <di:waypoint x="132" y="1596" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_43-_32" >
+        <di:waypoint x="540" y="168" />
+        <di:waypoint x="540" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_14-_33" >
+        <di:waypoint x="336" y="612" />
+        <di:waypoint x="336" y="684" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_27-_38" >
+        <di:waypoint x="132" y="1368" />
+        <di:waypoint x="132" y="1440" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_38-_39" >
+        <di:waypoint x="132" y="1440" />
+        <di:waypoint x="132" y="1512" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_35-_36" >
+        <di:waypoint x="132" y="1596" />
+        <di:waypoint x="336" y="1596" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_36-_37" >
+        <di:waypoint x="336" y="1596" />
+        <di:waypoint x="132" y="1680" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_35-_37" >
+        <di:waypoint x="132" y="1596" />
+        <di:waypoint x="132" y="1680" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_43" >
+        <di:waypoint x="132" y="96" />
+        <di:waypoint x="540" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_44-_43" >
+        <di:waypoint x="456" y="240" />
+        <di:waypoint x="540" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_39-_40" >
+        <di:waypoint x="132" y="1512" />
+        <di:waypoint x="336" y="1512" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_41" >
+        <di:waypoint x="60" y="96" />
+        <di:waypoint x="132" y="96" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_41-_46" >
+        <di:waypoint x="132" y="96" />
+        <di:waypoint x="756" y="96" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_45-_46" >
+        <di:waypoint x="672" y="168" />
+        <di:waypoint x="756" y="96" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_32-_44" >
+        <di:waypoint x="540" y="240" />
+        <di:waypoint x="456" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_45" >
+        <di:waypoint x="756" y="168" />
+        <di:waypoint x="672" y="168" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_44-_jbpm-unique-2" >
+        <di:waypoint x="456" y="240" />
+        <di:waypoint x="324" y="240" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_23-_jbpm-unique-1" >
+        <di:waypoint x="132" y="900" />
+        <di:waypoint x="132" y="1008" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_20-_jbpm-unique-1" >
+        <di:waypoint x="336" y="1008" />
+        <di:waypoint x="132" y="1008" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:element name="dataWrapper">
+		<xsd:complexType>
+			<xsd:sequence>
+					<xsd:element name="parameters" type="ParametersType" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute name="processId" type="xsd:string" use="required"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:complexType name="ParametersType">
+		<xsd:sequence minOccurs="0" maxOccurs="unbounded">
+			<xsd:element name="param" type="ParamType"/>
+		</xsd:sequence>
+	</xsd:complexType>
+	<xsd:complexType name="ParamType">
+		<xsd:sequence>
+			<xsd:element name="name"/>
+			<xsd:element name="value"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:schema>

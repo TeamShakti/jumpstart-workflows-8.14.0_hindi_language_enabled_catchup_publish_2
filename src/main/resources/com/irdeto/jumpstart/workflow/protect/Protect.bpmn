@@ -1,0 +1,2240 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_147-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_128-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_146-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_84-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_84-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_147-viewNameItem" structureRef="String" />
+  <itemDefinition id="_130-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_147-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_162-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_160-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_161-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_109-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_160-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_145-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_155-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_109-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_84-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_162-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_145-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_130-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_128-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_142-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_163-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_127-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_127-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-uriIdItem" structureRef="String" />
+  <itemDefinition id="_160-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_127-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_128-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_162-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_163-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_147-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_142-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_128-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_161-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_84-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_154-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_147-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_154-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_145-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_78-contentIdItem" structureRef="String" />
+  <itemDefinition id="_142-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_155-viewNameItem" structureRef="String" />
+  <itemDefinition id="_142-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_154-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_84-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_163-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_78-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_130-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_154-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_127-entityIdItem" structureRef="String" />
+  <itemDefinition id="_146-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_142-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_84-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_78-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_145-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_145-contentIdItem" structureRef="String" />
+  <itemDefinition id="_161-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_128-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_154-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_155-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_147-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_146-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_154-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_uriIdItem" structureRef="String" />
+  <itemDefinition id="_162-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_154-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_84-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_146-entityIdItem" structureRef="String" />
+  <itemDefinition id="_145-viewNameItem" structureRef="String" />
+  <itemDefinition id="_163-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_142-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_160-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_155-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_146-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_127-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_128-entityIdItem" structureRef="String" />
+  <itemDefinition id="_154-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_154-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_162-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_163-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_147-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_109-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_146-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-viewNameItem" structureRef="String" />
+  <itemDefinition id="_78-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_130-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_145-uriIdItem" structureRef="String" />
+  <itemDefinition id="_78-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_130-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_147-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_127-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_145-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_160-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_142-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_155-entityIdItem" structureRef="String" />
+  <itemDefinition id="_127-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_154-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_84-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_162-contentIdItem" structureRef="String" />
+  <itemDefinition id="_processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_163-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_84-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_160-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_147-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_84-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_160-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_78-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_145-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-contentIdItem" structureRef="String" />
+  <itemDefinition id="_84-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_154-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_84-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_128-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_109-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_78-programTitleItem" structureRef="String" />
+  <itemDefinition id="_161-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_128-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_145-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_146-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_78-viewNameItem" structureRef="String" />
+  <itemDefinition id="_160-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-viewNameItem" structureRef="String" />
+  <itemDefinition id="_147-contentIdItem" structureRef="String" />
+  <itemDefinition id="_130-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_147-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_78-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_147-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_109-programTitleItem" structureRef="String" />
+  <itemDefinition id="_130-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_154-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_128-programTitleItem" structureRef="String" />
+  <itemDefinition id="_145-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_163-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_146-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_109-entityIdItem" structureRef="String" />
+  <itemDefinition id="_142-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_109-contentIdItem" structureRef="String" />
+  <itemDefinition id="_147-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_155-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_109-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_127-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_162-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_84-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_161-contentIdItem" structureRef="String" />
+  <itemDefinition id="_154-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_161-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_162-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_84-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_161-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_154-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_154-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_161-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_128-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_127-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_145-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_109-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_155-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_147-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_127-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_128-contentIdItem" structureRef="String" />
+  <itemDefinition id="_fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_162-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_84-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_163-viewNameItem" structureRef="String" />
+  <itemDefinition id="_84-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_128-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_155-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_127-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_155-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_163-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_147-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_155-contentIdItem" structureRef="String" />
+  <itemDefinition id="_161-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_84-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_128-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_161-entityIdItem" structureRef="String" />
+  <itemDefinition id="_130-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_147-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-contentIdItem" structureRef="String" />
+  <itemDefinition id="_127-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_163-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_127-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_155-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_155-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_163-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_130-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_160-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_128-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_128-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_163-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_128-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_162-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_147-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_78-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_147-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_142-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_155-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_78-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_163-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_161-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_161-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_161-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_155-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_163-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_127-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_155-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_154-entityIdItem" structureRef="String" />
+  <itemDefinition id="_162-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_154-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_142-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_78-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_128-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_147-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_142-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_127-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_84-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_127-viewNameItem" structureRef="String" />
+  <itemDefinition id="_145-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_127-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_160-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_146-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_142-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_146-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_146-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_109-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_78-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_146-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_84-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_161-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_163-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_84-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_128-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_163-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_145-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_162-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_146-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_142-contentIdItem" structureRef="String" />
+  <itemDefinition id="_155-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_84-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_163-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_84-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_145-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_160-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_109-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_78-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_154-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_130-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_109-uriIdItem" structureRef="String" />
+  <itemDefinition id="_protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_160-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_162-uriIdItem" structureRef="String" />
+  <itemDefinition id="_142-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_161-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_78-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-uriIdItem" structureRef="String" />
+  <itemDefinition id="_142-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_128-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_109-viewNameItem" structureRef="String" />
+  <itemDefinition id="_163-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_160-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_84-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_127-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_146-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_160-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_163-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_84-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_160-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_84-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_130-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_162-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_109-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_163-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_127-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_84-entityIdItem" structureRef="String" />
+  <itemDefinition id="_145-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_161-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_155-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_146-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_160-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_147-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_109-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_109-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_145-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_147-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_160-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_128-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_147-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_162-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_160-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_130-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_128-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_145-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_109-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_84-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_147-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_viewNameItem" structureRef="String" />
+  <itemDefinition id="_84-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_163-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_146-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_154-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_142-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_155-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_155-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_130-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_127-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_127-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_160-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_155-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_78-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_142-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_161-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_145-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_146-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_109-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_84-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_78-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_130-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_147-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_160-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_161-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_155-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_146-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_160-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_154-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_142-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_145-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_128-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_84-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_127-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_84-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_160-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_130-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_160-viewNameItem" structureRef="String" />
+  <itemDefinition id="_130-entityIdItem" structureRef="String" />
+  <itemDefinition id="_130-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_155-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_128-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_130-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_78-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_163-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_127-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_109-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_163-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_84-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_130-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_130-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_155-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_147-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_147-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_146-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_146-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_145-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_162-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_127-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_146-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_146-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_160-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_155-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_145-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_contentTypeItem" structureRef="String" />
+  <itemDefinition id="_cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_155-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_130-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_160-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_109-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_109-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_162-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_84-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_128-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_146-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_109-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_146-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_84-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_84-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_109-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_109-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_130-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_109-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-programTitleItem" structureRef="String" />
+  <itemDefinition id="_147-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_147-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_128-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_127-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_145-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_163-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-uriIdItem" structureRef="String" />
+  <itemDefinition id="_130-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_78-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_155-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_128-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_154-contentIdItem" structureRef="String" />
+  <itemDefinition id="_154-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_128-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_109-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_162-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-viewNameItem" structureRef="String" />
+  <itemDefinition id="_160-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_161-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_160-entityIdItem" structureRef="String" />
+  <itemDefinition id="_109-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_161-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_109-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_84-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_160-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_84-contentIdItem" structureRef="String" />
+  <itemDefinition id="_145-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_128-viewNameItem" structureRef="String" />
+  <itemDefinition id="_128-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_130-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_155-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_147-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_163-programTitleItem" structureRef="String" />
+  <itemDefinition id="_162-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_145-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_84-programTitleItem" structureRef="String" />
+  <itemDefinition id="_155-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_147-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_147-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_142-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_145-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_162-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_162-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_109-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_84-viewNameItem" structureRef="String" />
+  <itemDefinition id="_155-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_142-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_130-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_127-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-programTitleItem" structureRef="String" />
+  <itemDefinition id="_142-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_84-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_154-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_127-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_154-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_145-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_146-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_155-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_155-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_84-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_142-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_128-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_78-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_146-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_127-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_147-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_163-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_162-viewNameItem" structureRef="String" />
+  <itemDefinition id="_160-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_128-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_161-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_161-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_142-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_145-programTitleItem" structureRef="String" />
+  <itemDefinition id="_127-programTitleItem" structureRef="String" />
+  <itemDefinition id="_154-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_154-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_162-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_127-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_147-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_78-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_163-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_78-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_154-uriIdItem" structureRef="String" />
+  <itemDefinition id="_162-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_145-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_109-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_128-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_109-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_155-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_147-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_154-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_163-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_109-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_142-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_145-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_162-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_147-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_160-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_145-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_109-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_78-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_109-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_160-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_146-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_130-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_154-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_163-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_161-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_162-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_127-uriIdItem" structureRef="String" />
+  <itemDefinition id="_154-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_163-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_155-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_128-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_155-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_128-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_155-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_161-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_154-viewNameItem" structureRef="String" />
+  <itemDefinition id="_162-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_78-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_147-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_84-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_162-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_84-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_161-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_161-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_163-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_142-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_128-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_162-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_78-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_154-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_142-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_78-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_154-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_142-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_161-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_163-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_142-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_109-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_programTitleItem" structureRef="String" />
+  <itemDefinition id="_128-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_109-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_127-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_84-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_161-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_142-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_160-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_145-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_127-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_127-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_128-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_147-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_145-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_154-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_162-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_162-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_84-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_142-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_109-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_142-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_78-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_147-uriIdItem" structureRef="String" />
+  <itemDefinition id="_160-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_128-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_128-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-programTitleItem" structureRef="String" />
+  <itemDefinition id="_155-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_128-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_161-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_109-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_109-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_154-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_127-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_128-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_145-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_142-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_163-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_130-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_155-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_147-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_145-entityIdItem" structureRef="String" />
+  <itemDefinition id="_128-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_160-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_163-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_146-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_128-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_155-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_145-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_127-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_127-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-viewNameItem" structureRef="String" />
+  <itemDefinition id="_163-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_163-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_127-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_162-entityIdItem" structureRef="String" />
+  <itemDefinition id="_78-entityIdItem" structureRef="String" />
+  <itemDefinition id="_146-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_127-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_147-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_154-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_109-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_130-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_contentIdItem" structureRef="String" />
+  <itemDefinition id="_160-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_130-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_128-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_154-programTitleItem" structureRef="String" />
+  <itemDefinition id="_146-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_109-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-contentIdItem" structureRef="String" />
+  <itemDefinition id="_147-entityIdItem" structureRef="String" />
+  <itemDefinition id="_162-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_128-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_130-uriIdItem" structureRef="String" />
+  <itemDefinition id="_127-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_162-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_160-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_130-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_145-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_147-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_mediaIdItem" structureRef="String" />
+  <itemDefinition id="_155-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_127-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_147-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_84-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_130-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_146-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_154-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_163-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_127-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_130-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-programTitleItem" structureRef="String" />
+  <itemDefinition id="_130-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_128-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_154-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-protectingSourceSegmentsItem" structureRef="String" />
+  <itemDefinition id="_146-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_163-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_147-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_130-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_128-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_147-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_109-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_130-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_127-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_128-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_109-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_161-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_155-programTitleItem" structureRef="String" />
+  <itemDefinition id="_155-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_147-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_128-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_84-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_142-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_146-programTitleItem" structureRef="String" />
+  <itemDefinition id="_130-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_160-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_162-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_127-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_127-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_145-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_146-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_fetchFileItem" structureRef="String" />
+  <itemDefinition id="_161-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_147-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_147-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_161-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_147-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_147-programTitleItem" structureRef="String" />
+  <itemDefinition id="_142-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_163-entityIdItem" structureRef="String" />
+  <itemDefinition id="_146-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_127-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_130-policyGroupIdItem" structureRef="String" />
+  <itemDefinition id="_155-uriIdItem" structureRef="String" />
+  <itemDefinition id="_162-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_162-fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_145-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_154-protectWrapperItem" structureRef="com.irdeto.jumpstart.domain.protect.ProtectWrapper" />
+  <itemDefinition id="_84-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_130-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_154-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_142-programTitleItem" structureRef="String" />
+  <itemDefinition id="_142-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_78-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_142-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_162-profileItem" structureRef="com.irdeto.jumpstart.domain.config.Profile" />
+  <itemDefinition id="_147-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_162-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_142-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_160-contentIdItem" structureRef="String" />
+  <itemDefinition id="_78-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_109-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_109-maintainRelationshipsListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_146-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_130-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_146-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_109-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_162-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_109-m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_84-fetchFileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-queryFilterParameterItem" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_160-contentTypeItem" structureRef="String" />
+  <itemDefinition id="_109-cpsFtpTargetItem" structureRef="String" />
+  <itemDefinition id="_161-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_130-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_163-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_109-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_142-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_130-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_161-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_84-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_127-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_128-transcodedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_142-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_109-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_84-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_163-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_78-fetchFileItem" structureRef="String" />
+  <itemDefinition id="_146-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_127-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_160-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_127-contentIdItem" structureRef="String" />
+  <itemDefinition id="_84-m3u8FilenameItem" structureRef="String" />
+  <itemDefinition id="_160-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_142-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_145-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_145-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_127-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-protectedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.ProtectVideoSub" />
+  <itemDefinition id="_130-subcontentTypeItem" structureRef="String" />
+  <itemDefinition id="_146-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_109-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_162-sourceSubcontentItem" structureRef="com.irdeto.jumpstart.domain.SourceVideoSub" />
+  <itemDefinition id="_142-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_155-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_161-protectProfileMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_fileInfoItem" structureRef="com.irdeto.domain.qts.response.QTSFileInfo" />
+  <itemDefinition id="_146-videoContentIdItem" structureRef="String" />
+  <itemDefinition id="_78-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_109-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-sourceForDeleteItem" structureRef="String" />
+  <itemDefinition id="_146-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-processedVideoContentIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_147-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_154-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_78-transcodedSubcontentItem" structureRef="com.irdeto.jumpstart.domain.TransVideoSub" />
+  <itemDefinition id="_155-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_127-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_127-sourceEncryptItem" structureRef="String" />
+  <itemDefinition id="_161-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_142-entityIdItem" structureRef="String" />
+  <itemDefinition id="_128-protectWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_128-uriIdItem" structureRef="String" />
+  <itemDefinition id="_146-protectedSubcontentListItem" structureRef="java.util.List" />
+  <itemDefinition id="_127-sourceSegmentsItem" structureRef="com.irdeto.jumpstart.workflow.FilenameSegments" />
+  <itemDefinition id="_78-uriIdItem" structureRef="String" />
+  <itemDefinition id="_155-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_78-sourceUploadItem" structureRef="String" />
+  <itemDefinition id="_145-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_160-programItem" structureRef="com.irdeto.jumpstart.domain.Program" />
+  <itemDefinition id="_161-targetUploadItem" structureRef="String" />
+  <itemDefinition id="_84-uriIdItem" structureRef="String" />
+  <itemDefinition id="_161-protectProfileItem" structureRef="com.irdeto.jumpstart.domain.ProtectProfile" />
+  <itemDefinition id="_160-uriIdItem" structureRef="String" />
+  <itemDefinition id="_130-enableActiveCloak2Item" structureRef="String" />
+  <itemDefinition id="_160-relationshipListItem" structureRef="java.util.List" />
+  <itemDefinition id="_146-uriIdItem" structureRef="String" />
+  <itemDefinition id="_targetUploadItem" structureRef="String" />
+  <itemDefinition id="_142-cpsSourceUrlItem" structureRef="String" />
+  <itemDefinition id="_128-transcodeProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_m3u8indexStringItem" structureRef="String" />
+  <itemDefinition id="_109-relationshipMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_128-drmEncryptionTypeItem" structureRef="String" />
+  <itemDefinition id="_147-processInstanceIdListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-termWrapperListItem" structureRef="java.util.List" />
+  <itemDefinition id="_78-configItem" structureRef="com.irdeto.domain.CheckedMap" />
+  <itemDefinition id="_109-sourceVersionItem" structureRef="Integer" />
+  <itemDefinition id="_162-protectProfileListItem" structureRef="java.util.List" />
+  <itemDefinition id="_145-mediaIdItem" structureRef="String" />
+  <itemDefinition id="_130-protectionWorkflowItem" structureRef="String" />
+  <itemDefinition id="_127-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_147-licenseUrlItem" structureRef="String" />
+  <itemDefinition id="_163-targetEncryptItem" structureRef="String" />
+  <itemDefinition id="_84-protectionWorkflowItem" structureRef="String" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.protect.Protect" name="Protect" tns:packageName="com.irdeto.jumpstart.workflow.protect" tns:version="1.0" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.domain.mmentityapi.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.property.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.*" />
+     <tns:import name="java.util.*" />
+     <tns:import name="com.irdeto.manager.lock.*" />
+     <tns:import name="com.irdeto.domain.operation.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.config.*" />
+     <tns:import name="com.irdeto.jumpstart.workflow.protect.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.protect.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="config" itemSubjectRef="_configItem"/>
+    <property id="programTitle" itemSubjectRef="_programTitleItem"/>
+    <property id="viewName" itemSubjectRef="_viewNameItem"/>
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="program" itemSubjectRef="_programItem"/>
+    <property id="videoContentId" itemSubjectRef="_videoContentIdItem"/>
+    <property id="processInstanceIdList" itemSubjectRef="_processInstanceIdListItem"/>
+    <property id="protectProfile" itemSubjectRef="_protectProfileItem"/>
+    <property id="queryFilterParameter" itemSubjectRef="_queryFilterParameterItem"/>
+    <property id="mm8Response" itemSubjectRef="_mm8ResponseItem"/>
+    <property id="protectProfileList" itemSubjectRef="_protectProfileListItem"/>
+    <property id="policyGroupId" itemSubjectRef="_policyGroupIdItem"/>
+    <property id="relationshipMap" itemSubjectRef="_relationshipMapItem"/>
+    <property id="relationshipList" itemSubjectRef="_relationshipListItem"/>
+    <property id="sourceSubcontent" itemSubjectRef="_sourceSubcontentItem"/>
+    <property id="transcodedSubcontentList" itemSubjectRef="_transcodedSubcontentListItem"/>
+    <property id="protectedSubcontentList" itemSubjectRef="_protectedSubcontentListItem"/>
+    <property id="transcodedSubcontent" itemSubjectRef="_transcodedSubcontentItem"/>
+    <property id="protectProfileMap" itemSubjectRef="_protectProfileMapItem"/>
+    <property id="transcodeProfileList" itemSubjectRef="_transcodeProfileListItem"/>
+    <property id="maintainRelationshipsCommandsList" itemSubjectRef="_maintainRelationshipsListItem"/>
+    <property id="protectedSubcontent" itemSubjectRef="_protectedSubcontentItem"/>
+    <property id="termWrapperList" itemSubjectRef="_termWrapperListItem"/>
+    <property id="protectWrapper" itemSubjectRef="_protectWrapperItem"/>
+    <property id="protectWrapperList" itemSubjectRef="_protectWrapperListItem"/>
+    <property id="fetchFile" itemSubjectRef="_fetchFileItem"/>
+    <property id="cpsSourceUrl" itemSubjectRef="_cpsSourceUrlItem"/>
+    <property id="m3u8indexString" itemSubjectRef="_m3u8indexStringItem"/>
+    <property id="m3u8Filename" itemSubjectRef="_m3u8FilenameItem"/>
+    <property id="cpsFtpTarget" itemSubjectRef="_cpsFtpTargetItem"/>
+    <property id="fetchFileList" itemSubjectRef="_fetchFileListItem"/>
+    <property id="sourceEncrypt" itemSubjectRef="_sourceEncryptItem"/>
+    <property id="targetEncrypt" itemSubjectRef="_targetEncryptItem"/>
+    <property id="drmEncryptionType" itemSubjectRef="_drmEncryptionTypeItem"/>
+    <property id="enableActiveCloak2" itemSubjectRef="_enableActiveCloak2Item"/>
+    <property id="licenseUrl" itemSubjectRef="_licenseUrlItem"/>
+    <property id="contentId" itemSubjectRef="_contentIdItem"/>
+    <property id="mediaId" itemSubjectRef="_mediaIdItem"/>
+    <property id="subcontentType" itemSubjectRef="_subcontentTypeItem"/>
+    <property id="fileInfo" itemSubjectRef="_fileInfoItem"/>
+    <property id="sourceUpload" itemSubjectRef="_sourceUploadItem"/>
+    <property id="targetUpload" itemSubjectRef="_targetUploadItem"/>
+    <property id="sourceForDelete" itemSubjectRef="_sourceForDeleteItem"/>
+    <property id="profile" itemSubjectRef="_profileItem"/>
+    <property id="processedVideoContentIdList" itemSubjectRef="_processedVideoContentIdListItem"/>
+    <property id="contentType" itemSubjectRef="_contentTypeItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="sourceSegments" itemSubjectRef="_sourceSegmentsItem"/>
+    <property id="uriId" itemSubjectRef="_uriIdItem"/>
+    <property id="protectingSourceSegments" itemSubjectRef="_protectingSourceSegmentsItem"/>
+    <property id="protectionWorkflow" itemSubjectRef="_protectionWorkflowItem"/>
+    <property id="sourceVersion" itemSubjectRef="_sourceVersionItem"/>
+
+    <!-- nodes -->
+    <intermediateCatchEvent id="_68" name="Signal" >
+      <dataOutput id="_68_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_68_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_68_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <exclusiveGateway id="_137" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <endEvent id="_136" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <exclusiveGateway id="_139" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <endEvent id="_4" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <exclusiveGateway id="_141" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_140" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_66" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Protect Workflow error: {}", errorMap.get("ExitMessage"));
+BeanUtil.getBean(LockManager.class).releaseLock("program-protect-"+entityId);</script>
+    </scriptTask>
+    <exclusiveGateway id="_143" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_142" name="Read T-Transcode Profiles" tns:taskName="MediaManager8ReadRelationshipsTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("transcodedSubcontent", sourceSubcontent.getTransSubs().get((Integer)transcodedSubcontentList.remove(0)));</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>ProtectHelper.setSourceFileList(kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_142_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_142_RelationshipEntityTypeInput" name="RelationshipEntityType" />
+        <dataInput id="_142_RelationshipInput" name="Relationship" />
+        <dataInput id="_142_EntityTypeInput" name="EntityType" />
+        <dataInput id="_142_EntityIDInput" name="EntityID" />
+        <dataOutput id="_142_ResponseOutput" name="Response" />
+        <inputSet>
+          <dataInputRefs>_142_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_142_RelationshipEntityTypeInput</dataInputRefs>
+          <dataInputRefs>_142_RelationshipInput</dataInputRefs>
+          <dataInputRefs>_142_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_142_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_142_ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_142_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_142_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_142_RelationshipEntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">transcodeProfile</from>
+          <to xsi:type="tFormalExpression">_142_RelationshipEntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_142_RelationshipInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">transcodeProfiles</from>
+          <to xsi:type="tFormalExpression">_142_RelationshipInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_142_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">transVideoSub</from>
+          <to xsi:type="tFormalExpression">_142_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_142_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{transcodedSubcontent.getId()}</from>
+          <to xsi:type="tFormalExpression">_142_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_142_ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_129" name="Add Subcontents to Program" scriptFormat="http://www.java.com/java" >
+      <script>ProtectHelper.updateProgramProtected(kcontext);</script>
+    </scriptTask>
+    <task id="_128" name="Read Program" tns:taskName="MediaManager8ReadTask" >
+      <ioSpecification>
+        <dataInput id="_128_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_128_AttainLockInput" name="AttainLock" />
+        <dataInput id="_128_EntityTypeInput" name="EntityType" />
+        <dataInput id="_128_EntityIDInput" name="EntityID" />
+        <dataOutput id="_128_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_128_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_128_AttainLockInput</dataInputRefs>
+          <dataInputRefs>_128_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_128_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_128_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_128_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_128_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_128_AttainLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_128_AttainLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_128_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_128_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_128_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_128_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_128_ResponseObjectOutput</sourceRef>
+        <targetRef>program</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_131" name="Prepare Protect Variables" scriptFormat="http://www.java.com/java" >
+      <script>ProtectHelper.prepareProtectVariables(kcontext);
+</script>
+    </scriptTask>
+    <task id="_78" name="Read Program" tns:taskName="MediaManager8ReadTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script></tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>ProtectHelper.protectPrepare(kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_78_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_78_AttainLockInput" name="AttainLock" />
+        <dataInput id="_78_EntityTypeInput" name="EntityType" />
+        <dataInput id="_78_EntityIDInput" name="EntityID" />
+        <dataOutput id="_78_ResponseObjectOutput" name="ResponseObject" />
+        <inputSet>
+          <dataInputRefs>_78_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_78_AttainLockInput</dataInputRefs>
+          <dataInputRefs>_78_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_78_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_78_ResponseObjectOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_78_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_78_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_78_AttainLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_78_AttainLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_78_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_78_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_78_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_78_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_78_ResponseObjectOutput</sourceRef>
+        <targetRef>program</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_132" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_133" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_134" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_135" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_84" name="Query Active Protect" tns:taskName="QueryActiveProcessInstance" >
+      <ioSpecification>
+        <dataInput id="_84_VariableToMatchInput" name="VariableToMatch" />
+        <dataInput id="_84_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_84_ValueToMatchInput" name="ValueToMatch" />
+        <dataInput id="_84_ProcessIdInput" name="ProcessId" />
+        <dataOutput id="_84_ReturnListOutput" name="ReturnList" />
+        <inputSet>
+          <dataInputRefs>_84_VariableToMatchInput</dataInputRefs>
+          <dataInputRefs>_84_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_84_ValueToMatchInput</dataInputRefs>
+          <dataInputRefs>_84_ProcessIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_84_ReturnListOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_84_VariableToMatchInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">protectingSourceSegments</from>
+          <to xsi:type="tFormalExpression">_84_VariableToMatchInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_84_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_84_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_84_ValueToMatchInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{sourceSegments.toString()}</from>
+          <to xsi:type="tFormalExpression">_84_ValueToMatchInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_84_ProcessIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.protect.Protect</from>
+          <to xsi:type="tFormalExpression">_84_ProcessIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_84_ReturnListOutput</sourceRef>
+        <targetRef>processInstanceIdList</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <scriptTask id="_152" name="Get Protect Metadata" scriptFormat="http://www.java.com/java" >
+      <script>ProtectWrapper protectWrapperLocal =  (ProtectWrapper)protectWrapperList.remove(0);
+kcontext.setVariable("protectWrapper", protectWrapperLocal);
+kcontext.setVariable("protectingSourceSegments",sourceSegments.toString());
+kcontext.setVariable("protectionWorkflow", ProtectHelper.getProfile(protectWrapperLocal).getProtectionWorkflow());</script>
+    </scriptTask>
+    <task id="_155" name="Apply Protection" tns:taskName="SyncSubprocess" >
+      <ioSpecification>
+        <dataInput id="_155_protectWrapperInput" name="protectWrapper" />
+        <dataInput id="_155_uriIdInput" name="uriId" />
+        <dataInput id="_155_entityIdInput" name="entityId" />
+        <dataInput id="_155_programTitleInput" name="programTitle" />
+        <dataInput id="_155_videoEntityIdInput" name="videoEntityId" />
+        <dataInput id="_155_sourceSegmentsInput" name="sourceSegments" />
+        <dataInput id="_155_sourceSubcontentInput" name="sourceSubcontent" />
+        <dataInput id="_155_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_155_SingletonInput" name="Singleton" />
+        <dataInput id="_155_ProcessIDInput" name="ProcessID" />
+        <dataOutput id="_155_protectWrapperOutput" name="protectWrapper" />
+        <dataOutput id="_155_exitMessageOutput" name="exitMessage" />
+        <dataOutput id="_155_exitStatusOutput" name="exitStatus" />
+        <dataOutput id="_155_fileInfoOutput" name="fileInfo" />
+        <inputSet>
+          <dataInputRefs>_155_protectWrapperInput</dataInputRefs>
+          <dataInputRefs>_155_uriIdInput</dataInputRefs>
+          <dataInputRefs>_155_entityIdInput</dataInputRefs>
+          <dataInputRefs>_155_programTitleInput</dataInputRefs>
+          <dataInputRefs>_155_videoEntityIdInput</dataInputRefs>
+          <dataInputRefs>_155_sourceSegmentsInput</dataInputRefs>
+          <dataInputRefs>_155_sourceSubcontentInput</dataInputRefs>
+          <dataInputRefs>_155_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_155_SingletonInput</dataInputRefs>
+          <dataInputRefs>_155_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_155_protectWrapperOutput</dataOutputRefs>
+          <dataOutputRefs>_155_exitMessageOutput</dataOutputRefs>
+          <dataOutputRefs>_155_exitStatusOutput</dataOutputRefs>
+          <dataOutputRefs>_155_fileInfoOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>protectWrapper</sourceRef>
+        <targetRef>_155_protectWrapperInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>uriId</sourceRef>
+        <targetRef>_155_uriIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>entityId</sourceRef>
+        <targetRef>_155_entityIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>programTitle</sourceRef>
+        <targetRef>_155_programTitleInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>videoContentId</sourceRef>
+        <targetRef>_155_videoEntityIdInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>sourceSegments</sourceRef>
+        <targetRef>_155_sourceSegmentsInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>sourceSubcontent</sourceRef>
+        <targetRef>_155_sourceSubcontentInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_155_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_155_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_155_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_155_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_155_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.protect.#{protectionWorkflow}</from>
+          <to xsi:type="tFormalExpression">_155_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_155_protectWrapperOutput</sourceRef>
+        <targetRef>protectWrapper</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_155_exitMessageOutput</sourceRef>
+        <targetRef>exitMessage</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_155_exitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_155_fileInfoOutput</sourceRef>
+        <targetRef>fileInfo</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_154" name="Profile Read" tns:taskName="ProfileRead" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>ProtectHelper.setupProtectWrapperList(kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_154_TermWrapperListInput" name="TermWrapperList" />
+        <dataInput id="_154_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_154_DeviceProfileEnabledOnlyInput" name="DeviceProfileEnabledOnly" />
+        <dataInput id="_154_ContentTypeInput" name="ContentType" />
+        <dataOutput id="_154_ProfileOutput" name="Profile" />
+        <inputSet>
+          <dataInputRefs>_154_TermWrapperListInput</dataInputRefs>
+          <dataInputRefs>_154_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_154_DeviceProfileEnabledOnlyInput</dataInputRefs>
+          <dataInputRefs>_154_ContentTypeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_154_ProfileOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>termWrapperList</sourceRef>
+        <targetRef>_154_TermWrapperListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_154_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_154_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_154_DeviceProfileEnabledOnlyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_154_DeviceProfileEnabledOnlyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_154_ContentTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{contentType}</from>
+          <to xsi:type="tFormalExpression">_154_ContentTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_154_ProfileOutput</sourceRef>
+        <targetRef>profile</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_157" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_156" name="Set Processed" scriptFormat="http://www.java.com/java" >
+      <script>ProtectHelper.setProcessed(kcontext);</script>
+    </scriptTask>
+    <scriptTask id="_159" name="Process Protect Wrappers" scriptFormat="http://www.java.com/java" >
+      <script>ProtectHelper.removeUnneededProtectWrappers(kcontext);
+ProtectHelper.setAdditionalSourceFiles(kcontext);
+ProtectHelper.sortProtectWrappers(kcontext);</script>
+    </scriptTask>
+    <endEvent id="_158" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_145" name="Read P-Transcode Profiles" tns:taskName="MediaManager8ReadRelationshipsTask" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("protectedSubcontent", sourceSubcontent.getProtectSubs().get((Integer)protectedSubcontentList.remove(0)));</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("transcodeProfileList", ProtectHelper.getEntityList(TranscodeProfile.class, mm8Response));</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_145_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_145_RelationshipEntityTypeInput" name="RelationshipEntityType" />
+        <dataInput id="_145_RelationshipInput" name="Relationship" />
+        <dataInput id="_145_EntityTypeInput" name="EntityType" />
+        <dataInput id="_145_EntityIDInput" name="EntityID" />
+        <dataOutput id="_145_ResponseOutput" name="Response" />
+        <inputSet>
+          <dataInputRefs>_145_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_145_RelationshipEntityTypeInput</dataInputRefs>
+          <dataInputRefs>_145_RelationshipInput</dataInputRefs>
+          <dataInputRefs>_145_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_145_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_145_ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_145_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_145_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_145_RelationshipEntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">transcodeProfile</from>
+          <to xsi:type="tFormalExpression">_145_RelationshipEntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_145_RelationshipInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">transcodeProfiles</from>
+          <to xsi:type="tFormalExpression">_145_RelationshipInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_145_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">protectVideoSub</from>
+          <to xsi:type="tFormalExpression">_145_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_145_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{protectedSubcontent.getId()}</from>
+          <to xsi:type="tFormalExpression">_145_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_145_ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_144" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <task id="_146" name="Read P-Protect Profiles" tns:taskName="MediaManager8ReadRelationshipsTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>ProtectHelper.determineProtectProfileSubcontentMap(kcontext);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_146_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_146_RelationshipEntityTypeInput" name="RelationshipEntityType" />
+        <dataInput id="_146_RelationshipInput" name="Relationship" />
+        <dataInput id="_146_EntityTypeInput" name="EntityType" />
+        <dataInput id="_146_EntityIDInput" name="EntityID" />
+        <dataOutput id="_146_ResponseOutput" name="Response" />
+        <inputSet>
+          <dataInputRefs>_146_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_146_RelationshipEntityTypeInput</dataInputRefs>
+          <dataInputRefs>_146_RelationshipInput</dataInputRefs>
+          <dataInputRefs>_146_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_146_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_146_ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_146_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_146_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_146_RelationshipEntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">protectProfile</from>
+          <to xsi:type="tFormalExpression">_146_RelationshipEntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_146_RelationshipInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">protectProfiles</from>
+          <to xsi:type="tFormalExpression">_146_RelationshipInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_146_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">protectVideoSub</from>
+          <to xsi:type="tFormalExpression">_146_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_146_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{protectedSubcontent.getId()}</from>
+          <to xsi:type="tFormalExpression">_146_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_146_ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_163" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_163_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_163_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_163_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_163_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_162" name="Commit Point" tns:taskName="CommitPoint" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>BeanUtil.getBean(LockManager.class).releaseLock("program-protect-"+entityId);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_162_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_162_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_162_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_162_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_150" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_151" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <task id="_160" name="Attain Lock" tns:taskName="AttainLock" >
+      <ioSpecification>
+        <dataInput id="_160_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_160_LockIDInput" name="LockID" />
+        <inputSet>
+          <dataInputRefs>_160_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_160_LockIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_160_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_160_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_160_LockIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program-protect-#{entityId}</from>
+          <to xsi:type="tFormalExpression">_160_LockIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_127" name="Update Program" tns:taskName="MediaManager8UpdateTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>kcontext.setVariable("program", WorkflowHelper.getEntity(Program.class, mm8Response));</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_127_DomainObjectInput" name="DomainObject" />
+        <dataInput id="_127_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_127_EntityTypeInput" name="EntityType" />
+        <dataInput id="_127_ReleaseLockInput" name="ReleaseLock" />
+        <dataInput id="_127_EntityIdInput" name="EntityId" />
+        <dataOutput id="_127_MediaManager8ResponseOutput" name="MediaManager8Response" />
+        <inputSet>
+          <dataInputRefs>_127_DomainObjectInput</dataInputRefs>
+          <dataInputRefs>_127_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_127_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_127_ReleaseLockInput</dataInputRefs>
+          <dataInputRefs>_127_EntityIdInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_127_MediaManager8ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>program</sourceRef>
+        <targetRef>_127_DomainObjectInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_127_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_127_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_127_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">program</from>
+          <to xsi:type="tFormalExpression">_127_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_127_ReleaseLockInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression"></from>
+          <to xsi:type="tFormalExpression">_127_ReleaseLockInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_127_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_127_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_127_MediaManager8ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_161" name="Commit Point" tns:taskName="CommitPoint" >
+      <ioSpecification>
+        <dataInput id="_161_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_161_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_161_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_161_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_109" name="Read Related Terms" tns:taskName="CompoundRelationshipRead" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>ProtectHelper.setupTermRelationshipList(kcontext);</tns:script>
+        </tns:onEntry-script>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>ProtectHelper.processTermRelationshipMap(kcontext, program);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_109_RelationshipListInput" name="RelationshipList" />
+        <dataInput id="_109_EntityInput" name="Entity" />
+        <dataInput id="_109_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_109_ApprovedOnlyInput" name="ApprovedOnly" />
+        <dataOutput id="_109_RelationshipMapOutput" name="RelationshipMap" />
+        <inputSet>
+          <dataInputRefs>_109_RelationshipListInput</dataInputRefs>
+          <dataInputRefs>_109_EntityInput</dataInputRefs>
+          <dataInputRefs>_109_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_109_ApprovedOnlyInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_109_RelationshipMapOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>relationshipList</sourceRef>
+        <targetRef>_109_RelationshipListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>program</sourceRef>
+        <targetRef>_109_EntityInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_109_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_109_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_109_ApprovedOnlyInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_109_ApprovedOnlyInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_109_RelationshipMapOutput</sourceRef>
+        <targetRef>relationshipMap</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_jbpm-unique-5" name="Maintain Relationships" tns:taskName="MediaManager8MaintainRelationshipsTask" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-5_MaintainRelationshipsCommandsListInput" name="MaintainRelationshipsCommandsList" />
+        <dataInput id="_jbpm-unique-5_AsyncInput" name="Async" />
+        <dataInput id="_jbpm-unique-5_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-5_MaintainRelationshipsCommandsListInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-5_AsyncInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-5_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>maintainRelationshipsCommandsList</sourceRef>
+        <targetRef>_jbpm-unique-5_MaintainRelationshipsCommandsListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-5_AsyncInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-5_AsyncInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-5_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-5_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_jbpm-unique-1" name="Maintain Relationships" tns:taskName="MediaManager8MaintainRelationshipsTask" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-1_MaintainRelationshipsCommandsListInput" name="MaintainRelationshipsCommandsList" />
+        <dataInput id="_jbpm-unique-1_AsyncInput" name="Async" />
+        <dataInput id="_jbpm-unique-1_ErrorEventInput" name="ErrorEvent" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-1_MaintainRelationshipsCommandsListInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-1_AsyncInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-1_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>maintainRelationshipsCommandsList</sourceRef>
+        <targetRef>_jbpm-unique-1_MaintainRelationshipsCommandsListInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-1_AsyncInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-1_AsyncInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-1_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-1_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <parallelGateway id="_164" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+
+    <!-- connections -->
+    <sequenceFlow id="_164-_68" sourceRef="_164" targetRef="_68" />
+    <sequenceFlow id="_84-_137" sourceRef="_84" targetRef="_137" />
+    <sequenceFlow id="_135-_136" sourceRef="_135" targetRef="_136" name="Protect Complete" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_137-_139" sourceRef="_137" targetRef="_139" name="Being Protected" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return ProtectHelper.isAlreadyProtecting(kcontext);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_151-_139" sourceRef="_151" targetRef="_139" name="Protect Not Required" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_66-_4" sourceRef="_66" targetRef="_4" />
+    <sequenceFlow id="_142-_141" sourceRef="_142" targetRef="_141" />
+    <sequenceFlow id="_154-_141" sourceRef="_154" targetRef="_141" />
+    <sequenceFlow id="_141-_140" sourceRef="_141" targetRef="_140" />
+    <sequenceFlow id="_68-_66" sourceRef="_68" targetRef="_66" />
+    <sequenceFlow id="_144-_143" sourceRef="_144" targetRef="_143" />
+    <sequenceFlow id="_140-_142" sourceRef="_140" targetRef="_142" name="More Transcode Profiles" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !transcodedSubcontentList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_128-_129" sourceRef="_128" targetRef="_129" />
+    <sequenceFlow id="_160-_128" sourceRef="_160" targetRef="_128" />
+    <sequenceFlow id="_132-_131" sourceRef="_132" targetRef="_131" />
+    <sequenceFlow id="_164-_78" sourceRef="_164" targetRef="_78" />
+    <sequenceFlow id="_135-_132" sourceRef="_135" targetRef="_132" name="More to Protect" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return ProtectHelper.moreToProtect(kcontext);
+</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_109-_132" sourceRef="_109" targetRef="_132" />
+    <sequenceFlow id="_131-_133" sourceRef="_131" targetRef="_133" />
+    <sequenceFlow id="_133-_134" sourceRef="_133" targetRef="_134" name="Nothing to Do" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_139-_134" sourceRef="_139" targetRef="_134" />
+    <sequenceFlow id="_156-_135" sourceRef="_156" targetRef="_135" />
+    <sequenceFlow id="_133-_84" sourceRef="_133" targetRef="_84" name="Content to Process" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return sourceSubcontent != null &amp;&amp; !termWrapperList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_151-_152" sourceRef="_151" targetRef="_152" name="Protect Required" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !protectWrapperList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_152-_155" sourceRef="_152" targetRef="_155" />
+    <sequenceFlow id="_137-_154" sourceRef="_137" targetRef="_154" name="Protect" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_155-_157" sourceRef="_155" targetRef="_157" />
+    <sequenceFlow id="_134-_156" sourceRef="_134" targetRef="_156" />
+    <sequenceFlow id="_143-_159" sourceRef="_143" targetRef="_159" name="No More" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_157-_158" sourceRef="_157" targetRef="_158" name="Failure" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_143-_145" sourceRef="_143" targetRef="_145" name="More Transcode Profiles" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !protectedSubcontentList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_140-_144" sourceRef="_140" targetRef="_144" name="No More" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_161-_144" sourceRef="_161" targetRef="_144" />
+    <sequenceFlow id="_145-_146" sourceRef="_145" targetRef="_146" />
+    <sequenceFlow id="_127-_163" sourceRef="_127" targetRef="_163" />
+    <sequenceFlow id="_jbpm-unique-1-_162" sourceRef="_jbpm-unique-1" targetRef="_162" />
+    <sequenceFlow id="_159-_150" sourceRef="_159" targetRef="_150" />
+    <sequenceFlow id="_162-_150" sourceRef="_162" targetRef="_150" />
+    <sequenceFlow id="_150-_151" sourceRef="_150" targetRef="_151" />
+    <sequenceFlow id="_157-_160" sourceRef="_157" targetRef="_160" name="Success" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return "SUCCESS".equals(exitStatus);</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_129-_127" sourceRef="_129" targetRef="_127" />
+    <sequenceFlow id="_jbpm-unique-5-_161" sourceRef="_jbpm-unique-5" targetRef="_161" />
+    <sequenceFlow id="_78-_109" sourceRef="_78" targetRef="_109" />
+    <sequenceFlow id="_146-_jbpm-unique-5" sourceRef="_146" targetRef="_jbpm-unique-5" />
+    <sequenceFlow id="_163-_jbpm-unique-1" sourceRef="_163" targetRef="_jbpm-unique-1" />
+    <sequenceFlow id="_1-_164" sourceRef="_1" targetRef="_164" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.protect.Protect" >
+      <bpmndi:BPMNShape bpmnElement="_68" >
+        <dc:Bounds x="564" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_137" >
+        <dc:Bounds x="336" y="528" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_136" >
+        <dc:Bounds x="24" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="264" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_139" >
+        <dc:Bounds x="108" y="528" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="564" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_141" >
+        <dc:Bounds x="336" y="672" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_140" >
+        <dc:Bounds x="336" y="744" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_66" >
+        <dc:Bounds x="492" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_143" >
+        <dc:Bounds x="336" y="1032" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_142" >
+        <dc:Bounds x="492" y="672" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_129" >
+        <dc:Bounds x="492" y="1476" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_128" >
+        <dc:Bounds x="492" y="1548" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_131" >
+        <dc:Bounds x="264" y="312" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_78" >
+        <dc:Bounds x="264" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_132" >
+        <dc:Bounds x="336" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_133" >
+        <dc:Bounds x="336" y="384" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_134" >
+        <dc:Bounds x="108" y="384" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_135" >
+        <dc:Bounds x="108" y="240" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_84" >
+        <dc:Bounds x="264" y="456" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_152" >
+        <dc:Bounds x="492" y="1836" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_155" >
+        <dc:Bounds x="492" y="1764" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_154" >
+        <dc:Bounds x="264" y="600" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_157" >
+        <dc:Bounds x="564" y="1692" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_156" >
+        <dc:Bounds x="36" y="312" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_159" >
+        <dc:Bounds x="264" y="1116" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_158" >
+        <dc:Bounds x="768" y="1692" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_145" >
+        <dc:Bounds x="492" y="1032" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_144" >
+        <dc:Bounds x="336" y="816" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_146" >
+        <dc:Bounds x="492" y="960" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_163" >
+        <dc:Bounds x="492" y="1332" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_162" >
+        <dc:Bounds x="492" y="1188" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_150" >
+        <dc:Bounds x="336" y="1188" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_151" >
+        <dc:Bounds x="336" y="1836" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_160" >
+        <dc:Bounds x="492" y="1620" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_127" >
+        <dc:Bounds x="492" y="1404" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_161" >
+        <dc:Bounds x="492" y="816" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_109" >
+        <dc:Bounds x="264" y="168" width="192" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-5" >
+        <dc:Bounds x="496" y="888" width="189" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-1" >
+        <dc:Bounds x="492" y="1260" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_164" >
+        <dc:Bounds x="336" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_164-_68" >
+        <di:waypoint x="360" y="48" />
+        <di:waypoint x="588" y="48" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_84-_137" >
+        <di:waypoint x="360" y="480" />
+        <di:waypoint x="360" y="552" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_135-_136" >
+        <di:waypoint x="132" y="264" />
+        <di:waypoint x="48" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_137-_139" >
+        <di:waypoint x="360" y="552" />
+        <di:waypoint x="132" y="552" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_151-_139" >
+        <di:waypoint x="360" y="1860" />
+        <di:waypoint x="132" y="552" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_66-_4" >
+        <di:waypoint x="588" y="120" />
+        <di:waypoint x="588" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_142-_141" >
+        <di:waypoint x="588" y="696" />
+        <di:waypoint x="360" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_154-_141" >
+        <di:waypoint x="360" y="624" />
+        <di:waypoint x="360" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_141-_140" >
+        <di:waypoint x="360" y="696" />
+        <di:waypoint x="360" y="768" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_68-_66" >
+        <di:waypoint x="588" y="48" />
+        <di:waypoint x="588" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_144-_143" >
+        <di:waypoint x="360" y="840" />
+        <di:waypoint x="360" y="1056" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_140-_142" >
+        <di:waypoint x="360" y="768" />
+        <di:waypoint x="588" y="696" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_128-_129" >
+        <di:waypoint x="588" y="1572" />
+        <di:waypoint x="588" y="1500" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_160-_128" >
+        <di:waypoint x="588" y="1644" />
+        <di:waypoint x="588" y="1572" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_132-_131" >
+        <di:waypoint x="360" y="264" />
+        <di:waypoint x="360" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_164-_78" >
+        <di:waypoint x="360" y="48" />
+        <di:waypoint x="360" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_135-_132" >
+        <di:waypoint x="132" y="264" />
+        <di:waypoint x="360" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_109-_132" >
+        <di:waypoint x="360" y="192" />
+        <di:waypoint x="360" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_131-_133" >
+        <di:waypoint x="360" y="336" />
+        <di:waypoint x="360" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_133-_134" >
+        <di:waypoint x="360" y="408" />
+        <di:waypoint x="132" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_139-_134" >
+        <di:waypoint x="132" y="552" />
+        <di:waypoint x="132" y="408" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_156-_135" >
+        <di:waypoint x="132" y="336" />
+        <di:waypoint x="132" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_133-_84" >
+        <di:waypoint x="360" y="408" />
+        <di:waypoint x="360" y="480" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_151-_152" >
+        <di:waypoint x="360" y="1860" />
+        <di:waypoint x="588" y="1860" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_152-_155" >
+        <di:waypoint x="588" y="1860" />
+        <di:waypoint x="588" y="1788" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_137-_154" >
+        <di:waypoint x="360" y="552" />
+        <di:waypoint x="360" y="624" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_155-_157" >
+        <di:waypoint x="588" y="1788" />
+        <di:waypoint x="588" y="1716" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_134-_156" >
+        <di:waypoint x="132" y="408" />
+        <di:waypoint x="132" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_143-_159" >
+        <di:waypoint x="360" y="1056" />
+        <di:waypoint x="360" y="1140" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_157-_158" >
+        <di:waypoint x="588" y="1716" />
+        <di:waypoint x="792" y="1716" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_143-_145" >
+        <di:waypoint x="360" y="1056" />
+        <di:waypoint x="588" y="1056" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_140-_144" >
+        <di:waypoint x="360" y="768" />
+        <di:waypoint x="360" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_161-_144" >
+        <di:waypoint x="588" y="840" />
+        <di:waypoint x="360" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_145-_146" >
+        <di:waypoint x="588" y="1056" />
+        <di:waypoint x="588" y="984" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_127-_163" >
+        <di:waypoint x="588" y="1428" />
+        <di:waypoint x="588" y="1356" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-1-_162" >
+        <di:waypoint x="588" y="1284" />
+        <di:waypoint x="588" y="1212" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_159-_150" >
+        <di:waypoint x="360" y="1140" />
+        <di:waypoint x="360" y="1212" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_162-_150" >
+        <di:waypoint x="588" y="1212" />
+        <di:waypoint x="360" y="1212" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_150-_151" >
+        <di:waypoint x="360" y="1212" />
+        <di:waypoint x="360" y="1860" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_157-_160" >
+        <di:waypoint x="588" y="1716" />
+        <di:waypoint x="588" y="1644" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_129-_127" >
+        <di:waypoint x="588" y="1500" />
+        <di:waypoint x="588" y="1428" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-5-_161" >
+        <di:waypoint x="590" y="912" />
+        <di:waypoint x="588" y="840" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_78-_109" >
+        <di:waypoint x="360" y="120" />
+        <di:waypoint x="360" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_146-_jbpm-unique-5" >
+        <di:waypoint x="588" y="984" />
+        <di:waypoint x="590" y="912" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_163-_jbpm-unique-1" >
+        <di:waypoint x="588" y="1356" />
+        <di:waypoint x="588" y="1284" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_164" >
+        <di:waypoint x="288" y="48" />
+        <di:waypoint x="360" y="48" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

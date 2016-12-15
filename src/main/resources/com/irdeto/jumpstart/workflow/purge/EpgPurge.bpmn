@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_stringType" structureRef="String" />
+  <itemDefinition id="_exitStatus" structureRef="String" />
+  <itemDefinition id="_purgeWrapper" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_intType" structureRef="java.lang.Integer" />
+  <itemDefinition id="_mapType" structureRef="java.util.Map" />
+  <itemDefinition id="_exitMessage" structureRef="String" />
+  <itemDefinition id="_listType" structureRef="java.util.List" />
+  <itemDefinition id="_queryType" structureRef="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+  <itemDefinition id="_booleanType" structureRef="java.lang.Boolean" />
+  <itemDefinition id="_mm8ResponseType" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_toRemove" structureRef="com.irdeto.jumpstart.domain.Base" />
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.purge.EpgPurge" name="EPG Purge" tns:packageName="com.irdeto.jumpstart.workflow.purge" tns:version="1" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.purge.EpgPurgeHelper" />
+     <tns:import name="java.util.List" />
+     <tns:import name="com.irdeto.jumpstart.domain.*" />
+     <tns:import name="com.irdeto.domain.operation.MM8Response" />
+     <tns:import name="com.irdeto.manager.task.BeanUtil" />
+     <tns:import name="com.irdeto.jumpstart.domain.purge.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.purge.PurgeWrapperFactory" />
+     <tns:import name="java.util.Map" />
+     <tns:import name="com.irdeto.domain.mediamanager.QueryFilterParameter" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="channelDaysToPurgeList" itemSubjectRef="_listType"/>
+    <property id="errorMap" itemSubjectRef="_mapType"/>
+    <property id="purgeDays" itemSubjectRef="_intType"/>
+    <property id="mm8Response" itemSubjectRef="_mm8ResponseType"/>
+    <property id="hardDelete" itemSubjectRef="_booleanType"/>
+    <property id="queryFilterParameter" itemSubjectRef="_queryType"/>
+    <property id="bulkDeleteRequest" itemSubjectRef="_mapType"/>
+    <property id="toRemove" itemSubjectRef="_toRemove"/>
+    <property id="exitStatus" itemSubjectRef="_stringType"/>
+    <property id="exitMessage" itemSubjectRef="_stringType"/>
+    <property id="purgeWrapper" itemSubjectRef="_purgeWrapper"/>
+
+    <!-- nodes -->
+    <startEvent id="_0" name="Start"  isInterrupting="true">
+    </startEvent>
+    <endEvent id="_6" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_3" name="Find Old EPG Data" tns:taskName="MediaManager8FilteredReadTask" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>List channelDaysList = (List) ((MM8Response) kcontext.getVariable("mm8Response")).getResponseObject();
+BeanUtil.loggerManager.debug(kcontext, "{} items to be removed.", channelDaysList.size());
+
+kcontext.setVariable("channelDaysToPurgeList", channelDaysList);
+kcontext.setVariable("bulkDeleteRequest", EpgPurgeHelper.buildEntitiesDataForBulkDelete(channelDaysList));</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_3_QueryFilterParameterInput" name="QueryFilterParameter" />
+        <dataInput id="_3_EntityTypeInput" name="EntityType" />
+        <dataInput id="_3_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_3_MediaManager8ResponseOutput" name="MediaManager8Response" />
+        <inputSet>
+          <dataInputRefs>_3_QueryFilterParameterInput</dataInputRefs>
+          <dataInputRefs>_3_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_3_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_3_MediaManager8ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>queryFilterParameter</sourceRef>
+        <targetRef>_3_QueryFilterParameterInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">channelDay</from>
+          <to xsi:type="tFormalExpression">_3_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_3_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_3_MediaManager8ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <task id="_5" name="Media Manager Purge" tns:taskName="MediaManager8BulkDeleteTask" >
+      <extensionElements>
+        <tns:onEntry-script>
+          <tns:script></tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_5_hardDeleteInput" name="hardDelete" />
+        <dataInput id="_5_EntitiesDataInput" name="EntitiesData" />
+        <dataInput id="_5_HardDeleteInput" name="HardDelete" />
+        <dataInput id="_5_ErrorEventInput" name="ErrorEvent" />
+        <dataOutput id="_5_MediaManager8ResponseOutput" name="MediaManager8Response" />
+        <inputSet>
+          <dataInputRefs>_5_hardDeleteInput</dataInputRefs>
+          <dataInputRefs>_5_EntitiesDataInput</dataInputRefs>
+          <dataInputRefs>_5_HardDeleteInput</dataInputRefs>
+          <dataInputRefs>_5_ErrorEventInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_5_MediaManager8ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>hardDelete</sourceRef>
+        <targetRef>_5_hardDeleteInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <sourceRef>bulkDeleteRequest</sourceRef>
+        <targetRef>_5_EntitiesDataInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_5_HardDeleteInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">hardDelete</from>
+          <to xsi:type="tFormalExpression">_5_HardDeleteInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_5_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_5_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_5_MediaManager8ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <exclusiveGateway id="_4" name="Is result empty?" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_2" name="Loop start" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <intermediateCatchEvent id="_7" name="Signal" >
+      <dataOutput id="_7_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_7_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_7_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <endEvent id="_9" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <scriptTask id="_8" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Error occurred: {}", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <parallelGateway id="_1" name="Setup" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <callActivity id="_11" name="Purge From Endpoints" calledElement="com.irdeto.jumpstart.workflow.purge.PurgeFromEndpoints" tns:independent="false" >
+      <extensionElements>
+        <tns:onEntry-script scriptFormat="http://www.java.com/java">
+          <tns:script>BeanUtil.loggerManager.debug(kcontext, "{} items to be removed.", channelDaysToPurgeList.size());
+Object item = channelDaysToPurgeList.remove(0);
+kcontext.setVariable(
+	"purgeWrapper",
+	PurgeWrapperFactory.buildDeleteNowWrapper((Base) item)
+);</tns:script>
+        </tns:onEntry-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_11_purgeWrapperInput" name="purgeWrapper" />
+        <dataOutput id="_11_errorMapOutput" name="errorMap" />
+        <dataOutput id="_11_exitMessageOutput" name="exitMessage" />
+        <dataOutput id="_11_exitStatusOutput" name="exitStatus" />
+        <inputSet>
+          <dataInputRefs>_11_purgeWrapperInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_11_errorMapOutput</dataOutputRefs>
+          <dataOutputRefs>_11_exitMessageOutput</dataOutputRefs>
+          <dataOutputRefs>_11_exitStatusOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>purgeWrapper</sourceRef>
+        <targetRef>_11_purgeWrapperInput</targetRef>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_11_errorMapOutput</sourceRef>
+        <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_11_exitMessageOutput</sourceRef>
+        <targetRef>exitMessage</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_11_exitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+    </callActivity>
+    <exclusiveGateway id="_12" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_13" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <scriptTask id="_jbpm-unique-0" name="Setup" scriptFormat="http://www.java.com/java" >
+      <script>EpgPurgeHelper.configureDeletionMode(kcontext);
+kcontext.setVariable(
+    "queryFilterParameter",
+	EpgPurgeHelper.buildFilterParameter(kcontext.getVariable("purgeDays"))
+);
+kcontext.setVariable("action", PurgeWrapper.ACTION_DELETE);</script>
+    </scriptTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_4-_6" sourceRef="_4" targetRef="_6" name="Nothing to delete" tns:priority="2" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+    <sequenceFlow id="_13-_5" sourceRef="_13" targetRef="_5" tns:priority="2" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_3-_4" sourceRef="_3" targetRef="_4" />
+    <sequenceFlow id="_1-_2" sourceRef="_1" targetRef="_2" />
+    <sequenceFlow id="_5-_2" sourceRef="_5" targetRef="_2" />
+    <sequenceFlow id="_1-_7" sourceRef="_1" targetRef="_7" />
+    <sequenceFlow id="_8-_9" sourceRef="_8" targetRef="_9" />
+    <sequenceFlow id="_7-_8" sourceRef="_7" targetRef="_8" />
+    <sequenceFlow id="_jbpm-unique-0-_1" sourceRef="_jbpm-unique-0" targetRef="_1" />
+    <sequenceFlow id="_13-_11" sourceRef="_13" targetRef="_11" name="More to Purge" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !channelDaysToPurgeList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_11-_12" sourceRef="_11" targetRef="_12" />
+    <sequenceFlow id="_4-_12" sourceRef="_4" targetRef="_12" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return !channelDaysToPurgeList.isEmpty();</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_12-_13" sourceRef="_12" targetRef="_13" />
+    <sequenceFlow id="_0-_jbpm-unique-0" sourceRef="_0" targetRef="_jbpm-unique-0" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.purge.EpgPurge" >
+      <bpmndi:BPMNShape bpmnElement="_0" >
+        <dc:Bounds x="120" y="12" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="120" y="468" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="72" y="300" width="145" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="288" y="228" width="169" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="120" y="372" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="120" y="228" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="204" y="156" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="492" y="156" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="288" y="156" width="169" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="120" y="156" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_11" >
+        <dc:Bounds x="492" y="300" width="169" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="348" y="372" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="348" y="300" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-0" >
+        <dc:Bounds x="72" y="84" width="145" height="49" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_4-_6" >
+        <di:waypoint x="144" y="396" />
+        <di:waypoint x="144" y="492" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="144" y="252" />
+        <di:waypoint x="144" y="325" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_5" >
+        <di:waypoint x="372" y="324" />
+        <di:waypoint x="372" y="252" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_4" >
+        <di:waypoint x="144" y="325" />
+        <di:waypoint x="144" y="396" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_2" >
+        <di:waypoint x="144" y="180" />
+        <di:waypoint x="144" y="252" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_2" >
+        <di:waypoint x="372" y="252" />
+        <di:waypoint x="144" y="252" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_7" >
+        <di:waypoint x="144" y="180" />
+        <di:waypoint x="228" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_9" >
+        <di:waypoint x="372" y="180" />
+        <di:waypoint x="516" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_8" >
+        <di:waypoint x="228" y="180" />
+        <di:waypoint x="372" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-0-_1" >
+        <di:waypoint x="144" y="108" />
+        <di:waypoint x="144" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_11" >
+        <di:waypoint x="372" y="324" />
+        <di:waypoint x="576" y="324" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_11-_12" >
+        <di:waypoint x="576" y="324" />
+        <di:waypoint x="372" y="396" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_4-_12" >
+        <di:waypoint x="144" y="396" />
+        <di:waypoint x="372" y="396" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_12-_13" >
+        <di:waypoint x="372" y="396" />
+        <di:waypoint x="372" y="324" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_0-_jbpm-unique-0" >
+        <di:waypoint x="144" y="36" />
+        <di:waypoint x="144" y="108" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

@@ -1,0 +1,885 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		<style type="text/css"> body { font-family: Arial; font-size: 8pt; color: #800000; }</style>
+		<style type="text/css"> table { border-style: solid; border-width: 1px; border-left-color: #ECE9D8; border-top-color: #ECE9D8; border-right-color: #ACA899; border-bottom-color: #ACA899; }</style>
+		<style type="text/css"> th {border-style: solid; font-size: 10pt; border-width: 1px; }</style>
+		<style type="text/css"> td {border-style: solid; font-size: 8pt; border-width: 1px; }</style>
+		<style type="text/css"> a {color: blue; }</style>
+	</head>
+	<body>
+		<h2></h2>
+		<h3><a name="SignalGroupAssetType"></a>SignalGroupAssetType</h3>
+		<p>SignalGroupAssetType is an extension of the CableLabs 3 AssetType.  Implementers which do not deal with CableLabs Assets may safely ignore this type.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetType">core:AssetType</a></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignalPoint</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#SignalPointType">SignalPointType</a></td>
+				<td>One or more SignalPoint elements that exist in an asset.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignalRegion</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#SignalRegionType">SignalRegionType</a></td>
+				<td>One or more SignalRegion elements that exist in an asset.</td>
+			</tr>
+		</table>
+		<h3><a name="BinarySignalType"></a>BinarySignalType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td>xsd:base64Binary</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>signalType</td>
+				<td>required</td>
+				<td>xsd:string<br>pattern=SCTE35|EISS|binary|private:.+</td>
+				<td>Specifies the type of signal contained in this element.</td>
+			</tr>
+		</table>
+		<h3><a name="SignaledPointInfoType"></a>SignaledPointInfoType</h3>
+		<p>Specify information about a signaled point in a stream. The information may specfy information about an anticipated signal or be populated after the signal arrives.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>acquisitionSignalID</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td>The authoritative ID of the signal. This ID may be carried forward from the acquisition sytem to other system element in the delivery platform.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, a signaled point may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignalValidityTimeRange</td>
+				<td>optional</td>
+				<td><a href="#"></a></td>
+				<td>Specify the time range the signal will be considered valid. For example, an SCTE 35 cue message may only be considered valid during a defined time range.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SCTE35PointDescriptor</td>
+				<td>optional</td>
+				<td><a href="#SCTE35PointDescriptorType">SCTE35PointDescriptorType</a></td>
+				<td>For SCTE 35 cue messages with additional descriptive data the following can be used for matching incoming signals and/or populated with authoritative descriptive data received. For example, a match may be done on SCTE 35 Segmentaiton Descriptor information, on "providerAvailId" in the AvailDesciptorInfo on the SpliceInsert or various other means.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>StreamTimes</td>
+				<td>optional</td>
+				<td><a href="#StreamTimesType">StreamTimesType</a></td>
+				<td>Authoritative StreamTimes contains one or more time values that are generated and interpreted by the underlying subsystem. While implementation specific, this data is intended to be passed as is through intervening systems unaltered.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>AcquisitionPointInfo</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#AcquisitionPointInfoType">AcquisitionPointInfoType</a></td>
+				<td>One or more AcquisitionPointInfo items can be passed in the structure. One use of this structure is in the case where signals for the same point are acquired from multiple acquisiiton points. Typically only one of the signals will be applied while multiple signals are actually received and communicated between subsystems. This structure allows a system to pass the data for all acquisition points. A diagnostic system is one consumer of such a fully populated structure.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="AcquisitionPointInfoType"></a>AcquisitionPointInfoType</h3>
+		<p>Acquisiton Point Info Type - information about a specific acquisiton point</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>acquisitionPointIdentity</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td>A unique identity of the acquisition point. (ex. MUX5)</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>acquisitionSignalID</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td>A globally unique ID for the point referenced.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>acquisitionTime</td>
+				<td>optional</td>
+				<td>xsd:dateTime</td>
+				<td>UTC Zulu combined date and time encoding of the wall clock when
+			the signal was captured (e.g., the SCTE 35 splice_info_section() acquisition
+			time). For SCTE 35, this time value is not the splice time as referenced by a
+			cue time or time_signal() but rather the date and time of when the signal was
+			received/encountered by the acquisition point. </td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>signalPointID</td>
+				<td>optional</td>
+				<td>xsd:anyURI<br>maxLength=1024</td>
+				<td>Identifier for this entity. Use core:AssetRefType when
+			referencing a signalPointID. NOTE: not to be confused with the
+			acquisitionSignalID generated by an acquisiton device if this signal is
+			instantiated based on receipt of some instream signaling.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, acquisition point info may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>UTCPoint</td>
+				<td>required</td>
+				<td><a href="#UTCPointDescriptorType">UTCPointDescriptorType</a></td>
+				<td>UTC Zulu combined date and time encoding of the wall clock for the signal point (e.g., the splice time as referenced by the SCTE 35 splice_time, i.e., cue time). This UTC time value typically should not match the acquisitionTime value.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>NPTPoint</td>
+				<td>required</td>
+				<td><a href="#NPTPointDescriptorType">NPTPointDescriptorType</a></td>
+				<td>NPT point within the stream</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SCTE35PointDescriptor</td>
+				<td>required</td>
+				<td><a href="#SCTE35PointDescriptorType">SCTE35PointDescriptorType</a></td>
+				<td>For SCTE 35 cue messages with additional descriptive data the following can be used for matching incoming signals and/or populated with descriptive data received. For example, a match may be done on "providerAvailId" in the AvailDesciptorInfo on the SpliceInsert.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>BinaryData</td>
+				<td>required</td>
+				<td><a href="#BinarySignalType">BinarySignalType</a></td>
+				<td>Typed HEX Binary Data to support passing typed unparsed binary data </td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>StreamTimes</td>
+				<td>optional</td>
+				<td><a href="#StreamTimesType">StreamTimesType</a></td>
+				<td>StreamTimes contains one or  more time values that are generated and interpreted by the underlying subsystem. While implementation specific, this data is intended to be passed as is through intervening systems unaltered.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="SignalGroupType"></a>SignalGroupType</h3>
+		<p>Specify a group of signal points and/or regions.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>A signal group may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignalPoint</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#SignalPointType">SignalPointType</a></td>
+				<td>One or more SignalPoint elements that exist in an asset.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignalRegion</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#SignalRegionType">SignalRegionType</a></td>
+				<td>One or more SignalRegion elements that exist in an asset.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="SignalRegionType"></a>SignalRegionType</h3>
+		<p>Type definition for a region of interest. The region can be defined by reference or by fully describing each point that bounds the region. The End Point is optional since not all End Points are signaled (ex. SCTE 35 out point signals only)</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>signalRegionID</td>
+				<td>optional</td>
+				<td>xsd:anyURI<br>maxLength=1024</td>
+				<td>Identifier for this entity. Use core:AssetRefType when referencing a signalRegionID.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>duration</td>
+				<td>optional</td>
+				<td>xsd:duration</td>
+				<td>Defines the effective duration of a signal region. Duration should only be used for regions that are signaled (ex. a SCTE 35 cue message for an out point that does not have a authoriative in point) that do not have a matching end signal. There is no known use case for using the duration attribute on an end point.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>A signal region may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>AlternateId</td>
+				<td>optional<br>multiple</td>
+				<td>xsd:anyURI<br>maxLength=1024</td>
+				<td>Any number of alternate identifiers  that may be used to identify this region. For example, may be referenced by a shared POGroup with PORegion</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>StartPoint</td>
+				<td>required</td>
+				<td><a href="#SignalPointType">SignalPointType</a></td>
+				<td>In line definition for a start point.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>EndPoint</td>
+				<td>optional</td>
+				<td><a href="#SignalPointType">SignalPointType</a></td>
+				<td>In line definition for an end point. </td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>StartPointRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td>A pointer to the signal point identified by signalPointId. </td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>EndPointRef</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td>Optional pointer to the signal point identified by signalPointId.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="SignalPointType"></a>SignalPointType</h3>
+		<p>Based type for signals</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>signalPointID</td>
+				<td>optional</td>
+				<td>xsd:anyURI<br>maxLength=1024</td>
+				<td>Identifier for this entity. Use core:AssetRefType when referencing a signalPointID.
+
+NOTE: not to be confused with the acquisitionSignalID generated by an acquisiton device if this signal is instantiated based on receipt of some instream signaling.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, a signal may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>AlternateId</td>
+				<td>optional<br>multiple</td>
+				<td>xsd:anyURI<br>maxLength=1024</td>
+				<td>Any number of alternate identifiers  that may be used to identify this region. For example, may be referenced by a shared POGroup with POPoint</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>NPTPointDescriptor</td>
+				<td>optional</td>
+				<td><a href="#NPTPointDescriptorType">NPTPointDescriptorType</a></td>
+				<td>Soruce of value may be: 1) Passed as part of a metadata package (ex. pitched VOD asset) 2) If signaled in the stream this is populated upon receipt of an authoritative signal 3) For an end point may be derived based on the start point plus a duration supplied from an external source.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignaledPointInfo</td>
+				<td>optional</td>
+				<td><a href="#SignaledPointInfoType">SignaledPointInfoType</a></td>
+				<td>Acquisition point information. If present the SignalPoint is instantiated based on receipt of a signal in the stream (ex. SCTE 35)</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="AvailDescriptorType"></a>AvailDescriptorType</h3>
+		<p>Type definition for an SCTE 35 avail descriptor. The avail descriptor contains an authorization identifier to be sent for an avail.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>providerAvailId</td>
+				<td>required</td>
+				<td>xsd:unsignedInt</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, an avail descriptor may include additional, custom attributes as needed by the application.</td>
+			</tr>
+		</table>
+		<h3><a name="DTMFDescriptorType"></a>DTMFDescriptorType</h3>
+		<p>Type definition for an SCTE 35 DTMF descriptor. The DTMF descriptor allows a receiving device to generate a legacy analog DTMFsequence.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>preRoll</td>
+				<td>optional</td>
+				<td>xsd:unsignedByte</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>dtmfCount</td>
+				<td>optional</td>
+				<td>xsd:unsignedByte</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>dtmfChars</td>
+				<td>optional</td>
+				<td>xsd:token</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, a DTMF descriptor may include additional, custom attributes as needed by the application.</td>
+			</tr>
+		</table>
+		<h3><a name="UniqueDescriptorType"></a>UniqueDescriptorType</h3>
+		<p>SCTE 35 supports a specific list of descriptor types but recognizes other descriptors may be sent. The Unique descriptor type allows an implementaiton to handle such descriptors in an implementation specific manner.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>descriptorTag</td>
+				<td>required</td>
+				<td>xsd:unsignedByte</td>
+				<td>The 8-bit field that identifies each descriptor.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>descriptorData</td>
+				<td>optional</td>
+				<td>xsd:hexBinary<br>maxLength=253</td>
+				<td>The hexbinary coded bytes comprising the descriptor. The data may be no longer than 253 bytes.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, a unique descriptor may include additional, custom attributes as needed by the application.</td>
+			</tr>
+		</table>
+		<h3><a name="SegmentationDescriptorType"></a>SegmentationDescriptorType</h3>
+		<p>SCTE 35 Segmentation Descriptor Type consistent with SCTE 35 2007.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>segmentEventId</td>
+				<td>optional</td>
+				<td>xsd:unsignedInt</td>
+				<td>Unique segmentation identifier.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>segmentationEventCancelIndicator</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>Boolean value indicating if the event is canceled. Set to TRUE if canceled. If FALSE or  omitted the descriptor is valid.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>upidType</td>
+				<td>optional</td>
+				<td>xsd:unsignedByte</td>
+				<td>A value from table 8-6 of SCTE35.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>upid</td>
+				<td>optional</td>
+				<td>xsd:hexBinary</td>
+				<td>A upid coded per table 8-6 in SCTE35</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>segmentTypeId</td>
+				<td>optional</td>
+				<td>xsd:unsignedByte</td>
+				<td>A value from table 8-7 of SCTE35.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>segmentNum</td>
+				<td>optional</td>
+				<td>xsd:unsignedByte</td>
+				<td>Segment number.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>segmentsExpected</td>
+				<td>optional</td>
+				<td>xsd:unsignedByte</td>
+				<td>Segments expected.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>duration</td>
+				<td>optional</td>
+				<td>xsd:duration</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, a segmentation descriptor may include additional, custom attributes as needed by the application.</td>
+			</tr>
+		</table>
+		<h3><a name="SpliceInsertType"></a>SpliceInsertType</h3>
+		<p>Type definition for an SCTE 35 splice insert message. Splice insert messages are sent to signal the location of a splice point.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>spliceEventId</td>
+				<td>optional</td>
+				<td>xsd:unsignedInt</td>
+				<td>A 32-bit unique splice event identifier</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>spliceEventCancelIndicator</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>Boolean value indicating if the event is canceled. Set to TRUE if canceled. If FALSE or  omitted the descriptor is valid.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>outOfNetworkIndicator</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>Boolean indication of exiting or returning to the network (main essence) stream. A value of TRUE indicates exiting the network. A value of FALSE or if omitted indicates a return to network.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>uniqueProgramId</td>
+				<td>optional</td>
+				<td>xsd:unsignedShort</td>
+				<td>Unique identifier for the program.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>availNum</td>
+				<td>optional</td>
+				<td>xsd:unsignedByte</td>
+				<td>Avail number.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>availsExpected</td>
+				<td>optional</td>
+				<td>xsd:unsignedByte</td>
+				<td>Avails expected.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>duration</td>
+				<td>optional</td>
+				<td>xsd:duration</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, a splice insert may include additional, custom attributes as needed by the application.</td>
+			</tr>
+		</table>
+		<h3><a name="SCTE35PointDescriptorType"></a>SCTE35PointDescriptorType</h3>
+		<p>Type definition for an SCTE 35 splice info section.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>spliceCommandType</td>
+				<td>required</td>
+				<td>xsd:unsignedInt</td>
+				<td>Splice command type from table 7-2 of SCTE35 which indicates the structure carrying the detailed information contained herein.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, an SCTE 35 Point Descriptor may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SpliceInsert</td>
+				<td>optional</td>
+				<td><a href="#SpliceInsertType">SpliceInsertType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>AvailDescriptorInfo</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#AvailDescriptorType">AvailDescriptorType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>DTMFDescriptorInfo</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#DTMFDescriptorType">DTMFDescriptorType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SegmentationDescriptorInfo</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#SegmentationDescriptorType">SegmentationDescriptorType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>UniqueDescriptorInfo</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#UniqueDescriptorType">UniqueDescriptorType</a></td>
+				<td>Generic descriptor conveyence mechanism for any descriptor except the AvailDescriptorInfo, the DTMFDescriptorInfo, and the SegmentationDescriptorInfo.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional<br>multiple</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="NPTPointDescriptorType"></a>NPTPointDescriptorType</h3>
+		<p>The NPT for a point that specifies a point of interest or the start
+				or end point of a region. NPT always has an nptPoint but may also include a date
+				constraint on the NPT. The date is useful when defining NPT offsets into what was
+				previously a live stream</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>nptDate</td>
+				<td>optional</td>
+				<td>xsd:date</td>
+				<td>For live streams. NPT Date in xsd:date format. If nptDate is
+					present, nptPoint is offset from start of day. nptPoint wraps to 0 at UTC
+					mid-night.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>nptPoint</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>pattern=[0-9]*\.[0-9]{3}|BOS|EOS</td>
+				<td>NPT point format:(ss.sss|EOS|BOS). If nptDate is present BOS is same as 00.000 and EOS is same as 86399.999</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, NPT Point Descriptor may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="UTCPointDescriptorType"></a>UTCPointDescriptorType</h3>
+		<p>Type to hold the UTC time of a point.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>utcPoint</td>
+				<td>required</td>
+				<td>xsd:dateTime<br>pattern=.+T[^+\-]+Z</td>
+				<td>UTC point.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to utcPoint, UTC Point Descriptor may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="SignalValidityTimeRangeType"></a>SignalValidityTimeRangeType</h3>
+		<p>Specifies a bounded interval of time when a signal should be considered valid. If a signal arrives outside the valid time range it shall not be considered valid.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>order</td>
+				<td>optional</td>
+				<td>xsd:unsignedInt</td>
+				<td>If more than one signal shares the same expected arrive time range, order will contain an incrementing value, starting at 1, to drive the order of evaluation by a signal acquisition system.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>The valid time range may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>UTCStart</td>
+				<td>required</td>
+				<td><a href="#UTCPointDescriptorType">UTCPointDescriptorType</a></td>
+				<td>Specifies the start of the valid time range.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>UTCEnd</td>
+				<td>required</td>
+				<td><a href="#UTCPointDescriptorType">UTCPointDescriptorType</a></td>
+				<td>Specifies the end of the valid time range.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="StreamTimesType"></a>StreamTimesType</h3>
+		<p>StreamTimes contains one or  more time values that are generated and interpreted by an underlying subsystem. While implementation specific, this data is intended to be passed as is through intervening subsystems unaltered.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>Stream times may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>StreamTime</td>
+				<td>required<br>multiple</td>
+				<td><a href="#StreamTimeType">StreamTimeType</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="StreamTimeType"></a>StreamTimeType</h3>
+		<p>A single platform specific time comprised of a type and value pair.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>timeType</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>timeValue</td>
+				<td>optional</td>
+				<td>xsd:string<br>minLength=1</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td>In addition to the attributes defined, a stream time may include additional, custom attributes as needed by the application.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>

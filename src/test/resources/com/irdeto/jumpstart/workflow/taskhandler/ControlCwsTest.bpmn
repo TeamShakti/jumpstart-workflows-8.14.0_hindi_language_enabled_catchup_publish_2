@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_upsertP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_upsertP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_deleteP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_deleteP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_batchItem" structureRef="com.irdeto.domain.control.ControlBatch" />
+  <itemDefinition id="_deleteMediaItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+
+  <itemDefinition id="_8-upsertP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_8-upsertP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_8-deleteP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_8-deleteP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_8-batchItem" structureRef="com.irdeto.domain.control.ControlBatch" />
+  <itemDefinition id="_8-deleteMediaItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+
+  <itemDefinition id="_9-upsertP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_9-upsertP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_9-deleteP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_9-deleteP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_9-batchItem" structureRef="com.irdeto.domain.control.ControlBatch" />
+  <itemDefinition id="_9-deleteMediaItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+
+  <itemDefinition id="_10-upsertP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_10-upsertP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_10-deleteP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_10-deleteP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_10-batchItem" structureRef="com.irdeto.domain.control.ControlBatch" />
+  <itemDefinition id="_10-deleteMediaItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+
+  <itemDefinition id="_11-upsertP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_11-upsertP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_11-deleteP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_11-deleteP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_11-batchItem" structureRef="com.irdeto.domain.control.ControlBatch" />
+  <itemDefinition id="_11-deleteMediaItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+
+  <itemDefinition id="_12-upsertP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_12-upsertP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_12-deleteP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_12-deleteP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_12-batchItem" structureRef="com.irdeto.domain.control.ControlBatch" />
+  <itemDefinition id="_12-deleteMediaItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+
+  <itemDefinition id="_13-upsertP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_13-upsertP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_13-deleteP7CategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_13-deleteP7MediaCategoryItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+  <itemDefinition id="_13-batchItem" structureRef="com.irdeto.domain.control.ControlBatch" />
+  <itemDefinition id="_13-deleteMediaItem" structureRef="com.irdeto.domain.control.cws.SoapEnvelope" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.taskhandler.ControlCwsTest" name="Control CWS Test" tns:packageName="com.irdeto.jumpstart.workflow.taskhandler" >
+
+    <extensionElements>
+     <tns:import name="java.util.List" />
+     <tns:import name="java.util.ArrayList" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="upsertP7MediaCategory" itemSubjectRef="_upsertP7MediaCategoryItem"/>
+    <property id="upsertP7Category" itemSubjectRef="_upsertP7CategoryItem"/>
+    <property id="deleteP7Category" itemSubjectRef="_deleteP7CategoryItem"/>
+    <property id="deleteP7MediaCategory" itemSubjectRef="_deleteP7MediaCategoryItem"/>
+    <property id="batch" itemSubjectRef="_batchItem"/>
+    <property id="deleteMedia" itemSubjectRef="_deleteMediaItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <endEvent id="_3" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_8" name="Create Category" tns:taskName="ControlCws" >
+      <ioSpecification>
+        <dataInput id="_8_SoapEnvelopeInput" name="SoapEnvelope" />
+        <inputSet>
+          <dataInputRefs>_8_SoapEnvelopeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>upsertP7Category</sourceRef>
+        <targetRef>_8_SoapEnvelopeInput</targetRef>
+      </dataInputAssociation>
+    </task>
+    <task id="_9" name="Create Link to Media" tns:taskName="ControlCws" >
+      <ioSpecification>
+        <dataInput id="_9_SoapEnvelopeInput" name="SoapEnvelope" />
+        <inputSet>
+          <dataInputRefs>_9_SoapEnvelopeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>upsertP7MediaCategory</sourceRef>
+        <targetRef>_9_SoapEnvelopeInput</targetRef>
+      </dataInputAssociation>
+    </task>
+    <task id="_10" name="Delete Link" tns:taskName="ControlCws" >
+      <ioSpecification>
+        <dataInput id="_10_SoapEnvelopeInput" name="SoapEnvelope" />
+        <inputSet>
+          <dataInputRefs>_10_SoapEnvelopeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>deleteP7MediaCategory</sourceRef>
+        <targetRef>_10_SoapEnvelopeInput</targetRef>
+      </dataInputAssociation>
+    </task>
+    <task id="_11" name="Delete Category" tns:taskName="ControlCws" >
+      <ioSpecification>
+        <dataInput id="_11_SoapEnvelopeInput" name="SoapEnvelope" />
+        <inputSet>
+          <dataInputRefs>_11_SoapEnvelopeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>deleteP7Category</sourceRef>
+        <targetRef>_11_SoapEnvelopeInput</targetRef>
+      </dataInputAssociation>
+    </task>
+    <task id="_12" name="Delete Media" tns:taskName="ControlCws" >
+      <ioSpecification>
+        <dataInput id="_12_SoapEnvelopeInput" name="SoapEnvelope" />
+        <inputSet>
+          <dataInputRefs>_12_SoapEnvelopeInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>deleteMedia</sourceRef>
+        <targetRef>_12_SoapEnvelopeInput</targetRef>
+      </dataInputAssociation>
+    </task>
+    <task id="_13" name="Control Register Content" tns:taskName="ControlRegisterContent" >
+      <ioSpecification>
+        <dataInput id="_13_ControlBatchInput" name="ControlBatch" />
+        <inputSet>
+          <dataInputRefs>_13_ControlBatchInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>batch</sourceRef>
+        <targetRef>_13_ControlBatchInput</targetRef>
+      </dataInputAssociation>
+    </task>
+
+    <!-- connections -->
+    <sequenceFlow id="_12-_3" sourceRef="_12" targetRef="_3" />
+    <sequenceFlow id="_13-_8" sourceRef="_13" targetRef="_8" />
+    <sequenceFlow id="_8-_9" sourceRef="_8" targetRef="_9" />
+    <sequenceFlow id="_9-_10" sourceRef="_9" targetRef="_10" />
+    <sequenceFlow id="_10-_11" sourceRef="_10" targetRef="_11" />
+    <sequenceFlow id="_11-_12" sourceRef="_11" targetRef="_12" />
+    <sequenceFlow id="_1-_13" sourceRef="_1" targetRef="_13" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.taskhandler.ControlCwsTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="108" y="36" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="108" y="540" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="36" y="180" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_9" >
+        <dc:Bounds x="36" y="252" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_10" >
+        <dc:Bounds x="36" y="324" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_11" >
+        <dc:Bounds x="36" y="396" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_12" >
+        <dc:Bounds x="36" y="468" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_13" >
+        <dc:Bounds x="36" y="108" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_12-_3" >
+        <di:waypoint x="132" y="492" />
+        <di:waypoint x="132" y="564" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_13-_8" >
+        <di:waypoint x="132" y="132" />
+        <di:waypoint x="132" y="204" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_9" >
+        <di:waypoint x="132" y="204" />
+        <di:waypoint x="132" y="276" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_9-_10" >
+        <di:waypoint x="132" y="276" />
+        <di:waypoint x="132" y="348" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_10-_11" >
+        <di:waypoint x="132" y="348" />
+        <di:waypoint x="132" y="420" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_11-_12" >
+        <di:waypoint x="132" y="420" />
+        <di:waypoint x="132" y="492" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_13" >
+        <di:waypoint x="132" y="60" />
+        <di:waypoint x="132" y="132" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

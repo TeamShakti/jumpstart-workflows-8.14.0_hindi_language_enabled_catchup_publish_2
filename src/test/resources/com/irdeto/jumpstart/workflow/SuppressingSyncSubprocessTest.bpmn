@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_testItem" structureRef="String" />
+
+  <itemDefinition id="_2-testItem" structureRef="String" />
+
+  <itemDefinition id="_3-testItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.SuppressingSyncSubprocessTest" name="Suppressing Sync Subprocess Test" tns:packageName="com.irdeto.jumpstart.workflow" >
+
+    <!-- process variables -->
+    <property id="test" itemSubjectRef="_testItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="Suppressing Synchronous Subprocess" tns:taskName="SuppressingSyncSubprocessTaskHandler" >
+      <ioSpecification>
+        <dataInput id="_2_testInput" name="test" />
+        <dataInput id="_2_ValueInput" name="Value" />
+        <dataInput id="_2_VariableInput" name="Variable" />
+        <dataInput id="_2_EventTypeInput" name="EventType" />
+        <dataInput id="_2_SingletonInput" name="Singleton" />
+        <dataInput id="_2_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_2_testInput</dataInputRefs>
+          <dataInputRefs>_2_ValueInput</dataInputRefs>
+          <dataInputRefs>_2_VariableInput</dataInputRefs>
+          <dataInputRefs>_2_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_2_SingletonInput</dataInputRefs>
+          <dataInputRefs>_2_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>test</sourceRef>
+        <targetRef>_2_testInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">test</from>
+          <to xsi:type="tFormalExpression">_2_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">test</from>
+          <to xsi:type="tFormalExpression">_2_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">test</from>
+          <to xsi:type="tFormalExpression">_2_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_2_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.WaitProcess</from>
+          <to xsi:type="tFormalExpression">_2_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <task id="_3" name="Suppressing Synchronous Subprocess" tns:taskName="SuppressingSyncSubprocessTaskHandler" >
+      <ioSpecification>
+        <dataInput id="_3_testInput" name="test" />
+        <dataInput id="_3_ValueInput" name="Value" />
+        <dataInput id="_3_VariableInput" name="Variable" />
+        <dataInput id="_3_EventTypeInput" name="EventType" />
+        <dataInput id="_3_SingletonInput" name="Singleton" />
+        <dataInput id="_3_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_3_testInput</dataInputRefs>
+          <dataInputRefs>_3_ValueInput</dataInputRefs>
+          <dataInputRefs>_3_VariableInput</dataInputRefs>
+          <dataInputRefs>_3_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_3_SingletonInput</dataInputRefs>
+          <dataInputRefs>_3_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <sourceRef>test</sourceRef>
+        <targetRef>_3_testInput</targetRef>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">test</from>
+          <to xsi:type="tFormalExpression">_3_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">test</from>
+          <to xsi:type="tFormalExpression">_3_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">test</from>
+          <to xsi:type="tFormalExpression">_3_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_SingletonInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_3_SingletonInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_3_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.WaitProcess</from>
+          <to xsi:type="tFormalExpression">_3_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <endEvent id="_4" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <parallelGateway id="_5" name="Gateway" gatewayDirection="Diverging" />
+    <endEvent id="_6" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <scriptTask id="_7" name="Script" scriptFormat="http://www.java.com/java" >
+      <script>kcontext.setVariable("test","test");</script>
+    </scriptTask>
+    <intermediateCatchEvent id="_8" name="Timer" >
+      <timerEventDefinition>
+        <timeDuration xsi:type="tFormalExpression">3s</timeDuration>
+      </timerEventDefinition>
+    </intermediateCatchEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="_5-_2" sourceRef="_5" targetRef="_2" />
+    <sequenceFlow id="_8-_3" sourceRef="_8" targetRef="_3" />
+    <sequenceFlow id="_3-_4" sourceRef="_3" targetRef="_4" />
+    <sequenceFlow id="_7-_5" sourceRef="_7" targetRef="_5" />
+    <sequenceFlow id="_2-_6" sourceRef="_2" targetRef="_6" />
+    <sequenceFlow id="_1-_7" sourceRef="_1" targetRef="_7" />
+    <sequenceFlow id="_5-_8" sourceRef="_5" targetRef="_8" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.SuppressingSyncSubprocessTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="204" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="12" y="240" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="252" y="240" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_4" >
+        <dc:Bounds x="307" y="291" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="204" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_6" >
+        <dc:Bounds x="84" y="312" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="132" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_8" >
+        <dc:Bounds x="324" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_5-_2" >
+        <di:waypoint x="228" y="192" />
+        <di:waypoint x="108" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_8-_3" >
+        <di:waypoint x="348" y="192" />
+        <di:waypoint x="348" y="264" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_4" >
+        <di:waypoint x="348" y="264" />
+        <di:waypoint x="330" y="314" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_5" >
+        <di:waypoint x="228" y="120" />
+        <di:waypoint x="228" y="192" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_6" >
+        <di:waypoint x="108" y="264" />
+        <di:waypoint x="108" y="336" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_7" >
+        <di:waypoint x="228" y="48" />
+        <di:waypoint x="228" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_8" >
+        <di:waypoint x="228" y="192" />
+        <di:waypoint x="348" y="192" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

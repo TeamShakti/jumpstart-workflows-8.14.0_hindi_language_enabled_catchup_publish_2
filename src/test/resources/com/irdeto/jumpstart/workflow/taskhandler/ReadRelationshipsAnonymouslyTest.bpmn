@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_entityIdItem" structureRef="String" />
+  <itemDefinition id="_entityTypeItem" structureRef="String" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_relationshipItem" structureRef="String" />
+
+  <itemDefinition id="_2-entityIdItem" structureRef="String" />
+  <itemDefinition id="_2-entityTypeItem" structureRef="String" />
+  <itemDefinition id="_2-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_2-mm8ResponseItem" structureRef="com.irdeto.domain.operation.MM8Response" />
+  <itemDefinition id="_2-relationshipItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.taskhandler.ReadRelationshipsAnonymouslyTest" name="Read Relationships Anonymously Test" tns:packageName="com.irdeto.jumpstart.workflow.taskhandler" >
+
+    <!-- process variables -->
+    <property id="entityId" itemSubjectRef="_entityIdItem"/>
+    <property id="entityType" itemSubjectRef="_entityTypeItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="mm8Response" itemSubjectRef="_mm8ResponseItem"/>
+    <property id="relationship" itemSubjectRef="_relationshipItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="Read Related Entity" tns:taskName="MediaManager8ReadRelationshipsTask" >
+      <ioSpecification>
+        <dataInput id="_2_RelationshipInput" name="Relationship" />
+        <dataInput id="_2_EntityTypeInput" name="EntityType" />
+        <dataInput id="_2_EntityIDInput" name="EntityID" />
+        <dataOutput id="_2_ExitStatusOutput" name="ExitStatus" />
+        <dataOutput id="_2_ResponseOutput" name="Response" />
+        <inputSet>
+          <dataInputRefs>_2_RelationshipInput</dataInputRefs>
+          <dataInputRefs>_2_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_2_EntityIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_2_ExitStatusOutput</dataOutputRefs>
+          <dataOutputRefs>_2_ResponseOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_2_RelationshipInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{relationship}</from>
+          <to xsi:type="tFormalExpression">_2_RelationshipInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityType}</from>
+          <to xsi:type="tFormalExpression">_2_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{entityId}</from>
+          <to xsi:type="tFormalExpression">_2_EntityIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_2_ExitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_2_ResponseOutput</sourceRef>
+        <targetRef>mm8Response</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_3" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="_1-_2" sourceRef="_1" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.taskhandler.ReadRelationshipsAnonymouslyTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="204" y="24" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="132" y="96" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="214" y="168" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_1-_2" >
+        <di:waypoint x="228" y="48" />
+        <di:waypoint x="228" y="120" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="228" y="120" />
+        <di:waypoint x="238" y="192" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

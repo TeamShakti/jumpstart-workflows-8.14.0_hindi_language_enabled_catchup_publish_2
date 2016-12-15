@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_2-exitMessageItem" structureRef="String" />
+  <itemDefinition id="_exitMessageItem" structureRef="String" />
+  <itemDefinition id="_purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_2-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_2-errorMapItem" structureRef="java.util.Map" />
+  <itemDefinition id="_2-purgeWrapperItem" structureRef="com.irdeto.jumpstart.domain.purge.PurgeWrapper" />
+  <itemDefinition id="_contentQADecorator" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+  <itemDefinition id="_metadataQADecorator" structureRef="com.irdeto.jumpstart.domain.qa.QADecorator" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.purge.CancelTasks" name="Cancel Tasks" tns:packageName="com.irdeto.jumpstart.workflow.purge" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.jumpstart.workflow.purge.*" />
+     <tns:import name="com.irdeto.jumpstart.domain.qa.*" />
+     <tns:import name="com.irdeto.manager.task.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="errorMap" itemSubjectRef="_errorMapItem"/>
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="exitMessage" itemSubjectRef="_exitMessageItem"/>
+    <property id="purgeWrapper" itemSubjectRef="_purgeWrapperItem"/>
+    <property id="contentQADecorator" itemSubjectRef="null"/>
+    <property id="metadataQADecorator" itemSubjectRef="null"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess"  isInterrupting="true">
+    </startEvent>
+    <task id="_2" name="Cancel Task" tns:taskName="CancelTask" >
+      <ioSpecification>
+        <dataInput id="_2_EntityTypeInput" name="EntityType" />
+        <dataInput id="_2_EntityIdInput" name="EntityId" />
+        <dataInput id="_2_ForceInput" name="Force" />
+        <dataInput id="_2_UserIdInput" name="UserId" />
+        <dataInput id="_2_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_2_SpecificProcessInstanceInput" name="SpecificProcessInstance" />
+        <inputSet>
+          <dataInputRefs>_2_EntityTypeInput</dataInputRefs>
+          <dataInputRefs>_2_EntityIdInput</dataInputRefs>
+          <dataInputRefs>_2_ForceInput</dataInputRefs>
+          <dataInputRefs>_2_UserIdInput</dataInputRefs>
+          <dataInputRefs>_2_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_2_SpecificProcessInstanceInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_2_EntityTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{purgeWrapper.getEntity().getType()}</from>
+          <to xsi:type="tFormalExpression">_2_EntityTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_EntityIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{purgeWrapper.getEntity().getId()}</from>
+          <to xsi:type="tFormalExpression">_2_EntityIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ForceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_2_ForceInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_UserIdInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">QA</from>
+          <to xsi:type="tFormalExpression">_2_UserIdInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_2_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SpecificProcessInstanceInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_2_SpecificProcessInstanceInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <intermediateCatchEvent id="_3" name="Signal" >
+      <dataOutput id="_3_Output" name="event" />
+      <dataOutputAssociation>
+      <sourceRef>_3_Output</sourceRef>
+      <targetRef>errorMap</targetRef>
+      </dataOutputAssociation>
+      <outputSet>
+        <dataOutputRefs>_3_Output</dataOutputRefs>
+      </outputSet>
+      <signalEventDefinition signalRef="Error"/>
+    </intermediateCatchEvent>
+    <scriptTask id="_5" name="Log Error" scriptFormat="http://www.java.com/java" >
+      <script>BeanUtil.loggerManager.error(kcontext, "Error for entity {} {}: {}", purgeWrapper.getEntity().getType(), purgeWrapper.getEntity().getId(), errorMap.get("ExitMessage"));
+kcontext.setVariable("exitStatus","FAILURE");
+kcontext.setVariable("exitMessage", errorMap.get("ExitMessage"));</script>
+    </scriptTask>
+    <parallelGateway id="_7" name="Gateway" gatewayDirection="Diverging" >
+    </parallelGateway>
+    <task id="_jbpm-unique-12" name="Exit Content QA" tns:taskName="SignalProcessInstances" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-12_VariableInput" name="Variable" />
+        <dataInput id="_jbpm-unique-12_EventTypeInput" name="EventType" />
+        <dataInput id="_jbpm-unique-12_ValueInput" name="Value" />
+        <dataInput id="_jbpm-unique-12_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_jbpm-unique-12_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-12_VariableInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-12_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-12_ValueInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-12_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-12_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-12_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">qaEntity</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-12_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-12_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">CANCEL_QA</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-12_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-12_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{contentQADecorator}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-12_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-12_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-12_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-12_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflows.qa.QA</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-12_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_jbpm-unique-14" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <endEvent id="_jbpm-unique-15" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+    <task id="_jbpm-unique-16" name="Exit Metadata QA" tns:taskName="SignalProcessInstances" >
+      <ioSpecification>
+        <dataInput id="_jbpm-unique-16_VariableInput" name="Variable" />
+        <dataInput id="_jbpm-unique-16_EventTypeInput" name="EventType" />
+        <dataInput id="_jbpm-unique-16_ErrorEventInput" name="ErrorEvent" />
+        <dataInput id="_jbpm-unique-16_ValueInput" name="Value" />
+        <dataInput id="_jbpm-unique-16_ProcessIDInput" name="ProcessID" />
+        <inputSet>
+          <dataInputRefs>_jbpm-unique-16_VariableInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-16_EventTypeInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-16_ErrorEventInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-16_ValueInput</dataInputRefs>
+          <dataInputRefs>_jbpm-unique-16_ProcessIDInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-16_VariableInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">qaEntity</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-16_VariableInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-16_EventTypeInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">CANCEL_QA</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-16_EventTypeInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-16_ErrorEventInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">Error</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-16_ErrorEventInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-16_ValueInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">#{metadataQADecorator}</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-16_ValueInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_jbpm-unique-16_ProcessIDInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">com.irdeto.jumpstart.workflow.qa.QA</from>
+          <to xsi:type="tFormalExpression">_jbpm-unique-16_ProcessIDInput</to>
+        </assignment>
+      </dataInputAssociation>
+    </task>
+    <exclusiveGateway id="_jbpm-unique-17" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_jbpm-unique-18" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_jbpm-unique-19" name="Gateway" gatewayDirection="Diverging" >
+    </exclusiveGateway>
+    <exclusiveGateway id="_jbpm-unique-20" name="Gateway" gatewayDirection="Converging" >
+    </exclusiveGateway>
+    <scriptTask id="_jbpm-unique-21" name="Setup" scriptFormat="http://www.java.com/java" >
+      <script>CancelTasksHelper.setup(kcontext);</script>
+    </scriptTask>
+
+    <!-- connections -->
+    <sequenceFlow id="_jbpm-unique-20-_2" sourceRef="_jbpm-unique-20" targetRef="_2" />
+    <sequenceFlow id="_7-_3" sourceRef="_7" targetRef="_3" />
+    <sequenceFlow id="_3-_5" sourceRef="_3" targetRef="_5" />
+    <sequenceFlow id="_1-_7" sourceRef="_1" targetRef="_7" />
+    <sequenceFlow id="_jbpm-unique-17-_jbpm-unique-12" sourceRef="_jbpm-unique-17" targetRef="_jbpm-unique-12" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return kcontext.getVariable(CancelTasksHelper.CONTENT_QA_DECORATOR) != null;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_5-_jbpm-unique-14" sourceRef="_5" targetRef="_jbpm-unique-14" />
+    <sequenceFlow id="_2-_jbpm-unique-14" sourceRef="_2" targetRef="_jbpm-unique-14" />
+    <sequenceFlow id="_jbpm-unique-14-_jbpm-unique-15" sourceRef="_jbpm-unique-14" targetRef="_jbpm-unique-15" />
+    <sequenceFlow id="_jbpm-unique-19-_jbpm-unique-16" sourceRef="_jbpm-unique-19" targetRef="_jbpm-unique-16" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return kcontext.getVariable(CancelTasksHelper.METADATA_QA_DECORATOR) != null;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-21-_jbpm-unique-17" sourceRef="_jbpm-unique-21" targetRef="_jbpm-unique-17" />
+    <sequenceFlow id="_jbpm-unique-12-_jbpm-unique-18" sourceRef="_jbpm-unique-12" targetRef="_jbpm-unique-18" />
+    <sequenceFlow id="_jbpm-unique-17-_jbpm-unique-18" sourceRef="_jbpm-unique-17" targetRef="_jbpm-unique-18" name="No Content QA" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_jbpm-unique-18-_jbpm-unique-19" sourceRef="_jbpm-unique-18" targetRef="_jbpm-unique-19" />
+    <sequenceFlow id="_jbpm-unique-16-_jbpm-unique-20" sourceRef="_jbpm-unique-16" targetRef="_jbpm-unique-20" />
+    <sequenceFlow id="_jbpm-unique-19-_jbpm-unique-20" sourceRef="_jbpm-unique-19" targetRef="_jbpm-unique-20" name="No Metadata QA" tns:priority="1" >
+      <conditionExpression xsi:type="tFormalExpression" language="http://www.java.com/java" >return true;</conditionExpression>
+    </sequenceFlow>
+    <sequenceFlow id="_7-_jbpm-unique-21" sourceRef="_7" targetRef="_jbpm-unique-21" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.purge.CancelTasks" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="252" y="12" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="24" y="576" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="504" y="84" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_5" >
+        <dc:Bounds x="384" y="576" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_7" >
+        <dc:Bounds x="252" y="84" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-12" >
+        <dc:Bounds x="204" y="156" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-14" >
+        <dc:Bounds x="252" y="576" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-15" >
+        <dc:Bounds x="252" y="648" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-16" >
+        <dc:Bounds x="204" y="372" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-17" >
+        <dc:Bounds x="72" y="156" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-18" >
+        <dc:Bounds x="72" y="288" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-19" >
+        <dc:Bounds x="72" y="372" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-20" >
+        <dc:Bounds x="72" y="504" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_jbpm-unique-21" >
+        <dc:Bounds x="24" y="84" width="145" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-20-_2" >
+        <di:waypoint x="96" y="528" />
+        <di:waypoint x="96" y="600" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_3" >
+        <di:waypoint x="276" y="108" />
+        <di:waypoint x="528" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_3-_5" >
+        <di:waypoint x="528" y="108" />
+        <di:waypoint x="456" y="600" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_1-_7" >
+        <di:waypoint x="276" y="36" />
+        <di:waypoint x="276" y="108" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-17-_jbpm-unique-12" >
+        <di:waypoint x="96" y="180" />
+        <di:waypoint x="276" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_5-_jbpm-unique-14" >
+        <di:waypoint x="456" y="600" />
+        <di:waypoint x="276" y="600" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_jbpm-unique-14" >
+        <di:waypoint x="96" y="600" />
+        <di:waypoint x="276" y="600" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-14-_jbpm-unique-15" >
+        <di:waypoint x="276" y="600" />
+        <di:waypoint x="276" y="672" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-19-_jbpm-unique-16" >
+        <di:waypoint x="96" y="396" />
+        <di:waypoint x="276" y="396" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-21-_jbpm-unique-17" >
+        <di:waypoint x="96" y="108" />
+        <di:waypoint x="96" y="180" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-12-_jbpm-unique-18" >
+        <di:waypoint x="276" y="180" />
+        <di:waypoint x="96" y="312" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-17-_jbpm-unique-18" >
+        <di:waypoint x="96" y="180" />
+        <di:waypoint x="96" y="312" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-18-_jbpm-unique-19" >
+        <di:waypoint x="96" y="312" />
+        <di:waypoint x="96" y="396" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-16-_jbpm-unique-20" >
+        <di:waypoint x="276" y="396" />
+        <di:waypoint x="96" y="528" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_jbpm-unique-19-_jbpm-unique-20" >
+        <di:waypoint x="96" y="396" />
+        <di:waypoint x="96" y="528" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_7-_jbpm-unique-21" >
+        <di:waypoint x="276" y="108" />
+        <di:waypoint x="96" y="108" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>

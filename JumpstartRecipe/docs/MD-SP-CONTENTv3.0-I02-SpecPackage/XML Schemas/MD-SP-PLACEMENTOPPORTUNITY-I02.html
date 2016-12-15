@@ -1,0 +1,282 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<title></title>
+		<style type="text/css"> body { font-family: Arial; font-size: 8pt; color: #800000; }</style>
+		<style type="text/css"> table { border-style: solid; border-width: 1px; border-left-color: #ECE9D8; border-top-color: #ECE9D8; border-right-color: #ACA899; border-bottom-color: #ACA899; }</style>
+		<style type="text/css"> th {border-style: solid; font-size: 10pt; border-width: 1px; }</style>
+		<style type="text/css"> td {border-style: solid; font-size: 8pt; border-width: 1px; }</style>
+		<style type="text/css"> a {color: blue; }</style>
+	</head>
+	<body>
+		<h2></h2>
+		<h3><a name="PlacementOpportunityGroupType"></a>PlacementOpportunityGroupType</h3>
+		<p>PlacementOpportunityGroupType is an extension of the CableLabs 3 AssetType.  Implementers which do not deal with CableLabs Assets may safely ignore this type.</p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetType">core:AssetType</a></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>PlacementOpportunityTemporalContraints</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#"></a></td>
+				<td>Optional placement opportunity temporal contraints to evaluate to determine if this PO Group should be applied. The startDateTime and endDateTime attributes of the Placement Opportunity Group Asset and any temporal contraints on the POGroupRef (see CONTENT schema) must be passed prior to evaluating these temporal constraints.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>PlacementOpportunityAssociationRule</td>
+				<td>optional<br>multiple</td>
+				<td><a href="MD-SP-CORE-I01.html#ProcessRuleSelectorType">core:ProcessRuleSelectorType</a></td>
+				<td>Optional placement opportunity association rules to determine if this PO Group shuold be applied in combination with other constraints (see PlacementOpportunityTemporalContraints). A rule should evalute to TRUE or FALSE. If more than one rule is specified the first rule returning a TRUE means the PO Group should be applied (logical OR operation applies).</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>PlacementOpportunityPoint</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#"></a></td>
+				<td>One or more PO Point elements.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>PlacementOpportunityRegion</td>
+				<td>optional<br>multiple</td>
+				<td><a href="#PlacementOpportunityRegionType">PlacementOpportunityRegionType</a></td>
+				<td>One or more PO Region elements.</td>
+			</tr>
+		</table>
+		<h3><a name="PlacementOpportunityPointType"></a>PlacementOpportunityPointType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="#PlacementOpportunityBaseType">PlacementOpportunityBaseType</a></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignalPointRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td>A pointer to the signal point identified by signalPointId or an AlternateId for a point. 
+
+NOTE: Two or more PlacementOpportunityPoints can reference the same SignalPointRef. If so, the order attribute specifies the order of interpretation/processing.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignalPoint</td>
+				<td>required</td>
+				<td><a href="#signaling:SignalPointType">signaling:SignalPointType</a></td>
+				<td>Fully expressed signal point.</td>
+			</tr>
+		</table>
+		<h3><a name="PlacementOpportunityRegionType"></a>PlacementOpportunityRegionType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td colspan="3">Based on:</td>
+				<td><a href="#PlacementOpportunityBaseType">PlacementOpportunityBaseType</a></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignalRegionRef</td>
+				<td>required</td>
+				<td><a href="MD-SP-CORE-I01.html#AssetRefType">core:AssetRefType</a></td>
+				<td>A pointer to the signal region identified by signalRegiond or AlternateId for a region. 
+
+NOTE: Two or more PlacementOpportunityRegions can reference the same SignalRegionRef. If so, the order attribute specifies the order of interpretation/processing.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>SignalRegion</td>
+				<td>required</td>
+				<td><a href="#signaling:SignalRegionType">signaling:SignalRegionType</a></td>
+				<td>Fully expressed signal region.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>LinearVideoAd</td>
+				<td>required</td>
+				<td><a href="#LinearVideoAdType">LinearVideoAdType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="PlacementOpportunityBaseType"></a>PlacementOpportunityBaseType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>placementOpportunityID</td>
+				<td>required</td>
+				<td>xsd:anyURI<br>maxLength=1024</td>
+				<td>Identifier for this entity. Use core:AssetRefType when referencing a PlacementOpportunityID.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>typeOfPlacementOpportunity</td>
+				<td>required</td>
+				<td>xsd:string<br>minLength=1<br>pattern=pre-roll|mid-roll|post-roll|interstitial|slate|private:.+</td>
+				<td>Type of PlacementOpportunity
+Linear Video Ad Types - pre-roll, mid-roll, post-roll, interstitial or slate - use mid-roll for an advertisement in a live program - private: should be used for private extensions </td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>poGroupIndex</td>
+				<td>optional</td>
+				<td>xsd:unsignedInt<br>minInclusive=1</td>
+				<td>Placement Opportunity group index allows one or more Placement Opportunity Points or Regions to be associated via a common identifier. Typically this applies to a group of opportunities that point at the same point or region of interest. Numbers should start at 1 and increment for each successive group. (poGroupIndex is NOT associated with the PlacementOpportunityGroup. The order in which PlacementOpportunityGroups are addressed is in the core:EffectiveAssetRefType.	
+				</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>order</td>
+				<td>optional</td>
+				<td>xsd:unsignedInt</td>
+				<td>The order, lowest to highest, in which to process PlacementOpportunities. In some cases, 2 or more PlacementOpportunities can be applied to the same point or region. If poGroupIndex is specified this applies to the order within the group.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>PlacementOpportunityOwnerRule</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ProcessRuleSelectorType">core:ProcessRuleSelectorType</a></td>
+				<td>Optional rule to direct how PlacementOpportunity ownership is derived.</td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>PlacementOpportunitySetRule</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ProcessRuleSelectorType">core:ProcessRuleSelectorType</a></td>
+				<td>Optional rule to direct how two or more PlacementOpportunities are dealt with as a set. </td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>Ext</td>
+				<td>optional</td>
+				<td><a href="MD-SP-CORE-I01.html#ExtType">core:ExtType</a></td>
+				<td></td>
+			</tr>
+		</table>
+		<h3><a name="LinearVideoAdType"></a>LinearVideoAdType</h3>
+		<p></p>
+		<table cellpadding="5" cellspacing="0">
+			<tr>
+				<th>.</th>
+				<th>Name</th>
+				<th>Use</th>
+				<th>Type</th>
+				<th>Annotation</th>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>fixedDuration</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>The advertisements, one or more, must match the duration of the placement opportunity. The number of advertisements is constrained by fillStrategy. The valid values for fixedDuration are:
+- TRUE – Must match the duration as defined by:
+maxDuration, if present, OR by the duration defined by the underlying signal region. minDuration, if present, MUST be ignored.
+- FALSE – Sum of the duration of placed advertisements must fall within the defined duration range.   
+
+The duration range is constrained by:
+- minDuration only – Sum of duration MUST be equal to or greater than minDuration
+- maxDuration only – Sum of duration MUST be equal to or less than maxDuration
+- minDuration and maxDuration – Sum of duration MUST be equal to or greater than minDuration and less then or equal to maxDuration </td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>minDuration</td>
+				<td>optional</td>
+				<td>xsd:duration</td>
+				<td>minDuration – defines minimum sum of duration of advertisements placed. Any test would be greater than or equal to the minDuration value. minDuration MUST be less than maxDuration, if present.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>maxDuration</td>
+				<td>optional</td>
+				<td>xsd:duration</td>
+				<td>maxDuration – defines the duration if fixedDuration is TRUE OR the maximum sum of duration of advertisements placed. Any test would be less than or equal to the value. maxDuration MUST be greater than minDuration, if present.</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>maxPlacementCount</td>
+				<td>optional</td>
+				<td><a href="#"></a></td>
+				<td> For a fillStrategy of "multiple", an optional contraint on the maximum number of placements to make. If omitted there is no constraint on the number of placements that can fit within the specified within the duration constraints. For example, for a count of 2, zero, 1 or 2 placements are allowed. </td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>fillStrategy</td>
+				<td>optional</td>
+				<td>xsd:string<br>pattern=single|multiple|delete|private:.+</td>
+				<td>fillStrategy – defines the fill strategy. Valid values:
+- single – only one advertisement MUST be placed
+- multiple – one or more advertisements can be placed
+- delete - in the absence of any other placement opportunities defined and filled for a given region of interest, directs the placement system to delete the underlying content (ex. advertisement) within the region of interest. That is, if no placements are made skip over the underlying content.
+- private:* - a private fill strategy is applied in selecting advertisements to place 
+</td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>isFirst</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>This is a derived value that is set to TRUE if this is the first Placement Opportunity within a region. </td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>isLast</td>
+				<td>optional</td>
+				<td>xsd:boolean</td>
+				<td>This is a derived value that is set to TRUE if this is the last Placement Opportunity within a region. </td>
+			</tr>
+			<tr>
+				<td>Attribute</td>
+				<td>ANY</td>
+				<td>optional</td>
+				<td>##any</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Element</td>
+				<td>TrickModeRestriction</td>
+				<td>optional<br>multiple</td>
+				<td><a href="MD-SP-CORE-I01.html#TrickModeRestrictionType">core:TrickModeRestrictionType</a></td>
+				<td>Zero, one or more trick mode restrictions. </td>
+			</tr>
+		</table>
+	</body>
+</html>

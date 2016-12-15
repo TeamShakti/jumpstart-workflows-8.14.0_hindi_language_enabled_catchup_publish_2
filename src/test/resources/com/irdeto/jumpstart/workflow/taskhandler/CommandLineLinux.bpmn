@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<definitions id="Definition"
+             targetNamespace="http://www.jboss.org/drools"
+             typeLanguage="http://www.java.com/javaTypes"
+             expressionLanguage="http://www.mvel.org/2.0"
+             xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd"
+             xmlns:g="http://www.jboss.org/drools/flow/gpd"
+             xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+             xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+             xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+             xmlns:tns="http://www.jboss.org/drools">
+
+  <itemDefinition id="_exitStatusItem" structureRef="String" />
+  <itemDefinition id="_commandItem" structureRef="String" />
+
+  <itemDefinition id="_2-exitStatusItem" structureRef="String" />
+  <itemDefinition id="_2-commandItem" structureRef="String" />
+
+  <process processType="Private" isExecutable="true" id="com.irdeto.jumpstart.workflow.CommandLineTest" name="Command Line Test" tns:packageName="com.irdeto.jumpstart.workflow" >
+
+    <extensionElements>
+     <tns:import name="com.irdeto.manager.task.*" />
+    </extensionElements>
+    <!-- process variables -->
+    <property id="exitStatus" itemSubjectRef="_exitStatusItem"/>
+    <property id="command" itemSubjectRef="_commandItem"/>
+
+    <!-- nodes -->
+    <startEvent id="_1" name="StartProcess" />
+    <task id="_2" name="Command Line" tns:taskName="CommandLine" >
+      <extensionElements>
+        <tns:onExit-script scriptFormat="http://www.java.com/java">
+          <tns:script>BeanUtil.loggerManager.debug(kcontext, "Exit status {}", exitStatus);</tns:script>
+        </tns:onExit-script>
+      </extensionElements>
+      <ioSpecification>
+        <dataInput id="_2_CommandInput" name="Command" />
+        <dataInput id="_2_UseAMQInput" name="UseAMQ" />
+        <dataInput id="_2_WithAMQInput" name="WithAMQ" />
+        <dataInput id="_2_DirectoryInput" name="Directory" />
+        <dataInput id="_2_SynchronousInput" name="Synchronous" />
+        <dataOutput id="_2_ExitStatusOutput" name="ExitStatus" />
+        <inputSet>
+          <dataInputRefs>_2_CommandInput</dataInputRefs>
+          <dataInputRefs>_2_UseAMQInput</dataInputRefs>
+          <dataInputRefs>_2_WithAMQInput</dataInputRefs>
+          <dataInputRefs>_2_DirectoryInput</dataInputRefs>
+          <dataInputRefs>_2_SynchronousInput</dataInputRefs>
+        </inputSet>
+        <outputSet>
+          <dataOutputRefs>_2_ExitStatusOutput</dataOutputRefs>
+        </outputSet>
+      </ioSpecification>
+      <dataInputAssociation>
+        <targetRef>_2_CommandInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">/opt/jbpm/mp4splitAMQ.sh --content.id=1 --iss.key_id=56f72339c78fbe4fada22bcc216ae351 --iss.content_key=4662c9ef91640b6c71875d68094591cc --mezz.name=videoContent-1-hzjvh1k0-m17</from>
+          <to xsi:type="tFormalExpression">_2_CommandInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_UseAMQInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_2_UseAMQInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_WithAMQInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">true</from>
+          <to xsi:type="tFormalExpression">_2_WithAMQInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_DirectoryInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">/var/www/irdeto_publish/public/dash</from>
+          <to xsi:type="tFormalExpression">_2_DirectoryInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataInputAssociation>
+        <targetRef>_2_SynchronousInput</targetRef>
+        <assignment>
+          <from xsi:type="tFormalExpression">false</from>
+          <to xsi:type="tFormalExpression">_2_SynchronousInput</to>
+        </assignment>
+      </dataInputAssociation>
+      <dataOutputAssociation>
+        <sourceRef>_2_ExitStatusOutput</sourceRef>
+        <targetRef>exitStatus</targetRef>
+      </dataOutputAssociation>
+    </task>
+    <endEvent id="_3" name="End" >
+        <terminateEventDefinition />
+    </endEvent>
+
+    <!-- connections -->
+    <sequenceFlow id="_1-_2" sourceRef="_1" targetRef="_2" />
+    <sequenceFlow id="_2-_3" sourceRef="_2" targetRef="_3" />
+
+  </process>
+
+  <bpmndi:BPMNDiagram>
+    <bpmndi:BPMNPlane bpmnElement="com.irdeto.jumpstart.workflow.CommandLineTest" >
+      <bpmndi:BPMNShape bpmnElement="_1" >
+        <dc:Bounds x="96" y="36" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_2" >
+        <dc:Bounds x="24" y="108" width="193" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape bpmnElement="_3" >
+        <dc:Bounds x="96" y="180" width="48" height="48" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge bpmnElement="_1-_2" >
+        <di:waypoint x="120" y="60" />
+        <di:waypoint x="120" y="132" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge bpmnElement="_2-_3" >
+        <di:waypoint x="120" y="132" />
+        <di:waypoint x="120" y="204" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+
+</definitions>
